@@ -1,0 +1,133 @@
+//////////// Стили для NEWS-CARD и GridView
+
+.news-card-large, .news-card-medium {
+  height: 40rem;
+  position: relative;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  a {
+    .square_button {
+      height: 5rem;
+      width: 5rem;
+      padding: 1.6rem 1.4rem;
+      position: absolute;
+      right: 3rem;
+      bottom: 3rem;
+      overflow: hidden;
+    }
+  }
+
+  .published-date {
+    color:white;
+    font-size: 1.4rem;
+  }
+
+  .tags {
+    display: flex;
+    flex-grow: 1;
+
+    p {
+      display:inline;
+      font-size: 1rem;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+      border: 1px solid white;
+      padding: 0.4rem 0.8rem;
+      margin-right: 1.6rem;
+      align-self: flex-start;
+    }
+  }
+  .square_button {
+    height: 3.5rem;
+    width: 3.5rem;
+    padding: 0.9rem 0.8rem;
+    position: relative;
+    overflow: hidden;
+    right:0;
+    bottom:0;
+  }
+}
+
+
+.news-card-large {
+  .title {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: white;
+    line-height: 4rem;
+    margin-top: 7.5rem;
+  }
+  .square_button {
+    left: 94%;
+  }
+}
+
+.news-card-medium {
+  .title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: white;
+    line-height: 2.5rem;
+    margin-top: 13rem;
+  }
+  .square_button {
+    left: 88%;
+  }
+}
+
+// Стили для маленьких новостей внизу страницы news
+
+
+.news-card-small {
+  .back_holder {
+    height: 23rem;
+    margin-bottom: 3rem;
+    position: relative;
+    padding: 2.5rem;
+  }
+  h1.title {
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+    font-weight: bold;
+    color: #040303;
+    margin-bottom: 2rem;
+  }
+  .published-date {
+    font-size: 1.4rem;
+    color:#040303;
+    font-weight: 500;
+  }
+  .tags p {
+    display:inline;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid white;
+    padding: 0.4rem 0.8rem;
+    margin-right: 1.6rem;
+  }
+} 
+
+
+@media (max-width:1200px) {
+  .news-card-small {
+    .tags p {
+      display:block;
+      width: max-content;
+      margin-bottom: 1rem;
+    }
+  } 
+}
+
+@media (min-width: 416px) and (max-width:768px){
+  
+}
+
+@media (max-width:415px) {
+
+}

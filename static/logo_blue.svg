@@ -1,0 +1,12 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="285.98mm" height="285.98mm" viewBox="0 0 810.66 810.66">
+  <defs>
+    <clipPath id="clip-path" transform="translate(0 0)">
+      <rect width="810.66" height="810.66" fill="none"/>
+    </clipPath>
+  </defs>
+  <title>logo_blue</title>
+  <g clip-path="url(#clip-path)">
+    <path d="M405.33,257.29A112.72,112.72,0,1,0,518,370,112.85,112.85,0,0,0,405.33,257.29" transform="translate(0 0)" fill="#009ee2"/>
+    <path d="M0,810.66H810.66V0H0V810.66Zm461.13-235.3L556,613.59A100.07,100.07,0,0,1,425.78,669L292,615.08a99.58,99.58,0,0,1,37.76-46.14c-80.2-30.49-137.21-108-137.21-198.92,0-117.52,95.27-212.79,212.79-212.79S618.11,252.49,618.11,370c0,98.21-66.55,180.82-157,205.34" transform="translate(0 0)" fill="#009ee2"/>
+  </g>
+</svg>

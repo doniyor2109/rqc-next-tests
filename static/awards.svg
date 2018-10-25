@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="27px" viewBox="0 0 24 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="People_Tablets_PopUp" transform="translate(-519.000000, -531.000000)">
+            <g id="Page-1" transform="translate(519.000000, 531.000000)">
+                <path d="M13.2813585,19.9186593 C12.8618063,19.9723307 12.4341308,20 12,20 C11.5658753,20 11.1382058,19.9723315 10.7186593,19.9186615 L11,20.0822564 L7.02615799,27 L5.03397932,22.3135697 L0,22.9235068 L3.97957765,16 L4.01471946,16.0204344 C2.75002617,14.3457269 2,12.260659 2,10.0004714 C2,4.47702098 6.47775264,0 12,0 C17.5222474,0 22,4.47702098 22,10.0004714 C22,12.2608194 21.2498673,14.346023 19.9850112,16.0207911 L20.0207682,16 L24,22.9235068 L18.9655023,22.3135697 L16.9754084,27 L13,20.0822564 L13.2813585,19.9186593 Z" id="Combined-Shape" fill-opacity="0.699999988" fill="#040303"></path>
+                <path d="M12,4 C15.3134328,4 18,6.68656716 18,10 C18,13.3134328 15.3134328,16 12,16 C8.68656716,16 6,13.3134328 6,10 C6,6.68656716 8.68656716,4 12,4 Z" id="Stroke-7" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

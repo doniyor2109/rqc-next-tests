@@ -1,0 +1,35 @@
+
+.people-section h2 {
+    font-family: "DIN Pro", sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 6rem;
+    text-transform: uppercase;
+    color: #040303;
+}
+
+.people-section {
+    margin-bottom: 8rem;
+}
+
+
+// ------------------ IPAD --------------------
+
+
+@media screen and (max-width: 768px) {
+    .people-section {
+        margin-bottom: 12rem;
+    }
+
+}
+
+// ------------------ SMARTPHONE --------------------
+
+
+@media screen and (max-width: 415px) {
+    .people-section {
+        margin-bottom: 9rem;
+    }
+    .button-wraper{
+        text-align: center;
+    }
+}

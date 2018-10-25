@@ -1,0 +1,279 @@
+
+footer {
+  background-color: #444444;
+  padding: 7.5rem 0 8.5rem;
+
+  button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    &:focus {
+      outline: 0;
+    } 
+  }
+
+  .navbar-link:not(.is-arrowless) {    
+    color: #aeaeae;
+    padding: 0 1.5rem;
+
+    &:hover {
+      font-weight: normal;
+    }
+  }
+
+  .navbar-link:not(.is-arrowless)::after{
+    border-color: white;
+    margin-top: -0.375em;
+    right: 0;
+    border-width: 2px;
+  }
+
+  .navbar-dropdown {
+    left: 4%;
+    top: 100%;
+    background-color: transparent;
+
+    button.navbar-item {
+      padding: 0.5rem;
+      color: #aeaeae;
+    }
+  }
+}
+
+footer .navbar-item.has-dropdown:hover .navbar-link, footer .navbar-item.has-dropdown.is-active .navbar-link {
+  background-color: transparent;
+  color: #aeaeae;
+}
+
+.footer_menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Menu_column {
+  display: inline-block;
+  width: 13%;
+}
+
+a.footer-menu-item {
+  display: block;
+  color:rgba(255, 255, 255, 0.5);
+  font-size: 1.2rem;
+  margin-bottom: 1.3rem;
+}
+
+a.footer-menu-item:hover {
+  color: white;
+}
+
+.Menu_column h5 {
+  color: white;
+  font-size: 1.4rem;
+}
+
+.left_part, .middle_part, .right_part {
+  display: inline-block;
+}
+
+.left_part {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30rem;
+  color: white;
+  margin-right: 7rem;
+}
+
+.footer_box {
+  display:flex;
+}
+
+.middle_part {
+  margin-right: 7rem;
+}
+
+.middle_part hr {
+  background-color: #ffffff33;
+  height:1px;
+  margin-top: 3.7rem;
+}
+
+
+.footer_menu_hr {
+  background-color:#ffffff33;
+  height:1px;
+  margin-bottom: 2rem;
+}
+
+.footer_brand {
+  font-size: 1.6rem;
+  width: 9rem;
+
+  a {
+    color:white;
+  }
+
+  a.active {
+    color: inherit;
+  }
+  a.active:hover {
+    color: inherit;
+  }
+}
+
+
+.partners {
+  display: flex;
+  a {
+    display: flex;
+    margin-right: 4rem;
+
+    img {
+      opacity: 0.5;
+    }
+
+    img:hover {
+      opacity: 1;
+    }
+  }
+
+  a:nth-of-type(2) {
+    width: 35rem;
+    margin-top: -3rem;
+  }
+
+  a:nth-of-type(4) {
+    width: 25rem;
+  }
+
+}
+
+.left_down {
+  color:rgba(255, 255, 255, 0.5);
+}
+
+.right_part {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    align-self: baseline;
+    justify-content: flex-end;
+}
+
+.middle_part {
+  flex-grow: 1;
+}
+
+@media (min-width: 416px) and (max-width: 768px){
+
+  footer {
+    padding:8rem 1.5rem;
+  }
+
+  .left_part {
+      height: 7rem;
+      color: white;
+      margin-right: 0;
+  }
+
+  .left_down, .right_part .navbar-item {
+    display: none;
+  }
+
+  .left_part, .middle_part, .right_part {
+    display: block;
+  }
+
+  .footer_box {
+    display: block;
+  }
+
+  .middle_part {
+    border-bottom:0;
+    margin-right: 0;
+  }
+
+  .partners a img {
+      margin-right: 3rem;
+      opacity: 0.5;
+  }
+  .footer_brand {
+      font-size: 1.6rem;
+      width: 100%;
+  }
+}
+
+@media (max-width: 415px) {
+
+  .left_down, .right_part .navbar-item {
+    display: none;
+  }
+
+  .left_part {
+    height: auto;
+    color: white;
+    margin-right: 0;
+    padding-bottom: 2rem;
+  }
+
+  .middle_part {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .middle_part hr {
+    display: none;
+  }
+
+  .right_part {
+    display: none;
+  }
+
+  .footer_box {
+    display: block;
+  }
+
+  .footer_menu {
+    display: none;
+  }
+
+  .partners {
+    flex-direction: column;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 3rem 0 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .partners a, .partners a:nth-of-type(2), .partners a:nth-of-type(4) {
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 0;
+    width: 23rem;
+  }
+
+  .partners a img {
+    margin-right: 3rem;
+    margin-bottom: 3rem;
+    opacity: 0.5;
+  }
+
+footer {
+    background-color: #444444;
+    padding: 7.5rem 1.5rem 2.5rem;
+}
+
+.copyright {
+  color:rgba(255, 255, 255, 0.5);
+}
+
+.copyright p {
+  display: inline;
+}
+
+.footer_brand {
+  width: 50%;
+}
+
+}

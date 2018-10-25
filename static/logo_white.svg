@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="811px" height="811px" viewBox="0 0 811 811" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>logo_white</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="810.66" height="810.66"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo_white">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Rectangle-path"></g>
+            <g id="Group" mask="url(#mask-2)" fill="#FFFFFF" fill-rule="nonzero">
+                <path d="M405.33,257.29 C359.733561,257.269775 318.615783,284.721376 301.153699,326.841576 C283.691616,368.961777 293.324948,417.453642 325.560779,449.700918 C357.796611,481.948194 406.285054,491.598738 448.41145,474.151606 C490.537846,456.704475 518.004041,415.596443 518,370 C517.922914,307.799555 467.530414,257.389164 405.33,257.29" id="Shape"></path>
+                <path d="M461.13,575.36 L556,613.59 C535.341263,664.849793 477.040302,689.657474 425.78,669 L292,615.08 C299.578991,596.204517 312.756444,580.102618 329.76,568.94 C249.56,538.45 192.55,460.94 192.55,370.02 C192.55,252.5 287.82,157.23 405.34,157.23 C522.86,157.23 618.11,252.49 618.11,370 C618.11,468.21 551.56,550.82 461.11,575.34 L461.13,575.36 Z M0,810.66 L810.66,810.66 L810.66,0 L0,0 L0,810.66 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

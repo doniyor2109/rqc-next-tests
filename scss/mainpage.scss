@@ -1,0 +1,258 @@
+@import url(~slick-carousel/slick/slick.css);
+@import url(~slick-carousel/slick/slick-theme.css);
+
+.sl {
+  height: 60rem;
+  color: white;
+  padding-top: 20rem; 
+  h1, h2 {
+    text-transform: uppercase;
+    line-height: 1; 
+  }
+    h1 {
+      font-weight: 900;
+      font-size: 7.2rem; 
+    }
+    h2 {
+      font-weight: normal;
+      font-size: 4.2rem; 
+    }
+    h3 {
+      font-size: 2.2rem;
+      font-weight: normal;
+      margin-top: 2.5rem;
+      line-height: 2.7rem; 
+    }
+    .square_button {
+      height: auto;
+      width: fit-content;
+      padding: 1.2rem 4rem;
+      position: relative;
+      left: 0;
+      overflow: hidden;
+      top: 6.5rem;
+      font-size: 1.4rem;
+      text-transform: uppercase; 
+    }
+}
+
+
+.main-slider {
+
+  .slick-dots {
+    bottom: 3rem;
+    text-align: right;
+    right: 24rem; 
+
+    li.slick-active button:before {
+      opacity: 1;
+      color: white;
+      content: url("/images/slider-active-bar.svg"); 
+    }
+
+    li.slick-active {
+      margin-right: 5rem; 
+    }
+     
+    li {
+       margin: 0 1rem; 
+    }
+
+    li button:before {
+      opacity: 1;
+      color: white; 
+    }
+  }
+}
+
+.main-category,  .main-category-link {
+  display: inline;
+}
+
+.main-category {
+  float:left;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: #040303;
+  margin-bottom: 3rem;
+}
+.main-category-link {
+  float:right;
+  font-size: 1.4rem;
+  text-transform: lowercase;
+  font-weight: 500;
+  color: #3998D1;
+  text-decoration: underline;
+}
+
+.news-teaser {
+  padding: 9rem 0 0 0;
+}
+
+.sci-slider {
+  padding: 6rem 0;
+  background: #F7F9FB;
+  margin-top: 7rem;
+
+  .slick-slider {
+    width: 101%;
+    clear: both;
+  }
+
+  .group-name {
+    color: inherit;
+  }
+
+  p, li {
+    border-bottom: 1px solid #818181;
+    padding: 1rem 0;
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+
+  p:last-child {
+    border: 0;
+  }
+  
+  .slick-list {
+    margin: 0 0 0 -15px; 
+  }
+
+  .slick-prev, .slick-next {
+    z-index: 9;
+    top: 13%;
+
+  }
+  .slick-prev {
+      left: -3.5rem;
+  }
+  .slick-next {
+      right: -3rem;
+  }
+  .slick-next:before {
+      content: "";
+  }
+  .slick-prev:before {
+      content: "";
+  }
+
+  .sci-title h1, .sci-title h5, .team-title h5 {
+    font-weight: bold;
+    font-size: 2.2rem;
+    margin: 3rem 0;
+    line-height: 2.5rem;
+    width:60%;
+  }
+  
+  .sci-group, .sci-group h1  {
+    font-weight: normal;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  
+  .sci-group h1 {
+    border-bottom: 1px solid #818181;
+    padding-bottom: 1rem;
+  }
+}
+
+.news-teaser .columns {
+  clear:both;
+}
+
+.news-teaser .news-card-small {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+
+  .sl {
+    h1 {
+      font-weight: bold;
+      font-size: 7rem; 
+    }
+    h2 {
+      font-weight: normal;
+      font-size: 4rem; 
+    }
+    h3 {
+      font-weight: normal;
+      font-size: 2.2rem; 
+      line-height: 2.7rem;
+    }
+  }
+
+  .navbar-burger {
+    margin-right: -1rem;
+  }
+
+  .main-slider .slick-dots {
+    right: 3rem;
+  }
+
+  .sci-slider .slick-slider {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .navbar-brand .navbar-item, .navbar-brand .navbar-item:hover {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 415px) {
+  
+  .sl {
+    height: 100vh;
+    padding-top: 19rem;
+    
+    h1 {
+        font-weight: bold;
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2rem;
+        font-weight: normal;
+    }
+    h3{
+      font-size: 1.8rem;
+      line-height: 2.3rem;
+      font-weight: normal;
+    }
+
+    .square_button {
+      width: 220%;
+      text-align: center;
+      top: 8rem;
+    }
+  }
+  .main-slider .slick-dots {
+    right: 0;
+    text-align: center;
+  }
+  .news-teaser .news-card-small {
+    margin-bottom: 2rem;
+  }
+
+  .sci-slider {
+    padding: 3rem 0;
+    margin-top: 5rem;
+
+    .main-category {
+      margin-bottom: 7rem;
+    }
+    .slick-slider {
+      width: 105%;
+      margin: 0 auto;
+    }
+    .slick-prev, .slick-next {
+      top: -4%;
+    }
+    .slick-prev {
+      left: 0;
+    }
+    .slick-next {
+      right: 7px;
+  }
+  }
+}

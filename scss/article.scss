@@ -1,0 +1,278 @@
+.article-image-wrapper {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    padding: 0;
+}
+
+.article-body, .article-hero {
+  color: #040303;
+}
+
+.article-hero {
+  position: relative;
+  padding: 0;
+  font-family: "DIN Pro", sans-serif;
+  margin-top: 10rem;
+
+  h1 {
+    font-size: 4.2rem;
+    text-transform: uppercase;
+    line-height: 5rem;
+    margin-top: 3rem;
+    font-weight: bold;
+  }
+
+  .article-date {
+    margin: 2.5rem 0 5.5rem;
+    font-size: 1.4rem;
+  }
+
+  .article-tags {
+    p {
+      display: inline;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: 1px solid #040303;
+      padding: 0.4rem 0.8rem;
+      margin-right: 1.6rem;
+    }
+  }
+}
+
+.article-body {
+  position: relative;
+  margin-top: 5rem;
+  font-family: "DIN Pro", sans-serif;
+  padding-bottom: 3rem;
+
+  h2 {
+    font-size: 2.2rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  figure {
+    margin-bottom: 6rem;
+    text-align: center;
+  }
+
+  figcaption {
+    border-bottom: 1px solid rgba(4,3,3,0.5);
+    color: rgba(4,3,3,0.7);
+    padding: 2rem 0 1.5rem;
+    text-align: left;
+
+    h5 {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+  }
+  strong {
+    padding-left: 3rem;
+    display: block;
+    border-left: 10px solid #3998D1;
+    margin-left: 5.5rem;
+  }
+
+  .column.hr {
+    padding: 0;
+  }
+
+  hr {
+    height: 1px;
+    background-color: rgba(4,3,3,0.5);
+    margin-top: 5rem;
+    margin-left: 3px;
+  }
+}
+
+.slice-type-text {
+  p {
+    font-size: 1.6rem;
+    margin-bottom: 2.3rem;
+    line-height: 2.3rem;
+  }
+  h6 {
+    margin-left: -6.4rem;
+    width: 120%;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    line-height: 1.2;
+  }
+}
+ .block-img {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.slice-type-quote {
+  color:#040303;
+  margin-top: 3rem;
+
+  h3 {
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+  }
+
+  .quote-body {
+    display: flex;
+    flex-direction: row;
+
+    img {
+      width: 6.3rem;
+    }
+    .open-quote {
+      align-self: flex-start;
+      margin: -2.5rem 3rem 0 0;
+    }
+    .close-quote {
+      align-self: flex-end;
+      margin: 0 0 -2.5rem 3rem;
+
+    }
+  }
+
+  .quote-footer {
+    text-align: right;
+    width: 50%;
+    margin: 2.5rem 10rem 2.5rem auto;
+
+    h3, h4 {
+      font-size: 1.4rem;
+      line-height: 1.8rem;
+    }
+
+    h3 {
+      font-weight: bold;
+    }
+  }
+}
+
+
+
+.article-more-news {
+  font-size: 1.8rem;
+  color: #040303;
+  margin-top: 8.5rem;
+}
+
+.article-related {
+  margin: 3.5rem 0 8.5rem 0;
+
+  hr {
+    height: 1px;
+    background-color: rgba(4,3,3,0.5);
+    margin-top: 2rem;
+    margin-bottom: 1.4rem;
+  }
+}
+
+.more {
+  margin: 2rem 0 0 0;
+}
+
+.column.is-centered {
+  text-align: center;
+}
+
+.news-card-small {
+  margin-bottom: 6rem;
+}
+
+.article-socials {
+
+  p {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: #040303;
+    display: inline-block;
+    margin-right: 2rem;
+  }
+  .SocialMediaShareButton {
+    display: inline-block;
+    margin-right: 3rem;
+    vertical-align: top;
+    top: -5px;
+    position: relative;
+    
+    .social-icon {
+      circle {
+        fill: #818181;
+      }
+    }
+    
+    .social-icon:hover {
+      circle {
+        fill: #3998D1;
+      }
+    }
+    
+    div {
+      display: inline-block;
+    }
+  }
+}
+
+
+// ------------------ IPAD --------------------
+
+
+@media screen and (max-width: 768px) {
+
+  .article-hero {
+  
+    h1 {
+      margin-top: 4rem;
+    }
+  }
+
+}
+
+// ------------------ SMARTPHONE --------------------
+
+
+@media screen and (max-width: 415px) {
+
+  .article-hero {
+  
+    h1 {
+      margin-top: 4rem;
+      font-size: 3rem;
+      text-transform: uppercase;
+      line-height: 4rem;
+    }
+  }
+
+  .slice-type-quote {
+    .quote-body {
+      flex-direction: column;
+      .open-quote {
+        margin: 0 0 2rem 0;
+      }
+      .close-quote {
+        margin: 2rem 0 0 0;
+      }
+    }
+    .quote-footer {
+      text-align: right;
+      width: 100%;
+      margin: 2rem 0 2rem auto;
+    }
+  }
+
+  .article-body strong {
+    margin-left: 0;
+  }
+
+  .article-socials {
+
+    p {
+      display: block;
+      margin-bottom: 2rem;
+    }
+  }
+
+}

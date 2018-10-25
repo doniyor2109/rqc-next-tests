@@ -1,0 +1,51 @@
+.square_button {
+    height: 3.5rem;
+    width: 3.5rem;
+    padding: 0.9rem 0.8rem;
+    position: absolute;
+    right: 3rem;
+    bottom: 2.5rem;
+    overflow: hidden;
+
+}
+
+.square_button.is-white {
+  border:2px solid white;
+}
+
+.square_button.is-black {
+  border:2px solid black;
+}
+
+.square_button img {
+  animation: appear_from_left 1s;
+}
+
+.square_button:hover {
+    & img {
+    animation: clickme 1s infinite;
+  }
+}
+
+@keyframes appear_from_left{
+  0% {
+    transform: translate(-5rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes clickme {
+  0% {
+    transform: translate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(5rem);
+    opacity: 0.5;
+  }
+}

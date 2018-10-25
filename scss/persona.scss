@@ -1,0 +1,140 @@
+.persona {
+    font-family: "DIN Pro", sans-serif;
+    color: #040303;
+
+    .portrait {
+        width: 19.5rem;
+        margin-bottom: 4.7rem;
+    }
+    .name {
+
+        h3 {
+        font-family: "DIN Pro", sans-serif;
+        font-size: 2.2rem;
+        font-weight: bold;
+        margin-bottom: 3rem;
+        }
+    }
+    .position {
+
+        p {
+            font-size: 1.4rem;
+            font-weight: bold;
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.8rem;
+        }
+    }
+    .titles p, .people-popup .awards p  {
+        font-size: 1.4rem;
+        font-weight: normal;
+        line-height: 1.8rem;
+        margin-bottom: 1.8rem;
+        overflow-wrap: break-word;
+    }
+    .button_wrap {
+        position: relative;
+        .square_button {
+            height: 3.5rem;
+            width: 3.5rem;
+            position: relative;
+            right: auto;
+            bottom: auto;
+            overflow: hidden;
+            margin-bottom: 6rem;
+        }
+    }
+}
+
+.people-popup {
+
+    .modal-content {
+        width: 92rem;
+        padding: 5rem 0;
+    }
+
+    .position p {
+        border-bottom: 0;
+    }
+    .square_button {
+        height: 3.5rem;
+        width: 19rem;
+        padding: 0.5rem 0.6rem;
+        position: relative;
+        right: auto;
+        bottom: auto;
+        overflow: hidden;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 500;
+
+        img {
+            -webkit-animation: appear_from_left 1s;
+            animation: appear_from_left 1s;
+            margin-left: 0.38rem;
+        }
+    }
+    .portrait_wraper {
+        text-align: center;
+    }
+    .awards_img {
+        margin-right: 1rem;
+        top: 6px;
+        position: relative;    }
+    h1 {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        display:inline-block;
+        margin-bottom: 3rem;
+    }
+}
+
+
+
+// ------------------ IPAD --------------------
+
+
+@media screen and (max-width: 768px) {
+
+    .people-popup {
+    
+        .modal-content {
+            width: 100%;
+            padding: 5rem 3rem;
+            margin: 0px 4rem;
+        }
+        .portrait {
+            width: 25.5rem;
+        }
+        hr {
+
+            margin: 0 0 5rem 0;
+        }
+        .name {
+            margin-top: 3rem;
+        }
+    }
+}
+
+// ------------------ SMARTPHONE --------------------
+
+
+@media screen and (max-width: 415px) {
+    .people-popup {
+    
+        .modal-content {
+            width: 100%;
+            padding: 5rem 3rem;
+            margin: 10rem 3rem;
+            max-height: calc(100vh - 10rem);
+        }
+        .portrait {
+            margin: 0;
+        }
+        .name {
+            margin-top: 4rem;
+        }
+        hr {
+            margin: 5rem 0 4rem 0;
+        }
+    }
+}

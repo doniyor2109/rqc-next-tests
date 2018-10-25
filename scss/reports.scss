@@ -1,0 +1,36 @@
+.evaluation-reports-page {
+    h1 {
+        display: block;
+        font-size: 4.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 6rem;
+    }
+
+    .report {
+        height:32.4rem;
+        padding: 0 3rem;
+        position: relative;
+
+        h1 {
+            font-size: 2.2rem;
+            line-height: 2.5rem;
+            padding-top: 13.4rem;
+            color: white;
+        }
+        .square_button {
+            bottom: 3rem;
+        }
+    }
+}
+
+// ------------------ IPAD --------------------
+
+
+@media screen and (max-width: 768px) {
+    .evaluation-reports-page {
+        h1 {
+            font-size: 3.2rem;
+        }
+    }
+}

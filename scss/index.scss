@@ -1,0 +1,103 @@
+@import "~bulma/sass/utilities/initial-variables";
+
+$tablet:768px;
+$column-gap: 1.5rem;
+
+@import '~bulma/bulma';
+
+// components
+@import './button.scss';
+@import './card.scss';
+@import './newscard.scss';
+@import './loading.scss';
+@import './persona.scss';
+
+// containers - pages
+@import './nav.scss';
+@import './footer.scss';
+@import './newspage.scss';
+@import './article.scss';
+@import './mainpage.scss';
+@import './people.scss';
+@import './about.scss';
+@import './vacancies.scss';
+@import './team.scss';
+@import './reports.scss';
+@import './mediakit.scss';
+@import './photogallery.scss';
+@import './videopage.scss';
+
+//import other files here
+@import "./fonts.scss";
+
+body {
+  font-family: "DIN Pro", sans-serif;
+}
+
+body.noscroll {
+    position:fixed;
+    overflow:hidden;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.peoplepage, .photo-gallery-page, .aboutpage, .media-kit-page, .newspage, .evaluation-reports-page, .teampage, .video-page {
+    padding: 6rem 0;
+}
+
+.modal-close {
+    position: absolute;
+}
+
+.modal-close::before, .modal-close::after {
+    background-color: black;
+}
+
+.modal-close:active, .modal-close:hover, .modal-close:focus {
+    background-color: white;
+}
+
+.page-main-heading {
+    font-size: 4.2rem;
+    font-weight: bold;
+    color:#040303;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+        width: 1140px;
+    }
+    .columns.desktop {
+        display: flex;
+    }
+    .columns.mobile {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+
+    .container, .navbar > .container {
+        max-width: 690px;
+        width: 690px;
+    }
+    
+    __next {
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    .container, .navbar > .container  {
+        max-width: 100%;
+        width: auto;
+        padding: 0 3rem;
+    }
+}
