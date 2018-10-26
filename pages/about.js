@@ -50,70 +50,72 @@ class About extends React.Component {
     render() {
 
         const { page, isFetching } = this.props.about
-        console.log("about", this.props)
+        page.data && console.log("описание для фб", page.data.description[0].text)
         if (isFetching) return <Loading />
         else return (
             <div className="aboutpage">
+                {page.data && 
                 <Head>
                     <title>страница о том, какой прекрасной центр</title>
                     <meta property="og:url"                content="http://dev.braintobrain.ru/about" />
                     <meta property="og:type"               content="article" />
                     <meta property="og:title"              content="Cтраница о том, какой прекрасной центр" />
-                    <meta property="og:description"        content="И здесь много и долго, и вообще описание" />
+                    <meta property="og:description"        content={page.data.description[0].text} />
                     <meta property="og:image"              content="http://dev.braintobrain.ru/static/mediakit_teaser.jpg" />
                 </Head>
+                }
                 <section ref="what-we-do" className="whatwedo">
                     <div className="container">
                         {page.data && 
-                            <div className="columns">
-                                <Media query="(min-width: 416px)"
-                                        render={() => 
-                                        <Fragment>
-                                            <div className="column is-8-desktop">
-                                                {RichText.render(page.data.title, PrismicConfig.linkResolver)}
-                                                {RichText.render(page.data.description_title, PrismicConfig.linkResolver, htmlSerializer)}  
-                                                {RichText.render(page.data.description, PrismicConfig.linkResolver, htmlSerializer)}  
-                                                {RichText.render(page.data.goals_title, PrismicConfig.linkResolver, htmlSerializer)}  
-                                                {RichText.render(page.data.goals, PrismicConfig.linkResolver)}  
+                        <div className="columns">
+                            <Media query="(min-width: 416px)"
+                                    render={() => 
+                                    <Fragment>
+                                        <div className="column is-8-desktop">
+                                            {RichText.render(page.data.title, PrismicConfig.linkResolver)}
+                                            {RichText.render(page.data.description_title, PrismicConfig.linkResolver, htmlSerializer)}  
+                                            {RichText.render(page.data.description, PrismicConfig.linkResolver, htmlSerializer)}  
+                                            {RichText.render(page.data.goals_title, PrismicConfig.linkResolver, htmlSerializer)}  
+                                            {RichText.render(page.data.goals, PrismicConfig.linkResolver)}  
+                                        </div>
+            
+                                        <Contacts page={page}/>
+                                    </Fragment>
+                                    }
+                            />
+                            <Media  query="(max-width: 415px)"
+                                    render={() => 
+                                    <Fragment>
+                                        <div className="column is-12">
+                                            {RichText.render(page.data.title, PrismicConfig.linkResolver)}
+                                            {RichText.render(page.data.description_title, PrismicConfig.linkResolver, htmlSerializer)}  
+                                            {RichText.render(page.data.description, PrismicConfig.linkResolver, htmlSerializer)}
+                                            {!this.state.more_info_button_is_active && 
+                                                RichText.render(page.data.goals_title, PrismicConfig.linkResolver, htmlSerializer)}  
+                                            {!this.state.more_info_button_is_active &&   
+                                                RichText.render(page.data.goals, PrismicConfig.linkResolver)}  
+                                            <div className="button-wraper">
+                                                <BlueButton onClick={this.hadleClick}>
+                                                    {this.state.more_info_button_is_active 
+                                                        ? (<Fragment>
+                                                            {this.context.t("Подробнее")}
+                                                            <img className="arrow-down" src="/static/blue_arrow_down.svg" alt=""/>
+                                                        </Fragment>)
+                                                        : (<Fragment>
+                                                            {this.context.t("Свернуть")}
+                                                            <img className="arrow-up" src="/static/blue_arrow_down.svg" alt=""/>
+                                                        </Fragment>)
+                                                        }
+                                                </BlueButton>   
                                             </div>
-                
-                                            <Contacts page={page}/>
-                                        </Fragment>
-                                        }
-                                />
-                                <Media  query="(max-width: 415px)"
-                                        render={() => 
-                                        <Fragment>
-                                            <div className="column is-12">
-                                                {RichText.render(page.data.title, PrismicConfig.linkResolver)}
-                                                {RichText.render(page.data.description_title, PrismicConfig.linkResolver, htmlSerializer)}  
-                                                {RichText.render(page.data.description, PrismicConfig.linkResolver, htmlSerializer)}
-                                                {!this.state.more_info_button_is_active && 
-                                                    RichText.render(page.data.goals_title, PrismicConfig.linkResolver, htmlSerializer)}  
-                                                {!this.state.more_info_button_is_active &&   
-                                                    RichText.render(page.data.goals, PrismicConfig.linkResolver)}  
-                                                <div className="button-wraper">
-                                                    <BlueButton onClick={this.hadleClick}>
-                                                        {this.state.more_info_button_is_active 
-                                                            ? (<Fragment>
-                                                                {this.context.t("Подробнее")}
-                                                                <img className="arrow-down" src="/static/blue_arrow_down.svg" alt=""/>
-                                                            </Fragment>)
-                                                            : (<Fragment>
-                                                                {this.context.t("Свернуть")}
-                                                                <img className="arrow-up" src="/static/blue_arrow_down.svg" alt=""/>
-                                                            </Fragment>)
-                                                            }
-                                                    </BlueButton>   
-                                                </div>
 
-                                            </div>
-                
-                                            <Contacts page={page} />
-                                        </Fragment>
-                                        }
-                                />
-                            </div>  
+                                        </div>
+            
+                                        <Contacts page={page} />
+                                    </Fragment>
+                                    }
+                            />
+                        </div>  
                         }
                     </div>
                 </section>
