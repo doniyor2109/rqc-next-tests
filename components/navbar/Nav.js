@@ -13,6 +13,11 @@ import * as logoActions from '../../redux/actions/logo'
 import NavbarMenuMobile from './NavbarMenuMobile.js'
 import NavbarMenuDesktop from './NavbarMenuDesktop.js'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faChevronDown, faSearch } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faChevronDown, faSearch)
+
 
 class Nav extends Component {
 
