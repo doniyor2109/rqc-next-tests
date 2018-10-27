@@ -7,6 +7,7 @@ const initialState = {
 
 function fetchAboutSuccess(state, action) {
   const page = action.response.results[0]
+  console.log("about page received!", action.language)
   return { ...state, isFetching: false, page};
 }
 
@@ -16,6 +17,7 @@ export const about = (state = initialState, action) => {
   switch (action.type) {
 
     case action_types.FETCH_ABOUT_REQUEST:
+      console.log("about request!!")
       return {...state, isFetching: true };
 
     case action_types.FETCH_ABOUT_SUCCESS:

@@ -1,9 +1,9 @@
 import App, {Container} from 'next/app'
-import { withRouter } from 'next/router'
 import React from 'react'
 import withReduxStore from '../lib/with-redux-store'
 import { Provider } from 'react-redux'
 import Head from 'next/head'
+import cookies from 'next-cookies'
 
 import Nav from '../components/navbar/Nav'
 import Footer from '../components/Footer'
@@ -11,39 +11,55 @@ import Footer from '../components/Footer'
 import I18n from "redux-i18n"
 import { translations } from "../i18n/translations"
 
-import { Cookies } from 'react-cookie'
-
 import '../scss/index.scss'
 
 class MyApp extends App {
 
   static async getInitialProps({ Component, router, ctx }) {
+
     let pageProps = {}
 
+    // добываем значение языка из пользовательских кукис 
+    var { language } = cookies(ctx)
+    
+    // если кук нет, то на этом этапе выставляем значение языка undefined, чтобы передать его в компонент, 
+    // и в цикле ComponentDidMount выставить куки
+
+    if (typeof language === 'undefined') {
+      language = 'undefined'
+    }
+
+    // Компонент получает свои pageProps с сервера
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx)
     }
+ 
+    // возвращаем pageProps с сервера и значение языка
+    return { pageProps, language: language}
+  }
 
-    return { pageProps }
+  componentDidMount() {
+
+    // выставляем куки, если их не было
+    if (this.props.language === "undefined") {
+      document.cookie = "language=ru"
+    }
   }
 
   render () {
 
-    const cookie = new Cookies()
-    const lang = typeof cookie.get('language') === 'undefined' ? 'ru' : cookie.get('language')
-    
-    const {Component, pageProps, reduxStore} = this.props
-    // console.log("_app", this.props)
+    const {Component, pageProps, reduxStore, language} = this.props
+    console.log("_app", this.props)
     return (
       <Container>
         <Provider store={reduxStore}>
-          <I18n translations={translations} initialLang={lang}>
+          <I18n translations={translations} initialLang={language}>
           <Head>
             <meta charSet='utf-8' />
             <meta name='viewport' content='initial-scale=1.0, width=device-width' />
           </Head>
-            <Nav withSlider={false}/>
-            <Component {...pageProps}/>
+            <Nav />
+            <Component {...pageProps} />
             <Footer />
           </I18n>
         </Provider>
@@ -52,4 +68,4 @@ class MyApp extends App {
   }
 }
 
-export default withReduxStore(withRouter(MyApp))
+export default withReduxStore(MyApp)

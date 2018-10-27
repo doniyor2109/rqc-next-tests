@@ -6,10 +6,12 @@ import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import Media from 'react-media'
 import Head from 'next/head'
+import cookies from 'next-cookies'
 
 //actions
 import * as aboutActions from '../redux/actions/about'
 import * as langActions from '../redux/actions/lang'
+import { fetchAbout, fetchAboutRequest, fetchAboutSuccess, fetchAboutError } from '../redux/actions/about'
 
 //components
 import { Loading } from '../components/shared/loading.js'
@@ -22,10 +24,26 @@ import {ArrowButton} from '../components/shared/ArrowButton'
 
 //other libraries
 import { RichText } from 'prismic-reactjs';
+import Prismic from 'prismic-javascript'
 import PrismicConfig from '../prismic-configuration';
 import htmlSerializer from '../components/shared/htmlSerializer'
 
 class About extends React.Component {
+
+    static async getInitialProps (ctx) {
+        
+        // получаем все необходимое для рендеринга компонента от сервера
+        const {reduxStore, req} = ctx
+        
+        // получаем настройки языка из кукис 
+        const { language } = cookies(ctx)
+        reduxStore.dispatch(fetchAboutRequest())
+        const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
+        await api.query(Prismic.Predicates.at('document.type', 'about'), { lang: language})
+           .then(response => reduxStore.dispatch(fetchAboutSuccess(response)))
+           .catch(error => reduxStore.dispatch(fetchAboutError(error)));
+        return {reqheaders: (req ? req.headers : ""), cook: language}
+    }
 
     state = {
         more_info_button_is_active: true
@@ -36,24 +54,24 @@ class About extends React.Component {
     }
     
     componentDidMount() {
-        this.props.fetchAbout(this.props.language.currentLanguage)
+        // this.props.fetchAbout(this.props.language.currentLanguage)
     }
 
     componentDidUpdate(prevProps) {
 
         // обработка смены языка
-        if (this.props.language.currentLanguage !== prevProps.language.currentLanguage) {
-          this.props.fetchAbout(this.props.language.currentLanguage)
+        if (this.props.lang !== prevProps.lang) {
+          this.props.fetchAbout(this.props.lang)
         }
       }
 
     render() {
 
         const { page, isFetching } = this.props.about
-        page.data && console.log("описание для фб", page.data.description[0].text)
-        if (isFetching) return <Loading />
-        else return (
+        console.log("about", this.props)
+        return (
             <div className="aboutpage">
+
                 {page.data && 
                 <Head>
                     <title>страница о том, какой прекрасной центр</title>
@@ -181,9 +199,9 @@ class About extends React.Component {
 
 
 const mapStateToProps = state => {
-    const { about, language } = state
+    const { about } = state
     const { lang } = state.i18nState
-    return { about, lang, language }
+    return { about, lang }
 }
 
 const mapDispatchToProps = dispatch => {
@@ -194,5 +212,6 @@ const mapDispatchToProps = dispatch => {
 }
 
   
+// export default connect(mapStateToProps, mapDispatchToProps)(About)
+
 export default connect(mapStateToProps, mapDispatchToProps)(About)
-  

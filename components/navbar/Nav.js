@@ -4,11 +4,9 @@ import Menu from "../Menu.js"
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
-import { withCookies } from 'react-cookie';
+import { withRouter } from 'next/router'
 
 import * as langActions from '../../redux/actions/lang'
-import * as logoActions from '../../redux/actions/logo'
-
 
 import NavbarMenuMobile from './NavbarMenuMobile.js'
 import NavbarMenuDesktop from './NavbarMenuDesktop.js'
@@ -21,21 +19,9 @@ library.add(faChevronDown, faSearch)
 
 class Nav extends Component {
 
-  componentDidMount() {
-    const { cookies } = this.props;
-    const lang = cookies.get('language')
-    this.props.fetchLogo(lang)
-  }
-
-  componentDidUpdate(prevProps){
-    if(this.props.language.currentLanguage !== prevProps.language.currentLanguage) {
-      this.props.fetchLogo(this.props.language.currentLanguage)
-    }
-  }
-  
-
   render() {
-    const {withSlider, switchLanguage} = this.props
+    const {router, switchLanguage, lang} = this.props
+    const withSlider = router.pathname === "/"
     // console.log("nav", this.props)
     return (
       <nav className={withSlider ? "navbar on-slider is-transparent" : "navbar is-transparent"} aria-label="main navigation">
@@ -43,19 +29,22 @@ class Nav extends Component {
           <div className="navbar-brand">
             <Link href="/">
               <a className="navbar-item">
-                {this.props.logo.item.data &&
-                  <img className="logo" src={withSlider ? this.props.logo.item.data.logo_white.url : this.props.logo.item.data.logo_black.url} alt={this.context.t("Логотип Российского Квантового Центра")} />
+                {lang === "ru" 
+                ? <img className="logo" src={withSlider ? "/static/RQClogo_white_ru.svg" : "/static/RQClogo_black_ru.svg"} alt="Логотип Российского Квантового Центра"/>
+                : <img className="logo" src={withSlider ? "/static/RQClogo_white_en.svg" : "/static/RQClogo_black_en.svg"} alt="Логотип Российского Квантового Центра"/>
                 }
               </a>
             </Link>
+
+            {/* переключатель языка для Ipad */}
             <div className="navbar-item is-hidden-mobile is-hidden-desktop is-hidden-widescreen is-hidden-fullhd">
               <button onClick={e => {this.handleClick(switchLanguage, "ru", e)}}
-                className={ (withSlider ? "is-white opacity080 " : "is-black opacity050 ") + (this.props.language.currentLanguage === 'ru' ? "bold" : "normal")}>
+                className={ (withSlider ? "is-white opacity080 " : "is-black opacity050 ") + (this.props.lang === 'ru' ? "bold" : "normal")}>
                 RU
               </button>
               <p className={withSlider ? "is-white opacity080 " : "is-black opacity050 "}>&nbsp;&nbsp;/&nbsp;&nbsp;</p>
               <button onClick={e => {this.handleClick(switchLanguage, "en-gb", e)}}
-              className={(withSlider ? "is-white opacity080 " : "is-black opacity050 ") + (this.props.language.currentLanguage === 'en-gb' ? "bold" : "normal")}>
+              className={(withSlider ? "is-white opacity080 " : "is-black opacity050 ") + (this.props.lang === 'en-gb' ? "bold" : "normal")}>
                 EN
               </button>
             </div>
@@ -70,10 +59,10 @@ class Nav extends Component {
             </button>
           </div>
 
-          <NavbarMenuDesktop Menu={Menu} withSlider={withSlider} switchLanguage={switchLanguage} currentLanguage={this.props.language.currentLanguage}/>
+          <NavbarMenuDesktop Menu={Menu} withSlider={withSlider} switchLanguage={switchLanguage} currentLanguage={this.props.lang}/>
 
         </div>
-        <NavbarMenuMobile Menu={Menu} withSlider={withSlider} switchLanguage={switchLanguage} currentLanguage={this.props.language.currentLanguage}/>
+        <NavbarMenuMobile Menu={Menu} withSlider={withSlider} switchLanguage={switchLanguage} currentLanguage={this.props.lang}/>
 
       </nav>
     )
@@ -92,14 +81,13 @@ class Nav extends Component {
 }
 
 const mapStateToProps = state => {
-  const { language, logo } = state
-  return { logo, language }
+  const { lang } = state.i18nState
+  return { lang }
 }
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators(Object.assign({},
-    langActions, 
-    logoActions
+    langActions
   ), dispatch)
 }
 
@@ -107,4 +95,4 @@ Nav.contextTypes = {
   t: PropTypes.func
 }
 
-export default withCookies(connect(mapStateToProps, mapDispatchToProps)(Nav));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Nav))
