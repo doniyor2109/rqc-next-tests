@@ -70,7 +70,7 @@ const Footer = (props, context) => (
         </div>
         <div className="middle_part">
           <FooterMenu Menu = {Menu}/>
-          <hr />
+          <hr className="bottom_hr"/>
             <div className="partners">
               <a href="https://www.gazprombank.ru/" target="_blank" rel="noopener noreferrer">   
                 <img src="/static/gazprombank.svg" target="_blank" rel="noopener noreferrer" alt="Логотип Газпромбанка" />

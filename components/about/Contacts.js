@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 
 import { RichText, Link } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
@@ -7,11 +6,10 @@ import PrismicConfig from '../../prismic-configuration';
 
 class Contacts extends React.Component {
 
-
     render() {
         const { page } = this.props
         return (
-            <div className="column is-4-desktop" ref="contact">
+            <div className="column is-4-desktop" id="contact">
                     {RichText.render(page.data.contacts_title, PrismicConfig.linkResolver)}
                 <div className="contacts_wrapper">
                     <img className="contacts_icon" src="/static/address_icon.svg" alt="address icon"/>

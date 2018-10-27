@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react'
-import { NavLink } from 'react-router-dom'
+import Link from 'next/link'
 import Slider from "react-slick"
 import PropTypes from 'prop-types'
 import { RichText } from 'prismic-reactjs'
@@ -79,10 +79,12 @@ class SciSlider extends React.Component {
             {RichText.render(slide.data.name, PrismicConfig.linkResolver)}
           </div>
           <div className="sci-group">
-          <NavLink to={"/teams/" + slide.data.science_group.uid} className="group-name">
-            {this.context.t("Руководитель группы")} <br />
-            {slide.data.science_group.data && RichText.render(slide.data.science_group.data.groupname, PrismicConfig.linkResolver)}
-          </NavLink>
+          <Link href={"/teams/" + slide.data.science_group.uid}>
+            <a className="group-name">
+              {this.context.t("Руководитель группы")} <br />
+              {slide.data.science_group.data && RichText.render(slide.data.science_group.data.groupname, PrismicConfig.linkResolver)}
+            </a>
+          </Link>
           </div>
           {RichText.render(slide.data.position, PrismicConfig.linkResolver)}
         </div>

@@ -3,7 +3,7 @@ import { ArrowButton } from './ArrowButton.js'
 import { Date } from 'prismic-reactjs';
 import moment from 'moment'
 import 'moment/locale/ru';
-import { NavLink } from 'react-router-dom'
+import Link from 'next/link'
 
 
 moment.locale('ru');
@@ -27,14 +27,14 @@ export const NewscardSmall = (props) => {
     <div className="column is-4-desktop is-6-tablet">
       <div className="news-card-small">
 
-        <NavLink to={"/news/" + article.uid}>
+        <Link href={"/news/" + article.uid}>
           <div className="back_holder" style={back}>
             <div className="tags">
               {tags}
             </div>
             <ArrowButton url={"/news/" + article.uid} color="ffffff"/>
           </div>
-        </NavLink>
+        </Link>
 
         <h1 className="title">
           {article.data.title[0].text}

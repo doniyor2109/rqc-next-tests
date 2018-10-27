@@ -90,20 +90,23 @@ a.footer-menu-item:hover {
 
 .middle_part {
   margin-right: 7rem;
+
+  .footer_menu_hr {
+    background-color:#ffffff33;
+    height:1px;
+    margin-bottom: 2rem;
+  }
+
+  .bottom_hr {
+    background-color: #ffffff33;
+    height:1px;
+    margin-top: 3.7rem;
+  }
 }
 
-.middle_part hr {
-  background-color: #ffffff33;
-  height:1px;
-  margin-top: 3.7rem;
-}
 
 
-.footer_menu_hr {
-  background-color:#ffffff33;
-  height:1px;
-  margin-bottom: 2rem;
-}
+
 
 .footer_brand {
   font-size: 1.6rem;

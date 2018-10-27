@@ -7,6 +7,7 @@ import { bindActionCreators } from 'redux'
 import Media from 'react-media'
 import Head from 'next/head'
 import cookies from 'next-cookies'
+import { withRouter } from 'next/router'
 
 //actions
 import * as aboutActions from '../redux/actions/about'
@@ -27,22 +28,26 @@ import { RichText } from 'prismic-reactjs';
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../prismic-configuration';
 import htmlSerializer from '../components/shared/htmlSerializer'
+import { faTruckMonster } from '@fortawesome/free-solid-svg-icons';
 
 class About extends React.Component {
 
     static async getInitialProps (ctx) {
         
         // получаем все необходимое для рендеринга компонента от сервера
-        const {reduxStore, req} = ctx
+        const {reduxStore} = ctx
         
         // получаем настройки языка из кукис 
         const { language } = cookies(ctx)
+        
+        // запрос к Prismic через redux actons с добавлением контента в redux store
         reduxStore.dispatch(fetchAboutRequest())
         const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
         await api.query(Prismic.Predicates.at('document.type', 'about'), { lang: language})
            .then(response => reduxStore.dispatch(fetchAboutSuccess(response)))
-           .catch(error => reduxStore.dispatch(fetchAboutError(error)));
-        return {reqheaders: (req ? req.headers : ""), cook: language}
+           .catch(error => reduxStore.dispatch(fetchAboutError(error)));        
+
+        return {}
     }
 
     state = {
@@ -67,7 +72,8 @@ class About extends React.Component {
 
     render() {
 
-        const { page, isFetching } = this.props.about
+        const { page } = this.props.about
+        const { phone } = this.props
         console.log("about", this.props)
         return (
             <div className="aboutpage">
@@ -82,12 +88,13 @@ class About extends React.Component {
                     <meta property="og:image"              content="http://dev.braintobrain.ru/static/mediakit_teaser.jpg" />
                 </Head>
                 }
-                <section ref="what-we-do" className="whatwedo">
+                <section id="what-we-do" className="whatwedo">
                     <div className="container">
                         {page.data && 
                         <div className="columns">
                             <Media query="(min-width: 416px)"
-                                    render={() => 
+                                   defaultMatches={phone === null}
+                                   render={() => 
                                     <Fragment>
                                         <div className="column is-8-desktop">
                                             {RichText.render(page.data.title, PrismicConfig.linkResolver)}
@@ -96,12 +103,12 @@ class About extends React.Component {
                                             {RichText.render(page.data.goals_title, PrismicConfig.linkResolver, htmlSerializer)}  
                                             {RichText.render(page.data.goals, PrismicConfig.linkResolver)}  
                                         </div>
-            
                                         <Contacts page={page}/>
                                     </Fragment>
                                     }
                             />
                             <Media  query="(max-width: 415px)"
+                                    defaultMatches={phone !== null}
                                     render={() => 
                                     <Fragment>
                                         <div className="column is-12">
@@ -129,15 +136,20 @@ class About extends React.Component {
 
                                         </div>
             
-                                        <Contacts page={page} />
+                                        <div id="contact">
+                                            <Contacts page={page}/>
+                                        </div>                                  
                                     </Fragment>
                                     }
+
                             />
                         </div>  
                         }
                     </div>
                 </section>
-                <Vacancies ref="vacancies" />
+                <div id="vacancies">
+                    <Vacancies />
+                </div>
                 <section className="reports_and_media_kit">
                     <div className="container">
                         <div className="columns is-multiline">
@@ -175,7 +187,7 @@ class About extends React.Component {
                     </div>
                 </section>
                
-                <section ref="partners" className="partners">
+                <section className="partners" id="partners">
                     {page.data && 
                         <div className="container">
                             {RichText.render(page.data.body[0].primary.partners_section_name, PrismicConfig.linkResolver)}
@@ -214,4 +226,4 @@ const mapDispatchToProps = dispatch => {
   
 // export default connect(mapStateToProps, mapDispatchToProps)(About)
 
-export default connect(mapStateToProps, mapDispatchToProps)(About)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(About))

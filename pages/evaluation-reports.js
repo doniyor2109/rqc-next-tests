@@ -22,14 +22,14 @@ class EvalReportsPage extends React.Component {
         t: PropTypes.func
       }
     componentDidMount() {
-        this.props.fetchAbout(this.props.language.currentLanguage)
+        this.props.fetchAbout(this.props.lang)
     }
 
     componentDidUpdate(prevProps) {
 
         // обработка смены языка
-        if (this.props.language.currentLanguage !== prevProps.language.currentLanguage) {
-          this.props.fetchAbout(this.props.language.currentLanguage)
+        if (this.props.lang !== prevProps.lang) {
+          this.props.fetchAbout(this.props.lang)
         }
     
       }
@@ -58,9 +58,9 @@ class EvalReportsPage extends React.Component {
 
 
 const mapStateToProps = state => {
-    const { about, language } = state
+    const { about } = state
     const { lang } = state.i18nState
-    return { about, lang, language }
+    return { about, lang }
 }
 
 const mapDispatchToProps = dispatch => {
