@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 import Media from 'react-media'
+import Head from 'next/head'
 
 import * as mainActions from '../redux/actions/main'
 import * as langActions from '../redux/actions/lang'
@@ -58,7 +59,7 @@ class MainPage extends React.Component {
       <Fragment>
         <Head>
           <title>Russian Quantum Center | Российский Квантовый Центр</title>
-          <meta property="og:url"                content={hostName} />
+          <meta property="og:url"                content={hostName + "/"} />
           <meta property="og:type"               content="website" />
           <meta property="og:title"              content="Russian Quantum Center | Российский Квантовый Центр" />
           <meta property="og:description"        content="Russian Quantum Center | Российский Квантовый Центр" />

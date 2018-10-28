@@ -1,1 +1,1 @@
-export const hostName = "dev.braintobrain.ru"
+export const hostName = "http://dev.braintobrain.ru"
