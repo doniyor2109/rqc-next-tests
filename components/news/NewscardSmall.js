@@ -27,7 +27,7 @@ export const NewscardSmall = (props) => {
     <div className="column is-4-desktop is-6-tablet">
       <div className="news-card-small">
 
-        <Link href={"/news/" + article.uid}>
+        <Link href={{pathname: '/article/', query: {uid: article.uid}}} as={'/article/' + article.uid}>
           <div className="back_holder" style={back}>
             <div className="tags">
               {tags}

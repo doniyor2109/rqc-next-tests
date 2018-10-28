@@ -3,7 +3,7 @@ import { ArrowButton } from './ArrowButton.js'
 import { Date } from 'prismic-reactjs'
 import moment from 'moment'
 import 'moment/locale/ru'
-import { NavLink } from 'react-router-dom'
+import Link from 'next/link'
 
 moment.locale('ru')
 
@@ -22,7 +22,7 @@ export const NewscardMedium = (props) => {
   const date = article.data.manual_date_of_publication ? moment(Date(article.data.manual_date_of_publication)).format('LL') : moment(Date(article.first_publication_date)).format('LL')
   return (
     <div className="column is-4-desktop is-6-tablet">
-        <NavLink to={"/news/" + article.uid}>
+      <Link href={{pathname: '/article/', query: {uid: article.uid}}} as={'/article/' + article.uid}>
           <div className="news-card-medium" style={back}>
             <div className="tags">
               {tags}
@@ -35,7 +35,7 @@ export const NewscardMedium = (props) => {
             </p>
             <ArrowButton url={"/news/" + article.uid} color="ffffff"/> 
           </div>
-        </NavLink>
+        </Link>
     </div>
   )
 }
