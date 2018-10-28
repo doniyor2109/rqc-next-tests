@@ -83,18 +83,18 @@ html {
 
 @media screen and (max-width: 768px) {
 
-
     .container, .navbar > .container {
         max-width: 690px;
         width: 690px;
     }
     
-    __next {
+    #__next {
         overflow-x: hidden;
     }
 }
 
 @media screen and (max-width: 415px) {
+
     .container, .navbar > .container  {
         max-width: 100%;
         width: auto;

@@ -57,6 +57,8 @@ class MainPage extends React.Component {
         <section className="main-slider">
           {mainSlider.data && <MainSlider slides={mainSlider.data.body}
                                           isLoading={isFetchingMain}
+                                          phone={phone}
+                                          tablet={tablet}
                                 /> }
         </section>
 
@@ -78,6 +80,7 @@ class MainPage extends React.Component {
               {/* вариант смартфона и Ipad */}
               {newsTeaser.articles 
               && <Media query="(max-width: 768px)"
+                        defaultMatches={tablet !== null}
                         render={() => newsTeaser.articles.slice(0,2).map((item, index) =>
                                         <NewscardSmall columns="6" article={item} key={index} />)}
                   />
@@ -86,6 +89,7 @@ class MainPage extends React.Component {
               {/* вариант десктопа */}
               {newsTeaser.articles 
               && <Media query="(min-width: 769px)"
+                        defaultMatches={phone === null && tablet === null}
                         render={() => newsTeaser.articles.map((item, index) =>
                                         <NewscardSmall columns="4" article={item} key={index} />)}
                   />
@@ -103,7 +107,8 @@ class MainPage extends React.Component {
               </a>
             </Link>
             {/* слайдер ученых для десктопа */}
-            {sciSlider.length > 0 && <Media query="(min-width: 770px)"
+            {sciSlider.length > 0 && <Media query="(min-width: 769px)"
+                                            defaultMatches={phone === null && tablet === null}
                                             render={() => <SciSlider slides={sciSlider}
                                                                      isLoading={isFetchingSci}
                                                                      desktop
@@ -112,9 +117,10 @@ class MainPage extends React.Component {
             {/* слайдер ученых для Ipad */}
             {sciSlider.length > 0 
             &&  <Media query="(min-width: 416px) and (max-width: 769px)"
-                        render={() => <SciSlider slides={sciSlider}
-                                                 isLoading={isFetchingSci}
-                                                 ipad
+                       defaultMatches={tablet !== null}
+                       render={() => <SciSlider slides={sciSlider}
+                                                isLoading={isFetchingSci}
+                                                ipad
                                         />
              }
                 />
@@ -122,9 +128,10 @@ class MainPage extends React.Component {
             {/* слайдер ученых для смартфона */}
             {sciSlider.length > 0 
             &&  <Media query="(max-width: 415px)"
-                        render={() => <SciSlider slides={sciSlider}
-                                                 isLoading={isFetchingSci}
-                                                 smartphone
+                       defaultMatches={phone !== null}
+                       render={() => <SciSlider slides={sciSlider}
+                                                isLoading={isFetchingSci}
+                                                smartphone
                                         />
              }
                 />

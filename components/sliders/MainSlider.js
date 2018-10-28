@@ -43,10 +43,14 @@ class MainSlider extends React.Component {
 
   render() {
 
-    const { slides, isLoading } = this.props
-
+    const { slides, isLoading, phone, tablet } = this.props
     const items = slides.map((slide, index) => {
-      const back = {background: "url(" + slide.primary.image_slide.url +  ")", backgroundSize:"cover"}
+      const back = phone 
+      ? {background: "url(" + slide.primary.image_slide.iphone.url +  ")", backgroundSize:"cover"}
+      : (tablet 
+        ? {background: "url(" + slide.primary.image_slide.ipad.url +  ")", backgroundSize:"cover"}
+        : {background: "url(" + slide.primary.image_slide.url +  ")", backgroundSize:"cover"}
+        )      
       return (
         <div key={index}>
           <div className="sl" style={back}>
@@ -71,6 +75,7 @@ class MainSlider extends React.Component {
         <Fragment>
 
             <Media query="(min-width: 769px)"
+                   defaultMatches={phone === null && tablet === null}
                    render={() => <div id="carousel">
                                     <Slider {...{dots: true,
                                               infinite: true,
@@ -82,12 +87,22 @@ class MainSlider extends React.Component {
                                               slidesToShow: 1,
                                               slidesToScroll: 1,
                                               useTransform: false}}>
-                                      {items}
+                                        {items}
                                   </Slider>     
                                  </div>
                           }
             />
-            <Media query="(max-width: 768px)"
+            <Media query="(min-width: 416px) and (max-width: 768px)"
+                   defaultMatches={tablet !== null}
+                   render={() => <div id="carousel">
+                                    <Slider {...this.state.carouselSettings}>
+                                      {items}
+                                    </Slider>     
+                                </div>
+                          }
+            />
+            <Media query="(max-width: 415px)"
+                   defaultMatches={phone !== null}
                    render={() => <div id="carousel">
                                     <Slider {...this.state.carouselSettings}>
                                       {items}

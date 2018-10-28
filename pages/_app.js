@@ -44,17 +44,13 @@ class MyApp extends App {
     if (document.cookie.length === 0) {
       document.cookie = "language=" + this.props.language
     }
-    console.log("_app, doc", document)
-    console.log("_app, language", this.props.language)
-    console.log("_app, cookies", document.cookie)
-
   }
 
   render () {
 
 
     const {Component, pageProps, reduxStore, language, phone, tablet} = this.props
-    console.log("_app", this.props)
+    // console.log("_app", this.props)
     return (
       <Container>
         <Provider store={reduxStore}> 
