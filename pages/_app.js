@@ -46,7 +46,7 @@ class MyApp extends App {
     }
     console.log("_app, doc", document)
     console.log("_app, language", this.props.language)
-    console.log("_app, cookies", document.cookies)
+    console.log("_app, cookies", document.cookie)
 
   }
 
