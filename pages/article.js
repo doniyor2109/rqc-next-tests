@@ -119,12 +119,12 @@ class Article extends Component {
 
       <Fragment>
         <Head>
-          <title>{article.item.data.title[0].text}</title>
+          <title>{article.item.data.title[0] && article.item.data.title[0].text}</title>
           <meta property="og:url"                content={hostName + "/article" + this.props.uid} />
           <meta property="og:type"               content="article" />
-          <meta property="og:title"              content={article.item.data.title[0].text} />
-          <meta property="og:description"        content={article.item.data.title_description[0].text} />
-          <meta property="og:image"              content={article.item.data.cover.url}  />
+          <meta property="og:title"              content={article.item.data.title[0] && article.item.data.title[0].text} />
+          <meta property="og:description"        content={article.item.data.title_description[0] && article.item.data.title_description[0].text} />
+          <meta property="og:image"              content={article.item.data.cover && article.item.data.cover.url}  />
         </Head>
 
         <PopupNoTranslation active={this.state.modalActive} click={this.click} />

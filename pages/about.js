@@ -80,11 +80,11 @@ class About extends React.Component {
 
                 {page.data && 
                 <Head>
-                    <title>страница о том, какой прекрасной центр</title>
+                    <title>РКЦ Люди</title>
                     <meta property="og:url"                content={hostName + "/about"} />
                     <meta property="og:type"               content="article" />
-                    <meta property="og:title"              content="Cтраница о том, какой прекрасной центр" />
-                    <meta property="og:description"        content={page.data.description[0].text} />
+                    <meta property="og:title"              content="РКЦ Люди" />
+                    <meta property="og:description"        content="Все, кто имеют отношение к центру" />
                     <meta property="og:image"              content="http://dev.braintobrain.ru/static/mediakit_teaser.jpg" />
                 </Head>
                 }
