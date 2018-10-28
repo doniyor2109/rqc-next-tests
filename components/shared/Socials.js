@@ -16,7 +16,7 @@ import {
   
   
 
-const Socials = ({url, quote}, context) => {
+const Socials = ({url, quote, image}, context) => {
     return (
         <div className="article-socials">
             <p>
@@ -26,7 +26,7 @@ const Socials = ({url, quote}, context) => {
                 <FacebookIcon size={30} round quote={quote} />
             </FacebookShareButton>
 
-            <VKShareButton url={url} title={quote}>
+            <VKShareButton url={url} title={quote} image={image}>
                 <VKIcon size={30} round />
             </VKShareButton>
 

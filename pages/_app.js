@@ -4,6 +4,7 @@ import withReduxStore from '../lib/with-redux-store'
 import { Provider } from 'react-redux'
 import Head from 'next/head'
 import cookies from 'next-cookies'
+import Router from 'next/router'
 
 import Nav from '../components/navbar/Nav'
 import Footer from '../components/Footer'
@@ -12,6 +13,12 @@ import I18n from "redux-i18n"
 import { translations } from "../i18n/translations"
 
 import '../scss/index.scss'
+
+Router.events.on('routeChangeStart', (url) => {
+  console.log(`Loading: ${url}`)
+})
+Router.events.on('routeChangeComplete', () => {console.log("route changed complete")})
+
 
 class MyApp extends App {
 

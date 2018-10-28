@@ -60,9 +60,6 @@ class Article extends Component {
       modalActive: false
     }
 
-  componentDidMount() {
-  }
-
   componentDidUpdate(prevProps, prevState) {
 
     // если глобально меняется язык, то редиректим пользователя на страницу с другим uid
@@ -77,8 +74,6 @@ class Article extends Component {
     // то есть ведет на другую «страницу»,то мы сначала загружаем контент
     if (this.props.uid !== prevProps.uid) {
       this.props.fetchArticleByUid(this.props.uid, "*")
-    // а потом скроллим наверх страницы
-      window.scrollTo(0, 0)
     }
 
   }
@@ -151,8 +146,9 @@ class Article extends Component {
           <div className="container">
             <div className="columns">
               <div className="column is-8-desktop is-offset-2-desktop is-12-tablet">
-                  <Socials url={hostName + this.props.uid} 
+                  <Socials url={hostName + "/article/" + this.props.uid} 
                            quote={article.item.data.title[0].text}
+                           image={article.item.data.cover.url}
                   />    
               </div>
             </div>
