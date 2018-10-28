@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { post } from './post'
+import { article } from './article'
 import { news } from './news'
 import { language } from './lang'
 import { byTag } from './byTag'
@@ -12,11 +12,10 @@ import { logo } from './logo'
 import { mediakit } from './mediakit'
 import { photo } from './photo'
 import { video } from './video'
-import { nextExample } from './nextExample'
 import { i18nState } from "redux-i18n"
 
 const rootReducer = combineReducers({
-  post,
+  article,
   news,
   language,
   byTag,
@@ -29,8 +28,7 @@ const rootReducer = combineReducers({
   logo, 
   photo,
   mediakit, 
-  video, 
-  nextExample
+  video
 });
 
 export default rootReducer

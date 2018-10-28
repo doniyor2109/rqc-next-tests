@@ -8,7 +8,7 @@ const initialState = {
 };
 
 
-function fetchPostsByTagSuccess(state, action) {
+function fetchArticlesByTagSuccess(state, action) {
   const articlesByTag = action.response.results
   const next = action.response.next_page
   return {...state,
@@ -23,13 +23,13 @@ function fetchPostsByTagSuccess(state, action) {
 export const byTag = (state = initialState, action) => {
   switch (action.type) {
 
-    case action_types.FETCH_POSTS_BY_TAG_REQUEST:
+    case action_types.FETCH_ARTICLES_BY_TAG_REQUEST:
       return {...state, isFetching: true};
 
-    case action_types.FETCH_POSTS_BY_TAG_SUCCESS:
-      return fetchPostsByTagSuccess(state, action);
+    case action_types.FETCH_ARTICLES_BY_TAG_SUCCESS:
+      return fetchArticlesByTagSuccess(state, action);
 
-    case action_types.FETCH_POSTS_BY_TAG_FAILURE:
+    case action_types.FETCH_ARTICLES_BY_TAG_FAILURE:
       console.log(action.error);
       return { ...state, isFetching: false };
 
