@@ -12,6 +12,8 @@ import { NewscardSmall } from '../components/news/NewscardSmall.js'
 import MainSlider from '../components/sliders/MainSlider'
 import SciSlider from '../components/sliders/SciSlider'
 
+import host from '../next.config'
+
 class MainPage extends React.Component {
 
   constructor(props) {
@@ -54,6 +56,14 @@ class MainPage extends React.Component {
     console.log("main", this.props)
     return (
       <Fragment>
+        <Head>
+          <title>Russian Quantum Center | Российский Квантовый Центр</title>
+          <meta property="og:url"                content={host} />
+          <meta property="og:type"               content="website" />
+          <meta property="og:title"              content="Russian Quantum Center | Российский Квантовый Центр" />
+          <meta property="og:description"        content="Russian Quantum Center | Российский Квантовый Центр" />
+          <meta property="og:image"              content="http://www.rqc.ru/images/announce/Evaluation_Report.png" />
+        </Head>
         <section className="main-slider">
           {mainSlider.data && <MainSlider slides={mainSlider.data.body}
                                           isLoading={isFetchingMain}

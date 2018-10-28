@@ -80,11 +80,11 @@ class People extends React.Component {
                                                         {this.state.more_info_button1_is_active 
                                                             ? (<Fragment>
                                                                 {this.context.t("Подробнее")}
-                                                                <img className="arrow-down" src="/images/blue_arrow_down.svg" alt=""/>
+                                                                <img className="arrow-down" src="/static/blue_arrow_down.svg" alt=""/>
                                                             </Fragment>)
                                                             : (<Fragment>
                                                                 {this.context.t("Свернуть")}
-                                                                <img className="arrow-up" src="/images/blue_arrow_down.svg" alt=""/>
+                                                                <img className="arrow-up" src="/static/blue_arrow_down.svg" alt=""/>
                                                             </Fragment>)
                                                             }
                                                     </BlueButton>   
@@ -121,11 +121,11 @@ class People extends React.Component {
                                                         {this.state.more_info_button2_is_active 
                                                             ? (<Fragment>
                                                                 {this.context.t("Подробнее")}
-                                                                <img className="arrow-down" src="/images/blue_arrow_down.svg" alt=""/>
+                                                                <img className="arrow-down" src="/static/blue_arrow_down.svg" alt=""/>
                                                             </Fragment>)
                                                             : (<Fragment>
                                                                 {this.context.t("Свернуть")}
-                                                                <img className="arrow-up" src="/images/blue_arrow_down.svg" alt=""/>
+                                                                <img className="arrow-up" src="/static/blue_arrow_down.svg" alt=""/>
                                                             </Fragment>)
                                                             }
                                                     </BlueButton>  
@@ -162,11 +162,11 @@ class People extends React.Component {
                                                         {this.state.more_info_button3_is_active 
                                                             ? (<Fragment>
                                                                 {this.context.t("Подробнее")}
-                                                                <img className="arrow-down" src="/images/blue_arrow_down.svg" alt=""/>
+                                                                <img className="arrow-down" src="/static/blue_arrow_down.svg" alt=""/>
                                                             </Fragment>)
                                                             : (<Fragment>
                                                                 {this.context.t("Свернуть")}
-                                                                <img className="arrow-up" src="/images/blue_arrow_down.svg" alt=""/>
+                                                                <img className="arrow-up" src="/static/blue_arrow_down.svg" alt=""/>
                                                             </Fragment>)
                                                             }
                                                     </BlueButton>   

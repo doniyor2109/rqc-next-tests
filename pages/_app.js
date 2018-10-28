@@ -50,7 +50,7 @@ class MyApp extends App {
 
 
     const {Component, pageProps, reduxStore, language, phone, tablet} = this.props
-    // console.log("_app", this.props)
+    console.log("_app", this.props)
     return (
       <Container>
         <Provider store={reduxStore}> 
