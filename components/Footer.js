@@ -89,7 +89,7 @@ const Footer = (props, context) => (
         <div className="right_part">
           <div className="navbar-item has-dropdown is-hoverable">
             <button className="navbar-link">
-              {props.language.currentLanguage === "ru" ? "RU" : "EN"}
+              {props.lang === "ru" ? "RU" : "EN"}
             </button>
             <div className="navbar-dropdown">
               <button className="navbar-item" onClick={e => {handleClick(props.switchLanguage, "en-gb", e)}}>
@@ -112,9 +112,8 @@ const Footer = (props, context) => (
 )
 
 const mapStateToProps = state => {
-  const { language } = state
   const { lang } = state.i18nState
-  return { lang, language }
+  return { lang }
 }
 
 const mapDispatchToProps = dispatch => {
