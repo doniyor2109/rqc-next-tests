@@ -28,7 +28,7 @@ import { RichText } from 'prismic-reactjs';
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../prismic-configuration';
 import htmlSerializer from '../components/shared/htmlSerializer'
-import host from '../next.config'
+import hostName from '../host'
 
 class About extends React.Component {
 
@@ -81,7 +81,7 @@ class About extends React.Component {
                 {page.data && 
                 <Head>
                     <title>страница о том, какой прекрасной центр</title>
-                    <meta property="og:url"                content={host + "/about"} />
+                    <meta property="og:url"                content={hostName + "/about"} />
                     <meta property="og:type"               content="article" />
                     <meta property="og:title"              content="Cтраница о том, какой прекрасной центр" />
                     <meta property="og:description"        content={page.data.description[0].text} />

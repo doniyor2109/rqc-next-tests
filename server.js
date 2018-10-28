@@ -9,7 +9,6 @@ const app = next({ dev })
 const handle = app.getRequestHandler()
 const route = pathMatch()
 
-
 const match = route('/article/:uid')
 
 app.prepare()

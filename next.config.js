@@ -16,5 +16,4 @@ module.exports = withSass({
       }
 })
 
-export const host = "dev.braintobrain.ru"
 

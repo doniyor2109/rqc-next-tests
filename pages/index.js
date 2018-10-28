@@ -12,7 +12,7 @@ import { NewscardSmall } from '../components/news/NewscardSmall.js'
 import MainSlider from '../components/sliders/MainSlider'
 import SciSlider from '../components/sliders/SciSlider'
 
-import host from '../next.config'
+import hostName from '../host'
 
 class MainPage extends React.Component {
 
@@ -58,7 +58,7 @@ class MainPage extends React.Component {
       <Fragment>
         <Head>
           <title>Russian Quantum Center | Российский Квантовый Центр</title>
-          <meta property="og:url"                content={host} />
+          <meta property="og:url"                content={hostName} />
           <meta property="og:type"               content="website" />
           <meta property="og:title"              content="Russian Quantum Center | Российский Квантовый Центр" />
           <meta property="og:description"        content="Russian Quantum Center | Российский Квантовый Центр" />
