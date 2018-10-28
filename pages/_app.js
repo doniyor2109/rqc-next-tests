@@ -33,25 +33,24 @@ class MyApp extends App {
     // и в цикле ComponentDidMount выставить куки
 
     if (typeof language === 'undefined') {
-      language = 'undefined'
+      language = 'ru'
     }
 
     // Компонент получает свои pageProps с сервера
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx)
     }
- 
     // возвращаем pageProps с сервера и значение языка
     return { pageProps, language: language, phone: phone, tablet: tablet }
   }
 
+
   componentDidMount() {
 
     // выставляем куки, если их не было
-    if (this.props.language === "undefined") {
-      document.cookie = "language=ru"
+      document.cookie = "language=" + this.props.language
+      console.log("куки выставлены")
     } 
-  }
 
   render () {
 
