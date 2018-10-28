@@ -50,7 +50,7 @@ class Article extends Component {
 
     reduxStore.dispatch(fetchArticleByUidRequest(uid))
     const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
-    await api.query(Prismic.Predicates.at('my.news.uid', uid), { lang : language })
+    await api.query(Prismic.Predicates.at('my.news.uid', uid), { lang : "*" })
              .then(response => reduxStore.dispatch(fetchArticleByUidSuccess(uid, response)))
              .catch(error => reduxStore.dispatch(fetchArticleByUidFailure(uid, error)))
     return {uid}
