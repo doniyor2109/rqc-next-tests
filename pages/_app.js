@@ -20,39 +20,38 @@ class MyApp extends App {
     let pageProps = {}
 
     // добываем значение языка из пользовательских кукис 
-    var { language } = cookies(ctx)
+    const {language} = cookies(ctx)
+    const hasCookies = typeof language === 'undefined' ? false : true
 
+    // определяем тип устройства, чтобы потом react-media рендерила именно ту версию компонента, которая
+    // совпадает с серверным html
     const { req } = ctx
     var MobileDetect = require('mobile-detect')
     const md = new MobileDetect(req ? req.headers['user-agent'] : "")
     const phone = md.phone()
     const tablet = md.tablet()
   
-    
-    // если кук нет, то на этом этапе выставляем значение языка undefined, чтобы передать его в компонент, 
-    // и в цикле ComponentDidMount выставить куки
-
-    if (typeof language === 'undefined') {
-      language = 'ru'
-    }
-
     // Компонент получает свои pageProps с сервера
     if (Component.getInitialProps) {
       pageProps = await Component.getInitialProps(ctx)
     }
     // возвращаем pageProps с сервера и значение языка
-    return { pageProps, language: language, phone: phone, tablet: tablet }
+    return { pageProps, language: hasCookies ? language : "ru", phone: phone, tablet: tablet }
   }
 
-
   componentDidMount() {
-
     // выставляем куки, если их не было
+    if (document.cookie.length === 0) {
       document.cookie = "language=" + this.props.language
-      console.log("куки выставлены")
-    } 
+    }
+    console.log("_app, doc", document)
+    console.log("_app, language", this.props.language)
+    console.log("_app, cookies", document.cookies)
+
+  }
 
   render () {
+
 
     const {Component, pageProps, reduxStore, language, phone, tablet} = this.props
     console.log("_app", this.props)

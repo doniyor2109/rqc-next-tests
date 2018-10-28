@@ -137,9 +137,9 @@ class MainPage extends React.Component {
 }
 
 const mapStateToProps = state => {
-  const { main, language } = state
+  const { main } = state
   const { lang } = state.i18nState
-  return { main, lang, language }
+  return { main, lang }
 }
 
 const mapDispatchToProps = dispatch => {
