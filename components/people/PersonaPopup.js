@@ -40,7 +40,7 @@ const PersonaPopup = ({active, close, item}, context) => {
                         </div>
                     </div>
                     <div className="column is-4-desktop is-offset-1-desktop">
-                        {item.awards && (item.awards[0].text.length > 0) 
+                        {item.awards[0] && (item.awards[0].text.length > 0) 
                         && 
                         <Fragment>
                             <img src="/static/awards.svg" className="awards_img" alt=""/>
