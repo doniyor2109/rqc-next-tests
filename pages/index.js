@@ -63,11 +63,11 @@ static contextTypes = {
     return (
       <Fragment>
         <Head>
-          <title>Russian Quantum Center | Российский Квантовый Центр</title>
+          <title>{this.props.lang === "ru" ? "Российский Квантовый Центр" : "Russian Quantum Center"}</title>
           <meta property="og:url"                content={hostName + "/"} />
           <meta property="og:type"               content="website" />
-          <meta property="og:title"              content="Russian Quantum Center | Российский Квантовый Центр" />
-          <meta property="og:description"        content="Russian Quantum Center | Российский Квантовый Центр" />
+          <meta property="og:title"              content={this.props.lang === "ru" ? "Российский Квантовый Центр" : "Russian Quantum Center"} />
+          <meta property="og:description"        content={this.props.lang === "ru" ? "Российский Квантовый Центр" : "Russian Quantum Center"} />
           <meta property="og:image"              content="http://www.rqc.ru/images/announce/Evaluation_Report.png" />
         </Head>
         <section className="main-slider">
