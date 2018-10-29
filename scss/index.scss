@@ -66,10 +66,8 @@ html {
     text-transform: uppercase;
 }
 
-.slick-slide {
-    div {
-        height: 100%;
-    }
+.slick-slide > div {
+    height: 100%;
 }
 
 @media screen and (min-width: 1200px) {
