@@ -2,22 +2,19 @@ import App, {Container} from 'next/app'
 import React from 'react'
 import withReduxStore from '../lib/with-redux-store'
 import { Provider } from 'react-redux'
-import Head from 'next/head'
 import cookies from 'next-cookies'
 import Router from 'next/router'
 
 import Nav from '../components/navbar/Nav'
 import Footer from '../components/Footer'
+import GeneralHead from '../components/GeneralHead'
+import { LoadingFull } from '../components/shared/loadingFull.js'
 
 import I18n from "redux-i18n"
 import { translations } from "../i18n/translations"
 
-import '../scss/index.scss'
 
-Router.events.on('routeChangeStart', (url) => {
-  console.log(`Loading: ${url}`)
-})
-Router.events.on('routeChangeComplete', () => {console.log("route changed complete")})
+import '../scss/index.scss'
 
 
 class MyApp extends App {
@@ -51,10 +48,18 @@ class MyApp extends App {
     if (document.cookie.length === 0) {
       document.cookie = "language=" + this.props.language
     }
+
+    Router.events.on('routeChangeStart', (url) => {
+      document.querySelector(".transparent-wall").classList.remove('inactive')
+      console.log(`Loading: ${url}`)
+    })
+    Router.events.on('routeChangeComplete', () => {
+      document.querySelector(".transparent-wall").classList.add('inactive')
+      console.log("route changed complete")
+    })
   }
 
   render () {
-
 
     const {Component, pageProps, reduxStore, language, phone, tablet} = this.props
     console.log("_app", this.props)
@@ -62,11 +67,9 @@ class MyApp extends App {
       <Container>
         <Provider store={reduxStore}> 
           <I18n translations={translations} initialLang={language}>
-          <Head>
-            <meta charSet='utf-8' />
-            <meta name='viewport' content='initial-scale=1.0, width=device-width' />
-          </Head>
-            <Nav />
+            <GeneralHead />
+            <LoadingFull isOff />
+            <Nav /> 
             <Component {...pageProps} phone={phone} tablet={tablet} />
             <Footer />
           </I18n>

@@ -1,5 +1,14 @@
+.transparent-wall {
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: 300;
+  display: block;
+}
+
 .back {
-    height: 50vh;
+    height: 100vh;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
@@ -9,6 +18,10 @@
     background: white;
     opacity: 0.5;
     z-index: 100;
+}
+
+.transparent-wall.inactive {
+  display: none;
 }
 
 /* Animation */

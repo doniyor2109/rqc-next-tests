@@ -10,7 +10,7 @@ import cookies from 'next-cookies'
 
 //actions
 import * as articleActions from '../redux/actions/article'
-import {fetchArticleByUidRequest, fetchArticleByUidSuccess, fetchArticleByUidFailure, fetchArticleByUid } from '../redux/actions/article'
+import {fetchArticleByUidRequest, fetchArticleByUidSuccess, fetchArticleByUidFailure } from '../redux/actions/article'
 import * as langActions from '../redux/actions/lang'
 import * as byTagActions from '../redux/actions/byTag'
 
@@ -46,12 +46,14 @@ class Article extends Component {
   static async getInitialProps (ctx) {
 
     const {reduxStore, query: { uid }} = ctx
-    const { language } = cookies(ctx)
-
+    
     reduxStore.dispatch(fetchArticleByUidRequest(uid))
     const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
     await api.query(Prismic.Predicates.at('my.news.uid', uid), { lang : "*" })
-             .then(response => reduxStore.dispatch(fetchArticleByUidSuccess(uid, response)))
+             .then(response => {
+               reduxStore.dispatch(fetchArticleByUidSuccess(uid, response))
+              console.log("article пришел с сервера")
+              })
              .catch(error => reduxStore.dispatch(fetchArticleByUidFailure(uid, error)))
     return {uid}
   }
@@ -72,16 +74,17 @@ class Article extends Component {
 
     // если внутри страницы пользователь кликает на другой компонент, который меняет location,
     // то есть ведет на другую «страницу»,то мы сначала загружаем контент
-    if (this.props.uid !== prevProps.uid) {
-      this.props.fetchArticleByUid(this.props.uid, "*")
-    }
+    // if (this.props.uid !== prevProps.uid) {
+    //   this.props.fetchArticleByUid(this.props.uid, "*")
+    //   console.log("новый артикл!")
+    // }
 
   }
 
   render() {
 
     const { article, phone, tablet } = this.props
-    console.log("article",  this.props)
+    console.log("article rendered")
     if (this.props.lang === "ru") {
       moment.locale('ru')
     } else moment.locale('en')
@@ -113,14 +116,15 @@ class Article extends Component {
     }
 
     // показываем анимацию в момент загрузки новости
-    if (article.isFetching) {
-        return <Loading />
-        } else return (
+    // if (article.isFetching) {
+    //     return <Loading />
+    //     } else 
+    return (
 
       <Fragment>
         <Head>
           <title>{article.item.data.title[0] && article.item.data.title[0].text}</title>
-          <meta property="og:url"                content={hostName + "/article" + this.props.uid} />
+          <meta property="og:url"                content={hostName + "/article/" + this.props.uid} />
           <meta property="og:type"               content="article" />
           <meta property="og:title"              content={article.item.data.title[0] && article.item.data.title[0].text} />
           <meta property="og:description"        content={article.item.data.title_description[0] && article.item.data.title_description[0].text} />

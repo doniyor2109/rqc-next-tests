@@ -55,9 +55,9 @@ class News extends Component {
         case 'SHOW_ALL':
         return this.props.fetchNews(this.props.lang, this.state.pageSize, this.state.pageNumber)
         case 'SHOW_OUR_NEWS':
-        return this.props.fetchPostsByTag(this.context.t("Новости РКЦ"), this.state.pageSize)
+        return this.props.fetchArticlesByTag(this.context.t("Новости РКЦ"), this.state.pageSize)
         case 'SHOW_WORLD_NEWS':
-        return this.props.fetchPostsByTag(this.context.t("Квантовые технологии в мире"), this.state.pageSize)
+        return this.props.fetchArticlesByTag(this.context.t("Квантовые технологии в мире"), this.state.pageSize)
         default:
         return null
       }
@@ -69,9 +69,9 @@ class News extends Component {
        case 'SHOW_ALL':
        return this.props.fetchNews(this.props.lang, this.state.pageSize, this.state.pageNumber)
        case 'SHOW_OUR_NEWS':
-       return this.props.fetchPostsByTag(this.context.t("Новости РКЦ"), this.state.pageSize)
+       return this.props.fetchArticlesByTag(this.context.t("Новости РКЦ"), this.state.pageSize)
        case 'SHOW_WORLD_NEWS':
-       return this.props.fetchPostsByTag(this.context.t("Квантовые технологии в мире"), this.state.pageSize)
+       return this.props.fetchArticlesByTag(this.context.t("Квантовые технологии в мире"), this.state.pageSize)
        default:
        return null
      }
@@ -99,9 +99,9 @@ class News extends Component {
         case 'SHOW_ALL':
         return this.props.fetchNews(this.props.lang, this.state.pageSize, this.state.pageNumber)
         case 'SHOW_OUR_NEWS':
-        return this.props.fetchPostsByTag(this.context.t("Новости РКЦ"), this.state.pageSize)
+        return this.props.fetchArticlesByTag(this.context.t("Новости РКЦ"), this.state.pageSize)
         case 'SHOW_WORLD_NEWS':
-        return this.props.fetchPostsByTag(this.context.t("Квантовые технологии в мире"), this.state.pageSize)
+        return this.props.fetchArticlesByTag(this.context.t("Квантовые технологии в мире"), this.state.pageSize)
         default:
         return null
       }

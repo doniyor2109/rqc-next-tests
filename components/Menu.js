@@ -38,10 +38,6 @@ const Menu = [
         url: "/people#board"
       },
       {
-        name: "Научный директор",
-        url: "/people#сhief-scientific-officer"
-      },
-      {
         name: "Международный консультативный совет",
         url: "/people#international-board"
       },
@@ -51,60 +47,60 @@ const Menu = [
       }
     ]
   },
-  {
-    name: "Исследования",
-    url: "/research",
-    children: [
-      {
-        name: "Научные группы",
-        url: "/teams"
-      },
-      {
-        name: "Лаборатории",
-        url: "/labs"
-      },
-      {
-        name: "Внешние исследователи",
-        url: "/scientists"
-      },
-      {
-        name: "Публикации",
-        url: "/publications"
-      }
-    ]
-  },
-  {
-    name: "Продукты",
-    url: "/products",
-    children: [
-      {
-        name: "Квантовые коммуникации",
-        url: "/quantum-communications"
-      },
-      {
-        name: "Детектор одиночных фотонов",
-        url: "/single-photon-detector"
-      },
-      {
-        name: "Твердотельный фотодетектор",
-        url: "/photo-detector"
-      },
-      {
-        name: "Фемтовижн",
-        url: "/femtovision"
-      }
-    ]
-  },
+  // {
+  //   name: "Исследования",
+  //   url: "/research",
+  //   children: [
+  //     {
+  //       name: "Научные группы",
+  //       url: "/teams"
+  //     },
+  //     {
+  //       name: "Лаборатории",
+  //       url: "/labs"
+  //     },
+  //     {
+  //       name: "Внешние исследователи",
+  //       url: "/scientists"
+  //     },
+  //     {
+  //       name: "Публикации",
+  //       url: "/publications"
+  //     }
+  //   ]
+  // },
+  // {
+  //   name: "Продукты",
+  //   url: "/products",
+  //   children: [
+  //     {
+  //       name: "Квантовые коммуникации",
+  //       url: "/quantum-communications"
+  //     },
+  //     {
+  //       name: "Детектор одиночных фотонов",
+  //       url: "/single-photon-detector"
+  //     },
+  //     {
+  //       name: "Твердотельный фотодетектор",
+  //       url: "/photo-detector"
+  //     },
+  //     {
+  //       name: "Фемтовижн",
+  //       url: "/femtovision"
+  //     }
+  //   ]
+  // },
   {
     name: "Новости",
     url: "/news",
     children: []
   },
-  {
-    name: "Мероприятия",
-    url: "/events",
-    children: []
-  }
+  // {
+  //   name: "Мероприятия",
+  //   url: "/events",
+  //   children: []
+  // }
 ];
 
 export default Menu;
