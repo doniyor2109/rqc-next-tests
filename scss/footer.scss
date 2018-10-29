@@ -47,12 +47,13 @@ footer .navbar-item.has-dropdown:hover .navbar-link, footer .navbar-item.has-dro
 
 .footer_menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .Menu_column {
   display: inline-block;
   width: 13%;
+  margin-right: 2rem;
 }
 
 a.footer-menu-item {
