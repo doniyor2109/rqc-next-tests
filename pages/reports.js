@@ -16,7 +16,7 @@ import ReportCard from '../components/reports/ReportCard';
 
 //other libraries
 
-class EvalReportsPage extends React.Component {
+class Reports extends React.Component {
 
     static contextTypes = {
         t: PropTypes.func
@@ -71,5 +71,5 @@ const mapDispatchToProps = dispatch => {
 }
 
   
-export default connect(mapStateToProps, mapDispatchToProps)(EvalReportsPage)
+export default connect(mapStateToProps, mapDispatchToProps)(Reports)
   

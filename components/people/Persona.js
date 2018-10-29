@@ -54,11 +54,14 @@ class Persona extends React.Component {
     handleClick = (e) => {
         e.preventDefault()
         this.setState({popup:true})
+        document.body.classList.add('noscroll')
+
     }
     
     popupClose = (e) => {
         e.preventDefault()
         this.setState({popup:false})
+        document.body.classList.remove('noscroll')
 
     }
 }

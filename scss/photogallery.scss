@@ -33,7 +33,7 @@
         }
 
         .download {
-            background: url('/images/download_archive_white.svg');
+            background: url('/static/download_archive_white.svg');
             background-size: cover;
             height: 2rem;
             width: 2rem;
@@ -43,7 +43,7 @@
             cursor: pointer;
 
             &:hover {
-                background: url('/images/download_archive_hover.svg');
+                background: url('/static/download_archive_hover.svg');
                 background-size: cover;
                 height: 2rem;
                 width: 2rem;
@@ -131,7 +131,7 @@
                     }
                 }
                 .download {
-                    background: url('/images/download_photo.svg');
+                    background: url('/static/download_photo.svg');
                     background-size: cover;
                     height: 3.5rem;
                     width: 3.5rem;
@@ -142,7 +142,7 @@
                     top: 7px;
 
                     &:hover {
-                        background: url('/images/download_photo_hover.svg');
+                        background: url('/static/download_photo_hover.svg');
                         background-size: cover;
                         height: 3.5rem;
                         width: 3.5rem;

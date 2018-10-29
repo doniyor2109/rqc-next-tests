@@ -4,11 +4,11 @@ import PrismicConfig from '../../prismic-configuration'
 
 // actions for quering API for a news single document by UID
 
-const fetchPhotoByUidRequest = (uid) => ({ type: action_types.FETCH_PHOTO_BY_UID_REQUEST, uid });
+export const fetchPhotoByUidRequest = (uid) => ({ type: action_types.FETCH_PHOTO_BY_UID_REQUEST, uid });
 
-const fetchPhotoByUidSuccess = (uid, response) => ({ type: action_types.FETCH_PHOTO_BY_UID_SUCCESS, uid, response });
+export const fetchPhotoByUidSuccess = (uid, response) => ({ type: action_types.FETCH_PHOTO_BY_UID_SUCCESS, uid, response });
 
-const fetchPhotoByUidFailure = (uid, error) => ({ type: action_types.FETCH_PHOTO_BY_UID_FAILURE, uid, error });
+export const fetchPhotoByUidFailure = (uid, error) => ({ type: action_types.FETCH_PHOTO_BY_UID_FAILURE, uid, error });
 
 export const fetchPhotoByUid = (language, uid) => (dispatch) => {
   dispatch(fetchPhotoByUidRequest(uid));

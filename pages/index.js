@@ -15,7 +15,12 @@ import SciSlider from '../components/sliders/SciSlider'
 
 import hostName from '../host'
 
-class MainPage extends React.Component {
+class Index extends React.Component {
+
+
+static contextTypes = {
+  t: PropTypes.func
+}
 
   constructor(props) {
     super(props)
@@ -167,8 +172,4 @@ const mapDispatchToProps = dispatch => {
     ), dispatch);
   }
 
-MainPage.contextTypes = {
-  t: PropTypes.func
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(MainPage)
+export default connect(mapStateToProps, mapDispatchToProps)(Index)

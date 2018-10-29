@@ -13,9 +13,7 @@ import { LoadingFull } from '../components/shared/loadingFull.js'
 import I18n from "redux-i18n"
 import { translations } from "../i18n/translations"
 
-
 import '../scss/index.scss'
-
 
 class MyApp extends App {
 
@@ -62,7 +60,7 @@ class MyApp extends App {
   render () {
 
     const {Component, pageProps, reduxStore, language, phone, tablet} = this.props
-    console.log("_app", this.props)
+    // console.log("_app", this.props)
     return (
       <Container>
         <Provider store={reduxStore}> 

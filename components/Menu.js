@@ -9,7 +9,7 @@ const Menu = [
       },
       {
         name: "Годовые отчеты",
-        url: "/evaluation-reports"
+        url: "/reports"
       },
       {
         name: "Работа у нас",

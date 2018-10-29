@@ -1,5 +1,5 @@
 import React  from 'react'
-import {NavLink} from 'react-router-dom'
+import Link from 'next/link'
 import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
 import {ArrowButton} from '../news/ArrowButton'
@@ -14,7 +14,7 @@ const GalleryCard = ({ item, lang }) => {
 
     if (item) return (
             <div className="column is-12-mobile is-6-tablet is-4-desktop">
-                <NavLink to={"/photo/" + item.uid}>
+                <Link href={{pathname: '/photo/', query: {uid: item.uid}}} as={'/photo/' + item.uid}>
                     <div className="gallery-card">
                         <div className="img-wrap">
                             <img className="photo" 
@@ -27,7 +27,7 @@ const GalleryCard = ({ item, lang }) => {
                             {moment(item.first_publication_date).format('LL')}
                         </div>
                     </div>
-                </NavLink>
+                </Link>
             </div>
         )
 }

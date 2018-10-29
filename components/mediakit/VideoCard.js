@@ -1,5 +1,5 @@
 import React  from 'react'
-import {NavLink} from 'react-router-dom'
+import Link from 'next/link'
 
 import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
@@ -13,12 +13,14 @@ const VideoCard = ({ item }) => {
             <div className="column is-12-mobile is-12-tablet is-6-desktop">
                 <div className="video-card">
                     <div className="video" dangerouslySetInnerHTML={{ __html: item.data.youtube_link.html }} />
-                    <NavLink to={"/video/" + item.uid}>
-                        {RichText.render(item.data.title, PrismicConfig.linkResolver)}
-                        <div className="date">
-                            {moment(item.first_publication_date).format('LL')}
-                        </div>
-                    </NavLink>
+                    <Link href={{pathname: '/video/', query: {uid: item.uid}}} as={'/video/' + item.uid}>
+                        <a>
+                            {RichText.render(item.data.title, PrismicConfig.linkResolver)}
+                            <div className="date">
+                                {moment(item.first_publication_date).format('LL')}
+                            </div>
+                        </a>
+                    </Link>
                 </div>
             </div>
         )

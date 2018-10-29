@@ -79,7 +79,7 @@ class SciSlider extends React.Component {
             {RichText.render(slide.data.name, PrismicConfig.linkResolver)}
           </div>
           <div className="sci-group">
-          <Link href={"/teams/" + slide.data.science_group.uid}>
+          <Link href={{pathname: '/team/', query: {uid: slide.data.science_group.uid}}} as={'/team/' + slide.data.science_group.uid}>
             <a className="group-name">
               {this.context.t("Руководитель группы")} <br />
               {slide.data.science_group.data && RichText.render(slide.data.science_group.data.groupname, PrismicConfig.linkResolver)}

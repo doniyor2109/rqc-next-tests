@@ -158,7 +158,7 @@ class About extends React.Component {
                             <h3>
                                 {this.context.t("Годовые отчеты")} 
                             </h3>
-                            <Link href="/evaluation-reports">
+                            <Link href="/reports">
                                 <a className="main-category-link">
                                     {this.context.t("смотреть все")}
                                 </a>

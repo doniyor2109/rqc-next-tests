@@ -28,7 +28,6 @@ class Videos extends React.Component {
   render() {
     const { items, isFetching, nextPage } = this.props
 
-    console.log(document.getElementsByClassName('video'))
     if (this.props.initialItems === this.state.initialItems && isFetching) return <Loading /> 
     else return (
       <Fragment>

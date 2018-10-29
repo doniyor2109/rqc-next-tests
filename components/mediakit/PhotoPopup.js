@@ -7,7 +7,7 @@ import Socials from '../shared/Socials'
 
 import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
-
+import hostName from '../../host'
 
 function NextSciArrow(props) {
     const { className, onClick } = props;
@@ -98,9 +98,10 @@ class PhotoPopup extends React.Component {
                             <button className="download" title={this.context.t("Скачать фото")}/>
                         </a>
                     </div>
-                    <Socials url={"http://dev.rqc.ru/photo/" + this.props.uid} 
-                            quote={this.props.gallery_title}
-                    />        
+                    <Socials url={hostName + "/photo/" + this.props.uid} 
+                           quote={this.props.gallery_title}
+                           image={this.props.photo_set[0].photo.url}
+                    />   
                 </div>
 
             </Popup>

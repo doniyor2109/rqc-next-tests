@@ -4,11 +4,11 @@ import PrismicConfig from '../../prismic-configuration'
 
 // actions for quering API for a team single document by UID
 
-const fetchTeamRequest = (uid) => ({ type: action_types.FETCH_TEAM_REQUEST, uid });
+export const fetchTeamRequest = (uid) => ({ type: action_types.FETCH_TEAM_REQUEST, uid });
 
-const fetchTeamSuccess = (uid, response) => ({ type: action_types.FETCH_TEAM_SUCCESS, uid, response });
+export const fetchTeamSuccess = (uid, response) => ({ type: action_types.FETCH_TEAM_SUCCESS, uid, response });
 
-const fetchTeamFailure = (uid, error) => ({ type: action_types.FETCH_TEAM_FAILURE, uid, error });
+export const fetchTeamFailure = (uid, error) => ({ type: action_types.FETCH_TEAM_FAILURE, uid, error });
 
 export const fetchTeam = (uid, language) => (dispatch) => {
   dispatch(fetchTeamRequest(uid));
