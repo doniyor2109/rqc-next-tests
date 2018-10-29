@@ -4,15 +4,18 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Media from 'react-media'
+import cookies from 'next-cookies'
 
 //actions
 import * as peopleActions from '../redux/actions/people'
+import {fetchPeopleRequest, fetchPeopleSuccess, fetchPeopleError} from '../redux/actions/people'
 import * as langActions from '../redux/actions/lang'
 
 //components
 import { Loading } from '../components/shared/loading.js'
-import { RichText } from 'prismic-reactjs';
-import PrismicConfig from '../prismic-configuration';
+import { RichText } from 'prismic-reactjs'
+import Prismic from 'prismic-javascript'
+import PrismicConfig from '../prismic-configuration'
 import Persona from '../components/people/Persona.js'
 import BlueButton from '../components/shared/BlueButton'
 
@@ -33,8 +36,22 @@ class People extends React.Component {
         t: PropTypes.func
     }
 
-    componentDidMount() {
-        this.props.fetchPeople(this.props.lang)
+    static async getInitialProps (ctx) {
+        
+        // получаем все необходимое для рендеринга компонента от сервера
+        const {reduxStore} = ctx
+        
+        // получаем настройки языка из кукис 
+        const { language } = cookies(ctx)
+        
+        // запрос к Prismic через redux actons с добавлением контента в redux store
+        reduxStore.dispatch(fetchPeopleRequest())
+        const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
+        await api.query(Prismic.Predicates.at('document.type', 'people'), { lang: language})
+           .then(response => reduxStore.dispatch(fetchPeopleSuccess(response)))
+           .catch(error => reduxStore.dispatch(fetchPeopleError(error)));        
+
+        return {}
     }
 
     componentDidUpdate(prevProps) {

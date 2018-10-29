@@ -13,7 +13,7 @@ const NavbarMenuDesktop = (props, context) => {
   const { Menu, withSlider, switchLanguage, currentLanguage } = props
   const items = Menu.map((item, key) =>
 
-    <Link href={item.url} key={key}>
+    <Link href={item.url} key={key} prefetch>
       <a className={(withSlider ? "is-white opacity080" : "is-black opacity050") + " navbar-item"}>
         {context.t(item.name)}
       </a>
