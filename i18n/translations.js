@@ -56,7 +56,8 @@ export const translations = {
     "Фотогалереи": "Photo galleries", 
     "Видео": "Video",
     "Презентации":"Presentations",
-    "Скачать фото": "Download photo"
+    "Скачать фото": "Download photo",
+    "Здесь будет договор с пользователем об использовании кук": "There will be text of agreement with user about cookie files"
   }
 }
 

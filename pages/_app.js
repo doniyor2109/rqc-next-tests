@@ -4,6 +4,7 @@ import withReduxStore from '../lib/with-redux-store'
 import { Provider } from 'react-redux'
 import cookies from 'next-cookies'
 import Router from 'next/router'
+import PropTypes from 'prop-types'
 
 import Nav from '../components/navbar/Nav'
 import Footer from '../components/Footer'
@@ -22,8 +23,9 @@ class MyApp extends App {
     let pageProps = {}
 
     // добываем значение языка из пользовательских кукис 
-    const {language} = cookies(ctx)
+    const {language, useragreedwithcookies} = cookies(ctx)
     const hasCookies = typeof language === 'undefined' ? false : true
+    const cookieConsent = typeof useragreedwithcookies === 'undefined' ? false : true
 
     // определяем тип устройства, чтобы потом react-media рендерила именно ту версию компонента, которая
     // совпадает с серверным html
@@ -38,7 +40,11 @@ class MyApp extends App {
       pageProps = await Component.getInitialProps(ctx)
     }
     // возвращаем pageProps с сервера и значение языка
-    return { pageProps, language: hasCookies ? language : "ru", phone: phone, tablet: tablet }
+    return {  pageProps, 
+              language: hasCookies ? language : "ru", 
+              phone: phone, 
+              tablet: tablet, 
+              cookieConsent: cookieConsent }
   }
 
   componentDidMount() {
@@ -59,15 +65,15 @@ class MyApp extends App {
 
   render () {
 
-    const {Component, pageProps, reduxStore, language, phone, tablet} = this.props
-    // console.log("_app", this.props)
+    const {Component, pageProps, reduxStore, language, phone, tablet, cookieConsent} = this.props
+    console.log("_app", this.props)
     return (
       <Container>
         <Provider store={reduxStore}> 
           <I18n translations={translations} initialLang={language}>
             <GeneralHead />
             <LoadingFull isOff />
-            <Nav /> 
+            <Nav cookieConsent={cookieConsent}/> 
             <Component {...pageProps} phone={phone} tablet={tablet} />
             <Footer />
           </I18n>
