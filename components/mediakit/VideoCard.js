@@ -13,7 +13,7 @@ const VideoCard = ({ item }) => {
             <div className="column is-12-mobile is-12-tablet is-6-desktop">
                 <div className="video-card">
                     <div className="video" dangerouslySetInnerHTML={{ __html: item.data.youtube_link.html }} />
-                    <Link href={{pathname: '/video/', query: {uid: item.uid}}} as={'/video/' + item.uid}>
+                    <Link href={'/video?uid=' + item.uid} as={'/video/' + item.uid}>
                         <a>
                             {RichText.render(item.data.title, PrismicConfig.linkResolver)}
                             <div className="date">

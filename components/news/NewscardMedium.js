@@ -22,7 +22,7 @@ export const NewscardMedium = (props) => {
   const date = article.data.manual_date_of_publication ? moment(Date(article.data.manual_date_of_publication)).format('LL') : moment(Date(article.first_publication_date)).format('LL')
   return (
     <div className="column is-4-desktop is-6-tablet">
-      <Link href={{pathname: '/article/', query: {uid: article.uid}}} as={'/article/' + article.uid}>
+        <Link href={'/article?uid=' + article.uid} as={'/article/' + article.uid}>
           <div className="news-card-medium" style={back}>
             <div className="tags">
               {tags}

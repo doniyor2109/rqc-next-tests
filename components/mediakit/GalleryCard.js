@@ -14,7 +14,7 @@ const GalleryCard = ({ item, lang }) => {
 
     if (item) return (
             <div className="column is-12-mobile is-6-tablet is-4-desktop">
-                <Link href={{pathname: '/photo/', query: {uid: item.uid}}} as={'/photo/' + item.uid}>
+                <Link href={'/photo?uid=' + item.uid} as={'/photo/' + item.uid}>
                     <div className="gallery-card">
                         <div className="img-wrap">
                             <img className="photo" 
