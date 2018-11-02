@@ -145,12 +145,16 @@
     width:60%;
   }
   
-  .sci-group, .sci-group h1  {
+  .sci-group  {
+    a.group-name {
+      h1 {
+        color: #3998D1;
+        font-weight: 500;
+      }
+    }
     font-weight: normal;
     font-size: 1.4rem;
     line-height: 1.8rem;
-    color: #3998D1;
-
   }
   
   .sci-group h1 {
