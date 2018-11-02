@@ -44,7 +44,7 @@ export const translations = {
     "Лаборатория группы":"The lab of",
     "Больше вакансий":"More vacancies",
     "Подробнее":"More",
-    "Свернуть":"Hide",
+    "Свернуть":"Hide", 
     "Биография":"Bio",
     "Достижения":"Achievements", 
     "TAKЖЕ ПО ТЕМЕ": "MORE NEWS", 
@@ -57,7 +57,8 @@ export const translations = {
     "Видео": "Video",
     "Презентации":"Presentations",
     "Скачать фото": "Download photo",
-    "Здесь будет договор с пользователем об использовании кук": "There will be text of agreement with user about cookie files"
+    "На нашем сайте в целях хранения настроек и показа статей и новостей на выбранном вами языке используются файлы cookie. Нажимая кнопку ОК, вы соглашаетесь с этим": "Our website uses cookies to manage some features and to show you news and announces in selected language. By clicking on OK button you accept the use of cookies",
+    "":""
   }
 }
 
