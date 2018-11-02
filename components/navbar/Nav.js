@@ -34,7 +34,7 @@ class Nav extends Component {
                         style={{ background: '#3998D1', color: 'white', fontSize: '1.3rem', position: 'relative'}}
                         buttonStyle={{ background: '#3998D1', color: 'white', border: '2px solid white',fontSize: '1.3rem', cursor: 'pointer' }}
                         expires={150}>
-          {this.context.t("Здесь будет договор с пользователем об использовании кук")}
+          {this.context.t("На нашем сайте в целях хранения настроек и показа статей и новостей на выбранном вами языке используются файлы cookie. Нажимая кнопку ОК, вы соглашаетесь с этим")}
         </CookieConsent>
       }
 
