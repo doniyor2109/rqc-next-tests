@@ -44,13 +44,7 @@ class SciSlider extends React.Component {
       swipeToSlide: true,
       swipe: true,
       touchThreshold: 5, 
-      }, 
-      ipadSettings: {
-        slidesToShow: 3
-      }, 
-      mobileSettings: {
-        slidesToShow: 2
-      }, 
+      }
   }
 
   constructor(props) {

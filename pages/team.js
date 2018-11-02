@@ -73,7 +73,7 @@ class Team extends Component {
 
   render() {
 
-    const { team } = this.props
+    const { team, phone } = this.props
 
     if (this.props.lang === "ru") {
       moment.locale('ru')
@@ -90,7 +90,13 @@ class Team extends Component {
 
                     <section className="team-header">
                       <div className="container">
-                          <div className="columns">
+                          <div className="columns is-multiline">
+                            <div className="column is-12-desktop">
+                              <h3>
+                                  {this.context.t("Группа")}                        
+                              </h3>
+                              {RichText.render(team.item.data.groupname, PrismicConfig.linkResolver)}
+                            </div>
                               <div className="column is-3-desktop">
                                 <div className="team-leader">
                                   <h3>
@@ -107,17 +113,15 @@ class Team extends Component {
                               </div>
                               <div className="column is-9-desktop">
                                 <div className="group">
-                                  <h3>
-                                    {this.context.t("Группа")}                        
-                                  </h3>
-                                  {RichText.render(team.item.data.groupname, PrismicConfig.linkResolver)}
-
                                   <div className="quote-block">
-                                      <img src="/static/quote-mark.svg" alt="quotation mark" />
+                                    <img className="open-quote" src="../static/quote-mark-open.svg" alt="quotation mark" />
                                       <div className="quote">
                                           {RichText.render(team.item.data.leader_quote, PrismicConfig.linkResolver)}
                                       </div>
+                                   <img className="close-quote" src="../static/quote-mark-close.svg" alt="quotation mark" />
                                   </div>
+
+
                                   <div className="description">
                                     {RichText.render(team.item.data.description, PrismicConfig.linkResolver)}
                                   </div>
@@ -131,7 +135,7 @@ class Team extends Component {
                         <div className="main-category">
                           {this.context.t("Направления исследований")}  
                         </div>
-                          <Topics slides={team.item.data.topics} />
+                          <Topics slides={team.item.data.topics} phone={phone}/>
                       </div>
                     </section>
 

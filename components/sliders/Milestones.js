@@ -6,6 +6,24 @@ import moment from 'moment'
 import 'moment/locale/ru'
 
 
+function NextArrow(props) {
+  const { className, onClick } = props;
+  return (
+    <div className={className} onClick={onClick}>
+      <img src="/static/sci_slider_arrow_right.svg" alt="Arrow Next Slide"/>
+    </div>
+  )
+}
+
+function PrevArrow(props) {
+  const { className, onClick } = props;
+  return (
+      <div className={className} onClick={onClick}>
+        <img src="/static/sci_slider_arrow_left.svg" alt="Arrow Previous Slide"/>
+      </div>
+    )
+}
+
 class Milestones extends React.Component {
 
 
@@ -31,6 +49,7 @@ class Milestones extends React.Component {
   
     return (
         <Slider {...  {   dots: false,
+                          arrows: true,
                           infinite: true,
                           speed: 700,
                           adaptiveHeight: false,
@@ -39,7 +58,9 @@ class Milestones extends React.Component {
                           lazyLoad: 'progressive',
                           slidesToShow: 6,
                           slidesToScroll: 1,
-                          useTransform: true }}>
+                          useTransform: true, 
+                          nextArrow: <NextArrow />,
+                          prevArrow: <PrevArrow /> }}>
             {items}
         </Slider>
     )
