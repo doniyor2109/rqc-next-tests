@@ -426,15 +426,26 @@
         }
 
         .lab-images {
+            margin-bottom: -7rem;
             
             .lab-name {
                 position: relative;
                 left: 0;
                 bottom: 0;
+                top: -4px;
+            }
+
+            .slick-prev {
+                width: 4rem;
+                height: 4rem;
+                padding: 1rem 0.5rem 1rem 0.3rem;
+            }
+
+            .slick-next {
+                width: 4rem;
+                height: 4rem;
+                padding: 1rem 0.3rem 1rem 0.5rem;            
             }
         }
-            
-
     }
-
 }

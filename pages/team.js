@@ -65,7 +65,7 @@ class Team extends Component {
     // если глобально меняется язык, то редиректим пользователя на страницу с другим uid
     if (this.props.lang !== prevProps.lang) {
       if (this.props.team.item.alternate_languages.length > 0) {
-       Router.push('/teams/' + this.props.team.item.alternate_languages[0].uid)
+       Router.push('/team/' + this.props.team.item.alternate_languages[0].uid)
       }
     }
 
@@ -149,7 +149,7 @@ class Team extends Component {
                     </section>    
 
                     <section className="lab-images">
-                      <LabImage slides={team.item.data.image_gallery} />
+                      <LabImage slides={team.item.data.image_gallery} phone={phone}/>
                         <div className="lab-name">
                           {this.context.t("Лаборатория группы") + " " + this.context.t("«") + team.item.data.groupname[0].text + this.context.t("»")}
                         </div>
