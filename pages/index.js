@@ -127,7 +127,8 @@ static contextTypes = {
                                             defaultMatches={phone === null && tablet === null}
                                             render={() => <SciSlider slides={sciSlider}
                                                                      isLoading={isFetchingSci}
-                                                                     desktop
+                                                                     phone={phone}
+                                                                     tablet={tablet}
                                                             />}
                                       />}
             {/* слайдер ученых для Ipad */}
@@ -136,8 +137,8 @@ static contextTypes = {
                        defaultMatches={tablet !== null}
                        render={() => <SciSlider slides={sciSlider}
                                                 isLoading={isFetchingSci}
-                                                ipad
-                                        />
+                                                phone={phone}
+                                                tablet={tablet}                                        />
              }
                 />
             }
@@ -147,8 +148,8 @@ static contextTypes = {
                        defaultMatches={phone !== null}
                        render={() => <SciSlider slides={sciSlider}
                                                 isLoading={isFetchingSci}
-                                                smartphone
-                                        />
+                                                phone={phone}
+                                                tablet={tablet}                                        />
              }
                 />
             }

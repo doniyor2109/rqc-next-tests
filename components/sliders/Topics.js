@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import Slider from "react-slick"
+import Media from 'react-media'
 import { RichText } from 'prismic-reactjs'
 import PrismicConfig from '../../prismic-configuration'
 
@@ -28,11 +29,10 @@ class Topics extends React.Component {
           dots: false,
           arrows:true,
           infinite: true,
-          speed: 1500,
+          speed: 700,
           adaptiveHeight: false,
           autoplaySpeed: 2000,
           autoplay: false,
-          lazyLoad: 'progressive',
           slidesToScroll: 1,
           useTransform: true,
           nextArrow: <NextSciArrow />,
@@ -79,29 +79,33 @@ class Topics extends React.Component {
   
     return (
       <Fragment>
-        {phone === null && tablet === null &&
-          <div id="carousel">
-            <Slider {...{slidesToShow : slidestoshow, ...this.state.carouselSettings}}>
-              {items}
-            </Slider>
-          </div>        
-          }
-
-        {tablet !== null &&  
-          <div id="carousel">
-            <Slider {...{slidesToShow : 2, ...this.state.carouselSettings}}>
-              {items}
-            </Slider>
-          </div>        
-          }
-  
-        {phone !== null &&  
-          <div id="carousel">
-            <Slider {...{slidesToShow : 1, ...this.state.carouselSettings}}>
-              {items}
-            </Slider>
-          </div>        
-          }
+        <Media query="(min-width: 769px)"
+                       defaultMatches={phone === null}
+                       render={() =>  <div id="carousel">
+                                        <Slider {...{slidesToShow : slidestoshow, ...this.state.carouselSettings}}>
+                                            {items}
+                                        </Slider>
+                                      </div>
+                              }
+        />
+         <Media query="(min-width: 416px) and (max-width:768px)"
+                       defaultMatches={tablet !== null}
+                       render={() =>  <div id="carousel">
+                                        <Slider {...{slidesToShow : 2, ...this.state.carouselSettings}}>
+                                            {items}
+                                        </Slider>
+                                      </div>
+                              }
+        />
+        <Media query="(max-width: 415px)"
+                       defaultMatches={phone !== null}
+                       render={() =>  <div id="carousel">
+                                        <Slider {...{slidesToShow : 1, ...this.state.carouselSettings}}>
+                                            {items}
+                                        </Slider>
+                                      </div>
+                              }
+        />
       </Fragment>
     )
   }
