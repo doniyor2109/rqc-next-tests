@@ -127,17 +127,15 @@ static contextTypes = {
                                             defaultMatches={phone === null && tablet === null}
                                             render={() => <SciSlider slides={sciSlider}
                                                                      isLoading={isFetchingSci}
-                                                                     phone={phone}
-                                                                     tablet={tablet}
+                                                                     desktop
                                                             />}
                                       />}
             {/* слайдер ученых для Ipad */}
             {sciSlider.length > 0 &&  <Media  query="(min-width: 416px) and (max-width: 769px)"
                                               defaultMatches={tablet !== null}
-                                              render={() => <SciSlider slides={sciSlider}
+                                              render={() => <SciSlider  slides={sciSlider}
                                                                         isLoading={isFetchingSci}
-                                                                        phone={phone}
-                                                                        tablet={tablet}                                        
+                                                                        ipad                                  
                                       />
              }
                 />
@@ -147,8 +145,7 @@ static contextTypes = {
                                              defaultMatches={phone !== null}
                                              render={() => <SciSlider slides={sciSlider}
                                                                       isLoading={isFetchingSci}
-                                                                      phone={phone}
-                                                                      tablet={tablet}                                        
+                                                                      iphone                                    
                                       />
              }
                 />

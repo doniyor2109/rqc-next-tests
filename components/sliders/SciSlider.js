@@ -63,7 +63,7 @@ class SciSlider extends React.Component {
 
   render() {
 
-    const { slides, phone, tablet } = this.props
+    const { slides, desktop, ipad, iphone } = this.props
 
     const items = slides.map((slide, index) => {
       return (
@@ -86,7 +86,7 @@ class SciSlider extends React.Component {
     })
     return (
         <Fragment>
-          {phone === null && tablet === null && 
+          {desktop && 
                       <div id="carousel">
                         <Slider {...{dots: false,
                             arrows: true,
@@ -105,14 +105,14 @@ class SciSlider extends React.Component {
                         </Slider>
                       </div>
           }
-          {tablet !== null && 
+          {ipad && 
                   <div id="carousel">
                     <Slider {...{slidesToShow : 3, ...this.state.carouselSettings}}>
                       {items}
                     </Slider>
                   </div>
           }
-          {phone !== null && 
+          {iphone && 
                         <div id="carousel">
                           <Slider {...{slidesToShow : 2, ...this.state.carouselSettings}}>
                             {items}
@@ -120,6 +120,8 @@ class SciSlider extends React.Component {
                         </div>
           
           }
+
+
         </Fragment>
     )
   }
