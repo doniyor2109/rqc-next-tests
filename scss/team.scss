@@ -337,6 +337,39 @@
 
 @media (min-width: 416px) and (max-width:768px){
 
+    .teampage {
+
+        .topics {
+
+            .slick-next {
+                right: -3rem;
+            }
+            .slick-prev {
+                left: -3rem;
+            }
+        }
+
+        .milestones-slider  {
+
+            .slick-next {
+                right: -3rem;
+            }
+            .slick-prev {
+                left: -3rem;
+            }
+
+        }
+
+        .lab-images {
+            
+            .lab-name {
+                left: 3rem;
+                bottom: 3rem;
+            }
+        }
+
+    }
+
 
 }
 

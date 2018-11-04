@@ -55,7 +55,7 @@ class Topics extends React.Component {
   
   render() {
 
-    const { slides, phone } = this.props
+    const { slides, phone, tablet } = this.props
 
     const slidestoshow = (this.props.slides.length > 3) ? 3 : this.props.slides.length
 
@@ -79,9 +79,17 @@ class Topics extends React.Component {
   
     return (
       <Fragment>
-        {phone === null &&  
+        {phone === null && tablet === null &&
           <div id="carousel">
             <Slider {...{slidesToShow : slidestoshow, ...this.state.carouselSettings}}>
+              {items}
+            </Slider>
+          </div>        
+          }
+
+        {tablet !== null &&  
+          <div id="carousel">
+            <Slider {...{slidesToShow : 2, ...this.state.carouselSettings}}>
               {items}
             </Slider>
           </div>        

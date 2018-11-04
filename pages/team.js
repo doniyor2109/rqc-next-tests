@@ -73,7 +73,9 @@ class Team extends Component {
 
   render() {
 
-    const { team, phone } = this.props
+    const { team, phone, tablet } = this.props
+
+    console.log("team", this.props)
 
     if (this.props.lang === "ru") {
       moment.locale('ru')
@@ -135,7 +137,7 @@ class Team extends Component {
                         <div className="main-category">
                           {this.context.t("Направления исследований")}  
                         </div>
-                          <Topics slides={team.item.data.topics} phone={phone}/>
+                          <Topics slides={team.item.data.topics} phone={phone} tablet={tablet} />
                       </div>
                     </section>
 
