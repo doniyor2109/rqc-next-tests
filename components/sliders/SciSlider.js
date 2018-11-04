@@ -120,8 +120,6 @@ class SciSlider extends React.Component {
                         </div>
           
           }
-
-
         </Fragment>
     )
   }

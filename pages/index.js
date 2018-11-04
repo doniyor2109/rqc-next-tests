@@ -132,24 +132,24 @@ static contextTypes = {
                                                             />}
                                       />}
             {/* слайдер ученых для Ipad */}
-            {sciSlider.length > 0 
-            &&  <Media query="(min-width: 416px) and (max-width: 769px)"
-                       defaultMatches={tablet !== null}
-                       render={() => <SciSlider slides={sciSlider}
-                                                isLoading={isFetchingSci}
-                                                phone={phone}
-                                                tablet={tablet}                                        />
+            {sciSlider.length > 0 &&  <Media  query="(min-width: 416px) and (max-width: 769px)"
+                                              defaultMatches={tablet !== null}
+                                              render={() => <SciSlider slides={sciSlider}
+                                                                        isLoading={isFetchingSci}
+                                                                        phone={phone}
+                                                                        tablet={tablet}                                        
+                                      />
              }
                 />
             }
             {/* слайдер ученых для смартфона */}
-            {sciSlider.length > 0 
-            &&  <Media query="(max-width: 415px)"
-                       defaultMatches={phone !== null}
-                       render={() => <SciSlider slides={sciSlider}
-                                                isLoading={isFetchingSci}
-                                                phone={phone}
-                                                tablet={tablet}                                        />
+            {sciSlider.length > 0 &&  <Media query="(max-width: 415px)"
+                                             defaultMatches={phone !== null}
+                                             render={() => <SciSlider slides={sciSlider}
+                                                                      isLoading={isFetchingSci}
+                                                                      phone={phone}
+                                                                      tablet={tablet}                                        
+                                      />
              }
                 />
             }
