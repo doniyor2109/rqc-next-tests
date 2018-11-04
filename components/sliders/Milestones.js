@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Slider from "react-slick"
 import { RichText } from 'prismic-reactjs'
 import PrismicConfig from '../../prismic-configuration'
@@ -26,10 +26,39 @@ function PrevArrow(props) {
 
 class Milestones extends React.Component {
 
+  state = {
+    carouselSettings: {
+      dots: false,
+      arrows: true,
+      infinite: true,
+      speed: 700,
+      adaptiveHeight: false,
+      autoplaySpeed: 2000,
+      autoplay: true,
+      lazyLoad: 'progressive',
+      slidesToScroll: 1,
+      useTransform: true, 
+      nextArrow: <NextArrow />,
+      prevArrow: <PrevArrow />
+    }
+  }
+
+  constructor(props) {
+    super(props);
+    this.preventTouch = this.preventTouch.bind(this);
+    this.touchStart = this.touchStart.bind(this);
+  }
+
+  componentDidMount() {
+    // Disable touchmove to prevent scrolling entire page
+    const carousel = document.getElementById('carousel'); // Your site element containing react-slick's carousel-container
+    carousel.addEventListener('touchstart', this.touchStart);
+    carousel.addEventListener('touchmove', this.preventTouch, { passive: false });
+  }
 
   render() {
 
-    const { slides } = this.props
+    const { slides, phone } = this.props
 
     const items = slides.map((slide, index) => {
       return (
@@ -48,22 +77,38 @@ class Milestones extends React.Component {
     })
   
     return (
-        <Slider {...  {   dots: false,
-                          arrows: true,
-                          infinite: true,
-                          speed: 700,
-                          adaptiveHeight: false,
-                          autoplaySpeed: 2000,
-                          autoplay: true,
-                          lazyLoad: 'progressive',
-                          slidesToShow: 6,
-                          slidesToScroll: 1,
-                          useTransform: true, 
-                          nextArrow: <NextArrow />,
-                          prevArrow: <PrevArrow /> }}>
-            {items}
-        </Slider>
+      <Fragment>
+        {phone === null &&  
+          <div id="carousel">
+            <Slider {...  {slidesToShow: 6, ...this.state.carouselSettings}}>
+                {items}
+            </Slider>
+          </div>
+        }
+        {phone !== null &&  
+          <div id="carousel">
+            <Slider {...  {slidesToShow: 1, ...this.state.carouselSettings}}>
+                {items}
+            </Slider>
+          </div>
+        }
+
+      </Fragment>
     )
+  }
+  touchStart(e) {
+    // capture user's starting finger position, for later comparison
+    this.firstClientX = e.touches[0].clientX;
+  }
+  preventTouch(e) {
+    // only prevent touch on horizontal scroll (for horizontal carousel)
+    // this allows the users to scroll vertically past the carousel when touching the carousel
+    // this also stabilizes the horizontal scroll somewhat, decreasing vertical scroll while horizontal scrolling
+    const clientX = e.touches[0].clientX - this.firstClientX;
+    const horizontalScroll = Math.abs(clientX) > this.state.carouselSettings.touchThreshold;
+    if (horizontalScroll) {
+      e.preventDefault();
+    }
   }
 }
 

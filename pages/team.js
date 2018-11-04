@@ -144,7 +144,7 @@ class Team extends Component {
                             <div className="main-category">
                                 {this.context.t("Наши успехи")}                        
                             </div>
-                            <Milestones  slides={team.item.data.milestones} />
+                            <Milestones  slides={team.item.data.milestones} phone={phone}/>
                         </div>
                     </section>    
 

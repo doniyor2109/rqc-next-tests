@@ -25,6 +25,7 @@ class LabImage extends React.Component {
   render() {
 
     const { slides } = this.props
+    console.log("labimage", this.props)
 
     const items = slides.map((slide, index) => {
       return (

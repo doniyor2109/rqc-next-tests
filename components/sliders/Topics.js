@@ -53,9 +53,6 @@ class Topics extends React.Component {
     carousel.addEventListener('touchmove', this.preventTouch, { passive: false });
   }
   
-  
-
-
   render() {
 
     const { slides, phone } = this.props

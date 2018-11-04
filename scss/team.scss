@@ -411,6 +411,30 @@
             }
         }
 
+        .milestones-slider  {
+
+            .slick-prev, .slick-next {
+                top: -6.5rem;
+            }
+            .slick-next {
+                right: -1rem;
+            }
+            .slick-prev {
+                left: 0;
+            }
+
+        }
+
+        .lab-images {
+            
+            .lab-name {
+                position: relative;
+                left: 0;
+                bottom: 0;
+            }
+        }
+            
+
     }
 
 }
