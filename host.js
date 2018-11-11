@@ -1,2 +1,2 @@
-const hostName = "http://dev.braintobrain.ru"
+const hostName = "http://next.rqc.ru"
 export default hostName
