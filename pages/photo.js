@@ -79,12 +79,12 @@ class Photo extends React.Component {
             <Fragment>
 
                  <Head>
-                    <title>{item.data && item.data.title[0].text}</title>
+                    <title>{item.data.title[0] && item.data.title[0].text}</title>
                     <meta property="og:url"                content={hostName + "/photo/" + item.uid} />
                     <meta property="og:type"               content="article" />
-                    <meta property="og:title"              content={item.data && item.data.title[0].text} />
-                    <meta property="og:description"        content={item.data && item.data.description[0].text} />
-                    <meta property="og:image"              content={item.data && item.data.photo_set[0].photo.url}  />
+                    <meta property="og:title"              content={item.data.title[0] && item.data.title[0].text} />
+                    <meta property="og:description"        content={item.data.description[0] && item.data.description[0].text} />
+                    <meta property="og:image"              content={item.data.photo_set[0] && item.data.photo_set[0].photo.url}  />
                 </Head>
 
                 <PopupNoTranslation active={this.state.modalActive} click={this.redirect} />

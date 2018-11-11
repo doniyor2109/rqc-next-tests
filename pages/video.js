@@ -74,12 +74,12 @@ class Video extends React.Component {
         return (
             <Fragment>
                 <Head>
-                    <title>{item.data && item.data.title[0].text}</title>
+                    <title>{item.data.title[0] && item.data.title[0].text}</title>
                     <meta property="og:url"                content={hostName + "/video/" + item.uid} />
                     <meta property="og:type"               content="video" />
-                    <meta property="og:title"              content={item.data && item.data.title[0].text} />
-                    <meta property="og:description"        content={item.data && item.data.description[0].text} />
-                    <meta property="og:image"              content={item.data && item.data.youtube_link.thumbnail_url}  />
+                    <meta property="og:title"              content={item.data.title[0] && item.data.title[0].text} />
+                    <meta property="og:description"        content={item.data.description[0] && item.data.description[0].text} />
+                    <meta property="og:image"              content={item.data.youtube_link && item.data.youtube_link.thumbnail_url}  />
                 </Head>
 
                 <PopupNoTranslation active={this.state.modalActive} click={this.redirect} />
