@@ -115,10 +115,6 @@ class Article extends Component {
        })
     }
 
-    // показываем анимацию в момент загрузки новости
-    // if (article.isFetching) {
-    //     return <Loading />
-    //     } else 
     return (
 
       <Fragment>

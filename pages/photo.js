@@ -5,6 +5,8 @@ import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 import Router from 'next/router'
 import cookies from 'next-cookies'
+import Head from 'next/head'
+
 
 
 //actions
@@ -23,6 +25,8 @@ import PrismicConfig from '../prismic-configuration'
 import Prismic from 'prismic-javascript'
 import moment from 'moment'
 import 'moment/locale/ru'
+import hostName from '../host'
+
 
 class Photo extends React.Component {
 
@@ -73,6 +77,15 @@ class Photo extends React.Component {
         if (isFetching) return <Loading /> 
         else return (
             <Fragment>
+
+                 <Head>
+                    <title>{item.data && item.data.title[0].text}</title>
+                    <meta property="og:url"                content={hostName + "/photo/" + item.uid} />
+                    <meta property="og:type"               content="article" />
+                    <meta property="og:title"              content={item.data && item.data.title[0].text} />
+                    <meta property="og:description"        content={item.data && item.data.description[0].text} />
+                    <meta property="og:image"              content={item.data && item.data.photo_set[0].photo.url}  />
+                </Head>
 
                 <PopupNoTranslation active={this.state.modalActive} click={this.redirect} />
 

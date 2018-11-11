@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 import Router from 'next/router'
 import cookies from 'next-cookies'
+import Head from 'next/head'
 
 //actions
 import * as videoActions from '../redux/actions/video'
@@ -69,10 +70,17 @@ class Video extends React.Component {
         if (this.props.language.currentLanguage === "ru") {
             moment.locale('ru')
         } else moment.locale('en')
-        
-        if (isFetching) return <Loading /> 
-        else return (
+  
+        return (
             <Fragment>
+                <Head>
+                    <title>{item.data && item.data.title[0].text}</title>
+                    <meta property="og:url"                content={hostName + "/video/" + item.uid} />
+                    <meta property="og:type"               content="video" />
+                    <meta property="og:title"              content={item.data && item.data.title[0].text} />
+                    <meta property="og:description"        content={item.data && item.data.description[0].text} />
+                    <meta property="og:image"              content={item.data && item.data.youtube_link.thumbnail_url}  />
+                </Head>
 
                 <PopupNoTranslation active={this.state.modalActive} click={this.redirect} />
 
@@ -90,7 +98,8 @@ class Video extends React.Component {
                     <div className="video" dangerouslySetInnerHTML={{ __html: item.data.youtube_link.html }} />
 
                     <Socials url={hostName + "/video/" + this.props.uid} 
-                           quote={item.data.title[0].text}
+                             quote={item.data.title[0].text}
+                             image={item.data.youtube_link.thumbnail_url}
                     />
                     </div>
                     }
