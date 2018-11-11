@@ -80,6 +80,9 @@ class Video extends React.Component {
                     <meta property="og:title"              content={item.data.title[0] && item.data.title[0].text} />
                     <meta property="og:description"        content={item.data.description[0] && item.data.description[0].text} />
                     <meta property="og:image"              content={item.data.youtube_link && item.data.youtube_link.thumbnail_url}  />
+                    <meta property="og:image:width"        content={item.data.youtube_link && item.data.youtube_link.thumbnail_width} />
+                    <meta property="og:image:height"       content={item.data.youtube_link && item.data.youtube_link.thumbnail_height} />
+
                 </Head>
 
                 <PopupNoTranslation active={this.state.modalActive} click={this.redirect} />

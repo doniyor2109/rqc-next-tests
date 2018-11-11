@@ -69,7 +69,7 @@ class Photo extends React.Component {
 
     render() {
         const { isFetching, item } = this.props.photo
-        // console.log("photogallery.js", this.props)
+        console.log("photogallery.js", this.props)
         if (this.props.lang === "ru") {
             moment.locale('ru')
         } else moment.locale('en')
@@ -85,6 +85,8 @@ class Photo extends React.Component {
                     <meta property="og:title"              content={item.data.title[0] && item.data.title[0].text} />
                     <meta property="og:description"        content={item.data.description[0] && item.data.description[0].text} />
                     <meta property="og:image"              content={item.data.photo_set[0] && item.data.photo_set[0].photo.url}  />
+                    <meta property="og:image:width"        content={item.data.photo_set[0] && item.data.photo_set[0].photo.dimensions.width} />
+                    <meta property="og:image:height"       content={item.data.photo_set[0] && item.data.photo_set[0].photo.dimensions.height} />
                 </Head>
 
                 <PopupNoTranslation active={this.state.modalActive} click={this.redirect} />

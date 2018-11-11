@@ -125,6 +125,9 @@ class Article extends Component {
           <meta property="og:title"              content={article.item.data.title[0] && article.item.data.title[0].text} />
           <meta property="og:description"        content={article.item.data.title_description[0] && article.item.data.title_description[0].text} />
           <meta property="og:image"              content={article.item.data.cover && article.item.data.cover.url}  />
+          <meta property="og:image:width"        content={article.item.data.cover && article.item.data.cover.dimensions.width} />
+          <meta property="og:image:height"       content={article.item.data.cover && article.item.data.cover.dimensions.height} />
+
         </Head>
 
         <PopupNoTranslation active={this.state.modalActive} click={this.click} />
