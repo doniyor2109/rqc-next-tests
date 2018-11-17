@@ -94,18 +94,24 @@ class Photo extends React.Component {
                 <section className="photo-gallery-page">
                     {item.data && 
                         <div className="container">
-                            {RichText.render(item.data.title, PrismicConfig.linkResolver)}
-                            <div className="date">
-                                {moment(item.first_publication_date).format('LL')}
-                            </div>
-                            <div className="description">
-                                {RichText.render(item.data.description, PrismicConfig.linkResolver)}
-                            </div>
-                            <div className="download_wrapper">
-                                <a href={Link.url(item.data.archive_url)} target="_blank" rel="noopener noreferrer">
-                                    <button className="download" />
-                                    <p>{this.context.t("Скачать архив")}</p>
-                                </a>
+                                {RichText.render(item.data.title, PrismicConfig.linkResolver)}
+                                <div className="date">
+                                    {moment(item.first_publication_date).format('LL')}
+                                </div>
+                            <div className="columns">
+                                <div className="column is-7-desktop">
+                                    <div className="description">
+                                        {RichText.render(item.data.description, PrismicConfig.linkResolver)}
+                                    </div>
+                                </div>
+                                <div className="column is-5-desktop">
+                                    <div className="download_wrapper">
+                                        <a href={Link.url(item.data.archive_url)} target="_blank" rel="noopener noreferrer">
+                                            <button className="download" />
+                                            <p>{this.context.t("Скачать архив")}</p>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                             
                             <div className="columns is-multiline is-mobile">
