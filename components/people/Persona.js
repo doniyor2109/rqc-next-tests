@@ -27,7 +27,7 @@ class Persona extends React.Component {
                 // презентационный компонент 
                 <div className="column is-3-desktop is-4-tablet">
                     <div className="persona">
-                        <img className="portrait" src={item.portrait.url} alt={item.people_name + "photo"}/>
+                        <img className="portrait" src={item.portrait.url} alt={item.people_name + "photo"} onClick={e => {this.handleClick(e)}}/>
                         <div className="name">
                             {RichText.render(item.people_name, PrismicConfig.linkResolver)}
                         </div>
