@@ -28,17 +28,18 @@ export const NewscardSmall = (props) => {
       <div className="news-card-small">
 
         <Link href={'/article?uid=' + article.uid} as={'/article/' + article.uid}>
-          <div className="back_holder" style={back}>
-            <div className="tags">
-              {tags}
+          <a> 
+            <div className="back_holder" style={back}>
+              <div className="tags">
+                {tags}
+              </div>
+              <ArrowButton color="ffffff"/>
             </div>
-            <ArrowButton color="ffffff"/>
-          </div>
+            <h1 className="title">
+              {article.data.title[0].text}
+            </h1>
+          </a>
         </Link>
-
-        <h1 className="title">
-          {article.data.title[0].text}
-        </h1>
         <p className="published-date">
           {date}
         </p>

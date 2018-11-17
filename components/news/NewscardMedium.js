@@ -23,18 +23,20 @@ export const NewscardMedium = (props) => {
   return (
     <div className="column is-4-desktop is-6-tablet">
         <Link href={'/article?uid=' + article.uid} as={'/article/' + article.uid}>
-          <div className="news-card-medium" style={back}>
-            <div className="tags">
-              {tags}
+          <a>
+            <div className="news-card-medium" style={back}>
+              <div className="tags">
+                {tags}
+              </div>
+              <h1 className="title">
+                {article.data.title[0].text}
+              </h1>
+              <p className="published-date">
+                {date}
+              </p>
+              <ArrowButton url={"/news/" + article.uid} color="ffffff"/> 
             </div>
-            <h1 className="title">
-              {article.data.title[0].text}
-            </h1>
-            <p className="published-date">
-              {date}
-            </p>
-            <ArrowButton url={"/news/" + article.uid} color="ffffff"/> 
-          </div>
+          </a>
         </Link>
     </div>
   )

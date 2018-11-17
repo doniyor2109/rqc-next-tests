@@ -23,18 +23,20 @@ export const NewscardLarge = (props) => {
   return (
     <div className="column is-8-desktop is-12-tablet">
         <Link href={'/article?uid=' + article.uid} as={'/article/' + article.uid}>
-        <div className="news-card-large" style={back}>
-          <div className="tags">
-            {tags}
+        <a>
+          <div className="news-card-large" style={back}>
+            <div className="tags">
+              {tags}
+            </div>
+            <h1 className="title">
+              {article.data.title[0].text}
+            </h1>
+            <p className="published-date">
+              {date}
+            </p>
+            <ArrowButton color="ffffff"/> 
           </div>
-          <h1 className="title">
-            {article.data.title[0].text}
-          </h1>
-          <p className="published-date">
-            {date}
-          </p>
-          <ArrowButton color="ffffff"/> 
-        </div>
+        </a>
       </Link>
     </div>
   )
