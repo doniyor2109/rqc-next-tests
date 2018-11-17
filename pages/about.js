@@ -73,7 +73,7 @@ class About extends React.Component {
     render() {
 
         const { page } = this.props.about
-        const { phone } = this.props
+        const { phone, tablet } = this.props
         console.log("about", this.props)
         return (
             <div className="aboutpage">
@@ -148,7 +148,7 @@ class About extends React.Component {
                     </div>
                 </section>
                 <div id="vacancies">
-                    <Vacancies />
+                    <Vacancies phone={phone} tablet={tablet} />
                 </div>
                 <section className="reports_and_media_kit">
                     <div className="container">

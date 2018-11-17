@@ -19,7 +19,8 @@ class Vacancies extends React.Component {
         vacanciesNumberDesktop: 6, 
         vacanciesNumberTablet: 4, 
         vacanciesNumberMobile: 3, 
-        moreVacanciesButtonPresent: true
+        moreVacanciesButtonPresent: true, 
+        cardoffsetTop: 0
 
     }
 
@@ -29,7 +30,7 @@ class Vacancies extends React.Component {
 
     render() {
 
-        const { vacancies, isFetching } = this.props
+        const { vacancies, isFetching, phone, tablet } = this.props
         // console.log("vacancies", this.props)
         if (isFetching) return <Loading />
         else return (
@@ -43,10 +44,11 @@ class Vacancies extends React.Component {
                     <div className="columns is-multiline">
 
                     <Media  query="(min-width: 769px)"
+                            defaultMatches={phone === null && tablet === null}
                             render={() =>  vacancies.items.slice(0, this.state.vacanciesNumberDesktop).map((item, index) => {
                                                 return (
                                                     <Fragment key={index}>
-                                                        <VacancyCard item={item} onClick={this.handleClick} cardNumber={index}/>
+                                                        <VacancyCard item={item} onClick={this.handleClick} cardNumber={index} />
                                                         <VacancyPopup key={index} item={item} active={this.state.popupKey === index} close={this.popupClose}/>
                                                     </Fragment>
                                                 )
@@ -55,10 +57,11 @@ class Vacancies extends React.Component {
                     />
 
                     <Media  query="(min-width: 416px) and (max-width: 768px)"
+                            defaultMatches={tablet !== null}
                             render={() =>  vacancies.items.slice(0, this.state.vacanciesNumberTablet).map((item, index) => {
                                                 return (
                                                     <Fragment key={index}>
-                                                        <VacancyCard item={item} onClick={this.handleClick} cardNumber={index}/>
+                                                        <VacancyCard item={item} onClick={this.handleClick} cardNumber={index} />
                                                         <VacancyPopup key={index} item={item} active={this.state.popupKey === index} close={this.popupClose}/>
                                                     </Fragment>
                                                 )
@@ -67,10 +70,11 @@ class Vacancies extends React.Component {
                     />
                 
                     <Media  query="(max-width: 415px)"
+                            defaultMatches={phone !== null}
                             render={() =>  vacancies.items.slice(0, this.state.vacanciesNumberMobile).map((item, index) => {
                                                 return (
                                                     <Fragment key={index}>
-                                                        <VacancyCard item={item} onClick={this.handleClick} cardNumber={index}/>
+                                                        <VacancyCard item={item} onClick={this.handleClick} cardNumber={index} />
                                                         <VacancyPopup key={index} item={item} active={this.state.popupKey === index} close={this.popupClose}/>
                                                     </Fragment>
                                                 )
@@ -102,10 +106,11 @@ class Vacancies extends React.Component {
         })
     }
 
-    handleClick = (e, cardNumber) => {
+    handleClick = (e, cardNumber, offset) => {
         e.preventDefault()
         this.setState({
-            popupKey: cardNumber
+            popupKey: cardNumber, 
+            cardoffsetTop: offset
         })
         document.body.classList.add('noscroll')
     }
@@ -113,6 +118,13 @@ class Vacancies extends React.Component {
         e.preventDefault()
         this.setState({popupKey: -1})
         document.body.classList.remove('noscroll')
+
+        const vac = document.getElementById("vacancies").offsetTop + this.state.cardoffsetTop
+
+        window.scrollTo({
+            top: vac, 
+            behavior: "smooth"
+        })
     }
 }
 

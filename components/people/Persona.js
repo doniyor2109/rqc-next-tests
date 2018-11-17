@@ -10,7 +10,6 @@ class Persona extends React.Component {
         popup:false
     }
 
-
     render () {
 
         const { item } = this.props
