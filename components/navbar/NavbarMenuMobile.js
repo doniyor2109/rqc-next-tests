@@ -8,12 +8,11 @@ const handleClick = (switchLanguage, lang, e) => {
   switchLanguage(lang);
   document.getElementById('navMenu').classList.remove('is-active');
   document.querySelector('.navbar-burger').classList.remove('is-active');
-
 }
 
 const NavbarMenuMobile = (props, context) => {
 
-  const { Menu, switchLanguage, currentLanguage } = props
+  const { Menu, switchLanguage, currentLanguage, menuClick } = props
 
   return (
 

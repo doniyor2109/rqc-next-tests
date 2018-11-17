@@ -3,10 +3,18 @@ import Link from 'next/link'
 import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const DropdownItem = ({children}, context) => {
+
+// функция которая закрывает бургер при клике на позицию меню
+const closeMenu = () => {
+  document.querySelector('.navbar-burger').classList.toggle('is-active')
+  document.getElementById('navMenu').classList.toggle('is-active')
+}
+
+const DropdownItem = (props, context) => {
+  const {children} = props
   const ditems = children.map((item, key) =>
     <Link href={item.url} key={key}>
-      <a className="dropdown-item">
+      <a className="dropdown-item" onClick={() => {closeMenu()}}>
         {context.t(item.name)}
       </a>
     </Link>
@@ -26,15 +34,15 @@ class MenuWithDropdown extends React.Component {
 
   render() {
 
-    const { Menu } = this.props
+    const { Menu, menuClick } = this.props
 
     const items = Menu.map((menuitem, key) => 
       <Fragment key={key}>
         <hr className="dropdown-divider" />
         <div key={key} className={this.state.activeKey === key ? "dropdown is-left is-active" : "dropdown is-left"}>
           <div className="dropdown-header">
-            <Link href={menuitem.url}>
-              <a>{this.context.t(menuitem.name)}</a>
+            <Link href={menuitem.url} >
+              <a onClick={() => {closeMenu()}}>{this.context.t(menuitem.name)}</a>
             </Link>
             {menuitem.name === 'Новости' || menuitem.name === 'Мероприятия' 
             ? <div></div>

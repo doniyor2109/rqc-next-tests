@@ -77,7 +77,11 @@ class Nav extends Component {
 
           </div>
 
-          <NavbarMenuMobile Menu={Menu} withSlider={withSlider} switchLanguage={switchLanguage} currentLanguage={this.props.lang}/>
+          <NavbarMenuMobile Menu={Menu} 
+                            withSlider={withSlider} 
+                            switchLanguage={switchLanguage} 
+                            currentLanguage={this.props.lang}
+          />
 
       </nav>
       </Fragment>
