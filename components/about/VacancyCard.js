@@ -10,13 +10,13 @@ export const Vacancy = ({item, onClick, cardNumber}) => {
     if (item) { 
         return (
         <div className="column is-4-desktop is-6-tablet">
-            <div className="vacancy">
+            <div className="vacancy" onClick={e => {onClick(e, cardNumber)}}>
                     {RichText.render(item.data.name, PrismicConfig.linkResolver)}
                     {RichText.render(item.data.salary, PrismicConfig.linkResolver)}
                     <div className="description_teaser">
                         {words_description + "..."}
                     </div>
-                    <ArrowButton color="040303" onClick={e => {onClick(e, cardNumber)}}/>
+                    <ArrowButton color="040303" />
             </div>
         </div>
         )
