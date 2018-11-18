@@ -58,54 +58,81 @@ const Footer = (props, context) => (
             <div className="footer_brand">
               <Link href="/">
                 <a>
-                  {context.t("Российский Квантовый Центр")}
+                  {props.lang === "ru" 
+                  ?
+                    <img src="/static/footer_logo_ru.svg" alt="" />
+                  : 
+                    <img src="/static/footer_logo_en.svg" alt="" />
+                  }
                 </a>
               </Link>
             </div>
           </div>
           <div className="left_down">
             <p>&copy;2013-2018</p>
-            <p>Russian&nbsp;Quantum&nbsp;Center</p>
+            <p>{context.t("Российский квантовый центр")}</p>
           </div>
         </div>
         <div className="middle_part">
           <FooterMenu Menu = {Menu}/>
+          <div className="middle_down_mobile">
+            <p>&copy;2013-2018</p>
+            <p>{context.t("Российский Квантовый Центр")}</p>
+          </div>
           <hr className="bottom_hr"/>
-            <div className="partners">
-              <a href="https://www.gazprombank.ru/" target="_blank" rel="noopener noreferrer">   
-                <img src="/static/gazprombank.svg" target="_blank" rel="noopener noreferrer" alt="Логотип Газпромбанка" />
-              </a>
-              <a href="http://misis.ru/"> 
-                <img src="/static/misis.svg" target="_blank" rel="noopener noreferrer" alt="Логотип МИСИС" />  
-              </a>
-              <a href="https://xn--80abucjiibhv9a.xn--p1ai/">       
-                <img src="/static/minobr.svg" target="_blank" rel="noopener noreferrer" alt="Логотип министерства образования РФ" />
-              </a>
-              <a href="https://sk.ru/technopark/">
-                  <img src="/static/sk.svg" target="_blank" rel="noopener noreferrer" alt="Логотип Сколково" />
-              </a>
-            </div>
+            {props.lang === "ru" 
+                  ? 
+                    <div className="partners ru">
+                      <a href="http://misis.ru/"> 
+                        <img src="/static/misis-rus.svg" target="_blank" rel="noopener noreferrer" alt="" />  
+                      </a>
+                      <a href="https://xn--80abucjiibhv9a.xn--p1ai/">       
+                        <img src="/static/MinObr-rus.svg" target="_blank" rel="noopener noreferrer" alt="" />
+                      </a>
+                      <a href="https://www.gazprombank.ru/" target="_blank" rel="noopener noreferrer">   
+                        <img src="/static/Gazprombank-rus.svg" target="_blank" rel="noopener noreferrer" alt="" />
+                      </a>
+                      <a href="https://sk.ru/technopark/">
+                          <img src="/static/Sk-rus.svg" target="_blank" rel="noopener noreferrer" alt="" />
+                      </a>
+                    </div>
+                  :                     
+                  <div className="partners en">
+                    <a href="http://misis.ru/"> 
+                      <img src="/static/misis-eng.svg" target="_blank" rel="noopener noreferrer" alt="" />  
+                    </a>
+                    <a href="https://xn--80abucjiibhv9a.xn--p1ai/">       
+                      <img src="/static/MinObr-eng.svg" target="_blank" rel="noopener noreferrer" alt="" />
+                    </a>
+                    <a href="https://www.gazprombank.ru/" target="_blank" rel="noopener noreferrer">   
+                      <img src="/static/Gazprombank-eng.svg" target="_blank" rel="noopener noreferrer" alt="" />
+                    </a>
+                    <a href="https://sk.ru/technopark/">
+                        <img src="/static/Sk-eng.svg" target="_blank" rel="noopener noreferrer" alt="" />
+                    </a>
+                  </div>
+                  }
+
         </div>
         <div className="right_part">
-          <div className="navbar-item has-dropdown is-hoverable">
-            <button className="navbar-link">
-              {props.lang === "ru" ? "RU" : "EN"}
-            </button>
-            <div className="navbar-dropdown">
-              <button className="navbar-item" onClick={e => {handleClick(props.switchLanguage, "en-gb", e)}}>
-                EN
+          <div className="dropdown is-hoverable">
+            <div className="dropdown-trigger">
+              <button className="navbar-link" aria-haspopup="true" aria-controls="dropdown-menu4">
+                {props.lang === "ru" ? "RU" : "EN"}
               </button>
-              <button className="navbar-item" onClick={e => {handleClick(props.switchLanguage, "ru", e)}}>
-                RU
-              </button>
+            </div>
+            <div className="dropdown-menu" id="dropdown-menu4" role="menu">
+              <div className="dropdown-content">
+                <button className="navbar-item" onClick={e => {handleClick(props.switchLanguage, "en-gb", e)}}>
+                  EN
+                </button>
+                <button className="navbar-item" onClick={e => {handleClick(props.switchLanguage, "ru", e)}}>
+                  RU
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="copyright is-hidden-desktop is-hidden-widescreen is-hidden-fullhd">
-        <p>&copy;2013-2018</p>
-        <p>Russian Quantum Center</p>
       </div>
     </div>
   </footer>
