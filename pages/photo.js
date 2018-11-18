@@ -23,8 +23,6 @@ import PopupNoTranslation from '../components/mediakit/PopupNoTranslation'
 import { Link, RichText } from 'prismic-reactjs'
 import PrismicConfig from '../prismic-configuration'
 import Prismic from 'prismic-javascript'
-import moment from 'moment'
-import 'moment/locale/ru'
 import hostName from '../host'
 
 
@@ -68,12 +66,7 @@ class Photo extends React.Component {
     }
 
     render() {
-        const { isFetching, item } = this.props.photo
-        console.log("photogallery.js", this.props)
-        if (this.props.lang === "ru") {
-            moment.locale('ru')
-        } else moment.locale('en')
-        
+        const { isFetching, item } = this.props.photo        
         if (isFetching) return <Loading /> 
         else return (
             <Fragment>
@@ -95,9 +88,6 @@ class Photo extends React.Component {
                     {item.data && 
                         <div className="container">
                                 {RichText.render(item.data.title, PrismicConfig.linkResolver)}
-                                <div className="date">
-                                    {moment(item.first_publication_date).format('LL')}
-                                </div>
                             <div className="columns">
                                 <div className="column is-7-desktop">
                                     <div className="description">

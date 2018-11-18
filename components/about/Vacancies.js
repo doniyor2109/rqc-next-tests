@@ -118,9 +118,7 @@ class Vacancies extends React.Component {
         e.preventDefault()
         this.setState({popupKey: -1})
         document.body.classList.remove('noscroll')
-
         const vac = document.getElementById("vacancies").offsetTop + this.state.cardoffsetTop
-
         window.scrollTo({
             top: vac, 
             behavior: "smooth"

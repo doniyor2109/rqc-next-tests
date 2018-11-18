@@ -23,8 +23,6 @@ import Socials from '../components/shared/Socials'
 import { RichText } from 'prismic-reactjs'
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../prismic-configuration'
-import moment from 'moment'
-import 'moment/locale/ru'
 import hostName from '../host'
 
 
@@ -66,10 +64,6 @@ class Video extends React.Component {
 
     render() {
         const { isFetching, item } = this.props.video
-        console.log("video.js", this.props)
-        if (this.props.language.currentLanguage === "ru") {
-            moment.locale('ru')
-        } else moment.locale('en')
   
         return (
             <Fragment>
@@ -92,9 +86,6 @@ class Video extends React.Component {
                     {item.data && 
                     <div className="container">
                             {RichText.render(item.data.title, PrismicConfig.linkResolver)}
-                            <div className="date">
-                                {moment(item.first_publication_date).format('LL')}
-                            </div>
                             <div className="description">
                                 {RichText.render(item.data.description, PrismicConfig.linkResolver)}
                             </div>
