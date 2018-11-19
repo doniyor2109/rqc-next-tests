@@ -2,10 +2,6 @@ import { YMInitializer } from 'react-yandex-metrika'
 
 class Metrika extends React.Component {
 
-  componentDidMount(){
-    ym.init([51213086])
-  }
-
   render() {
     return (
       <div>
