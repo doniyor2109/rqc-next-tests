@@ -9,7 +9,6 @@ import * as langActions from '../../redux/actions/lang'
 import { Loading } from '../shared/loading'
 import VacancyCard from './VacancyCard'
 import VacancyPopup from './VacancyPopup'
-import BlueButton from '../shared/BlueButton'
 
 
 class Vacancies extends React.Component {
@@ -31,7 +30,6 @@ class Vacancies extends React.Component {
     render() {
 
         const { vacancies, isFetching, phone, tablet } = this.props
-        // console.log("vacancies", this.props)
         if (isFetching) return <Loading />
         else return (
             <section className="vacancies">

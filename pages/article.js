@@ -84,7 +84,7 @@ class Article extends Component {
   render() {
 
     const { article, phone, tablet } = this.props
-    console.log("article rendered")
+    console.log("article", this.props)
     if (this.props.lang === "ru") {
       moment.locale('ru')
     } else moment.locale('en')
@@ -135,11 +135,35 @@ class Article extends Component {
         {/* тело новости */}
         {article.item.data && 
           <Fragment>
-            <ArticleHero  backImage={article.item.data.cover.url} 
-                          tags={article.item.tags} 
-                          date={moment(article.item.data.manual_date_of_publication).format('LL')} 
-                          title={article.item.data.title} 
+
+            <Media  query="(min-width: 769px)"
+                  defaultMatches={phone === null && tablet === null}
+                  render={() => <ArticleHero  backImage={article.item.data.cover.url} 
+                                              tags={article.item.tags} 
+                                              date={moment(article.item.data.manual_date_of_publication).format('LL')} 
+                                              title={article.item.data.title} 
+                                />
+                          }
             />
+            <Media  query="(min-width: 416px) and (max-width:768px)"
+                    defaultMatches={tablet !== null}
+                    render={() => <ArticleHero  backImage={article.item.data.cover.ipad.url} 
+                                                tags={article.item.tags} 
+                                                date={moment(article.item.data.manual_date_of_publication).format('LL')} 
+                                                title={article.item.data.title} 
+                                  />
+                          }
+            />
+            <Media  query="(max-width:415px)"
+                    defaultMatches={phone !== null}
+                    render={() => <ArticleHero  backImage={article.item.data.cover.iphone.url} 
+                                                tags={article.item.tags} 
+                                                date={moment(article.item.data.manual_date_of_publication).format('LL')} 
+                                                title={article.item.data.title} 
+                                  />
+                          }
+            />
+            
 
             <ArticleBody lead={article.item.data.title_description} content={articleContent} />
           </Fragment>

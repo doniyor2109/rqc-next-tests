@@ -5,7 +5,6 @@ import PrismicConfig from '../../prismic-configuration';
 
 
 const ScrollTop = ({myRef}) => {
-    console.log("scroll vac", myRef) 
     return (
         <div>
         </div>
