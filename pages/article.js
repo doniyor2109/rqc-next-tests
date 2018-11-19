@@ -176,7 +176,7 @@ class Article extends Component {
         {article.item.tags && 
           <Media  query="(min-width: 416px) and (max-width:768px)"
                   defaultMatches={tablet !== null}
-                  render={() => <MoreNews fetchNewsByTag={this.props.fetcharticlesByTag} 
+                  render={() => <MoreNews fetchNewsByTag={this.props.fetchArticlesByTag} 
                                           tags={article.item.tags} 
                                           numberOfArticles={2}
                                           articles={this.props.byTag.articles}
