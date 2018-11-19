@@ -85,10 +85,7 @@ class Vacancies extends React.Component {
                     </div>
                     {(vacancies.items.length > 6) && this.state.moreVacanciesButtonPresent &&
                         <div className="button-wraper">
-                            <BlueButton onClick={e => {this.moreVacancies(e)}}>
-                                {this.context.t("Больше вакансий")}
-                                <img className="arrow-down" src="/static/blue_arrow_down.svg" alt=""/>
-                            </BlueButton>
+                            <img src="/static/more.svg" onClick={e => {this.moreVacancies(e)}} />
                         </div>
                     }
                 </div>
