@@ -13,7 +13,7 @@ import { LoadingFull } from '../components/shared/loadingFull.js'
 
 import I18n from "redux-i18n"
 import { translations } from "../i18n/translations"
-import Metrika from '../components'
+import Metrika from '../components/shared/Metrika'
 
 
 import '../scss/index.scss'
