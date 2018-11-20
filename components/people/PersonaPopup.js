@@ -32,7 +32,10 @@ const PersonaPopup = ({active, close, item}, context) => {
                     </div>
                 </div>
                 <div className="columns">
-                    <div className="column is-5-desktop is-offset-1-desktop">
+                    <div className={(item.awards[0] && (item.awards[0].text.length > 0))
+                                    ? "column is-5-desktop is-offset-1-desktop"
+                                    : "column is-10-desktop is-offset-1-desktop is-12-tablet"
+                                    }>
                         <img src="/static/bio.svg" className="awards_img" alt=""/>
                         <h1>{context.t("Биография")}</h1>
                         <div className="titles">
