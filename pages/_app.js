@@ -4,7 +4,6 @@ import withReduxStore from '../lib/with-redux-store'
 import { Provider } from 'react-redux'
 import cookies from 'next-cookies'
 import Router from 'next/router'
-import PropTypes from 'prop-types'
 
 import Nav from '../components/navbar/Nav'
 import Footer from '../components/Footer'

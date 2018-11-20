@@ -83,32 +83,32 @@ const Footer = (props, context) => (
             {props.lang === "ru" 
                   ? 
                     <div className="partners ru">
-                      <a href="http://misis.ru/"> 
-                        <img src="/static/misis-rus.svg" target="_blank" rel="noopener noreferrer" alt="" />  
+                      <a href="http://misis.ru/" target="_blank" rel="noopener noreferrer"> 
+                        <img src="/static/misis-rus.svg" alt="" />  
                       </a>
-                      <a href="https://xn--80abucjiibhv9a.xn--p1ai/">       
-                        <img src="/static/MinObr-rus.svg" target="_blank" rel="noopener noreferrer" alt="" />
+                      <a href="https://xn--80abucjiibhv9a.xn--p1ai/" target="_blank" rel="noopener noreferrer">       
+                        <img src="/static/MinObr-rus.svg" alt="" />
                       </a>
                       <a href="https://www.gazprombank.ru/" target="_blank" rel="noopener noreferrer">   
-                        <img src="/static/Gazprombank-rus.svg" target="_blank" rel="noopener noreferrer" alt="" />
+                        <img src="/static/Gazprombank-rus.svg"  alt="" />
                       </a>
-                      <a href="https://sk.ru/technopark/">
-                          <img src="/static/Sk-rus.svg" target="_blank" rel="noopener noreferrer" alt="" />
+                      <a href="https://sk.ru/technopark/" target="_blank" rel="noopener noreferrer">
+                          <img src="/static/Sk-rus.svg"  alt="" />
                       </a>
                     </div>
                   :                     
                   <div className="partners en">
-                    <a href="http://misis.ru/"> 
-                      <img src="/static/misis-eng.svg" target="_blank" rel="noopener noreferrer" alt="" />  
+                    <a href="http://misis.ru/" target="_blank" rel="noopener noreferrer"> 
+                      <img src="/static/misis-eng.svg"  alt="" />  
                     </a>
-                    <a href="https://xn--80abucjiibhv9a.xn--p1ai/">       
-                      <img src="/static/MinObr-eng.svg" target="_blank" rel="noopener noreferrer" alt="" />
+                    <a href="https://xn--80abucjiibhv9a.xn--p1ai/" target="_blank" rel="noopener noreferrer">       
+                      <img src="/static/MinObr-eng.svg" alt="" />
                     </a>
                     <a href="https://www.gazprombank.ru/" target="_blank" rel="noopener noreferrer">   
-                      <img src="/static/Gazprombank-eng.svg" target="_blank" rel="noopener noreferrer" alt="" />
+                      <img src="/static/Gazprombank-eng.svg" alt="" />
                     </a>
-                    <a href="https://sk.ru/technopark/">
-                        <img src="/static/Sk-eng.svg" target="_blank" rel="noopener noreferrer" alt="" />
+                    <a href="https://sk.ru/technopark/" target="_blank" rel="noopener noreferrer">
+                        <img src="/static/Sk-eng.svg"  alt="" />
                     </a>
                   </div>
                   }

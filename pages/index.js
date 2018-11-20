@@ -23,6 +23,7 @@ import { NewscardSmall } from '../components/news/NewscardSmall.js'
 import MainSlider from '../components/sliders/MainSlider'
 import SciSlider from '../components/sliders/SciSlider'
 import {Loading} from '../components/shared/loading'
+import OldSite from '../components/oldSite.js'
 
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../prismic-configuration';
@@ -118,6 +119,8 @@ class Index extends React.Component {
                                           tablet={tablet}
                                 /> }
         </section>
+
+        <OldSite />
 
         <section className="news-teaser">
           <div className="container">
