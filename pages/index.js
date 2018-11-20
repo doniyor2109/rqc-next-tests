@@ -12,6 +12,7 @@ import * as langActions from '../redux/actions/lang'
 import { NewscardSmall } from '../components/news/NewscardSmall.js'
 import MainSlider from '../components/sliders/MainSlider'
 import SciSlider from '../components/sliders/SciSlider'
+import {Loading} from '../components/shared/loading'
 
 import hostName from '../host'
 
@@ -30,7 +31,6 @@ static contextTypes = {
   }
 
   componentDidMount() {
-      window.scrollTo(0, 0)
       if (this.props.lang === "en-gb") {
         this.props.fetchMainSlider('W3GV8SQAACQAZAwG', "en-gb")
       } else if (this.props.lang === "ru") {
@@ -60,7 +60,8 @@ static contextTypes = {
     const { mainSlider, sciSlider, isFetchingMain, isFetchingSci, newsTeaser } = this.props.main
 
     console.log("main", this.props)
-    return (
+    if (isFetchingMain) return <Loading />
+    else return (
       <Fragment>
         <Head>
           <title>{this.props.lang === "ru" ? "Российский Квантовый Центр" : "Russian Quantum Center"}</title>
