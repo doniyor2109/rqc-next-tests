@@ -9,13 +9,11 @@ export const fetchMainSliderSuccess = (id, response) => ({ type: action_types.FE
 
 export const fetchMainSliderFailure = (id, error) => ({ type: action_types.FETCH_MAIN_SLIDER_FAILURE, id, error });
 
-export const fetchMainSlider = (id) => (dispatch) => {
-  dispatch(fetchMainSliderRequest(id));
+export const fetchMainSlider = (id, language) => (dispatch) => {
+  dispatch(fetchMainSliderRequest());
   return Prismic.getApi(PrismicConfig.apiEndpoint)
-    .then(api => {api.query(Prismic.Predicates.at('document.id', id))
-                      .then(response => {
-                                          dispatch(fetchMainSliderSuccess(id, response));
-                                        })
+    .then(api => {api.query(Prismic.Predicates.at('document.id', id), { lang: language})
+                      .then(response => dispatch(fetchMainSliderSuccess(id, response)))
                       .catch(error => dispatch(fetchMainSliderFailure(id, error)))
           })
 }

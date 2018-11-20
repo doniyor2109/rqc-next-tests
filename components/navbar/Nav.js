@@ -21,10 +21,23 @@ library.add(faChevronDown, faSearch)
 
 class Nav extends Component {
 
+  state = {
+    DOMLoaded: false
+  }
+
+  componentDidMount() {
+    this.setState({
+      DOMLoaded: true
+    })
+  }
+
   render() {
     const {router, switchLanguage, lang, cookieConsent} = this.props
-    const withSlider = router.pathname === "/"
-    // console.log("nav", this.props)
+
+    // пока загружается дом переменная withSlider будет false
+    // чтобы показывать на белом фоне серый логотип, а иначе его не видно и это плохо
+    const withSlider = !this.state.DOMLoaded ? false : router.pathname === "/"
+
     return (
       <Fragment>
       {!cookieConsent && 

@@ -39,11 +39,11 @@ class Index extends React.Component {
     // получаем настройки языка из кукис 
     // и в зависимости от языка понимаем какой запрашивать id у призмика для основного слайдера
     const language = cookies(ctx).language
-    const id = (language && language === 'ru' ? 'W3GV8SQAACQAZAwG' : 'W3GVDyQAACYAZAgb')
+    const id = (language && language === 'ru' ? 'W3GVDyQAACYAZAgb' : 'W3GV8SQAACQAZAwG')
     
     // серверный запрос основного слайдера
     reduxStore.dispatch(fetchMainSliderRequest()) 
-    await api.query(Prismic.Predicates.at('document.id', id))
+    await api.query(Prismic.Predicates.at('document.id', id), { lang: language})
               .then(response => reduxStore.dispatch(fetchMainSliderSuccess(id, response)))
               .catch(error => reduxStore.dispatch(fetchMainSliderFailure(id, error)))
 
@@ -71,20 +71,28 @@ class Index extends React.Component {
     t: PropTypes.func
   }
 
+  state = {
+    DOMLoaded: false
+  }
+
+  componentDidMount() {
+    this.setState({
+      DOMLoaded: true
+    })
+  }
 
   componentDidUpdate(prevProps) {
 
     if (this.props.lang !== prevProps.lang) {
       if (this.props.lang === "en-gb"){
-        this.props.fetchMainSlider('W3GV8SQAACQAZAwG')
+        this.props.fetchMainSlider('W3GV8SQAACQAZAwG', "en-gb")
       } else if(this.props.lang === "ru") {
-        this.props.fetchMainSlider('W3GVDyQAACYAZAgb')
+        this.props.fetchMainSlider('W3GVDyQAACYAZAgb', "ru")
       }
       this.props.fetchMainSciSlider(this.props.lang)
       this.props.fetchNewsForMain(this.props.lang, 3) 
     }
   }
-
 
   render() {
 
@@ -92,7 +100,7 @@ class Index extends React.Component {
     const { mainSlider, sciSlider, isFetchingMain, isFetchingSci, newsTeaser } = this.props.main
 
     console.log("main", this.props)
-    if (isFetchingMain) return <Loading />
+    if (!this.state.DOMLoaded) return <Loading />
     else return (
       <Fragment>
         <Head>
