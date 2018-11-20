@@ -1,5 +1,5 @@
 export const translations = {
-  "en-gb": {
+ "en-gb": {
     "Российский Квантовый Центр": "Russian Quantum Center",
     "Присоединяйтесь к команде RQC": "Join RQC team",
     "Чтобы откликнуться на вакансию, присылайте резюме на почту":"To make an application, please mail your CV to ",
@@ -30,7 +30,7 @@ export const translations = {
     "Твердотельный фотодетектор":"Solid-state photodetector",
     "Фемтовижн":"Femtovision",
     "Мероприятия":"Events",
-    "Ученые":"Scientists",
+    "Ведущие исследователи":"Principal investigators",
     "Поделиться":"Share",
     "Наши успехи": "Our progress",
     "Руководитель": "Team leader",
@@ -44,21 +44,23 @@ export const translations = {
     "Лаборатория группы":"The lab of",
     "Больше вакансий":"More vacancies",
     "Подробнее":"More",
-    "Свернуть":"Hide", 
+    "Свернуть":"Hide",
     "Биография":"Bio",
-    "Достижения":"Achievements", 
-    "TAKЖЕ ПО ТЕМЕ": "MORE NEWS", 
-    "Логотип Российского Квантового Центра": "Russian Quantum Center logo", 
-    "Медиакит RQC": "Mediakit RQC", 
-    "Фотографии, видео материалы и презентации Российского квантового центра": "Photos, video and presentations of Russian Quantum Center",
-    "Медиакит": "Mediakit", 
-    "Скачать архив": "Download photos",
-    "Фотогалереи": "Photo galleries", 
-    "Видео": "Video",
-    "Презентации":"Presentations",
-    "Скачать фото": "Download photo",
-    "На нашем сайте в целях хранения настроек и показа статей и новостей на выбранном вами языке используются файлы cookie. Нажимая кнопку ОК, вы соглашаетесь с этим": "Our website uses cookies to manage some features and to show you news and announces in selected language. By clicking on OK button you accept the use of cookies",
-    "":""
-  }
+    "Достижения":"Achievements",
+   "TAKЖЕ ПО ТЕМЕ": "MORE NEWS",
+   "Логотип Российского Квантового Центра": "Russian Quantum Center logo",
+   "Медиакит RQC": "Mediakit RQC",
+   "Фотографии, видео материалы и презентации Российского квантового центра": "Photos, video and presentations of Russian Quantum Center",
+   "Медиакит": "Mediakit",
+   "Скачать архив": "Download photos",
+   "Фотогалереи": "Photo galleries",
+   "Видео": "Video",
+   "Презентации":"Presentations",
+   "Скачать фото": "Download photo",
+"На нашем сайте в целях хранения настроек и показа статей и новостей на выбранном вами языке используются файлы cookie. Нажимая кнопку ОК, вы соглашаетесь с этим": "Our website uses cookies to manage some features and to show you news and announces in selected language. By clicking on OK button you accept the use of cookies",
+"Добро пожаловать на новый сайт РКЦ! Мы все еще работаем над его наполнением. Если вы не можете найти какую-то информацию, посмотрите на нашем старом сайте.":"",
+"Перейти на старый сайт": ""
+}
+
 }
 
