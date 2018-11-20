@@ -5,9 +5,9 @@ class Metrika extends React.Component {
   render() {
     return (
       <div>
-        // SNIP
+        {/* SNIP */}
           <YMInitializer accounts={[51213086]} options={{webvisor: true}} version="2" />
-        // SNIP
+        {/* SNIP */}
       </div>
     )
   }
