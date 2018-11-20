@@ -43,6 +43,7 @@ class MyApp extends App {
     }
     // возвращаем pageProps с сервера и значение языка
     return {  pageProps, 
+              hasCookies: hasCookies, 
               language: hasCookies ? language : "ru", 
               phone: phone, 
               tablet: tablet, 
@@ -51,7 +52,7 @@ class MyApp extends App {
 
   componentDidMount() {
     // выставляем куки, если их не было
-    if (document.cookie.length === 0) {
+    if (!this.props.hasCookies) {
       document.cookie = "language=" + this.props.language
     }
 
