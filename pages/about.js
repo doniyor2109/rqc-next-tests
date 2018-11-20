@@ -7,7 +7,6 @@ import { bindActionCreators } from 'redux'
 import Media from 'react-media'
 import Head from 'next/head'
 import cookies from 'next-cookies'
-import { withRouter } from 'next/router'
 
 //actions
 import * as aboutActions from '../redux/actions/about'
@@ -15,7 +14,6 @@ import * as langActions from '../redux/actions/lang'
 import { fetchAbout, fetchAboutRequest, fetchAboutSuccess, fetchAboutError } from '../redux/actions/about'
 
 //components
-import { Loading } from '../components/shared/loading.js'
 import Partner from '../components/Partner.js'
 import Vacancies from '../components/about/Vacancies'
 import AnnualReports from '../components/sliders/AnnualReports';
@@ -226,4 +224,4 @@ const mapDispatchToProps = dispatch => {
   
 // export default connect(mapStateToProps, mapDispatchToProps)(About)
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(About))
+export default connect(mapStateToProps, mapDispatchToProps)(About)

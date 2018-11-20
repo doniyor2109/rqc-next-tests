@@ -5,51 +5,83 @@ import Link from 'next/link'
 import PropTypes from 'prop-types'
 import Media from 'react-media'
 import Head from 'next/head'
+import cookies from 'next-cookies'
 
 import * as mainActions from '../redux/actions/main'
 import * as langActions from '../redux/actions/lang'
+import {fetchMainSliderRequest, 
+        fetchMainSliderSuccess, 
+        fetchMainSliderFailure, 
+        fetchMainSciSliderRequest, 
+        fetchMainSciSliderSuccess, 
+        fetchMainSciSliderFailure, 
+        fetchNewsForMainRequest, 
+        fetchNewsForMainSuccess,
+        fetchNewsForMainFailure} from '../redux/actions/main'
 
 import { NewscardSmall } from '../components/news/NewscardSmall.js'
 import MainSlider from '../components/sliders/MainSlider'
 import SciSlider from '../components/sliders/SciSlider'
 import {Loading} from '../components/shared/loading'
 
+import Prismic from 'prismic-javascript'
+import PrismicConfig from '../prismic-configuration';
 import hostName from '../host'
 
 class Index extends React.Component {
 
+  static async getInitialProps (ctx) {
+        
+    // получаем все необходимое для рендеринга компонента от сервера
+    const {reduxStore} = ctx
+    const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
+    
+    // получаем настройки языка из кукис 
+    // и в зависимости от языка понимаем какой запрашивать id у призмика для основного слайдера
+    const language = cookies(ctx).language
+    const id = (language && language === 'ru' ? 'W3GV8SQAACQAZAwG' : 'W3GVDyQAACYAZAgb')
+    
+    // серверный запрос основного слайдера
+    reduxStore.dispatch(fetchMainSliderRequest()) 
+    await api.query(Prismic.Predicates.at('document.id', id))
+              .then(response => reduxStore.dispatch(fetchMainSliderSuccess(id, response)))
+              .catch(error => reduxStore.dispatch(fetchMainSliderFailure(id, error)))
 
-static contextTypes = {
-  t: PropTypes.func
-}
+    // серверный запрос слайдера ученых 
+    reduxStore.dispatch(fetchMainSciSliderRequest()) 
+    await api.query(Prismic.Predicates.at('document.type', 'scientist'), { lang: language, 
+                                                                     fetchLinks: ['science_group.groupname', 'science_group.uid'] })
+             .then(response => reduxStore.dispatch(fetchMainSciSliderSuccess(response)))
+             .catch(error => reduxStore.dispatch(fetchMainSciSliderFailure(error)))
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      news_quantity: 3
-    }
+
+    // серверный запрос тизеров новостей 
+    reduxStore.dispatch(fetchNewsForMainRequest()) 
+    await api.query(Prismic.Predicates.at('document.type', 'news'), { lang: language,
+                                                                  pageSize: 3,
+                                                                 orderings: '[my.news.manual_date_of_publication desc]' })
+              .then(response => reduxStore.dispatch(fetchNewsForMainSuccess(response)))
+              .catch(error => reduxStore.dispatch(fetchNewsForMainFailure(error)))
+
+
+    return {lan: language}
   }
 
-  componentDidMount() {
-      if (this.props.lang === "en-gb") {
-        this.props.fetchMainSlider('W3GV8SQAACQAZAwG', "en-gb")
-      } else if (this.props.lang === "ru") {
-        this.props.fetchMainSlider('W3GVDyQAACYAZAgb', "ru")
-      }
-      this.props.fetchMainSciSlider(this.props.lang)
-      this.props.fetchNewsForMain(this.props.lang, this.state.news_quantity)
-    }
+  static contextTypes = {
+    t: PropTypes.func
+  }
+
 
   componentDidUpdate(prevProps) {
 
     if (this.props.lang !== prevProps.lang) {
       if (this.props.lang === "en-gb"){
-        this.props.fetchMainSlider('W3GV8SQAACQAZAwG', "en-gb")
+        this.props.fetchMainSlider('W3GV8SQAACQAZAwG')
       } else if(this.props.lang === "ru") {
-        this.props.fetchMainSlider('W3GVDyQAACYAZAgb', "ru")
+        this.props.fetchMainSlider('W3GVDyQAACYAZAgb')
       }
       this.props.fetchMainSciSlider(this.props.lang)
-      this.props.fetchNewsForMain(this.props.lang, this.state.news_quantity) 
+      this.props.fetchNewsForMain(this.props.lang, 3) 
     }
   }
 
