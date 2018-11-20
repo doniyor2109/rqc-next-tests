@@ -56,7 +56,7 @@ class MainSlider extends React.Component {
           <div className="sl" style={back}>
             <div className="container">
               <div className="columns">
-                <div className="column is-6-desktop is-offset-1-desktop column is-10-tablet is-offset-2-tablet is-6-mobile" >
+                <div className="column is-6-desktop is-offset-1-desktop column is-10-tablet is-offset-2-tablet is-12-mobile" >
                   {RichText.render(slide.primary.title_slideh2, PrismicConfig.linkResolver)}
                   {RichText.render(slide.primary.title_slideh1, PrismicConfig.linkResolver)}
                   {RichText.render(slide.primary.description_slide, PrismicConfig.linkResolver)}
