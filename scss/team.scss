@@ -90,7 +90,7 @@
 
 .milestone {
     font-family: "DIN Pro", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: black;
     position: relative;
     padding-right: 2rem;
@@ -98,13 +98,13 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    border-bottom: 2px solid #009ee2;
+    line-height: 1.8rem;
 
-    
-    .month {
-        color:#009ee2;
-    }
     p {
         display: inline;
+        font-weight: bold;
+        color:#040303;
     }
 
     div > h6 {
@@ -146,8 +146,8 @@
           }
 
         .quote {
-            font-size: 3.2rem;
-            line-height: 1.2;
+            font-size: 2.2rem;
+            line-height: 2.7rem;
         }
 
         img {

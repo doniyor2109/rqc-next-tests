@@ -99,36 +99,36 @@ class Team extends Component {
                               </h3>
                               {RichText.render(team.item.data.groupname, PrismicConfig.linkResolver)}
                             </div>
-                              <div className="column is-3-desktop">
-                                <div className="team-leader">
-                                  <h3>
-                                      {this.context.t("Руководитель")}                        
-                                  </h3>
-                                  {team.item.data.group_leader.data && 
-                                    <Fragment>
-                                      <img src={team.item.data.group_leader.data.photo.url} alt={team.item.data.group_leader.data.name} />
-                                      {RichText.render(team.item.data.group_leader.data.name, PrismicConfig.linkResolver)}
-                                      {RichText.render(team.item.data.group_leader.data.position, PrismicConfig.linkResolver)}
-                                    </Fragment>
-                                  }
-                                </div>
+                            <div className="column is-3-desktop">
+                              <div className="team-leader">
+                                <h3>
+                                    {this.context.t("Руководитель")}                        
+                                </h3>
+                                {team.item.data.group_leader.data && 
+                                  <Fragment>
+                                    <img src={team.item.data.group_leader.data.photo.url} alt={team.item.data.group_leader.data.name} />
+                                    {RichText.render(team.item.data.group_leader.data.name, PrismicConfig.linkResolver)}
+                                    {RichText.render(team.item.data.group_leader.data.position, PrismicConfig.linkResolver)}
+                                  </Fragment>
+                                }
                               </div>
-                              <div className="column is-9-desktop">
-                                <div className="group">
-                                  <div className="quote-block">
-                                    <img className="open-quote" src="../static/quote-mark-open.svg" alt="quotation mark" />
-                                      <div className="quote">
-                                          {RichText.render(team.item.data.leader_quote, PrismicConfig.linkResolver)}
-                                      </div>
-                                   <img className="close-quote" src="../static/quote-mark-close.svg" alt="quotation mark" />
-                                  </div>
+                            </div>
+                            <div className="column is-9-desktop">
+                              <div className="group">
+                                <div className="quote-block">
+                                  <img className="open-quote" src="../static/quote-mark-open.svg" alt="quotation mark" />
+                                    <div className="quote">
+                                        {RichText.render(team.item.data.leader_quote, PrismicConfig.linkResolver)}
+                                    </div>
+                                  <img className="close-quote" src="../static/quote-mark-close.svg" alt="quotation mark" />
+                                </div>
 
 
-                                  <div className="description">
-                                    {RichText.render(team.item.data.description, PrismicConfig.linkResolver)}
-                                  </div>
+                                <div className="description">
+                                  {RichText.render(team.item.data.description, PrismicConfig.linkResolver)}
                                 </div>
                               </div>
+                            </div>
                           </div>
                       </div>
                     </section>
