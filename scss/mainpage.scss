@@ -172,8 +172,9 @@
 }
 
 .old-site-popup {
-  padding: 2rem 0;
+  height: 7rem;
   background-color: #3998D1;
+  margin-top: 1.5rem;
 
   p {
     font-size: 1.2rem;
@@ -184,17 +185,50 @@
   a {
     border: 2px solid white;
     font-size: 1.4rem;
-    line-height: 2rem;
     text-transform: uppercase;
     color:white;
     text-align: center;
-    padding: 11px 37px;
+    padding: 1rem 3.7rem;
     position: relative;
-    top: 2rem;
+    top: 1rem;
+    font-weight: 500;
+
   }
 }
 
-@media screen and (max-width: 768px) {
+.cookie-consent {
+  height: 7rem;
+  background-color: #3998D1;
+  position: relative;
+  top: 1rem;
+  width: 100%;
+  z-index: 31;
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color:white;
+    margin-top: 0.5rem;
+  }
+
+  button {
+    border: 2px solid white;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    height: 3.5rem;
+    cursor: pointer;   
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (min-width:416px) and (max-width: 768px) {
 
   .sl {
     h1 {
@@ -229,14 +263,23 @@
     padding: 0;
   }
   .old-site-popup {
-
     a {
-      padding: 11px 20px;
-      top: 3rem;
+      padding: 10px 10px;
+      top: 1rem;
+      width: 100%;
+    }
+    p {
+      margin-top: -0.5rem;
+    }
+  }
+
+  .cookie-consent {
+    p {
+      margin-top: 0;
     }
   }
 }
-@media screen and (max-width: 415px) {
+@media (max-width: 415px) {
   
   .sl {
     height: 100vh;
@@ -293,11 +336,20 @@
   }
   .old-site-popup {
     text-align: center;
-    height: 18rem;
+    height: 17rem;
 
     a {
       padding: 11px 20px;
-      top: 2rem;
+      top: 0;
+    }
+  }
+  .cookie-consent {
+    height:11rem;
+    p {
+      margin-top: 0;
+    }
+    button {
+      margin-top: 2rem;
     }
   }
 }

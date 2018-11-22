@@ -70,9 +70,6 @@ html {
     height: 100%;
 }
 
-.cookieConsent {
-    position: relative!important;
-}
 
 @media screen and (min-width: 1200px) {
     .container {
@@ -108,28 +105,4 @@ html {
         width: auto;
         padding: 0 3rem;
     }
-    .cookieConsent {
-        position: relative!important;
-        align-items: center!important;
-        background: rgb(57, 152, 209);
-        color: white;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        left: 0px;
-        position: fixed;
-        width: 100%;
-        z-index: 999;
-        font-size: 1.3rem;
-        top: 0px;
-        flex-direction: column;
-        text-align: center;
-        div {
-            flex: 0!important;
-        }
-        button {
-            margin: 0 0 15px !important;
-        }
-    }
-    
 }

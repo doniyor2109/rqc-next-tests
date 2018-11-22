@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 import { withRouter } from 'next/router'
-import CookieConsent from "react-cookie-consent"
+import CookieConsent from "../shared/CookieConsent"
 
 import * as langActions from '../../redux/actions/lang'
 
@@ -14,16 +14,20 @@ import NavbarMenuDesktop from './NavbarMenuDesktop.js'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faChevronDown, faSearch } from '@fortawesome/free-solid-svg-icons'
-import { relative } from 'upath';
 
 library.add(faChevronDown, faSearch)
 
 
 class Nav extends Component {
 
-  state = {
-    DOMLoaded: false
+  constructor(props) {
+    super(props)
+    this.state = {
+      DOMLoaded: false,
+      cookieConsent: this.props.cookieConsent
+    }
   }
+
 
   componentDidMount() {
     this.setState({
@@ -40,15 +44,8 @@ class Nav extends Component {
 
     return (
       <Fragment>
-      {!cookieConsent && 
-        <CookieConsent  location="top"
-                        buttonText="OK"
-                        cookieName="useragreedwithcookies"
-                        style={{ background: '#3998D1', color: 'white', fontSize: '1.3rem', position: 'relative'}}
-                        buttonStyle={{ background: '#3998D1', color: 'white', border: '2px solid white',fontSize: '1.3rem', cursor: 'pointer' }}
-                        expires={150}>
-          {this.context.t("На нашем сайте в целях хранения настроек и показа статей и новостей на выбранном вами языке используются файлы cookie. Нажимая кнопку ОК, вы соглашаетесь с этим")}
-        </CookieConsent>
+      {!this.state.cookieConsent && 
+        <CookieConsent okwithcookies={this.okwithcookies}/>
       }
 
         <nav className={withSlider ? "navbar on-slider is-transparent" : "navbar is-transparent"} aria-label="main navigation">
@@ -110,6 +107,14 @@ class Nav extends Component {
     e.preventDefault();
     document.querySelector('.navbar-burger').classList.toggle('is-active')
     document.getElementById('navMenu').classList.toggle('is-active')
+  }
+
+  okwithcookies = (e) => {
+    e.preventDefault()
+    document.cookie = "useragreedwithcookies=true"
+    this.setState({
+      cookieConsent: true
+    })
   }
 }
 

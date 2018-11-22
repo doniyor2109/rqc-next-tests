@@ -10,7 +10,7 @@ const OldSite = (props, context) => (
                         {context.t("Добро пожаловать на новый сайт РКЦ! Мы все еще работаем над его наполнением. Если вы не можете найти какую-то информацию, посмотрите на нашем старом сайте.")}
                     </p>
                 </div>
-                <div className="is-4-desktop">
+                <div className="column is-3-desktop">
                     <a href="http://old.rqc.ru" target="_blank" rel="noopener noreferrer">
                         {context.t("Перейти на старый сайт")}
                     </a>      
