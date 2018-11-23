@@ -113,7 +113,7 @@ class Index extends React.Component {
           <meta property="og:image"              content="http://www.rqc.ru/images/announce/Evaluation_Report.png" />
         </Head>
         <section className="main-slider">
-          {mainSlider.data && <MainSlider slides={mainSlider.data.body}
+          {mainSlider && mainSlider.data && <MainSlider slides={mainSlider.data.body}
                                           isLoading={isFetchingMain}
                                           phone={phone}
                                           tablet={tablet}
