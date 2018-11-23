@@ -26,9 +26,11 @@ const NavbarMenuDesktop = (props, context) => {
             {items}
           </div>
           <div className="navbar-end">
+
+            {/* Поиск
             <button className={(withSlider ? "is-white opacity080" : "is-black opacity050") + " navbar-item"}>
               <img src={withSlider ? "/static/search_white.svg" : "/static/search_gray.svg"} alt="Поиск по сайту" />
-            </button>
+            </button> */}
             <Social withSlider={withSlider}/>
             <div className="navbar-item has-dropdown is-hoverable">
               <button className={(withSlider ? "is-white opacity080" : "is-black") + " navbar-link"}>

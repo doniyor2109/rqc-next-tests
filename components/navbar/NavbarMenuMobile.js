@@ -27,10 +27,11 @@ const NavbarMenuMobile = (props, context) => {
           EN
         </button>
       </div>
+      {/* Поиск
       <div className="mobile_search_container is-left">
         <FontAwesomeIcon icon="search" size="2x" />
         <input type="text" placeholder="Поиск" />
-      </div>
+      </div> */}
       <MenuWithDropdown Menu={Menu} />
       <hr className="dropdown-divider" />
       <Social color="gray"/>
