@@ -19,19 +19,19 @@ class MoreNews extends React.Component {
     
     componentDidMount(){
         if (this.props.tags[0]) {
-            this.props.fetchNewsByTag(this.props.tags[0], this.props.numberOfArticles)
+            this.props.fetchNewsByTag(this.props.relatedTo, this.props.tags[0], this.props.numberOfArticles)
         } else {
-            this.props.fetchNewsByTag(this.context.t("Новости РКЦ"), this.props.numberOfArticles)
+            this.props.fetchNewsByTag(this.props.relatedTo, this.context.t("Новости РКЦ"), this.props.numberOfArticles)
         }
     }
 
     componentDidUpdate(prevProps, prevState) {
         if (this.props.tags !== prevProps.tags) {
-              this.props.fetchNewsByTag(this.props.tags[0], this.state.moreNews)
+              this.props.fetchNewsByTag(this.props.relatedTo, this.props.tags[0], this.state.moreNews)
             }
 
         if (this.state.moreNews !== prevState.moreNews) {
-            this.props.fetchNewsByTag(this.props.tags[0], this.state.moreNews)
+            this.props.fetchNewsByTag(this.props.relatedTo, this.props.tags[0], this.state.moreNews)
         }
     }
 
@@ -39,7 +39,7 @@ class MoreNews extends React.Component {
 
         const {articles, isFetching, nextPage} = this.props
 
-        // console.log("article more news", this.props)
+        console.log("article more news", this.props)
 
         return (
             <div className="container">

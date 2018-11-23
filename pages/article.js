@@ -12,7 +12,7 @@ import cookies from 'next-cookies'
 import * as articleActions from '../redux/actions/article'
 import {fetchArticleByUidRequest, fetchArticleByUidSuccess, fetchArticleByUidFailure } from '../redux/actions/article'
 import * as langActions from '../redux/actions/lang'
-import * as byTagActions from '../redux/actions/byTag'
+import * as relatedActions from '../redux/actions/articleRelated'
 
 //components
 import { Loading } from '../components/shared/loading.js'
@@ -186,12 +186,13 @@ class Article extends Component {
         {article.item.tags &&
           <Media  query="(min-width: 769px)"
                   defaultMatches={phone === null && tablet === null}
-                  render={() => <MoreNews fetchNewsByTag={this.props.fetchArticlesByTag} 
+                  render={() => <MoreNews fetchNewsByTag={this.props.morenewsByTag} 
+                                          relatedTo={article.item.id}
                                           tags={article.item.tags} 
                                           numberOfArticles={3}
-                                          articles={this.props.byTag.articles}
-                                          isFetching={this.props.byTag.isFetching}
-                                          nextPage={this.props.byTag.nextPage}
+                                          articles={this.props.related.articles}
+                                          isFetching={this.props.related.isFetching}
+                                          nextPage={this.props.related.nextPage}
                                           lang={this.props.lang}
                                 />
                           }
@@ -200,12 +201,13 @@ class Article extends Component {
         {article.item.tags && 
           <Media  query="(min-width: 416px) and (max-width:768px)"
                   defaultMatches={tablet !== null}
-                  render={() => <MoreNews fetchNewsByTag={this.props.fetchArticlesByTag} 
+                  render={() => <MoreNews fetchNewsByTag={this.props.morenewsByTag} 
+                                          relatedTo={article.item.id}
                                           tags={article.item.tags} 
                                           numberOfArticles={2}
-                                          articles={this.props.byTag.articles}
-                                          isFetching={this.props.byTag.isFetching}
-                                          nextPage={this.props.byTag.nextPage}
+                                          articles={this.props.related.articles}
+                                          isFetching={this.props.related.isFetching}
+                                          nextPage={this.props.related.nextPage}
                                           lang={this.props.lang}
                                 />
                           }
@@ -214,12 +216,13 @@ class Article extends Component {
         {article.item.tags && 
           <Media  query="(max-width:415px)"
                   defaultMatches={phone !== null}
-                  render={() => <MoreNews fetchNewsByTag={this.props.fetchArticlesByTag} 
+                  render={() => <MoreNews fetchNewsByTag={this.props.morenewsByTag} 
+                                          relatedTo={article.item.id}
                                           tags={article.item.tags} 
                                           numberOfArticles={3}
-                                          articles={this.props.byTag.articles}
-                                          isFetching={this.props.byTag.isFetching}
-                                          nextPage={this.props.byTag.nextPage}
+                                          articles={this.props.related.articles}
+                                          isFetching={this.props.related.isFetching}
+                                          nextPage={this.props.related.nextPage}
                                           lang={this.props.lang}
                                 />
                           }
@@ -235,16 +238,16 @@ class Article extends Component {
 }
 
 const mapStateToProps = state => {
-  const { article, byTag } = state
+  const { article, related } = state
   const { lang } = state.i18nState
-  return { article, lang, byTag }
+  return { article, lang, related }
 }
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators(Object.assign({},
       articleActions,
       langActions,
-      byTagActions
+      relatedActions
     ), dispatch);
   }
 

@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
 import { article } from './article'
+import { related } from './related'
 import { news } from './news'
 import { language } from './lang'
 import { byTag } from './byTag'
@@ -16,6 +17,7 @@ import { i18nState } from "redux-i18n"
 
 const rootReducer = combineReducers({
   article,
+  related,
   news,
   language,
   byTag,
