@@ -21,7 +21,7 @@
     flex-shrink: 1;
 
     .navbar-item {
-      padding: 0 0 0 1rem;
+      padding: 0;
       
       &:hover {
         padding: 0 0 0 1rem;
@@ -208,7 +208,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
     position: relative;
     width: 3.25rem;
     padding: 7rem 0 0 0;
-    margin-right: 1.5rem;
+    margin-right: -1.5rem;
     margin-left: 0;
   }
 
@@ -422,7 +422,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
   }
 
 .navbar-burger {
-    margin-right: 1.5rem;
+    margin-right: -1.5rem;
     margin-left: auto;
     z-index: 10;
 }
