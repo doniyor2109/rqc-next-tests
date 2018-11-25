@@ -5,7 +5,6 @@ import { ArrowButton } from '../shared/ArrowButton'
 import Popup from '../shared/Popup'
 import PropTypes from 'prop-types'
 
-
 const PersonaPopup = ({active, close, item}, context) => {
     if (item) {
         return (

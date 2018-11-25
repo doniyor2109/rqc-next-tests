@@ -3,18 +3,27 @@ import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
 import { ArrowButton } from '../shared/ArrowButton'
 import PersonaPopup from './PersonaPopup'
+import ScrollTop from '../shared/ScrollTop'
+
+
 
 class Persona extends React.Component {
 
-    state = {
-        popup:false
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            popup:false, 
+            cardoffsetTop: 0
+        }
+        this.myRef = React.createRef()
     }
 
     render () {
 
         const { item } = this.props
-
         var hasWebsite = false
+
         if (item) {
 
             // проверяем есть ли у персоны персональный сайт
@@ -25,7 +34,8 @@ class Persona extends React.Component {
 
                 // презентационный компонент 
                 <div className="column is-3-desktop is-4-tablet">
-                    <div className="persona">
+                    <ScrollTop myRef={this.myRef} />
+                    <div className="persona" id="persona">
                         <img className="portrait" src={item.portrait.url} alt={item.people_name + "photo"} onClick={e => {this.handleClick(e)}}/>
                         <div className="name">
                             {RichText.render(item.people_name, PrismicConfig.linkResolver)}
@@ -33,27 +43,29 @@ class Persona extends React.Component {
                         <div className="position">
                             {RichText.render(item.position, PrismicConfig.linkResolver)}
                         </div>
-                        {((item.titles.length > 2) || (item.awards.length > 0) || hasWebsite)
-                        &&
-                            <Fragment>
-                                <div className="button_wrap"> 
-                                    <ArrowButton color="040303" onClick={e => {this.handleClick(e)}} />
-                                </div>
-                                <div className="people-popup">
-                                    <PersonaPopup active={this.state.popup} close={this.popupClose} item={item}/>
-                                </div>
-                            </Fragment>
-                        }
+                        <Fragment>
+                            <div className="button_wrap"> 
+                                <ArrowButton color="040303" onClick={e => {this.handleClick(e, this.myRef.current.offsetTop)}} />
+                            </div>
+                            <div className="people-popup">
+                                <PersonaPopup active={this.state.popup} close={this.popupClose} item={item}/>
+                            </div>
+                        </Fragment>
                     </div>
                 </div>
             )
         }
     }
 
-    handleClick = (e) => {
+    handleClick = (e, offset) => {
         e.preventDefault()
-        this.setState({popup:true})
+        this.setState({
+            popup:true, 
+            cardoffsetTop: offset
+        })
         document.body.classList.add('noscroll')
+
+
 
     }
     
@@ -61,6 +73,12 @@ class Persona extends React.Component {
         e.preventDefault()
         this.setState({popup:false})
         document.body.classList.remove('noscroll')
+        const personaCard = document.getElementById("persona").offsetTop + this.state.cardoffsetTop
+        console.log("persona, popup close", personaCard)
+        window.scrollTo({
+            top: personaCard, 
+            behavior: "smooth"
+        })
 
     }
 }

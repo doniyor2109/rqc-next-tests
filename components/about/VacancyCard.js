@@ -2,14 +2,9 @@ import React from 'react'
 import { ArrowButton } from '../shared/ArrowButton'
 import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
+import ScrollTop from '../shared/ScrollTop'
 
 
-const ScrollTop = ({myRef}) => {
-    return (
-        <div>
-        </div>
-    )
-}
 
 class Vacancy extends React.Component {
 
