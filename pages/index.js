@@ -39,6 +39,9 @@ class Index extends React.Component {
     
     // получаем настройки языка из кукис 
     // и в зависимости от языка понимаем какой запрашивать id у призмика для основного слайдера
+    // если куки language не было у пользователя, то мы присваиваем языку значение ru 
+    // мы не можем в этом месте ждать, пока _app выставит кукис, потому что тогда 
+    // слайдер не получит значение id вовремя, id будет undefined и слайдер не доставится
     const l = typeof cookies(ctx).language === 'undefined' ? "ru" : cookies(ctx).language
     const id = (l && l === 'ru' ? 'W3GVDyQAACYAZAgb' : 'W3GV8SQAACQAZAwG')
     

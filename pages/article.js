@@ -52,7 +52,6 @@ class Article extends Component {
     await api.query(Prismic.Predicates.at('my.news.uid', uid), { lang : "*" })
              .then(response => {
                reduxStore.dispatch(fetchArticleByUidSuccess(uid, response))
-              console.log("article пришел с сервера")
               })
              .catch(error => reduxStore.dispatch(fetchArticleByUidFailure(uid, error)))
     return {uid}
@@ -71,13 +70,6 @@ class Article extends Component {
         }
       else {this.setState({modalActive: true})}
       }
-
-    // если внутри страницы пользователь кликает на другой компонент, который меняет location,
-    // то есть ведет на другую «страницу»,то мы сначала загружаем контент
-    // if (this.props.uid !== prevProps.uid) {
-    //   this.props.fetchArticleByUid(this.props.uid, "*")
-    //   console.log("новый артикл!")
-    // }
 
   }
 
