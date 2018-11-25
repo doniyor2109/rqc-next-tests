@@ -39,18 +39,18 @@ class Index extends React.Component {
     
     // получаем настройки языка из кукис 
     // и в зависимости от языка понимаем какой запрашивать id у призмика для основного слайдера
-    const language = cookies(ctx).language
-    const id = (language && language === 'ru' ? 'W3GVDyQAACYAZAgb' : 'W3GV8SQAACQAZAwG')
+    const l = typeof cookies(ctx).language === 'undefined' ? "ru" : cookies(ctx).language
+    const id = (l && l === 'ru' ? 'W3GVDyQAACYAZAgb' : 'W3GV8SQAACQAZAwG')
     
     // серверный запрос основного слайдера
     reduxStore.dispatch(fetchMainSliderRequest()) 
-    await api.query(Prismic.Predicates.at('document.id', id), { lang: language})
-              .then(response => reduxStore.dispatch(fetchMainSliderSuccess(id, response)))
-              .catch(error => reduxStore.dispatch(fetchMainSliderFailure(id, error)))
+    await api.query(Prismic.Predicates.at('document.id', id), { lang: l})
+             .then(response => reduxStore.dispatch(fetchMainSliderSuccess(id, response)))
+             .catch(error => reduxStore.dispatch(fetchMainSliderFailure(id, error)))
 
     // серверный запрос слайдера ученых 
     reduxStore.dispatch(fetchMainSciSliderRequest()) 
-    await api.query(Prismic.Predicates.at('document.type', 'scientist'), { lang: language, 
+    await api.query(Prismic.Predicates.at('document.type', 'scientist'), { lang: l, 
                                                                      fetchLinks: ['science_group.groupname', 'science_group.uid'] })
              .then(response => reduxStore.dispatch(fetchMainSciSliderSuccess(response)))
              .catch(error => reduxStore.dispatch(fetchMainSciSliderFailure(error)))
@@ -58,14 +58,14 @@ class Index extends React.Component {
 
     // серверный запрос тизеров новостей 
     reduxStore.dispatch(fetchNewsForMainRequest()) 
-    await api.query(Prismic.Predicates.at('document.type', 'news'), { lang: language,
+    await api.query(Prismic.Predicates.at('document.type', 'news'), { lang: l,
                                                                   pageSize: 3,
                                                                  orderings: '[my.news.manual_date_of_publication desc]' })
               .then(response => reduxStore.dispatch(fetchNewsForMainSuccess(response)))
               .catch(error => reduxStore.dispatch(fetchNewsForMainFailure(error)))
 
 
-    return {lan: language}
+    return {lan: l}
   }
 
   static contextTypes = {
