@@ -70,7 +70,7 @@ const Footer = (props, context) => (
           </div>
           <div className="left_down">
             <p>&copy;2013-2018</p>
-            <p>{context.t("Российский квантовый центр")}</p>
+            <p>{context.t("Российский Квантовый Центр")}</p>
           </div>
         </div>
         <div className="middle_part">
