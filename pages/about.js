@@ -45,7 +45,7 @@ class About extends React.Component {
            .then(response => reduxStore.dispatch(fetchAboutSuccess(response)))
            .catch(error => reduxStore.dispatch(fetchAboutError(error)));        
 
-        return {}
+        return {fb_locale}
     }
 
     state = {
@@ -68,7 +68,7 @@ class About extends React.Component {
 
         const { page } = this.props.about
         const { phone, tablet } = this.props
-        console.log("about", this.props)
+        console.log("about fb locale", this.props.fb_locale)
         return (
             <div className="aboutpage">
                 <Head>
