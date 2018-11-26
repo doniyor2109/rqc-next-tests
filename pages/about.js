@@ -69,28 +69,27 @@ class About extends React.Component {
 
         const { page } = this.props.about
         const { phone, tablet, fb_locale } = this.props
-        console.log("1. about fb locale", fb_locale, "\n", "RU? ", fb_locale === "ru_RU", "\n", "undefined? ", typeof fb_locale === 'undefined' )
+        console.log("about fb locale", fb_locale, "\n", "ru? ", fb_locale === "ru_RU", "\n", "undefined? ", typeof fb_locale === 'undefined' )
         // console.log("about query", this.props.query)
 
         return (
             <div className="aboutpage">
                 <Head>
                     <title>{this.context.t("Что мы делаем")}</title>
-                    <meta property="og:locale:alternate" content="en_GB" />
-                    <meta property="og:locale:alternate" content="ru_RU" />
-                    <meta property="og:image"              content={hostName + "/static/wallpaper1.jpg"} />
                     <meta property="og:url"                content={hostName + "/about"} />
                     <meta property="og:type"               content="article" />
-                {fb_locale === "ru_RU" && 
+                    <meta property="og:image"              content={hostName + "/static/wallpaper1.jpg"} />
+                    <meta property="og:locale:alternate" content="en_US" />
+                {(typeof fb_locale === 'undefined' || this.props.fb_locale === "ru_RU") && 
                     <Fragment>
-                        <meta property="og:locale"             content="ru_RU" />
+                        <meta property="og:locale" content="ru_RU" />
                         <meta property="og:title"              content="Что мы делаем" />
                         <meta property="og:description"        content="Уникальный для России формат научного центра, занимающегося как фундаментальными исследованиями, так и разработкой устройств, основанных на квантовых эффектах. Занимает лидирующие позиции в научной области, а также в разработке высокотехнологичных коммерческих продуктов." />
                     </Fragment>
                 }
-                {fb_locale === "en_GB" && 
+                {this.props.fb_locale === "en_US" && 
                     <Fragment>
-                        <meta property="og:locale"             content="en_GB" />
+                        <meta property="og:locale" content="en_US" />
                         <meta property="og:title"              content="What we do" />
                         <meta property="og:description"        content="Some description" />
                     </Fragment>
