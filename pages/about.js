@@ -33,8 +33,9 @@ class About extends React.Component {
     static async getInitialProps (ctx) {
         
         // получаем все необходимое для рендеринга компонента от сервера
-        const {reduxStore, query: {fb_locale}} = ctx
-        
+        const {reduxStore, query} = ctx
+        const {fb_locale} = query
+
         // получаем настройки языка из кукис 
         const { language } = cookies(ctx)
         
@@ -68,36 +69,35 @@ class About extends React.Component {
 
         const { page } = this.props.about
         const { phone, tablet } = this.props
-        console.log("about fb locale", this.props.fb_locale, this.props.fb_locale === "ru_RU")
-        console.log("about query", this.props.query)
+        console.log("about", this.props)
+        // console.log("about fb locale", this.props.fb_locale, this.props.fb_locale === "ru_RU")
+        // console.log("about query", this.props.query)
 
         return (
             <div className="aboutpage">
-
+                <Head>
+                    <meta property="og:locale" content="ru_RU" />
+                    <meta property="og:locale:alternate" content="en_US" />
+                    <title>{this.context.t("Что мы делаем")}</title>
                 {this.props.fb_locale === "ru_RU" && 
-                    <Head>
-                        <title>Что мы делаем</title>
-                        <meta property="og:locale" content="ru_RU" />
-                        <meta property="og:locale:alternate" content="en_US" />
+                    <Fragment>
                         <meta property="og:url"                content={hostName + "/about"} />
                         <meta property="og:type"               content="article" />
                         <meta property="og:title"              content="Что мы делаем" />
                         <meta property="og:description"        content="Уникальный для России формат научного центра, занимающегося как фундаментальными исследованиями, так и разработкой устройств, основанных на квантовых эффектах. Занимает лидирующие позиции в научной области, а также в разработке высокотехнологичных коммерческих продуктов." />
                         <meta property="og:image"              content={hostName + "/static/wallpaper1.jpg"} />
-                    </Head>
+                    </Fragment>
                 }
                 {this.props.fb_locale === "en_US" && 
-                    <Head>
-                        <title>What we do</title>
-                        <meta property="og:locale" content="en_US" />
-                        <meta property="og:locale:alternate" content="ru_RU" />
+                    <Fragment>
                         <meta property="og:url"                content={hostName + "/about"} />
                         <meta property="og:type"               content="article" />
                         <meta property="og:title"              content="What we do" />
                         <meta property="og:description"        content="Some description" />
                         <meta property="og:image"              content={hostName + "/static/wallpaper1.jpg"} />
-                    </Head>
+                    </Fragment>
                 }
+                </Head>
                 <section id="what-we-do" className="whatwedo">
                     <div className="container">
                         {page.data && 
