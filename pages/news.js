@@ -117,6 +117,14 @@ class News extends Component {
 
       return (
         <Fragment>
+          <Head>
+              <title>{this.context.t("Новости")}</title>
+              <meta property="og:url"                content={hostName + "/news"} />
+              <meta property="og:type"               content="article" />
+              <meta property="og:title"              content={this.context.t("Новости")} />
+              <meta property="og:description"        content={this.context.t("Новости РКЦ, а также квантовые технологии со всего мира")} />
+              <meta property="og:image"              content="/static/mediakit.jpg" />
+          </Head>
           <div className="newspage">
             <div className="container">
               <h1 className="page-main-heading">

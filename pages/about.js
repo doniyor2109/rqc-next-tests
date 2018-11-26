@@ -78,12 +78,12 @@ class About extends React.Component {
 
                 {page.data && 
                 <Head>
-                    <title>РКЦ Люди</title>
+                    <title>{this.context.t("Что мы делаем")}</title>
                     <meta property="og:url"                content={hostName + "/about"} />
                     <meta property="og:type"               content="article" />
-                    <meta property="og:title"              content="РКЦ Люди" />
-                    <meta property="og:description"        content="Все, кто имеют отношение к центру" />
-                    <meta property="og:image"              content="http://dev.braintobrain.ru/static/mediakit_teaser.jpg" />
+                    <meta property="og:title"              content={this.context.t("Что мы делаем")} />
+                    <meta property="og:description"        content={this.context.t("Уникальный для России формат научного центра, занимающегося как фундаментальными исследованиями, так и разработкой устройств, основанных на квантовых эффектах. Занимает лидирующие позиции в научной области, а также в разработке высокотехнологичных коммерческих продуктов.")} />
+                    <meta property="og:image"              content="/static/wallpaper1.jpg" />
                 </Head>
                 }
                 <section id="what-we-do" className="whatwedo">

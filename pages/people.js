@@ -68,6 +68,14 @@ class People extends React.Component {
         if (isFetching) return <Loading />
         else return (
             <section className="peoplepage">
+                <Head>
+                    <title>{this.context.t("Коллектив Центра")}</title>
+                    <meta property="og:url"                content={hostName + "/about"} />
+                    <meta property="og:type"               content="article" />
+                    <meta property="og:title"              content={this.context.t("Коллектив Центра")} />
+                    <meta property="og:description"        content={this.context.t("Администрация, Попечительский и Научный совет Российского Квантового Центра")} />
+                    <meta property="og:image"              content="/static/unusov.jpg" />
+                </Head>
                 <div className="container">
 
                 <Media query="(min-width: 416px)"

@@ -41,6 +41,14 @@ class Reports extends React.Component {
         if (isFetching) return <Loading />
         else return (
             <div className="evaluation-reports-page">
+                <Head>
+                    <title>{this.context.t("Отчеты РКЦ")}</title>
+                    <meta property="og:url"                content={hostName + "/reports"} />
+                    <meta property="og:type"               content="article" />
+                    <meta property="og:title"              content={this.context.t("Отчеты РКЦ")} />
+                    <meta property="og:description"        content={this.context.t("Отчеты о деятельности Российского Квантового Центра")} />
+                    <meta property="og:image"              content="/static/mediakit.jpg" />
+                </Head>
                 <div className="container">
                     <h1>
                         {this.context.t("Годовые отчеты")}
