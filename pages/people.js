@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Media from 'react-media'
 import cookies from 'next-cookies'
+import Head from 'next/head'
 
 //actions
 import * as peopleActions from '../redux/actions/people'
@@ -19,6 +20,7 @@ import PrismicConfig from '../prismic-configuration'
 import Persona from '../components/people/Persona.js'
 import BlueButton from '../components/shared/BlueButton'
 
+import hostName from '../host'
 
 class People extends React.Component {
 

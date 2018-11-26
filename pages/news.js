@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 import Media from 'react-media'
+import Head from 'next/head'
 
 import * as newsActions from '../redux/actions/news'
 import * as langActions from '../redux/actions/lang'
@@ -13,6 +14,7 @@ import GridViewTablet from '../components/news/GridViewTablet'
 import GridViewMobile from '../components/news/GridViewMobile'
 import { FilterTag } from '../components/shared/FilterTag'
 import MoreNews from '../components/news/MoreNews'
+import hostName from '../host'
 
 
 // Основной компонент, связывающий весь интерфейс страницы /news воедино

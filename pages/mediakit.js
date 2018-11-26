@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
 import Media from 'react-media'
+import Head from 'next/head'
 
 
 // actions
@@ -14,6 +15,8 @@ import * as langActions from '../redux/actions/lang'
 import PhotoGalleries from '../components/mediakit/PhotoGalleries'
 import Videos from '../components/mediakit/Videos'
 import Presentations from '../components/mediakit/Presentations'
+
+import hostName from '../host'
 
 
 class Mediakit extends React.Component {

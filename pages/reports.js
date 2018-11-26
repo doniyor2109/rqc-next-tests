@@ -1,8 +1,9 @@
 //core modules
-import React from 'react'
+import React, {Fragment} from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { bindActionCreators } from 'redux'
+import Head from 'next/head'
 
 
 //actions
@@ -15,6 +16,8 @@ import ReportCard from '../components/reports/ReportCard';
 
 
 //other libraries
+import hostName from '../host'
+
 
 class Reports extends React.Component {
 
