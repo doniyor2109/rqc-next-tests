@@ -73,8 +73,8 @@ class About extends React.Component {
             <div className="aboutpage">
                 <Head>
                     <title>{this.props.fb_locale === "ru_RU" ? "Что мы делаем" : "What we do"}</title>
-                    <meta property="og:locale" content="en_US" />
-                    <meta property="og:locale:alternate" content="ru_RU" />
+                    <meta property="og:locale" content="ru_RU" />
+                    <meta property="og:locale:alternate" content="en_US" />
                     <meta property="og:url"                content={hostName + "/about"} />
                     <meta property="og:type"               content="article" />
                     <meta property="og:title"              content={this.props.fb_locale === "ru_RU" ? "Что мы делаем" : "What we do"} />
