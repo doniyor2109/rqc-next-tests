@@ -77,7 +77,7 @@ class About extends React.Component {
                     <meta property="og:locale:alternate" content="en_US" />
                     <meta property="og:url"                content={hostName + "/about"} />
                     <meta property="og:type"               content="article" />
-                    <meta property="og:title"              content={this.props.fb_locale === "ru-RU" ? "Что мы делаем" : "What we do"} />
+                    <meta property="og:title"              content={this.props.fb_locale === "ru-RU" ? this.props.fb_locale + "Что мы делаем" : "What we do"} />
                     <meta property="og:description"        content={this.context.t("Уникальный для России формат научного центра, занимающегося как фундаментальными исследованиями, так и разработкой устройств, основанных на квантовых эффектах. Занимает лидирующие позиции в научной области, а также в разработке высокотехнологичных коммерческих продуктов.")} />
                     <meta property="og:image"              content="/static/wallpaper1.jpg" />
                 </Head>
