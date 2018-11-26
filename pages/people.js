@@ -72,10 +72,24 @@ class People extends React.Component {
                     <title>{this.context.t("Коллектив Центра")}</title>
                     <meta property="og:url"                content={hostName + "/people"} />
                     <meta property="og:type"               content="article" />
-                    <meta property="og:title"              content={this.context.t("Коллектив Центра")} />
-                    <meta property="og:description"        content={this.context.t("Администрация, Попечительский и Научный совет Российского Квантового Центра")} />
-                    <meta property="og:image"              content="/static/unusov.jpg" />
+                    <meta property="og:image"              content={hostName + "/static/unusov.jpg"} />
+                    <meta property="og:locale:alternate"   content="en_US" />
+                {(typeof fb_locale === 'undefined' || this.props.fb_locale === "ru_RU") && 
+                    <Fragment>
+                        <meta property="og:locale"             content="ru_RU" />
+                        <meta property="og:title"              content="Коллектив Центра" />
+                        <meta property="og:description"        content="Администрация, Попечительский и Научный совет Российского Квантового Центра" />
+                    </Fragment>
+                }
+                {this.props.fb_locale === "en_US" && 
+                    <Fragment>
+                        <meta property="og:locale"             content="en_US" />
+                        <meta property="og:title"              content="Employees of the Center" />
+                        <meta property="og:description"        content="Administration, Boards of Trustees, and Scientific Committee of the RQC" />
+                    </Fragment>
+                }
                 </Head>
+
                 <div className="container">
 
                 <Media query="(min-width: 416px)"

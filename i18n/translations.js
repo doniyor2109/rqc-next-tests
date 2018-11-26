@@ -51,7 +51,7 @@ export const translations = {
       "Логотип Российского Квантового Центра": "Russian Quantum Center logo",
       "Медиакит RQC": "Mediakit RQC",
       "Фотографии, видео материалы и презентации Российского квантового центра": "Photos, video and presentations of Russian Quantum Center",
-      "Медиакит": "Mediakit",
+      "Медиа-кит": "Media kit",
       "Скачать архив": "Download photos",
       "Фотогалереи": "Photo galleries",
       "Видео": "Video",
@@ -59,7 +59,9 @@ export const translations = {
       "Скачать фото": "Download photo",
       "На нашем сайте в целях хранения настроек и показа статей и новостей на выбранном вами языке используются файлы cookie. Нажимая кнопку ОК, вы соглашаетесь с этим.": "Our website uses cookies to manage some features and to show you news and announces in selected language. By clicking on OK button you accept the use of cookies.",
       "Добро пожаловать на новый сайт РКЦ! Мы все еще работаем над его наполнением. Если вы не можете найти какую-то информацию, посмотрите на нашем старом сайте.":"Welcome to the new website of RQC! We are still working on its content. If you cannot find any information, please check out our old website.",
-      "Перейти на старый сайт": "Go to the old website"
+      "Перейти на старый сайт": "Go to the old website", 
+      "Коллектив Центра": "Employees of the Center", 
+      "Отчеты РКЦ": "Reports of the RQC"   
    }
 }
 

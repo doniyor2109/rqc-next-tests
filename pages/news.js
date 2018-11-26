@@ -121,9 +121,22 @@ class News extends Component {
               <title>{this.context.t("Новости")}</title>
               <meta property="og:url"                content={hostName + "/news"} />
               <meta property="og:type"               content="article" />
-              <meta property="og:title"              content={this.context.t("Новости")} />
-              <meta property="og:description"        content={this.context.t("Новости РКЦ, а также квантовые технологии со всего мира")} />
-              <meta property="og:image"              content="/static/mediakit.jpg" />
+              <meta property="og:image"              content={hostName + "/static/qaqam.jpg"} />
+              <meta property="og:locale:alternate"   content="en_US" />
+          {(typeof fb_locale === 'undefined' || this.props.fb_locale === "ru_RU") && 
+              <Fragment>
+                  <meta property="og:locale"             content="ru_RU" />
+                  <meta property="og:title"              content="Новости" />
+                  <meta property="og:description"        content="Новости РКЦ, а также квантовые технологии со всего мира" />
+              </Fragment>
+          }
+          {this.props.fb_locale === "en_US" && 
+              <Fragment>
+                  <meta property="og:locale"             content="en_US" />
+                  <meta property="og:title"              content="News" />
+                  <meta property="og:description"        content="The RQC news, as well as quantum technologies from around the world" />
+              </Fragment>
+          }
           </Head>
           <div className="newspage">
             <div className="container">

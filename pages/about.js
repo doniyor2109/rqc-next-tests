@@ -91,7 +91,7 @@ class About extends React.Component {
                     <Fragment>
                         <meta property="og:locale" content="en_US" />
                         <meta property="og:title"              content="What we do" />
-                        <meta property="og:description"        content="Some description" />
+                        <meta property="og:description"        content="Unique scientific center for Russia dealing with both fundamental research and the development of devices based on quantum effects. The RQC takes leading position in the scientific field, as well as in the development of high-tech commercial product." />
                     </Fragment>
                 }
                 </Head>

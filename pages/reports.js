@@ -42,13 +42,27 @@ class Reports extends React.Component {
         else return (
             <div className="evaluation-reports-page">
                 <Head>
-                    <title>{this.context.t("Отчеты РКЦ")}</title>
+                <title>{this.context.t("Отчеты РКЦ")}</title>
                     <meta property="og:url"                content={hostName + "/reports"} />
                     <meta property="og:type"               content="article" />
-                    <meta property="og:title"              content={this.context.t("Отчеты РКЦ")} />
-                    <meta property="og:description"        content={this.context.t("Отчеты о деятельности Российского Квантового Центра")} />
-                    <meta property="og:image"              content="/static/mediakit.jpg" />
+                    <meta property="og:image"              content={hostName + "/static/oblozka.jpg"} />
+                    <meta property="og:locale:alternate"   content="en_US" />
+                {(typeof fb_locale === 'undefined' || this.props.fb_locale === "ru_RU") && 
+                    <Fragment>
+                        <meta property="og:locale"             content="ru_RU" />
+                        <meta property="og:title"              content="Отчеты РКЦ" />
+                        <meta property="og:description"        content="Отчеты о деятельности Российского Квантового Центра" />
+                    </Fragment>
+                }
+                {this.props.fb_locale === "en_US" && 
+                    <Fragment>
+                        <meta property="og:locale"             content="en_US" />
+                        <meta property="og:title"              content="Reports of the RQC" />
+                        <meta property="og:description"        content="The RQC business reports" />
+                    </Fragment>
+                }
                 </Head>
+
                 <div className="container">
                     <h1>
                         {this.context.t("Годовые отчеты")}
