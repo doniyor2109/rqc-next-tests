@@ -68,7 +68,7 @@ class About extends React.Component {
 
         const { page } = this.props.about
         const { phone, tablet } = this.props
-        console.log("about fb locale", this.props.fb_locale)
+        console.log("about fb locale", this.props.fb_locale, this.props.fb_locale === "ru-RU")
         return (
             <div className="aboutpage">
                 <Head>
