@@ -75,7 +75,7 @@ class About extends React.Component {
         return (
             <div className="aboutpage">
                 <Head>
-                    <meta property="og:locale" content="en_US" />
+                    <meta property="og:locale:alternate" content="en_US" />
                     <meta property="og:locale:alternate" content="ru_RU" />
                     <title>{this.context.t("Что мы делаем")}</title>
                     <meta property="og:image"              content={hostName + "/static/wallpaper1.jpg"} />
