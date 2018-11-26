@@ -69,7 +69,7 @@ class About extends React.Component {
 
         const { page } = this.props.about
         const { phone, tablet, fb_locale } = this.props
-        // console.log("about fb locale", this.props.fb_locale, this.props.fb_locale === "ru_RU")
+        console.log("about fb locale", fb_locale, "\n", "ru? ", fb_locale === "ru_RU", "\n", "undefined? ", typeof fb_locale === 'undefined' )
         // console.log("about query", this.props.query)
 
         return (
