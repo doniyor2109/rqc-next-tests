@@ -46,7 +46,7 @@ class About extends React.Component {
            .then(response => reduxStore.dispatch(fetchAboutSuccess(response)))
            .catch(error => reduxStore.dispatch(fetchAboutError(error)));        
 
-        return {query, fb_locale}
+        return {fb_locale}
     }
 
     state = {
@@ -69,7 +69,6 @@ class About extends React.Component {
 
         const { page } = this.props.about
         const { phone, tablet, fb_locale } = this.props
-        console.log("about", this.props)
         // console.log("about fb locale", this.props.fb_locale, this.props.fb_locale === "ru_RU")
         // console.log("about query", this.props.query)
 
@@ -79,7 +78,7 @@ class About extends React.Component {
                     <meta property="og:locale" content="ru_RU" />
                     <meta property="og:locale:alternate" content="en_US" />
                     <title>{this.context.t("Что мы делаем")}</title>
-                {typeof fb_locale === 'undefined' || this.props.fb_locale === "ru_RU" && 
+                {(typeof fb_locale === 'undefined' || this.props.fb_locale === "ru_RU") && 
                     <Fragment>
                         <meta property="og:url"                content={hostName + "/about"} />
                         <meta property="og:title"              content="Что мы делаем" />
