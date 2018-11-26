@@ -55,10 +55,6 @@ class About extends React.Component {
     static contextTypes = {
         t: PropTypes.func
     }
-    
-    componentDidMount() {
-        // this.props.fetchAbout(this.props.language.currentLanguage)
-    }
 
     componentDidUpdate(prevProps) {
 
@@ -75,8 +71,6 @@ class About extends React.Component {
         console.log("about", this.props)
         return (
             <div className="aboutpage">
-
-                {page.data && 
                 <Head>
                     <title>{this.context.t("Что мы делаем")}</title>
                     <meta property="og:url"                content={hostName + "/about"} />
@@ -85,7 +79,6 @@ class About extends React.Component {
                     <meta property="og:description"        content={this.context.t("Уникальный для России формат научного центра, занимающегося как фундаментальными исследованиями, так и разработкой устройств, основанных на квантовых эффектах. Занимает лидирующие позиции в научной области, а также в разработке высокотехнологичных коммерческих продуктов.")} />
                     <meta property="og:image"              content="/static/wallpaper1.jpg" />
                 </Head>
-                }
                 <section id="what-we-do" className="whatwedo">
                     <div className="container">
                         {page.data && 
