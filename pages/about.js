@@ -68,7 +68,7 @@ class About extends React.Component {
     render() {
 
         const { page } = this.props.about
-        const { phone, tablet } = this.props
+        const { phone, tablet, fb_locale } = this.props
         console.log("about", this.props)
         // console.log("about fb locale", this.props.fb_locale, this.props.fb_locale === "ru_RU")
         // console.log("about query", this.props.query)
@@ -79,10 +79,9 @@ class About extends React.Component {
                     <meta property="og:locale" content="ru_RU" />
                     <meta property="og:locale:alternate" content="en_US" />
                     <title>{this.context.t("Что мы делаем")}</title>
-                {this.props.fb_locale === "ru_RU" && 
+                {typeof fb_locale === 'undefined' || this.props.fb_locale === "ru_RU" && 
                     <Fragment>
                         <meta property="og:url"                content={hostName + "/about"} />
-                        <meta property="og:type"               content="article" />
                         <meta property="og:title"              content="Что мы делаем" />
                         <meta property="og:description"        content="Уникальный для России формат научного центра, занимающегося как фундаментальными исследованиями, так и разработкой устройств, основанных на квантовых эффектах. Занимает лидирующие позиции в научной области, а также в разработке высокотехнологичных коммерческих продуктов." />
                         <meta property="og:image"              content={hostName + "/static/wallpaper1.jpg"} />
