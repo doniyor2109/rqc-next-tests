@@ -4,8 +4,6 @@ import Link from 'next/link'
 import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
 
-import moment from 'moment'
-import 'moment/locale/ru';
 
 const VideoCard = ({ item }) => {
 
@@ -16,9 +14,6 @@ const VideoCard = ({ item }) => {
                     <Link href={'/video?uid=' + item.uid} as={'/video/' + item.uid}>
                         <a>
                             {RichText.render(item.data.title, PrismicConfig.linkResolver)}
-                            <div className="date">
-                                {moment(item.first_publication_date).format('LL')}
-                            </div>
                         </a>
                     </Link>
                 </div>

@@ -4,13 +4,8 @@ import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
 import {ArrowButton} from '../news/ArrowButton'
 
-import moment from 'moment'
-import 'moment/locale/ru';
 
 const GalleryCard = ({ item, lang }) => {
-    if (lang === "ru") {
-        moment.locale('ru')
-    } else moment.locale('en')
 
     if (item) return (
             <div className="column is-12-mobile is-6-tablet is-4-desktop">
@@ -23,9 +18,6 @@ const GalleryCard = ({ item, lang }) => {
                             <ArrowButton color="ffffff"/>
                         </div>
                         {RichText.render(item.data.title, PrismicConfig.linkResolver)}
-                        <div className="date">
-                            {moment(item.first_publication_date).format('LL')}
-                        </div>
                     </div>
                 </Link>
             </div>
