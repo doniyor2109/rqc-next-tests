@@ -74,7 +74,7 @@ class People extends React.Component {
                     <title>{this.context.t("Коллектив Центра")}</title>
                     <meta property="og:url"                content={hostName + "/people"} />
                     <meta property="og:type"               content="article" />
-                    <meta property="og:image"              content={hostName + "/static/unusov.jpg"} />
+                    <meta property="og:image"              content={hostName + "/static/unusov.png"} />
                     <meta property="og:locale:alternate"   content="en_US" />
                 {(typeof fb_locale === 'undefined' || this.props.fb_locale === "ru_RU") && 
                     <Fragment>
