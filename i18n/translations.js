@@ -61,7 +61,9 @@ export const translations = {
       "Добро пожаловать на новый сайт РКЦ! Мы все еще работаем над его наполнением. Если вы не можете найти какую-то информацию, посмотрите на нашем старом сайте.":"Welcome to the new website of RQC! We are still working on its content. If you cannot find any information, please check out our old website.",
       "Перейти на старый сайт": "Go to the old website", 
       "Коллектив Центра": "Employees of the Center", 
-      "Отчеты РКЦ": "Reports of the RQC"   
+      "Отчеты РКЦ": "Reports of the RQC",
+      "Руководители научных групп": "Leaders of science groups", 
+      "все научные группы": "more scientific groups" 
    }
 }
 

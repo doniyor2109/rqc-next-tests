@@ -103,7 +103,7 @@ class Index extends React.Component {
     const { phone, tablet } = this.props
     const { mainSlider, sciSlider, isFetchingMain, isFetchingSci, newsTeaser } = this.props.main
 
-    console.log("main", this.props)
+    // console.log("main", this.props)
     if (!this.state.DOMLoaded) return <Loading />
     else return (
       <Fragment>
@@ -164,9 +164,12 @@ class Index extends React.Component {
 
         <section className="sci-slider">
           <div className="container">
+            <a className="main-category">
+              {this.context.t("Руководители научных групп")}
+            </a>
             <Link href="/research">
-              <a className="main-category">
-                {this.context.t("Ученые")}
+              <a className="main-category-link">
+                {this.context.t("все научные группы")}
               </a>
             </Link>
             {/* слайдер ученых для десктопа */}
