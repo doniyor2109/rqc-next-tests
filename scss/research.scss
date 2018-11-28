@@ -1,0 +1,38 @@
+.research-page {
+
+    padding-bottom: 9rem;
+
+    .page-main-heading {
+        margin-bottom: 6rem;
+    }
+}
+
+.groups {
+    background: #F7F9FB;
+    padding: 6rem 0 9rem;
+
+    .sci-card {
+        .back_holder {
+            height: 27rem;
+            position: relative;
+        }
+        .title {
+            font-size: 2.2rem;
+            line-height: 3rem;
+            padding: 3rem;
+            text-transform: uppercase;
+            color: #040303;
+            background: white;
+            height: 15rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h1 {
+                font-weight: bold;
+            }
+        }
+    }
+    .columns {
+        clear: both;
+    }
+}

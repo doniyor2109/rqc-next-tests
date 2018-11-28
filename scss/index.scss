@@ -26,6 +26,8 @@ $column-gap: 1.5rem;
 @import './mediakit.scss';
 @import './photogallery.scss';
 @import './videopage.scss';
+@import './research.scss';
+
 
 //import other files here
 @import "./fonts.scss";
@@ -43,7 +45,7 @@ html {
     font-size: 62.5%;
 }
 
-.peoplepage, .photo-gallery-page, .aboutpage, .media-kit-page, .newspage, .evaluation-reports-page, .teampage, .video-page {
+.peoplepage, .photo-gallery-page, .aboutpage, .media-kit-page, .newspage, .evaluation-reports-page, .teampage, .video-page, .research-page {
     padding: 6rem 0;
 }
 
@@ -64,6 +66,11 @@ html {
     font-weight: bold;
     color:#040303;
     text-transform: uppercase;
+}
+
+.paragraph-class {
+    font-size: 1.6rem;
+    line-height: 2.3rem;
 }
 
 .slick-slide > div {

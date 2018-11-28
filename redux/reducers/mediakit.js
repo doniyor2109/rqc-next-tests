@@ -33,11 +33,6 @@ function fetchPresentationsSuccess(state, action) {
   return { ...state, isFetchingPresentations: false, presentations, presentationsNextpage}
 }
 
-function fetchBrandingSuccess(state, action) {
-  const branding = action.response.results
-  return { ...state, isFetchingBranding: false, branding}
-}
-
 
 export const mediakit = (state = initialState, action) => {
   switch (action.type) {
@@ -74,17 +69,6 @@ export const mediakit = (state = initialState, action) => {
     case action_types.FETCH_PRESENTATIONS_FAILURE:
       console.log("FETCH_PRESENTATIONS_FAILURE", action.error);
       return { ...state, isFetchingPresentations: false };
-
-    //branding
-    case action_types.FETCH_BRANDING_REQUEST:
-      return {...state, isFetchingBranding: true };
-
-    case action_types.FETCH_BRANDING_SUCCESS:
-      return fetchBrandingSuccess(state, action);
-
-    case action_types.FETCH_BRANDING_FAILURE:
-      console.log("FETCH_PRESENTATIONS_FAILURE", action.error);
-      return { ...state, isFetchingBranding: false };
       
     default:
       return state

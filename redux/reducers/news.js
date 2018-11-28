@@ -27,7 +27,7 @@ export const news = (state = initialState, action) => {
       return fetchNewsSuccess(state, action);
 
     case action_types.FETCH_NEWS_FAILURE:
-      console.log(action.error);
+      console.log("FETCH_NEWS_FAILUR", action.error);
       return { ...state, isFetching: false };
 
     default:

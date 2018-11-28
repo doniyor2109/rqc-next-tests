@@ -9,10 +9,11 @@ import { people } from './people'
 import { about } from './about'
 import { vacancies } from './vacancies'
 import { team } from './team'
-import { logo } from './logo'
 import { mediakit } from './mediakit'
 import { photo } from './photo'
 import { video } from './video'
+import { scigroups } from './scigroups'
+import { research } from './research'
 import { i18nState } from "redux-i18n"
 
 const rootReducer = combineReducers({
@@ -27,10 +28,11 @@ const rootReducer = combineReducers({
   vacancies, 
   i18nState, 
   team, 
-  logo, 
   photo,
   mediakit, 
-  video
+  video, 
+  scigroups, 
+  research
 });
 
 export default rootReducer

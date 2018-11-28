@@ -24,7 +24,7 @@ const Menu = [
         url: "/about#contact"
       },
       {
-        name: "Медиакит",
+        name: "Медиа-кит",
         url: "/mediakit"
       }
     ]
@@ -47,28 +47,28 @@ const Menu = [
       }
     ]
   },
-  // {
-  //   name: "Исследования",
-  //   url: "/research",
-  //   children: [
-  //     {
-  //       name: "Научные группы",
-  //       url: "/teams"
-  //     },
-  //     {
-  //       name: "Лаборатории",
-  //       url: "/labs"
-  //     },
-  //     {
-  //       name: "Внешние исследователи",
-  //       url: "/scientists"
-  //     },
-  //     {
-  //       name: "Публикации",
-  //       url: "/publications"
-  //     }
-  //   ]
-  // },
+  {
+    name: "Исследования",
+    url: "/research",
+    children: [
+      // {
+      //   name: "Научные группы",
+      //   url: "/teams"
+      // },
+      // {
+      //   name: "Лаборатории",
+      //   url: "/labs"
+      // },
+      // {
+      //   name: "Внешние исследователи",
+      //   url: "/scientists"
+      // },
+      // {
+      //   name: "Публикации",
+      //   url: "/publications"
+      // }
+    ]
+  },
   // {
   //   name: "Продукты",
   //   url: "/products",

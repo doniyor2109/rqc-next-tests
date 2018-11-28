@@ -63,7 +63,7 @@ export const translations = {
       "Коллектив Центра": "Employees of the Center", 
       "Отчеты РКЦ": "Reports of the RQC",
       "Руководители научных групп": "Leaders of science groups", 
-      "все научные группы": "more scientific groups" 
+      "все научные группы": "more scientific groups", 
    }
 }
 
