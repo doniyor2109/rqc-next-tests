@@ -33,7 +33,7 @@ class SciSlider extends React.Component {
       infinite: true,
       speed: 300,
       adaptiveHeight: false,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 4500,
       autoplay: true,
       lazyLoad: 'progressive',
       slidesToScroll: 1,

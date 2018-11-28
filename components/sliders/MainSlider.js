@@ -14,7 +14,7 @@ class MainSlider extends React.Component {
       infinite: true,
       speed: 300,
       adaptiveHeight: false,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 4500,
       autoplay: true,
       lazyLoad: 'progressive',
       slidesToShow: 1,

@@ -31,7 +31,7 @@ class Topics extends React.Component {
           infinite: true,
           speed: 700,
           adaptiveHeight: false,
-          autoplaySpeed: 2000,
+          autoplaySpeed: 4500,
           autoplay: false,
           slidesToScroll: 1,
           useTransform: true,

@@ -27,7 +27,7 @@ class LabImage extends React.Component {
       infinite: true,
       speed: 2000,
       adaptiveHeight: false,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 4500,
       autoplay: true,
       slidesToShow: 1,
       slidesToScroll: 1,

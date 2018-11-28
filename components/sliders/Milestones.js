@@ -34,7 +34,7 @@ class Milestones extends React.Component {
       infinite: true,
       speed: 700,
       adaptiveHeight: false,
-      autoplaySpeed: 2000,
+      autoplaySpeed: 4500,
       autoplay: true,
       slidesToScroll: 1,
       nextArrow: <NextArrow />,
