@@ -128,16 +128,6 @@ class Index extends React.Component {
           </Fragment>
         }
         </Head>
-
-
-        <Head>
-          <title>{this.props.lang === "ru" ? "Российский Квантовый Центр" : "Russian Quantum Center"}</title>
-          <meta property="og:url"                content={hostName + "/"} />
-          <meta property="og:type"               content="website" />
-          <meta property="og:title"              content={this.props.lang === "ru" ? "Российский Квантовый Центр" : "Russian Quantum Center"} />
-          <meta property="og:description"        content={this.props.lang === "ru" ? "Российский Квантовый Центр" : "Russian Quantum Center"} />
-          <meta property="og:image"              content="http://www.rqc.ru/images/announce/Evaluation_Report.png" />
-        </Head>
         <section className="main-slider">
           {mainSlider && mainSlider.data && <MainSlider slides={mainSlider.data.body}
                                           isLoading={isFetchingMain}
