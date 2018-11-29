@@ -80,7 +80,7 @@ class Research extends React.Component {
 
                         <div className="columns">
                             <div className="column is-8-desktop">
-                                {page.data && 
+                                {page && page.data && 
                                     RichText.render(page.data.description, PrismicConfig.linkResolver, htmlSerializer)
                                 }
                             </div>
