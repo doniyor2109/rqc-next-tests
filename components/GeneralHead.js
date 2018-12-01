@@ -15,7 +15,7 @@ const GeneralHead = () => (
         <link rel="mask-icon" href="/static/favicon/safari-pinned-tab.svg" color="#4d9ac8" />
         <meta name="msapplication-TileColor" content="#4d9ac8" />
         <meta name="theme-color" content="#ffffff" />
-        {/* <script src="/static/metrika.js" async/> */}
+        <script src="/static/metrika.js" async/>
     </Head>
 )
 export default GeneralHead
