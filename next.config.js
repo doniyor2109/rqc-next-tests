@@ -2,6 +2,18 @@
 const withSass = require('@zeit/next-sass')
 module.exports = withSass({
     webpack: function (config) {
+        const originalEntry = config.entry
+        
+        config.entry = async () => {
+          const entries = await originalEntry()
+    
+          if (entries['main.js'] && !entries['main.js'].includes('./client/polyfills.js')) {
+            entries['main.js'].unshift('./client/polyfills.js')
+          }
+    
+          return entries
+        }
+
         config.module.rules.push({
           test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
           use: {
