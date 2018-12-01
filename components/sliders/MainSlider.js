@@ -12,10 +12,10 @@ class MainSlider extends React.Component {
     carouselSettings: {
       dots: true,
       infinite: true,
-      speed: 300,
+      speed: 1200,
       adaptiveHeight: false,
-      autoplaySpeed: 4500,
-      autoplay: false,
+      autoplaySpeed: 5000,
+      autoplay: true,
       lazyLoad: 'progressive',
       slidesToShow: 1,
       slidesToScroll: 1,

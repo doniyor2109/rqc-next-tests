@@ -25,9 +25,9 @@ class LabImage extends React.Component {
     carouselSettings: {
       dots: false,
       infinite: true,
-      speed: 2000,
+      speed: 1200,
       adaptiveHeight: false,
-      autoplaySpeed: 4500,
+      autoplaySpeed: 5000,
       autoplay: true,
       slidesToShow: 1,
       slidesToScroll: 1,
