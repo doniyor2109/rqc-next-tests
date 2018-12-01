@@ -150,12 +150,18 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
     padding: 0.5rem;
 }
 
-.social a img {
-  height:2rem;
-}
 
 .social {
   padding-left: 0;
+  a img {
+    height:2rem;
+    width:2rem;
+  }
+  a:nth-child(2) {
+    img {
+      width:2.5rem;
+    }
+  }
 }
 
 .navbar-dropdown {

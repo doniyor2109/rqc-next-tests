@@ -15,7 +15,7 @@ class MainSlider extends React.Component {
       speed: 300,
       adaptiveHeight: false,
       autoplaySpeed: 4500,
-      autoplay: true,
+      autoplay: false,
       lazyLoad: 'progressive',
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -77,16 +77,7 @@ class MainSlider extends React.Component {
             <Media query="(min-width: 769px)"
                    defaultMatches={phone === null && tablet === null}
                    render={() => <div id="carousel">
-                                    <Slider {...{dots: true,
-                                              infinite: true,
-                                              speed: 700,
-                                              adaptiveHeight: false,
-                                              autoplaySpeed: 3000,
-                                              autoplay: true,
-                                              lazyLoad: 'progressive',
-                                              slidesToShow: 1,
-                                              slidesToScroll: 1,
-                                              useTransform: false}}>
+                                    <Slider {...this.state.carouselSettings}>
                                         {items}
                                   </Slider>     
                                  </div>

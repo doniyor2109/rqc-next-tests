@@ -44,23 +44,22 @@
     text-align: right;
     right: 24rem; 
 
-    li.slick-active button:before {
-      opacity: 1;
-      color: white;
-      content: url("/static/slider-active-bar.svg"); 
-    }
-
     li.slick-active {
       margin-right: 5rem; 
+
+      button:before {
+        opacity: 1;
+        color: white;
+        content: url("/static/slider-active-bar.png"); 
+      }
     }
      
     li {
        margin: 0 1rem; 
-    }
-
-    li button:before {
-      opacity: 1;
-      color: white; 
+       button:before {
+        opacity: 1;
+        color: white; 
+      }
     }
   }
 }
@@ -173,7 +172,7 @@
 .old-site-popup {
   height: 7rem;
   background-color: #3998D1;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
 
   p {
     font-size: 1.2rem;
