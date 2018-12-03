@@ -5,7 +5,7 @@ export const Button = (props) => {
   const {text, url, color, onClick} = props
   if (typeof url !== "undefined") {
     return (
-      <a href={url}>
+      <a href={url} target="_blank" rel="noopener noreferrer">
         <div className="square_button" style={{border: "2px solid #" + color, color:"#" + color}} >
           {text}
         </div>
