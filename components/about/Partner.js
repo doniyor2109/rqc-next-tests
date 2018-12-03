@@ -1,6 +1,6 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs';
-import PrismicConfig from '../prismic-configuration';
+import PrismicConfig from '../../prismic-configuration';
 
 const Partner = ({item}) => (
     <div className="column is-2-desktop is-6-mobile">

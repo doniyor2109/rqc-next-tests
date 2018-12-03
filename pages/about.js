@@ -14,11 +14,10 @@ import * as langActions from '../redux/actions/lang'
 import { fetchAbout, fetchAboutRequest, fetchAboutSuccess, fetchAboutError } from '../redux/actions/about'
 
 //components
-import Partner from '../components/Partner.js'
+import Partner from '../components/about/Partner.js'
 import Vacancies from '../components/about/Vacancies'
 import AnnualReports from '../components/sliders/AnnualReports';
 import Contacts from '../components/about/Contacts'
-import BlueButton from '../components/shared/BlueButton'
 import {ArrowButton} from '../components/shared/ArrowButton'
 
 //other libraries
@@ -127,18 +126,9 @@ class About extends React.Component {
                                             {!this.state.more_info_button_is_active &&   
                                                 RichText.render(page.data.goals, PrismicConfig.linkResolver)}  
                                             <div className="button-wraper">
-                                                <BlueButton onClick={this.hadleClick}>
-                                                    {this.state.more_info_button_is_active 
-                                                        ? (<Fragment>
-                                                            {this.context.t("Подробнее")}
-                                                            <img className="arrow-down" src="/static/blue_arrow_down.svg" alt=""/>
-                                                        </Fragment>)
-                                                        : (<Fragment>
-                                                            {this.context.t("Свернуть")}
-                                                            <img className="arrow-up" src="/static/blue_arrow_down.svg" alt=""/>
-                                                        </Fragment>)
-                                                        }
-                                                </BlueButton>   
+                                                {this.state.more_info_button_is_active && 
+                                                    <img src="/static/more.svg" onClick={this.handleClick} />
+                                                }
                                             </div>
 
                                         </div>
@@ -208,7 +198,7 @@ class About extends React.Component {
         )
     }
 
-    hadleClick = (e) => {
+    handleClick = (e) => {
         e.preventDefault()
         this.setState({
             more_info_button_is_active: !this.state.more_info_button_is_active
