@@ -18,7 +18,6 @@ import { RichText } from 'prismic-reactjs'
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../prismic-configuration'
 import Persona from '../components/people/Persona.js'
-import BlueButton from '../components/shared/BlueButton'
 
 import hostName from '../host'
 
