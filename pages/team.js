@@ -112,6 +112,14 @@ class Team extends Component {
                                   </Fragment>
                                 }
                               </div>
+                              <div className="team-list">
+                                <h3>
+                                    {this.context.t("Участники группы")}                        
+                                </h3>
+                                {(team.item.data.team_list.length > 0) && 
+                                    RichText.render(team.item.data.team_list, PrismicConfig.linkResolver)
+                                }
+                              </div>
                             </div>
                             <div className="column is-9-desktop">
                               <div className="group">
