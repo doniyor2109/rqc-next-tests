@@ -88,8 +88,8 @@ class Photo extends React.Component {
                     {item.data && 
                         <div className="container">
                                 {RichText.render(item.data.title, PrismicConfig.linkResolver)}
-                            <div className="columns">
-                                <div className="column is-7-desktop">
+                            <div className="columns is-multiline">
+                                <div className="column is-7-desktop is-12-tablet">
                                     <div className="description">
                                         {RichText.render(item.data.description, PrismicConfig.linkResolver)}
                                     </div>
