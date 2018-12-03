@@ -1,5 +1,5 @@
 .transparent-wall {
-  height: 100vh;
+  height: 104vh;
   position: fixed;
   width: 100%;
   background: rgba(255, 255, 255, 0.9);
@@ -8,7 +8,7 @@
 }
 
 .back {
-    height: 104vh;
+    height: 100%;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
