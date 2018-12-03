@@ -316,8 +316,14 @@
     margin-top: 5rem;
 
     .main-category {
-      margin-bottom: 7rem;
+      margin-bottom: 2rem;
     }
+    .main-category-link {
+      float: none;
+      display: block;
+      clear: both;
+      margin-bottom: 6rem;
+  }
     .slick-slider {
       width: 105%;
       margin: 0 auto;
