@@ -24,6 +24,7 @@ import MainSlider from '../components/sliders/MainSlider'
 import SciSlider from '../components/sliders/SciSlider'
 import {Loading} from '../components/shared/loading'
 import OldSite from '../components/oldSite.js'
+import Products from '../components/products/index'
 
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../prismic-configuration';
@@ -174,6 +175,8 @@ class Index extends React.Component {
             </div>
           </div>
         </section>
+
+        <Products />
 
         <section className="sci-slider">
           <div className="container">
