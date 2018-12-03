@@ -94,6 +94,8 @@ class People extends React.Component {
 
                 <div className="container">
 
+
+                {/* РУКОВОДСТВО */}
                 <Media query="(min-width: 416px)"
                        defaultMatches={phone === null}
                        render={() => <div id="board" className="people-section">
@@ -115,25 +117,16 @@ class People extends React.Component {
                                                     <Persona item={persona} key={index} />
                                                 )}
                                             </div>
-                                            {page.data && (page.data.body[0].items.length > 3) &&
+                                            {page.data && (page.data.body[0].items.length > 3) && this.state.more_info_button1_is_active &&
                                                 <div className="button-wraper">
-                                                    <BlueButton onClick={this.boardClick}>
-                                                        {this.state.more_info_button1_is_active 
-                                                            ? (<Fragment>
-                                                                {this.context.t("Подробнее")}
-                                                                <img className="arrow-down" src="/static/blue_arrow_down.svg" alt=""/>
-                                                            </Fragment>)
-                                                            : (<Fragment>
-                                                                {this.context.t("Свернуть")}
-                                                                <img className="arrow-up" src="/static/blue_arrow_down.svg" alt=""/>
-                                                            </Fragment>)
-                                                            }
-                                                    </BlueButton>   
+                                                    <img src="/static/more.svg" onClick={this.boardClick} />
                                                 </div>
                                             }
                                         </div>
                                 }
                 />
+
+                {/* МЕЖДУНАРОДНЫЙ СОВЕТ */}
 
                 <Media query="(min-width: 416px)"
                        defaultMatches={phone === null}
@@ -156,25 +149,17 @@ class People extends React.Component {
                                                     <Persona item={persona} key={index} onClick={this.popupOn}/>
                                                 )}
                                             </div>
-                                            {page.data && (page.data.body1[0].items.length > 3) &&
+                                            {page.data && (page.data.body1[0].items.length > 3) && this.state.more_info_button2_is_active &&
                                                 <div className="button-wraper">
-                                                    <BlueButton onClick={this.intClick}>
-                                                        {this.state.more_info_button2_is_active 
-                                                            ? (<Fragment>
-                                                                {this.context.t("Подробнее")}
-                                                                <img className="arrow-down" src="/static/blue_arrow_down.svg" alt=""/>
-                                                            </Fragment>)
-                                                            : (<Fragment>
-                                                                {this.context.t("Свернуть")}
-                                                                <img className="arrow-up" src="/static/blue_arrow_down.svg" alt=""/>
-                                                            </Fragment>)
-                                                            }
-                                                    </BlueButton>  
+                                                    <img src="/static/more.svg" onClick={this.intClick} />
                                                 </div>
                                             } 
                                         </div>
                                 }
                 />
+
+
+                {/* ПОПЕЧИТЕЛЬСКИЙ СОВЕТ */}
 
                 <Media query="(min-width: 416px)"
                        defaultMatches={phone === null}
@@ -197,20 +182,9 @@ class People extends React.Component {
                                                     <Persona item={persona} key={index} />
                                                 )}
                                             </div>
-                                            {page.data && (page.data.body2[0].items.length > 3) &&
+                                            {page.data && (page.data.body2[0].items.length > 3) && this.state.more_info_button3_is_active &&
                                                 <div className="button-wraper">
-                                                    <BlueButton onClick={this.trusteesClick}>
-                                                        {this.state.more_info_button3_is_active 
-                                                            ? (<Fragment>
-                                                                {this.context.t("Подробнее")}
-                                                                <img className="arrow-down" src="/static/blue_arrow_down.svg" alt=""/>
-                                                            </Fragment>)
-                                                            : (<Fragment>
-                                                                {this.context.t("Свернуть")}
-                                                                <img className="arrow-up" src="/static/blue_arrow_down.svg" alt=""/>
-                                                            </Fragment>)
-                                                            }
-                                                    </BlueButton>   
+                                                    <img src="/static/more.svg" onClick={this.trusteesClick} />
                                                 </div>
                                             }
                                         </div>
