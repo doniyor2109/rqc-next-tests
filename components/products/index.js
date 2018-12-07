@@ -10,16 +10,16 @@ const Products = (props, context) => (
                 {context.t("Продукты")}
             </p>
             <div className="columns is-multiline">
-                <div className="column is-6-desktop is-10-tablet">
+                <div className="column is-6-desktop is-6-tablet">
                     <a href="http://goqrate.com/#photon-detector" target="_blank" rel="noopener noreferrer">
                         <div className="product large">
-                            <div className="columns">
-                                <div className="column is-6-desktop">
-                                    <h3>
-                                        {context.t("детектор одиночных фотонов")}
-                                    </h3>
+                            <div className="columns is-multiline">
+                                <div className="column is-6-desktop is-12-tablet">
+                                    <p>
+                                        {context.t("Детектор одиночных фотонов")}
+                                    </p>
                                 </div>
-                                <div className="column is-6-desktop">
+                                <div className="column is-6-desktop is-12-tablet">
                                     <div className="img_wrapper">
                                         <img src="/static/products_detector.png" />
                                     </div>
@@ -31,19 +31,16 @@ const Products = (props, context) => (
 
                 </div>
 
-                <div className="column is-6-desktop is-10-tablet">
+                <div className="column is-6-desktop is-6-tablet">
                     <a href="http://www.femtovision.ru" target="_blank" rel="noopener noreferrer">
                         <div className="product large">
-                            <div className="columns">
-                                <div className="column is-6-desktop">
-                                    <h3>
-                                        {context.t("Femto Vision")}
-                                    </h3>
+                            <div className="columns is-multiline">
+                                <div className="column is-6-desktop is-12-tablet">
                                     <p>
                                         {context.t("Фемтосекундный лазер")}
                                     </p>
                                 </div>
-                                <div className="column is-6-desktop">
+                                <div className="column is-6-desktop is-12-tablet">
                                     <div className="img_wrapper">
                                         <img src="/static/products_femtovision.png" />
                                     </div>
@@ -57,9 +54,6 @@ const Products = (props, context) => (
                 <div className="column is-4-desktop is-6-tablet">
                     {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
                         <div className="product small granat">
-                            <h3>
-                                {context.t("М-Гранат")}
-                            </h3>
                             <p>
                                 {context.t("Магнитокардиограф")}
                             </p>
@@ -74,9 +68,6 @@ const Products = (props, context) => (
                 <div className="column is-4-desktop is-6-tablet">
                     <a href="http://goqrate.com" target="_blank" rel="noopener noreferrer">
                         <div className="product small qrate">
-                            <h3>
-                                {context.t("Q Rate")}
-                            </h3>
                             <p>
                                 {context.t("Квантовые коммуникации")}
                             </p>
@@ -91,9 +82,6 @@ const Products = (props, context) => (
                 <div className="column is-4-desktop is-6-tablet">
                     <a href="https://dephandetectors.com/ru/" target="_blank" rel="noopener noreferrer">
                         <div className="product small dephan">
-                            <h3>
-                                {context.t("Dephan Detectors")}
-                            </h3>
                             <p>
                                 {context.t("Твердотельный фотоумножитель")}
                             </p>
