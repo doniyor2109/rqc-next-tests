@@ -64,7 +64,10 @@ export const translations = {
       "Отчеты РКЦ": "Reports of the RQC",
       "Руководители научных групп": "Leaders of science groups", 
       "все научные группы": "more scientific groups", 
-      "Участники группы": "Team list"
+      "Участники группы": "Team list",
+      "Фемтосекундный лазер": "",
+      "Магнитокардиограф": "",
+      "Твердотельный фотоумножитель": "",
    }
 }
 
