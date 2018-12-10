@@ -230,6 +230,14 @@
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
         padding: 4.5rem 2.5rem;
         height: 100%;
+        &:focus {
+            outline: 0;
+        }
+    }
+    .column {
+        &:focus {
+            outline: 0;
+        }
     }
 
     %back-font-set {
