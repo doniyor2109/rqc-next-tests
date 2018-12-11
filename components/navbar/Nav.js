@@ -54,8 +54,8 @@ class Nav extends Component {
               <Link href="/">
                 <a className="navbar-item">
                   {lang === "ru" 
-                  ? <img className="logo" src={withSlider ? "/static/RQClogo_white_ru.svg" : "/static/RQClogo_black_ru.svg"} alt="Логотип Российского Квантового Центра"/>
-                  : <img className="logo" src={withSlider ? "/static/RQClogo_white_en.svg" : "/static/RQClogo_black_en.svg"} alt="Логотип Российского Квантового Центра"/>
+                  ? <img className={withSlider ? "mainlogo_ru" : "logo"} src={withSlider ? "/static/RQClogo_white_ru.svg" : "/static/RQClogo_black_ru.svg"} alt="Логотип Российского Квантового Центра"/>
+                  : <img className={withSlider ? "mainlogo_en" : "logo"} src={withSlider ? "/static/RQClogo_white_en.svg" : "/static/RQClogo_black_en.svg"} alt="Логотип Российского Квантового Центра"/>
                   }
                 </a>
               </Link>
