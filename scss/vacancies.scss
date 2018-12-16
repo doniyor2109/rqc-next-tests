@@ -109,6 +109,8 @@
         .modal-content {
             width: 90%;
             padding: 5.3rem 6rem;
+            overflow-y: scroll; /* has to be scroll, not auto */
+            -webkit-overflow-scrolling: touch;
 
             h3 {
                 align-self: center;
@@ -139,8 +141,6 @@
             color: #040303;
             margin: 0 27px;
             max-height: 90%;
-            overflow-y: scroll; /* has to be scroll, not auto */
-            -webkit-overflow-scrolling: touch;
             position: relative;
         }
     }
