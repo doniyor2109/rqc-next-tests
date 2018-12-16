@@ -20,10 +20,12 @@
         margin-bottom: 12rem;
     }
 
-    // .people-popup {
-    //     overflow-y: scroll; /* has to be scroll, not auto */
-    //     -webkit-overflow-scrolling: touch;
-    // }
+    .people-popup {
+        .modal-content{
+            overflow-y: scroll; /* has to be scroll, not auto */
+            -webkit-overflow-scrolling: touch;
+        }        
+    }
 
 }
 
