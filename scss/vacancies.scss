@@ -139,7 +139,8 @@
             color: #040303;
             margin: 0 27px;
             max-height: 90%;
-            overflow: auto;
+            overflow-y: scroll; /* has to be scroll, not auto */
+            -webkit-overflow-scrolling: touch;
             position: relative;
         }
     }
