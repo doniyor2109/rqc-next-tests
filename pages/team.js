@@ -43,7 +43,7 @@ class Team extends Component {
 
     reduxStore.dispatch(fetchTeamRequest(uid))
     const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
-    await api.query(Prismic.Predicates.at('my.science_group.uid', uid), { lang : language, 
+    await api.query(Prismic.Predicates.at('my.science_group.uid', uid), { lang : "*", 
                                                                     fetchLinks : ['scientist.name', 
                                                                                     'scientist.position', 
                                                                                     'scientist.photo'
