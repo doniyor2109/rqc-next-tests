@@ -8,11 +8,11 @@ import * as langActions from '../redux/actions/lang'
 
 import Menu from './Menu'
 
-const FooterMenuItem = ({children}, context) => {
+const FooterMenuItem = ({children, products}, context) => {
 
   const fitems = children.map((item, key) =>
     <Link href={item.url} key={key}>
-      <a className="footer-menu-item">
+      <a className="footer-menu-item" target={products ? "_blank" : "_self"} rel={products ? "noopener noreferrer" : "undefined"}>
         {context.t(item.name)}
       </a>
     </Link>
@@ -34,7 +34,7 @@ const FooterMenu = ({Menu}, context) => {
         </a>
       </Link>
       <hr className="footer_menu_hr"/>
-      <FooterMenuItem children={item.children} />
+      <FooterMenuItem children={item.children} products={item.name === "Продукты" ? true : false}/>
     </div>
   )
   return (

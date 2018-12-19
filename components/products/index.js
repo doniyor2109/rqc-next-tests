@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import {ArrowButton} from '../shared/ArrowButton'
 
 const Products = (props, context) => (
-    <section className="products">
+    <section className="products" id="products">
 
         <div className="container">`
             <p className="main-category">
@@ -55,7 +55,7 @@ const Products = (props, context) => (
                     {/* <a href="" target="_blank" rel="noopener noreferrer"> */}
                         <div className="product small granat">
                             <p>
-                                {context.t("Магнитокардиограф")}
+                                {context.t("Магнитометр")}
                             </p>
                             <div className="img_wrapper">
                                 <img src="/static/products_granat.png" />

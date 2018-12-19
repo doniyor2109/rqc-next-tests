@@ -63,11 +63,11 @@ export const translations = {
       "Коллектив Центра": "Employees of the Center", 
       "Отчеты РКЦ": "Reports of the RQC",
       "Руководители научных групп": "Leaders of science groups", 
-      "все научные группы": "more scientific groups", 
-      "Участники группы": "Team list",
-      "Фемтосекундный лазер": "",
-      "Магнитокардиограф": "",
-      "Твердотельный фотоумножитель": "",
+      "все научные группы": "all groups",
+      "Участники группы": "Team members",
+      "Фемтосекундный лазер": "Femtosecond laser",
+      "Магнитометр": "Magnetocardiograph",
+      "Твердотельный фотоумножитель": "Solid-state photomultiplier" 
    }
 }
 

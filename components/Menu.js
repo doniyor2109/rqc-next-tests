@@ -69,28 +69,32 @@ const Menu = [
       // }
     ]
   },
-  // {
-  //   name: "Продукты",
-  //   url: "/products",
-  //   children: [
-  //     {
-  //       name: "Квантовые коммуникации",
-  //       url: "/quantum-communications"
-  //     },
-  //     {
-  //       name: "Детектор одиночных фотонов",
-  //       url: "/single-photon-detector"
-  //     },
-  //     {
-  //       name: "Твердотельный фотодетектор",
-  //       url: "/photo-detector"
-  //     },
-  //     {
-  //       name: "Фемтовижн",
-  //       url: "/femtovision"
-  //     }
-  //   ]
-  // },
+  {
+    name: "Продукты",
+    url: "/#products",
+    children: [
+      {
+        name: "Квантовые коммуникации",
+        url: "http://goqrate.com"
+      },
+      {
+        name: "Детектор одиночных фотонов",
+        url: "http://goqrate.com/#photon-detector"
+      },
+      {
+        name: "Магнитометр",
+        url: "/#products"
+      },
+      {
+        name: "Твердотельный фотоумножитель",
+        url: "https://dephandetectors.com/ru/"
+      },
+      {
+        name: "Фемтосекундный лазер",
+        url: "http://www.femtovision.ru"
+      }
+    ]
+  },
   {
     name: "Новости",
     url: "/news",

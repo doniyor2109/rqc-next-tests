@@ -44,7 +44,7 @@ class MenuWithDropdown extends React.Component {
             <Link href={menuitem.url} >
               <a onClick={() => {closeMenu()}}>{this.context.t(menuitem.name)}</a>
             </Link>
-            {menuitem.name === 'Новости' || menuitem.name === 'Мероприятия' 
+            {menuitem.name === 'Новости' || menuitem.name === 'Мероприятия' || menuitem.name === 'Исследования' 
             ? <div></div>
             : <FontAwesomeIcon icon="chevron-down" size="2x" onClick={e => {this.handleClick(e, key)}}/>
             }
