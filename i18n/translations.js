@@ -67,7 +67,8 @@ export const translations = {
       "Участники группы": "Team members",
       "Фемтосекундный лазер": "Femtosecond laser",
       "Магнитометр": "Magnetocardiograph",
-      "Твердотельный фотоумножитель": "Solid-state photomultiplier" 
+      "Твердотельный фотоумножитель": "Solid-state photomultiplier",
+      "Научные группы РКЦ": "RQC Science groups"
    }
 }
 

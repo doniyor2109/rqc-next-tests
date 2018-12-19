@@ -51,27 +51,27 @@ class Research extends React.Component {
             <Fragment>
 
                 <section className="research-page">
-                    {/* <Head>
-                        <title>{this.context.t("Исследования")}</title>
-                        <meta property="og:url"                content={hostName + "/people"} />
+                    <Head>
+                        <title>{this.context.t("Научные группы РКЦ")}</title>
+                        <meta property="og:url"                content={hostName + "/research"} />
                         <meta property="og:type"               content="article" />
-                        <meta property="og:image"              content={hostName + "/static/unusov.png"} />
+                        <meta property="og:image"              content={hostName + "/static/science_groups_fb.jpg"} />
                         <meta property="og:locale:alternate"   content="en_US" />
                     {(typeof fb_locale === 'undefined' || this.props.fb_locale === "ru_RU") && 
                         <Fragment>
                             <meta property="og:locale"             content="ru_RU" />
-                            <meta property="og:title"              content="Коллектив Центра" />
-                            <meta property="og:description"        content="Администрация, Попечительский и Научный совет Российского Квантового Центра" />
+                            <meta property="og:title"              content="Научные группы РКЦ" />
+                            <meta property="og:description"        content="Уникальный для России формат научного центра, занимающегося как фундаментальными исследованиями, так и разработкой устройств, основанных на квантовых эффектах. Занимает лидирующие позиции в научной области, а также в разработке высокотехнологичных коммерческих продуктов." />
                         </Fragment>
                     }
                     {this.props.fb_locale === "en_US" && 
                         <Fragment>
                             <meta property="og:locale"             content="en_US" />
-                            <meta property="og:title"              content="Employees of the Center" />
-                            <meta property="og:description"        content="Administration, Boards of Trustees, and Scientific Committee of the RQC" />
+                            <meta property="og:title"              content="RQC Science groups" />
+                            <meta property="og:description"        content="Unique scientific center for Russia dealing with both fundamental research and the development of devices based on quantum effects. The RQC takes leading position in the scientific field, as well as in the development of high-tech commercial product." />
                         </Fragment>
                     }
-                    </Head> */}
+                    </Head>
 
                     <div className="container">
                         <h1 className="page-main-heading">
