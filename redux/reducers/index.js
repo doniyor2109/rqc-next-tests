@@ -14,6 +14,7 @@ import { photo } from './photo'
 import { video } from './video'
 import { scigroups } from './scigroups'
 import { research } from './research'
+import { event } from './event'
 import { i18nState } from "redux-i18n"
 
 const rootReducer = combineReducers({
@@ -32,7 +33,8 @@ const rootReducer = combineReducers({
   mediakit, 
   video, 
   scigroups, 
-  research
+  research,
+  event
 });
 
 export default rootReducer

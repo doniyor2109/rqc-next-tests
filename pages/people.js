@@ -65,6 +65,8 @@ class People extends React.Component {
 
     render() {
         const { phone, tablet } = this.props
+
+        console.log("people", this.props)
         const { isFetching, page } = this.props.people
         if (isFetching) return <Loading />
         else return (

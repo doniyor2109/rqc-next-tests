@@ -6,7 +6,6 @@ import PropTypes from 'prop-types'
 import Media from 'react-media'
 import Router from 'next/router'
 import Head from 'next/head'
-import cookies from 'next-cookies'
 
 //actions
 import * as articleActions from '../redux/actions/article'
@@ -15,7 +14,6 @@ import * as langActions from '../redux/actions/lang'
 import * as relatedActions from '../redux/actions/articleRelated'
 
 //components
-import { Loading } from '../components/shared/loading.js'
 import ArticleBody from '../components/article/ArticleBody'
 import ArticleHero from '../components/article/ArticleHero'
 import BigImageSlice from '../components/article/BigImageSlice'

@@ -26,6 +26,10 @@ app.prepare()
       return app.render(req, res, '/team', { uid: req.params.uid })
     })
 
+    server.get('/event/:uid', (req, res) => {
+      return app.render(req, res, '/event', { uid: req.params.uid })
+    })
+
     server.get('*', (req, res) => {
       return handle(req, res)
     })
