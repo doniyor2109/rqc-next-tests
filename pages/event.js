@@ -68,17 +68,16 @@ class Event extends Component {
 
     return (
       <div className="event-page">
-        {/* <Head>
+        <Head>
           <title>{event.item.data.title[0] && event.item.data.title[0].text}</title>
           <meta property="og:url"                content={hostName + "/event/" + this.props.uid} />
           <meta property="og:type"               content="article" />
           <meta property="og:title"              content={event.item.data.title[0] && event.item.data.title[0].text} />
-          <meta property="og:description"        content={event.item.data.title_description[0] && event.item.data.title_description[0].text} />
-          <meta property="og:image"              content={event.item.data.cover && event.item.data.cover.url}  />
-          <meta property="og:image:width"        content={event.item.data.cover && event.item.data.cover.dimensions.width} />
-          <meta property="og:image:height"       content={event.item.data.cover && event.item.data.cover.dimensions.height} />
-
-        </Head> */}
+          <meta property="og:description"        content={event.item.data.description[0] && event.item.data.description[0].text} />
+          <meta property="og:image"              content={event.item.data.wallpaper && event.item.data.wallpaper.url}  />
+          <meta property="og:image:width"        content={event.item.data.wallpaper.dimensions && event.item.data.wallpaper.dimensions.width} />
+          <meta property="og:image:height"       content={event.item.data.wallpaper.dimensions && event.item.data.wallpaper.dimensions.height} />
+        </Head>
 
         {/* тело новости */}
 
