@@ -11,13 +11,7 @@ import * as mainActions from '../redux/actions/main'
 import * as langActions from '../redux/actions/lang'
 import {fetchMainSliderRequest, 
         fetchMainSliderSuccess, 
-        fetchMainSliderFailure, 
-        fetchMainSciSliderRequest, 
-        fetchMainSciSliderSuccess, 
-        fetchMainSciSliderFailure, 
-        fetchNewsForMainRequest, 
-        fetchNewsForMainSuccess,
-        fetchNewsForMainFailure} from '../redux/actions/main'
+        fetchMainSliderFailure} from '../redux/actions/main'
 
 import { NewscardSmall } from '../components/news/NewscardSmall.js'
 import MainSlider from '../components/sliders/MainSlider'
@@ -44,29 +38,29 @@ class Index extends React.Component {
     // мы не можем в этом месте ждать, пока _app выставит кукис, потому что тогда 
     // слайдер не получит значение id вовремя, id будет undefined и слайдер не доставится
     const l = typeof cookies(ctx).language === 'undefined' ? "ru" : cookies(ctx).language
-    const id = (l && l === 'ru' ? 'W3GVDyQAACYAZAgb' : 'W3GV8SQAACQAZAwG')
     
     // серверный запрос основного слайдера
+    const id = (l && l === 'ru' ? 'W3GVDyQAACYAZAgb' : 'W3GV8SQAACQAZAwG')
     reduxStore.dispatch(fetchMainSliderRequest()) 
     await api.query(Prismic.Predicates.at('document.id', id), { lang: l})
              .then(response => reduxStore.dispatch(fetchMainSliderSuccess(id, response)))
              .catch(error => reduxStore.dispatch(fetchMainSliderFailure(id, error)))
 
     // серверный запрос слайдера ученых 
-    reduxStore.dispatch(fetchMainSciSliderRequest()) 
-    await api.query(Prismic.Predicates.at('document.type', 'scientist'), { lang: l, 
-                                                                     fetchLinks: ['science_group.groupname', 'science_group.uid'] })
-             .then(response => reduxStore.dispatch(fetchMainSciSliderSuccess(response)))
-             .catch(error => reduxStore.dispatch(fetchMainSciSliderFailure(error)))
+    // reduxStore.dispatch(fetchMainSciSliderRequest()) 
+    // await api.query(Prismic.Predicates.at('document.type', 'scientist'), { lang: l, 
+    //                                                                  fetchLinks: ['science_group.groupname', 'science_group.uid'] })
+    //          .then(response => reduxStore.dispatch(fetchMainSciSliderSuccess(response)))
+    //          .catch(error => reduxStore.dispatch(fetchMainSciSliderFailure(error)))
 
 
-    // серверный запрос тизеров новостей 
-    reduxStore.dispatch(fetchNewsForMainRequest()) 
-    await api.query(Prismic.Predicates.at('document.type', 'news'), { lang: l,
-                                                                  pageSize: 3,
-                                                                 orderings: '[my.news.manual_date_of_publication desc]' })
-              .then(response => reduxStore.dispatch(fetchNewsForMainSuccess(response)))
-              .catch(error => reduxStore.dispatch(fetchNewsForMainFailure(error)))
+    // // серверный запрос тизеров новостей 
+    // reduxStore.dispatch(fetchNewsForMainRequest()) 
+    // await api.query(Prismic.Predicates.at('document.type', 'news'), { lang: l,
+    //                                                               pageSize: 3,
+    //                                                              orderings: '[my.news.manual_date_of_publication desc]' })
+    //           .then(response => reduxStore.dispatch(fetchNewsForMainSuccess(response)))
+    //           .catch(error => reduxStore.dispatch(fetchNewsForMainFailure(error)))
 
 
     return {lan: l}
@@ -84,6 +78,8 @@ class Index extends React.Component {
     this.setState({
       DOMLoaded: true
     })
+    this.props.fetchNewsForMain(this.props.lang, 3) 
+    this.props.fetchMainSciSlider(this.props.lang)
   }
 
   componentDidUpdate(prevProps) {
@@ -104,9 +100,10 @@ class Index extends React.Component {
     const { phone, tablet } = this.props
     const { mainSlider, sciSlider, isFetchingMain, isFetchingSci, newsTeaser } = this.props.main
 
-    // console.log("main", this.props)
+    console.log("main", this.props)
     if (!this.state.DOMLoaded) return <Loading />
-    else return (
+    else 
+    return (
       <Fragment>
         <Head>
           <title>{this.context.t("Российский Квантовый Центр – главная")}</title>

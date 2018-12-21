@@ -237,18 +237,14 @@
     }
     &.detector {
       .img_wrapper {
-        img {
-          width: 255px;
-          height: 170px;
-        }
+        justify-content: left;
+        margin-top: 2rem;
+
       }
     }
     &.femto {
       .img_wrapper {
-        img {
-          width: 183px;
-          height: 170px;
-        }
+
         margin-top: 2rem;
       }
     }
@@ -260,10 +256,7 @@
     &.granat {
       .img_wrapper {
         margin-top: 7rem;
-        img {
-          width: 131px;
-          height: 132px;
-        }
+ 
       }
 
     }
@@ -271,20 +264,14 @@
     &.qrate {
       .img_wrapper {
         margin-top: 8rem;
-        img {
-          width: 275px;
-          height: 113px;
-        }
+ 
       }
     }
 
     &.dephan {
       .img_wrapper {
         margin-top: 5rem;
-        img {
-          width: 200px;
-          height: 139px;
-        }
+
       }
     }
   }
