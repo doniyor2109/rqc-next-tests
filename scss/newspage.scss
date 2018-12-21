@@ -14,7 +14,8 @@
     color:#040303;
     background-color: white;
     font-family: "DIN Pro", serif;
-    border-color: #040303;
+    border-color: rgba(4,3,3,0.5);
+    border-width: 1px;
     &:focus {
       outline: 0;
     }
@@ -22,6 +23,7 @@
       background: #3998D1;
       color:white;
       border-color: #3998D1;
+      border-width: 1px;
       &:focus {
         outline:0;
       }
