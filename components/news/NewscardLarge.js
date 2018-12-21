@@ -4,6 +4,7 @@ import { Date } from 'prismic-reactjs'
 import moment from 'moment'
 import 'moment/locale/ru'
 import Link from 'next/link'
+import '../../scss/newscard.scss'
 
 
 export const NewscardLarge = (props) => {

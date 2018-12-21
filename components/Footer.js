@@ -7,6 +7,8 @@ import { bindActionCreators } from 'redux'
 import * as langActions from '../redux/actions/lang'
 
 import Menu from './Menu'
+import '../scss/footer.scss'
+
 
 const FooterMenuItem = ({children, products}, context) => {
 

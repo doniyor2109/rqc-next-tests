@@ -19,6 +19,7 @@ import SciCard from '../components/scigroups/SciCard'
 import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../prismic-configuration';
 import hostName from '../host'
+import '../scss/research.scss'
 
 class Research extends React.Component {
 

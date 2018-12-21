@@ -13,7 +13,6 @@ import {fetchEventByUidRequest, fetchEventByUidSuccess, fetchEventByUidFailure }
 import * as langActions from '../redux/actions/lang'
 
 //components
-import { Loading } from '../components/shared/loading.js'
 import Socials from '../components/shared/Socials'
 import EventHero from '../components/event/EventHero'
 
@@ -24,6 +23,8 @@ import PrismicConfig from '../prismic-configuration';
 import hostName from '../host'
 import moment from 'moment'
 import 'moment/locale/ru'
+import '../scss/event.scss'
+
 
 class Event extends Component {
 
@@ -179,6 +180,16 @@ class Event extends Component {
                       <div className="event-info">
                         {RichText.render(event.item.data.more_info, PrismicConfig.linkResolver)}
                       </div>
+
+                      <hr/>
+
+                      {event.item.data && 
+
+                      <Socials url={hostName + "/event/" + this.props.uid} 
+                              quote={event.item.data.title[0].text}
+                              image={event.item.data.wallpaper.url}
+                      />    
+                      }
                     </div>
                 </div>
             </div>

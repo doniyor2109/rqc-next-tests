@@ -24,6 +24,7 @@ import { Link, RichText } from 'prismic-reactjs'
 import PrismicConfig from '../prismic-configuration'
 import Prismic from 'prismic-javascript'
 import hostName from '../host'
+import '../scss/photogallery.scss'
 
 
 class Photo extends React.Component {
@@ -45,7 +46,7 @@ class Photo extends React.Component {
 
         reduxStore.dispatch(fetchPhotoByUidRequest(uid))
         const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
-        await api.query(Prismic.Predicates.at('my.mediakit_photo_gallery.uid', uid), { lang : language })
+        await api.query(Prismic.Predicates.at('my.mediakit_photo_gallery.uid', uid), { lang : "*" })
                  .then(response => {
                    reduxStore.dispatch(fetchPhotoByUidSuccess(uid, response))
                   })

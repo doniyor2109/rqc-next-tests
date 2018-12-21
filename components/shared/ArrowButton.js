@@ -1,4 +1,6 @@
 import React from 'react'
+import '../../scss/button.scss'
+
 export const ArrowButton = ({text, url, color, onClick, target_blank}) => {
 
   if (url) { 

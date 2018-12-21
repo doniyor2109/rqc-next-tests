@@ -29,6 +29,8 @@ import PrismicConfig from '../prismic-configuration';
 import moment from 'moment'
 import 'moment/locale/ru'
 import hostName from '../host'
+import '../scss/article.scss'
+
 
 class Article extends Component {
 

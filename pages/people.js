@@ -20,6 +20,7 @@ import PrismicConfig from '../prismic-configuration'
 import Persona from '../components/people/Persona.js'
 
 import hostName from '../host'
+import '../scss/people.scss'
 
 class People extends React.Component {
 

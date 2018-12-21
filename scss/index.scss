@@ -4,31 +4,9 @@ $tablet:768px;
 $column-gap: 1.5rem;
 
 @import '~bulma/bulma';
-
-// components
-@import './button.scss';
-@import './newscard.scss';
-@import './loading.scss';
-@import './persona.scss';
-
-// containers - pages
+@import url(~slick-carousel/slick/slick.css);
+@import url(~slick-carousel/slick/slick-theme.css);
 @import './nav.scss';
-@import './footer.scss';
-@import './newspage.scss';
-@import './article.scss';
-@import './mainpage.scss';
-@import './people.scss';
-@import './about.scss';
-@import './vacancies.scss';
-@import './team.scss';
-@import './reports.scss';
-@import './mediakit.scss';
-@import './photogallery.scss';
-@import './videopage.scss';
-@import './research.scss';
-@import './event.scss';
-@import './events.scss';
-
 
 //import other files here
 @import "./fonts.scss";
@@ -78,6 +56,58 @@ html {
     text-transform: uppercase;
 }
 
+.main-category,  .main-category-link {
+    display: inline;
+  }
+  
+  .main-category {
+    float:left;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: #040303;
+    margin-bottom: 3rem;
+  }
+  .main-category-link {
+    float:right;
+    font-size: 1.4rem;
+    text-transform: lowercase;
+    font-weight: 500;
+    color: #3998D1;
+    text-decoration: underline;
+}
+
+.cookie-consent {
+    height: 7rem;
+    background-color: #3998D1;
+    position: relative;
+    top: 1rem;
+    width: 100%;
+    z-index: 31;
+  
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6rem;
+      color:white;
+      margin-top: 0.5rem;
+    }
+  
+    button {
+      border: 2px solid white;
+      font-size: 1.4rem;
+      line-height: 2rem;
+      text-transform: uppercase;
+      color: white;
+      text-align: center;
+      position: relative;
+      width: 100%;
+      background-color: transparent;
+      height: 3.5rem;
+      cursor: pointer;   
+      font-weight: 500;
+      margin-top: 0.5rem;
+    }
+}
+
 .paragraph-class {
     font-size: 1.6rem;
     line-height: 2.3rem;
@@ -86,6 +116,58 @@ html {
 .slick-slide > div {
     height: 100%;
 }
+
+
+.tags-for-search {
+    display: block;
+    margin: 3.5rem 0 9rem;
+  }
+  
+  .tag-for-search {
+      font-size: 1.2rem;
+      padding: 0.4rem 1rem;
+      font-weight: 500;
+      display: inline;
+      margin-right: 3rem;
+      text-transform: uppercase;
+      color:#040303;
+      background-color: white;
+      font-family: "DIN Pro", serif;
+      border-color: rgba(4,3,3,0.5);
+      border-width: 1px;
+      &:focus {
+        outline: 0;
+      }
+      &.is-active{
+        background: #3998D1;
+        color:white;
+        border-color: #3998D1;
+        border-width: 1px;
+        &:focus {
+          outline:0;
+        }
+      }
+  }
+  
+  .captions {
+    color: #040303;
+    margin-top: 6.5rem;
+    font-size: 1.6rem;
+  
+  }
+  
+  .more-news {
+    hr {
+      margin-top: 5rem;
+    }
+    .more{
+      margin: 1rem 0 0 0;
+    }
+  }
+
+  .column.is-centered {
+    text-align: center;
+  }
 
 
 @media screen and (min-width: 1200px) {
@@ -113,6 +195,11 @@ html {
     #__next {
         overflow-x: hidden;
     }
+    .cookie-consent {
+        p {
+          margin-top: 0;
+        }
+      }
 }
 
 @media screen and (max-width: 415px) {
@@ -122,4 +209,29 @@ html {
         width: auto;
         padding: 0 3rem;
     }
+    .tag-for-search.is-active {
+        margin-right: 3rem;
+      }
+    
+      .tag-for-search {
+        margin-bottom: 2.3rem;
+        margin-right: 3rem;
+        min-width: 10rem;
+      }
+    
+    .more-news {
+        hr {
+          margin-top: 1rem;
+        }
+    }
+    .cookie-consent {
+        height:11rem;
+        p {
+          margin-top: 0;
+        }
+        button {
+          margin-top: 2rem;
+        }
+    }
+      
 }

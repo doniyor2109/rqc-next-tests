@@ -4,6 +4,7 @@ import PrismicConfig from '../../prismic-configuration';
 import { ArrowButton } from '../shared/ArrowButton'
 import Popup from '../shared/Popup'
 import PropTypes from 'prop-types'
+import '../../scss/persona.scss'
 
 const PersonaPopup = ({active, close, item}, context) => {
     if (item) {

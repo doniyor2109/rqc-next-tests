@@ -24,6 +24,7 @@ import { RichText } from 'prismic-reactjs'
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../prismic-configuration'
 import hostName from '../host'
+import '../scss/videopage.scss'
 
 
 class Video extends React.Component {

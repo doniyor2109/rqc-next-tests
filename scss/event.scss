@@ -76,36 +76,37 @@
   }
 
 
-  .event-details {
-        color: #040303;
-        .lecturer {  
-            margin-bottom: 6rem;
-            
-            h2 {
-                font-size: 1.8rem;
-                text-transform: uppercase;
-                color: #040303;
-            }
+.event-details {
+    color: #040303;
 
-            h3 {
-                font-size: 2.2rem;
-                line-height: 2.5rem;
-                font-weight: bold;
-                color: #040303;
-                margin-top: 3rem;
-            }
+    .lecturer {  
+        margin-bottom: 6rem;
         
-            p {
-                font-size: 1.4rem;
-                line-height: 1.8rem;
-                margin-top: 1rem;
-            }
-            img {
-                height: auto;
-                max-width: 100%;
-                margin-top: 2rem;
-            }
+        h2 {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            color: #040303;
         }
+
+        h3 {
+            font-size: 2.2rem;
+            line-height: 2.5rem;
+            font-weight: bold;
+            color: #040303;
+            margin-top: 3rem;
+        }
+    
+        p {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            margin-top: 1rem;
+        }
+        img {
+            height: auto;
+            max-width: 100%;
+            margin-top: 2rem;
+        }
+    }
     
     .when, .where, .fee {
         font-size: 1.6rem;
@@ -119,6 +120,7 @@
     }
 
     .event-info {
+        margin-bottom: 9rem;
         h1 {
             font-size: 2.2rem;
             line-height: 2.5rem;
@@ -133,6 +135,9 @@
             line-height: 2.3rem;
         }
     }
+    hr {
+        margin-bottom: 4.5rem;
+    }
   }
 
   .event-date {
@@ -141,7 +146,39 @@
     color: #040303;
   }
 
+  .article-socials {
 
+    p {
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      color: #040303;
+      display: inline-block;
+      margin-right: 2rem;
+    }
+    .SocialMediaShareButton {
+      display: inline-block;
+      margin-right: 3rem;
+      vertical-align: top;
+      top: -5px;
+      position: relative;
+      
+      .social-icon {
+        circle {
+          fill: #818181;
+        }
+      }
+      
+      .social-icon:hover {
+        circle {
+          fill: #3998D1;
+        }
+      }
+      
+      div {
+        display: inline-block;
+      }
+    }
+  }
 
 // ------------------ IPAD --------------------
 

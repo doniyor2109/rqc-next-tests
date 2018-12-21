@@ -23,6 +23,7 @@ import Products from '../components/products/index'
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../prismic-configuration';
 import hostName from '../host'
+import '../scss/mainpage.scss'
 
 class Index extends React.Component {
 

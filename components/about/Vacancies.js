@@ -9,6 +9,7 @@ import * as langActions from '../../redux/actions/lang'
 import { Loading } from '../shared/loading'
 import VacancyCard from './VacancyCard'
 import VacancyPopup from './VacancyPopup'
+import '../../scss/vacancies.scss'
 
 
 class Vacancies extends React.Component {

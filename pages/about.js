@@ -26,6 +26,8 @@ import Prismic from 'prismic-javascript'
 import PrismicConfig from '../prismic-configuration';
 import htmlSerializer from '../components/shared/htmlSerializer'
 import hostName from '../host'
+import '../scss/about.scss'
+
 
 class About extends React.Component {
 
