@@ -12,7 +12,7 @@ const Products = (props, context) => (
             <div className="columns is-multiline">
                 <div className="column is-6-desktop is-6-tablet">
                     <a href="http://goqrate.com/#photon-detector" target="_blank" rel="noopener noreferrer">
-                        <div className="product large">
+                        <div className="product large detector">
                             <div className="columns is-multiline">
                                 <div className="column is-6-desktop is-12-tablet">
                                     <p>
@@ -33,7 +33,7 @@ const Products = (props, context) => (
 
                 <div className="column is-6-desktop is-6-tablet">
                     <a href="http://www.femtovision.ru" target="_blank" rel="noopener noreferrer">
-                        <div className="product large">
+                        <div className="product large femto">
                             <div className="columns is-multiline">
                                 <div className="column is-6-desktop is-12-tablet">
                                     <p>

@@ -90,8 +90,6 @@
 
 .sci-slider {
   padding: 6rem 0;
-  background: #F7F9FB;
-  margin-top: 16rem;
 
   .slick-slider {
     width: 101%;
@@ -227,13 +225,32 @@
 }
 
 .products {
-  margin-top: 12rem;
+  padding: 6rem 0 8rem;
+  margin-top: 7rem;
+  background: #F7F9FB;
 
   .large {
     height: 22rem;
     padding: 0 3rem;
     p {
       margin-top: 6.5rem;
+    }
+    &.detector {
+      .img_wrapper {
+        img {
+          width: 255px;
+          height: 170px;
+        }
+      }
+    }
+    &.femto {
+      .img_wrapper {
+        img {
+          width: 183px;
+          height: 170px;
+        }
+        margin-top: 2rem;
+      }
     }
   }
   .small {
@@ -243,26 +260,40 @@
     &.granat {
       .img_wrapper {
         margin-top: 7rem;
+        img {
+          width: 131px;
+          height: 132px;
+        }
       }
+
     }
 
     &.qrate {
       .img_wrapper {
         margin-top: 8rem;
+        img {
+          width: 275px;
+          height: 113px;
+        }
       }
     }
 
     &.dephan {
       .img_wrapper {
         margin-top: 5rem;
+        img {
+          width: 200px;
+          height: 139px;
+        }
       }
     }
   }
 
   .product {
-    background-color: #F7F9FB;
+    background-color: white;
     color: #040303;
     position: relative;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 
     p {
       font-size: 2.2rem;
@@ -278,7 +309,7 @@
   .img_wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
   }
 }
 
