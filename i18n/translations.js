@@ -66,12 +66,17 @@ export const translations = {
       "все научные группы": "all groups",
       "Участники группы": "Team members",
       "Фемтосекундный лазер": "Femtosecond laser",
-      "Магнитометр": "Magnetocardiograph",
+      "Магнитометр": "Magnetometer",
       "Твердотельный фотоумножитель": "Solid-state photomultiplier",
       "Научные группы РКЦ": "RQC Science groups",
       "Лектор": "Lecturer", 
       "Когда": "When",
-      "Где": "Where"
+      "Где": "Where",
+      "коллоквиум": "colloquium",
+      "лекция": "lecture",
+      "чемпионат":"championship",
+      "конференция": "conference",
+      "все мероприятия": "all events"
    }
 }
 

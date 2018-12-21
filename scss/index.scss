@@ -7,7 +7,6 @@ $column-gap: 1.5rem;
 
 // components
 @import './button.scss';
-@import './card.scss';
 @import './newscard.scss';
 @import './loading.scss';
 @import './persona.scss';
@@ -28,7 +27,7 @@ $column-gap: 1.5rem;
 @import './videopage.scss';
 @import './research.scss';
 @import './event.scss';
-
+@import './events.scss';
 
 
 //import other files here
@@ -47,7 +46,16 @@ html {
     font-size: 62.5%;
 }
 
-.peoplepage, .photo-gallery-page, .aboutpage, .media-kit-page, .newspage, .evaluation-reports-page, .teampage, .video-page, .research-page {
+.peoplepage, 
+.photo-gallery-page, 
+.aboutpage, 
+.media-kit-page, 
+.newspage, 
+.evaluation-reports-page, 
+.teampage, 
+.video-page, 
+.research-page,
+.eventspage {
     padding: 6rem 0;
 }
 

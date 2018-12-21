@@ -5,11 +5,15 @@ import moment from 'moment'
 import 'moment/locale/ru'
 import Link from 'next/link'
 
-moment.locale('ru')
 
 export const NewscardMedium = (props) => {
-
+  
   const { article } = props
+
+    if (article.lang === "ru") {
+      moment.locale('ru')
+    } else moment.locale('en')
+    
   const back = {background: "url(" + article.data.cover.thumbnail8.url + ")",backgroundSize:"cover"}
 
   const tags = article.tags.map((item, index) =>

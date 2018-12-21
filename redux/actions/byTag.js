@@ -13,11 +13,11 @@ const fetchArticlesByTagFailure = (tag, error) => ({ type: action_types.FETCH_AR
 export const fetchArticlesByTag = (tag, quantity) => (dispatch) => {
   dispatch(fetchArticlesByTagRequest(tag));
   return Prismic.getApi(PrismicConfig.apiEndpoint)
-    .then(api => {api.query(Prismic.Predicates.at('document.tags', [tag]),
+    .then(api => {api.query([Prismic.Predicates.at('document.type', 'news'),
+                             Prismic.Predicates.at('document.tags', [tag])],
                                                   { lang: "*",
                                                     pageSize : quantity,
                                                     orderings : '[my.news.manual_date_of_publication desc]' })
-
                       .then(response => dispatch(fetchArticlesByTagSuccess(tag, response)))
                       .catch(error => dispatch(fetchArticlesByTagFailure(tag, error)))
           })

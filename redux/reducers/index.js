@@ -15,6 +15,8 @@ import { video } from './video'
 import { scigroups } from './scigroups'
 import { research } from './research'
 import { event } from './event'
+import { events } from './events'
+import { eventsbyTag } from './eventsbyTag'
 import { i18nState } from "redux-i18n"
 
 const rootReducer = combineReducers({
@@ -34,7 +36,9 @@ const rootReducer = combineReducers({
   video, 
   scigroups, 
   research,
-  event
+  event, 
+  events, 
+  eventsbyTag
 });
 
 export default rootReducer

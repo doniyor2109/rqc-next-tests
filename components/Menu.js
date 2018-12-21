@@ -100,11 +100,11 @@ const Menu = [
     url: "/news",
     children: []
   },
-  // {
-  //   name: "Мероприятия",
-  //   url: "/events",
-  //   children: []
-  // }
+  {
+    name: "Мероприятия",
+    url: "/events",
+    children: []
+  }
 ];
 
 export default Menu;

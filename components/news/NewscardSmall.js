@@ -6,11 +6,14 @@ import 'moment/locale/ru';
 import Link from 'next/link'
 
 
-moment.locale('ru');
-
 export const NewscardSmall = (props) => {
-
+  
   const { article } = props
+
+    if (article.lang === "ru") {
+      moment.locale('ru')
+    } else moment.locale('en')
+    
   const back = {background: "url(" + article.data.cover.thumbnail4.url + ")",backgroundSize:"cover"}
 
   const tags = article.tags.map((item, index) =>

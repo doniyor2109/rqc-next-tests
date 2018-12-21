@@ -108,6 +108,8 @@
         }
     
     .when, .where, .fee {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
         p {
             font-size: 1.6rem;
             line-height: 2.2rem;
@@ -115,6 +117,7 @@
         border-top: 1px solid rgba(4,3,3,0.5);
         padding: 2rem 0;
     }
+
     .event-info {
         h1 {
             font-size: 2.2rem;

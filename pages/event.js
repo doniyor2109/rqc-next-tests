@@ -19,9 +19,11 @@ import EventHero from '../components/event/EventHero'
 
 // other libraries
 import Prismic from 'prismic-javascript'
-import { RichText, Link } from 'prismic-reactjs';
+import { RichText, Link, Date } from 'prismic-reactjs';
 import PrismicConfig from '../prismic-configuration';
 import hostName from '../host'
+import moment from 'moment'
+import 'moment/locale/ru'
 
 class Event extends Component {
 
@@ -64,7 +66,19 @@ class Event extends Component {
 
     const { event, phone, tablet } = this.props
     console.log("event", this.props)
+
+    if (this.props.lang === "ru") {
+      moment.locale('ru')
+    } else moment.locale('en')
   
+
+    // если мероприятие идет несколько дней, то разбираем объект Date на части
+    // и составляем сложную дату вида July 15-19, 2019
+    const date_start_end = moment(Date(event.item.data.start_date_time)).format('MMMM') + " " + 
+                           moment(Date(event.item.data.start_date_time)).format('DD') + "-" +
+                           moment(Date(event.item.data.end_date)).format('DD') + ", " + 
+                           moment(Date(event.item.data.start_date_time)).format('YYYY')
+    const date = event.item.data.end_date ? date_start_end : moment(Date(event.item.data.start_date_time)).format('LL') 
 
     return (
       <div className="event-page">
@@ -137,8 +151,8 @@ class Event extends Component {
                             {this.context.t("Когда")}:
                           </b>
                         </p>
-                        {RichText.render(event.item.data.date, PrismicConfig.linkResolver)}
-                        {RichText.render(event.item.data.time, PrismicConfig.linkResolver)}
+                        {date}<br />
+                        {moment(Date(event.item.data.start_date_time)).format('HH:mm a')}                     
                       </div>
                       <div className="where">
                         <p>

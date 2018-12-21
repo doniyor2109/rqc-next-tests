@@ -1,0 +1,111 @@
+.eventspage {
+    .event-card {
+        height:42rem;
+        position: relative;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        color: white;
+
+        .tags {
+            display: flex;   
+            margin-bottom: 0;     
+            p {
+              display:inline;
+              font-size: 1rem;
+              font-weight: bold;
+              color: white;
+              text-transform: uppercase;
+              border: 1px solid white;
+              padding: 0.4rem 0.8rem;
+              margin-right: 1.6rem;
+              align-self: flex-start;
+            }
+        }
+
+        .additional {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            font-weight: bold;
+        }
+
+        .description {
+            font-size: 1.6rem;
+            line-height: 2.3rem;
+            margin-top: 2.2rem;
+        }
+
+        .event-date {
+            color:white;
+            position: absolute;
+            border-top: 2px solid white;
+            width:13rem;
+            padding-top: 1rem;
+            bottom: 2rem;
+            margin: 0;
+        }
+
+        &.large {
+            h1 {
+                font-size: 3.2rem;
+                line-height: 4rem;
+                font-weight: bold;
+                color: white;
+                margin-top: 1rem;
+            }
+            .additional {
+                margin-top:4.5rem;
+            }
+        }
+
+        &.small {
+
+            h1 {
+                font-size: 2.2rem;
+                line-height: 2.5rem;
+                font-weight: bold;
+                margin-top: 2rem;
+            }
+            .additional {
+                margin-top: 6rem;
+            }
+        }
+    }
+}
+
+
+// ------------------ IPAD --------------------
+
+
+@media screen and (max-width: 768px) {
+
+
+  }
+  
+  // ------------------ SMARTPHONE --------------------
+  
+  
+  @media screen and (max-width: 415px) {
+  
+
+    .eventspage {
+
+        .event-card {
+
+            &.small {
+                h1 {
+
+                    margin-top: 1rem;
+                }
+            }
+
+            .description {
+                font-size: 1.4rem;
+                line-height: 1.8rem;
+            }
+
+        }
+
+    }
+  
+  }
