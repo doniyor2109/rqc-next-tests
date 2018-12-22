@@ -43,7 +43,7 @@ class Video extends React.Component {
 
         reduxStore.dispatch(fetchVideoByUidRequest(uid))
         const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
-        await api.query(Prismic.Predicates.at('my.mediakit_video.uid', uid), { lang : language })
+        await api.query(Prismic.Predicates.at('my.mediakit_video.uid', uid), { lang : "*" })
                  .then(response => {
                    reduxStore.dispatch(fetchVideoByUidSuccess(uid, response))
                   })
