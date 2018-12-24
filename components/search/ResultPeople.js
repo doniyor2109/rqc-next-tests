@@ -5,31 +5,23 @@ import { RichText } from 'prismic-reactjs'
 import PrismicConfig from '../../prismic-configuration'
 import searchComplex from './searchComplex'
 
-const ResultTeam = (props, context) => {
+const ResultPeople = (props, context) => {
 
     const {item, search_text} = props
-    // var now = require("performance-now")
-    // var start = now()
     const result = searchComplex([],item.data, search_text)
-    // var end = now()
-    // console.log("searchComplex took ", (start-end).toFixed(3)) // ~ 0.002 on my system
-    // result = searchComplex(item.data, search_text)
     console.log("RES for ", item.uid, " and search_text " , search_text, " is – ", result)
 
-
-
         return (
-                    <div className="result result-team">
-                        <Link href={'/team?uid=' + item.uid} as={'/team/' + item.uid}>
+                    <div className="result result-people">
+                        <Link href='/people'>
                             <a> 
-                                {context.t("Группа")}&nbsp; 
-                                {RichText.render(item.data.groupname, PrismicConfig.linkResolver)}
+                                {context.t("Люди")}
                             </a>
                         </Link>
                         <p className="highlighted">
                             {(result.length > 0) && result[0].highlight.map((res, index) => 
                                                         <span key={index} className={index === 1 ? "bold" : "normal"}>
-                                                            {res}
+                                                            {index === 2 ? res.slice(-3,0) : res}
                                                         </span>
                                         )
                             }
@@ -38,8 +30,8 @@ const ResultTeam = (props, context) => {
     ) 
 }
 
-ResultTeam.contextTypes = {
+ResultPeople.contextTypes = {
     t: PropTypes.func
   }
 
-export default ResultTeam
+export default ResultPeople

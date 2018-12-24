@@ -101,7 +101,7 @@ class Index extends React.Component {
     const { phone, tablet } = this.props
     const { mainSlider, sciSlider, isFetchingMain, isFetchingSci, newsTeaser } = this.props.main
 
-    console.log("main", this.props)
+    // console.log("main", this.props)
     if (!this.state.DOMLoaded) return <Loading />
     else 
     return (

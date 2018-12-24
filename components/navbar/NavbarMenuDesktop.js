@@ -10,7 +10,7 @@ const handleClick = (switchLanguage, lang, e) => {
 }
 
 const NavbarMenuDesktop = (props, context) => {
-  const { Menu, withSlider, switchLanguage, currentLanguage } = props
+  const { Menu, withSlider, switchLanguage, currentLanguage, searchClick } = props
   const items = Menu.map((item, key) =>
 
     <Link href={item.url} key={key} prefetch>
@@ -27,10 +27,13 @@ const NavbarMenuDesktop = (props, context) => {
           </div>
           <div className="navbar-end">
 
-            {/* Поиск
-            <button className={(withSlider ? "is-white opacity080" : "is-black opacity050") + " navbar-item"}>
+            {/* Поиск */}
+            <button className={(withSlider ? "is-white opacity080" : "is-black opacity050") + " navbar-item"} 
+                    onClick={e => {searchClick(e)}}>
               <img src={withSlider ? "/static/search_white.svg" : "/static/search_gray.svg"} alt="Поиск по сайту" />
-            </button> */}
+            </button> 
+
+
             <Social withSlider={withSlider}/>
             <div className="navbar-item has-dropdown is-hoverable">
               <button className={(withSlider ? "is-white opacity080" : "is-black") + " navbar-link"}>

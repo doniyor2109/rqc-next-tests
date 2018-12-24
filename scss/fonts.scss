@@ -38,3 +38,12 @@
 	font-weight: 300;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'DIN Pro';
+	src: url('./fonts/DINPro-Italic.eot');
+	src: url('./fonts/DINPro-Italic.eot?#iefix') format('embedded-opentype'), url('./fonts/DINPro-Italic.woff') format('woff'), url('./fonts/DINPro-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+

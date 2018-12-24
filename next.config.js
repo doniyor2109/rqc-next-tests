@@ -24,6 +24,9 @@ module.exports = withSass({
             }
           }
         })
+        config.node = {
+          fs: 'empty'
+        }
         return config
       }
 })

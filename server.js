@@ -1,6 +1,5 @@
 const express = require('express')
 const next = require('next')
-
 const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -28,6 +27,10 @@ app.prepare()
 
     server.get('/event/:uid', (req, res) => {
       return app.render(req, res, '/event', { uid: req.params.uid })
+    })
+    
+    server.get('/search/:text', (req, res) => {
+      return app.render(req, res, '/search', { text: req.params.text })
     })
 
     server.get('*', (req, res) => {

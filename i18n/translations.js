@@ -76,7 +76,16 @@ export const translations = {
       "лекция": "lecture",
       "чемпионат":"championship",
       "конференция": "conference",
-      "все мероприятия": "all events"
+      "все мероприятия": "all events",
+      "Напишите ваш запрос": "Type your query",
+      "Руководители научных групп": "Leaders of science groups",
+      "все научные группы": "more science groups",
+      "Участники группы": "Team members",
+      "Фемтосекундный лазер": "Femtosecond laser",
+      "Магнитокардиограф": "Magnetocardiograph",
+      "Твердотельный фотоумножитель": "Solid-state photomultiplier",
+      "Результатов": "Results", 
+      "Успехи группы": "Group progress"
    }
 }
 

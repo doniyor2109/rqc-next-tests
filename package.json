@@ -16,6 +16,7 @@
     "express": "latest",
     "mobile-detect": "^1.4.3",
     "moment": "^2.22.2",
+    "natural": "^0.6.2",
     "next": "^7.0.2",
     "next-cookies": "^1.0.3",
     "node-sass": "^4.9.4",

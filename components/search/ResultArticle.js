@@ -5,7 +5,7 @@ import { RichText } from 'prismic-reactjs'
 import PrismicConfig from '../../prismic-configuration'
 import searchComplex from './searchComplex'
 
-const ResultTeam = (props, context) => {
+const ResultArticle = (props, context) => {
 
     const {item, search_text} = props
     // var now = require("performance-now")
@@ -19,27 +19,32 @@ const ResultTeam = (props, context) => {
 
 
         return (
-                    <div className="result result-team">
-                        <Link href={'/team?uid=' + item.uid} as={'/team/' + item.uid}>
+                    <div className="result result-article">
+                        <Link href={'/article?uid=' + item.uid} as={'/article/' + item.uid}>
                             <a> 
-                                {context.t("Группа")}&nbsp; 
-                                {RichText.render(item.data.groupname, PrismicConfig.linkResolver)}
+                                {RichText.render(item.data.title, PrismicConfig.linkResolver)}
                             </a>
                         </Link>
                         <p className="highlighted">
-                            {(result.length > 0) && result[0].highlight.map((res, index) => 
+                            {(result.length > 0) && result[0].key === "title" 
+                                ? result[1].highlight.map((res, index) => 
                                                         <span key={index} className={index === 1 ? "bold" : "normal"}>
                                                             {res}
                                                         </span>
                                         )
+                                : result[0].highlight.map((res, index) => 
+                                    <span key={index} className={index === 1 ? "bold" : "normal"}>
+                                        {res}
+                                    </span>
+                )
                             }
                         </p>
                     </div>
     ) 
 }
 
-ResultTeam.contextTypes = {
+ResultArticle.contextTypes = {
     t: PropTypes.func
   }
 
-export default ResultTeam
+export default ResultArticle

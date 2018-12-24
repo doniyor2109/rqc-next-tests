@@ -9,8 +9,9 @@ import CookieConsent from "../shared/CookieConsent"
 
 import * as langActions from '../../redux/actions/lang'
 
-import NavbarMenuMobile from './NavbarMenuMobile.js'
-import NavbarMenuDesktop from './NavbarMenuDesktop.js'
+import NavbarMenuMobile from './NavbarMenuMobile'
+import NavbarMenuDesktop from './NavbarMenuDesktop'
+import SearchPopup from './SearchPopup'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faChevronDown, faSearch } from '@fortawesome/free-solid-svg-icons'
@@ -24,7 +25,8 @@ class Nav extends Component {
     super(props)
     this.state = {
       DOMLoaded: false,
-      cookieConsent: this.props.cookieConsent
+      cookieConsent: this.props.cookieConsent, 
+      searchisActive: false
     }
   }
 
@@ -83,7 +85,12 @@ class Nav extends Component {
               </button>
             </div>
 
-            <NavbarMenuDesktop Menu={Menu} withSlider={withSlider} switchLanguage={switchLanguage} currentLanguage={this.props.lang}/>
+            <NavbarMenuDesktop Menu={Menu} 
+                               withSlider={withSlider} 
+                               switchLanguage={switchLanguage} 
+                               currentLanguage={this.props.lang}
+                               searchClick={this.searchClick}
+            />
 
           </div>
 
@@ -94,7 +101,12 @@ class Nav extends Component {
           />
 
       </nav>
-      </Fragment>
+      <div className="search-popup">
+        <SearchPopup close={this.searchClose} 
+                    active={this.state.searchisActive} 
+        />
+      </div>
+    </Fragment>
     )
   }
 
@@ -114,6 +126,19 @@ class Nav extends Component {
     document.cookie = "useragreedwithcookies=true"
     this.setState({
       cookieConsent: true
+    })
+  }
+
+  searchClick = (e) => {
+    e.preventDefault()
+    this.setState({
+      searchisActive: true
+    })
+  }
+
+  searchClose = (e) => {
+    this.setState({
+      searchisActive: false
     })
   }
 }
