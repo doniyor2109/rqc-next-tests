@@ -2,6 +2,7 @@ import React from 'react'
 import Popup from '../shared/Popup'
 import PropTypes from 'prop-types'
 import Router from 'next/router'
+import '../../scss/searchPopup.scss'
 
 
 class SearchPopup extends React.Component {

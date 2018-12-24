@@ -32,6 +32,10 @@ const natOptions = {
     substitution_cost: 1
 }
 
+const natOptions2 = {
+    search: true
+}
+
 // инициализируем tokenizer, функцию, которая разбивает поисковый запрос на слова
 var tokenizer = new natural.WordTokenizer()
 
@@ -60,7 +64,7 @@ const simpleSearch = (data, search_text) => {
 
 }
 
-const fuzzysearch = (data, search_text, requiredDistance, quality) => {
+const fuzzysearch = (data, search_text, requiredDistance, quality, options) => {
 
     // нечеткий поиск с помощью библиотеки natural по коэфф. Левенштейна
     // quality — это число, с помощью которого можно регулировать точность поиска, 
@@ -78,7 +82,7 @@ const fuzzysearch = (data, search_text, requiredDistance, quality) => {
     var pos = null
     var str = ""
 
-    const fuzzy = natural.LevenshteinDistance(search_text.toLowerCase(), data.text, natOptions)
+    const fuzzy = natural.LevenshteinDistance(search_text.toLowerCase(), data.text, options)
 
     if ((fuzzy.distance <= requiredDistance) && (searchArray[0].slice(0,(searchArray[0].length - quality)) === fuzzy.substring.toLowerCase().slice(0,(searchArray[0].length - quality)))) 
 
@@ -103,13 +107,11 @@ const searchComplex = (result, data, search_text) => {
                                  highlight: simpleSearch(element, search_text), 
                                  rank: 0})
                     result.push({key: key,
-                                highlight: fuzzysearch(element, search_text, 4, 2), 
-                                rank: 1})
-                    if (result.length === 0) {
-                        result.push({key: key,
-                            highlight: fuzzysearch(element, search_text, 6, 5), 
-                            rank: 2})
-                    }
+                                 highlight: fuzzysearch(element, search_text, 4, 2, natOptions), 
+                                 rank: 1})
+                    // result.push({key: key,
+                    //              highlight: fuzzysearch(element, search_text, 5, 4, natOptions2), 
+                    //              rank: 2})
                 }
                 else {
                     searchComplex(result, element, search_text)

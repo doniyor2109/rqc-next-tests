@@ -19,7 +19,7 @@ import ResultTeam from '../components/search/ResultTeam'
 import ResultArticle from '../components/search/ResultArticle'
 
 //other libraries
-
+import '../scss/searchpage.scss'
 
 class Search extends React.Component {
 

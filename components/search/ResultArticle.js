@@ -14,32 +14,32 @@ const ResultArticle = (props, context) => {
     // var end = now()
     // console.log("searchComplex took ", (start-end).toFixed(3)) // ~ 0.002 on my system
     // result = searchComplex(item.data, search_text)
-    console.log("RES for ", item.uid, " and search_text " , search_text, " is – ", result)
+    console.log("RES for ", item.uid, " and search_text " , search_text, " is – ", result, result.length > 0 )
 
-
-
-        return (
-                    <div className="result result-article">
-                        <Link href={'/article?uid=' + item.uid} as={'/article/' + item.uid}>
-                            <a> 
-                                {RichText.render(item.data.title, PrismicConfig.linkResolver)}
-                            </a>
-                        </Link>
-                        <p className="highlighted">
-                            {(result.length > 0) && result[0].key === "title" 
-                                ? result[1].highlight.map((res, index) => 
-                                                        <span key={index} className={index === 1 ? "bold" : "normal"}>
-                                                            {res}
-                                                        </span>
-                                        )
-                                : result[0].highlight.map((res, index) => 
-                                    <span key={index} className={index === 1 ? "bold" : "normal"}>
-                                        {res}
-                                    </span>
-                )
-                            }
-                        </p>
-                    </div>
+    return (
+        <div className="result result-article">
+            <Link href={'/article?uid=' + item.uid} as={'/article/' + item.uid}>
+                <a> 
+                    {RichText.render(item.data.title, PrismicConfig.linkResolver)}
+                </a>
+            </Link>
+            <p className="highlighted">
+                {(result.length > 0) && 
+                    (result[0].key === "title"
+                        ? result[1] && result[1].highlight.map((res, index) => 
+                                                <span key={index} className={index === 1 ? "bold" : "normal"}>
+                                                    {res}
+                                                </span>
+                                )
+                        : result && result[0].highlight.map((res, index) => 
+                            <span key={index} className={index === 1 ? "bold" : "normal"}>
+                                {res}
+                            </span>
+                                )
+                    )
+                }
+            </p>
+        </div>
     ) 
 }
 
