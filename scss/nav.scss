@@ -283,16 +283,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
         height: 2px;
         margin: 0.5rem 1.5rem;
     }
-  .mobile_search_container {
-    width: 100%;
-    padding-left: 2.5rem;
-  }
-  .mobile_search_container input {
-    font-size: 1.6rem;
-    color: #dbdbdb;
-    padding: 0 0 1rem 1rem;
-    border: 0;
-}
+  
 
   #navMenu {
     padding:5rem 0 0 0;
@@ -359,6 +350,19 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 
 @media (min-width: 320px) and (max-width: 415px){
 
+  .navbar {
+    .navbar-brand {
+      .navbar-item {
+        .mainlogo_ru {
+          width: 100%;
+        }
+        .mainlogo_en {
+          width: 100%;
+        }
+      }
+    }
+  }
+
   #navMenu {
       padding:0;
       margin-top: -8.7rem;
@@ -388,9 +392,35 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
   .dropdown-trigger svg {
     margin-top:0;
   }
+  
+
   .mobile_search_container {
     width: 100%;
-    padding-left: 1.5rem;
+    padding: 0 1.5rem;
+
+    input {
+      font-size: 1.6rem;
+      color: #555555;
+      padding: 0 0 1rem 1rem;
+      border: 0;
+      width:92%;
+      &:focus {
+        outline: 0;
+      }
+    }
+    #mobile-search-submit-button {
+      background: url('/static/search_button.svg');
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 0;
+      top: 4px;
+      position: relative;
+      cursor: pointer;
+      &:focus {
+          outline: 0;
+      }
+    }
+
   }
 
   .social {
