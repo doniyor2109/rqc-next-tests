@@ -82,7 +82,7 @@ const fuzzysearch = (data, search_text, requiredDistance, quality, options) => {
     var pos = null
     var str = ""
 
-    const fuzzy = natural.LevenshteinDistance(search_text.toLowerCase(), data.text, options)
+    const fuzzy = natural.LevenshteinDistance(search_text.toLowerCase(), data.text.toLowerCase(), options)
 
     if ((fuzzy.distance <= requiredDistance) && (searchArray[0].slice(0,(searchArray[0].length - quality)) === fuzzy.substring.toLowerCase().slice(0,(searchArray[0].length - quality)))) 
 
