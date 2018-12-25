@@ -5,7 +5,7 @@ import { RichText } from 'prismic-reactjs'
 import PrismicConfig from '../../prismic-configuration'
 import searchComplex from './searchComplex'
 
-const ResultTeam = (props, context) => {
+const ResultPhoto = (props, context) => {
 
     const {item, search_text} = props
     // var now = require("performance-now")
@@ -19,10 +19,10 @@ const ResultTeam = (props, context) => {
 
 
         return (
-                    <div className="result result-team">
-                        <Link href={'/team?uid=' + item.uid} as={'/team/' + item.uid}>
+                    <div className="result result-photo">
+                        <Link href={'/photo?uid=' + item.uid} as={'/photo/' + item.uid}>
                             <a> 
-                                {RichText.render(item.data.groupname, PrismicConfig.linkResolver)}
+                                {RichText.render(item.data.title, PrismicConfig.linkResolver)}
                             </a>
                         </Link>
                         <p className="highlighted">
@@ -37,8 +37,8 @@ const ResultTeam = (props, context) => {
     ) 
 }
 
-ResultTeam.contextTypes = {
+ResultPhoto.contextTypes = {
     t: PropTypes.func
   }
 
-export default ResultTeam
+export default ResultPhoto

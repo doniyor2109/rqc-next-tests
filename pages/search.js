@@ -16,7 +16,12 @@ import PrismicConfig from '../prismic-configuration'
 import SearchForm from '../components/search/SearchForm'
 import ResultPeople from '../components/search/ResultPeople'
 import ResultTeam from '../components/search/ResultTeam'
+import ResultTeamLeader from '../components/search/ResultTeamLeader'
 import ResultArticle from '../components/search/ResultArticle'
+import ResultEvent from '../components/search/ResultEvent'
+import ResultVacancy from '../components/search/ResultVacancy'
+import ResultPhoto from '../components/search/ResultPhoto'
+import ResultVideo from '../components/search/ResultVideo'
 
 //other libraries
 import '../scss/searchpage.scss'
@@ -31,10 +36,11 @@ class Search extends React.Component {
         const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
 
         await api.query([Prismic.Predicates.fulltext('document', text),
-                        //  Prismic.Predicates.not('document.type', 'about')
+                         Prismic.Predicates.not('document.type', 'about'),
+                         Prismic.Predicates.not('document.type', 'research')
                         ],
                         {lang : "*",
-                         fetchLinks : ['scientist.name', 'scientist.position' ], 
+                         fetchLinks : ['scientist.name', 'scientist.position', 'science_group.groupname', 'science_group.uid' ], 
                          pageSize : 100 
                         })
                  .then(response => reduxStore.dispatch(SearchSuccess(text, response)))
@@ -99,9 +105,9 @@ class Search extends React.Component {
                                     </b>
                                 </p>
                                 <p>
-                                    {this.context.t("О нас")}&nbsp;
+                                    {this.context.t("Вакансии")}&nbsp;
                                     <b>
-                                        ({this.props.search.results.filter(e => e.type === "about").length})
+                                        ({this.props.search.results.filter(e => e.type === "vacancy").length})
                                     </b>
                                 </p>
                                 <p>
@@ -113,7 +119,8 @@ class Search extends React.Component {
                                 <p>
                                     {this.context.t("Научные группы")}&nbsp;
                                     <b>
-                                        ({this.props.search.results.filter(e => e.type === "science_group").length})
+                                        ({this.props.search.results.filter(e => e.type === "science_group").length +
+                                          this.props.search.results.filter(e => e.type === "scientist").length})
                                     </b>
                                 </p>
                                 <p>
@@ -163,6 +170,26 @@ class Search extends React.Component {
                                                         />
                                             case "event": 
                                             return <ResultEvent item={result} 
+                                                                key={index} 
+                                                                search_text={this.props.search.text}
+                                                    />
+                                            case "vacancy": 
+                                            return <ResultVacancy item={result} 
+                                                                  key={index} 
+                                                                  search_text={this.props.search.text}
+                                                    />
+                                            case "mediakit_photo_gallery": 
+                                            return <ResultPhoto item={result} 
+                                                                    key={index} 
+                                                                    search_text={this.props.search.text}
+                                                    />
+                                            case "mediakit_video": 
+                                            return <ResultVideo item={result} 
+                                                                  key={index} 
+                                                                  search_text={this.props.search.text}
+                                                    />
+                                            case "scientist": 
+                                            return <ResultTeamLeader item={result} 
                                                                 key={index} 
                                                                 search_text={this.props.search.text}
                                                     />
