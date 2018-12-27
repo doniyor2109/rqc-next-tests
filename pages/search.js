@@ -59,7 +59,13 @@ class Search extends React.Component {
             searchtext: this.props.search.text,
             ResultTeam: 0,
             results: this.props.search.results, 
+            vac_cat: false,
+            people_cat: false,
             sci_cat: false,
+            news_cat: false,
+            event_cat: false,
+            photo_cat: false,
+            video_cat: false
         }
     }
 
@@ -101,14 +107,14 @@ class Search extends React.Component {
                                     </b>
                                 </p>
                                 <p className={this.state.vac_cat ? "cat is-active" : "cat"}
-                                    onClick={e => {this.catClick(e, "vac_cat", this.state.vac_cat, "science_group", "scientist")}}>
+                                    onClick={e => {this.catClick(e, "vac_cat", this.state.vac_cat, "vacancy")}}>
                                     {this.context.t("Вакансии")}&nbsp;
                                     <b>
                                         ({this.props.search.results.filter(e => e.type === "vacancy").length})
                                     </b>
                                 </p>
                                 <p className={this.state.people_cat ? "cat is-active" : "cat"}
-                                    onClick={e => {this.catClick(e, "people_cat", this.state.people_cat, "science_group", "scientist")}}>
+                                    onClick={e => {this.catClick(e, "people_cat", this.state.people_cat, "people")}}>
                                     {this.context.t("Люди")}&nbsp;
                                     <b>
                                         ({this.props.search.results.filter(e => e.type === "people").length})
@@ -123,28 +129,28 @@ class Search extends React.Component {
                                     </b>
                                 </p>
                                 <p className={this.state.news_cat ? "cat is-active" : "cat"}
-                                    onClick={e => {this.catClick(e, "news_cat", this.state.news_cat, "science_group", "scientist")}}>
+                                    onClick={e => {this.catClick(e, "news_cat", this.state.news_cat, "news")}}>
                                     {this.context.t("Новости")}&nbsp;
                                     <b>
                                         ({this.props.search.results.filter(e => e.type === "news").length})
                                     </b>
                                 </p>
                                 <p className={this.state.event_cat ? "cat is-active" : "cat"}
-                                    onClick={e => {this.catClick(e, "event_cat", this.state.event_cat, "science_group", "scientist")}}>
+                                    onClick={e => {this.catClick(e, "event_cat", this.state.event_cat, "event")}}>
                                     {this.context.t("Мероприятия")}&nbsp;
                                     <b>
                                         ({this.props.search.results.filter(e => e.type === "event").length})
                                     </b>
                                 </p>
                                 <p className={this.state.photo_cat ? "cat is-active" : "cat"}
-                                    onClick={e => {this.catClick(e, "photo_cat", this.state.photo_cat, "science_group", "scientist")}}>
+                                    onClick={e => {this.catClick(e, "photo_cat", this.state.photo_cat, "mediakit_photo_gallery")}}>
                                     {this.context.t("Фотогалереи")}&nbsp;
                                     <b>
                                         ({this.props.search.results.filter(e => e.type === "mediakit_photo_gallery").length})
                                     </b>
                                 </p>
                                 <p className={this.state.video_cat ? "cat is-active" : "cat"}
-                                    onClick={e => {this.catClick(e, "video_cat", this.state.video_cat, "science_group", "scientist")}}>
+                                    onClick={e => {this.catClick(e, "video_cat", this.state.video_cat, "mediakit_video")}}>
                                     {this.context.t("Видео")}&nbsp;
                                     <b>
                                         ({this.props.search.results.filter(e => e.type === "mediakit_video").length})
