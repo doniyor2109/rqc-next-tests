@@ -78,14 +78,11 @@ export const translations = {
       "конференция": "conference",
       "все мероприятия": "all events",
       "Напишите ваш запрос": "Type your query",
-      "Руководители научных групп": "Leaders of science groups",
-      "все научные группы": "more science groups",
-      "Участники группы": "Team members",
-      "Фемтосекундный лазер": "Femtosecond laser",
-      "Магнитокардиограф": "Magnetocardiograph",
-      "Твердотельный фотоумножитель": "Solid-state photomultiplier",
       "Результатов": "Results", 
-      "Успехи группы": "Group progress"
+      "Успехи группы": "Group progress", 
+      "Разделы": "Categories",
+      "Вакансии": "Vacancies", 
+
    }
 }
 
