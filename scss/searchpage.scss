@@ -38,8 +38,21 @@
         p {
             font-size: 1.4rem;
             line-height: 1.8rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
         }
+        .cat {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            padding: 10px 0;
+            &.is-active {
+                border: 1px solid rgba(53, 53, 53, 0.5);
+                padding: 10px 12px;
+                
+            }
+        }
+
     }
     .count {
         font-size: 1.4rem;

@@ -109,9 +109,9 @@ const searchComplex = (result, data, search_text) => {
                     result.push({key: key,
                                  highlight: fuzzysearch(element, search_text, 4, 2, natOptions), 
                                  rank: 1})
-                    // result.push({key: key,
-                    //              highlight: fuzzysearch(element, search_text, 5, 4, natOptions2), 
-                    //              rank: 2})
+                    result.push({key: key,
+                                 highlight: fuzzysearch(element, search_text, 5, 4, natOptions2), 
+                                 rank: 2})
                 }
                 else {
                     searchComplex(result, element, search_text)

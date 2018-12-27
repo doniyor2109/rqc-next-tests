@@ -33,13 +33,13 @@ class Search extends React.Component {
         const {reduxStore, query: { text }} = ctx
         
         reduxStore.dispatch(SearchRequest(text))
+        var lang = /[а-яА-ЯЁё]/.test(text) ? "ru" : "en-gb"
         const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
-
         await api.query([Prismic.Predicates.fulltext('document', text),
                          Prismic.Predicates.not('document.type', 'about'),
                          Prismic.Predicates.not('document.type', 'research')
                         ],
-                        {lang : "*",
+                        {lang : lang,
                          fetchLinks : ['scientist.name', 'scientist.position', 'science_group.groupname', 'science_group.uid' ], 
                          pageSize : 100 
                         })
@@ -58,7 +58,8 @@ class Search extends React.Component {
         this.state = {
             searchtext: this.props.search.text,
             ResultTeam: 0,
-            results: this.props.search.results
+            results: this.props.search.results, 
+            sci_cat: false,
         }
     }
 
@@ -71,17 +72,12 @@ class Search extends React.Component {
             })
         }
 
-
-        // обработка смены языка
-        // if (this.props.lang !== prevProps.lang) {
-        //   this.props.fetchAbout(this.props.lang)
-        // }
     
       }
 
     render() {
 
-        const { text } = this.props
+        const { text } = this.props.search
         console.log("search", this.props)
 
         return (
@@ -104,44 +100,51 @@ class Search extends React.Component {
                                         {this.context.t("Разделы")}:
                                     </b>
                                 </p>
-                                <p>
+                                <p className={this.state.vac_cat ? "cat is-active" : "cat"}
+                                    onClick={e => {this.catClick(e, "vac_cat", this.state.vac_cat, "science_group", "scientist")}}>
                                     {this.context.t("Вакансии")}&nbsp;
                                     <b>
                                         ({this.props.search.results.filter(e => e.type === "vacancy").length})
                                     </b>
                                 </p>
-                                <p>
+                                <p className={this.state.people_cat ? "cat is-active" : "cat"}
+                                    onClick={e => {this.catClick(e, "people_cat", this.state.people_cat, "science_group", "scientist")}}>
                                     {this.context.t("Люди")}&nbsp;
                                     <b>
                                         ({this.props.search.results.filter(e => e.type === "people").length})
                                     </b>
                                 </p>
-                                <p>
-                                    {this.context.t("Научные группы")}&nbsp;
+                                <p  className={this.state.sci_cat ? "cat is-active" : "cat"} 
+                                    onClick={e => {this.catClick(e, "sci_cat", this.state.sci_cat, "science_group", "scientist")}}>
+                                        {this.context.t("Научные группы")}&nbsp;
                                     <b>
                                         ({this.props.search.results.filter(e => e.type === "science_group").length +
                                           this.props.search.results.filter(e => e.type === "scientist").length})
                                     </b>
                                 </p>
-                                <p>
+                                <p className={this.state.news_cat ? "cat is-active" : "cat"}
+                                    onClick={e => {this.catClick(e, "news_cat", this.state.news_cat, "science_group", "scientist")}}>
                                     {this.context.t("Новости")}&nbsp;
                                     <b>
                                         ({this.props.search.results.filter(e => e.type === "news").length})
                                     </b>
                                 </p>
-                                <p>
+                                <p className={this.state.event_cat ? "cat is-active" : "cat"}
+                                    onClick={e => {this.catClick(e, "event_cat", this.state.event_cat, "science_group", "scientist")}}>
                                     {this.context.t("Мероприятия")}&nbsp;
                                     <b>
                                         ({this.props.search.results.filter(e => e.type === "event").length})
                                     </b>
                                 </p>
-                                <p>
+                                <p className={this.state.photo_cat ? "cat is-active" : "cat"}
+                                    onClick={e => {this.catClick(e, "photo_cat", this.state.photo_cat, "science_group", "scientist")}}>
                                     {this.context.t("Фотогалереи")}&nbsp;
                                     <b>
                                         ({this.props.search.results.filter(e => e.type === "mediakit_photo_gallery").length})
                                     </b>
                                 </p>
-                                <p>
+                                <p className={this.state.video_cat ? "cat is-active" : "cat"}
+                                    onClick={e => {this.catClick(e, "video_cat", this.state.video_cat, "science_group", "scientist")}}>
                                     {this.context.t("Видео")}&nbsp;
                                     <b>
                                         ({this.props.search.results.filter(e => e.type === "mediakit_video").length})
@@ -206,6 +209,28 @@ class Search extends React.Component {
                 </div>
             </div>
         )
+    }
+
+    catClick = (e, cat, cat_state, type1, type2) => {
+        console.log("cat clicked")
+        e.preventDefault()
+        if (cat_state === false) {
+            this.setState({
+                [cat]: !cat_state,
+                results: this.state.results.filter(e => (e.type === type1 || e.type === type2)),
+                filtered: JSON.parse(JSON.stringify(this.state.results.filter(e => (e.type !== type1 && e.type !== type2))))
+            })
+        } 
+        else if (cat_state === true) {
+            this.state.filtered.map(el => 
+                this.setState(prevState => ({
+                    results: [...prevState.results, el]
+                  }))
+                )
+            this.setState({
+                [cat]: !cat_state,
+            })
+        }
     }
     
 }
