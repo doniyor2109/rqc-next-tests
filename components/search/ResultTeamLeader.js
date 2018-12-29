@@ -9,7 +9,6 @@ const ResultTeamLeader = (props, context) => {
 
     const {item, search_text} = props
     const result = searchComplex([],item.data, search_text)
-    console.log("RES for ", item.uid, " and search_text " , search_text, " is – ", result)
     return (
         <div className="result result-team-leader">
             <Link href={'/team?uid=' + item.data.science_group.uid} as={'/team/' + item.data.science_group.uid}>

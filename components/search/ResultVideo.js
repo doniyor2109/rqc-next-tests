@@ -14,7 +14,6 @@ const ResultVideo = (props, context) => {
     // var end = now()
     // console.log("searchComplex took ", (start-end).toFixed(3)) // ~ 0.002 on my system
     // result = searchComplex(item.data, search_text)
-    console.log("RES for ", item.uid, " and search_text " , search_text, " is – ", result)
 
 
 

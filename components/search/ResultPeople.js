@@ -9,7 +9,7 @@ const ResultPeople = (props, context) => {
 
     const {item, search_text} = props
     const result = searchComplex([],item.data, search_text)
-    console.log("RES for ", item, " and search_text " , search_text, " is – ", result)
+    // console.log("RES for ", item, " and search_text " , search_text, " is – ", result)
 
         return (
                     <div className="result result-people">

@@ -9,7 +9,6 @@ const ResultEvent = (props, context) => {
 
     const {item, search_text} = props
     const result = searchComplex([],item.data, search_text)
-    console.log("RES for ", item.uid, " and search_text " , search_text, " is – ", result)
     return (
         <div className="result result-event">
             <Link href={'/event?uid=' + item.uid} as={'/event/' + item.uid}>

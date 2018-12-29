@@ -14,14 +14,8 @@ import { Loading } from '../components/shared/loading'
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../prismic-configuration'
 import SearchForm from '../components/search/SearchForm'
-import ResultPeople from '../components/search/ResultPeople'
-import ResultTeam from '../components/search/ResultTeam'
-import ResultTeamLeader from '../components/search/ResultTeamLeader'
-import ResultArticle from '../components/search/ResultArticle'
-import ResultEvent from '../components/search/ResultEvent'
-import ResultVacancy from '../components/search/ResultVacancy'
-import ResultPhoto from '../components/search/ResultPhoto'
-import ResultVideo from '../components/search/ResultVideo'
+import Results from '../components/search/Results'
+
 
 //other libraries
 import '../scss/searchpage.scss'
@@ -37,7 +31,8 @@ class Search extends React.Component {
         const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
         await api.query([Prismic.Predicates.fulltext('document', text),
                          Prismic.Predicates.not('document.type', 'about'),
-                         Prismic.Predicates.not('document.type', 'research')
+                         Prismic.Predicates.not('document.type', 'research'),
+                         Prismic.Predicates.not('document.type', 'main')
                         ],
                         {lang : lang,
                          fetchLinks : ['scientist.name', 'scientist.position', 'science_group.groupname', 'science_group.uid' ], 
@@ -57,34 +52,39 @@ class Search extends React.Component {
         super(props) 
         this.state = {
             searchtext: this.props.search.text,
-            ResultTeam: 0,
-            results: this.props.search.results, 
+            results: [], 
             vac_cat: false,
             people_cat: false,
             sci_cat: false,
             news_cat: false,
             event_cat: false,
             photo_cat: false,
-            video_cat: false
+            video_cat: false, 
+            filtersOn: false
         }
     }
 
 
-    componentDidUpdate(prevProps) {
+    componentDidUpdate(prevProps, prevState) {
 
-        if(this.props.search.results !== prevProps.search.results) {
-            this.setState({
-                results: this.props.search.results
-            })
-        }
+        if(prevState.vac_cat !== this.state.vac_cat || 
+            prevState.people_cat !== this.state.people_cat || 
+            prevState.sci_cat !== this.state.sci_cat || 
+            prevState.news_cat !== this.state.news_cat || 
+            prevState.event_cat !== this.state.event_cat || 
+            prevState.photo_cat !== this.state.photo_cat ||
+            prevState.video_cat !== this.state.video_cat ) {
+                this.setState({
+                    filtersOn: this.state.vac_cat || this.state.people_cat || this.state.sci_cat || this.state.news_cat || this.state.event_cat || this.state.photo_cat || this.state.video_cat
+                })
+            }
 
-    
-      }
+    }
 
     render() {
 
         const { text } = this.props.search
-        console.log("search", this.props)
+        // console.log("search", this.props)
 
         return (
             <div className="search-page">
@@ -160,50 +160,20 @@ class Search extends React.Component {
                         </div>
                         <div className="column is-8-desktop">
                             <div className="search-results">
-                                {this.state.results.map((result, index) => {
-                                        switch (result.type) {
-                                            case "people": 
-                                                return <ResultPeople item={result} 
-                                                                     key={index} 
-                                                                     search_text={this.props.search.text}
-                                                        />
-                                            case "science_group": 
-                                                return <ResultTeam item={result} 
-                                                                   key={index} 
-                                                                   search_text={this.props.search.text}
-                                                        />
-                                            case "news": 
-                                                return <ResultArticle item={result} 
-                                                                      key={index} 
-                                                                      search_text={this.props.search.text}
-                                                        />
-                                            case "event": 
-                                            return <ResultEvent item={result} 
-                                                                key={index} 
-                                                                search_text={this.props.search.text}
-                                                    />
-                                            case "vacancy": 
-                                            return <ResultVacancy item={result} 
-                                                                  key={index} 
-                                                                  search_text={this.props.search.text}
-                                                    />
-                                            case "mediakit_photo_gallery": 
-                                            return <ResultPhoto item={result} 
-                                                                    key={index} 
-                                                                    search_text={this.props.search.text}
-                                                    />
-                                            case "mediakit_video": 
-                                            return <ResultVideo item={result} 
-                                                                  key={index} 
-                                                                  search_text={this.props.search.text}
-                                                    />
-                                            case "scientist": 
-                                            return <ResultTeamLeader item={result} 
-                                                                key={index} 
-                                                                search_text={this.props.search.text}
-                                                    />
-                                        }
-                                    })
+                                {this.state.filtersOn 
+                                ? this.state.results.map((result, index) => <Results result={result} 
+                                                                                     index={index} 
+                                                                                     key={index}
+                                                                                     search_text={this.props.search.text}
+                                                                            />)
+                                : this.props.search.results.map((result, index) => <Results result={result} 
+                                                                                     index={index} 
+                                                                                     key={index}
+                                                                                     search_text={this.props.search.text}
+                                                                            />)
+                                
+                            }
+                                {
                                 }
                             </div>
                             <div className="more_results">
@@ -218,24 +188,21 @@ class Search extends React.Component {
     }
 
     catClick = (e, cat, cat_state, type1, type2) => {
-        console.log("cat clicked")
         e.preventDefault()
         if (cat_state === false) {
             this.setState({
                 [cat]: !cat_state,
-                results: this.state.results.filter(e => (e.type === type1 || e.type === type2)),
-                filtered: JSON.parse(JSON.stringify(this.state.results.filter(e => (e.type !== type1 && e.type !== type2))))
+                results: this.state.results.concat(this.props.search.results.filter(e => ((e.type === type1) || (e.type === type2))))
             })
+            console.log("state is", this.state)
         } 
         else if (cat_state === true) {
-            this.state.filtered.map(el => 
-                this.setState(prevState => ({
-                    results: [...prevState.results, el]
-                  }))
-                )
             this.setState({
                 [cat]: !cat_state,
+                results: this.state.results.filter(e => (e.type !== type1 || type2)),
             })
+            console.log("test 1", type1 ===  this.state.results[0].type, "\ntest 2", type1 ===  this.state.results[0].type || type2 ===  this.state.results[0].type,"type1", type1, " type2", type2, "\n, state.results.type", this.state.results[0].type, "state filter", this.state.results.filter(e => ((e.type !== type1) || (e.type !== type2))))
+            console.log("state is", this.state)
         }
     }
     
