@@ -124,6 +124,13 @@
                 display: inline-block;
                 margin-right: 3rem;
             }
+            .cat {
+                &.is-active {
+                    b::after, strong::after {
+                        margin-left: 0.5rem;
+                    }
+                }
+            }
         }
     }  
 }
