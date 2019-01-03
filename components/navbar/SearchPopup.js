@@ -52,7 +52,9 @@ class SearchPopup extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        Router.push('/search?text=' + this.state.value, '/search/' + this.state.value)
+        if (this.state.value.length) {
+            Router.push('/search?text=' + this.state.value, '/search/' + this.state.value)
+        }
     }
 
     

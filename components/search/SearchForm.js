@@ -30,7 +30,9 @@ class SearchForm extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        Router.push('/search?text=' + this.state.searchtext, '/search/' + this.state.searchtext)
+        if (this.state.searchtext.length) {
+            Router.push('/search?text=' + this.state.searchtext, '/search/' + this.state.searchtext)
+        }
     }
 }
 

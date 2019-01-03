@@ -60,7 +60,8 @@ class Search extends React.Component {
             event_cat: false,
             photo_cat: false,
             video_cat: false, 
-            filtersOn: false
+            filtersOn: false, 
+            more_results: 6
         }
     }
 
@@ -84,7 +85,7 @@ class Search extends React.Component {
     render() {
 
         const { text } = this.props.search
-        // console.log("search", this.props)
+        console.log("search", this.props)
 
         return (
             <div className="search-page">
@@ -99,7 +100,7 @@ class Search extends React.Component {
                     </div>
 
                     <div className="columns">
-                        <div className="column is-2-desktop is-offset-1-desktop is-2-tablet is-12-mobile">
+                        <div className="column is-2-desktop is-offset-1-desktop is-3-tablet is-12-mobile">
                             <div className="categories">
                                 <p>
                                     <b>
@@ -161,25 +162,25 @@ class Search extends React.Component {
                         <div className="column is-8-desktop">
                             <div className="search-results">
                                 {this.state.filtersOn 
-                                ? this.state.results.map((result, index) => <Results result={result} 
+                                ? this.state.results.slice(0, this.state.more_results).map((result, index) => <Results result={result} 
                                                                                      index={index} 
                                                                                      key={index}
                                                                                      search_text={this.props.search.text}
                                                                             />)
-                                : this.props.search.results.map((result, index) => <Results result={result} 
+                                : this.props.search.results.slice(0, this.state.more_results).map((result, index) => <Results result={result} 
                                                                                      index={index} 
                                                                                      key={index}
                                                                                      search_text={this.props.search.text}
                                                                             />)
                                 
                             }
-                                {
-                                }
                             </div>
+                            {(this.state.more_results < this.props.search.results.length) &&
                             <div className="more_results">
                                 <hr />
                                 <img className="more" alt="show more news" onClick={e => {this.give_me_more_results(e)}} src="/static/more.svg" />
                             </div>
+                            }
                         </div>
                     </div>
                 </div>
@@ -192,18 +193,23 @@ class Search extends React.Component {
         if (cat_state === false) {
             this.setState({
                 [cat]: !cat_state,
-                results: this.state.results.concat(this.props.search.results.filter(e => ((e.type === type1) || (e.type === type2))))
+                results: this.state.results.concat(this.props.search.results.filter(e => ((e.type === type1) || (e.type === type2)))),
+                more_results: 6
             })
-            console.log("state is", this.state)
         } 
         else if (cat_state === true) {
             this.setState({
                 [cat]: !cat_state,
-                results: this.state.results.filter(e => (e.type !== type1 || type2)),
+                results: this.state.results.filter(e => ((e.type !== type1) && (e.type !== type2))),
             })
-            console.log("test 1", type1 ===  this.state.results[0].type, "\ntest 2", type1 ===  this.state.results[0].type || type2 ===  this.state.results[0].type,"type1", type1, " type2", type2, "\n, state.results.type", this.state.results[0].type, "state filter", this.state.results.filter(e => ((e.type !== type1) || (e.type !== type2))))
-            console.log("state is", this.state)
+
         }
+    }
+
+    give_me_more_results = (e) => {
+        this.setState({
+            more_results: this.state.more_results + 6
+        })
     }
     
 }
