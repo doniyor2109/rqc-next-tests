@@ -179,7 +179,7 @@ class Index extends React.Component {
         <section className="sci-slider">
           <div className="container">
             <a className="main-category">
-              {this.context.t("Руководители научных групп")}
+              {this.context.t("Лица")}
             </a>
             <Link href="/research">
               <a className="main-category-link">

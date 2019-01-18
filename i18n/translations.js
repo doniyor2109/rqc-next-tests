@@ -82,7 +82,7 @@ export const translations = {
       "Успехи группы": "Group progress", 
       "Разделы": "Categories",
       "Вакансии": "Vacancies", 
-
+      "Лица": "Personalities"
    }
 }
 
