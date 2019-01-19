@@ -11,13 +11,14 @@ import cookies from 'next-cookies'
 //actions
 import * as aboutActions from '../redux/actions/about'
 import * as langActions from '../redux/actions/lang'
-import { fetchAbout, fetchAboutRequest, fetchAboutSuccess, fetchAboutError } from '../redux/actions/about'
+import { fetchAboutRequest, fetchAboutSuccess, fetchAboutError } from '../redux/actions/about'
 
 //components
 import Partner from '../components/about/Partner.js'
 import Vacancies from '../components/about/Vacancies'
 import AnnualReports from '../components/sliders/AnnualReports';
 import Contacts from '../components/about/Contacts'
+import Timeline from '../components/about/Timeline'
 import {ArrowButton} from '../components/shared/ArrowButton'
 
 //other libraries
@@ -70,8 +71,7 @@ class About extends React.Component {
 
         const { page } = this.props.about
         const { phone, tablet, fb_locale } = this.props
-        console.log("about fb locale", fb_locale, "\n", "ru? ", fb_locale === "ru_RU", "\n", "undefined? ", typeof fb_locale === 'undefined' )
-        // console.log("about query", this.props.query)
+        console.log("about", this.props)
 
         return (
             <div className="aboutpage">
@@ -100,26 +100,23 @@ class About extends React.Component {
                     <div className="container">
                         {page.data && 
                         <div className="columns">
-                            <Media query="(min-width: 416px)"
-                                   defaultMatches={phone === null}
-                                   render={() => 
-                                    <Fragment>
-                                        <div className="column is-8-desktop">
-                                            {RichText.render(page.data.title, PrismicConfig.linkResolver)}
-                                            {RichText.render(page.data.description_title, PrismicConfig.linkResolver, htmlSerializer)}  
-                                            {RichText.render(page.data.description, PrismicConfig.linkResolver, htmlSerializer)}  
-                                            {RichText.render(page.data.goals_title, PrismicConfig.linkResolver, htmlSerializer)}  
-                                            {RichText.render(page.data.goals, PrismicConfig.linkResolver)}  
-                                        </div>
-                                        <Contacts page={page}/>
-                                    </Fragment>
-                                    }
-                            />
-                            <Media  query="(max-width: 415px)"
-                                    defaultMatches={phone !== null}
+                            <div className="column is-8-desktop is-6-tablet is-12-mobile">
+                                <Media query="(min-width: 416px)"
+                                    defaultMatches={phone === null}
                                     render={() => 
-                                    <Fragment>
-                                        <div className="column is-12">
+                                        <Fragment>
+                                                {RichText.render(page.data.title, PrismicConfig.linkResolver)}
+                                                {RichText.render(page.data.description_title, PrismicConfig.linkResolver, htmlSerializer)}  
+                                                {RichText.render(page.data.description, PrismicConfig.linkResolver, htmlSerializer)}  
+                                                {RichText.render(page.data.goals_title, PrismicConfig.linkResolver, htmlSerializer)}  
+                                                {RichText.render(page.data.goals, PrismicConfig.linkResolver)}  
+                                        </Fragment>
+                                        }
+                                />
+                                <Media  query="(max-width: 415px)"
+                                        defaultMatches={phone !== null}
+                                        render={() => 
+                                        <Fragment>
                                             {RichText.render(page.data.title, PrismicConfig.linkResolver)}
                                             {RichText.render(page.data.description_title, PrismicConfig.linkResolver, htmlSerializer)}  
                                             {RichText.render(page.data.description, PrismicConfig.linkResolver, htmlSerializer)}
@@ -132,16 +129,13 @@ class About extends React.Component {
                                                     <img src="/static/more.svg" onClick={this.handleClick} />
                                                 }
                                             </div>
-
-                                        </div>
-            
-                                        <div id="contact">
-                                            <Contacts page={page}/>
-                                        </div>                                  
-                                    </Fragment>
-                                    }
-
-                            />
+                                        </Fragment>
+                                        }
+                                />
+                            </div>
+                            <div className="column is-4-desktop is-6-tablet is-12-mobile">
+                                <Timeline timeline={page.data.timeline} />
+                            </div>
                         </div>  
                         }
                     </div>
@@ -185,7 +179,9 @@ class About extends React.Component {
                         </div>
                     </div>
                 </section>
-               
+
+                <Contacts page={page}/>
+
                 <section className="partners" id="partners">
                     {page.data && 
                         <div className="container">
@@ -221,8 +217,5 @@ const mapDispatchToProps = dispatch => {
         langActions
         ), dispatch);
 }
-
-  
-// export default connect(mapStateToProps, mapDispatchToProps)(About)
 
 export default connect(mapStateToProps, mapDispatchToProps)(About)
