@@ -4,7 +4,7 @@ import PrismicConfig from '../../prismic-configuration'
 
 const Milestone = ({milestone}) => (
 
-    <div className="milestone">
+    <div className="mlstone">
         <img src="/static/about_milestone_dot.svg" alt="" />
         <div className="year_wrapper">
             <b>{milestone.year}</b>
