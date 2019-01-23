@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import Select from 'react-select';
 import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 import Head from 'next/head'
