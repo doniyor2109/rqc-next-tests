@@ -71,7 +71,7 @@ class About extends React.Component {
 
         const { page } = this.props.about
         const { phone, tablet, fb_locale } = this.props
-        console.log("about", this.props)
+        // console.log("about", this.props)
 
         return (
             <div className="aboutpage">

@@ -48,7 +48,7 @@ class Contacts extends React.Component {
                                 </div>
                             <div className="column is-6-desktop is-6-tablet is-12-mobile">
                                 <div className="map">
-                                    <a className="is-hidden-tablet is-hidden-mobile" href={Link.url(page.data.map_url, PrismicConfig.linkResolver)} target="_blank" rel="noopener noreferrer">
+                                    <a className="is-hidden-touch" href={Link.url(page.data.map_url, PrismicConfig.linkResolver)} target="_blank" rel="noopener noreferrer">
                                         <img src={page.data.map.url} alt="how to get to RQC" style={{width:"100%"}}/>
                                     </a>
                                     <a className="is-hidden-desktop is-hidden-mobile" href={Link.url(page.data.map_url, PrismicConfig.linkResolver)} target="_blank" rel="noopener noreferrer">
