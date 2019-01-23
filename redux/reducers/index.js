@@ -18,6 +18,7 @@ import { event } from './event'
 import { events } from './events'
 import { eventsbyTag } from './eventsbyTag'
 import { search } from './search'
+import { publications } from './publications'
 import { i18nState } from "redux-i18n"
 
 const rootReducer = combineReducers({
@@ -40,7 +41,8 @@ const rootReducer = combineReducers({
   event, 
   events, 
   eventsbyTag,
-  search
+  search,
+  publications
 });
 
 export default rootReducer

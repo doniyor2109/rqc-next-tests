@@ -56,11 +56,9 @@ class MyApp extends App {
 
     Router.events.on('routeChangeStart', (url) => {
       document.querySelector(".transparent-wall").classList.remove('inactive')
-      console.log(`Loading: ${url}`)
     })
     Router.events.on('routeChangeComplete', () => {
       document.querySelector(".transparent-wall").classList.add('inactive')
-      console.log("route changed complete")
     })
   }
 
