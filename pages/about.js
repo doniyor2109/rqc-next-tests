@@ -164,7 +164,6 @@ class About extends React.Component {
                                 <div className="media-kit-teaser">
                                     <Link href="/mediakit">
                                         <a>
-                                            <img className="mediakit-wallpaper" src="/static/mediakit_teaser.jpg" alt=""/>
                                             <div className="title">
                                                 {this.context.t("Медиакит RQC")}
                                             </div>

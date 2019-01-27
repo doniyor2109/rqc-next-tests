@@ -56,6 +56,11 @@
                 font-size:1.4rem;
                 line-height: 1.8rem;
 
+                p {
+                    font-size:1.4rem;
+                    line-height: 1.8rem;
+                }
+
                 .year_wrapper {
                     margin: -3px 0 0 2rem;
                     div {
@@ -81,26 +86,24 @@
         .media-kit-teaser {
             margin-top: 6rem;
             position: relative;
+            background: url(/static/mediakit_teaser.jpg);
+            background-size: cover;
+            height: 50rem;
+            padding: 27.5rem 0 0 9.5rem;
 
             .title {
                 font-size: 4.2rem;
                 line-height: 4rem;
                 font-weight: bold;
-                margin-left: 9.5rem;
                 color: white;
-                position: absolute;
                 text-transform: uppercase;
-                top: 27.5rem;
-                width: 50%;
             }
             .description {
                 font-size: 1.4rem;
                 line-height: 1.8rem;
-                position: absolute;
                 color: white;
-                top: 39rem;
-                margin-left: 9.5rem;
                 width: 55%;
+                margin-top: 2.5rem;
             }
             .square_button {
                 right: 4rem;
@@ -306,23 +309,18 @@
                 margin-top: 0;
                 position: relative;
                 height: 50rem;
+                padding: 23.5rem 0 0 9rem;
 
-                
-
+            
                 .mediakit-wallpaper {
                     height: 50rem;
                 }
         
                 .title {
-                    top: 23.5rem;
-                    width: 52%;
-                    margin-left: 8.5rem;
-        
+                    width: 80%;
                 }
                 .description {
-                    top: 35rem;
-                    margin-left: 8.5rem;
-                    width: 55%;
+                    width: 70%;
                 }
                 .square_button {
                     right: 3rem;
@@ -368,8 +366,7 @@
     
                 .square_button {
                     left: 84%;
-                    bottom: -4.5rem;
-                }
+                    bottom: -1rem;                }
             }
             .slick-prev, .slick-next {
                 bottom: 2rem;
@@ -386,20 +383,17 @@
                 margin-top: 0;
                 position: relative;
                 height: 50rem;
+                padding: 17.6rem 5.7rem 0 5.7rem;        
+
 
                 .mediakit-wallpaper {
                     height: 50rem;
                 }
         
                 .title {
-                    top: 17.6rem;
                     width: 80%;
-                    margin-left: 5.7rem;
-        
                 }
                 .description {
-                    top: 29.1rem;
-                    margin-left: 5.7rem;
                     width: 55%;
                 }
                 .square_button {
