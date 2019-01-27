@@ -141,7 +141,7 @@ class About extends React.Component {
                     </div>
                 </section>
                 <div id="vacancies">
-                    <Vacancies phone={phone} tablet={tablet} />
+                    <Vacancies phone={phone} tablet={tablet} lang/>
                 </div>
                 <section className="reports_and_media_kit">
                     <div className="container">

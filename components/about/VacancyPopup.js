@@ -2,8 +2,9 @@ import React from 'react'
 import Popup from '../shared/Popup'
 import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
+import PropTypes from 'prop-types'
 
-export const VacancyPopup = ({item, active, close}) => {
+export const VacancyPopup = ({item, active, close}, context) => {
 
     if (item) { 
         return (
@@ -14,13 +15,13 @@ export const VacancyPopup = ({item, active, close}) => {
                         {RichText.render(item.data.name, PrismicConfig.linkResolver)}
                     </div>
                     <hr />
-                    <p><b>Обязанности:</b></p>
+                    <p><b>{context.t("Обязанности")}:</b></p>
                     {RichText.render(item.data.todo, PrismicConfig.linkResolver)}  
-                    <p><b>Требования:</b></p>
+                    <p><b>{context.t("Требования")}:</b></p>
                     {RichText.render(item.data.requirements, PrismicConfig.linkResolver)}  
-                    <p><b>Условия:</b></p>
+                    <p><b>{context.t("Условия")}:</b></p>
                     {RichText.render(item.data.conditions, PrismicConfig.linkResolver)}  
-                    <p><b>Приветствуется:</b></p>
+                    <p><b>{context.t("Приветствуется")}:</b></p>
                     {RichText.render(item.data.good_to_know, PrismicConfig.linkResolver)}  
 
               
@@ -29,25 +30,26 @@ export const VacancyPopup = ({item, active, close}) => {
                     <hr style={{marginTop: "10.5rem"}}/>
                     {RichText.render(item.data.salary, PrismicConfig.linkResolver)}
                     <hr />
-                    <p><b>Опыт работы:</b></p>
+                    <p><b>{context.t("Опыт работы")}:</b></p>
                     {RichText.render(item.data.experience, PrismicConfig.linkResolver)}  
-                    <p style={{marginTop: "3rem"}}><b>Занятость:</b></p>
+                    <p style={{marginTop: "3rem"}}><b>{context.t("Занятость")}:</b></p>
                     {RichText.render(item.data.time, PrismicConfig.linkResolver)}  
                     <hr style={{marginTop: "3rem"}}/>
                     <p>
-                        Чтобы откликнуться на&nbsp;вакансию, 
-                        присылайте резюме, а&nbsp;также портфолио или презентацию 
-                        по&nbsp;выполненным работам на&nbsp;почту:
+                        {context.t("Чтобы откликнуться на вакансию, присылайте резюме, а также портфолио или презентацию по выполненным работам на почту")}:
                         <br />
                         <a href="mailto:job@rqc.ru" className="job-link">job@rqc.ru</a>
                     </p>
-
                 </div>
-
             </div>
         </Popup>
         )
     }
 }
+
+
+VacancyPopup.contextTypes = {
+    t: PropTypes.func
+  }
 
 export default VacancyPopup

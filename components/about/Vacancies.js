@@ -25,7 +25,14 @@ class Vacancies extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchVacancies(this.props.language.currentLanguage)
+        this.props.fetchVacancies(this.props.lang)
+    }
+
+    componentDidUpdate(prevProps) {
+        // обработка смены языка
+        if (this.props.lang !== prevProps.lang) {
+            this.props.fetchVacancies(this.props.lang)
+        }
     }
 
     render() {
