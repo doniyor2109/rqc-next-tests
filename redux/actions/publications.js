@@ -16,8 +16,8 @@ export const fetchPublications = () => (dispatch) => {
                                                   { lang: '*',
                                                   fetchLinks : ['author.name', 
                                                                 'journal.name', 
-                                                                'journal.url'
-                                                  ]})
+                                                                'journal.url']
+                                                  })
                       .then(response => dispatch(fetchPublicationsSuccess(response)))
                       .catch(error => dispatch(fetchPublicationsFailure(error)))
           })
