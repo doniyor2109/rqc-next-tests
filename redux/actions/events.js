@@ -15,7 +15,7 @@ export const fetchEvents = (language, pageSize) => (dispatch) => {
     .then(api => {api.query(Prismic.Predicates.at('document.type', 'event'),
                                                   { lang: language,
                                                     pageSize: pageSize,
-                                                    // orderings : '[my.event.manual_date_of_publication desc]' 
+                                                    orderings : '[my.event.start_date_time desc]' 
                                                   })
                       .then(response => dispatch(fetchEventsSuccess(response)))
                       .catch(error => dispatch(fetchEventsFailure(error)))
