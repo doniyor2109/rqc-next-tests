@@ -1,0 +1,1773 @@
+{
+    "journal": [
+      {
+        "id": "1",
+        "type": "Journal",
+        "name": "Physical Review A",
+        "url": "http://pra.aps.org/",
+        "issn_print": "1050-2947",
+        "issn_online": "1094-1622",
+        "issn_cdrom": "1538-4446"
+      },
+      {
+        "id": "2",
+        "type": "Journal",
+        "name": "Physical Review Letters",
+        "url": "http://prl.aps.org/"
+      },
+      {
+        "id": "3",
+        "type": "Journal",
+        "name": "Journal of Computer and System Sciences",
+        "url": "http://www.journals.elsevier.com/journal-of-computer-and-system-sciences/",
+        "issn_online": "0022-0000"
+      },
+      {
+        "id": "4",
+        "type": "Journal",
+        "name": "Computational Complexity",
+        "url": "http://www.springerlink.com/content/101499/",
+        "issn_print": "1016-3328",
+        "issn_online": "1420-8954"
+      },
+      {
+        "id": "176",
+        "type": "Journal",
+        "name": "Encyclopedia of complexity and systems science",
+        "url": "http://www.springer.com/physics/book/978-0-387-75888-6"
+      },
+      {
+        "id": "5",
+        "type": "Journal",
+        "name": "IEEE Transactions on Information Theory",
+        "url": "http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=18"
+      },
+      {
+        "id": "67",
+        "type": "Journal",
+        "name": "Nordic Journal of Computing",
+        "url": "http://www.cs.helsinki.fi/njc/"
+      },
+      {
+        "id": "8",
+        "type": "Journal",
+        "name": "Microwave and Optical Technology Letters",
+        "url": "http://www3.interscience.wiley.com/cgi-bin/jhome/37176",
+        "issn_print": "0895-2477"
+      },
+      {
+        "id": "9",
+        "type": "Journal",
+        "name": "Theoretical Computer Science",
+        "url": "http://www.elsevier.com/wps/find/journaldescription.cws_home/505625/description#description",
+        "issn_print": "0304-3975"
+      },
+      {
+        "id": "10",
+        "type": "Journal",
+        "name": "Journal of Physics A: Mathematical and General",
+        "url": "http://www.iop.org/EJ/journal/JPhysA"
+      },
+      {
+        "id": "11",
+        "type": "Journal",
+        "name": "Quantum Information Processing",
+        "url": "http://www.springerlink.com/content/109193/",
+        "issn_print": "1570-0755",
+        "issn_online": "1573-1332"
+      },
+      {
+        "id": "221",
+        "type": "Journal",
+        "name": "Dalton Transactions",
+        "url": "http://pubs.rsc.org/en/journals/journalissues/dt"
+      },
+      {
+        "id": "12",
+        "type": "Journal",
+        "name": "Journal of Modern Optics",
+        "url": "http://www.informaworld.com/jmo",
+        "issn_print": "0950-0340",
+        "issn_online": "1362-3044"
+      },
+      {
+        "id": "126",
+        "type": "Journal",
+        "name": "IEE Proceedings - Microwaves, Antennas and Propagation",
+        "url": "http://scitation.aip.org/dbt/dbt.jsp?KEY=IMIPEP&Volume=153",
+        "issn_print": "1751-8725",
+        "issn_online": "1751-8733"
+      },
+      {
+        "id": "13",
+        "type": "Journal",
+        "name": "Physical Review E",
+        "url": "http://pre.aps.org/",
+        "issn_print": "1550-2376",
+        "issn_online": "1539-3755"
+      },
+      {
+        "id": "14",
+        "type": "Journal",
+        "name": "New Journal of Physics",
+        "url": "http://www.iop.org/EJ/njp"
+      },
+      {
+        "id": "21",
+        "type": "Journal",
+        "name": "Manuscript"
+      },
+      {
+        "id": "22",
+        "type": "Journal",
+        "name": "Information Processing Letters",
+        "url": "http://www.sciencedirect.com/science?_ob=PublicationURL&_cdi=5645&_pubType=J&_auth=y&_acct=C000051253&_version=1&_urlVersion=0&_userid=1067480&md5=2cf2a75f63f6ff9eae96b6572a9c6360"
+      },
+      {
+        "id": "48",
+        "type": "Journal",
+        "name": "Surface Science",
+        "url": "http://www.sciencedirect.com/science?_ob=JournalURL&_cdi=5546&_auth=y&_acct=C000051253&_version=1&_urlVersion=0&_userid=1067480&md5=c50516d4ac94994e0f74d4ca1eae0128"
+      },
+      {
+        "id": "49",
+        "type": "Journal",
+        "name": "Australian Journal of Physics",
+        "url": "http://www.publish.csiro.au/nid/78.htm?nid=79&aid=69"
+      },
+      {
+        "id": "25",
+        "type": "Journal",
+        "name": "physica status solidi (b) - basic research",
+        "url": "http://www3.interscience.wiley.com/cgi-bin/jhome/40001185",
+        "issn_print": "0370-1972",
+        "issn_online": "1521-3951"
+      },
+      {
+        "id": "26",
+        "type": "Journal",
+        "name": "Optics Communications",
+        "url": "http://www.elsevier.com/wps/find/journaldescription.cws_home/505711/description#description",
+        "issn_print": "0030-4018"
+      },
+      {
+        "id": "27",
+        "type": "Journal",
+        "name": "IEEE Transactions on Antennas and Propagation",
+        "url": "http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?puNumber=8"
+      },
+      {
+        "id": "30",
+        "type": "Journal",
+        "name": "Europhysics Letters",
+        "url": "http://epljournal.edpsciences.org/",
+        "issn_print": "0295-5075",
+        "issn_online": "1286-4854 "
+      },
+      {
+        "id": "29",
+        "type": "Journal",
+        "name": "Journal of Optics",
+        "url": "http://iopscience.iop.org/2040-8986/",
+        "issn_print": "2040-8978",
+        "issn_online": "2040-8986 "
+      },
+      {
+        "id": "31",
+        "type": "Journal",
+        "name": "European Physical Journal B",
+        "url": "http://www.springer.com/sgw/cda/frontpage/0,11855,5-10100-70-1124399-detailsPage%253Djournal%257Cdescription%257Cdescription,00.html",
+        "issn_print": "1434-6028",
+        "issn_online": "1434-6036"
+      },
+      {
+        "id": "32",
+        "type": "Journal",
+        "name": "European Physical Journal D",
+        "url": "http://epjd.edpsciences.org/",
+        "issn_print": "1434-6060",
+        "issn_online": "1434-6079"
+      },
+      {
+        "id": "169",
+        "type": "Journal",
+        "name": "Acta Physica Slovaca",
+        "url": "http://www.physics.sk/aps/index.php?page=home",
+        "issn_print": "0323-0465",
+        "issn_online": "1336-040X"
+      },
+      {
+        "id": "33",
+        "type": "Journal",
+        "name": "Optics Letters",
+        "url": "http://ol.osa.org/Issue.cfm"
+      },
+      {
+        "id": "34",
+        "type": "Journal",
+        "name": "Quantum Physics"
+      },
+      {
+        "id": "36",
+        "type": "Journal",
+        "name": "Algorithmica",
+        "url": "http://link.springer.com/journal/453",
+        "issn_print": "0178-4617",
+        "issn_online": "1432-0541"
+      },
+      {
+        "id": "232",
+        "type": "Journal",
+        "name": "Electronic proceedings in theoretical computer science",
+        "url": "http://about.eptcs.org/"
+      },
+      {
+        "id": "37",
+        "type": "Journal",
+        "name": "SIAM Journal  on Computing",
+        "url": "http://epubs.siam.org/SICOMP/",
+        "issn_print": "0097-5397",
+        "issn_online": "1095-7111"
+      },
+      {
+        "id": "38",
+        "type": "Journal",
+        "name": "Journal of the ACM",
+        "url": "http://jacm.acm.org/"
+      },
+      {
+        "id": "39",
+        "type": "Journal",
+        "name": "Physica D: Nonlinear Phenomena",
+        "url": "http://www.journals.elsevier.com/physica-d-nonlinear-phenomena/",
+        "issn_online": "0167-2789"
+      },
+      {
+        "id": "41",
+        "type": "Journal",
+        "name": "Journal of Combinatorial Theory, Series B",
+        "url": "http://www.elsevier.com/wps/find/journalabstracting.cws_home/622863/abstracting?navopenmenu=-2",
+        "issn_print": "0095-8956"
+      },
+      {
+        "id": "43",
+        "type": "Journal",
+        "name": "Physical Review B",
+        "url": "http://prb.aps.org/",
+        "issn_print": "1550-235X",
+        "issn_online": "1098-0121"
+      },
+      {
+        "id": "44",
+        "type": "Journal",
+        "name": "Journal of Physical Chemistry B",
+        "url": "http://pubs.acs.org/journal/jpcbfk",
+        "issn_print": "1520-6106",
+        "issn_online": "1520-5207"
+      },
+      {
+        "id": "45",
+        "type": "Journal",
+        "name": "Journal of Chemical Physics",
+        "url": "http://jcp.aip.org/"
+      },
+      {
+        "id": "46",
+        "type": "Journal",
+        "name": "Laser Physics",
+        "url": "http://www.lasphys.com/lasphys.htm",
+        "issn_print": "1054-660X",
+        "issn_online": "1555-6611"
+      },
+      {
+        "id": "47",
+        "type": "Journal",
+        "name": "Journal of Physics B: Atomic, Molecular and Optical Physics",
+        "url": "http://www.iop.org/EJ/journal/0953-4075"
+      },
+      {
+        "id": "50",
+        "type": "Journal",
+        "name": "Optics Express",
+        "url": "http://www.opticsexpress.org/Issue.cfm"
+      },
+      {
+        "id": "51",
+        "type": "Journal",
+        "name": "Foundations of Physics",
+        "url": " http://www.springerlink.com/content/101591/",
+        "issn_print": "0015-9018",
+        "issn_online": "1572-9516"
+      },
+      {
+        "id": "125",
+        "type": "Journal",
+        "name": "IET Electronics Letters",
+        "url": "http://www.theiet.org/publishing/journals/letters/el/index.cfm",
+        "issn_print": "0013-5194",
+        "issn_online": "1350-911X"
+      },
+      {
+        "id": "52",
+        "type": "Journal",
+        "name": "Physica Status Solidi B",
+        "url": "http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291521-3951",
+        "issn_online": "1521-3951"
+      },
+      {
+        "id": "53",
+        "type": "Journal",
+        "name": "Optical and Quantum Electronics",
+        "url": "http://www.springer.com/sgw/cda/frontpage/0,11855,4-0-70-35486957-0,00.html?referer=www.wkap.nl",
+        "issn_print": "0306-8919",
+        "issn_online": "1572-817X"
+      },
+      {
+        "id": "54",
+        "type": "Journal",
+        "name": "Journal of Mathematical Physics",
+        "url": "http://jmp.aip.org/jmp/"
+      },
+      {
+        "id": "55",
+        "type": "Journal",
+        "name": "Solid State Communications",
+        "url": "http://www.elsevier.com/wps/find/journaldescription.cws_home/230/description#description",
+        "issn_print": "0038-1098"
+      },
+      {
+        "id": "57",
+        "type": "Journal",
+        "name": "Surface and Interface Analysis",
+        "url": "http://www3.interscience.wiley.com/cgi-bin/jhome/2009"
+      },
+      {
+        "id": "58",
+        "type": "Journal",
+        "name": "Physica E: Low-dimensional Systems and Nanostructures",
+        "url": "http://www.elsevier.com/wps/find/journaldescription.cws_home/600554/description#description",
+        "issn_print": "1386-9477"
+      },
+      {
+        "id": "59",
+        "type": "Journal",
+        "name": "Czechoslovak Journal of Physics",
+        "url": "http://www.springerlink.com/openurl.asp?genre=journal&issn=0011-4626",
+        "issn_print": "0011-4626",
+        "issn_online": "1572-9486"
+      },
+      {
+        "id": "60",
+        "type": "Journal",
+        "name": "World Scientific"
+      },
+      {
+        "id": "64",
+        "type": "Journal",
+        "name": "Quantum Computation and Quantum Information"
+      },
+      {
+        "id": "65",
+        "type": "Journal",
+        "name": "Advances in Applied Mathematics",
+        "url": "http://www.ingentaconnect.com/content/ap/am",
+        "issn_print": "0196-8858"
+      },
+      {
+        "id": "66",
+        "type": "Journal",
+        "name": "Fortschritte Der Physik",
+        "url": "http://www3.interscience.wiley.com/cgi-bin/jhome/5007072"
+      },
+      {
+        "id": "147",
+        "type": "Journal",
+        "name": "Journal of the Optical Society of America A",
+        "url": "http://josaa.osa.org/Issue.cfm"
+      },
+      {
+        "id": "69",
+        "type": "Journal",
+        "name": "Journal De Physique I",
+        "url": "http://www.edpsciences.org/journal/index.cfm?edpsname=jp1",
+        "issn_print": "1155-4304",
+        "issn_online": "1286-4862"
+      },
+      {
+        "id": "70",
+        "type": "Journal",
+        "name": "Journal of the Optical Society of America B",
+        "url": "http://josab.osa.org/Issue.cfm",
+        "issn_print": "0740-3224",
+        "issn_online": "1520-8540"
+      },
+      {
+        "id": "71",
+        "type": "Journal",
+        "name": "Quantum and Semiclassical Optics: Journal of the European Optical Society Part B",
+        "url": "http://www.iop.org/EJ/journal/QSO",
+        "issn_print": "1355-5111",
+        "issn_online": "1361-6625"
+      },
+      {
+        "id": "72",
+        "type": "Journal",
+        "name": "Zeitschrift für Physik B",
+        "url": "http://www.springerlink.com/(hazyl5nv2ojchc45gdnwpqva)/app/home/journal.asp?referrer=parent&backto=linkingpublicationresults,1:100379,1",
+        "issn_print": "0722-3277",
+        "issn_online": "1431-584X"
+      },
+      {
+        "id": "90",
+        "type": "Journal",
+        "name": "EU Project TOPQIP"
+      },
+      {
+        "id": "74",
+        "type": "Journal",
+        "name": "Quantum Information and Computation",
+        "url": "http://www.rintonpress.com/journals/qiconline.html"
+      },
+      {
+        "id": "75",
+        "type": "Journal",
+        "name": "Theory of Computing",
+        "url": "http://theoryofcomputing.org/",
+        "issn_online": "1557-2862"
+      },
+      {
+        "id": "76",
+        "type": "Journal",
+        "name": "Nuclear Physics A",
+        "url": "http://www.sciencedirect.com/science?_ob=JournalURL&_cdi=5530&_auth=y&_acct=C000051253&_version=1&_urlVersion=0&_userid=1067480&md5=0273380ee6ece4990443b24ed6b9a96d",
+        "issn_print": "0375-9474"
+      },
+      {
+        "id": "77",
+        "type": "Journal",
+        "name": "European Physical Journals"
+      },
+      {
+        "id": "100",
+        "type": "Journal",
+        "name": "Optics and Photonics News",
+        "url": "http://www.osa-opn.org/"
+      },
+      {
+        "id": "79",
+        "type": "Journal",
+        "name": "European Physical Journals2"
+      },
+      {
+        "id": "80",
+        "type": "Journal",
+        "name": "European Physical Journals3"
+      },
+      {
+        "id": "81",
+        "type": "Journal",
+        "name": "Canadian Journal of Physics",
+        "url": "http://pubs.nrc-cnrc.gc.ca/cgi-bin/rp/rp2_vols_e?cjp",
+        "issn_print": "1208-6045"
+      },
+      {
+        "id": "82",
+        "type": "Journal",
+        "name": "IEE Electronics Letters",
+        "url": "http://www.ieedl.org/EL",
+        "issn_print": "0013-5194",
+        "issn_online": "1350-911X"
+      },
+      {
+        "id": "83",
+        "type": "Journal",
+        "name": "Nature",
+        "url": "http://www.nature.com/nature/archive/index.html"
+      },
+      {
+        "id": "85",
+        "type": "Journal",
+        "name": "Australian Optical Society News",
+        "url": "http://aos.physics.mq.edu.au/DATABASE/PHP/AOSNews.php",
+        "issn_print": "1832-4436"
+      },
+      {
+        "id": "86",
+        "type": "Journal",
+        "name": "Europhysics News",
+        "url": "http://www.europhysicsnews.com/",
+        "issn_print": "0531-7479",
+        "issn_online": "1432-1092"
+      },
+      {
+        "id": "87",
+        "type": "Journal",
+        "name": "OE Magazine",
+        "url": "http://oemagazine.com/",
+        "issn_print": "1533-5496"
+      },
+      {
+        "id": "88",
+        "type": "Journal",
+        "name": "Nature Physics",
+        "url": "http://www.nature.com/nphys/index.html"
+      },
+      {
+        "id": "89",
+        "type": "Journal",
+        "name": "Bulletin of the European Association for Theoretical Computer Science",
+        "url": "http://www.eatcs.org/publications/bulletin.html"
+      },
+      {
+        "id": "91",
+        "type": "Journal",
+        "name": "Physics Letters A",
+        "url": "http://www.sciencedirect.com/science/journal/03759601"
+      },
+      {
+        "id": "92",
+        "type": "Journal",
+        "name": "Chinese Physics Letters",
+        "url": "http://www.iop.org/EJ/journal/CPL",
+        "issn_print": "0256-307X",
+        "issn_online": "1741-3540"
+      },
+      {
+        "id": "93",
+        "type": "Journal",
+        "name": "International Journal of Quantum Information",
+        "url": "http://www.worldscinet.com/ijqi/ijqi.shtml"
+      },
+      {
+        "id": "96",
+        "type": "Journal",
+        "name": "Reviews of Modern Physics",
+        "url": "http://rmp.aps.org/",
+        "issn_print": "0034-6861",
+        "issn_online": "1539-0756"
+      },
+      {
+        "id": "97",
+        "type": "Journal",
+        "name": "IET Microwaves, Antennas & Propagation",
+        "url": "http://www.ietdl.org/IET-MAP"
+      },
+      {
+        "id": "98",
+        "type": "Journal",
+        "name": "Classical and Quantum Gravity",
+        "url": "http://www.iop.org/EJ/journal/0264-9381"
+      },
+      {
+        "id": "99",
+        "type": "Journal",
+        "name": "Physical Review D",
+        "url": "http://prd.aps.org/"
+      },
+      {
+        "id": "101",
+        "type": "Journal",
+        "name": "Physikalische Blätter",
+        "url": "http://www.pro-physik.de/Phy/External/PhyH/1,9289,2-3-0-0-1-phy_toc_home_page-0-0,00.html"
+      },
+      {
+        "id": "102",
+        "type": "Journal",
+        "name": "Proceedings of SPIE: Quantum Communications and Qauntum Imgaging IV",
+        "url": "http://spiedigitallibrary.aip.org/dbt/dbt.jsp?KEY=PSISDG&Volume=6305&Issue=1&bproc=volrange&scode=6300+-+6399"
+      },
+      {
+        "id": "103",
+        "type": "Journal",
+        "name": "Pramana - Journal of Physics",
+        "url": "http://www.iisc.ernet.in/pramana/"
+      },
+      {
+        "id": "109",
+        "type": "Journal",
+        "name": "International Journal of Theoretical Physics",
+        "url": "http://www.springerlink.com/openurl.asp?genre=journal&eissn=1572-9575",
+        "issn_print": "0020-7748",
+        "issn_online": "1572-9575"
+      },
+      {
+        "id": "105",
+        "type": "Journal",
+        "name": "Annalen der Physik",
+        "url": "http://www3.interscience.wiley.com/cgi-bin/jhome/5006612"
+      },
+      {
+        "id": "106",
+        "type": "Journal",
+        "name": "Journal of Cryptology",
+        "url": "http://www.springerlink.com/content/0933-2790/"
+      },
+      {
+        "id": "107",
+        "type": "Journal",
+        "name": "Physics World",
+        "url": "http://physicsweb.org/"
+      },
+      {
+        "id": "108",
+        "type": "Journal",
+        "name": "Applied Physics Letters",
+        "url": "http://apl.aip.org/"
+      },
+      {
+        "id": "110",
+        "type": "Journal",
+        "name": "Linear Algebra and its Applications",
+        "url": "http://www.sciencedirect.com/science?_ob=JournalURL&_cdi=5653&_auth=y&_acct=C000051253&_version=1&_urlVersion=0&_userid=1067480&md5=8e0b379da9aacd2a9d2920cf2eee5ef1"
+      },
+      {
+        "id": "111",
+        "type": "Journal",
+        "name": "General Relativity and Gravitation",
+        "url": "http://www.springerlink.com/openurl.asp?genre=journal&eissn=1572-9532",
+        "issn_print": "0001-7701",
+        "issn_online": "1572-9532"
+      },
+      {
+        "id": "112",
+        "type": "Journal",
+        "name": "Journal de Physique II",
+        "url": "http://www.edpsciences.org/journal/index.cfm?edpsname=jp2",
+        "issn_print": "1155-4312",
+        "issn_online": "1286-4870"
+      },
+      {
+        "id": "113",
+        "type": "Journal",
+        "name": "Trends in Optics and Photonics",
+        "url": "http://www.osa.org/pubs/tops/"
+      },
+      {
+        "id": "114",
+        "type": "Journal",
+        "name": "Discrete Math",
+        "url": " http://www.sciencedirect.com/science/journal/0012365X"
+      },
+      {
+        "id": "115",
+        "type": "Journal",
+        "name": "Chemical Physics Letter",
+        "url": "http://www.sciencedirect.com/science/journal/00092614"
+      },
+      {
+        "id": "116",
+        "type": "Journal",
+        "name": "Computing in Science and Engineering",
+        "url": "http://www.computer.org/portal/site/cise/index.jsp"
+      },
+      {
+        "id": "117",
+        "type": "Journal",
+        "name": "Science",
+        "url": "http://www.sciencemag.org/magazine.dtl",
+        "issn_print": "0036-8075",
+        "issn_online": "1095-9203"
+      },
+      {
+        "id": "118",
+        "type": "Periodical",
+        "name": "Physics in Canada",
+        "url": "http://www.cap.ca/pic/pic.html"
+      },
+      {
+        "id": "119",
+        "type": "Periodical",
+        "name": "Bulletin of the American Physical Society",
+        "url": "http://www.aps.org/meet/archives/index.cfm"
+      },
+      {
+        "id": "120",
+        "type": "Journal",
+        "name": "Communications in Mathematical Physics",
+        "url": "http://www.springerlink.com/content/1432-0916/",
+        "issn_print": "0010-3616",
+        "issn_online": "1432-0916"
+      },
+      {
+        "id": "122",
+        "type": "Journal",
+        "name": "Canadian Undergraduate Physics Journal",
+        "url": "http://www.cupj.ca/",
+        "issn_print": "1499-9420",
+        "issn_online": "1499-9439"
+      },
+      {
+        "id": "123",
+        "type": "Journal",
+        "name": "Review of Scientific Instruments",
+        "url": "http://rsi.aip.org/"
+      },
+      {
+        "id": "124",
+        "type": "Journal",
+        "name": "Journal of Optics B: Quantum Semiclassical Optics",
+        "url": "http://www.iop.org/EJ/joptb"
+      },
+      {
+        "id": "127",
+        "type": "Periodical",
+        "name": "Proceedings of SPIE: Noise and Fluctuations in Photonics, Quantum Optics, and Communications",
+        "url": "http://spiedigitallibrary.aip.org/dbt/dbt.jsp?KEY=PSISDG&Volume=6603&Issue=1&bproc=volrange&scode=6600+-+6699"
+      },
+      {
+        "id": "128",
+        "type": "Journal",
+        "name": "Iranian Journal of Physics Research",
+        "url": "http://journals.iut.ac.ir/magazine.php?magazine=ijpr"
+      },
+      {
+        "id": "129",
+        "type": "Journal",
+        "name": "Journal of Optics A",
+        "url": "http://www.iop.org/EJ/jopta",
+        "issn_print": "1464-4258",
+        "issn_online": "1741-3567"
+      },
+      {
+        "id": "146",
+        "type": "Journal",
+        "name": "Optics and Spectroscopy",
+        "url": "http://www.maik.rssi.ru/cgi-perl/search.pl?lang=eng&type=contents&name=optics"
+      },
+      {
+        "id": "131",
+        "name": "Journal of Physics I"
+      },
+      {
+        "id": "132",
+        "type": "Journal",
+        "name": "Journal of Physics IV France",
+        "url": "http://www.edpsciences.org/journal/index.cfm?edpsname=jp4"
+      },
+      {
+        "id": "133",
+        "name": "Encyclopedia of Algorithms"
+      },
+      {
+        "id": "135",
+        "type": "Journal",
+        "name": "Encyclopedia of Algorithms",
+        "url": "http://www.springer.com/computer/foundations/book/978-0-387-30770-1"
+      },
+      {
+        "id": "137",
+        "type": "Journal",
+        "name": "Annals of Physics",
+        "url": "http://www.journals.elsevier.com/annals-of-physics/#description",
+        "issn_online": "0003-4916"
+      },
+      {
+        "id": "138",
+        "type": "Journal",
+        "name": "IEEE Photonics Technology Letters",
+        "url": "http://ieeexplore.ieee.org/servlet/opac?punumber=68",
+        "issn_print": "1041-1135"
+      },
+      {
+        "id": "139",
+        "type": "Journal",
+        "name": "Integral Equations and Operator Theory",
+        "url": "http://www.springerlink.com/content/300422/?sortorder=asc&p_o=18"
+      },
+      {
+        "id": "140",
+        "type": "Magazine",
+        "name": "The Quantum Times",
+        "url": "http://www.aps.org/units/gqi/newsletters/index.cfm"
+      },
+      {
+        "id": "142",
+        "type": "Journal",
+        "name": "Journal of Physics A: Mathematical and Theoretical",
+        "url": "http://www.iop.org/EJ/journal/JPhysA",
+        "issn_print": "ISSN 1751-8113",
+        "issn_online": "ISSN 1751-8121"
+      },
+      {
+        "id": "143",
+        "type": "Journal",
+        "name": "European Journal of Combinatorics",
+        "url": "http://www.elsevier.com/locate/ejc",
+        "issn_print": "0195-6698"
+      },
+      {
+        "id": "148",
+        "type": "Journal",
+        "name": "Journal of High Energy Physics",
+        "url": "http://jhep.sissa.it/jhep/",
+        "issn_print": "1126-6708",
+        "issn_online": "1029-8479"
+      },
+      {
+        "id": "149",
+        "type": "Journal",
+        "name": "RAIRO - Theoretical Informatics and Applications",
+        "url": "http://www.rairo-ita.org/",
+        "issn_print": "0988-3754",
+        "issn_online": "1290-385X"
+      },
+      {
+        "id": "150",
+        "type": "Journal",
+        "name": "Open Systems & Information Dynamics",
+        "url": "http://www.worldscinet.com/osid/",
+        "issn_print": "1230-1612",
+        "issn_online": "1793-7191"
+      },
+      {
+        "id": "151",
+        "type": "Journal",
+        "name": "IEEE Transactions on Computer-Aided Design",
+        "url": "http://tcad.polito.it/"
+      },
+      {
+        "id": "152",
+        "type": "Magazine",
+        "name": "Physics Today",
+        "url": "http://www.physicstoday.org/"
+      },
+      {
+        "id": "154",
+        "type": "Journal",
+        "name": "Mathematical Structures in Computer Science",
+        "url": "http://journals.cambridge.org/action/displayJournal?jid=MSC",
+        "issn_print": "0960-1295"
+      },
+      {
+        "id": "155",
+        "type": "Journal",
+        "name": "Physics Reports",
+        "url": "http://www.sciencedirect.com/science/journal/03701573"
+      },
+      {
+        "id": "156",
+        "type": "Journal",
+        "name": "Proceedings of The Royal Society of London Series A. Mathematical, Physical and Engineering Sciences",
+        "url": "http://rspa.royalsocietypublishing.org/"
+      },
+      {
+        "id": "157",
+        "type": "Journal",
+        "name": "European Physical Journal - Special Topics",
+        "url": "http://springerlink.metapress.com/content/1951-6401/",
+        "issn_print": "1951-6355 ",
+        "issn_online": "1951-6401"
+      },
+      {
+        "id": "158",
+        "type": "Magazine",
+        "name": "Cool Companies",
+        "url": "http://www.coolcompaniesmag.com/magazine/"
+      },
+      {
+        "id": "159",
+        "type": "Journal",
+        "name": "Theoretical and Mathematical Physics",
+        "url": "http://www.springerlink.com/content/0040-5779"
+      },
+      {
+        "id": "160",
+        "type": "Journal",
+        "name": "Virtual Journal of Nanoscale Science & Technology",
+        "url": "http://www.vjnano.org/"
+      },
+      {
+        "id": "161",
+        "type": "Journal",
+        "name": "Virtual Journal of Quantum Information",
+        "url": "http://www.vjquantuminfo.org/"
+      },
+      {
+        "id": "162",
+        "type": "Journal",
+        "name": "Central European Journal of Physics",
+        "url": "http://versita.com/science/physics/cejp/",
+        "issn_print": "1895-1082",
+        "issn_online": "1644-3608"
+      },
+      {
+        "id": "163",
+        "type": "Journal",
+        "name": "ACM Transactions on Design Automation of Electronic ",
+        "url": "http://todaes.acm.org/"
+      },
+      {
+        "id": "164",
+        "type": "Journal",
+        "name": "Virtual Journal of Applications of Superconductivity",
+        "url": "http://www.vjsuper.org/"
+      },
+      {
+        "id": "165",
+        "type": "Magazine",
+        "name": "Focal Point, The OSA Local Section and Student Chapter Newsletter"
+      },
+      {
+        "id": "166",
+        "type": "Journal",
+        "name": "Applied Mathematics and Information Sciences",
+        "url": "http://www.naturalspublishing.com/amis/contents.htm",
+        "issn_print": "1935-0090"
+      },
+      {
+        "id": "167",
+        "type": "Journal",
+        "name": "Molecular Crystals and Liquid Crystals",
+        "url": "http://www.tandf.co.uk/journals/titles/1058725x.html",
+        "issn_print": "1542-1406",
+        "issn_online": "1563-5287"
+      },
+      {
+        "id": "168",
+        "type": "Magazine",
+        "name": "Reach Magazine",
+        "url": "http://www.ciar.ca/web/home.nsf/Pages/reachmagazine"
+      },
+      {
+        "id": "170",
+        "type": "Journal",
+        "name": "Journal of Algebraic Combinatorics",
+        "url": "http://www.springer.com/math/numbers/journal/10801",
+        "issn_print": "0925-9899",
+        "issn_online": "1572-9192"
+      },
+      {
+        "id": "171",
+        "name": "Designs, Codes and Cryptography",
+        "url": "http://www.springer.com/math/numbers/journal/10623",
+        "issn_print": "0925-1022",
+        "issn_online": "1573-7586"
+      },
+      {
+        "id": "172",
+        "type": "Journal",
+        "name": "Proceedings of the National Academy of Sciences",
+        "url": "http://www.pnas.org/",
+        "issn_online": "1091-6490"
+      },
+      {
+        "id": "174",
+        "type": "Journal",
+        "name": "Letters in Mathematical Physics",
+        "url": "http://www.springerlink.com/content/100306/",
+        "issn_print": "0377-9017 ",
+        "issn_online": "1573-0530 "
+      },
+      {
+        "id": "175",
+        "type": "Journal",
+        "name": "Measurement Science and Technology",
+        "url": "http://www.iop.org/EJ/journal/MST",
+        "issn_print": "0957-0233",
+        "issn_online": "361-6501"
+      },
+      {
+        "id": "177",
+        "type": "Journal",
+        "name": "Laser & Photonics Reviews",
+        "url": "http://www3.interscience.wiley.com/journal/113511747/home"
+      },
+      {
+        "id": "178",
+        "type": "Journal",
+        "name": "Physics Letters B",
+        "url": "http://www.journals.elsevier.com/physics-letters-b/",
+        "issn_online": "0370-2693"
+      },
+      {
+        "id": "179",
+        "type": "Journal",
+        "name": "Physics",
+        "url": "http://physics.aps.org/",
+        "issn_online": "1943-2879"
+      },
+      {
+        "id": "180",
+        "type": "Journal",
+        "name": "Nature Photonics",
+        "url": "http://www.nature.com/nphoton/index.html",
+        "issn_print": "1749-4885",
+        "issn_online": "1749-4893"
+      },
+      {
+        "id": "181",
+        "type": "Journal",
+        "name": "Journal of Luminescence",
+        "url": "http://www.elsevier.com/wps/find/journaldescription.cws_home/505700/description#description",
+        "issn_print": "0022-2313"
+      },
+      {
+        "id": "182",
+        "type": "Journal",
+        "name": "International Journal of Modern Physics A (IJMPA)",
+        "url": "http://www.worldscinet.com/ijmpa/ijmpa.shtml",
+        "issn_print": "0217-751X",
+        "issn_online": "1793-656X"
+      },
+      {
+        "id": "183",
+        "type": "Journal",
+        "name": "IEEE Journal of Selected Topics in Quantum Electronics",
+        "url": "http://ieeexplore.ieee.org/servlet/opac?punumber=2944",
+        "issn_print": "1077-260X"
+      },
+      {
+        "id": "184",
+        "type": "Journal",
+        "name": "Applied Optics",
+        "url": "http://www.opticsinfobase.org/ao/Issue.cfm",
+        "issn_print": "1559-128X",
+        "issn_online": "2155-3165"
+      },
+      {
+        "id": "185",
+        "type": "Journal",
+        "name": "Journal of Lightwave Technology",
+        "url": "http://ieeexplore.ieee.org/servlet/opac?punumber=50",
+        "issn_print": "0733-8724"
+      },
+      {
+        "id": "186",
+        "type": "Journal",
+        "name": "Journal of the Association of Arab Universities for Basic and Applied Sciences",
+        "url": "http://www.uob.edu.bh/english/pages.aspx?module=pages&id=1699&SID=458",
+        "issn_print": "1815-3852"
+      },
+      {
+        "id": "187",
+        "type": "Journal",
+        "name": "Nanotechnology",
+        "url": "http://iopscience.iop.org/0957-4484",
+        "issn_print": "0957-4484 ",
+        "issn_online": "1361-6528"
+      },
+      {
+        "id": "188",
+        "type": "Journal",
+        "name": "IEEE Journal on Selected Areas in Communication",
+        "url": "http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=49",
+        "issn_print": "0733-8716"
+      },
+      {
+        "id": "191",
+        "type": "Journal",
+        "name": "Journal of the American Chemical Society",
+        "url": "http://pubs.acs.org/journal/jacsat",
+        "issn_print": "0002-7863"
+      },
+      {
+        "id": "190",
+        "type": "Journal",
+        "name": "Journal of Vacuum Science and Technology B",
+        "url": "http://avspublications.org/jvstb/"
+      },
+      {
+        "id": "192",
+        "type": "Journal",
+        "name": "Physical Review X",
+        "url": "http://prx.aps.org/",
+        "issn_online": "2160-3308"
+      },
+      {
+        "id": "193",
+        "type": "Journal",
+        "name": "Nature Communications",
+        "url": "http://www.nature.com/ncomms/index.html"
+      },
+      {
+        "id": "194",
+        "type": "Journal",
+        "name": "Physical Chemistry Chemical Physics",
+        "url": "http://pubs.rsc.org/en/journals/journalissues/cp",
+        "issn_print": "1463-9076",
+        "issn_online": "1463-9084"
+      },
+      {
+        "id": "195",
+        "type": "Journal",
+        "name": "Journal of Physical Chemistry A",
+        "url": "http://pubs.acs.org/journal/jpcafh",
+        "issn_print": "1089-5639",
+        "issn_online": "1520-5215"
+      },
+      {
+        "id": "196",
+        "type": "Journal",
+        "name": "Thin Solid Films",
+        "url": "http://www.journals.elsevier.com/thin-solid-films/",
+        "issn_print": "0040-6090"
+      },
+      {
+        "id": "197",
+        "type": "Journal",
+        "name": "Journal of Molecular Spectroscopy",
+        "url": "http://www.journals.elsevier.com/journal-of-molecular-spectroscopy/",
+        "issn_print": "0022-2852"
+      },
+      {
+        "id": "198",
+        "type": "Journal",
+        "name": "Chemical Physics",
+        "url": "http://www.journals.elsevier.com/chemical-physics/",
+        "issn_print": "0301-0104"
+      },
+      {
+        "id": "199",
+        "type": "Journal",
+        "name": "Canadian Journal of Chemistry",
+        "url": "http://www.nrcresearchpress.com/journal/cjc",
+        "issn_print": "0008-4042",
+        "issn_online": "1480-3291"
+      },
+      {
+        "id": "200",
+        "type": "Journal",
+        "name": "Journal of Mass Spectrometry",
+        "url": "http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)1096-9888c",
+        "issn_print": "1076-5174",
+        "issn_online": "1096-9888"
+      },
+      {
+        "id": "201",
+        "type": "Journal",
+        "name": "ACS Applied Materials and Interfaces",
+        "url": "http://pubs.acs.org/journal/aamick",
+        "issn_print": "1944-8244",
+        "issn_online": "1944-8252"
+      },
+      {
+        "id": "202",
+        "type": "Journal",
+        "name": "Journal of Chemical Physics",
+        "url": "http://jcp.aip.org/",
+        "issn_print": "0021-9606",
+        "issn_online": "1089-7690"
+      },
+      {
+        "id": "203",
+        "type": "Journal",
+        "name": "Journal of Analytical Atomic Spectrometry",
+        "url": "http://pubs.rsc.org/en/journals/journalissues/ja",
+        "issn_print": "0267-9477",
+        "issn_online": "1364-5544"
+      },
+      {
+        "id": "204",
+        "type": "Journal",
+        "name": "Journal of Applied Physics",
+        "url": "http://jap.aip.org/",
+        "issn_print": "0021-8979",
+        "issn_online": "1089-7550"
+      },
+      {
+        "id": "239",
+        "type": "Journal",
+        "name": "Journal of Chemical Theory and Computation",
+        "url": "http://pubs.acs.org/journal/jctcce"
+      },
+      {
+        "id": "206",
+        "type": "Journal",
+        "name": "Journal of the American Society for Mass Spectrometry",
+        "url": "http://www.elsevier.com/wps/find/journaldescription.cws_home/505727/description",
+        "issn_print": "1044-0305",
+        "issn_online": "1879-1123"
+      },
+      {
+        "id": "207",
+        "type": "Journal",
+        "name": "International Journal of Mass Spectrometry",
+        "url": "http://www.journals.elsevier.com/international-journal-of-mass-spectrometry/",
+        "issn_print": "1387-3806"
+      },
+      {
+        "id": "208",
+        "type": "Journal",
+        "name": "Chemical Physics Letters",
+        "url": "http://www.journals.elsevier.com/chemical-physics-letters/",
+        "issn_print": "0009-2614"
+      },
+      {
+        "id": "209",
+        "type": "Journal",
+        "name": "Instrumentation Science and Technology",
+        "url": "http://www.tandfonline.com/loi/list20",
+        "issn_print": "1073-9149",
+        "issn_online": "1525-6030"
+      },
+      {
+        "id": "210",
+        "name": "Photonics and Nanostructures - Fundamentals and Applications",
+        "url": "http://www.journals.elsevier.com/photonics-and-nanostructures-fundamentals-and-applications/",
+        "issn_print": "1569-4410"
+      },
+      {
+        "id": "211",
+        "type": "Journal",
+        "name": "Photonics and Nanostructures - Fundamentals and Applications",
+        "url": "http://www.journals.elsevier.com/photonics-and-nanostructures-fundamentals-and-applications/",
+        "issn_print": "1569-4410"
+      },
+      {
+        "id": "212",
+        "type": "Journal",
+        "name": "Diamond and Related Materials",
+        "url": "http://www.journals.elsevier.com/diamond-and-related-materials/",
+        "issn_print": "0925-9635"
+      },
+      {
+        "id": "213",
+        "type": "Journal",
+        "name": "International Journal of Unconventional Computing",
+        "url": "http://www.oldcitypublishing.com/IJUC/IJUC.html",
+        "issn_print": "1548-7199",
+        "issn_online": "1548-7202"
+      },
+      {
+        "id": "214",
+        "type": "Journal",
+        "name": "Natural Computing",
+        "url": "http://www.springer.com/computer/theoretical+computer+science/journal/11047",
+        "issn_print": "1567-7818",
+        "issn_online": "1572-9796"
+      },
+      {
+        "id": "215",
+        "type": "Journal",
+        "name": "Contemporary Physics",
+        "url": "http://www.tandfonline.com/toc/tcph20/current",
+        "issn_print": "0010-7514",
+        "issn_online": "1366-5812"
+      },
+      {
+        "id": "216",
+        "type": "Journal",
+        "name": "Journal of Quantitative Spectroscopy and Radiative Transfer",
+        "url": "http://www.journals.elsevier.com/journal-of-quantitative-spectroscopy-and-radiative-transfer/",
+        "issn_print": "0022-4073"
+      },
+      {
+        "id": "218",
+        "type": "Journal",
+        "name": "Molecular Physics",
+        "url": "http://www.tandfonline.com/toc/tmph20/current",
+        "issn_print": "0026-8976",
+        "issn_online": "1362-3028"
+      },
+      {
+        "id": "219",
+        "type": "Journal",
+        "name": "Advances In Atomic, Molecular, and Optical Physics",
+        "url": "http://www.sciencedirect.com/science/bookseries/1049250X"
+      },
+      {
+        "id": "220",
+        "type": "Journal",
+        "name": "Astrophysical Journal Letters",
+        "url": "http://iopscience.iop.org/2041-8205",
+        "issn_print": "2041-8205",
+        "issn_online": "2041-8213"
+      },
+      {
+        "id": "222",
+        "type": "Journal",
+        "name": "Journal of Solid State Chemistry",
+        "url": "http://www.journals.elsevier.com/journal-of-solid-state-chemistry",
+        "issn_print": " 0022-4596"
+      },
+      {
+        "id": "223",
+        "type": "Journal",
+        "name": "Physical Review B - Condensed Matter and Materials Physics",
+        "url": "http://prb.aps.org/",
+        "issn_print": "1098-0121",
+        "issn_online": "1550-235x"
+      },
+      {
+        "id": "224",
+        "type": "Journal",
+        "name": "Gold Bulletin",
+        "url": "http://www.springer.com/materials/special+types/journal/13404",
+        "issn_online": "2190-7579"
+      },
+      {
+        "id": "225",
+        "type": "Journal",
+        "name": "Journal of Physics: Conference Series",
+        "url": "http://iopscience.iop.org/1742-6596",
+        "issn_print": "1742-6588",
+        "issn_online": "1742-6596"
+      },
+      {
+        "id": "226",
+        "type": "Journal",
+        "name": "Journal of Physics D: Applied Physics",
+        "url": "http://iopscience.iop.org/0022-3727/",
+        "issn_print": "0022-3727",
+        "issn_online": "1361-6463"
+      },
+      {
+        "id": "227",
+        "type": "Journal",
+        "name": "Inorganic Chemistry",
+        "url": "http://pubs.acs.org/journal/inocaj",
+        "issn_print": "0020-1669",
+        "issn_online": "1520-510X"
+      },
+      {
+        "id": "228",
+        "type": "Journal",
+        "name": "Chemistry - A European Journal",
+        "url": "http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291521-3765",
+        "issn_online": "1521-3765"
+      },
+      {
+        "id": "229",
+        "type": "Journal",
+        "name": "Polyhedron",
+        "url": "http://www.journals.elsevier.com/polyhedron",
+        "issn_print": "0277-5387"
+      },
+      {
+        "id": "230",
+        "type": "Journal",
+        "name": "Journal of Materials Chemistry",
+        "url": "http://pubs.rsc.org/en/journals/journalissues/jm"
+      },
+      {
+        "id": "231",
+        "type": "Journal",
+        "name": "Journal of Magnetism and Magnetic Materials",
+        "url": "http://www.journals.elsevier.com/journal-of-magnetism-and-magnetic-materials",
+        "issn_print": "0304-8853"
+      },
+      {
+        "id": "233",
+        "name": "Electronic Notes in Discrete Mathematics",
+        "url": "http://www.elsevier.com/journals/electronic-notes-in-discrete-mathematics/1571-0653"
+      },
+      {
+        "id": "234",
+        "type": "Journal",
+        "name": "International Journal of Modern Physics B",
+        "url": "http://www.worldscientific.com/doi/abs/10.1142/S0217979212430084"
+      },
+      {
+        "id": "235",
+        "type": "Journal",
+        "name": "Hyperfine Interactions",
+        "url": "http://www.springer.com/physics/particle+and+nuclear+physics/journal/10751",
+        "issn_print": "0304-3843",
+        "issn_online": " 1572-9540"
+      },
+      {
+        "id": "236",
+        "type": "Periodical",
+        "name": "Proceedings of SPIE: Advances in Photonics of Quantum Computing, Memory, and Communication VI",
+        "url": "http://spiedigitallibrary.org/"
+      },
+      {
+        "id": "237",
+        "type": "Journal",
+        "name": "Journal of Physical Chemistry C",
+        "url": "http://pubs.acs.org/journal/jpccck"
+      },
+      {
+        "id": "238",
+        "type": "Journal",
+        "name": "International Journal of Quantum Chemistry",
+        "url": "http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291097-461X;jsessionid=EE1536C9DBE8651C4BA2C9FFD824BB17.d02t02",
+        "issn_online": "1097-461X"
+      },
+      {
+        "id": "240",
+        "type": "Journal",
+        "name": "Structural Chemistry",
+        "url": "http://www.springer.com/chemistry/journal/11224",
+        "issn_print": "1040-0400",
+        "issn_online": "1572-9001"
+      },
+      {
+        "id": "241",
+        "type": "Journal",
+        "name": "Science China Chemistry",
+        "url": "http://chem.scichina.com:8081/sciBe/EN/volumn/home.shtml",
+        "issn_print": "1674-7291",
+        "issn_online": "1869-1870"
+      },
+      {
+        "id": "242",
+        "type": "Journal",
+        "name": "Wiley Interdisciplinary Reviews: Computational Molecular Science",
+        "url": "http://onlinelibrary.wiley.com/journal/10.1111/%28ISSN%291759-0884",
+        "issn_online": "1759-0884"
+      },
+      {
+        "id": "243",
+        "type": "Journal",
+        "name": "Journal of Computational Chemistry",
+        "url": "http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291096-987X",
+        "issn_online": "1096-987X"
+      },
+      {
+        "id": "244",
+        "type": "Journal",
+        "name": "Proceedings of the National Academy of Sciences of the United States of America",
+        "url": "http://www.pnas.org/",
+        "issn_online": "1091-6490 "
+      },
+      {
+        "id": "245",
+        "type": "Journal",
+        "name": "Journal of Molecular Structure: THEOCHEM"
+      },
+      {
+        "id": "246",
+        "type": "Journal",
+        "name": "Interdisciplinary sciences, computational life sciences",
+        "url": "http://link.springer.com/journal/12539",
+        "issn_print": "1913-2751",
+        "issn_online": " 1867-1462"
+      },
+      {
+        "id": "247",
+        "type": "Journal",
+        "name": "Cancer Biology and Therapy",
+        "url": "https://www.landesbioscience.com/journals/5/",
+        "issn_print": "1538-4047 ",
+        "issn_online": "1555-8576 "
+      },
+      {
+        "id": "248",
+        "type": "Journal",
+        "name": "ChemPhysChem",
+        "url": "http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291439-7641/issues",
+        "issn_online": "1439-7641"
+      },
+      {
+        "id": "249",
+        "type": "Journal",
+        "name": "FEBS Letters",
+        "url": "http://www.febsletters.org/"
+      },
+      {
+        "id": "250",
+        "type": "Journal",
+        "name": "Theoretical Chemistry Accounts",
+        "url": "http://www.springer.com/chemistry/theoretical+and+computational+chemistry/journal/214",
+        "issn_print": "1432-881X",
+        "issn_online": "1432-2234"
+      },
+      {
+        "id": "251",
+        "type": "Journal",
+        "name": "AIP Conference Proceedings",
+        "url": "http://proceedings.aip.org/",
+        "issn_online": "1551-7616"
+      },
+      {
+        "id": "252",
+        "type": "Journal",
+        "name": "Journal of Theoretical Biology",
+        "url": "http://www.journals.elsevier.com/journal-of-theoretical-biology/",
+        "issn_print": "0022-5193"
+      },
+      {
+        "id": "253",
+        "type": "Journal",
+        "name": "Journal of Electron Spectroscopy and Related Phenomena",
+        "url": "http://www.journals.elsevier.com/journal-of-electron-spectroscopy-and-related-phenomena/",
+        "issn_print": "0368-2048"
+      },
+      {
+        "id": "254",
+        "type": "Journal",
+        "name": "ACS Symposium Series",
+        "url": "http://pubs.acs.org/series/symposium",
+        "issn_print": "0097-6156",
+        "issn_online": "1947-5918 "
+      },
+      {
+        "id": "255",
+        "type": "Journal",
+        "name": "Topics in Catalysis",
+        "url": "http://www.springer.com/chemistry/catalysis/journal/11244",
+        "issn_print": " 1022-5528",
+        "issn_online": "1572-9028"
+      },
+      {
+        "id": "256",
+        "type": "Journal",
+        "name": "Microporous and Mesoporous Materials",
+        "url": "http://www.journals.elsevier.com/microporous-and-mesoporous-materials/",
+        "issn_print": "1387-1811"
+      },
+      {
+        "id": "257",
+        "type": "Journal",
+        "name": "Angewandte Chemie International Edition",
+        "url": "http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291521-3773",
+        "issn_online": "1521-3773"
+      },
+      {
+        "id": "258",
+        "type": "Journal",
+        "name": "Biopolymers",
+        "url": "http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291097-0282",
+        "issn_online": "1097-0282"
+      },
+      {
+        "id": "259",
+        "type": "Journal",
+        "name": "The Journal of Physical Chemistry",
+        "url": "http://pubs.acs.org/loi/jpchax"
+      },
+      {
+        "id": "260",
+        "type": "Journal",
+        "name": "Computers and Chemistry",
+        "url": "http://www.sciencedirect.com/science/journal/00978485"
+      },
+      {
+        "id": "261",
+        "type": "Journal",
+        "name": "Catalysis Today",
+        "url": "http://www.journals.elsevier.com/catalysis-today/",
+        "issn_print": "0920-5861"
+      },
+      {
+        "id": "262",
+        "type": "Journal",
+        "name": "Applied Surface Science",
+        "url": "http://www.journals.elsevier.com/applied-surface-science/",
+        "issn_print": "0169-4332"
+      },
+      {
+        "id": "263",
+        "type": "Journal",
+        "name": "Journal of the Chemical Society, Chemical Communications",
+        "url": "http://pubs.rsc.org/en/journals/journalissues/c3#!issueid=c31995_0_24&type=archive&issnprint=0022-4936",
+        "issn_print": "0022-4936"
+      },
+      {
+        "id": "264",
+        "type": "Journal",
+        "name": "Journal of Theoretical and Computational Chemistry",
+        "url": "http://www.worldscientific.com/worldscinet/jtcc",
+        "issn_print": "0219-6336 ",
+        "issn_online": "1793-6888 "
+      },
+      {
+        "id": "265",
+        "type": "Journal",
+        "name": "Journal of Molecular Catalysis"
+      },
+      {
+        "id": "266",
+        "type": "Journal",
+        "name": "Quantum Electronics",
+        "url": "http://www.quantum-electron.ru/"
+      },
+      {
+        "id": "267",
+        "type": "Journal",
+        "name": "Scientific Reports",
+        "url": "http://www.nature.com/srep/"
+      },
+      {
+        "id": "268",
+        "type": "Journal",
+        "name": "Journal of Russian Laser Research",
+        "url": "http://sites.lebedev.ru/JRLR/",
+        "issn_print": "1071-2836",
+        "issn_online": "1573-8760"
+      },
+      {
+        "id": "273",
+        "type": "Journal",
+        "name": "Nano Letters",
+        "url": "http://pubs.acs.org/journal/nalefd"
+      },
+      {
+        "id": "272",
+        "type": "Journal",
+        "name": "Superconductor Science and Technology",
+        "url": "http://iopscience.iop.org/0953-2048/",
+        "issn_print": "0953-2048",
+        "issn_online": "1361-6668"
+      },
+      {
+        "id": "271",
+        "type": "Journal",
+        "name": "Doklady Mathematics",
+        "url": "http://link.springer.com/journal/11472",
+        "issn_print": "1064-5624",
+        "issn_online": "1531-8362"
+      },
+      {
+        "id": "274",
+        "type": "Journal",
+        "name": "Applied Physics A",
+        "url": "http://www.springer.com/materials/journal/339",
+        "issn_print": "0947-8396",
+        "issn_online": "1432-0630"
+      },
+      {
+        "id": "275",
+        "type": "Journal",
+        "name": "Optica",
+        "url": "http://www.opticsinfobase.org/optica/home.cfm",
+        "issn_online": "2334-2536"
+      },
+      {
+        "id": "276",
+        "type": "Journal",
+        "name": "Physical Review Applied"
+      },
+      {
+        "id": "277",
+        "type": "Journal",
+        "name": "Advanced Materials",
+        "url": "http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)1521-4095",
+        "issn_print": "0935-9648",
+        "issn_online": "1521-4095"
+      },
+      {
+        "id": "278",
+        "type": "Journal",
+        "name": "Laser Physics Letters",
+        "url": "http://www.lasphys.com/lasphyslett/",
+        "issn_print": "1612-2011",
+        "issn_online": "1612-202X"
+      },
+      {
+        "id": "279",
+        "type": "Journal",
+        "name": "Applied Physics B",
+        "url": "http://www.springer.com/physics/journal/340",
+        "issn_print": "0946-2171",
+        "issn_online": "1432-0649"
+      },
+      {
+        "id": "280",
+        "type": "Journal",
+        "name": "Journal of Electronic Materials",
+        "url": "http://www.tms.org/pubs/journals/JEM/jem.aspx",
+        "issn_online": "0361-5235"
+      },
+      {
+        "id": "283",
+        "type": "Journal",
+        "name": "JETP",
+        "url": "http://www.jetp.ac.ru",
+        "issn_print": "0044-4510"
+      },
+      {
+        "id": "284",
+        "type": "Journal",
+        "name": "Bulletin of the Russian Academy of Sciences Physics",
+        "url": "http://www.springer.com/physics/particle+and+nuclear+physics/journal/11954",
+        "issn_print": "1062-8738 ",
+        "issn_online": "1934-9432"
+      },
+      {
+        "id": "282",
+        "type": "Journal",
+        "name": "JETP Letters",
+        "url": "http://www.jetpletters.ac.ru",
+        "issn_print": "0021-3640",
+        "issn_online": "1090-6487"
+      },
+      {
+        "id": "285",
+        "type": "Journal",
+        "name": "Bulletin of the Lebedev Physics Institute",
+        "url": "http://www.springer.com/physics/journal/11953",
+        "issn_print": "1068-3356",
+        "issn_online": "1934-838X"
+      },
+      {
+        "id": "286",
+        "type": "Journal",
+        "name": "Light: Science & Applications",
+        "url": "http://www.nature.com/lsa/index.html"
+      },
+      {
+        "id": "287",
+        "type": "Journal",
+        "name": "European Physics Journal Special Topics"
+      },
+      {
+        "id": "289",
+        "type": "Journal",
+        "name": "Journal of Physics: Condensed Matter",
+        "url": "http://iopscience.iop.org/0953-8984/",
+        "issn_print": "0953-8984",
+        "issn_online": "1361-648X"
+      },
+      {
+        "id": "290",
+        "type": "Journal",
+        "name": "Energy Conversional and Managment",
+        "url": "http://www.journals.elsevier.com/energy-conversion-and-management",
+        "issn_online": "0196-8904"
+      },
+      {
+        "id": "295",
+        "type": "Journal",
+        "name": "Nature Materials",
+        "url": "http://www.nature.com/nmat/index.html",
+        "issn_print": "1476-1122",
+        "issn_online": "1476-4660"
+      },
+      {
+        "id": "296",
+        "type": "Journal",
+        "name": " Superlattices and Microstructures",
+        "url": "http://www.sciencedirect.com/science/journal/07496036"
+      },
+      {
+        "id": "297",
+        "type": "Journal",
+        "name": "Low Temperature Physics",
+        "url": "http://aip.scitation.org/journal/ltp"
+      },
+      {
+        "id": "298",
+        "name": "European journal of chemical physics and physical chemistry"
+      },
+      {
+        "id": "294",
+        "type": "Journal",
+        "name": "Energy Conversional and Management",
+        "url": "http://www.journals.elsevier.com/energy-conversion-and-management",
+        "issn_online": "0196-8904"
+      },
+      {
+        "id": "299",
+        "type": "Journal",
+        "name": "European journal of chemical physics and physical chemistry"
+      },
+      {
+        "id": "300",
+        "type": "Journal",
+        "name": "Journal of Nanomaterials"
+      },
+      {
+        "id": "301",
+        "type": "Journal",
+        "name": "Proceedings of SPIE"
+      },
+      {
+        "id": "303",
+        "type": "Journal",
+        "name": "JETP Letters",
+        "url": "http://www.jetp.ac.ru/cgi-bin/r/index"
+      }
+    ]
+}

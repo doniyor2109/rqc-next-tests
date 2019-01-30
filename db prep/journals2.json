@@ -1,0 +1,4572 @@
+{
+    "journal": [
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physical Review A",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://pra.aps.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physical Review Letters",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://prl.aps.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Computer and System Sciences",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/journal-of-computer-and-system-sciences/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Computational Complexity",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springerlink.com/content/101499/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Encyclopedia of complexity and systems science",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springer.com/physics/book/978-0-387-75888-6",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "IEEE Transactions on Information Theory",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=18",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Nordic Journal of Computing",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.cs.helsinki.fi/njc/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Microwave and Optical Technology Letters",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www3.interscience.wiley.com/cgi-bin/jhome/37176",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Theoretical Computer Science",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.elsevier.com/wps/find/journaldescription.cws_home/505625/description#description",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Physics A: Mathematical and General",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.iop.org/EJ/journal/JPhysA",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Quantum Information Processing",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springerlink.com/content/109193/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Dalton Transactions",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://pubs.rsc.org/en/journals/journalissues/dt",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Modern Optics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.informaworld.com/jmo",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "IEE Proceedings - Microwaves, Antennas and Propagation",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://scitation.aip.org/dbt/dbt.jsp?KEY=IMIPEP&Volume=153",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physical Review E",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://pre.aps.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "New Journal of Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.iop.org/EJ/njp",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Manuscript",
+                        "spans": []
+                    }
+                }
+            ],
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Information Processing Letters",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.sciencedirect.com/science?_ob=PublicationURL&_cdi=5645&_pubType=J&_auth=y&_acct=C000051253&_version=1&_urlVersion=0&_userid=1067480&md5=2cf2a75f63f6ff9eae96b6572a9c6360",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Surface Science",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.sciencedirect.com/science?_ob=JournalURL&_cdi=5546&_auth=y&_acct=C000051253&_version=1&_urlVersion=0&_userid=1067480&md5=c50516d4ac94994e0f74d4ca1eae0128",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Australian Journal of Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.publish.csiro.au/nid/78.htm?nid=79&aid=69",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "physica status solidi (b) - basic research",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www3.interscience.wiley.com/cgi-bin/jhome/40001185",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Optics Communications",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.elsevier.com/wps/find/journaldescription.cws_home/505711/description#description",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "IEEE Transactions on Antennas and Propagation",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?puNumber=8",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Europhysics Letters",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://epljournal.edpsciences.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Optics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://iopscience.iop.org/2040-8986/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "European Physical Journal B",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springer.com/sgw/cda/frontpage/0,11855,5-10100-70-1124399-detailsPage%253Djournal%257Cdescription%257Cdescription,00.html",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "European Physical Journal D",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://epjd.edpsciences.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Acta Physica Slovaca",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.physics.sk/aps/index.php?page=home",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Optics Letters",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://ol.osa.org/Issue.cfm",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Quantum Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Algorithmica",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://link.springer.com/journal/453",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Electronic proceedings in theoretical computer science",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://about.eptcs.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "SIAM Journal  on Computing",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://epubs.siam.org/SICOMP/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of the ACM",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://jacm.acm.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physica D: Nonlinear Phenomena",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/physica-d-nonlinear-phenomena/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Combinatorial Theory, Series B",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.elsevier.com/wps/find/journalabstracting.cws_home/622863/abstracting?navopenmenu=-2",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physical Review B",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://prb.aps.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Physical Chemistry B",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://pubs.acs.org/journal/jpcbfk",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Chemical Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://jcp.aip.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Laser Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.lasphys.com/lasphys.htm",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Physics B: Atomic, Molecular and Optical Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.iop.org/EJ/journal/0953-4075",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Optics Express",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.opticsexpress.org/Issue.cfm",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Foundations of Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": " http://www.springerlink.com/content/101591/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "IET Electronics Letters",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.theiet.org/publishing/journals/letters/el/index.cfm",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physica Status Solidi B",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291521-3951",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Optical and Quantum Electronics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springer.com/sgw/cda/frontpage/0,11855,4-0-70-35486957-0,00.html?referer=www.wkap.nl",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Mathematical Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://jmp.aip.org/jmp/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Solid State Communications",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.elsevier.com/wps/find/journaldescription.cws_home/230/description#description",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Surface and Interface Analysis",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www3.interscience.wiley.com/cgi-bin/jhome/2009",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physica E: Low-dimensional Systems and Nanostructures",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.elsevier.com/wps/find/journaldescription.cws_home/600554/description#description",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Czechoslovak Journal of Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springerlink.com/openurl.asp?genre=journal&issn=0011-4626",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "World Scientific",
+                        "spans": []
+                    }
+                }
+            ],
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Quantum Computation and Quantum Information",
+                        "spans": []
+                    }
+                }
+            ],
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Advances in Applied Mathematics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.ingentaconnect.com/content/ap/am",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Fortschritte Der Physik",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www3.interscience.wiley.com/cgi-bin/jhome/5007072",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of the Optical Society of America A",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://josaa.osa.org/Issue.cfm",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal De Physique I",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.edpsciences.org/journal/index.cfm?edpsname=jp1",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of the Optical Society of America B",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://josab.osa.org/Issue.cfm",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Quantum and Semiclassical Optics: Journal of the European Optical Society Part B",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.iop.org/EJ/journal/QSO",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Zeitschrift für Physik B",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springerlink.com/(hazyl5nv2ojchc45gdnwpqva)/app/home/journal.asp?referrer=parent&backto=linkingpublicationresults,1:100379,1",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "EU Project TOPQIP",
+                        "spans": []
+                    }
+                }
+            ],
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Quantum Information and Computation",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.rintonpress.com/journals/qiconline.html",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Theory of Computing",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://theoryofcomputing.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Nuclear Physics A",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.sciencedirect.com/science?_ob=JournalURL&_cdi=5530&_auth=y&_acct=C000051253&_version=1&_urlVersion=0&_userid=1067480&md5=0273380ee6ece4990443b24ed6b9a96d",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "European Physical Journals",
+                        "spans": []
+                    }
+                }
+            ],
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Optics and Photonics News",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.osa-opn.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "European Physical Journals2",
+                        "spans": []
+                    }
+                }
+            ],
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "European Physical Journals3",
+                        "spans": []
+                    }
+                }
+            ],
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Canadian Journal of Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://pubs.nrc-cnrc.gc.ca/cgi-bin/rp/rp2_vols_e?cjp",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "IEE Electronics Letters",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.ieedl.org/EL",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Nature",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.nature.com/nature/archive/index.html",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Australian Optical Society News",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://aos.physics.mq.edu.au/DATABASE/PHP/AOSNews.php",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Europhysics News",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.europhysicsnews.com/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "OE Magazine",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://oemagazine.com/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Nature Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.nature.com/nphys/index.html",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Bulletin of the European Association for Theoretical Computer Science",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.eatcs.org/publications/bulletin.html",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physics Letters A",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.sciencedirect.com/science/journal/03759601",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Chinese Physics Letters",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.iop.org/EJ/journal/CPL",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "International Journal of Quantum Information",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.worldscinet.com/ijqi/ijqi.shtml",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Reviews of Modern Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://rmp.aps.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "IET Microwaves, Antennas & Propagation",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.ietdl.org/IET-MAP",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Classical and Quantum Gravity",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.iop.org/EJ/journal/0264-9381",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physical Review D",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://prd.aps.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physikalische Blätter",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.pro-physik.de/Phy/External/PhyH/1,9289,2-3-0-0-1-phy_toc_home_page-0-0,00.html",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Proceedings of SPIE: Quantum Communications and Qauntum Imgaging IV",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://spiedigitallibrary.aip.org/dbt/dbt.jsp?KEY=PSISDG&Volume=6305&Issue=1&bproc=volrange&scode=6300+-+6399",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Pramana - Journal of Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.iisc.ernet.in/pramana/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "International Journal of Theoretical Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springerlink.com/openurl.asp?genre=journal&eissn=1572-9575",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Annalen der Physik",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www3.interscience.wiley.com/cgi-bin/jhome/5006612",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Cryptology",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springerlink.com/content/0933-2790/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physics World",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://physicsweb.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Applied Physics Letters",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://apl.aip.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Linear Algebra and its Applications",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.sciencedirect.com/science?_ob=JournalURL&_cdi=5653&_auth=y&_acct=C000051253&_version=1&_urlVersion=0&_userid=1067480&md5=8e0b379da9aacd2a9d2920cf2eee5ef1",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "General Relativity and Gravitation",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springerlink.com/openurl.asp?genre=journal&eissn=1572-9532",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal de Physique II",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.edpsciences.org/journal/index.cfm?edpsname=jp2",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Trends in Optics and Photonics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.osa.org/pubs/tops/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Discrete Math",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": " http://www.sciencedirect.com/science/journal/0012365X",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Chemical Physics Letter",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.sciencedirect.com/science/journal/00092614",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Computing in Science and Engineering",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.computer.org/portal/site/cise/index.jsp",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Science",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.sciencemag.org/magazine.dtl",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physics in Canada",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.cap.ca/pic/pic.html",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Bulletin of the American Physical Society",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.aps.org/meet/archives/index.cfm",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Communications in Mathematical Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springerlink.com/content/1432-0916/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Canadian Undergraduate Physics Journal",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.cupj.ca/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Review of Scientific Instruments",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://rsi.aip.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Optics B: Quantum Semiclassical Optics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.iop.org/EJ/joptb",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Proceedings of SPIE: Noise and Fluctuations in Photonics, Quantum Optics, and Communications",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://spiedigitallibrary.aip.org/dbt/dbt.jsp?KEY=PSISDG&Volume=6603&Issue=1&bproc=volrange&scode=6600+-+6699",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Iranian Journal of Physics Research",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://journals.iut.ac.ir/magazine.php?magazine=ijpr",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Optics A",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.iop.org/EJ/jopta",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Optics and Spectroscopy",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.maik.rssi.ru/cgi-perl/search.pl?lang=eng&type=contents&name=optics",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Physics I",
+                        "spans": []
+                    }
+                }
+            ],
+            "type": "journal",
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Physics IV France",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.edpsciences.org/journal/index.cfm?edpsname=jp4",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Encyclopedia of Algorithms",
+                        "spans": []
+                    }
+                }
+            ],
+            "type": "journal",
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Encyclopedia of Algorithms",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springer.com/computer/foundations/book/978-0-387-30770-1",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Annals of Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/annals-of-physics/#description",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "IEEE Photonics Technology Letters",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://ieeexplore.ieee.org/servlet/opac?punumber=68",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Integral Equations and Operator Theory",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springerlink.com/content/300422/?sortorder=asc&p_o=18",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "The Quantum Times",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.aps.org/units/gqi/newsletters/index.cfm",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Physics A: Mathematical and Theoretical",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.iop.org/EJ/journal/JPhysA",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "European Journal of Combinatorics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.elsevier.com/locate/ejc",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of High Energy Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://jhep.sissa.it/jhep/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "RAIRO - Theoretical Informatics and Applications",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.rairo-ita.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Open Systems & Information Dynamics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.worldscinet.com/osid/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "IEEE Transactions on Computer-Aided Design",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://tcad.polito.it/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physics Today",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.physicstoday.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Mathematical Structures in Computer Science",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://journals.cambridge.org/action/displayJournal?jid=MSC",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physics Reports",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.sciencedirect.com/science/journal/03701573",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Proceedings of The Royal Society of London Series A. Mathematical, Physical and Engineering Sciences",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://rspa.royalsocietypublishing.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "European Physical Journal - Special Topics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://springerlink.metapress.com/content/1951-6401/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Cool Companies",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.coolcompaniesmag.com/magazine/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Theoretical and Mathematical Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springerlink.com/content/0040-5779",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Virtual Journal of Nanoscale Science & Technology",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.vjnano.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Virtual Journal of Quantum Information",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.vjquantuminfo.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Central European Journal of Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://versita.com/science/physics/cejp/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "ACM Transactions on Design Automation of Electronic ",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://todaes.acm.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Virtual Journal of Applications of Superconductivity",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.vjsuper.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Focal Point, The OSA Local Section and Student Chapter Newsletter",
+                        "spans": []
+                    }
+                }
+            ],
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Applied Mathematics and Information Sciences",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.naturalspublishing.com/amis/contents.htm",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Molecular Crystals and Liquid Crystals",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.tandf.co.uk/journals/titles/1058725x.html",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Reach Magazine",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.ciar.ca/web/home.nsf/Pages/reachmagazine",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Algebraic Combinatorics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springer.com/math/numbers/journal/10801",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Designs, Codes and Cryptography",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springer.com/math/numbers/journal/10623",
+                "preview": null
+            },
+            "type": "journal",
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Proceedings of the National Academy of Sciences",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.pnas.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Letters in Mathematical Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springerlink.com/content/100306/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Measurement Science and Technology",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.iop.org/EJ/journal/MST",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Laser & Photonics Reviews",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www3.interscience.wiley.com/journal/113511747/home",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physics Letters B",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/physics-letters-b/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://physics.aps.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Nature Photonics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.nature.com/nphoton/index.html",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Luminescence",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.elsevier.com/wps/find/journaldescription.cws_home/505700/description#description",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "International Journal of Modern Physics A (IJMPA)",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.worldscinet.com/ijmpa/ijmpa.shtml",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "IEEE Journal of Selected Topics in Quantum Electronics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://ieeexplore.ieee.org/servlet/opac?punumber=2944",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Applied Optics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.opticsinfobase.org/ao/Issue.cfm",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Lightwave Technology",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://ieeexplore.ieee.org/servlet/opac?punumber=50",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of the Association of Arab Universities for Basic and Applied Sciences",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.uob.edu.bh/english/pages.aspx?module=pages&id=1699&SID=458",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Nanotechnology",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://iopscience.iop.org/0957-4484",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "IEEE Journal on Selected Areas in Communication",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=49",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of the American Chemical Society",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://pubs.acs.org/journal/jacsat",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Vacuum Science and Technology B",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://avspublications.org/jvstb/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physical Review X",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://prx.aps.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Nature Communications",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.nature.com/ncomms/index.html",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physical Chemistry Chemical Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://pubs.rsc.org/en/journals/journalissues/cp",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Physical Chemistry A",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://pubs.acs.org/journal/jpcafh",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Thin Solid Films",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/thin-solid-films/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Molecular Spectroscopy",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/journal-of-molecular-spectroscopy/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Chemical Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/chemical-physics/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Canadian Journal of Chemistry",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.nrcresearchpress.com/journal/cjc",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Mass Spectrometry",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)1096-9888c",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "ACS Applied Materials and Interfaces",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://pubs.acs.org/journal/aamick",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Chemical Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://jcp.aip.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Analytical Atomic Spectrometry",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://pubs.rsc.org/en/journals/journalissues/ja",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Applied Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://jap.aip.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Chemical Theory and Computation",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://pubs.acs.org/journal/jctcce",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of the American Society for Mass Spectrometry",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.elsevier.com/wps/find/journaldescription.cws_home/505727/description",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "International Journal of Mass Spectrometry",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/international-journal-of-mass-spectrometry/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Chemical Physics Letters",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/chemical-physics-letters/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Instrumentation Science and Technology",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.tandfonline.com/loi/list20",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Photonics and Nanostructures - Fundamentals and Applications",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/photonics-and-nanostructures-fundamentals-and-applications/",
+                "preview": null
+            },
+            "type": "journal",
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Photonics and Nanostructures - Fundamentals and Applications",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/photonics-and-nanostructures-fundamentals-and-applications/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Diamond and Related Materials",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/diamond-and-related-materials/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "International Journal of Unconventional Computing",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.oldcitypublishing.com/IJUC/IJUC.html",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Natural Computing",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springer.com/computer/theoretical+computer+science/journal/11047",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Contemporary Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.tandfonline.com/toc/tcph20/current",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Quantitative Spectroscopy and Radiative Transfer",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/journal-of-quantitative-spectroscopy-and-radiative-transfer/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Molecular Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.tandfonline.com/toc/tmph20/current",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Advances In Atomic, Molecular, and Optical Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.sciencedirect.com/science/bookseries/1049250X",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Astrophysical Journal Letters",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://iopscience.iop.org/2041-8205",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Solid State Chemistry",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/journal-of-solid-state-chemistry",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physical Review B - Condensed Matter and Materials Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://prb.aps.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Gold Bulletin",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springer.com/materials/special+types/journal/13404",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Physics: Conference Series",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://iopscience.iop.org/1742-6596",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Physics D: Applied Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://iopscience.iop.org/0022-3727/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Inorganic Chemistry",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://pubs.acs.org/journal/inocaj",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Chemistry - A European Journal",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291521-3765",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Polyhedron",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/polyhedron",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Materials Chemistry",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://pubs.rsc.org/en/journals/journalissues/jm",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Magnetism and Magnetic Materials",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/journal-of-magnetism-and-magnetic-materials",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Electronic Notes in Discrete Mathematics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.elsevier.com/journals/electronic-notes-in-discrete-mathematics/1571-0653",
+                "preview": null
+            },
+            "type": "journal",
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "International Journal of Modern Physics B",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.worldscientific.com/doi/abs/10.1142/S0217979212430084",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Hyperfine Interactions",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springer.com/physics/particle+and+nuclear+physics/journal/10751",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Proceedings of SPIE: Advances in Photonics of Quantum Computing, Memory, and Communication VI",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://spiedigitallibrary.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Physical Chemistry C",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://pubs.acs.org/journal/jpccck",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "International Journal of Quantum Chemistry",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291097-461X;jsessionid=EE1536C9DBE8651C4BA2C9FFD824BB17.d02t02",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Structural Chemistry",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springer.com/chemistry/journal/11224",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Science China Chemistry",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://chem.scichina.com:8081/sciBe/EN/volumn/home.shtml",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Wiley Interdisciplinary Reviews: Computational Molecular Science",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://onlinelibrary.wiley.com/journal/10.1111/%28ISSN%291759-0884",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Computational Chemistry",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291096-987X",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Proceedings of the National Academy of Sciences of the United States of America",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.pnas.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Molecular Structure: THEOCHEM",
+                        "spans": []
+                    }
+                }
+            ],
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Interdisciplinary sciences, computational life sciences",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://link.springer.com/journal/12539",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Cancer Biology and Therapy",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "https://www.landesbioscience.com/journals/5/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "ChemPhysChem",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291439-7641/issues",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "FEBS Letters",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.febsletters.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Theoretical Chemistry Accounts",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springer.com/chemistry/theoretical+and+computational+chemistry/journal/214",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "AIP Conference Proceedings",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://proceedings.aip.org/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Theoretical Biology",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/journal-of-theoretical-biology/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Electron Spectroscopy and Related Phenomena",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/journal-of-electron-spectroscopy-and-related-phenomena/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "ACS Symposium Series",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://pubs.acs.org/series/symposium",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Topics in Catalysis",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springer.com/chemistry/catalysis/journal/11244",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Microporous and Mesoporous Materials",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/microporous-and-mesoporous-materials/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Angewandte Chemie International Edition",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291521-3773",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Biopolymers",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://onlinelibrary.wiley.com/journal/10.1002/%28ISSN%291097-0282",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "The Journal of Physical Chemistry",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://pubs.acs.org/loi/jpchax",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Computers and Chemistry",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.sciencedirect.com/science/journal/00978485",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Catalysis Today",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/catalysis-today/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Applied Surface Science",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/applied-surface-science/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of the Chemical Society, Chemical Communications",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://pubs.rsc.org/en/journals/journalissues/c3#!issueid=c31995_0_24&type=archive&issnprint=0022-4936",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Theoretical and Computational Chemistry",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.worldscientific.com/worldscinet/jtcc",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Molecular Catalysis",
+                        "spans": []
+                    }
+                }
+            ],
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Quantum Electronics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.quantum-electron.ru/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Scientific Reports",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.nature.com/srep/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Russian Laser Research",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://sites.lebedev.ru/JRLR/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Nano Letters",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://pubs.acs.org/journal/nalefd",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Superconductor Science and Technology",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://iopscience.iop.org/0953-2048/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Doklady Mathematics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://link.springer.com/journal/11472",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Applied Physics A",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springer.com/materials/journal/339",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Optica",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.opticsinfobase.org/optica/home.cfm",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Physical Review Applied",
+                        "spans": []
+                    }
+                }
+            ],
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Advanced Materials",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)1521-4095",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Laser Physics Letters",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.lasphys.com/lasphyslett/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Applied Physics B",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springer.com/physics/journal/340",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Electronic Materials",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.tms.org/pubs/journals/JEM/jem.aspx",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "JETP",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.jetp.ac.ru",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Bulletin of the Russian Academy of Sciences Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springer.com/physics/particle+and+nuclear+physics/journal/11954",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "JETP Letters",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.jetpletters.ac.ru",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Bulletin of the Lebedev Physics Institute",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.springer.com/physics/journal/11953",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Light: Science & Applications",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.nature.com/lsa/index.html",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "European Physics Journal Special Topics",
+                        "spans": []
+                    }
+                }
+            ],
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Physics: Condensed Matter",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://iopscience.iop.org/0953-8984/",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Energy Conversional and Managment",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/energy-conversion-and-management",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Nature Materials",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.nature.com/nmat/index.html",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": " Superlattices and Microstructures",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.sciencedirect.com/science/journal/07496036",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Low Temperature Physics",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://aip.scitation.org/journal/ltp",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "European journal of chemical physics and physical chemistry",
+                        "spans": []
+                    }
+                }
+            ],
+            "type": "journal",
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Energy Conversional and Management",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.journals.elsevier.com/energy-conversion-and-management",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "European journal of chemical physics and physical chemistry",
+                        "spans": []
+                    }
+                }
+            ],
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Journal of Nanomaterials",
+                        "spans": []
+                    }
+                }
+            ],
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "Proceedings of SPIE",
+                        "spans": []
+                    }
+                }
+            ],
+            "tags": [],
+            "lang": "ru"
+        },
+        {
+            "type": "journal",
+            "name": [
+                {
+                    "type": "heading1",
+                    "content": {
+                        "text": "JETP Letters",
+                        "spans": []
+                    }
+                }
+            ],
+            "url": {
+                "url": "http://www.jetp.ac.ru/cgi-bin/r/index",
+                "preview": null
+            },
+            "tags": [],
+            "lang": "ru"
+        }
+    ]
+}

@@ -1,0 +1,6948 @@
+{
+    "author_publication_xref": [
+      {
+        "publication_id": "1983",
+        "author_id": "877",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1983",
+        "author_id": "1151",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1983",
+        "author_id": "1153",
+        "authord": "1",
+        "presenter": "0"
+      },
+
+      
+      {
+        "publication_id": "2152",
+        "author_id": "126",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2152",
+        "author_id": "521",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2152",
+        "author_id": "1270",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2152",
+        "author_id": "1651",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2152",
+        "author_id": "1652",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2153",
+        "author_id": "126",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1983",
+        "author_id": "126",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1979",
+        "author_id": "1363",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1979",
+        "author_id": "1255",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1979",
+        "author_id": "877",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1979",
+        "author_id": "126",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1935",
+        "author_id": "1362",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1935",
+        "author_id": "126",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1890",
+        "author_id": "1306",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1890",
+        "author_id": "590",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1890",
+        "author_id": "126",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1871",
+        "author_id": "1364",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1871",
+        "author_id": "1285",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1871",
+        "author_id": "590",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1871",
+        "author_id": "126",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1832",
+        "author_id": "1284",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1832",
+        "author_id": "1283",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1832",
+        "author_id": "1153",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1832",
+        "author_id": "1151",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1832",
+        "author_id": "590",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "1832",
+        "author_id": "126",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2154",
+        "author_id": "1659",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2154",
+        "author_id": "1660",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2154",
+        "author_id": "1661",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2154",
+        "author_id": "1662",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2154",
+        "author_id": "1663",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2154",
+        "author_id": "1664",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2154",
+        "author_id": "1665",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2155",
+        "author_id": "1666",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2156",
+        "author_id": "1666",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2156",
+        "author_id": "1667",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2156",
+        "author_id": "1668",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2157",
+        "author_id": "1666",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2157",
+        "author_id": "1669",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2158",
+        "author_id": "1670",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2158",
+        "author_id": "1652",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2158",
+        "author_id": "126",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2160",
+        "author_id": "1673",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2160",
+        "author_id": "1674",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2160",
+        "author_id": "1675",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2160",
+        "author_id": "1663",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2160",
+        "author_id": "1676",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2160",
+        "author_id": "1677",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2161",
+        "author_id": "1678",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2161",
+        "author_id": "1681",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2161",
+        "author_id": "1663",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2161",
+        "author_id": "1680",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2161",
+        "author_id": "1676",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2161",
+        "author_id": "1675",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2161",
+        "author_id": "1702",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2161",
+        "author_id": "1679",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2161",
+        "author_id": "1674",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2162",
+        "author_id": "1682",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2162",
+        "author_id": "1683",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2162",
+        "author_id": "1659",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2162",
+        "author_id": "1684",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2162",
+        "author_id": "1663",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2162",
+        "author_id": "1685",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2162",
+        "author_id": "1686",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2162",
+        "author_id": "1687",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2162",
+        "author_id": "1664",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2163",
+        "author_id": "1690",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2163",
+        "author_id": "1689",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2163",
+        "author_id": "1688",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2163",
+        "author_id": "1691",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2226",
+        "author_id": "1679",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2226",
+        "author_id": "1678",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2226",
+        "author_id": "1675",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2226",
+        "author_id": "1873",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2226",
+        "author_id": "1681",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2165",
+        "author_id": "1701",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2165",
+        "author_id": "1690",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2165",
+        "author_id": "1698",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2165",
+        "author_id": "1697",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2165",
+        "author_id": "1696",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2165",
+        "author_id": "1700",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2165",
+        "author_id": "1695",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2165",
+        "author_id": "1694",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2165",
+        "author_id": "1699",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2165",
+        "author_id": "1691",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2166",
+        "author_id": "1703",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2166",
+        "author_id": "1704",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2167",
+        "author_id": "1705",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2167",
+        "author_id": "1706",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2167",
+        "author_id": "1707",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2167",
+        "author_id": "1708",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2167",
+        "author_id": "1704",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2168",
+        "author_id": "1703",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2168",
+        "author_id": "1709",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2168",
+        "author_id": "1706",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2168",
+        "author_id": "1707",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2168",
+        "author_id": "1704",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2169",
+        "author_id": "1710",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2169",
+        "author_id": "1711",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2169",
+        "author_id": "1712",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2169",
+        "author_id": "1713",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2169",
+        "author_id": "1714",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2169",
+        "author_id": "1704",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2169",
+        "author_id": "1715",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2170",
+        "author_id": "1716",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2170",
+        "author_id": "1717",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2170",
+        "author_id": "1718",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2170",
+        "author_id": "1719",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2170",
+        "author_id": "1720",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2170",
+        "author_id": "1704",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2170",
+        "author_id": "1721",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2170",
+        "author_id": "1722",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2171",
+        "author_id": "1703",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2171",
+        "author_id": "1723",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2171",
+        "author_id": "1704",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2172",
+        "author_id": "1703",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2172",
+        "author_id": "1704",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2173",
+        "author_id": "1716",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2173",
+        "author_id": "1717",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2173",
+        "author_id": "1719",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2173",
+        "author_id": "1709",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2173",
+        "author_id": "1704",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2173",
+        "author_id": "1722",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2174",
+        "author_id": "1705",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2174",
+        "author_id": "1707",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2174",
+        "author_id": "1704",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2175",
+        "author_id": "1724",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2175",
+        "author_id": "1706",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2175",
+        "author_id": "1707",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2175",
+        "author_id": "1725",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2175",
+        "author_id": "1726",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2175",
+        "author_id": "1727",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2175",
+        "author_id": "1704",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2176",
+        "author_id": "1706",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2176",
+        "author_id": "1728",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2176",
+        "author_id": "1729",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2176",
+        "author_id": "1705",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2176",
+        "author_id": "1707",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2176",
+        "author_id": "1730",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2176",
+        "author_id": "1731",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2176",
+        "author_id": "1732",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2176",
+        "author_id": "1704",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2177",
+        "author_id": "1724",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2177",
+        "author_id": "1706",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2177",
+        "author_id": "1733",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2177",
+        "author_id": "1734",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2177",
+        "author_id": "1707",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2177",
+        "author_id": "1725",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2177",
+        "author_id": "1704",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2178",
+        "author_id": "1724",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2178",
+        "author_id": "1706",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2178",
+        "author_id": "1733",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2178",
+        "author_id": "1734",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2178",
+        "author_id": "1707",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2178",
+        "author_id": "1725",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2178",
+        "author_id": "1704",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2179",
+        "author_id": "1709",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2179",
+        "author_id": "1704",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2180",
+        "author_id": "1735",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2180",
+        "author_id": "1736",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2180",
+        "author_id": "1737",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2180",
+        "author_id": "1738",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2180",
+        "author_id": "1709",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2180",
+        "author_id": "1704",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2180",
+        "author_id": "1739",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2181",
+        "author_id": "1724",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2181",
+        "author_id": "1706",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2181",
+        "author_id": "1740",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2181",
+        "author_id": "1741",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2181",
+        "author_id": "1707",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2181",
+        "author_id": "1725",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2181",
+        "author_id": "1704",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2183",
+        "author_id": "1666",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2183",
+        "author_id": "1742",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2184",
+        "author_id": "1666",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2184",
+        "author_id": "1743",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2187",
+        "author_id": "1666",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2187",
+        "author_id": "1743",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2193",
+        "author_id": "1673",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2193",
+        "author_id": "1674",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2191",
+        "author_id": "1742",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2191",
+        "author_id": "1666",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2193",
+        "author_id": "1751",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2193",
+        "author_id": "1752",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2193",
+        "author_id": "1678",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2193",
+        "author_id": "1663",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2193",
+        "author_id": "1676",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2193",
+        "author_id": "1702",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2194",
+        "author_id": "1753",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2194",
+        "author_id": "1754",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2195",
+        "author_id": "126",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2196",
+        "author_id": "1270",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2196",
+        "author_id": "1755",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2196",
+        "author_id": "1310",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2196",
+        "author_id": "932",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2196",
+        "author_id": "126",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2196",
+        "author_id": "521",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2197",
+        "author_id": "1760",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2197",
+        "author_id": "1761",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2197",
+        "author_id": "1762",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2197",
+        "author_id": "1763",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2197",
+        "author_id": "1764",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2197",
+        "author_id": "1765",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2197",
+        "author_id": "1759",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2197",
+        "author_id": "1766",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2197",
+        "author_id": "1758",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2197",
+        "author_id": "1767",
+        "authord": "11",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2197",
+        "author_id": "1757",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2197",
+        "author_id": "1768",
+        "authord": "12",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2197",
+        "author_id": "1756",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2197",
+        "author_id": "1769",
+        "authord": "13",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2198",
+        "author_id": "1765",
+        "authord": "11",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2198",
+        "author_id": "1773",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2198",
+        "author_id": "1772",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2198",
+        "author_id": "1760",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2198",
+        "author_id": "1757",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2198",
+        "author_id": "1762",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2198",
+        "author_id": "1759",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2198",
+        "author_id": "1763",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2198",
+        "author_id": "1764",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2198",
+        "author_id": "1758",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2198",
+        "author_id": "1771",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2198",
+        "author_id": "1770",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2198",
+        "author_id": "1774",
+        "authord": "12",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2198",
+        "author_id": "1766",
+        "authord": "13",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2198",
+        "author_id": "1767",
+        "authord": "14",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2198",
+        "author_id": "1768",
+        "authord": "15",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2198",
+        "author_id": "1769",
+        "authord": "16",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2199",
+        "author_id": "1758",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2199",
+        "author_id": "1757",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2199",
+        "author_id": "1775",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2199",
+        "author_id": "1776",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2199",
+        "author_id": "1777",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2199",
+        "author_id": "1778",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2199",
+        "author_id": "1759",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2199",
+        "author_id": "1769",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2199",
+        "author_id": "1779",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2199",
+        "author_id": "1780",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2200",
+        "author_id": "1758",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2200",
+        "author_id": "1757",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2200",
+        "author_id": "1760",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2200",
+        "author_id": "1759",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2200",
+        "author_id": "1770",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2200",
+        "author_id": "1771",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2200",
+        "author_id": "1762",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2200",
+        "author_id": "1763",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2200",
+        "author_id": "1772",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2200",
+        "author_id": "1773",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2200",
+        "author_id": "1764",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2200",
+        "author_id": "1765",
+        "authord": "11",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2200",
+        "author_id": "1774",
+        "authord": "12",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2200",
+        "author_id": "1766",
+        "authord": "13",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2200",
+        "author_id": "1767",
+        "authord": "14",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2200",
+        "author_id": "1768",
+        "authord": "15",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2200",
+        "author_id": "1769",
+        "authord": "16",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2201",
+        "author_id": "1792",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2201",
+        "author_id": "1666",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2201",
+        "author_id": "1670",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2201",
+        "author_id": "126",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2203",
+        "author_id": "1795",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2203",
+        "author_id": "1794",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2203",
+        "author_id": "1793",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2204",
+        "author_id": "1667",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2204",
+        "author_id": "1666",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2204",
+        "author_id": "1668",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2205",
+        "author_id": "1797",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2205",
+        "author_id": "1798",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2205",
+        "author_id": "1796",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2206",
+        "author_id": "1285",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2206",
+        "author_id": "1799",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2206",
+        "author_id": "590",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2206",
+        "author_id": "126",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2207",
+        "author_id": "1802",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2207",
+        "author_id": "1803",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2207",
+        "author_id": "1800",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2208",
+        "author_id": "1800",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2209",
+        "author_id": "1806",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2209",
+        "author_id": "1808",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2209",
+        "author_id": "1807",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2209",
+        "author_id": "1805",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2209",
+        "author_id": "1804",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2209",
+        "author_id": "1800",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2210",
+        "author_id": "1810",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2210",
+        "author_id": "1809",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2212",
+        "author_id": "1811",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2212",
+        "author_id": "1758",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2212",
+        "author_id": "1768",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2213",
+        "author_id": "1667",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2213",
+        "author_id": "1668",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2213",
+        "author_id": "1793",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2213",
+        "author_id": "1666",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2216",
+        "author_id": "1753",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2216",
+        "author_id": "1760",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2216",
+        "author_id": "1757",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2216",
+        "author_id": "1758",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2214",
+        "author_id": "1671",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2214",
+        "author_id": "1672",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2214",
+        "author_id": "1666",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2214",
+        "author_id": "1669",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2216",
+        "author_id": "1759",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2216",
+        "author_id": "1763",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2216",
+        "author_id": "1769",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2216",
+        "author_id": "1754",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2217",
+        "author_id": "1813",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2217",
+        "author_id": "1812",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2218",
+        "author_id": "1812",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2219",
+        "author_id": "1821",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2219",
+        "author_id": "1822",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2219",
+        "author_id": "1823",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2219",
+        "author_id": "1700",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2219",
+        "author_id": "1825",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2219",
+        "author_id": "1826",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2219",
+        "author_id": "1827",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2219",
+        "author_id": "1824",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2219",
+        "author_id": "1820",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2219",
+        "author_id": "1691",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2220",
+        "author_id": "1814",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2220",
+        "author_id": "1815",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2220",
+        "author_id": "1816",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2220",
+        "author_id": "1817",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2220",
+        "author_id": "1818",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2220",
+        "author_id": "1819",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2220",
+        "author_id": "1820",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2220",
+        "author_id": "1691",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2221",
+        "author_id": "1688",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2221",
+        "author_id": "1689",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2221",
+        "author_id": "1692",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2221",
+        "author_id": "1693",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2221",
+        "author_id": "1691",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2222",
+        "author_id": "1828",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2222",
+        "author_id": "1691",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2222",
+        "author_id": "1829",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2223",
+        "author_id": "1830",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2223",
+        "author_id": "1831",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2223",
+        "author_id": "1688",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2223",
+        "author_id": "1701",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2223",
+        "author_id": "1832",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2223",
+        "author_id": "1833",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2223",
+        "author_id": "1834",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2223",
+        "author_id": "1835",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2223",
+        "author_id": "1836",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2223",
+        "author_id": "1691",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2227",
+        "author_id": "1847",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2227",
+        "author_id": "1846",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2227",
+        "author_id": "1845",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2227",
+        "author_id": "168",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2226",
+        "author_id": "1676",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2226",
+        "author_id": "1677",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2226",
+        "author_id": "1663",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2227",
+        "author_id": "1844",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2227",
+        "author_id": "1848",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2227",
+        "author_id": "1850",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2225",
+        "author_id": "1689",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2225",
+        "author_id": "1688",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2225",
+        "author_id": "1816",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2225",
+        "author_id": "1837",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2225",
+        "author_id": "1838",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2225",
+        "author_id": "1839",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2225",
+        "author_id": "1840",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2225",
+        "author_id": "1841",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2225",
+        "author_id": "1692",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2225",
+        "author_id": "1693",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2225",
+        "author_id": "1691",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2227",
+        "author_id": "1663",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2227",
+        "author_id": "1851",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2227",
+        "author_id": "1665",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2227",
+        "author_id": "1664",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2228",
+        "author_id": "1854",
+        "authord": "11",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2228",
+        "author_id": "1731",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2228",
+        "author_id": "1706",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2228",
+        "author_id": "1704",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2228",
+        "author_id": "1852",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2228",
+        "author_id": "1724",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2228",
+        "author_id": "1067",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2228",
+        "author_id": "1855",
+        "authord": "12",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2228",
+        "author_id": "1708",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2228",
+        "author_id": "1853",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2228",
+        "author_id": "1728",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2228",
+        "author_id": "1707",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2228",
+        "author_id": "1663",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2228",
+        "author_id": "1874",
+        "authord": "13",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2228",
+        "author_id": "1875",
+        "authord": "14",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2228",
+        "author_id": "1876",
+        "authord": "15",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2231",
+        "author_id": "1856",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2231",
+        "author_id": "1857",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2231",
+        "author_id": "1858",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2231",
+        "author_id": "1859",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2231",
+        "author_id": "1860",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2231",
+        "author_id": "1750",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2231",
+        "author_id": "1861",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2231",
+        "author_id": "1862",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2231",
+        "author_id": "1663",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2232",
+        "author_id": "1863",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2232",
+        "author_id": "1750",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2232",
+        "author_id": "1865",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2232",
+        "author_id": "1119",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2232",
+        "author_id": "1663",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2232",
+        "author_id": "1866",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2232",
+        "author_id": "1867",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2232",
+        "author_id": "1868",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2232",
+        "author_id": "1869",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2232",
+        "author_id": "1870",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2232",
+        "author_id": "1871",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2232",
+        "author_id": "1872",
+        "authord": "11",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2234",
+        "author_id": "1877",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2235",
+        "author_id": "1878",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2235",
+        "author_id": "1879",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2235",
+        "author_id": "1880",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2235",
+        "author_id": "1877",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2236",
+        "author_id": "1880",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2236",
+        "author_id": "1877",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2236",
+        "author_id": "1879",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2237",
+        "author_id": "1880",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2237",
+        "author_id": "1877",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2237",
+        "author_id": "1879",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2238",
+        "author_id": "1792",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2238",
+        "author_id": "1881",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2238",
+        "author_id": "1670",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2238",
+        "author_id": "126",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2239",
+        "author_id": "1882",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2239",
+        "author_id": "1",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2239",
+        "author_id": "126",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2240",
+        "author_id": "1799",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2240",
+        "author_id": "1652",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2240",
+        "author_id": "1285",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2240",
+        "author_id": "590",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2240",
+        "author_id": "1883",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2240",
+        "author_id": "126",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2241",
+        "author_id": "1884",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2241",
+        "author_id": "1889",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2241",
+        "author_id": "1888",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2241",
+        "author_id": "1885",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2241",
+        "author_id": "1886",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2241",
+        "author_id": "1801",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2241",
+        "author_id": "1887",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2242",
+        "author_id": "1890",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2242",
+        "author_id": "1872",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2242",
+        "author_id": "1871",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2248",
+        "author_id": "1893",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2248",
+        "author_id": "1894",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2248",
+        "author_id": "1892",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2248",
+        "author_id": "1805",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2248",
+        "author_id": "1800",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2250",
+        "author_id": "1895",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2250",
+        "author_id": "1896",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2250",
+        "author_id": "1897",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2250",
+        "author_id": "1898",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2250",
+        "author_id": "1899",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2250",
+        "author_id": "1806",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2250",
+        "author_id": "1900",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2250",
+        "author_id": "1800",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2250",
+        "author_id": "1901",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2250",
+        "author_id": "1902",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2250",
+        "author_id": "1903",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2251",
+        "author_id": "1912",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2251",
+        "author_id": "1911",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2251",
+        "author_id": "1910",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2251",
+        "author_id": "1800",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2251",
+        "author_id": "1913",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2251",
+        "author_id": "1908",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2251",
+        "author_id": "1915",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2251",
+        "author_id": "1909",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2251",
+        "author_id": "1906",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2251",
+        "author_id": "1905",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2251",
+        "author_id": "1904",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2251",
+        "author_id": "1914",
+        "authord": "11",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2252",
+        "author_id": "1916",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2252",
+        "author_id": "1803",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2252",
+        "author_id": "1800",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2252",
+        "author_id": "1917",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2252",
+        "author_id": "1918",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "0",
+        "author_id": "0",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2339",
+        "author_id": "1691",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2339",
+        "author_id": "1836",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2339",
+        "author_id": "1835",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2339",
+        "author_id": "1834",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2339",
+        "author_id": "1833",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2339",
+        "author_id": "1832",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2339",
+        "author_id": "1701",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2339",
+        "author_id": "1688",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2339",
+        "author_id": "1831",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2339",
+        "author_id": "1830",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2340",
+        "author_id": "1920",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2340",
+        "author_id": "1921",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2340",
+        "author_id": "1922",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2340",
+        "author_id": "1923",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2340",
+        "author_id": "1924",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2341",
+        "author_id": "1925",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2341",
+        "author_id": "1926",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2341",
+        "author_id": "1927",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2342",
+        "author_id": "1704",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2342",
+        "author_id": "1703",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2343",
+        "author_id": "1887",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2343",
+        "author_id": "1928",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2343",
+        "author_id": "1929",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2343",
+        "author_id": "1888",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2343",
+        "author_id": "1889",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2343",
+        "author_id": "1884",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2344",
+        "author_id": "1704",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2344",
+        "author_id": "1930",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2383",
+        "author_id": "1673",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2348",
+        "author_id": "1931",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2348",
+        "author_id": "1932",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2349",
+        "author_id": "1758",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2349",
+        "author_id": "1753",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2349",
+        "author_id": "1761",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2350",
+        "author_id": "1871",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2350",
+        "author_id": "1872",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2350",
+        "author_id": "1933",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2350",
+        "author_id": "1119",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2350",
+        "author_id": "1890",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2350",
+        "author_id": "1934",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2350",
+        "author_id": "1935",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2352",
+        "author_id": "1704",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2352",
+        "author_id": "1707",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2352",
+        "author_id": "1708",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2352",
+        "author_id": "1709",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2352",
+        "author_id": "1724",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2352",
+        "author_id": "1706",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2353",
+        "author_id": "1704",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2353",
+        "author_id": "1725",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2353",
+        "author_id": "1707",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2353",
+        "author_id": "1734",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2353",
+        "author_id": "1733",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2353",
+        "author_id": "1706",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2353",
+        "author_id": "1724",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2354",
+        "author_id": "1704",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2354",
+        "author_id": "1707",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2354",
+        "author_id": "1708",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2354",
+        "author_id": "1705",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2354",
+        "author_id": "1709",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2354",
+        "author_id": "1936",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2355",
+        "author_id": "126",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2355",
+        "author_id": "590",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2355",
+        "author_id": "1285",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2356",
+        "author_id": "1704",
+        "authord": "11",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2356",
+        "author_id": "2060",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2356",
+        "author_id": "1723",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2356",
+        "author_id": "1710",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2356",
+        "author_id": "1707",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2356",
+        "author_id": "2061",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2356",
+        "author_id": "2062",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2356",
+        "author_id": "1718",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2356",
+        "author_id": "1708",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2356",
+        "author_id": "1709",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2356",
+        "author_id": "1937",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2357",
+        "author_id": "1938",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2357",
+        "author_id": "1939",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2357",
+        "author_id": "1940",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2357",
+        "author_id": "1930",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2357",
+        "author_id": "1942",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2357",
+        "author_id": "1943",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2358",
+        "author_id": "1704",
+        "authord": "12",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2358",
+        "author_id": "1732",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2358",
+        "author_id": "1730",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2358",
+        "author_id": "1707",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2358",
+        "author_id": "1854",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2358",
+        "author_id": "1728",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2358",
+        "author_id": "1708",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2358",
+        "author_id": "1724",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2358",
+        "author_id": "1706",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2359",
+        "author_id": "1704",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2359",
+        "author_id": "1707",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2359",
+        "author_id": "1944",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2359",
+        "author_id": "1709",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2359",
+        "author_id": "1705",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2360",
+        "author_id": "1704",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2360",
+        "author_id": "1945",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2360",
+        "author_id": "1946",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2360",
+        "author_id": "1710",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2360",
+        "author_id": "1709",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2361",
+        "author_id": "1709",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2361",
+        "author_id": "2063",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2361",
+        "author_id": "1949",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2361",
+        "author_id": "1717",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2361",
+        "author_id": "1704",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2361",
+        "author_id": "1719",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2361",
+        "author_id": "1716",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2361",
+        "author_id": "1948",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2362",
+        "author_id": "1837",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2362",
+        "author_id": "1964",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2362",
+        "author_id": "1965",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2362",
+        "author_id": "1966",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2362",
+        "author_id": "1693",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2362",
+        "author_id": "1692",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2362",
+        "author_id": "1967",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2363",
+        "author_id": "1921",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2363",
+        "author_id": "1968",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2364",
+        "author_id": "1769",
+        "authord": "14",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2364",
+        "author_id": "1768",
+        "authord": "13",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2364",
+        "author_id": "1767",
+        "authord": "12",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2364",
+        "author_id": "1766",
+        "authord": "11",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2364",
+        "author_id": "1765",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2364",
+        "author_id": "1764",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2364",
+        "author_id": "1763",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2364",
+        "author_id": "1762",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2364",
+        "author_id": "1761",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2364",
+        "author_id": "1760",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2364",
+        "author_id": "1759",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2364",
+        "author_id": "1758",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2364",
+        "author_id": "1757",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2364",
+        "author_id": "1756",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2365",
+        "author_id": "1704",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2365",
+        "author_id": "1732",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2365",
+        "author_id": "1728",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2365",
+        "author_id": "1930",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2365",
+        "author_id": "1854",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2365",
+        "author_id": "1706",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2366",
+        "author_id": "1768",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2366",
+        "author_id": "1969",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2366",
+        "author_id": "1970",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2366",
+        "author_id": "1971",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2366",
+        "author_id": "1972",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2366",
+        "author_id": "1973",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2366",
+        "author_id": "1974",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2367",
+        "author_id": "1704",
+        "authord": "11",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2367",
+        "author_id": "1707",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2367",
+        "author_id": "906",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2367",
+        "author_id": "1958",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2367",
+        "author_id": "1300",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2367",
+        "author_id": "1959",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2367",
+        "author_id": "1960",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2367",
+        "author_id": "1961",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2367",
+        "author_id": "1950",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2367",
+        "author_id": "1963",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2368",
+        "author_id": "1704",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2368",
+        "author_id": "1731",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2368",
+        "author_id": "1725",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2368",
+        "author_id": "1707",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2368",
+        "author_id": "1708",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2368",
+        "author_id": "1724",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2368",
+        "author_id": "1706",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2369",
+        "author_id": "1704",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2369",
+        "author_id": "1725",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2369",
+        "author_id": "1707",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2369",
+        "author_id": "1734",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2369",
+        "author_id": "1733",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2369",
+        "author_id": "1706",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2369",
+        "author_id": "1705",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2369",
+        "author_id": "1724",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2370",
+        "author_id": "1704",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2370",
+        "author_id": "1708",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2370",
+        "author_id": "1854",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2370",
+        "author_id": "1707",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2370",
+        "author_id": "1705",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2370",
+        "author_id": "1937",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2371",
+        "author_id": "1704",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2371",
+        "author_id": "1707",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2371",
+        "author_id": "1706",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2371",
+        "author_id": "1724",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2373",
+        "author_id": "1809",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2373",
+        "author_id": "1979",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2374",
+        "author_id": "1980",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2374",
+        "author_id": "1981",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2374",
+        "author_id": "1982",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2375",
+        "author_id": "1983",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2375",
+        "author_id": "1984",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2375",
+        "author_id": "1985",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2375",
+        "author_id": "1986",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2375",
+        "author_id": "1987",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2375",
+        "author_id": "1988",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2376",
+        "author_id": "1989",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2376",
+        "author_id": "1983",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2376",
+        "author_id": "1986",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2376",
+        "author_id": "1987",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2376",
+        "author_id": "1988",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2376",
+        "author_id": "1990",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2376",
+        "author_id": "1985",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2377",
+        "author_id": "1704",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2377",
+        "author_id": "1930",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2378",
+        "author_id": "1704",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2378",
+        "author_id": "1709",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2381",
+        "author_id": "1892",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2381",
+        "author_id": "1995",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2381",
+        "author_id": "1996",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2381",
+        "author_id": "1997",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2382",
+        "author_id": "1998",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2382",
+        "author_id": "1999",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2382",
+        "author_id": "2000",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2382",
+        "author_id": "2001",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2382",
+        "author_id": "1995",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2382",
+        "author_id": "1892",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2382",
+        "author_id": "1996",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2384",
+        "author_id": "1704",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2385",
+        "author_id": "1995",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2385",
+        "author_id": "1892",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2385",
+        "author_id": "1894",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2386",
+        "author_id": "2002",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2386",
+        "author_id": "2003",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2386",
+        "author_id": "2004",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2387",
+        "author_id": "1926",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2387",
+        "author_id": "1953",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2387",
+        "author_id": "2005",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2387",
+        "author_id": "1927",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2388",
+        "author_id": "2006",
+        "authord": "11",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2388",
+        "author_id": "1989",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2388",
+        "author_id": "2007",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2388",
+        "author_id": "2008",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2388",
+        "author_id": "1983",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2388",
+        "author_id": "1987",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2388",
+        "author_id": "1988",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2388",
+        "author_id": "2009",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2388",
+        "author_id": "1986",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2388",
+        "author_id": "1170",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2388",
+        "author_id": "1985",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2389",
+        "author_id": "2010",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2389",
+        "author_id": "1927",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2389",
+        "author_id": "1926",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2389",
+        "author_id": "2011",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2389",
+        "author_id": "2012",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2390",
+        "author_id": "1686",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2390",
+        "author_id": "2013",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2390",
+        "author_id": "2014",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2390",
+        "author_id": "2015",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2390",
+        "author_id": "1926",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2390",
+        "author_id": "1927",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2391",
+        "author_id": "1704",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2391",
+        "author_id": "1707",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2391",
+        "author_id": "1705",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2392",
+        "author_id": "2016",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2394",
+        "author_id": "2020",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2394",
+        "author_id": "1917",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2394",
+        "author_id": "1916",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2394",
+        "author_id": "2021",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2395",
+        "author_id": "2022",
+        "authord": "11",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2395",
+        "author_id": "2023",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2395",
+        "author_id": "2024",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2395",
+        "author_id": "2025",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2395",
+        "author_id": "2026",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2395",
+        "author_id": "2027",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2395",
+        "author_id": "2028",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2395",
+        "author_id": "2029",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2395",
+        "author_id": "2030",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2395",
+        "author_id": "2031",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2396",
+        "author_id": "1995",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2396",
+        "author_id": "1892",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2397",
+        "author_id": "2032",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2397",
+        "author_id": "2033",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2397",
+        "author_id": "2034",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2397",
+        "author_id": "1704",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2397",
+        "author_id": "1709",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2398",
+        "author_id": "1704",
+        "authord": "11",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2398",
+        "author_id": "1709",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2398",
+        "author_id": "2035",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2398",
+        "author_id": "2036",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2398",
+        "author_id": "2037",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2398",
+        "author_id": "2038",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2398",
+        "author_id": "1950",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2398",
+        "author_id": "2039",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2398",
+        "author_id": "2040",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2398",
+        "author_id": "2041",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2400",
+        "author_id": "2044",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2400",
+        "author_id": "1917",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2400",
+        "author_id": "1916",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2400",
+        "author_id": "2021",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2401",
+        "author_id": "1676",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2401",
+        "author_id": "1702",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2401",
+        "author_id": "1663",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2401",
+        "author_id": "1681",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2401",
+        "author_id": "1873",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2401",
+        "author_id": "1678",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2401",
+        "author_id": "1679",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2401",
+        "author_id": "1675",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2402",
+        "author_id": "1927",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2402",
+        "author_id": "1926",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2402",
+        "author_id": "2046",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2402",
+        "author_id": "2047",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2402",
+        "author_id": "1953",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2403",
+        "author_id": "2006",
+        "authord": "11",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2403",
+        "author_id": "1989",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2403",
+        "author_id": "2007",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2403",
+        "author_id": "2008",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2403",
+        "author_id": "1983",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2403",
+        "author_id": "1986",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2403",
+        "author_id": "1987",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2403",
+        "author_id": "1988",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2403",
+        "author_id": "2009",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2403",
+        "author_id": "1170",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2403",
+        "author_id": "1985",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2404",
+        "author_id": "1995",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2404",
+        "author_id": "1892",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2405",
+        "author_id": "1927",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2405",
+        "author_id": "2048",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2405",
+        "author_id": "1954",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2405",
+        "author_id": "1926",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2406",
+        "author_id": "1676",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2406",
+        "author_id": "1674",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2406",
+        "author_id": "1680",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2406",
+        "author_id": "1681",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2406",
+        "author_id": "1702",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2406",
+        "author_id": "1675",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2406",
+        "author_id": "1663",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2406",
+        "author_id": "1679",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2406",
+        "author_id": "1678",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2407",
+        "author_id": "1995",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2407",
+        "author_id": "1892",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2408",
+        "author_id": "1667",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2408",
+        "author_id": "1666",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2361",
+        "author_id": "1947",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2361",
+        "author_id": "1722",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2357",
+        "author_id": "1704",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2409",
+        "author_id": "1877",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2410",
+        "author_id": "1877",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2413",
+        "author_id": "1805",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2413",
+        "author_id": "1800",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2416",
+        "author_id": "2066",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2416",
+        "author_id": "2067",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2416",
+        "author_id": "2068",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2416",
+        "author_id": "2069",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2416",
+        "author_id": "2070",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2416",
+        "author_id": "314",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2417",
+        "author_id": "2071",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2417",
+        "author_id": "2072",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2417",
+        "author_id": "2069",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2418",
+        "author_id": "1891",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2418",
+        "author_id": "2073",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2418",
+        "author_id": "2074",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2418",
+        "author_id": "2075",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2418",
+        "author_id": "1079",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2418",
+        "author_id": "2076",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2419",
+        "author_id": "1996",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2419",
+        "author_id": "2077",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2419",
+        "author_id": "1995",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2419",
+        "author_id": "1892",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2419",
+        "author_id": "1800",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2420",
+        "author_id": "1800",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2420",
+        "author_id": "1891",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2420",
+        "author_id": "1806",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2420",
+        "author_id": "1898",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2420",
+        "author_id": "2078",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2422",
+        "author_id": "2079",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2422",
+        "author_id": "2080",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2422",
+        "author_id": "2077",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2422",
+        "author_id": "2081",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2422",
+        "author_id": "1800",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2422",
+        "author_id": "2082",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2423",
+        "author_id": "1792",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2423",
+        "author_id": "1666",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2423",
+        "author_id": "1670",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2423",
+        "author_id": "126",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2425",
+        "author_id": "2090",
+        "authord": "13",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2425",
+        "author_id": "1804",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2425",
+        "author_id": "2086",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2425",
+        "author_id": "2083",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2425",
+        "author_id": "2087",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2425",
+        "author_id": "2091",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2425",
+        "author_id": "2089",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2425",
+        "author_id": "2085",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2425",
+        "author_id": "1806",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2425",
+        "author_id": "1800",
+        "authord": "12",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2425",
+        "author_id": "2069",
+        "authord": "11",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2425",
+        "author_id": "2072",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2433",
+        "author_id": "2084",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2426",
+        "author_id": "2043",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2426",
+        "author_id": "1917",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2426",
+        "author_id": "2042",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2426",
+        "author_id": "1916",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2428",
+        "author_id": "2020",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2428",
+        "author_id": "1916",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2428",
+        "author_id": "1917",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2428",
+        "author_id": "2021",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2429",
+        "author_id": "2103",
+        "authord": "11",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2429",
+        "author_id": "2102",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2429",
+        "author_id": "2101",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2429",
+        "author_id": "2104",
+        "authord": "12",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2429",
+        "author_id": "2100",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2429",
+        "author_id": "2099",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2429",
+        "author_id": "2098",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2429",
+        "author_id": "2097",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2429",
+        "author_id": "2096",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2429",
+        "author_id": "1916",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2429",
+        "author_id": "2095",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2429",
+        "author_id": "2094",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2429",
+        "author_id": "2093",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2430",
+        "author_id": "2021",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2430",
+        "author_id": "1916",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2430",
+        "author_id": "1917",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2430",
+        "author_id": "2020",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2432",
+        "author_id": "2105",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2432",
+        "author_id": "2106",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2432",
+        "author_id": "2090",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2432",
+        "author_id": "2072",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2432",
+        "author_id": "2069",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2425",
+        "author_id": "2084",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2433",
+        "author_id": "2107",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2433",
+        "author_id": "2108",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2433",
+        "author_id": "2087",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2433",
+        "author_id": "2088",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2433",
+        "author_id": "2083",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2433",
+        "author_id": "2109",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2433",
+        "author_id": "2110",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2433",
+        "author_id": "2091",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2433",
+        "author_id": "2089",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2433",
+        "author_id": "1800",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2433",
+        "author_id": "2069",
+        "authord": "11",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2433",
+        "author_id": "2090",
+        "authord": "12",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2434",
+        "author_id": "2069",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2434",
+        "author_id": "2072",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2434",
+        "author_id": "2106",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2434",
+        "author_id": "2111",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2435",
+        "author_id": "1917",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2435",
+        "author_id": "1916",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2435",
+        "author_id": "2112",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2435",
+        "author_id": "2113",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2435",
+        "author_id": "2114",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2435",
+        "author_id": "2115",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2436",
+        "author_id": "2112",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2436",
+        "author_id": "1917",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2436",
+        "author_id": "1916",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2436",
+        "author_id": "2021",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2436",
+        "author_id": "2113",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2436",
+        "author_id": "2115",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2437",
+        "author_id": "2112",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2437",
+        "author_id": "1917",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2437",
+        "author_id": "1916",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2437",
+        "author_id": "2115",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2437",
+        "author_id": "2113",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2438",
+        "author_id": "1894",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2438",
+        "author_id": "1893",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2438",
+        "author_id": "1892",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2438",
+        "author_id": "2078",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2438",
+        "author_id": "1800",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2439",
+        "author_id": "1806",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2439",
+        "author_id": "1804",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2439",
+        "author_id": "1891",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2439",
+        "author_id": "2116",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2439",
+        "author_id": "2078",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2439",
+        "author_id": "2069",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2439",
+        "author_id": "1800",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2440",
+        "author_id": "2078",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2440",
+        "author_id": "1891",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2440",
+        "author_id": "1800",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2441",
+        "author_id": "2021",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2441",
+        "author_id": "1916",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2441",
+        "author_id": "1917",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2441",
+        "author_id": "2020",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2442",
+        "author_id": "2117",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2442",
+        "author_id": "1800",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2442",
+        "author_id": "1891",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2442",
+        "author_id": "1806",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2443",
+        "author_id": "2119",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2443",
+        "author_id": "2118",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2443",
+        "author_id": "1668",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2444",
+        "author_id": "2120",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2444",
+        "author_id": "2075",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2444",
+        "author_id": "1651",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2444",
+        "author_id": "2121",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2444",
+        "author_id": "1891",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2444",
+        "author_id": "2076",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2444",
+        "author_id": "1079",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2445",
+        "author_id": "1877",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2445",
+        "author_id": "1880",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2445",
+        "author_id": "1879",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2446",
+        "author_id": "2073",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2446",
+        "author_id": "1891",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2446",
+        "author_id": "2122",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2447",
+        "author_id": "2123",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2447",
+        "author_id": "1886",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2447",
+        "author_id": "1801",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2448",
+        "author_id": "1886",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2448",
+        "author_id": "1801",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2449",
+        "author_id": "1928",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2449",
+        "author_id": "2123",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2449",
+        "author_id": "1982",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2449",
+        "author_id": "2124",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2449",
+        "author_id": "1887",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2449",
+        "author_id": "1801",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2450",
+        "author_id": "1982",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2450",
+        "author_id": "1928",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2450",
+        "author_id": "1887",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2450",
+        "author_id": "1801",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2451",
+        "author_id": "2125",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2451",
+        "author_id": "2126",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2451",
+        "author_id": "2127",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2451",
+        "author_id": "2128",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2451",
+        "author_id": "2129",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2451",
+        "author_id": "2130",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2451",
+        "author_id": "1928",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2451",
+        "author_id": "1982",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2451",
+        "author_id": "1801",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2451",
+        "author_id": "1887",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2452",
+        "author_id": "2131",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2452",
+        "author_id": "2132",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2452",
+        "author_id": "1801",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2452",
+        "author_id": "1887",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2453",
+        "author_id": "1982",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2453",
+        "author_id": "1981",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2453",
+        "author_id": "2133",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2454",
+        "author_id": "1982",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2454",
+        "author_id": "1928",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2454",
+        "author_id": "1801",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2457",
+        "author_id": "2134",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2457",
+        "author_id": "1980",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2457",
+        "author_id": "2135",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2457",
+        "author_id": "1982",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2457",
+        "author_id": "2136",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2458",
+        "author_id": "1982",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2458",
+        "author_id": "1981",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2458",
+        "author_id": "2134",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2458",
+        "author_id": "2137",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2459",
+        "author_id": "2069",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2460",
+        "author_id": "2105",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2460",
+        "author_id": "2106",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2460",
+        "author_id": "2072",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2460",
+        "author_id": "2069",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2461",
+        "author_id": "2105",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2461",
+        "author_id": "2069",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2462",
+        "author_id": "2138",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2462",
+        "author_id": "2069",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2463",
+        "author_id": "2083",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2463",
+        "author_id": "2069",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2464",
+        "author_id": "2139",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2464",
+        "author_id": "2106",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2464",
+        "author_id": "2087",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2464",
+        "author_id": "2140",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2464",
+        "author_id": "2088",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2464",
+        "author_id": "2089",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2464",
+        "author_id": "821",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2464",
+        "author_id": "820",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2464",
+        "author_id": "2072",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2464",
+        "author_id": "2090",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2464",
+        "author_id": "2069",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2465",
+        "author_id": "2145",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2465",
+        "author_id": "2148",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2465",
+        "author_id": "2144",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2465",
+        "author_id": "2143",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2465",
+        "author_id": "2146",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2465",
+        "author_id": "2142",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2465",
+        "author_id": "2106",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2465",
+        "author_id": "2072",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2465",
+        "author_id": "2069",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2465",
+        "author_id": "2141",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2466",
+        "author_id": "1909",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2466",
+        "author_id": "2116",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2466",
+        "author_id": "1898",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2466",
+        "author_id": "1903",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2466",
+        "author_id": "1800",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2467",
+        "author_id": "1804",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2467",
+        "author_id": "1800",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2467",
+        "author_id": "2149",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2467",
+        "author_id": "2150",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2468",
+        "author_id": "2124",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2468",
+        "author_id": "1982",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2468",
+        "author_id": "1801",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2470",
+        "author_id": "1982",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2470",
+        "author_id": "2124",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2470",
+        "author_id": "2151",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2470",
+        "author_id": "2152",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2470",
+        "author_id": "1801",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2471",
+        "author_id": "2123",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2471",
+        "author_id": "1928",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2471",
+        "author_id": "2153",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2471",
+        "author_id": "2127",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2471",
+        "author_id": "2126",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2471",
+        "author_id": "1886",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2471",
+        "author_id": "2152",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2471",
+        "author_id": "1887",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2471",
+        "author_id": "1801",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2472",
+        "author_id": "2154",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2472",
+        "author_id": "2155",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2472",
+        "author_id": "2156",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2472",
+        "author_id": "2157",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2472",
+        "author_id": "1801",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2472",
+        "author_id": "2158",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2473",
+        "author_id": "1889",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2473",
+        "author_id": "2159",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2473",
+        "author_id": "1884",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2473",
+        "author_id": "1928",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2473",
+        "author_id": "2129",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2473",
+        "author_id": "1801",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2473",
+        "author_id": "1887",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2475",
+        "author_id": "1909",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2475",
+        "author_id": "1804",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2475",
+        "author_id": "1800",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2475",
+        "author_id": "1798",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2475",
+        "author_id": "2078",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2478",
+        "author_id": "2160",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2478",
+        "author_id": "2161",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2478",
+        "author_id": "2162",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2478",
+        "author_id": "1877",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2479",
+        "author_id": "1880",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2479",
+        "author_id": "1877",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2479",
+        "author_id": "1878",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2479",
+        "author_id": "2163",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2479",
+        "author_id": "1879",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2479",
+        "author_id": "2164",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2482",
+        "author_id": "2166",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2482",
+        "author_id": "2084",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2482",
+        "author_id": "2088",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2482",
+        "author_id": "2106",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2482",
+        "author_id": "2165",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2482",
+        "author_id": "2087",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2482",
+        "author_id": "2167",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2482",
+        "author_id": "820",
+        "authord": "7",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2482",
+        "author_id": "2089",
+        "authord": "8",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2482",
+        "author_id": "2069",
+        "authord": "9",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2482",
+        "author_id": "2090",
+        "authord": "10",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2483",
+        "author_id": "2168",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2483",
+        "author_id": "2105",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2483",
+        "author_id": "2072",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2483",
+        "author_id": "2069",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2484",
+        "author_id": "2170",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2484",
+        "author_id": "2169",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2484",
+        "author_id": "1804",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2484",
+        "author_id": "2171",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2484",
+        "author_id": "2069",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2485",
+        "author_id": "2172",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2485",
+        "author_id": "2173",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2485",
+        "author_id": "2174",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2485",
+        "author_id": "2175",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2485",
+        "author_id": "2176",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2485",
+        "author_id": "1800",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2487",
+        "author_id": "2174",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2487",
+        "author_id": "2177",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2487",
+        "author_id": "2172",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2487",
+        "author_id": "2178",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2487",
+        "author_id": "2173",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2487",
+        "author_id": "2180",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2487",
+        "author_id": "2181",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2488",
+        "author_id": "2175",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2488",
+        "author_id": "2174",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2488",
+        "author_id": "2172",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2488",
+        "author_id": "1800",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2488",
+        "author_id": "2182",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2488",
+        "author_id": "2173",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2489",
+        "author_id": "1800",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2489",
+        "author_id": "2172",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2489",
+        "author_id": "2183",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2489",
+        "author_id": "2184",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2489",
+        "author_id": "2185",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2490",
+        "author_id": "2173",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2490",
+        "author_id": "2174",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2490",
+        "author_id": "2172",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2490",
+        "author_id": "2175",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2491",
+        "author_id": "2174",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2491",
+        "author_id": "2173",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2491",
+        "author_id": "2172",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2491",
+        "author_id": "2175",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2491",
+        "author_id": "2186",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2491",
+        "author_id": "2182",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2491",
+        "author_id": "2180",
+        "authord": "6",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2492",
+        "author_id": "2119",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2492",
+        "author_id": "2118",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2492",
+        "author_id": "1668",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2493",
+        "author_id": "2119",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2493",
+        "author_id": "2187",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2493",
+        "author_id": "1668",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2494",
+        "author_id": "2188",
+        "authord": "0",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2494",
+        "author_id": "1891",
+        "authord": "1",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2494",
+        "author_id": "2074",
+        "authord": "2",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2494",
+        "author_id": "2189",
+        "authord": "3",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2494",
+        "author_id": "2120",
+        "authord": "4",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2494",
+        "author_id": "1079",
+        "authord": "5",
+        "presenter": "0"
+      },
+      {
+        "publication_id": "2494",
+        "author_id": "2076",
+        "authord": "6",
+        "presenter": "0"
+      }
+    ]
+}
