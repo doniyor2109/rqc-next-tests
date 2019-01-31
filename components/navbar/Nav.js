@@ -38,7 +38,7 @@ class Nav extends Component {
   }
 
   render() {
-    const {router, switchLanguage, lang, cookieConsent} = this.props
+    const {router, switchLanguage, lang} = this.props
 
     // пока загружается дом переменная withSlider будет false
     // чтобы показывать на белом фоне серый логотип, а иначе его не видно и это плохо

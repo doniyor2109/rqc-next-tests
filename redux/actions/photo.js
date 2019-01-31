@@ -8,10 +8,10 @@ export const fetchPhotoByUidSuccess = (uid, response) => ({ type: action_types.F
 
 export const fetchPhotoByUidFailure = (uid, error) => ({ type: action_types.FETCH_PHOTO_BY_UID_FAILURE, uid, error });
 
-export const fetchPhotoByUid = (language, uid) => (dispatch) => {
+export const fetchPhotoByUid = (uid) => (dispatch) => {
   dispatch(fetchPhotoByUidRequest(uid));
   return Prismic.getApi(PrismicConfig.apiEndpoint)
-    .then(api => {api.query(Prismic.Predicates.at('my.mediakit_photo_gallery.uid', uid), { lang : language })
+    .then(api => {api.query(Prismic.Predicates.at('my.mediakit_photo_gallery.uid', uid), { lang : "*" })
                       .then(response => {
                                           dispatch(fetchPhotoByUidSuccess(uid, response));
                                         })

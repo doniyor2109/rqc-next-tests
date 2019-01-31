@@ -13,6 +13,7 @@ import Head from 'next/head'
 import * as photoActions from '../redux/actions/photo'
 import * as langActions from '../redux/actions/lang'
 import {fetchPhotoByUidRequest, fetchPhotoByUidSuccess, fetchPhotoByUidFailure} from '../redux/actions/photo'
+import { switchLanguage } from '../redux/actions/lang'
 
 //components
 import { Loading } from '../components/shared/loading.js'
@@ -43,31 +44,42 @@ class Photo extends React.Component {
 
         const {reduxStore, query: { uid }} = ctx
         const { language } = cookies(ctx)
+        var contentLang = ""
 
         reduxStore.dispatch(fetchPhotoByUidRequest(uid))
         const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
         await api.query(Prismic.Predicates.at('my.mediakit_photo_gallery.uid', uid), { lang : "*" })
                  .then(response => {
                    reduxStore.dispatch(fetchPhotoByUidSuccess(uid, response))
+                   console.log("server response", response)
+                   contentLang = response.results[0].lang
                   })
                  .catch(error => reduxStore.dispatch(fetchPhotoByUidFailure(uid, error)))
 
-        return {uid}
+        
+
+        return {uid, contentLang}
       }
+
+    componentDidMount() {
+        if(this.props.contentLang !== this.props.lang) {
+            this.props.switchLanguageProgrammatically(this.props.contentLang)
+        }
+    }
 
     componentDidUpdate(prevProps) {
 
-        // если глобально меняется язык, то редиректим пользователя на страницу с другим uid
-        if (this.props.lang !== prevProps.lang) {
+        if ((this.props.lang !== prevProps.lang) && (this.props.language.userClicked !== prevProps.language.userClicked)) {
             if (this.props.photo.item.alternate_languages.length > 0) {
-                Router.push('/photo/' + this.props.article.item.alternate_languages[0].uid)
+                Router.push('/photo/' + this.props.photo.item.alternate_languages[0].uid, '/photo/' + this.props.photo.item.alternate_languages[0].uid, { shallow: true })
             }
             else {this.setState({modalActive: true})}
         }
     }
 
     render() {
-        const { isFetching, item } = this.props.photo        
+        const { isFetching, item } = this.props.photo     
+        console.log("photogallery", this.props)   
         if (isFetching) return <Loading /> 
         else return (
             <Fragment>
@@ -148,9 +160,9 @@ class Photo extends React.Component {
 }
 
 const mapStateToProps = state => {
-    const { photo } = state
+    const { photo, language } = state
     const { lang } = state.i18nState
-    return { photo, lang }
+    return { photo, lang, language }
   }
   
   const mapDispatchToProps = dispatch => {
