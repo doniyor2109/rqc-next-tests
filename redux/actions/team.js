@@ -10,10 +10,10 @@ export const fetchTeamSuccess = (uid, response) => ({ type: action_types.FETCH_T
 
 export const fetchTeamFailure = (uid, error) => ({ type: action_types.FETCH_TEAM_FAILURE, uid, error });
 
-export const fetchTeam = (uid, language) => (dispatch) => {
+export const fetchTeam = (uid) => (dispatch) => {
   dispatch(fetchTeamRequest(uid));
   return Prismic.getApi(PrismicConfig.apiEndpoint)
-    .then(api => {api.query(Prismic.Predicates.at('my.science_group.uid', uid), { lang : language, 
+    .then(api => {api.query(Prismic.Predicates.at('my.science_group.uid', uid), { lang : "*", 
                                                                                   fetchLinks : ['scientist.name', 
                                                                                                   'scientist.position', 
                                                                                                   'scientist.photo'

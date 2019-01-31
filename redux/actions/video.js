@@ -10,10 +10,10 @@ export const fetchVideoByUidSuccess = (uid, response) => ({ type: action_types.F
 
 export const fetchVideoByUidFailure = (uid, error) => ({ type: action_types.FETCH_VIDEO_BY_UID_FAILURE, uid, error });
 
-export const fetchVideoByUid = (language, uid) => (dispatch) => {
+export const fetchVideoByUid = (uid) => (dispatch) => {
   dispatch(fetchVideoByUidRequest(uid));
   return Prismic.getApi(PrismicConfig.apiEndpoint)
-    .then(api => {api.query(Prismic.Predicates.at('my.mediakit_video.uid', uid), { lang : language })
+    .then(api => {api.query(Prismic.Predicates.at('my.mediakit_video.uid', uid), { lang : "*" })
                       .then(response => {
                                           dispatch(fetchVideoByUidSuccess(uid, response));
                                         })

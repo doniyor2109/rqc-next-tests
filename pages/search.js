@@ -16,7 +16,6 @@ import PrismicConfig from '../prismic-configuration'
 import SearchForm from '../components/search/SearchForm'
 import Results from '../components/search/Results'
 
-
 //other libraries
 import '../scss/searchpage.scss'
 

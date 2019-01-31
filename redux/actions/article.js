@@ -10,10 +10,10 @@ export const fetchArticleByUidSuccess = (uid, response) => ({ type: action_types
 
 export const fetchArticleByUidFailure = (uid, error) => ({ type: action_types.FETCH_ARTICLE_BY_UID_FAILURE, uid, error });
 
-export const fetchArticleByUid = (uid, language) => (dispatch) => {
+export const fetchArticleByUid = (uid) => (dispatch) => {
   dispatch(fetchArticleByUidRequest(uid));
   return Prismic.getApi(PrismicConfig.apiEndpoint)
-    .then(api => {api.query(Prismic.Predicates.at('my.news.uid', uid), { lang : language })
+    .then(api => {api.query(Prismic.Predicates.at('my.news.uid', uid), { lang : "*" })
                       .then(response => {
                                           dispatch(fetchArticleByUidSuccess(uid, response));
                                         })

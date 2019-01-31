@@ -33,33 +33,44 @@ class Video extends React.Component {
         t: PropTypes.func
     }  
 
-    state = {
-    }
-
     static async getInitialProps (ctx) {
 
         const {reduxStore, query: { uid }} = ctx
         const { language } = cookies(ctx)
+        var contentLang = ""
 
         reduxStore.dispatch(fetchVideoByUidRequest(uid))
         const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
         await api.query(Prismic.Predicates.at('my.mediakit_video.uid', uid), { lang : "*" })
-                 .then(response => {
-                   reduxStore.dispatch(fetchVideoByUidSuccess(uid, response))
-                  })
+                 .then(response => {reduxStore.dispatch(fetchVideoByUidSuccess(uid, response))
+                                    // из ответа API Prismic берем значение языка, на котором создан контент
+                                    // и потом передаем его в props.
+                                    // Это нужно для странных случаев, когда язык, например, "ru", но 
+                                    // но пользователь открывает ссылку вида .../video/alexei-ivanov-about-quantum...
+                                    // которая явно предполагает наличие английского языка в интерфейсе
+                                    contentLang = response.results[0].lang})
                  .catch(error => reduxStore.dispatch(fetchVideoByUidFailure(uid, error)))
 
-        return {uid}
-      }
+        return {uid, contentLang}
+    }
+
+    componentDidMount() {
+        if(this.props.contentLang !== this.props.lang) {
+            this.props.switchLanguageProgrammatically(this.props.contentLang)
+        }
+    }
 
     componentDidUpdate(prevProps) {
+  
+    // если глобально меняется язык и мы знаем, что он поменялся в результате 
+    // действий пользователя (userClicked), то редиректим пользователя на страницу с другим uid
+    // если бы мы не было флага userClicked, то компонент бы уходил в бесконечный цикл
+    // из-за изменения языка в componentDidMount()
 
-        // если глобально меняется язык, то редиректим пользователя на страницу с другим uid
-        if (this.props.lang !== prevProps.lang) {
-            if (this.props.video.item.alternate_languages.length > 0) {
-                Router.push('/video/' + this.props.post.item.alternate_languages[0].uid)
+    if ((this.props.lang !== prevProps.lang) && (this.props.language.userClicked !== prevProps.language.userClicked)) {
+        if (this.props.video.item.alternate_languages.length > 0) {
+                Router.push('/video/' + this.props.video.item.alternate_languages[0].uid)
             }
-            else {this.setState({modalActive: true})}
         }
     }
 
@@ -79,9 +90,6 @@ class Video extends React.Component {
                     <meta property="og:image:height"       content={item.data.youtube_link && item.data.youtube_link.thumbnail_height} />
 
                 </Head>
-
-                <PopupNoTranslation active={this.state.modalActive} click={this.redirect} />
-
                 <section className="video-page">
 
                     {item.data && 
@@ -111,10 +119,10 @@ class Video extends React.Component {
 
 
 }
-
 const mapStateToProps = state => {
     const { video, language } = state
-    return { video, language }
+    const { lang } = state.i18nState
+    return { video, lang, language }
   }
   
   const mapDispatchToProps = dispatch => {

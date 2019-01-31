@@ -39,22 +39,37 @@ class Event extends Component {
   static async getInitialProps (ctx) {
 
     const {reduxStore, query: { uid }} = ctx
-    
+    var contentLang = ""
+
     reduxStore.dispatch(fetchEventByUidRequest(uid))
     const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
     await api.query(Prismic.Predicates.at('my.event.uid', uid), { lang : "*" })
-             .then(response => {
-               reduxStore.dispatch(fetchEventByUidSuccess(uid, response))
-              })
+             .then(response => {reduxStore.dispatch(fetchEventByUidSuccess(uid, response))
+                                // из ответа API Prismic берем значение языка, на котором создан контент
+                                // и потом передаем его в props.
+                                // Это нужно для странных случаев, когда язык, например, "ru", но 
+                                // но пользователь открывает ссылку вида .../event/icqt-conference
+                                // которая явно предполагает наличие английского языка в интерфейсе
+                                contentLang = response.results[0].lang})
              .catch(error => reduxStore.dispatch(fetchEventByUidFailure(uid, error)))
-    return {uid}
+    return {uid, contentLang}
+  }
+
+  componentDidMount() {
+    if(this.props.contentLang !== this.props.lang) {
+        this.props.switchLanguageProgrammatically(this.props.contentLang)
+    }
   }
   
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
 
-    // если глобально меняется язык, то редиректим пользователя на страницу с другим uid
-    if (this.props.lang !== prevProps.lang) {
+    // если глобально меняется язык и мы знаем, что он поменялся в результате 
+    // действий пользователя (userClicked), то редиректим пользователя на страницу с другим uid
+    // если бы мы не было флага userClicked, то компонент бы уходил в бесконечный цикл
+    // из-за изменения языка в componentDidMount()
+
+    if ((this.props.lang !== prevProps.lang) && (this.props.language.userClicked !== prevProps.language.userClicked)) {
       if (this.props.event.item.alternate_languages.length > 0) {
         Router.push('/event/' + this.props.event.item.alternate_languages[0].uid)
         }
@@ -66,13 +81,10 @@ class Event extends Component {
   render() {
 
     const { event, phone, tablet } = this.props
-    console.log("event", this.props)
-
     if (this.props.lang === "ru") {
       moment.locale('ru')
     } else moment.locale('en')
   
-
     // если мероприятие идет несколько дней, то разбираем объект Date на части
     // и составляем сложную дату вида July 15-19, 2019
     const date_start_end = moment(Date(event.item.data.start_date_time)).format('MMMM') + " " + 
@@ -200,9 +212,9 @@ class Event extends Component {
 }
 
 const mapStateToProps = state => {
-  const { event } = state
+  const { event, language } = state
   const { lang } = state.i18nState
-  return { event, lang }
+  return { event, lang, language }
 }
 
 const mapDispatchToProps = dispatch => {

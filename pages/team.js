@@ -39,34 +39,53 @@ class Team extends Component {
 
   static async getInitialProps (ctx) {
 
-    const {reduxStore, query: { uid }} = ctx
-    const { language } = cookies(ctx)
+      const {reduxStore, query: { uid }} = ctx
+      const { language } = cookies(ctx)
+      var contentLang = ""
 
-    reduxStore.dispatch(fetchTeamRequest(uid))
-    const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
-    await api.query(Prismic.Predicates.at('my.science_group.uid', uid), { lang : "*", 
-                                                                    fetchLinks : ['scientist.name', 
-                                                                                    'scientist.position', 
-                                                                                    'scientist.photo'
-                                                                                    ] }, )
-             .then(response => reduxStore.dispatch(fetchTeamSuccess(uid, response)))
-             .catch(error => reduxStore.dispatch(fetchTeamFailure(uid, error)))
+      reduxStore.dispatch(fetchTeamRequest(uid))
+      const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
+      await api.query(Prismic.Predicates.at('my.science_group.uid', uid), { lang : "*", 
+                                                                      fetchLinks : ['scientist.name', 
+                                                                                      'scientist.position', 
+                                                                                      'scientist.photo'
+                                                                                      ] }, )
+                .then(response => {reduxStore.dispatch(fetchTeamSuccess(uid, response))
+                                  // из ответа API Prismic берем значение языка, на котором создан контент
+                                  // и потом передаем его в props.
+                                  // Это нужно для странных случаев, когда язык, например, "ru", но 
+                                  // но пользователь открывает ссылку вида .../team/group-of-quamtum-communications
+                                  // которая явно предполагает наличие английского языка в интерфейсе
+                                  contentLang = response.results[0].lang}
+                )
+                .catch(error => reduxStore.dispatch(fetchTeamFailure(uid, error)))
 
-    return {uid}
+      return {uid, contentLang}
   }
 
-  
   state = {
       modalActive: false,
       moreNewsQuantity: 4
+  }
+
+  componentDidMount() {
+    if(this.props.contentLang !== this.props.lang) {
+        this.props.switchLanguageProgrammatically(this.props.contentLang)
     }
+  }
+  
 
   componentDidUpdate(prevProps, prevState) {
 
-    // если глобально меняется язык, то редиректим пользователя на страницу с другим uid
-    if (this.props.lang !== prevProps.lang) {
+    
+    // если глобально меняется язык и мы знаем, что он поменялся в результате 
+    // действий пользователя (userClicked), то редиректим пользователя на страницу с другим uid
+    // если бы мы не было флага userClicked, то компонент бы уходил в бесконечный цикл
+    // из-за изменения языка в componentDidMount()
+
+    if ((this.props.lang !== prevProps.lang) && (this.props.language.userClicked !== prevProps.language.userClicked)) {
       if (this.props.team.item.alternate_languages.length > 0) {
-       Router.push('/team/' + this.props.team.item.alternate_languages[0].uid)
+        Router.push('/team/' + this.props.team.item.alternate_languages[0].uid)
       }
     }
 
@@ -75,9 +94,6 @@ class Team extends Component {
   render() {
 
     const { team, phone, tablet } = this.props
-
-    console.log("team", this.props)
-
     if (this.props.lang === "ru") {
       moment.locale('ru')
     } else moment.locale('en')
@@ -166,17 +182,6 @@ class Team extends Component {
                         </div>
                     </section> 
 
-                    {/* <section className="team">
-                      <div className="container">
-                            <div className="main-category">
-                                {this.context.t("Команда")}                        
-                            </div>
-                            {team.item.data  && <TeamSlider members={team.item.data.team}
-                                                            isLoading={team.isFetching}
-                            />}
-                        </div>
-                    </section>  */}
-
                 </Fragment> }
             </div>
 
@@ -185,9 +190,9 @@ class Team extends Component {
 }
 
 const mapStateToProps = state => {
-  const { team } = state
+  const { team, language } = state
   const { lang } = state.i18nState
-  return { team, lang }
+  return { team, lang, language }
 }
 
 const mapDispatchToProps = dispatch => {

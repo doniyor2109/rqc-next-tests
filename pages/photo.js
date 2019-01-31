@@ -49,10 +49,13 @@ class Photo extends React.Component {
         reduxStore.dispatch(fetchPhotoByUidRequest(uid))
         const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
         await api.query(Prismic.Predicates.at('my.mediakit_photo_gallery.uid', uid), { lang : "*" })
-                 .then(response => {
-                   reduxStore.dispatch(fetchPhotoByUidSuccess(uid, response))
-                   console.log("server response", response)
-                   contentLang = response.results[0].lang
+                 .then(response => {reduxStore.dispatch(fetchPhotoByUidSuccess(uid, response))
+                                    // из ответа API Prismic берем значение языка, на котором создан контент
+                                    // и потом передаем его в props.
+                                    // Это нужно для странных случаев, когда язык, например, "ru", но 
+                                    // но пользователь открывает ссылку вида .../photo/lab-of-quantum...
+                                    // которая явно предполагает наличие английского языка в интерфейсе
+                                    contentLang = response.results[0].lang
                   })
                  .catch(error => reduxStore.dispatch(fetchPhotoByUidFailure(uid, error)))
 
@@ -68,6 +71,11 @@ class Photo extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
+
+        // если глобально меняется язык и мы знаем, что он поменялся в результате 
+        // действий пользователя (userClicked), то редиректим пользователя на страницу с другим uid
+        // если бы мы не было флага userClicked, то компонент бы уходил в бесконечный цикл
+        // из-за изменения языка в componentDidMount()
 
         if ((this.props.lang !== prevProps.lang) && (this.props.language.userClicked !== prevProps.language.userClicked)) {
             if (this.props.photo.item.alternate_languages.length > 0) {

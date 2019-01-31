@@ -46,25 +46,40 @@ class Article extends Component {
   static async getInitialProps (ctx) {
 
     const {reduxStore, query: { uid }} = ctx
+    var contentLang = ""
     
     reduxStore.dispatch(fetchArticleByUidRequest(uid))
     const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
     await api.query(Prismic.Predicates.at('my.news.uid', uid), { lang : "*" })
-             .then(response => {
-               reduxStore.dispatch(fetchArticleByUidSuccess(uid, response))
-              })
+             .then(response => {reduxStore.dispatch(fetchArticleByUidSuccess(uid, response))
+                                // из ответа API Prismic берем значение языка, на котором создан контент
+                                // и потом передаем его в props.
+                                // Это нужно для странных случаев, когда язык, например, "ru", но 
+                                // но пользователь открывает ссылку вида .../article/nils-bohr-institue
+                                // которая явно предполагает наличие английского языка в интерфейсе
+                                contentLang = response.results[0].lang})
              .catch(error => reduxStore.dispatch(fetchArticleByUidFailure(uid, error)))
-    return {uid}
+    return {uid, contentLang}
   }
   
   state = {
       modalActive: false
+  }
+
+  componentDidMount() {
+    if(this.props.contentLang !== this.props.lang) {
+        this.props.switchLanguageProgrammatically(this.props.contentLang)
     }
+  }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
 
-    // если глобально меняется язык, то редиректим пользователя на страницу с другим uid
-    if (this.props.lang !== prevProps.lang) {
+    // если глобально меняется язык и мы знаем, что он поменялся в результате 
+    // действий пользователя (userClicked), то редиректим пользователя на страницу с другим uid
+    // если бы мы не было флага userClicked, то компонент бы уходил в бесконечный цикл
+    // из-за изменения языка в componentDidMount()
+
+    if ((this.props.lang !== prevProps.lang) && (this.props.language.userClicked !== prevProps.language.userClicked)) {
       if (this.props.article.item.alternate_languages.length > 0) {
         Router.push('/article/' + this.props.article.item.alternate_languages[0].uid)
         }
@@ -229,9 +244,9 @@ class Article extends Component {
 }
 
 const mapStateToProps = state => {
-  const { article, related } = state
+  const { article, related, language } = state
   const { lang } = state.i18nState
-  return { article, lang, related }
+  return { article, lang, language, related }
 }
 
 const mapDispatchToProps = dispatch => {
