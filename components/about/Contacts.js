@@ -9,7 +9,7 @@ class Contacts extends React.Component {
     render() {
         const { page } = this.props
         return (
-            <section id="contacts">
+            <section id="contact">
                 <div className="container">
                     {RichText.render(page.data.contacts_title, PrismicConfig.linkResolver)}
                 </div>
