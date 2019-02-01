@@ -3,6 +3,7 @@ import Link from 'next/link'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import moment from 'moment'
 
 import * as langActions from '../redux/actions/lang'
 
@@ -71,14 +72,14 @@ const Footer = (props, context) => (
             </div>
           </div>
           <div className="left_down">
-            <p>&copy;2013-2018</p>
+            <p>&copy;2013-{moment(Date.now()).format('YYYY')}</p>
             <p>{context.t("Российский Квантовый Центр")}</p>
           </div>
         </div>
         <div className="middle_part">
           <FooterMenu Menu = {Menu}/>
           <div className="middle_down_mobile">
-            <p>&copy;2013-2018</p>
+            <p>&copy;2013-{moment(Date.now()).format('YYYY')}</p>
             <p>{context.t("Российский Квантовый Центр")}</p>
           </div>
           <hr className="bottom_hr"/>
