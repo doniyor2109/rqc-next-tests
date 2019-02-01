@@ -37,8 +37,10 @@ class Vacancies extends React.Component {
 
     render() {
 
-        const { vacancies, isFetching, phone, tablet } = this.props
-        if (isFetching) return <Loading />
+        const { vacancies, phone, tablet } = this.props
+
+        console.log(this.props)
+        if (vacancies.isFetching) return <Loading />
         else return (
             <section className="vacancies">
                 <div className="container">
@@ -124,7 +126,7 @@ class Vacancies extends React.Component {
         const vac = document.getElementById("vacancies").offsetTop + this.state.cardoffsetTop
         window.scrollTo({
             top: vac, 
-            behavior: "smooth"
+            behavior: "auto"
         })
     }
 }

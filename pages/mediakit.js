@@ -28,7 +28,6 @@ class Mediakit extends React.Component {
 
     render() {
         const {phone, tablet} = this.props
-        console.log("mediakit", this.props)
         return (
             <div className="media-kit-page">
                 <Head>
@@ -54,7 +53,7 @@ class Mediakit extends React.Component {
                 </Head>
                 <section className="title">
                     <div className="container">
-                        <h1 className="page-main-heading">{this.context.t("Медиакит")}</h1>
+                        <h1 className="page-main-heading">{this.context.t("Медиа-кит")}</h1>
                     </div>
                 </section>
                 <section className="photo-galleries">
