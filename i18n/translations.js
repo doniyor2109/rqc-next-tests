@@ -90,7 +90,12 @@ export const translations = {
         "Приветствуется": "Will be an asset",
         "Опыт работы": "Work experience",
         "Занятость": "Working schedule",
-        "Чтобы откликнуться на вакансию, присылайте резюме, а также портфолио или презентацию по выполненным работам на почту": "To apply for a job, please mail your CV, as well as portfolio or presentation of works performed to "
+        "Чтобы откликнуться на вакансию, присылайте резюме, а также портфолио или презентацию по выполненным работам на почту": "To apply for a job, please mail your CV, as well as portfolio or presentation of works performed to ",
+        "Выберите группу": "Choose scientific group",
+        "Выберите автора": "Choose author",
+        "По вашему запросу ничего не найдено": "Nothing matched your request", 
+        "У этой научной группы еше не вышло ни одной публикации": "This scientific group has no publications",
+        "Этот автора еще ничего не написал": "This author has no publications"
      }
    }
    

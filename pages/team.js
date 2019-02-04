@@ -94,6 +94,8 @@ class Team extends Component {
   render() {
 
     const { team, phone, tablet } = this.props
+
+    console.log("team", this.props.team)
     if (this.props.lang === "ru") {
       moment.locale('ru')
     } else moment.locale('en')

@@ -5,14 +5,14 @@ import PrismicConfig from '../../prismic-configuration'
 
 const Publication = ({pub}) => {
 
-    console.log("pub", pub)
+    // console.log("pub", pub)
 
     if (pub) {
 
         return (
     
             <div className="publication">
-                {pub.data.authors1.map((author, index) => <a key={index} className="author" href={"/search/" + author.text}>{author.text}</a>)}
+                {pub.data.authors.map((author, index) => <a key={index} className="author" href={"/search/" + author.text}>{author.text}</a>)}
                 <div className="title">
                     {RichText.render(pub.data.title, PrismicConfig.linkResolver)}
                 </div>

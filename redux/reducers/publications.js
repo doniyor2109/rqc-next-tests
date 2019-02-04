@@ -4,6 +4,7 @@ const initialState = {
   isFetchingPubs: false,
   isFetchingPubsbyAuthor: false,
   pubs: [],
+  pubsByAuthor: [],
   total_pages: 0,
   total_results_size: 0,
   nextPage: null,
@@ -15,15 +16,15 @@ function fetchPublicationsSuccess(state, action) {
   const total_results_size = action.response.total_results_size
   const total_pages = action.response.total_pages
   const pubs = action.response.results
-  return {...state, isFetchingPubs: false, pubs, total_pages, total_results_size, nextPage}
+  return {...state, isFetchingPubs: false, pubs}
 }
 
-function fetchAuthorsSuccess(state, action) {
+function fetchPubsbyAuthorsSuccess(state, action) {
   const nextPage = action.response.next_page
   const total_results_size = action.response.total_results_size
   const total_pages = action.response.total_pages
-  const pubsbyAuthor = action.response.results
-  return {...state, isFetchingPubsbyAuthor: false, pubsbyAuthor}
+  const pubsByAuthor = action.response.results
+  return {...state, isFetchingPubsbyAuthor: false, pubsByAuthor}
 }
 
 
@@ -40,14 +41,14 @@ export const publications = (state = initialState, action) => {
       console.log("FETCH_PUBLICATIONS_FAILURE", action.error);
       return { ...state, isFetchingPubs: false };
 
-    case action_types.SEARCH_AUTHORS_REQUEST:
+    case action_types.SEARCH_PUBLICATION_BY_AUTHOR_REQUEST:
       return {...state, isFetchingPubsbyAuthor: true };
 
-    case action_types.SEARCH_AUTHORS_SUCCESS:
-      return fetchAuthorsSuccess(state, action);
+    case action_types.SEARCH_PUBLICATION_BY_AUTHOR_SUCCESS:
+      return fetchPubsbyAuthorsSuccess(state, action);
 
-    case action_types.SEARCH_AUTHORS_FAILURE:
-      console.log("SEARCH_AUTHORS_FAILURE", action.error);
+    case action_types.SEARCH_PUBLICATION_BY_AUTHOR_FAILURE:
+      console.log("SEARCH_PUBLICATION_BY_AUTHOR_FAILURE", action.error);
       return { ...state, isFetchingPubsbyAuthor: false };
 
     default:

@@ -42,7 +42,6 @@ class Research extends React.Component {
 
 
     render() {
-        const { phone, tablet } = this.props
         const { page } = this.props.research
         const { isFetching, groups } = this.props.scigroups
 
