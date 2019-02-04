@@ -42,18 +42,15 @@ const PersonaPopup = ({active, close, item}, context) => {
                             {RichText.render(item.titles, PrismicConfig.linkResolver)}
                         </div>
                     </div>
-                    <div className="column is-4-desktop is-offset-1-desktop">
                         {item.awards[0] && (item.awards[0].text.length > 0) 
-                        && 
-                        <Fragment>
-                            <img src="/static/awards.svg" className="awards_img" alt=""/>
-                            <h1>{context.t("Достижения")}</h1>
-                            <div className="awards">
-                                {RichText.render(item.awards, PrismicConfig.linkResolver)}
+                        && <div className="column is-4-desktop is-offset-1-desktop">
+                                <img src="/static/awards.svg" className="awards_img" alt=""/>
+                                <h1>{context.t("Достижения")}</h1>
+                                <div className="awards">
+                                    {RichText.render(item.awards, PrismicConfig.linkResolver)}
+                                </div>
                             </div>
-                        </Fragment>
                         } 
-                    </div>
                 </div>
             </Popup>
         )
