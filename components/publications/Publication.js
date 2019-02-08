@@ -19,16 +19,27 @@ const Publication = ({pub}) => {
                 <a className="journal" href={Link.url(pub.data.journal_url, PrismicConfig.linkResolver)}>
                     {RichText.render(pub.data.journal_name, PrismicConfig.linkResolver)}
                 </a>
-                <div className="journal_volume">
-                    {pub.data.volume}
-                </div>
-                <div className="journal_number">
-                    {pub.data.number}
-                </div>
-                <div className="journal_pages">
-                    {pub.data.pages}
-                </div>
-                {pub.data.eprint 
+                {pub.data.volume && 
+                    <div className="journal_volume">
+                        {pub.data.volume}
+                    </div>
+                }
+                {pub.data.number && 
+                    <div className="journal_number">
+                        {pub.data.number}
+                    </div>
+                }
+                {pub.data.article_number &&
+                    <div className="article_number">
+                        {pub.data.article_number}
+                    </div>
+                }
+                {pub.data.pages.length > 0 && 
+                    <div className="journal_pages">
+                        {RichText.render(pub.data.pages, PrismicConfig.linkResolver)}
+                    </div>
+                }
+                {pub.data.eprint.length > 0
                 ? 
                 <a className="arxiv" href={"https://arxiv.org/abs/" + pub.data.eprint[0].text}>
                     Arxiv: {pub.data.eprint[0].text}
