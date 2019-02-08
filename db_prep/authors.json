@@ -1,4 +1,5 @@
 {
+  "authors": {
     "author": [
       {
         "id": "1",
@@ -9207,7 +9208,7 @@
       },
       {
         "id": "1441",
-        "lastname": "  Chris Benner",
+        "lastname": " Chris Benner",
         "inits": "D.",
         "spcfmt": "0",
         "person_id": "0"
@@ -9249,7 +9250,7 @@
       },
       {
         "id": "1447",
-        "lastname": "  Devi",
+        "lastname": " Devi",
         "inits": "V.M.",
         "spcfmt": "0",
         "person_id": "0"
@@ -9277,7 +9278,7 @@
       },
       {
         "id": "1451",
-        "lastname": "  Goldman",
+        "lastname": " Goldman",
         "inits": "A.",
         "spcfmt": "0",
         "person_id": "0"
@@ -9291,7 +9292,7 @@
       },
       {
         "id": "1453",
-        "lastname": "  Harris",
+        "lastname": " Harris",
         "inits": "G.J.",
         "spcfmt": "0",
         "person_id": "0"
@@ -9473,7 +9474,7 @@
       },
       {
         "id": "1479",
-        "lastname": "  Tennyson",
+        "lastname": " Tennyson",
         "inits": "J.",
         "spcfmt": "0",
         "person_id": "0"
@@ -9641,7 +9642,7 @@
       },
       {
         "id": "1503",
-        "lastname": "  Bauder",
+        "lastname": " Bauder",
         "inits": "A.",
         "spcfmt": "0",
         "person_id": "0"
@@ -9690,7 +9691,7 @@
       },
       {
         "id": "1510",
-        "lastname": "  Champion",
+        "lastname": " Champion",
         "inits": "J.-P.",
         "spcfmt": "0",
         "person_id": "0"
@@ -14400,4 +14401,5 @@
         "person_id": "0"
       }
     ]
+  }
 }
