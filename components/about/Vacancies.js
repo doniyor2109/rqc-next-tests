@@ -20,18 +20,30 @@ class Vacancies extends React.Component {
         vacanciesNumberTablet: 4, 
         vacanciesNumberMobile: 3, 
         moreVacanciesButtonPresent: true, 
-        cardoffsetTop: 0
-
+        cardoffsetTop: 0,
     }
 
     componentDidMount() {
-        this.props.fetchVacancies(this.props.lang)
+
+            this.props.fetchVacancies(this.props.lang)
+            this.props.fetchVacanciesHH()
+
+
+        // if(this.props.lang === "en-gb") {
+        //     this.props.fetchVacancies(this.props.lang)
+        // } else {
+        //     this.props.fetchVacanciesHH()
+        // }
     }
 
     componentDidUpdate(prevProps) {
         // обработка смены языка
         if (this.props.lang !== prevProps.lang) {
-            this.props.fetchVacancies(this.props.lang)
+            if(this.props.lang === "en-gb") {
+                this.props.fetchVacancies(this.props.lang)
+            } else {
+                this.props.fetchVacanciesHH()
+            }
         }
     }
 

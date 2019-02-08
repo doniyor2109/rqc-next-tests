@@ -3,21 +3,18 @@ import * as action_types from "../actions/action_types.js"
 const initialState = {
   isFetching: false,
   items: [],
-  total_pages: 0,
-  total_results_size: 0,
-  next_page: null,
-  prev_page: null
+  itemsHH: []
 };
 
 function fetchVacanciesSuccess(state, action) {
-  const next_page = action.response.next_page
-  const prev_page = action.response.prev_page
-  const total_results_size = action.response.total_results_size
-  const total_pages = action.response.total_pages
   const items = action.response.results
-  return {...state, isFetching: false, items, total_pages, total_results_size, next_page, prev_page}
+  return {...state, isFetching: false, items}
 }
 
+function fetchVacanciesHHSuccess(state, action) {
+  const itemsHH = action.response
+  return {...state, isFetching: false, itemsHH}
+}
 
 export const vacancies = (state = initialState, action) => {
   switch (action.type) {
@@ -29,7 +26,17 @@ export const vacancies = (state = initialState, action) => {
       return fetchVacanciesSuccess(state, action);
 
     case action_types.FETCH_VACANCIES_FAILURE:
-      console.log(action.error);
+      console.log("FETCH_VACANCIES_FAILURE", action.error);
+      return { ...state, isFetching: false };
+    
+    case action_types.FETCH_VACANCIESHH_REQUEST:
+      return {...state, isFetching: true };
+
+    case action_types.FETCH_VACANCIESHH_SUCCESS:
+      return fetchVacanciesHHSuccess(state, action);
+
+    case action_types.FETCH_VACANCIESHH_FAILURE:
+      console.log("FETCH_VACANCIESHH_FAILURE", action.error);
       return { ...state, isFetching: false };
 
     default:
