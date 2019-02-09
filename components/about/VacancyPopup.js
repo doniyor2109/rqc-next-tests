@@ -27,14 +27,14 @@ export const VacancyPopup = ({item, active, close}, context) => {
               
                 </div>
                 <div className="column is-3-desktop is-offset-1-desktop">
-                    <hr style={{marginTop: "10.5rem"}}/>
+                    <hr className="salary"/>
                     {RichText.render(item.data.salary, PrismicConfig.linkResolver)}
                     <hr />
                     <p><b>{context.t("Опыт работы")}:</b></p>
                     {RichText.render(item.data.experience, PrismicConfig.linkResolver)}  
                     <p style={{marginTop: "3rem"}}><b>{context.t("Занятость")}:</b></p>
                     {RichText.render(item.data.time, PrismicConfig.linkResolver)}  
-                    <hr style={{marginTop: "3rem"}}/>
+                    <hr className="final"/>
                     <p>
                         {context.t("Чтобы откликнуться на вакансию, присылайте резюме, а также портфолио или презентацию по выполненным работам на почту")}:
                         <br />

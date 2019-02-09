@@ -31,13 +31,20 @@
         padding: 6rem 0;
         color:#040303;
         background: white;
-
-
+        font-size: 1.6rem;
+        line-height: 2.3rem;
 
         hr {
             background-color: #040303;
             height: 1px;
             margin-bottom: 3rem;
+        }
+        hr.salary {
+            margin-top:10.5rem;
+        }
+
+        hr.final {
+            margin-top:3rem;
         }
 
         h3{
@@ -58,6 +65,15 @@
 
         ul {
             margin-bottom: 3rem;
+        }
+
+        .description {
+            strong, b {
+            font-weight: 700;
+            }
+            p {
+                margin-bottom: 1rem;
+            }
         }
     }
 }
@@ -116,7 +132,6 @@
             -webkit-overflow-scrolling: touch;
 
             h3 {
-                align-self: center;
                 margin:0;
             }
             .vac-title {
@@ -145,6 +160,9 @@
             margin: 0 27px;
             max-height: 90%;
             position: relative;
+            hr.salary {
+                margin-top:0;
+            }
         }
     }
     .vacancy {

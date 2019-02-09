@@ -1,14 +1,14 @@
 import React, {Fragment} from 'react'
-import Media from 'react-media'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 
 import * as vacanciesActions from '../../redux/actions/vacancies'
-import * as langActions from '../../redux/actions/lang'
 import { Loading } from '../shared/loading'
-import VacancyCard from './VacancyCard'
-import VacancyPopup from './VacancyPopup'
+import VacanciesPrismic from './VacanciesPrismic'
+import VacanciesHH from './VacanciesHH'
+
+
 import '../../scss/vacancies.scss'
 
 
@@ -25,15 +25,11 @@ class Vacancies extends React.Component {
 
     componentDidMount() {
 
+        if(this.props.lang === "en-gb") {
             this.props.fetchVacancies(this.props.lang)
+        } else {
             this.props.fetchVacanciesHH()
-
-
-        // if(this.props.lang === "en-gb") {
-        //     this.props.fetchVacancies(this.props.lang)
-        // } else {
-        //     this.props.fetchVacanciesHH()
-        // }
+        }
     }
 
     componentDidUpdate(prevProps) {
@@ -50,9 +46,7 @@ class Vacancies extends React.Component {
     render() {
 
         const { vacancies, phone, tablet } = this.props
-
-        console.log(this.props)
-        if (vacancies.isFetching) return <Loading />
+        if (vacancies.isFetchingPrismic || vacancies.isFetchingManyHH) return <Loading />
         else return (
             <section className="vacancies">
                 <div className="container">
@@ -62,52 +56,36 @@ class Vacancies extends React.Component {
                     {this.context.t("Чтобы откликнуться на вакансию, присылайте резюме на почту")}:&nbsp; 
                     <a href="mailto:job@rqc.ru" className="job-link">job@rqc.ru</a></p>
                     <div className="columns is-multiline">
+                        {this.props.lang === 'en-gb' 
+                        ? <VacanciesPrismic vacancies={vacancies}
+                                            popupKey={this.state.popupKey}
+                                            vacanciesNumberDesktop={this.state.vacanciesNumberDesktop} 
+                                            vacanciesNumberTablet={this.state.vacanciesNumberTablet} 
+                                            vacanciesNumberMobile={this.state.vacanciesNumberMobile}
+                                            moreVacanciesButtonPresent={this.state.moreVacanciesButtonPresent}
+                                            cardoffsetTop={this.state.cardoffsetTop}
+                                            moreVacancies={this.moreVacancies}
+                                            handleClick={this.handleClick}
+                                            popupClose={this.popupClose}
+                                            phone={phone}
+                                            tablet={tablet}
+                           />
+                        : <VacanciesHH  vacancies={vacancies}
+                                        popupKey={this.state.popupKey}
+                                        vacanciesNumberDesktop={this.state.vacanciesNumberDesktop} 
+                                        vacanciesNumberTablet={this.state.vacanciesNumberTablet} 
+                                        vacanciesNumberMobile={this.state.vacanciesNumberMobile}
+                                        moreVacanciesButtonPresent={this.state.moreVacanciesButtonPresent}
+                                        cardoffsetTop={this.state.cardoffsetTop}
+                                        moreVacancies={this.moreVacancies}
+                                        handleClick={this.handleClick}
+                                        popupClose={this.popupClose}
+                                        phone={phone}
+                                        tablet={tablet}
+                            />
 
-                    <Media  query="(min-width: 769px)"
-                            defaultMatches={phone === null && tablet === null}
-                            render={() =>  vacancies.items.slice(0, this.state.vacanciesNumberDesktop).map((item, index) => {
-                                                return (
-                                                    <Fragment key={index}>
-                                                        <VacancyCard item={item} onClick={this.handleClick} cardNumber={index} />
-                                                        <VacancyPopup key={index} item={item} active={this.state.popupKey === index} close={this.popupClose}/>
-                                                    </Fragment>
-                                                )
-                                            })
-                                    } 
-                    />
-
-                    <Media  query="(min-width: 416px) and (max-width: 768px)"
-                            defaultMatches={tablet !== null}
-                            render={() =>  vacancies.items.slice(0, this.state.vacanciesNumberTablet).map((item, index) => {
-                                                return (
-                                                    <Fragment key={index}>
-                                                        <VacancyCard item={item} onClick={this.handleClick} cardNumber={index} />
-                                                        <VacancyPopup key={index} item={item} active={this.state.popupKey === index} close={this.popupClose}/>
-                                                    </Fragment>
-                                                )
-                                            })
-                                    } 
-                    />
-                
-                    <Media  query="(max-width: 415px)"
-                            defaultMatches={phone !== null}
-                            render={() =>  vacancies.items.slice(0, this.state.vacanciesNumberMobile).map((item, index) => {
-                                                return (
-                                                    <Fragment key={index}>
-                                                        <VacancyCard item={item} onClick={this.handleClick} cardNumber={index} />
-                                                        <VacancyPopup key={index} item={item} active={this.state.popupKey === index} close={this.popupClose}/>
-                                                    </Fragment>
-                                                )
-                                            })
-                                    } 
-                    />
-
+                        }
                     </div>
-                    {(vacancies.items.length > 6) && this.state.moreVacanciesButtonPresent &&
-                        <div className="button-wraper">
-                            <img src="/static/more.svg" onClick={e => {this.moreVacancies(e)}} />
-                        </div>
-                    }
                 </div>
             </section>
         )
@@ -153,7 +131,6 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return bindActionCreators(Object.assign({},
         vacanciesActions, 
-        langActions
         ), dispatch);
 }
 
