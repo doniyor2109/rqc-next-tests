@@ -46,23 +46,25 @@ class Publications extends Component {
 
     componentDidUpdate(prevProps, prevState) {
 
+        // --------------------------------***********************------------------------------------
         // заносим все публикации в state, чтобы потом их фильтровать
         if(this.props.publications.pubs !== prevProps.publications.pubs) {
             for (let pub in this.props.publications.pubs) {
                 this.setState((state, props) => ({
                     pubs: [...state.pubs, this.props.publications.pubs[pub]]
-                    }))
+                }))
             }
         }
 
-
-        // получаем список групп для select
+        // --------------------------------***********************------------------------------------
+        // получаем список групп
         if (prevProps.scigroups.groups !== this.props.scigroups.groups) {
             this.setState({
                 groupsName: this.props.scigroups.groups.filter(el => el.lang === this.props.lang).map(group => group.data.groupname[0].text),
             })
         }
 
+        // --------------------------------***********************------------------------------------
         // если меняется язык
         if (this.props.lang !== prevProps.lang) {
 
@@ -75,27 +77,73 @@ class Publications extends Component {
             })
         }
 
+
+        // --------------------------------***********************------------------------------------
         // как только у нас есть список групп и одна из групп выбрана, получаем список авторов для этой группы
         if(prevState.selectedGroupName !== this.state.selectedGroupName) {
             this.setState({
                 authors: this.props.scigroups.groups.filter(el => 
                     el.data.groupname[0].text === this.state.selectedGroupName)[0].data.team_list.map(author => 
                         author.text.substring(author.text.lastIndexOf(" ") + 1, author.text.length)),
-
-                // а также фильтруем публикации по группам
-                pubs: this.props.publications.pubs.filter(el => el.data.science_group.id === this.findGroupIdByName(this.props.scigroups.groups, this.state.selectedGroupName))
-
             })
             // добавляем в список авторов группы ее руководителя
             this.setState(prevState => ({
                 authors: [this.props.scigroups.groups.filter(el => 
                     el.data.groupname[0].text === this.state.selectedGroupName)[0].data.group_leader.data.name[0].text.split(" ").pop(), ...prevState.authors]
             }))
-
-
         }
+
+        // --------------------------------***********************------------------------------------
+
+        // если меняется автор, то выставляем значение pageNumber = 1 ,
+        // чтобы в дальнейшем статьи разных авторов не смешивались, 
+        // если pageNumber = 1, то state публикаций перезаписывается с каждым новым запросом
+
+        if(prevState.selectedAuthor !== this.state.selectedAuthor) {
+
+            this.setState({
+                pageNumber:1
+            })
+        }
+
+        if (prevProps.publications.pubsByAuthor !== this.props.publications.pubsByAuthor) {
+
+            // если автор только что выбран, то перезаписываем state публикаций
+            if (this.state.pageNumber === 1) {
+                this.setState({
+                    pubs: this.props.publications.pubsByAuthor
+                })
+            // если происходит нажатие на кнопку +, то есть в state уже были публикации этого автора, 
+            // добавляем к state новые
+            } else {
+                for (let pub in this.props.publications.pubsByAuthor) {
+                    this.setState((state, props) => ({
+                        pubs: [...state.pubs, this.props.publications.pubsByAuthor[pub]]
+                    }))
+                }
+            }
+        }
+
+        // --------------------------------***********************------------------------------------
+
+        
+        // обработка нажатия на кнопку +
         if(prevState.pageNumber !== this.state.pageNumber) {
-            this.props.fetchPublications(this.props.lang, this.state.pageSize, this.state.pageNumber)
+            // если в select выбран автора, значит используем функцию поиска по автору
+            if(this.state.selectedAuthor) {
+                if (this.props.lang === "en-gb") {
+                    // если язык интерфейса английский, то происходит обычный запрос в призмик по фамилии
+                    this.props.SearchPublicationbyAuthor(this.state.selectedAuthor, this.state.pageSize, this.state.pageNumber)
+                } else {
+                    // если язык интерфейса — русский, то
+                    // cначала находим английское соответствие фамилии,
+                    // потом отсылаем запрос с англ. фамилией
+                    this.props.SearchPublicationbyAuthor(this.findEnglishName(this.state.selectedAuthor), this.state.pageSize, this.state.pageNumber)
+                }
+            // или обрабатыввем нажатию на + для всех публикаций
+            } else {
+                this.props.fetchPublications(this.props.lang, this.state.pageSize, this.state.pageNumber)
+            }
         }
     }
 
@@ -145,23 +193,25 @@ class Publications extends Component {
 
                                 /* вывод всех публикаций */
                                 ?
-                                    (this.state.pubs.length === 0 //
+                                    (this.state.pubs.length === 0 
                                     ? <p>{this.context.t("У этой научной группы еше не вышло ни одной публикации")}</p>
                                     : this.state.pubs.map((pub, index) => <Publication pub={pub} key={index} />)
                                     )
                                   
                                 /* вывод публикаций по конкретному автору */
                                 : 
-                                    (this.props.publications.pubsByAuthor.length > 0 
-                                    ? this.props.publications.pubsByAuthor.map((pub, index) => <Publication pub={pub} key={index} />)
-                                    : <p>{this.context.t("Этот автора еще ничего не написал")}</p>
-                                    )
+                                    (this.state.pubs.length === 0 
+                                        ? <p>{this.context.t("Этот автора еще ничего не написал")}</p>
+                                        : this.state.pubs.map((pub, index) => <Publication pub={pub} key={index} />)
+                                        )
                                 }
                             </div>
                         </div>
                     </div>
                     <div className="columns">
-                        <MoreNews isFetching={this.props.publications.isFetchingPubs && this.state.isFetchingOnlyMorePubs} 
+                        <MoreNews isFetching={(this.props.publications.isFetchingPubs || this.props.publications.isFetchingPubsbyAuthor) 
+                                                && 
+                                                this.state.isFetchingOnlyMorePubs} 
                                   nextPage={(this.state.selectedAuthor.length === 0) 
                                             ? this.props.publications.nextPageAll
                                             : this.props.publications.nextPagebyAuthor}
@@ -212,6 +262,7 @@ class Publications extends Component {
                 selectedAuthor: ""
             })
         }
+        this.props.SearchPublicationbyScienceGroup(event.target.value, this.state.pageSize, this.state.pageNumber)
     }
 
     findEnglishName = (russianName) => {
@@ -253,12 +304,12 @@ class Publications extends Component {
                 this.setState({selectedAuthor: event.target.value})
                 if (this.props.lang === "en-gb") {
                     // обычный поиск по фамилии
-                    this.props.SearchPuiblicationbyAuthor(event.target.value)
+                    this.props.SearchPublicationbyAuthor(event.target.value, this.state.pageSize, this.state.pageNumber)
                 } else {
                     // cначала находим английское соответствие фамилии,
                     // потом просто ищем по фамилии
                     console.log(this.findEnglishName(event.target.value))
-                    this.props.SearchPuiblicationbyAuthor(this.findEnglishName(event.target.value))
+                    this.props.SearchPublicationbyAuthor(this.findEnglishName(event.target.value), this.state.pageSize, this.state.pageNumber)
                 }
             }
         }
