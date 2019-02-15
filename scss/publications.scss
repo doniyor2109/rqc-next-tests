@@ -1,9 +1,42 @@
-.author, .title, .journal, .journal div, .journal div p, .journal_volume, .journal_number, .journal_pages {
-    display: inline;
-    margin-right: 1rem;
-}
+// .author, .title, .journal, .journal div, .journal div p, .journal_volume, .journal_number, .journal_pages {
+//     display: inline;
+//     margin-right: 1rem;
+// }
 
 .publication {
-    margin-bottom:2rem;
-    border-bottom: 1px solid gray;
+    margin:2rem 0;
+
+    .journal_details, .journal, .journal_pages {
+        display: flex;
+        flex-direction: row;
+    }
+    .journal_number, .journal, .article_number{
+        &::after {
+            content: ","
+        }
+    }
+    
+    .author {
+        font-weight: bold;
+        margin-right: 0.5rem;
+        &::after {
+            content: ","
+        }
+    }
+    hr {
+        width:10rem;
+        margin:0.5rem 0;
+    }
+    .title {
+
+        margin:0;
+
+        h1 {
+        margin:0;
+        padding:0;
+        font-size:1.6rem;
+        }
+
+    }
 }
+
