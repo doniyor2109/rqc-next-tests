@@ -10,7 +10,7 @@ import * as groupsActions from '../redux/actions/scigroups'
 import * as publicationsActions from '../redux/actions/publications'
 import * as langActions from '../redux/actions/lang'
 import Publication from '../components/publications/Publication'
-
+import MoreNews from '../components/publications/MoreNews'
 import '../scss/publications.scss'
 
 // Основной компонент, связывающий весь интерфейс страницы /news воедино
@@ -28,12 +28,19 @@ class Publications extends Component {
         groupsName: [],
         selectedGroupName: "", 
         authors:[],
-        selectedAuthor: ""
+        selectedAuthor: "", 
+        pageSize: 10, 
+        pageNumber: 1,
+        moreNews: 10, 
+        isFetchingOnlyMorePubs: false, 
+        sortPubName: false, 
+        sortJournal: false, 
+        sortYear: true
     }
   }
 
     componentDidMount() {
-        this.props.fetchPublications(this.props.lang)
+        this.props.fetchPublications(this.props.lang, this.state.pageSize, this.state.pageNumber)
         this.props.fetchSciGroups("*")
     }
 
@@ -41,9 +48,11 @@ class Publications extends Component {
 
         // заносим все публикации в state, чтобы потом их фильтровать
         if(this.props.publications.pubs !== prevProps.publications.pubs) {
-            this.setState({
-                pubs: this.props.publications.pubs
-            })
+            for (let pub in this.props.publications.pubs) {
+                this.setState((state, props) => ({
+                    pubs: [...state.pubs, this.props.publications.pubs[pub]]
+                    }))
+            }
         }
 
 
@@ -58,7 +67,7 @@ class Publications extends Component {
         if (this.props.lang !== prevProps.lang) {
 
             // получаем снова публикации
-            this.props.fetchPublications(this.props.lang)
+            this.props.fetchPublications(this.props.lang, this.state.pageSize, this.state.pageNumber)
 
             // обновляем список групп
             this.setState({
@@ -66,7 +75,7 @@ class Publications extends Component {
             })
         }
 
-        // как только у нас есть список групп, получаем список авторов для этой группы
+        // как только у нас есть список групп и одна из групп выбрана, получаем список авторов для этой группы
         if(prevState.selectedGroupName !== this.state.selectedGroupName) {
             this.setState({
                 authors: this.props.scigroups.groups.filter(el => 
@@ -85,15 +94,9 @@ class Publications extends Component {
 
 
         }
-
-        // if(this.props.publications.pubsbyAuthor !== prevProps.publications.pubsbyAuthor) {
-        //     this.setState({
-        //         pubs: this.props.publications.pubsbyAuthor
-        //     })
-        // }
-
-
-
+        if(prevState.pageNumber !== this.state.pageNumber) {
+            this.props.fetchPublications(this.props.lang, this.state.pageSize, this.state.pageNumber)
+        }
     }
 
     render() {
@@ -132,7 +135,9 @@ class Publications extends Component {
                             </div>
                         </div>
                     </div>
-                    {(this.props.publications.isFetchingPubs || this.props.publications.isFetchingPubsbyAuthor) && <Loading /> }
+                    {!this.state.isFetchingOnlyMorePubs 
+                        && (this.props.publications.isFetchingPubs || this.props.publications.isFetchingPubsbyAuthor) 
+                        && <Loading /> }
                     <div className="columns">
                         <div className="column is-6">
                             <div className="publications">
@@ -155,10 +160,26 @@ class Publications extends Component {
                             </div>
                         </div>
                     </div>
+                    <div className="columns">
+                        <MoreNews isFetching={this.props.publications.isFetchingPubs && this.state.isFetchingOnlyMorePubs} 
+                                  nextPage={(this.state.selectedAuthor.length === 0) 
+                                            ? this.props.publications.nextPageAll
+                                            : this.props.publications.nextPagebyAuthor}
+                                  give_me_more_pubs={this.give_me_more_pubs}
+                        />
+                    </div>
                 </div>
             </div>
         )
     }
+
+    give_me_more_pubs = (e) => {
+        e.preventDefault()
+        this.setState({
+          pageNumber: this.state.pageNumber + 1, 
+          isFetchingOnlyMorePubs: true,
+        }) 
+      }
 
     findGroupIdByName = (groups, name) => {
         var id = ""
@@ -221,12 +242,10 @@ class Publications extends Component {
                 })
             }
         })
-
         return englishName
     }
 
     handleAuthorsSelect = (event) => {
-
         if(event.target.value !== "choose") {
             if (this.props.scigroups.groups.length === 0) {
                 return console.log("группы не загружены")

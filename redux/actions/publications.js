@@ -9,15 +9,17 @@ const fetchPublicationsSuccess = (response) => ({ type: action_types.FETCH_PUBLI
 
 const fetchPublicationsFailure = (error) => ({ type: action_types.FETCH_PUBLICATIONS_FAILURE, error })
 
-export const fetchPublications = (language) => (dispatch) => {
+export const fetchPublications = (language, pageSize, pageNumber) => (dispatch) => {
   dispatch(fetchPublicationsRequest());
   return Prismic.getApi(PrismicConfig.apiEndpoint)
     .then(api => {api.query(Prismic.Predicates.at('document.type', 'publication'),
                                                   { lang: language,
-                                                  fetchLinks : ['author.name', 
-                                                                'journal.name', 
-                                                                'journal.url']
-                                                  })
+                                                    pageSize: pageSize, 
+                                                    page: pageNumber,
+                                                    fetchLinks : ['author.name', 
+                                                                  'journal.name', 
+                                                                  'journal.url']
+                                                    })
                       .then(response => dispatch(fetchPublicationsSuccess(response)))
                       .catch(error => dispatch(fetchPublicationsFailure(error)))
           })

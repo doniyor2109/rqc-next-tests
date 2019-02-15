@@ -1,5 +1,5 @@
 import React from 'react'
-import { RichText, Link } from 'prismic-reactjs'
+import { RichText, Link, Date } from 'prismic-reactjs'
 import PrismicConfig from '../../prismic-configuration'
 import moment from 'moment'
 
@@ -16,7 +16,13 @@ const Publication = ({pub}) => {
                     {pub.data.authors.map((author, index) => <span key={index} className="author">{author.text}</span>)}
                 </p>
                 <div className="title">
-                    {RichText.render(pub.data.title, PrismicConfig.linkResolver)}
+                    <a href={pub.data.eprint[0] 
+                                ? "https://arxiv.org/pdf/" + pub.data.eprint[0].text
+                                : pub.data.doi.url}
+                       target="_blank" rel="noopener noreferer"
+                    >
+                        {RichText.render(pub.data.title, PrismicConfig.linkResolver)}
+                    </a>
                 </div>
                 <hr />
                 <div className="journal_details">
@@ -53,7 +59,7 @@ const Publication = ({pub}) => {
                 }
                 {pub.data.date &&
                         <div className="date">
-                            {moment(Date(pub.data.date)).format('DD') + " " + 
+                           {moment(Date(pub.data.date)).format('DD') + " " + 
                             moment(Date(pub.data.date)).format('MMMM') + " " +
                             moment(Date(pub.data.date)).format('YYYY')}
                         </div>

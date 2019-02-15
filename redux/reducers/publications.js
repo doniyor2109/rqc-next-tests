@@ -5,26 +5,21 @@ const initialState = {
   isFetchingPubsbyAuthor: false,
   pubs: [],
   pubsByAuthor: [],
-  total_pages: 0,
-  total_results_size: 0,
-  nextPage: null,
+  nextPageAll: null,
+  nextPagebyAuthor: null, 
   pubsbyAuthor: []
 };
 
 function fetchPublicationsSuccess(state, action) {
-  const nextPage = action.response.next_page
-  const total_results_size = action.response.total_results_size
-  const total_pages = action.response.total_pages
+  const nextPageAll = action.response.next_page
   const pubs = action.response.results
-  return {...state, isFetchingPubs: false, pubs}
+  return {...state, isFetchingPubs: false, pubs, nextPageAll}
 }
 
 function fetchPubsbyAuthorsSuccess(state, action) {
-  const nextPage = action.response.next_page
-  const total_results_size = action.response.total_results_size
-  const total_pages = action.response.total_pages
+  const nextPagebyAuthor = action.response.next_page
   const pubsByAuthor = action.response.results
-  return {...state, isFetchingPubsbyAuthor: false, pubsByAuthor}
+  return {...state, isFetchingPubsbyAuthor: false, pubsByAuthor, nextPagebyAuthor}
 }
 
 
