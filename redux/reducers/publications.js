@@ -14,8 +14,11 @@ const initialState = {
 
 function fetchPublicationsSuccess(state, action) {
   const nextPageAll = action.response.next_page
+  const page = action.response.page
   const pubs = action.response.results
-  return {...state, isFetchingPubs: false, pubs, nextPageAll}
+  const total_results_size = action.response.total_results_size
+  const total_pages = action.response.total_pages
+  return {...state, isFetchingPubs: false, pubs, nextPageAll, total_results_size, total_pages, page}
 }
 
 function fetchPubsbyAuthorsSuccess(state, action) {

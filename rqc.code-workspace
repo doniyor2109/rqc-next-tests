@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "/Users/vladislavsorokin/webprojects/db_prep"
 		}
 	]
 }
