@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
@@ -12,6 +12,8 @@ import * as langActions from '../redux/actions/lang'
 import Publication from '../components/publications/Publication'
 import MoreNews from '../components/publications/MoreNews'
 import '../scss/publications.scss'
+import hostName from '../host'
+
 
 // Основной компонент, связывающий весь интерфейс страницы /news воедино
 class Publications extends Component {
@@ -152,74 +154,118 @@ class Publications extends Component {
         console.log("publications", this.props)
 
         return (
-            <div className="sciencepage">
-                <div className="container">
-                    <div className="columns">
-                        <div className="column is-4">
-                            {/* <form className="search_form" onSubmit={e => this.handleSubmit(e)}>
-                                <input type="search" 
-                                    id="input-search" 
-                                    name="search" 
-                                    value={this.state.searchbyAuthor}
-                                    onChange={e => this.handleChange(e)}
-                                />
-                                <button type="submit" id="input-submit-button">Search by author</button>
-                            </form> */}
-                            <div className="select">
-                                <select value={this.state.selectedGroupName} onChange={this.handleGroupSelect}>
-                                    <option value="choose">{this.context.t("Выберите группу")}</option> 
-                                    {this.state.groupsName.map((group, index) => 
-                                        <option value={group} key={index}>{group}</option>
-                                    )}
-                                </select>
+            <Fragment>
+                <Head>
+                    <title>{this.context.t("Публикации")}</title>
+                    <meta property="og:url"                content={hostName + "/publications}"} />
+                    <meta property="og:type"               content="article" />
+                    <meta property="og:image"              content={hostName + "/static/qaqam.jpg"} />
+                    <meta property="og:locale:alternate"   content="en_US" />
+                {(typeof fb_locale === 'undefined' || this.props.fb_locale === "ru_RU") && 
+                    <Fragment>
+                        <meta property="og:locale"             content="ru_RU" />
+                        <meta property="og:title"              content="Публикации" />
+                        <meta property="og:description"        content="Публикации научных групп РКЦ за все время" />
+                    </Fragment>
+                }
+                {this.props.fb_locale === "en_US" && 
+                    <Fragment>
+                        <meta property="og:locale"             content="en_US" />
+                        <meta property="og:title"              content="Publications" />
+                        <meta property="og:description"        content="RQC scientific publications" />
+                    </Fragment>
+                }
+                </Head>
+                <div className="pubspage">
+                    <div className="container">
+                        <h1 className="page-main-heading">
+                            {this.context.t("Публикации")}
+                        </h1>
+                    </div>
+                    <section className="settings">
+                        <div className="container">
+                            <h5>{this.context.t("Фильтры и поиск")}:</h5>
+                            <div className="columns">
+                                <div className="column is-5">
+                                    <p className="name">{this.context.t("Научная группа")}:</p>
+                                    <div className="select">
+                                        <select value={this.state.selectedGroupName} onChange={this.handleGroupSelect}>
+                                            <option value="choose">{this.context.t("Выберите группу")}</option> 
+                                            {this.state.groupsName.map((group, index) => 
+                                                <option value={group} key={index}>{group}</option>
+                                            )}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div className="column is-3">
+                                    <p className="name">{this.context.t("Автор")}:</p>
+                                    <div className="select">
+                                        <select value={this.state.selectedAuthor} onChange={this.handleAuthorsSelect}>
+                                            <option value="choose">{this.context.t("Выберите автора")}</option> 
+                                            {this.state.authors.map((author, index) => 
+                                                <option value={author} key={index}>{author}</option>
+                                            )}
+                                        </select>
+                                    </div>
+                                </div>
+                                <div className="column is-4">
+                                    <form className="search_form" onSubmit={e => this.handleSubmit(e)}>
+                                        <input type="search" 
+                                            id="input-search" 
+                                            name="search" 
+                                            value={this.state.searchbyAuthor}
+                                            onChange={e => this.handleChange(e)}
+                                        />
+                                        <button type="submit" id="input-submit-button">Search by author</button>
+                                    </form>
+                                </div>
                             </div>
-                            <div className="select">
-                                <select value={this.state.selectedAuthor} onChange={this.handleAuthorsSelect}>
-                                    <option value="choose">{this.context.t("Выберите автора")}</option> 
-                                    {this.state.authors.map((author, index) => 
-                                        <option value={author} key={index}>{author}</option>
-                                    )}
-                                </select>
+                            <div className="columns">
+                                <h5>{this.context.t("Сортировать по")}:</h5>
                             </div>
                         </div>
-                    </div>
-                    {!this.state.isFetchingOnlyMorePubs 
-                        && (this.props.publications.isFetchingPubs || this.props.publications.isFetchingPubsbyAuthor) 
-                        && <Loading /> }
-                    <div className="columns">
-                        <div className="column is-6">
-                            <div className="publications">
-                                {(this.state.selectedAuthor.length === 0) //фильтр по автору не выбран
+                    </section>
 
-                                /* вывод всех публикаций */
-                                ?
-                                    (this.state.pubs.length === 0 
-                                    ? <p>{this.context.t("У этой научной группы еше не вышло ни одной публикации")}</p>
-                                    : this.state.pubs.map((pub, index) => <Publication pub={pub} key={index} />)
-                                    )
-                                  
-                                /* вывод публикаций по конкретному автору */
-                                : 
-                                    (this.state.pubs.length === 0 
-                                        ? <p>{this.context.t("Этот автора еще ничего не написал")}</p>
+
+                    <div className="container">
+                        {!this.state.isFetchingOnlyMorePubs 
+                            && (this.props.publications.isFetchingPubs || this.props.publications.isFetchingPubsbyAuthor) 
+                            && <Loading /> }
+                        <div className="columns">
+                            <div className="column is-6">
+                                <div className="publications">
+                                    {(this.state.selectedAuthor.length === 0) //фильтр по автору не выбран
+
+                                    /* вывод всех публикаций */
+                                    ?
+                                        (this.state.pubs.length === 0 
+                                        ? <p>{this.context.t("У этой научной группы еше не вышло ни одной публикации")}</p>
                                         : this.state.pubs.map((pub, index) => <Publication pub={pub} key={index} />)
                                         )
-                                }
+                                    
+                                    /* вывод публикаций по конкретному автору */
+                                    : 
+                                        (this.state.pubs.length === 0 
+                                            ? <p>{this.context.t("Этот автора еще ничего не написал")}</p>
+                                            : this.state.pubs.map((pub, index) => <Publication pub={pub} key={index} />)
+                                            )
+                                    }
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="columns">
-                        <MoreNews isFetching={(this.props.publications.isFetchingPubs || this.props.publications.isFetchingPubsbyAuthor) 
-                                                && 
-                                                this.state.isFetchingOnlyMorePubs} 
-                                  nextPage={(this.state.selectedAuthor.length === 0) 
-                                            ? this.props.publications.nextPageAll
-                                            : this.props.publications.nextPagebyAuthor}
-                                  give_me_more_pubs={this.give_me_more_pubs}
-                        />
+                        <div className="columns">
+                            <MoreNews isFetching={(this.props.publications.isFetchingPubs || this.props.publications.isFetchingPubsbyAuthor) 
+                                                    && 
+                                                    this.state.isFetchingOnlyMorePubs} 
+                                    nextPage={(this.state.selectedAuthor.length === 0) 
+                                                ? this.props.publications.nextPageAll
+                                                : this.props.publications.nextPagebyAuthor}
+                                    give_me_more_pubs={this.give_me_more_pubs}
+                            />
+                        </div>
                     </div>
                 </div>
-            </div>
+        </Fragment>
         )
     }
 
