@@ -395,6 +395,7 @@ class Publications extends Component {
         })
         this.groupSelect.state.value.value = ""
         this.groupSelect.state.value.label = this.context.t("Введите название")
+        this.resetAuthor(e)
 
     }
     resetAuthor = (e) => {
