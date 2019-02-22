@@ -9,7 +9,7 @@
     .settings {
         background: #F7F9FB;
         padding: 3rem 0 4rem;
-        margin: 4.5rem 0 5rem 0;
+        margin: 4.5rem 0 0 0;
 
         h5 {
             font-size: 1.6rem;
@@ -89,6 +89,23 @@
         }
     }
     
+    .filters {
+        margin: 4.5rem 0 6rem;
+        .group-author {
+            span {
+                font-size: 2.2rem;
+                line-height: 3rem;
+                font-weight: bold;
+                color:#040303;
+            }
+            img {
+                margin-right: 2.6rem;
+                top: -1rem;
+                position: relative;
+            }
+        }
+    }
+
     .publication {
 
         margin:0 0 4rem 0;
@@ -121,6 +138,7 @@
             margin-right: 0.5rem;
             font-size: 1.6rem;
             line-height: 2.3rem;
+            color: rgba(4,3,3,0.7);
             &::after {
                 content: ","
             }

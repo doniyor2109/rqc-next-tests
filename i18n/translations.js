@@ -96,7 +96,16 @@ export const translations = {
         "По вашему запросу ничего не найдено": "Nothing matched your request", 
         "У этой научной группы еше не вышло ни одной публикации": "This scientific group has no publications",
         "Этот автора еще ничего не написал": "This author has no publications",
-        "Ваш запрос": "Your request"
+        "Ваш запрос": "Your request",
+        "Научная группа": "Scientific group",
+        "Автор":"Author",
+        "Сортировать по": "Sort by",
+        "Дате выхода": "Issue date",
+        "Названию публикации": "Publication title",
+        "Названию издания": "Journal",
+        "Фильтры и поиск": "Filters and search",
+        "Введите название": "Enter group name",
+        "Введите имя": "Enter name"
      }
    }
    
