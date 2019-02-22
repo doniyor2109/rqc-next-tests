@@ -31,14 +31,12 @@ const Publication = ({pub}) => {
                     </a>
                     {pub.data.volume && 
                         <div className="journal_volume">
-                            {pub.data.volume}
+                            №&nbsp;{pub.data.volume}
                         </div>
                     }
-                    {pub.data.number && 
-                        <div className="journal_number">
-                            ({pub.data.number})
-                        </div>
-                    }
+                    <div className="journal_number">
+                        {pub.data.number ? '(' + pub.data.number+ '),' : ', '} 
+                    </div>
                     {pub.data.article_number &&
                         <div className="article_number">
                             article № {pub.data.article_number}

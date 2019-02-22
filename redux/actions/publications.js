@@ -35,7 +35,7 @@ const SearchPublicationbyAuthorSuccess = (text, response) => ({ type: action_typ
 const SearchPublicationbyAuthorFailure = (text, error) => ({ type: action_types.SEARCH_PUBLICATION_BY_AUTHOR_FAILURE, text, error });
 
 export const SearchPublicationbyAuthor = (author, pageSize, pageNumber) => (dispatch) => {
-  dispatch(SearchPublicationbyAuthorRequest(author));
+  dispatch(SearchPublicationbyAuthorRequest(author))
   return Prismic.getApi(PrismicConfig.apiEndpoint)
     .then(api => {api.query(Prismic.Predicates.fulltext('my.publication.authors', author), 
                                                          {
@@ -47,22 +47,22 @@ export const SearchPublicationbyAuthor = (author, pageSize, pageNumber) => (disp
           })
 }
 
-const SearchPublicationbyScienceGroupRequest = (group) => ({ type: action_types.SEARCH_PUBLICATION_BY_SCIENCE_GROUP_REQUEST, group });
+const SearchPublicationbyScienceGroupRequest = (groupId) => ({ type: action_types.SEARCH_PUBLICATION_BY_SCIENCE_GROUP_REQUEST, groupId });
 
-const SearchPublicationbyScienceGroupSuccess = (group, response) => ({ type: action_types.SEARCH_PUBLICATION_BY_SCIENCE_GROUP_SUCCESS, group, response });
+const SearchPublicationbyScienceGroupSuccess = (groupId, response) => ({ type: action_types.SEARCH_PUBLICATION_BY_SCIENCE_GROUP_SUCCESS, groupId, response });
 
-const SearchPublicationbyScienceGroupFailure = (group, error) => ({ type: action_types.SEARCH_PUBLICATION_BY_SCIENCE_GROUP_FAILURE, group, error });
+const SearchPublicationbyScienceGroupFailure = (groupId, error) => ({ type: action_types.SEARCH_PUBLICATION_BY_SCIENCE_GROUP_FAILURE, groupId, error });
 
-export const SearchPublicationbyScienceGroup = (group, pageSize, pageNumber) => (dispatch) => {
-  dispatch(SearchPublicationbyScienceGroupRequest(group));
+export const SearchPublicationbyScienceGroup = (groupId, pageSize, pageNumber) => (dispatch) => {
+  dispatch(SearchPublicationbyScienceGroupRequest(groupId));
   return Prismic.getApi(PrismicConfig.apiEndpoint)
-    .then(api => {api.query(Prismic.Predicates.at('my.publication.science_group', group), 
-                                                         {
+    .then(api => {api.query([Prismic.Predicates.at('document.type', 'publication'), 
+                            Prismic.Predicates.at('my.publication.science_group', groupId)],{
                                                           pageSize: pageSize, 
                                                           page: pageNumber,
                                                           fetchLinks : ['science_group.groupname']
                                                          })
-                      .then(response => dispatch(SearchPublicationbyScienceGroupSuccess(group, response)))
-                      .catch(error => dispatch(SearchPublicationbyScienceGroupFailure(group, error)))
+                      .then(response => dispatch(SearchPublicationbyScienceGroupSuccess(groupId, response)))
+                      .catch(error => dispatch(SearchPublicationbyScienceGroupFailure(groupId, error)))
           })
 }

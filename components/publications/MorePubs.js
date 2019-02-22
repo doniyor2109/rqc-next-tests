@@ -2,12 +2,11 @@ import React from 'react'
 import { Loading } from '../shared/loading.js'
 
 
-const MoreNews = ({nextPage, isFetching, give_me_more_pubs}) => (
+const MorePubs = ({nextPage, isFetching, give_me_more_pubs}) => (
     <div className="more-news">
         <div className="columns">
             <div className="column is-centered">
                 {isFetching && <Loading />}
-            <hr />
                 {nextPage &&
                 <img className="more" alt="show more events" onClick={e => {give_me_more_pubs(e)}} src="/static/more.svg" /> }
             </div>
@@ -15,4 +14,4 @@ const MoreNews = ({nextPage, isFetching, give_me_more_pubs}) => (
     </div>
 )
 
-export default MoreNews
+export default MorePubs

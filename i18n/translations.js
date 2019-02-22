@@ -95,7 +95,8 @@ export const translations = {
         "Выберите автора": "Choose author",
         "По вашему запросу ничего не найдено": "Nothing matched your request", 
         "У этой научной группы еше не вышло ни одной публикации": "This scientific group has no publications",
-        "Этот автора еще ничего не написал": "This author has no publications"
+        "Этот автора еще ничего не написал": "This author has no publications",
+        "Ваш запрос": "Your request"
      }
    }
    
