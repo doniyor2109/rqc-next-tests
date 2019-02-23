@@ -17,7 +17,7 @@ import FiltersRequest from '../components/publications/FiltersRequest'
 import '../scss/publications.scss'
 
 //helpers
-import {findGroupIdByName, findEnglishName} from '../components/publications/helpers'
+import {findGroupIdByName, findEnglishName, getUniqueDatesfromPubs} from '../components/publications/helpers'
 
 
 // Основной компонент, связывающий весь интерфейс страницы /publications воедино
@@ -218,7 +218,9 @@ class Publications extends Component {
     render() {
 
         console.log("publications", this.props)
-
+        if (this.state.pubs.length > 0) {
+            getUniqueDatesfromPubs(this.state.pubs)
+        }
         return (
             <Fragment>
                 <PubHead fb_locale={this.props.fb_locale} />
@@ -395,9 +397,12 @@ class Publications extends Component {
         })
         this.groupSelect.state.value.value = ""
         this.groupSelect.state.value.label = this.context.t("Введите название")
-        this.resetAuthor(e)
-
+        // если выбран и автор, то при отмене выбора группы сбрасываем и выбор автора
+        if (this.authorSelect.state.value !== null) {
+            this.resetAuthor(e)
+        }
     }
+
     resetAuthor = (e) => {
         e.preventDefault()
         this.setState({
