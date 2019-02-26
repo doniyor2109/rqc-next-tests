@@ -199,22 +199,7 @@ class Publications extends Component {
                         <div className="columns">
                             <div className="column is-8 is-offset-2-desktop">
                                 <div className="publications">
-                                    {(this.state.selectedAuthor.length === 0) //фильтр по автору не выбран
-
-                                    /* вывод всех публикаций */
-                                    ?
-                                        (this.state.pubs.length === 0 
-                                        ? <p>{this.context.t("У этой научной группы еше не вышло ни одной публикации")}</p>
-                                        : this.state.pubs.map((pub, index) => <Publication pub={pub} key={index} />)
-                                        )
-                                    
-                                    /* вывод публикаций по конкретному автору */
-                                    : 
-                                        (this.state.pubs.length === 0 
-                                            ? <p>{this.context.t("Этот автора еще ничего не написал")}</p>
-                                            : this.state.pubs.map((pub, index) => <Publication pub={pub} key={index} />)
-                                            )
-                                    }
+                                    {this.state.pubs.map((pub, index) => <Publication pub={pub} key={index} />)}
                                 </div>
                             </div>
                         </div>
@@ -268,11 +253,12 @@ class Publications extends Component {
     
 
     handleAuthorsSelect = (event) => {
-        if (this.props.scigroups.groups.length === 0) {
-            return console.log("Группы не загружены")
-        } else {
-            this.setState({selectedAuthor: event.value})
-        }        
+
+        this.setState({
+            selectedAuthor: event.value,
+            pubs: this.state.pubs.filter(el => el.data.authors.some(author => author.text === event.value))
+
+        })
     }
 
     resetGroup = (e) => {
@@ -282,16 +268,13 @@ class Publications extends Component {
         })
         this.groupSelect.state.value.value = ""
         this.groupSelect.state.value.label = this.context.t("Введите название")
-        // если выбран и автор, то при отмене выбора группы сбрасываем и выбор автора
-        if (this.authorSelect.state.value !== null) {
-            this.resetAuthor(e)
-        }
     }
 
     resetAuthor = (e) => {
         e.preventDefault()
         this.setState({
-            selectedAuthor: ""
+            selectedAuthor: "",
+            pubs: this.props.publications.pubs
         })
         this.authorSelect.state.value.value = ""
         this.authorSelect.state.value.label = this.context.t("Введите имя")
