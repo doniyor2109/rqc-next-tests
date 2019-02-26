@@ -5,11 +5,13 @@ import PropTypes from 'prop-types'
 import Select from 'react-select';
 
 import {Loading} from '../components/shared/loading'
+import PubsSortedByTitle from '../components/publications/PubsSortedByTitle'
+import PubsSortedByDate from '../components/publications/PubsSortedByDate'
+import PubsSortedByJournal from '../components/publications/PubsSortedByJournal'
 
 import * as groupsActions from '../redux/actions/scigroups'
 import * as publicationsActions from '../redux/actions/publications'
 import * as langActions from '../redux/actions/lang'
-import Publication from '../components/publications/Publication'
 import PubHead from '../components/publications/PubHead'
 import { FilterTag } from '../components/shared/FilterTag'
 import FiltersRequest from '../components/publications/FiltersRequest'
@@ -207,13 +209,21 @@ class Publications extends Component {
                                 />
                             </div> 
                         </div>
-                        {
-                           this.props.publications.isFetchingPubs && this.state.pageNumber === 1
-                            && <Loading /> }
+                        {this.props.publications.isFetchingPubs
+                         && <Loading /> }
+
                         <div className="columns">
                             <div className="column is-8 is-offset-2-desktop">
                                 <div className="publications">
-                                    {this.state.pubs.map((pub, index) => <Publication pub={pub} key={index} />)}
+                                    {!this.props.publications.isFetchingPubs && 
+                                        (this.state.activeTag === "SORT_DATE"
+                                        ? <PubsSortedByDate pubs={this.state.pubs} />
+                                        : (this.state.activeTag === "SORT_NAME" 
+                                            ? <PubsSortedByTitle pubs={this.state.pubs} />
+                                            : <PubsSortedByJournal pubs={this.state.pubs} />
+                                        )
+                                        )
+                                    }
                                 </div>
                             </div>
                         </div>

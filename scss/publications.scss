@@ -9,7 +9,7 @@
     .settings {
         background: #F7F9FB;
         padding: 3rem 0 4rem;
-        margin: 4.5rem 0 0 0;
+        margin: 4.5rem 0 ;
 
         h5 {
             font-size: 1.6rem;
@@ -40,11 +40,20 @@
             border-radius: 0;
             height:3.5rem;
         }
-        .select__placeholder, .select__option, .select__single-value {
+        .select__placeholder {
             font-weight: normal;
             font-size: 1.4rem;
             line-height: 2.4rem;
             font-style: italic;
+            font-family: 'DIN Pro';
+            padding: 0px 2px 1px;
+        }
+
+        .select__option, .select__single-value {
+            font-weight: normal;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            font-style: normal;
             font-family: 'DIN Pro';
             padding: 0px 2px 1px;
         }
@@ -90,7 +99,6 @@
     }
     
     .filters {
-        margin: 4.5rem 0 6rem;
         .group-author {
             span {
                 font-size: 2.2rem;
@@ -167,6 +175,13 @@
             }
     
         }
+    }
+    .pub_category {
+        font-size: 2.2rem;
+        line-height: 3rem;
+        font-weight: bold;
+        margin: 0 0 4rem 0;
+        color: #040303;
     }
 }
 
