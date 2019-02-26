@@ -8,14 +8,29 @@ const fetchSciGroupsSuccess = (response) => ({ type: action_types.FETCH_SCI_GROU
 
 const fetchSciGroupsFailure = (error) => ({ type: action_types.FETCH_SCI_GROUPS_FAILURE, error })
 
-export const fetchSciGroups = (language) => (dispatch) => {
-  dispatch(fetchSciGroupsRequest());
-  return Prismic.getApi(PrismicConfig.apiEndpoint)
-    .then(api => {api.query(Prismic.Predicates.at('document.type', 'science_group'),
-                                                  { lang : language, 
-                                                    pageSize: 100,
-                                                  fetchLinks : ['scientist.name'] })
-                      .then(response => dispatch(fetchSciGroupsSuccess(response)))
-                      .catch(error => dispatch(fetchSciGroupsFailure(error)))
-          })
+export const fetchSciGroups = (language, fetchOnly) => (dispatch) => {
+
+  if (fetchOnly) {
+    dispatch(fetchSciGroupsRequest());
+    return Prismic.getApi(PrismicConfig.apiEndpoint)
+      .then(api => {api.query(Prismic.Predicates.at('document.type', 'science_group'),
+                                                    { lang : language, 
+                                                      pageSize: 100,
+                                                      fetch: 'science_group.' +  fetchOnly})
+                        .then(response => dispatch(fetchSciGroupsSuccess(response)))
+                        .catch(error => dispatch(fetchSciGroupsFailure(error)))
+            })
+
+  } else {
+      dispatch(fetchSciGroupsRequest());
+      return Prismic.getApi(PrismicConfig.apiEndpoint)
+        .then(api => {api.query(Prismic.Predicates.at('document.type', 'science_group'),
+                                                      { lang : language, 
+                                                        pageSize: 100,
+                                                      fetchLinks : ['scientist.name'] })
+                          .then(response => dispatch(fetchSciGroupsSuccess(response)))
+                          .catch(error => dispatch(fetchSciGroupsFailure(error)))
+              })
+  }
+
 }

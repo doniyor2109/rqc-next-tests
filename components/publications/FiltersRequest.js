@@ -17,7 +17,7 @@ const FiltersRequest = ({selectedGroupName,
                     <span>
                         {pubsearch}
                     </span>
-                    <img src="/static/resetFilers.svg" alt="reset filtwers" onClick={e => {resetSearch(e)}}/>
+                    <img src="/static/resetFilers.svg" alt="reset filtwers" onClick={e => {resetSearch(e, "click")}}/>
                 </Fragment>
             </p>
         :   <div className="group-author">
@@ -26,7 +26,7 @@ const FiltersRequest = ({selectedGroupName,
                         <span>
                             {selectedGroupName} 
                         </span>
-                        <img src="/static/resetFilers.svg" alt="reset filtwers" onClick={e => {resetGroup(e)}}/>
+                        <img src="/static/resetFilers.svg" alt="reset filtwers" onClick={e => {resetGroup(e, "click")}}/>
                     </Fragment>
                 }
                 {selectedAuthor && 
@@ -34,7 +34,7 @@ const FiltersRequest = ({selectedGroupName,
                         <span>
                             {selectedAuthor} 
                         </span>
-                        <img src="/static/resetFilers.svg" alt="reset filtwers" onClick={e => {resetAuthor(e)}}/>
+                        <img src="/static/resetFilers.svg" alt="reset filtwers" onClick={e => {resetAuthor(e, "click")}}/>
                     </Fragment>
                 }
             </div>

@@ -16,7 +16,7 @@ import FiltersRequest from '../components/publications/FiltersRequest'
 import '../scss/publications.scss'
 
 //helpers
-import {findGroupIdByName, uniqArray, findEnglishName, getUniqueDatesfromPubs} from '../components/publications/helpers'
+import {findGroupIdByName, uniqArray, filterPubsbyGroup, findEnglishName, getUniqueDatesfromPubs} from '../components/publications/helpers'
 
 
 // Основной компонент, связывающий весь интерфейс страницы /publications воедино
@@ -45,10 +45,28 @@ class Publications extends Component {
     componentDidMount() {
 
         this.props.fetchPublications(this.props.lang, this.state.pageNumber )
-        this.props.fetchSciGroups("*")
+        this.props.fetchSciGroups(this.props.lang, "groupname")
     }
 
     componentDidUpdate(prevProps, prevState) {
+
+        console.log("updated!")
+
+        // -------------------- DIFF's -------------------------
+        const now = Object.entries(this.props);
+        const added = now.filter(([key, val]) => {
+            if (prevProps[key] === undefined) return true;
+            if (prevProps[key] !== val) {
+                console.log(`${key}
+                - ${JSON.stringify(val)}
+                + ${JSON.stringify(prevProps[key])}`);
+            }
+            return false;
+        });
+        added.forEach(([key, val]) => console.log(`${key}
+            + ${JSON.stringify(val)}`));
+        // -------------------- DIFF's -------------------------
+
 
         if (this.props.publications.next_page !== prevProps.publications.next_page) {
             if (this.props.publications.next_page !== null) {
@@ -130,6 +148,8 @@ class Publications extends Component {
                                             className='author-select-container'
                                             classNamePrefix="select"
                                             placeholder={this.context.t("Введите имя")}
+                                            isLoading={this.props.publications.isFetchingPubs}
+                                            isDisabled={this.props.publications.isFetchingPubs}
                                             ref={c => (this.authorSelect = c)}
                                     />
                                 </div>
@@ -143,6 +163,8 @@ class Publications extends Component {
                                             className='group-select-container'
                                             classNamePrefix="select"
                                             placeholder={this.context.t("Введите название")}
+                                            isLoading={this.props.scigroups.isFetching}
+                                            isDisabled={this.props.scigroups.isFetching}
                                             ref={c => (this.groupSelect = c)}
                                     />
                                 </div>
@@ -223,64 +245,60 @@ class Publications extends Component {
     }
     
     handleGroupSelect = (event) => {
+        this.resetAuthor(event, "handle")
         this.setState({
             selectedGroupName: event.value,
-            selectedAuthor: ""
+            pubs: filterPubsbyGroup(event.value, this.props.publications.pubs)
         })
-        this.setState({
-            pubs: this.filterPubsbyGroup(event.value)
-        })
-        const id = findGroupIdByName(this.props.scigroups.groups, event.value)
-        this.props.SearchPublicationbyScienceGroup(id, 1)
+
+
+
+        // проверяем как работает запрос поля Contetn-Relationship
+        // const id = findGroupIdByName(this.props.scigroups.groups, event.value)
+        // this.props.SearchPublicationbyScienceGroup(id, 1)
 
     }
-
-    filterPubsbyGroup = (group) => {
-
-        var filteredPubs = []
-
-        for (let i = 0; i < this.state.pubs.length; i++) {
-            if( (this.state.pubs[i].data.science_group.data && this.state.pubs[i].data.science_group.data.groupname[0].text === group) ||
-                (this.state.pubs[i].data.science_group1.data && this.state.pubs[i].data.science_group1.data.groupname[0].text === group) ||
-                (this.state.pubs[i].data.science_group2.data && this.state.pubs[i].data.science_group2.data.groupname[0].text === group) ) {
-                    filteredPubs.push(this.state.pubs[i])
-                }
-        }
-
-        return filteredPubs
-    }
-
     
 
     handleAuthorsSelect = (event) => {
-
+        this.resetGroup(event, "handle")
         this.setState({
             selectedAuthor: event.value,
-            pubs: this.state.pubs.filter(el => el.data.authors.some(author => author.text === event.value))
-
+            pubs: this.props.publications.pubs.filter(el => el.data.authors.some(author => author.text === event.value))
         })
     }
 
-    resetGroup = (e) => {
-        e.preventDefault()
+    resetGroup = (e, from) => {
+        if (from === "click") {
+            e.preventDefault()
+        }
         this.setState({
-            selectedGroupName: ""
+            selectedGroupName: "",
+            pubs: this.props.publications.pubs
         })
-        this.groupSelect.state.value.value = ""
-        this.groupSelect.state.value.label = this.context.t("Введите название")
+        if (this.groupSelect.state.value !== null) {
+            this.groupSelect.state.value.value = ""
+            this.groupSelect.state.value.label = this.context.t("Введите название")
+        }
     }
 
-    resetAuthor = (e) => {
-        e.preventDefault()
+    resetAuthor = (e, from) => {
+        if (from === "click") {
+            e.preventDefault()
+        }        
         this.setState({
             selectedAuthor: "",
             pubs: this.props.publications.pubs
         })
-        this.authorSelect.state.value.value = ""
-        this.authorSelect.state.value.label = this.context.t("Введите имя")
+        if (this.authorSelect.state.value !== null) {
+            this.authorSelect.state.value.value = ""
+            this.authorSelect.state.value.label = this.context.t("Введите имя")
+        }
     }    
-    resetSearch = (e) => {
-        e.preventDefault()
+    resetSearch = (e, from) => {
+        if (from === "click") {
+            e.preventDefault()
+        }        
         this.setState({
             pubsearch: ""
         })

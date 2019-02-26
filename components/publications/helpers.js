@@ -63,3 +63,19 @@ export const uniqArray = (a) => {
         return seen.hasOwnProperty(item) ? false : (seen[item] = true)
     });
 }
+
+
+export const filterPubsbyGroup = (group, pubs) => {
+
+    var filteredPubs = []
+
+    for (let i = 0; i < pubs.length; i++) {
+        if( (pubs[i].data.science_group.data && pubs[i].data.science_group.data.groupname[0].text === group) ||
+            (pubs[i].data.science_group1.data && pubs[i].data.science_group1.data.groupname[0].text === group) ||
+            (pubs[i].data.science_group2.data && pubs[i].data.science_group2.data.groupname[0].text === group) ) {
+                filteredPubs.push(pubs[i])
+            }
+    }
+
+    return filteredPubs
+}
