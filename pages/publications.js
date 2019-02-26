@@ -69,10 +69,6 @@ class Publications extends Component {
         //     + ${JSON.stringify(val)}`));
         // -------------------- DIFF's -------------------------
 
-        if(this.state.activeTag !== prevState.activeTag) {
-            this.props.fetchPublications(this.props.lang, this.state.pageNumber, this.state.activeTag, [])
-        }
-
         // --------------------------------***********************------------------------------------
         // заносим все публикации в state, чтобы потом их фильтровать
         if(this.props.publications.pubs !== prevProps.publications.pubs) {
@@ -238,6 +234,8 @@ class Publications extends Component {
         this.setState({
             activeTag: tag, 
         })
+        this.props.fetchPublications(this.props.lang, this.state.pageNumber, tag, [])
+
     }
 
     searchChange = (e) => {
