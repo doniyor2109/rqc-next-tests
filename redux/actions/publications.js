@@ -9,22 +9,34 @@ const fetchPublicationsSuccess = (response) => ({ type: action_types.FETCH_PUBLI
 
 const fetchPublicationsFailure = (error) => ({ type: action_types.FETCH_PUBLICATIONS_FAILURE, error })
 
-export const fetchPublications = (language, pageNumber) => (dispatch) => {
+export const fetchPublications = (language, pageNumber, activeTag, results) => (dispatch) => {
+
+  const ordering = (activeTag === "SORT_DATE") 
+                    ? '[my.publication.date desc]'
+                    : (activeTag === "SORT_NAME" 
+                        ? '[my.publication.title]'
+                        : '[my.publication.journal_name]'
+                      )
   dispatch(fetchPublicationsRequest());
   return Prismic.getApi(PrismicConfig.apiEndpoint)
     .then(api => {api.query(Prismic.Predicates.at('document.type', 'publication'),
                                                   { lang: language,
                                                     pageSize: 100, 
                                                     page: pageNumber,
-                                                    fetchLinks : ['author.name', 
-                                                                  'science_group.groupname',
-                                                                  'journal.name', 
-                                                                  'journal.url'],
-                                                    orderings : '[my.publication.date desc]' 
+                                                    orderings : ordering,
+                                                    fetchLinks : ['science_group.groupname']
                                                     })
-                      .then(response => dispatch(fetchPublicationsSuccess(response)))
+                      .then(response => {
+                                results = results.concat(response.results)
+                                if (response.next_page !== null) {
+                                  dispatch(fetchPublications(language, pageNumber + 1, activeTag, results))
+                                } else {
+                                  dispatch(fetchPublicationsSuccess(results))
+                                }
+                            })
                       .catch(error => dispatch(fetchPublicationsFailure(error)))
-          })
+                  }
+          )
 }
 
 

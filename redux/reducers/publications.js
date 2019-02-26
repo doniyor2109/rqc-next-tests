@@ -9,7 +9,15 @@ const initialState = {
 };
 
 function fetchPublicationsSuccess(state, action) {
-  const pubs = state.pubs.concat(action.response.results)
+  // const response = action.response
+  // console.log("reducer response", response)
+  // var pubs = state.pubs
+  // if (response.page === 1) {
+  //   pubs = action.response.results
+  // } else {
+  //   pubs = state.pubs.concat(action.response.results)
+  // }
+  const pubs = action.response
   const next_page = action.response.next_page
   return {...state, isFetchingPubs: false, pubs, next_page}
 }

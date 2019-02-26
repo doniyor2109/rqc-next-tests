@@ -44,51 +44,43 @@ class Publications extends Component {
 
     componentDidMount() {
 
-        this.props.fetchPublications(this.props.lang, this.state.pageNumber )
+        this.props.fetchPublications(this.props.lang, this.state.pageNumber,  this.state.activeTag, [] )
         this.props.fetchSciGroups(this.props.lang, "groupname")
     }
 
     componentDidUpdate(prevProps, prevState) {
 
-        console.log("updated!")
+        // console.log("updated!")
 
         // -------------------- DIFF's -------------------------
-        const now = Object.entries(this.props);
-        const added = now.filter(([key, val]) => {
-            if (prevProps[key] === undefined) return true;
-            if (prevProps[key] !== val) {
-                console.log(`${key}
-                - ${JSON.stringify(val)}
-                + ${JSON.stringify(prevProps[key])}`);
-            }
-            return false;
-        });
-        added.forEach(([key, val]) => console.log(`${key}
-            + ${JSON.stringify(val)}`));
+        // const now = Object.entries(this.props);
+        // const added = now.filter(([key, val]) => {
+        //     if (prevProps[key] === undefined) return true;
+        //     if (prevProps[key] !== val) {
+        //         console.log(`${key}
+        //         - ${JSON.stringify(val)}
+        //         + ${JSON.stringify(prevProps[key])}`);
+        //     }
+        //     return false;
+        // });
+        // added.forEach(([key, val]) => console.log(`${key}
+        //     + ${JSON.stringify(val)}`));
         // -------------------- DIFF's -------------------------
 
-
-        if (this.props.publications.next_page !== prevProps.publications.next_page) {
-            if (this.props.publications.next_page !== null) {
-                this.props.fetchPublications(this.props.lang, this.state.pageNumber + 1)
-                this.setState({
-                    pageNumber: this.state.pageNumber + 1
-                })
-            } else {
-                const arrayofAuthorswithDuplicates = this.props.publications.pubs.map(pub => pub.data.authors.map(author => author.text))
-                                                                                 .reduce((acc, val) => acc.concat(val))
-                this.setState({
-                    allpubsFetched: true,
-                    authors: uniqArray(arrayofAuthorswithDuplicates)
-                })
-            }
+        if(this.state.activeTag !== prevState.activeTag) {
+            this.props.fetchPublications(this.props.lang, this.state.pageNumber, this.state.activeTag, [])
         }
 
         // --------------------------------***********************------------------------------------
         // заносим все публикации в state, чтобы потом их фильтровать
         if(this.props.publications.pubs !== prevProps.publications.pubs) {
+
+            const arrayofAuthorswithDuplicates = this.props.publications.pubs.map(pub => pub.data.authors.map(author => author.text))
+                                                                             .reduce((acc, val) => acc.concat(val))
             this.setState({
-                pubs: this.props.publications.pubs
+                pubs: this.props.publications.pubs,
+                allpubsFetched: true,
+                authors: uniqArray(arrayofAuthorswithDuplicates)
             })
         }
 
@@ -105,7 +97,7 @@ class Publications extends Component {
         if (this.props.lang !== prevProps.lang) {
 
             // получаем снова публикации
-            this.props.fetchPublications(this.props.lang, this.state.pageSize, this.state.pageNumber)
+            this.props.fetchPublications(this.props.lang, this.state.pageNumber, this.state.activeTag, [])
 
             // обновляем список групп
             this.setState({
@@ -138,21 +130,6 @@ class Publications extends Component {
                         <div className="container">
                             <h5>{this.context.t("Фильтры и поиск")}:</h5>
                             <div className="columns">
-                                <div className="column is-3">
-                                    <p className="name">{this.context.t("Автор")}:</p>
-                                    <Select onChange={this.handleAuthorsSelect} 
-                                            options={this.state.authors.map(author => 
-                                                     ({ label: author, value: author })
-                                                    )}
-                                            instanceId="authorselect"
-                                            className='author-select-container'
-                                            classNamePrefix="select"
-                                            placeholder={this.context.t("Введите имя")}
-                                            isLoading={this.props.publications.isFetchingPubs}
-                                            isDisabled={this.props.publications.isFetchingPubs}
-                                            ref={c => (this.authorSelect = c)}
-                                    />
-                                </div>
                                 <div className="column is-5">
                                     <p className="name">{this.context.t("Научная группа")}:</p>
                                     <Select onChange={this.handleGroupSelect} 
@@ -166,6 +143,21 @@ class Publications extends Component {
                                             isLoading={this.props.scigroups.isFetching}
                                             isDisabled={this.props.scigroups.isFetching}
                                             ref={c => (this.groupSelect = c)}
+                                    />
+                                </div>
+                                <div className="column is-3">
+                                    <p className="name">{this.context.t("Автор")}:</p>
+                                    <Select onChange={this.handleAuthorsSelect} 
+                                            options={this.state.authors.map(author => 
+                                                     ({ label: author, value: author })
+                                                    )}
+                                            instanceId="authorselect"
+                                            className='author-select-container'
+                                            classNamePrefix="select"
+                                            placeholder={this.context.t("Введите имя")}
+                                            isLoading={this.props.publications.isFetchingPubs}
+                                            isDisabled={this.props.publications.isFetchingPubs}
+                                            ref={c => (this.authorSelect = c)}
                                     />
                                 </div>
                                 <div className="column is-4">
@@ -184,15 +176,15 @@ class Publications extends Component {
                             <h5 className="sort">{this.context.t("Сортировать по")}:</h5>
                             <div className="columns">
                                 <div className="column is-12">
-                                        <FilterTag onClick={e => {this.selectTag("SORT_DATE", e)}}
+                                        <FilterTag onClick={e => {this.selectTag(e, "SORT_DATE")}}
                                                     active={this.state.activeTag === "SORT_DATE" ? true : false}>
                                         {this.context.t("Дате выхода")}
                                         </FilterTag>
-                                        <FilterTag onClick={e => {this.selectTag("SORT_NAME", e)}}
+                                        <FilterTag onClick={e => {this.selectTag(e, "SORT_NAME")}}
                                                     active={this.state.activeTag === "SORT_NAME" ? true : false}>
                                         {this.context.t("Названию публикации")}
                                         </FilterTag>
-                                        <FilterTag onClick={e => {this.selectTag("SORT_JOURNAL", e)}}
+                                        <FilterTag onClick={e => {this.selectTag(e, "SORT_JOURNAL")}}
                                                     active={this.state.activeTag === "SORT_JOURNAL" ? true : false}>
                                         {this.context.t("Названию издания")}
                                         </FilterTag>
@@ -231,6 +223,13 @@ class Publications extends Component {
         )
     }
 
+    selectTag = (e, tag) => {
+        e.preventDefault()
+        this.setState({
+            activeTag: tag, 
+        })
+    }
+
     searchChange = (e) => {
         this.setState({
             pubsearch: e.target.value
@@ -250,13 +249,6 @@ class Publications extends Component {
             selectedGroupName: event.value,
             pubs: filterPubsbyGroup(event.value, this.props.publications.pubs)
         })
-
-
-
-        // проверяем как работает запрос поля Contetn-Relationship
-        // const id = findGroupIdByName(this.props.scigroups.groups, event.value)
-        // this.props.SearchPublicationbyScienceGroup(id, 1)
-
     }
     
 
