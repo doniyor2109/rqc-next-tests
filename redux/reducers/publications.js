@@ -2,37 +2,22 @@ import * as action_types from "../actions/action_types.js"
 
 const initialState = {
   isFetchingPubs: false,
-  isFetchingPubsbyAuthor: false,
   isFetchingPubsbyScienceGroup: false,
+  next_page: null,
   pubs: [],
-  pubsByAuthor: [],
-  pubsByGroup: [],
-  nextPageAll: null,
-  nextPagebyAuthor: null, 
-  nextPagebyGroup: null
+  pubsByGroup: []
 };
 
 function fetchPublicationsSuccess(state, action) {
-  const nextPageAll = action.response.next_page
-  const page = action.response.page
-  const pubs = action.response.results
-  const total_results_size = action.response.total_results_size
-  const total_pages = action.response.total_pages
-  return {...state, isFetchingPubs: false, pubs, nextPageAll, total_results_size, total_pages, page}
+  const pubs = state.pubs.concat(action.response.results)
+  const next_page = action.response.next_page
+  return {...state, isFetchingPubs: false, pubs, next_page}
 }
-
-function fetchPubsbyAuthorsSuccess(state, action) {
-  const nextPagebyAuthor = action.response.next_page
-  const pubsByAuthor = action.response.results
-  return {...state, isFetchingPubsbyAuthor: false, pubsByAuthor, nextPagebyAuthor}
-}
-
 function fetchPubsbyScienceGroupSuccess(state, action) {
   const nextPagebyGroup = action.response.next_page
   const pubsByGroup = action.response.results
   return {...state, isFetchingPubsbyScienceGroup: false, pubsByGroup, nextPagebyGroup}
 }
-
 export const publications = (state = initialState, action) => {
   switch (action.type) {
 
@@ -46,16 +31,6 @@ export const publications = (state = initialState, action) => {
       console.log("FETCH_PUBLICATIONS_FAILURE", action.error);
       return { ...state, isFetchingPubs: false };
 
-    case action_types.SEARCH_PUBLICATION_BY_AUTHOR_REQUEST:
-      return {...state, isFetchingPubsbyAuthor: true };
-
-    case action_types.SEARCH_PUBLICATION_BY_AUTHOR_SUCCESS:
-      return fetchPubsbyAuthorsSuccess(state, action);
-
-    case action_types.SEARCH_PUBLICATION_BY_AUTHOR_FAILURE:
-      console.log("SEARCH_PUBLICATION_BY_AUTHOR_FAILURE", action.error);
-      return { ...state, isFetchingPubsbyAuthor: false };
-    
     case action_types.SEARCH_PUBLICATION_BY_SCIENCE_GROUP_REQUEST:
       return {...state, isFetchingPubsbyScienceGroup: true };
 
@@ -65,7 +40,6 @@ export const publications = (state = initialState, action) => {
     case action_types.SEARCH_PUBLICATION_BY_SCIENCE_GROUP_FAILURE:
       console.log("SEARCH_PUBLICATION_BY_SCIENCE_GROUP_FAILURE", action.error);
       return { ...state, isFetchingPubsbyScienceGroup: false };
-
     default:
       return state
   }

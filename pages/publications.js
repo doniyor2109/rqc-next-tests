@@ -11,13 +11,12 @@ import * as publicationsActions from '../redux/actions/publications'
 import * as langActions from '../redux/actions/lang'
 import Publication from '../components/publications/Publication'
 import PubHead from '../components/publications/PubHead'
-import MorePubs from '../components/publications/MorePubs'
 import { FilterTag } from '../components/shared/FilterTag'
 import FiltersRequest from '../components/publications/FiltersRequest'
 import '../scss/publications.scss'
 
 //helpers
-import {findGroupIdByName, findEnglishName, getUniqueDatesfromPubs} from '../components/publications/helpers'
+import {findGroupIdByName, uniqArray, findEnglishName, getUniqueDatesfromPubs} from '../components/publications/helpers'
 
 
 // Основной компонент, связывающий весь интерфейс страницы /publications воедино
@@ -36,29 +35,43 @@ class Publications extends Component {
         groupsName: [],
         pubs: [],
         authors:[],
-        pageSize: 10, 
+        pageSize: 100, 
         pageNumber: 1,
-        moreNews: 10, 
-        isFetchingOnlyMorePubs: false, 
-        activeTag: "SORT_DATE"
+        activeTag: "SORT_DATE",
+        allpubsFetched: false
     }
   }
 
     componentDidMount() {
-        this.props.fetchPublications(this.props.lang, this.state.pageSize, this.state.pageNumber)
+
+        this.props.fetchPublications(this.props.lang, this.state.pageNumber )
         this.props.fetchSciGroups("*")
     }
 
     componentDidUpdate(prevProps, prevState) {
 
+        if (this.props.publications.next_page !== prevProps.publications.next_page) {
+            if (this.props.publications.next_page !== null) {
+                this.props.fetchPublications(this.props.lang, this.state.pageNumber + 1)
+                this.setState({
+                    pageNumber: this.state.pageNumber + 1
+                })
+            } else {
+                const arrayofAuthorswithDuplicates = this.props.publications.pubs.map(pub => pub.data.authors.map(author => author.text))
+                                                                                 .reduce((acc, val) => acc.concat(val))
+                this.setState({
+                    allpubsFetched: true,
+                    authors: uniqArray(arrayofAuthorswithDuplicates)
+                })
+            }
+        }
+
         // --------------------------------***********************------------------------------------
         // заносим все публикации в state, чтобы потом их фильтровать
         if(this.props.publications.pubs !== prevProps.publications.pubs) {
-            for (let pub in this.props.publications.pubs) {
-                this.setState((state, props) => ({
-                    pubs: [...state.pubs, this.props.publications.pubs[pub]]
-                }))
-            }
+            this.setState({
+                pubs: this.props.publications.pubs
+            })
         }
 
         // --------------------------------***********************------------------------------------
@@ -84,143 +97,16 @@ class Publications extends Component {
 
 
         // --------------------------------***********************------------------------------------
-        // как только у нас есть список групп и одна из групп выбрана, получаем список авторов для этой группы
-        if(   (prevState.selectedGroupName !== this.state.selectedGroupName) 
-               && 
-               (this.state.selectedGroupName.length))
-        
-        {
-            this.setState({
-                authors: this.props.scigroups.groups.filter(el => 
-                    el.data.groupname[0].text === this.state.selectedGroupName)[0].data.team_list.map(author => 
-                        author.text.substring(author.text.lastIndexOf(" ") + 1, author.text.length)),
-            })
-            // добавляем в список авторов группы ее руководителя
-            this.setState(prevState => ({
-                authors: [this.props.scigroups.groups.filter(el => 
-                    el.data.groupname[0].text === this.state.selectedGroupName)[0].data.group_leader.data.name[0].text.split(" ").pop(), ...prevState.authors]
-            }))
-        }
 
-        // --------------------------------***********************------------------------------------
-        // Обновляем публикации для групп
-
-        if(prevState.selectedGroupName !== this.state.selectedGroupName) {
-
-            this.setState({
-                pageNumber:1
-            })
-
-            if(this.state.selectedGroupName === '') {
-                this.setState({
-                    pubs: this.props.publications.pubs
-                })
-            }
-        }
-
-        if (prevProps.publications.pubsByGroup !== this.props.publications.pubsByGroup) {
-
-            // если группа только что выбрана, то перезаписываем state публикаций
-            if (this.state.pageNumber === 1) {
-                this.setState({
-                    pubs: this.props.publications.pubsByGroup
-                })
-            // если происходит нажатие на кнопку +, то есть в state уже были публикации этой группы, 
-            // добавляем к state новые
-            } else {
-                for (let pub in this.props.publications.pubsByGroup) {
-                    this.setState((state, props) => ({
-                        pubs: [...state.pubs, this.props.publications.pubsByGroup[pub]]
-                    }))
-                }
-            }
-        }
-
-
-
-        // --------------------------------***********************------------------------------------
-
-
-        // если меняется автор, то выставляем значение pageNumber = 1 ,
-        // чтобы в дальнейшем статьи разных авторов не смешивались, 
-        // если pageNumber = 1, то state публикаций перезаписывается с каждым новым запросом
-
-        if(prevState.selectedAuthor !== this.state.selectedAuthor) {
-
-            this.setState({
-                pageNumber:1
-            })
-
-            if (this.state.selectedAuthor === '') {
-                this.setState({
-                    pubs: this.props.publications.pubsByGroup
-                })
-            } else {
-                if (this.props.lang === "en-gb") {
-                    // обычный поиск по фамилии
-                    this.props.SearchPublicationbyAuthor(this.state.selectedAuthor, this.state.pageSize, this.state.pageNumber)
-                } else {
-                    // cначала находим английское соответствие фамилии,
-                    // потом просто ищем по фамилии
-                    this.props.SearchPublicationbyAuthor(findEnglishName(this.props.scigroups.groups, this.state.selectedAuthor), this.state.pageSize, this.state.pageNumber)
-                }
-            }
-
-        }
-
-        if (prevProps.publications.pubsByAuthor !== this.props.publications.pubsByAuthor) {
-
-            // если автор только что выбран, то перезаписываем state публикаций
-            if (this.state.pageNumber === 1) {
-                this.setState({
-                    pubs: this.props.publications.pubsByAuthor
-                })
-            // если происходит нажатие на кнопку +, то есть в state уже были публикации этого автора, 
-            // добавляем к state новые
-            } else {
-                for (let pub in this.props.publications.pubsByAuthor) {
-                    this.setState((state, props) => ({
-                        pubs: [...state.pubs, this.props.publications.pubsByAuthor[pub]]
-                    }))
-                }
-            }
-        }
-
-        // --------------------------------***********************------------------------------------
-
-        
-        // обработка нажатия на кнопку +
-        if(prevState.pageNumber !== this.state.pageNumber) {
-            // если в select выбран автор, значит используем функцию поиска по автору
-            if(this.state.selectedAuthor) {
-                console.log("MORE FOR AUTHORS")
-                if (this.props.lang === "en-gb") {
-                    // если язык интерфейса английский, то происходит обычный запрос в призмик по фамилии
-                    this.props.SearchPublicationbyAuthor(this.state.selectedAuthor, this.state.pageSize, this.state.pageNumber)
-                } else {
-                    // если язык интерфейса — русский, то
-                    // cначала находим английское соответствие фамилии,
-                    // потом отсылаем запрос с англ. фамилией
-                    this.props.SearchPublicationbyAuthor(findEnglishName(this.props.scigroups.groups, this.state.selectedAuthor), this.state.pageSize, this.state.pageNumber)
-                }
-            // или обрабатыввем нажатию на + для всех публикаций
-            } else if(this.state.selectedAuthor === "" && this.state.selectedGroupName.length) {
-                console.log("MORE FOR GROUPS")
-                const id = findGroupIdByName(this.props.scigroups.groups, this.state.selectedGroupName)
-                this.props.SearchPublicationbyScienceGroup(id, this.state.pageSize, this.state.pageNumber)
-            } else {
-                console.log("MORE FOR All")
-                this.props.fetchPublications(this.props.lang, this.state.pageSize, this.state.pageNumber)
-            }
-        }
+    
     }
 
     render() {
 
         console.log("publications", this.props)
-        if (this.state.pubs.length > 0) {
-            getUniqueDatesfromPubs(this.state.pubs)
-        }
+        // if (this.state.pubs.length > 0) {
+        //     getUniqueDatesfromPubs(this.state.pubs)
+        // }
         return (
             <Fragment>
                 <PubHead fb_locale={this.props.fb_locale} />
@@ -234,19 +120,6 @@ class Publications extends Component {
                         <div className="container">
                             <h5>{this.context.t("Фильтры и поиск")}:</h5>
                             <div className="columns">
-                                <div className="column is-5">
-                                    <p className="name">{this.context.t("Научная группа")}:</p>
-                                    <Select onChange={this.handleGroupSelect} 
-                                            options={this.state.groupsName.map(group => 
-                                                     ({ label: group, value: group })
-                                                    )}
-                                            instanceId="groupselect"
-                                            className='group-select-container'
-                                            classNamePrefix="select"
-                                            placeholder={this.context.t("Введите название")}
-                                            ref={c => (this.groupSelect = c)}
-                                    />
-                                </div>
                                 <div className="column is-3">
                                     <p className="name">{this.context.t("Автор")}:</p>
                                     <Select onChange={this.handleAuthorsSelect} 
@@ -258,6 +131,19 @@ class Publications extends Component {
                                             classNamePrefix="select"
                                             placeholder={this.context.t("Введите имя")}
                                             ref={c => (this.authorSelect = c)}
+                                    />
+                                </div>
+                                <div className="column is-5">
+                                    <p className="name">{this.context.t("Научная группа")}:</p>
+                                    <Select onChange={this.handleGroupSelect} 
+                                            options={this.state.groupsName.map(group => 
+                                                     ({ label: group, value: group })
+                                                    )}
+                                            instanceId="groupselect"
+                                            className='group-select-container'
+                                            classNamePrefix="select"
+                                            placeholder={this.context.t("Введите название")}
+                                            ref={c => (this.groupSelect = c)}
                                     />
                                 </div>
                                 <div className="column is-4">
@@ -307,8 +193,8 @@ class Publications extends Component {
                                 />
                             </div> 
                         </div>
-                        {!this.state.isFetchingOnlyMorePubs 
-                            && (this.props.publications.isFetchingPubs || this.props.publications.isFetchingPubsbyAuthor || this.props.publications.isFetchingPubsbyScienceGroup) 
+                        {
+                           this.props.publications.isFetchingPubs && this.state.pageNumber === 1
                             && <Loading /> }
                         <div className="columns">
                             <div className="column is-8 is-offset-2-desktop">
@@ -332,30 +218,10 @@ class Publications extends Component {
                                 </div>
                             </div>
                         </div>
-                        <hr className="before-more" />
-                        <MorePubs isFetching={(this.props.publications.isFetchingPubs || this.props.publications.isFetchingPubsbyAuthor || this.props.publicationsisFetchingPubsbyScienceGroup) 
-                                                && 
-                                                this.state.isFetchingOnlyMorePubs} 
-                                nextPage={this.state.selectedGroupName && !this.state.selectedAuthor 
-                                            ? this.props.publications.nextPagebyGroup
-                                            : (this.state.selectedAuthor 
-                                                ? this.props.publications.nextPagebyAuthor 
-                                                : this.props.publications.nextPageAll
-                                                )}
-                                give_me_more_pubs={this.give_me_more_pubs}
-                        />
                     </div>
                 </div>
         </Fragment>
         )
-    }
-
-    give_me_more_pubs = (e) => {
-        e.preventDefault()
-        this.setState({
-          pageNumber: this.state.pageNumber + 1, 
-          isFetchingOnlyMorePubs: true,
-        }) 
     }
 
     searchChange = (e) => {
@@ -376,20 +242,39 @@ class Publications extends Component {
             selectedGroupName: event.value,
             selectedAuthor: ""
         })
+        this.setState({
+            pubs: this.filterPubsbyGroup(event.value)
+        })
         const id = findGroupIdByName(this.props.scigroups.groups, event.value)
-        this.props.SearchPublicationbyScienceGroup(id, this.state.pageSize, this.state.pageNumber)
+        this.props.SearchPublicationbyScienceGroup(id, 1)
+
+    }
+
+    filterPubsbyGroup = (group) => {
+
+        var filteredPubs = []
+
+        for (let i = 0; i < this.state.pubs.length; i++) {
+            if( (this.state.pubs[i].data.science_group.data && this.state.pubs[i].data.science_group.data.groupname[0].text === group) ||
+                (this.state.pubs[i].data.science_group1.data && this.state.pubs[i].data.science_group1.data.groupname[0].text === group) ||
+                (this.state.pubs[i].data.science_group2.data && this.state.pubs[i].data.science_group2.data.groupname[0].text === group) ) {
+                    filteredPubs.push(this.state.pubs[i])
+                }
+        }
+
+        return filteredPubs
     }
 
     
 
     handleAuthorsSelect = (event) => {
         if (this.props.scigroups.groups.length === 0) {
-            return console.log("группы не загружены")
+            return console.log("Группы не загружены")
         } else {
             this.setState({selectedAuthor: event.value})
-        }
-        
+        }        
     }
+
     resetGroup = (e) => {
         e.preventDefault()
         this.setState({

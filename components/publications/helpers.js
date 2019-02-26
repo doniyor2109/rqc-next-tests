@@ -56,3 +56,10 @@ export const getUniqueJournalNamesfromPubs = (pubs) => {
     // сортируем их и удаляем дубликаты
     return pubs.map(pub => pub.data.date.journal_name[0].text.slice(0, 1)).sort().filter((item, pos, ary) => (!pos || item != ary[pos - 1]))
 }
+
+export const uniqArray = (a) => {
+    var seen = {}
+    return a.filter(function(item) {
+        return seen.hasOwnProperty(item) ? false : (seen[item] = true)
+    });
+}

@@ -9,43 +9,45 @@ const fetchPublicationsSuccess = (response) => ({ type: action_types.FETCH_PUBLI
 
 const fetchPublicationsFailure = (error) => ({ type: action_types.FETCH_PUBLICATIONS_FAILURE, error })
 
-export const fetchPublications = (language, pageSize, pageNumber) => (dispatch) => {
+export const fetchPublications = (language, pageNumber) => (dispatch) => {
   dispatch(fetchPublicationsRequest());
   return Prismic.getApi(PrismicConfig.apiEndpoint)
     .then(api => {api.query(Prismic.Predicates.at('document.type', 'publication'),
                                                   { lang: language,
-                                                    pageSize: pageSize, 
+                                                    pageSize: 100, 
                                                     page: pageNumber,
                                                     fetchLinks : ['author.name', 
                                                                   'science_group.groupname',
                                                                   'journal.name', 
-                                                                  'journal.url']
+                                                                  'journal.url'],
+                                                    orderings : '[my.publication.date desc]' 
                                                     })
                       .then(response => dispatch(fetchPublicationsSuccess(response)))
                       .catch(error => dispatch(fetchPublicationsFailure(error)))
           })
 }
 
-// actions for quering API for a team single document by UID
 
-const SearchPublicationbyAuthorRequest = (text) => ({ type: action_types.SEARCH_PUBLICATION_BY_AUTHOR_REQUEST, text });
+// // actions for quering API for a team single document by UID
 
-const SearchPublicationbyAuthorSuccess = (text, response) => ({ type: action_types.SEARCH_PUBLICATION_BY_AUTHOR_SUCCESS, text, response });
+// const SearchPublicationbyAuthorRequest = (text) => ({ type: action_types.SEARCH_PUBLICATION_BY_AUTHOR_REQUEST, text });
 
-const SearchPublicationbyAuthorFailure = (text, error) => ({ type: action_types.SEARCH_PUBLICATION_BY_AUTHOR_FAILURE, text, error });
+// const SearchPublicationbyAuthorSuccess = (text, response) => ({ type: action_types.SEARCH_PUBLICATION_BY_AUTHOR_SUCCESS, text, response });
 
-export const SearchPublicationbyAuthor = (author, pageSize, pageNumber) => (dispatch) => {
-  dispatch(SearchPublicationbyAuthorRequest(author))
-  return Prismic.getApi(PrismicConfig.apiEndpoint)
-    .then(api => {api.query(Prismic.Predicates.fulltext('my.publication.authors', author), 
-                                                         {
-                                                          pageSize: pageSize, 
-                                                          page: pageNumber,
-                                                         })
-                      .then(response => dispatch(SearchPublicationbyAuthorSuccess(author, response)))
-                      .catch(error => dispatch(SearchPublicationbyAuthorFailure(author, error)))
-          })
-}
+// const SearchPublicationbyAuthorFailure = (text, error) => ({ type: action_types.SEARCH_PUBLICATION_BY_AUTHOR_FAILURE, text, error });
+
+// export const SearchPublicationbyAuthor = (author, pageSize, pageNumber) => (dispatch) => {
+//   dispatch(SearchPublicationbyAuthorRequest(author))
+//   return Prismic.getApi(PrismicConfig.apiEndpoint)
+//     .then(api => {api.query(Prismic.Predicates.fulltext('my.publication.authors', author), 
+//                                                          {
+//                                                           pageSize: pageSize, 
+//                                                           page: pageNumber,
+//                                                          })
+//                       .then(response => dispatch(SearchPublicationbyAuthorSuccess(author, response)))
+//                       .catch(error => dispatch(SearchPublicationbyAuthorFailure(author, error)))
+//           })
+// }
 
 const SearchPublicationbyScienceGroupRequest = (groupId) => ({ type: action_types.SEARCH_PUBLICATION_BY_SCIENCE_GROUP_REQUEST, groupId });
 
@@ -53,12 +55,12 @@ const SearchPublicationbyScienceGroupSuccess = (groupId, response) => ({ type: a
 
 const SearchPublicationbyScienceGroupFailure = (groupId, error) => ({ type: action_types.SEARCH_PUBLICATION_BY_SCIENCE_GROUP_FAILURE, groupId, error });
 
-export const SearchPublicationbyScienceGroup = (groupId, pageSize, pageNumber) => (dispatch) => {
+export const SearchPublicationbyScienceGroup = (groupId, pageNumber) => (dispatch) => {
   dispatch(SearchPublicationbyScienceGroupRequest(groupId));
   return Prismic.getApi(PrismicConfig.apiEndpoint)
     .then(api => {api.query([Prismic.Predicates.at('document.type', 'publication'), 
-                            Prismic.Predicates.at('my.publication.science_group', groupId)],{
-                                                          pageSize: pageSize, 
+                            Prismic.Predicates.at('my.publication.belongs_to_group.sci_group', groupId)],{
+                                                          pageSize: 100, 
                                                           page: pageNumber,
                                                           fetchLinks : ['science_group.groupname']
                                                          })
