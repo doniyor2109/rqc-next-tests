@@ -35,21 +35,21 @@ export const fetchMainSciSlider = (language) => (dispatch) => {
           })
 }
 
-// actions for news teaser on main
-export const fetchNewsForMainRequest = () => ({ type: action_types.FETCH_NEWS_FOR_MAIN_REQUEST })
+// // actions for news teaser on main
+// export const fetchNewsForMainRequest = () => ({ type: action_types.FETCH_NEWS_FOR_MAIN_REQUEST })
 
-export const fetchNewsForMainSuccess = (response) => ({ type: action_types.FETCH_NEWS_FOR_MAIN_SUCCESS, response })
+// export const fetchNewsForMainSuccess = (response) => ({ type: action_types.FETCH_NEWS_FOR_MAIN_SUCCESS, response })
 
-export const fetchNewsForMainFailure = (error) => ({ type: action_types.FETCH_NEWS_FOR_MAIN_FAILURE, error })
+// export const fetchNewsForMainFailure = (error) => ({ type: action_types.FETCH_NEWS_FOR_MAIN_FAILURE, error })
 
-export const fetchNewsForMain = (language, size) => (dispatch) => {
-  dispatch(fetchNewsForMainRequest());
-  return Prismic.getApi(PrismicConfig.apiEndpoint)
-    .then(api => {api.query(Prismic.Predicates.at('document.type', 'news'),
-                                                  { lang: language,
-                                                    pageSize: size,
-                                                    orderings : '[my.news.manual_date_of_publication desc]' })
-                      .then(response => dispatch(fetchNewsForMainSuccess(response)))
-                      .catch(error => dispatch(fetchNewsForMainFailure(error)))
-          })
-}
+// export const fetchNewsForMain = (language, size) => (dispatch) => {
+//   dispatch(fetchNewsForMainRequest());
+//   return Prismic.getApi(PrismicConfig.apiEndpoint)
+//     .then(api => {api.query(Prismic.Predicates.at('document.type', 'news'),
+//                                                   { lang: language,
+//                                                     pageSize: size,
+//                                                     orderings : '[my.news.manual_date_of_publication desc]' })
+//                       .then(response => dispatch(fetchNewsForMainSuccess(response)))
+//                       .catch(error => dispatch(fetchNewsForMainFailure(error)))
+//           })
+// }

@@ -62,8 +62,11 @@
   }
 }
 
-.news-teaser {
+.news-teaser, .event-teaser {
   padding: 9rem 0 0 0;
+  .columns {
+    clear:both;
+  }
 }
 
 .sci-slider {
@@ -137,9 +140,6 @@
   
 }
 
-.news-teaser .columns {
-  clear:both;
-}
 
 .news-teaser .news-card-small {
   margin-bottom: 0;

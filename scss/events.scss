@@ -1,4 +1,4 @@
-.eventspage {
+.eventspage, .event-teaser {
     .event-card {
         height:42rem;
         position: relative;
@@ -88,7 +88,7 @@
   @media screen and (max-width: 415px) {
   
 
-    .eventspage {
+    .eventspage, .event-teaser {
 
         .event-card {
 

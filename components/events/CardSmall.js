@@ -10,7 +10,7 @@ import Link from 'next/link'
 
 export const CardSmall = (props) => {
   
-  const { item, desktop, tablet, mobile } = props
+  const { item, desktop, tablet } = props
 
   if (item.lang === "ru") {
     moment.locale('ru')

@@ -5,7 +5,7 @@ const initialState = {
   isFetchingSci: false,
   mainSlider: {},
   sciSlider: [],
-  newsTeaser: {}
+  // newsTeaser: {}
 };
 
 function fetchMainSliderSuccess(state, action) {
@@ -18,14 +18,14 @@ function fetchMainSciSliderSuccess(state, action) {
   return {...state, isFetchingSci: false, sciSlider}
 }
 
-function fetchNewsForMainSuccess(state, action) {
-  return {...state, newsTeaser:  {isFetching: false,
-                                  articles: action.response.results,
-                                  total_pages: action.response.total_pages,
-                                  total_results_size: action.response.total_results_size,
-                                  next_page: action.response.next_page,
-                                  prev_page: action.response.prev_page}}
-}
+// function fetchNewsForMainSuccess(state, action) {
+//   return {...state, newsTeaser:  {isFetching: false,
+//                                   articles: action.response.results,
+//                                   total_pages: action.response.total_pages,
+//                                   total_results_size: action.response.total_results_size,
+//                                   next_page: action.response.next_page,
+//                                   prev_page: action.response.prev_page}}
+// }
 
 export const main = (state = initialState, action) => {
   switch (action.type) {
@@ -53,15 +53,15 @@ export const main = (state = initialState, action) => {
       return { ...state, isFetchingSci: false };
 
     // reducer for news teaser
-    case action_types.FETCH_NEWS_FOR_MAIN_REQUEST:
-      return {...state, newsTeaser: {isFetching: true} };
+    // case action_types.FETCH_NEWS_FOR_MAIN_REQUEST:
+    //   return {...state, newsTeaser: {isFetching: true} };
 
-    case action_types.FETCH_NEWS_FOR_MAIN_SUCCESS:
-      return fetchNewsForMainSuccess(state, action);
+    // case action_types.FETCH_NEWS_FOR_MAIN_SUCCESS:
+    //   return fetchNewsForMainSuccess(state, action);
 
-    case action_types.FETCH_NEWS_FOR_MAIN_FAILURE:
-      console.log("FETCH_NEWS_FOR_MAIN_FAILURE", action.error);
-      return { ...state, newsTeaser: {isFetching: false} };
+    // case action_types.FETCH_NEWS_FOR_MAIN_FAILURE:
+    //   console.log("FETCH_NEWS_FOR_MAIN_FAILURE", action.error);
+    //   return { ...state, newsTeaser: {isFetching: false} };
 
     default:
       return state

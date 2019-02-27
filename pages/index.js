@@ -9,6 +9,10 @@ import cookies from 'next-cookies'
 
 import * as mainActions from '../redux/actions/main'
 import * as langActions from '../redux/actions/lang'
+import * as eventsActions from '../redux/actions/events'
+import * as newsActions from '../redux/actions/news'
+
+
 import {fetchMainSliderRequest, 
         fetchMainSliderSuccess, 
         fetchMainSliderFailure} from '../redux/actions/main'
@@ -19,11 +23,16 @@ import SciSlider from '../components/sliders/SciSlider'
 import {Loading} from '../components/shared/loading'
 import OldSite from '../components/oldSite.js'
 import Products from '../components/products/index'
+import {CardLarge} from '../components/events/CardLarge'
+import {CardSmall} from '../components/events/CardSmall'
+
 
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../prismic-configuration';
 import hostName from '../host'
 import '../scss/mainpage.scss'
+import '../scss/events.scss'
+
 
 class Index extends React.Component {
 
@@ -79,7 +88,8 @@ class Index extends React.Component {
     this.setState({
       DOMLoaded: true
     })
-    this.props.fetchNewsForMain(this.props.lang, 3) 
+    this.props.fetchEvents(this.props.lang, 5)
+    this.props.fetchNews(this.props.lang, 3) 
     this.props.fetchMainSciSlider(this.props.lang)
   }
 
@@ -98,10 +108,10 @@ class Index extends React.Component {
 
   render() {
 
-    const { phone, tablet } = this.props
-    const { mainSlider, sciSlider, isFetchingMain, isFetchingSci, newsTeaser } = this.props.main
+    const { phone, tablet, news, events } = this.props
+    const { mainSlider, sciSlider, isFetchingMain, isFetchingSci } = this.props.main
 
-    // console.log("main", this.props)
+    console.log("main", this.props)
     if (!this.state.DOMLoaded) return <Loading />
     else 
     return (
@@ -137,6 +147,57 @@ class Index extends React.Component {
 
         <OldSite />
 
+        <section className="event-teaser">
+          <div className="container">
+            <Link href="/events">
+              <a className="main-category">
+                {this.context.t("Мероприятия")}
+              </a>
+            </Link>
+            <Link href="/events">
+              <a className="main-category-link">
+                {this.context.t("смотреть все")}
+              </a>
+            </Link>
+            <div className="columns is-multiline">
+
+              {/* в зависимости от размера окна браузера мы рендерим разные верстки секции с тизерами мероприятий */}
+              {/* вариант смартфона */}
+              {events.events 
+              && <Media query="(max-width: 415px)"
+                        defaultMatches={tablet !== null}
+                        render={() => events.events.slice(0,3).map((item, index) =>
+                                        <CardSmall item={item} key={index} />)}
+                  />
+                
+              }
+              {/* вариант смартфона */}
+              {events.events 
+              && <Media query="(min-width: 416px) and (max-width: 768px)"
+                        defaultMatches={tablet !== null}
+                        render={() => events.events.slice(0,3).map((item, index) => {
+                          if (index === 0) {
+                            return <CardLarge item={item} key={index} tablet/>
+                          } else return <CardSmall item={item} key={index} tablet/>
+                        })}
+                  />
+                
+              }
+              {/* вариант десктопа */}
+              {events.events 
+              && <Media query="(min-width: 769px)"
+                        defaultMatches={phone === null && tablet === null}
+                        render={() => events.events.map((item, index) => {
+                          if (index === 0) {
+                            return <CardLarge item={item} key={index} desktop/>
+                          } else return <CardSmall item={item} key={index} desktop/>
+                        })}
+                  />
+              }
+            </div>
+          </div>
+        </section>
+
         <section className="news-teaser">
           <div className="container">
             <Link href="/news">
@@ -153,19 +214,19 @@ class Index extends React.Component {
 
               {/* в зависимости от размера окна браузера мы рендерим разные верстки секции с тизерами новостей */}
               {/* вариант смартфона и Ipad */}
-              {newsTeaser.articles 
+              {news.articles 
               && <Media query="(max-width: 768px)"
                         defaultMatches={tablet !== null}
-                        render={() => newsTeaser.articles.slice(0,2).map((item, index) =>
+                        render={() => news.articles.slice(0,2).map((item, index) =>
                                         <NewscardSmall columns="6" article={item} key={index} />)}
                   />
                 
               }
               {/* вариант десктопа */}
-              {newsTeaser.articles 
+              {news.articles 
               && <Media query="(min-width: 769px)"
                         defaultMatches={phone === null && tablet === null}
-                        render={() => newsTeaser.articles.map((item, index) =>
+                        render={() => news.articles.map((item, index) =>
                                         <NewscardSmall columns="4" article={item} key={index} />)}
                   />
                 
@@ -222,15 +283,17 @@ class Index extends React.Component {
 }
 
 const mapStateToProps = state => {
-  const { main } = state
+  const { main, events, news } = state
   const { lang } = state.i18nState
-  return { main, lang }
+  return { main, lang, events, news }
 }
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators(Object.assign({},
       mainActions,
       langActions,
+      eventsActions,
+      newsActions
     ), dispatch);
   }
 
