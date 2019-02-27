@@ -187,3 +187,33 @@
 }
 
 
+@media (max-width: 768px) {
+
+
+
+    
+}
+
+@media (max-width: 415px) {
+
+   .pubspage {
+
+        .settings {
+
+            .name {
+                display: block;
+            }
+
+            .group-select-container,  .author-select-container {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .filters {
+            margin-bottom:3rem;
+        }
+    }
+      
+}
+

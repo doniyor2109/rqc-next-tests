@@ -212,15 +212,28 @@ html {
         width: auto;
         padding: 0 3rem;
     }
+    .page-main-heading {
+      font-size: 3.2rem;
+      font-weight: bold;
+      color:#040303;
+      text-transform: uppercase;
+    }
+
     .tag-for-search.is-active {
         margin-right: 3rem;
       }
     
-      .tag-for-search {
-        margin-bottom: 2.3rem;
-        margin-right: 3rem;
-        min-width: 10rem;
-      }
+    .tag-for-search {
+      margin-bottom: 2.3rem;
+      margin-right: 3rem;
+      min-width: 10rem;
+    }
+
+    .tag-for-search:nth-child(2){
+      margin-bottom: 2.3rem;
+      margin-right: 0;
+      min-width: 10rem;
+    }
     
     .more-news {
         hr {

@@ -158,7 +158,7 @@ class Publications extends Component {
                                             ref={c => (this.authorSelect = c)}
                                     />
                                 </div>
-                                <div className="column is-4">
+                                {/* <div className="column is-4">
                                     <form className="search_form is-pulled-right" onSubmit={e => this.searchSubmit(e)}>
                                         <input type="search" 
                                             id="input-search" 
@@ -169,7 +169,7 @@ class Publications extends Component {
                                         />
                                         <button type="submit" id="input-submit-button"></button>
                                     </form>
-                                </div>
+                                </div> */}
                             </div>
                             <h5 className="sort">{this.context.t("Сортировать по")}:</h5>
                             <div className="columns">
