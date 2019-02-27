@@ -144,6 +144,7 @@
             .journal_details, .journal, .journal_pages {
                 display: flex;
                 flex-direction: row;
+                flex-wrap: wrap;
             }
             .journal_number, .journal, .article_number{
                 margin-right: 0.5rem;
