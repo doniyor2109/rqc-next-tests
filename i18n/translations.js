@@ -105,7 +105,11 @@ export const translations = {
         "Названию издания": "Journal",
         "Фильтры и поиск": "Filters and search",
         "Введите название": "Enter group name",
-        "Введите имя": "Enter name"
+        "Введите имя": "Enter name",
+        "По вашему запросу не найдено ни одной публикации": "There is no publications that matches your request",
+        "Посмотрите список ": "Try to see",
+        "всех публикаций": "all publications",
+        " или используйте фильтры для выбора публикаций определенного автора или научной группы": "or use filters to choose publiction by certain scientific group or author"
      }
    }
    

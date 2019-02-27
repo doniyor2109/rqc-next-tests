@@ -115,83 +115,125 @@
         }
     }
 
-    .publication {
+    .publications {
 
-        margin:0 0 4rem 0;
-
-        .journal_details, .date, .arxiv {
-            font-size: 1.4rem;
-            line-height: 2.3rem;
-        }
-        .journal_details, .journal, .journal_pages {
-            display: flex;
-            flex-direction: row;
-        }
-        .journal_number, .journal, .article_number{
-            margin-right: 0.5rem;
-
-        }
-
-        .journal, .arxiv {
-            color: #3998D1;
-            &:hover {
-                text-decoration: underline;
+        .no_pubs {
+            p {
+                font-size: 1.4rem;
+                line-height: 3rem;
+                margin-bottom: 4rem;
             }
-        }
-        .journal::after {
-            content: ","
-        }
-
-        .author {
-            font-weight: bold;
-            margin-right: 0.5rem;
             font-size: 1.6rem;
-            line-height: 2.3rem;
-            color: rgba(4,3,3,0.7);
-            &::after {
-                content: ","
-            }
-        }
-        hr {
-            width:16rem;
-            height: 1px;
-            margin: 1rem 0;
-            background: rgba(4,3,3,0.5);
-        }
-        .title {
-    
-            margin: 0.5rem 0 0 0;
+            line-height: 3rem;
             a {
                 color: #3998D1;
-                h1 {
-                margin:0;
-                padding:0;
-                font-size:2.2rem;
-                line-height: 2.7rem;
                 font-weight: 500;
-                }
+            }
+        }
+
+        .publication {
+    
+            margin:0 0 4rem 0;
+    
+            .journal_details, .date, .arxiv {
+                font-size: 1.4rem;
+                line-height: 2.3rem;
+            }
+            .journal_details, .journal, .journal_pages {
+                display: flex;
+                flex-direction: row;
+            }
+            .journal_number, .journal, .article_number{
+                margin-right: 0.5rem;
+    
+            }
+    
+            .journal, .arxiv {
+                color: #3998D1;
                 &:hover {
                     text-decoration: underline;
                 }
             }
+            .journal::after {
+                content: ","
+            }
     
+            .author {
+                font-weight: bold;
+                margin-right: 0.5rem;
+                font-size: 1.6rem;
+                line-height: 2.3rem;
+                color: rgba(4,3,3,0.7);
+                &::after {
+                    content: ","
+                }
+            }
+            hr {
+                width:16rem;
+                height: 1px;
+                margin: 1rem 0;
+                background: rgba(4,3,3,0.5);
+            }
+            .title {
+        
+                margin: 0.5rem 0 0 0;
+                a {
+                    color: #3998D1;
+                    h1 {
+                    margin:0;
+                    padding:0;
+                    font-size:2.2rem;
+                    line-height: 2.7rem;
+                    font-weight: 500;
+                    }
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+        
+            }
+        }
+        .pub_category {
+            font-size: 2.2rem;
+            line-height: 3rem;
+            font-weight: bold;
+            margin: 0 0 4rem 0;
+            color: #040303;
         }
     }
-    .pub_category {
-        font-size: 2.2rem;
-        line-height: 3rem;
-        font-weight: bold;
-        margin: 0 0 4rem 0;
-        color: #040303;
-    }
+
 }
 
 
 @media (max-width: 768px) {
+    .pubspage {
 
+        .settings {
 
+            .name {
+                font-size: 1.4rem;
+                line-height: 3rem;
+                font-weight: bold;
+                display: inline-block;
+                margin-right: 1rem;
+                width: 11rem;
+                text-align:right;
+            }
 
-    
+            .group-select-container,  .author-select-container {
+                width: 36rem;
+                display: inline-block;
+            }
+        }  
+
+        .filters {
+            margin-bottom:3rem;
+            .group-author {
+                width: 113%;
+            }
+        }
+    }
+ 
 }
 
 @media (max-width: 415px) {
@@ -202,16 +244,13 @@
 
             .name {
                 display: block;
+                text-align: left;
             }
 
             .group-select-container,  .author-select-container {
                 width: 100%;
                 display: block;
             }
-        }
-
-        .filters {
-            margin-bottom:3rem;
         }
     }
       

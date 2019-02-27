@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
-import Select from 'react-select';
+import Select from 'react-select'
 
 import {Loading} from '../components/shared/loading'
 import PubsSortedByTitle from '../components/publications/PubsSortedByTitle'
@@ -127,8 +127,8 @@ class Publications extends Component {
                     <section className="settings">
                         <div className="container">
                             <h5>{this.context.t("Фильтры и поиск")}:</h5>
-                            <div className="columns">
-                                <div className="column is-5">
+                            <div className="columns is-multiline">
+                                <div className="column is-5-desktop is-12-tablet">
                                     <p className="name">{this.context.t("Научная группа")}:</p>
                                     <Select onChange={this.handleGroupSelect} 
                                             options={this.state.groupsName.map(group => 
@@ -143,7 +143,7 @@ class Publications extends Component {
                                             ref={c => (this.groupSelect = c)}
                                     />
                                 </div>
-                                <div className="column is-3">
+                                <div className="column is-3-desktop is-12-tablet">
                                     <p className="name">{this.context.t("Автор")}:</p>
                                     <Select onChange={this.handleAuthorsSelect} 
                                             options={this.state.authors.map(author => 
@@ -193,23 +193,30 @@ class Publications extends Component {
 
 
                     <div className="container">
-                        <div className="columns">
-                            <div className="column is-8 is-offset-2-desktop">
-                                <FiltersRequest selectedGroupName={this.state.selectedGroupName}
-                                                selectedAuthor={this.state.selectedAuthor}
-                                                pubsearch={this.state.pubsearch}
-                                                resetAuthor={this.resetAuthor}    
-                                                resetGroup={this.resetGroup}                                
-                                                resetSearch={this.reset}                                
-                            
-                                />
-                            </div> 
-                        </div>
+
+                        { ( this.state.selectedGroupName.length > 0 || 
+                            this.state.selectedAuthor.length > 0 ||
+                            this.state.pubsearch > 0 )
+                            &&
+                            <div className="columns">
+                                <div className="column is-12-tablet is-8-desktop is-offset-2-desktop">
+                                    <FiltersRequest selectedGroupName={this.state.selectedGroupName}
+                                                    selectedAuthor={this.state.selectedAuthor}
+                                                    pubsearch={this.state.pubsearch}
+                                                    resetAuthor={this.resetAuthor}    
+                                                    resetGroup={this.resetGroup}                                
+                                                    resetSearch={this.reset}                                
+                                
+                                    />
+                                </div> 
+                            </div>
+                        }
+                        
                         {this.props.publications.isFetchingPubs
                          && <Loading /> }
 
                         <div className="columns">
-                            <div className="column is-8 is-offset-2-desktop">
+                            <div className="column is-12-tablet is-8-desktop is-offset-2-desktop ">
                                 <div className="publications">
                                     {!this.props.publications.isFetchingPubs && 
                                         (this.state.activeTag === "SORT_DATE"
@@ -219,6 +226,18 @@ class Publications extends Component {
                                             : <PubsSortedByJournal pubs={this.state.pubs} />
                                         )
                                         )
+                                    }
+                                    {!this.props.publications.isFetchingPubs && this.state.pubs.length === 0 
+                                    &&  <div className="no_pubs">
+                                            <p>
+                                                {this.context.t("По вашему запросу не найдено ни одной публикации")}
+                                            </p>
+                                            {this.context.t("Посмотрите список ")}
+                                            <a onClick={e => this.resetAll(e, "click")}>
+                                                {this.context.t("всех публикаций")}
+                                            </a>
+                                            {this.context.t(" или используйте фильтры для выбора публикаций определенного автора или научной группы")}
+                                        </div> 
                                     }
                                 </div>
                             </div>
@@ -266,6 +285,12 @@ class Publications extends Component {
             selectedAuthor: event.value,
             pubs: this.props.publications.pubs.filter(el => el.data.authors.some(author => author.text === event.value))
         })
+    }
+
+    resetAll = (e, from) => {
+        this.resetGroup(e, from)
+        this.resetAuthor(e, from)
+        this.resetSearch(e, from)
     }
 
     resetGroup = (e, from) => {

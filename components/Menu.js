@@ -63,10 +63,10 @@ const Menu = [
       //   name: "Внешние исследователи",
       //   url: "/scientists"
       // },
-      // {
-      //   name: "Публикации",
-      //   url: "/publications"
-      // }
+      {
+        name: "Публикации",
+        url: "/publications"
+      }
     ]
   },
   {
