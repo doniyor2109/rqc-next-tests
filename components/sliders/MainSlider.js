@@ -36,14 +36,17 @@ class MainSlider extends React.Component {
 
   componentDidMount() {
     // Disable touchmove to prevent scrolling entire page
-    const carousel = document.getElementById('carousel'); // Your site element containing react-slick's carousel-container
-    carousel.addEventListener('touchstart', this.touchStart);
-    carousel.addEventListener('touchmove', this.preventTouch, { passive: false });
+    const carousel = document.getElementById('carousel') // Your site element containing react-slick's carousel-container
+
+    carousel.addEventListener('touchstart', this.touchStart)
+    carousel.addEventListener('touchmove', this.preventTouch, { passive: false })
   }
 
   render() {
 
     const { slides, isLoading, phone, tablet } = this.props
+
+    // items for slider
     const items = slides.map((slide, index) => {
       const back = phone 
       ? {background: "url(" + slide.primary.image_slide.iphone.url +  ")", backgroundSize:"cover"}
@@ -70,6 +73,7 @@ class MainSlider extends React.Component {
         </div>
       )}
     )
+
     if (isLoading) return <Loading />
     else return (
         <Fragment>

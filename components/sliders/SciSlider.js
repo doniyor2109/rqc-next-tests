@@ -55,7 +55,7 @@ class SciSlider extends React.Component {
 
   componentDidMount() {
     // Disable touchmove to prevent scrolling entire page
-    const carousel = document.getElementById('carousel'); // Your site element containing react-slick's carousel-container
+    const carousel = document.getElementById('scientists-carousel'); // Your site element containing react-slick's carousel-container
     carousel.addEventListener('touchstart', this.touchStart);
     carousel.addEventListener('touchmove', this.preventTouch, { passive: false });
   }
@@ -65,6 +65,7 @@ class SciSlider extends React.Component {
 
     const { slides, desktop, ipad, iphone } = this.props
 
+    // готовим items для слайдера
     const items = slides.map((slide, index) => {
       return (
         <div key={index} className="column">
@@ -84,10 +85,12 @@ class SciSlider extends React.Component {
         </div>
       )
     })
+
+
     return (
         <Fragment>
           {desktop && 
-                      <div id="carousel">
+                      <div id="scientists-carousel">
                         <Slider {...{dots: false,
                             arrows: true,
                             infinite: true,
@@ -106,22 +109,20 @@ class SciSlider extends React.Component {
                       </div>
           }
           {ipad && 
-                  <div id="carousel">
+                  <div id="scientists-carousel">
                     <Slider {...{slidesToShow : 3, ...this.state.carouselSettings}}>
                       {items}
                     </Slider>
                   </div>
           }
           {iphone && 
-                        <div id="carousel">
+                        <div id="scientists-carousel">
                           <Slider {...{slidesToShow : 2, ...this.state.carouselSettings}}>
                             {items}
                           </Slider>
                         </div>
           
           }
-
-
         </Fragment>
     )
   }
