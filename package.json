@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "node server.js",
-    "build": "next build && pm2 restart all",
+    "build": "next build && pm2 restart next",
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
