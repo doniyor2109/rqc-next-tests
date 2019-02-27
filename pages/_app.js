@@ -13,8 +13,7 @@ import { LoadingFull } from '../components/shared/loadingFull.js'
 import I18n from "redux-i18n"
 import { translations } from "../i18n/translations"
 
-
-import '../scss/index.scss'
+import '../static/empty.css'
 
 class MyApp extends App {
 
@@ -59,6 +58,10 @@ class MyApp extends App {
     })
     Router.events.on('routeChangeComplete', () => {
       document.querySelector(".transparent-wall").classList.add('inactive')
+      // temp fix of sass + link problem
+      const els = document.querySelectorAll('link[href*="/_next/static/css/styles.chunk.css"]');
+      const timestamp = new Date().valueOf();
+      els[0].href = '/_next/static/css/styles.chunk.css?v=' + timestamp;
     })
   }
 

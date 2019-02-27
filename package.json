@@ -1,5 +1,5 @@
 {
-  "name": "with-redux",
+  "name": "rqc",
   "version": "1.0.0",
   "scripts": {
     "dev": "node server.js",
@@ -11,14 +11,14 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
     "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
     "@fortawesome/react-fontawesome": "0.1.0-11",
-    "@zeit/next-sass": "^1.0.1",
+    "@zeit/next-sass": "latest",
     "ajv": "^6.5.2",
     "bulma": "^0.7.1",
     "express": "latest",
     "mobile-detect": "^1.4.3",
     "moment": "^2.22.2",
     "natural": "^0.6.2",
-    "next": "^7.0.2",
+    "next": "latest",
     "next-cookies": "^1.0.3",
     "node-sass": "^4.9.4",
     "path-match": "^1.2.4",
