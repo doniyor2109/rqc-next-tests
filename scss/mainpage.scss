@@ -330,7 +330,6 @@
       line-height: 2.3rem;
       font-weight: normal;
     }
-
     .square_button {
       width: 100%;
       text-align: center;
@@ -347,31 +346,34 @@
 
   .sci-slider {
     padding: 3rem 0;
-    margin-top: 9rem;
+    margin-top: 3rem;
 
     .main-category {
       margin-bottom: 2rem;
     }
+
     .main-category-link {
-      float: none;
-      display: block;
-      clear: both;
       margin-bottom: 6rem;
-  }
+    }
+
     .slick-slider {
       width: 105%;
       margin: 0 auto;
     }
+
     .slick-prev, .slick-next {
       top: -4%;
     }
+
     .slick-prev {
       left: 0;
     }
+
     .slick-next {
       right: 7px;
     }
   }
+
   .old-site-popup {
     text-align: center;
     height: 17rem;
