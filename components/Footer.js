@@ -72,14 +72,14 @@ const Footer = (props, context) => (
             </div>
           </div>
           <div className="left_down">
-            <p>&copy;2013-{moment(Date.now()).format('YYYY')}</p>
+            <p>&copy;2010-{moment(Date.now()).format('YYYY')}</p>
             <p>{context.t("Российский Квантовый Центр")}</p>
           </div>
         </div>
         <div className="middle_part">
           <FooterMenu Menu = {Menu}/>
           <div className="middle_down_mobile">
-            <p>&copy;2013-{moment(Date.now()).format('YYYY')}</p>
+            <p>&copy;2010-{moment(Date.now()).format('YYYY')}</p>
             <p>{context.t("Российский Квантовый Центр")}</p>
           </div>
           <hr className="bottom_hr"/>
@@ -95,7 +95,7 @@ const Footer = (props, context) => (
                       <a href="https://www.gazprombank.ru/" target="_blank" rel="noopener noreferrer">   
                         <img src="/static/Gazprombank-rus.svg"  alt="" />
                       </a>
-                      <a href="https://sk.ru/technopark/" target="_blank" rel="noopener noreferrer">
+                      <a href="https://sk.ru/" target="_blank" rel="noopener noreferrer">
                           <img src="/static/Sk-rus.svg"  alt="" />
                       </a>
                     </div>
@@ -110,7 +110,7 @@ const Footer = (props, context) => (
                     <a href="https://www.gazprombank.ru/" target="_blank" rel="noopener noreferrer">   
                       <img src="/static/Gazprombank-eng.svg" alt="" />
                     </a>
-                    <a href="https://sk.ru/technopark/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://sk.ru/" target="_blank" rel="noopener noreferrer">
                         <img src="/static/Sk-eng.svg"  alt="" />
                     </a>
                   </div>
