@@ -45,7 +45,7 @@ class Publications extends Component {
   }
 
     componentDidMount() {
-
+        window.scrollTo(0, 0)
         this.props.fetchPublications(this.props.lang, this.state.pageNumber,  this.state.activeTag, [] )
         this.props.fetchSciGroups(this.props.lang, "groupname")
     }
