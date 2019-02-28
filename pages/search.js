@@ -59,6 +59,7 @@ class Search extends React.Component {
             event_cat: false,
             photo_cat: false,
             video_cat: false, 
+            pub_cat: false, 
             filtersOn: false, 
             more_results: 6
         }
@@ -73,9 +74,11 @@ class Search extends React.Component {
             prevState.news_cat !== this.state.news_cat || 
             prevState.event_cat !== this.state.event_cat || 
             prevState.photo_cat !== this.state.photo_cat ||
-            prevState.video_cat !== this.state.video_cat ) {
+            prevState.video_cat !== this.state.video_cat ||
+            prevState.pub_cat !== this.state.pub_cat
+            ) {
                 this.setState({
-                    filtersOn: this.state.vac_cat || this.state.people_cat || this.state.sci_cat || this.state.news_cat || this.state.event_cat || this.state.photo_cat || this.state.video_cat
+                    filtersOn: this.state.vac_cat || this.state.people_cat || this.state.sci_cat || this.state.news_cat || this.state.event_cat || this.state.photo_cat || this.state.video_cat || this.state.pub_cat
                 })
             }
 
@@ -104,6 +107,13 @@ class Search extends React.Component {
                                 <p>
                                     <b>
                                         {this.context.t("Разделы")}:
+                                    </b>
+                                </p>
+                                <p className={this.state.pub_cat ? "cat is-active" : "cat"}
+                                    onClick={e => {this.catClick(e, "pub_cat", this.state.pub_cat, "publication")}}>
+                                    {this.context.t("Публикации")}&nbsp;
+                                    <b>
+                                        ({this.props.search.results.filter(e => e.type === "publication").length})
                                     </b>
                                 </p>
                                 <p className={this.state.vac_cat ? "cat is-active" : "cat"}

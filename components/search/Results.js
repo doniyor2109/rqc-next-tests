@@ -8,24 +8,31 @@ import ResultEvent from './ResultEvent'
 import ResultVacancy from './ResultVacancy'
 import ResultPhoto from './ResultPhoto'
 import ResultVideo from './ResultVideo'
+import ResultPublication from './ResultPublication'
+
 
 const Results = ({result, search_text, index}) => {
     if (result) {
         switch (result.type) {
+            case "publication": 
+            return <ResultPublication  item={result} 
+                                       key={index} 
+                                       search_text={search_text}
+                    />
             case "people": 
                 return <ResultPeople item={result} 
-                                    key={index} 
-                                    search_text={search_text}
+                                     key={index} 
+                                     search_text={search_text}
                         />
             case "science_group": 
                 return <ResultTeam item={result} 
-                                key={index} 
-                                search_text={search_text}
+                                   key={index} 
+                                   search_text={search_text}
                         />
             case "news": 
                 return <ResultArticle item={result} 
-                                    key={index} 
-                                    search_text={search_text}
+                                      key={index} 
+                                      search_text={search_text}
                         />
             case "event": 
             return <ResultEvent item={result} 
@@ -33,9 +40,9 @@ const Results = ({result, search_text, index}) => {
                                 search_text={search_text}
                     />
             case "vacancy": 
-            return <ResultVacancy item={result} 
-                                key={index} 
-                                search_text={search_text}
+            return <ResultVacancy  item={result} 
+                                   key={index} 
+                                   search_text={search_text}
                     />
             case "mediakit_photo_gallery": 
             return <ResultPhoto item={result} 
@@ -49,8 +56,8 @@ const Results = ({result, search_text, index}) => {
                     />
             case "scientist": 
             return <ResultTeamLeader item={result} 
-                                    key={index} 
-                                    search_text={search_text}
+                                     key={index} 
+                                     search_text={search_text}
                     />
             default:
             return null

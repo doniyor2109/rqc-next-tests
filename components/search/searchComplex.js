@@ -40,7 +40,7 @@ const natOptions2 = {
 var tokenizer = new natural.WordTokenizer()
 
 
-const simpleSearch = (data, search_text) => {
+export const simpleSearch = (data, search_text) => {
 
     // функция четкого поиска по заданной строке
     // ищет точные совпадения c помощью indexOf()
