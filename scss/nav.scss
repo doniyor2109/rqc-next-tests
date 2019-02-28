@@ -189,8 +189,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 
 
 
-@media (min-width: 416px) and (max-width: 768px){
-
+@media (min-width: 320px) and (max-width: 1087px) {
 
   .navbar {
     padding: 1.5rem 0 1.5rem 0;
@@ -350,8 +349,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 
 
 
-@media (max-width: 415px){
-
+@media (min-width: 320px) and (max-width: 415px){
   .navbar {
     .navbar-brand {
       .navbar-item {
