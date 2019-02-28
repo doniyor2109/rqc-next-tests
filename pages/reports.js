@@ -26,6 +26,7 @@ class Reports extends React.Component {
         t: PropTypes.func
       }
     componentDidMount() {
+        window.scrollTo(0,0)
         this.props.fetchAbout(this.props.lang)
     }
 
