@@ -109,20 +109,6 @@ class Search extends React.Component {
                                         {this.context.t("Разделы")}:
                                     </b>
                                 </p>
-                                <p className={this.state.pub_cat ? "cat is-active" : "cat"}
-                                    onClick={e => {this.catClick(e, "pub_cat", this.state.pub_cat, "publication")}}>
-                                    {this.context.t("Публикации")}&nbsp;
-                                    <b>
-                                        ({this.props.search.results.filter(e => e.type === "publication").length})
-                                    </b>
-                                </p>
-                                <p className={this.state.vac_cat ? "cat is-active" : "cat"}
-                                    onClick={e => {this.catClick(e, "vac_cat", this.state.vac_cat, "vacancy")}}>
-                                    {this.context.t("Вакансии")}&nbsp;
-                                    <b>
-                                        ({this.props.search.results.filter(e => e.type === "vacancy").length})
-                                    </b>
-                                </p>
                                 <p className={this.state.people_cat ? "cat is-active" : "cat"}
                                     onClick={e => {this.catClick(e, "people_cat", this.state.people_cat, "people")}}>
                                     {this.context.t("Люди")}&nbsp;
@@ -150,6 +136,20 @@ class Search extends React.Component {
                                     {this.context.t("Мероприятия")}&nbsp;
                                     <b>
                                         ({this.props.search.results.filter(e => e.type === "event").length})
+                                    </b>
+                                </p>
+                                <p className={this.state.pub_cat ? "cat is-active" : "cat"}
+                                    onClick={e => {this.catClick(e, "pub_cat", this.state.pub_cat, "publication")}}>
+                                    {this.context.t("Публикации")}&nbsp;
+                                    <b>
+                                        ({this.props.search.results.filter(e => e.type === "publication").length})
+                                    </b>
+                                </p>
+                                <p className={this.state.vac_cat ? "cat is-active" : "cat"}
+                                    onClick={e => {this.catClick(e, "vac_cat", this.state.vac_cat, "vacancy")}}>
+                                    {this.context.t("Вакансии")}&nbsp;
+                                    <b>
+                                        ({this.props.search.results.filter(e => e.type === "vacancy").length})
                                     </b>
                                 </p>
                                 <p className={this.state.photo_cat ? "cat is-active" : "cat"}
