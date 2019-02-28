@@ -1,19 +1,3 @@
-// .author, .title, .journal, .journal div, .journal div p, .journal_volume, .journal_number, .journal_pages {
-//     display: inline;
-//     margin-right: 1rem;
-// }
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    .pubspage {
-
-        .settings {
-
-            .name {
-                vertical-align: top;
-                padding-top: 3px;            }
-        }
-    }
-
- }
 
 .pubspage {
 
@@ -270,3 +254,15 @@
       
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .pubspage {
+
+        .settings {
+
+            .name {
+                vertical-align: top;
+                padding-top: 3px;            }
+        }
+    }
+
+ }

@@ -455,3 +455,17 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 }
 
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+  .navbar {
+    .navbar-brand {
+      .navbar-item {
+        .logo {
+          width: 70%;
+        }
+      }
+    }
+  }
+
+}
