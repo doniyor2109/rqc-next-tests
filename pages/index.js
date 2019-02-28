@@ -102,7 +102,8 @@ class Index extends React.Component {
         this.props.fetchMainSlider('W3GVDyQAACYAZAgb', "ru")
       }
       this.props.fetchMainSciSlider(this.props.lang)
-      this.props.fetchNewsForMain(this.props.lang, 3) 
+      this.props.fetchEvents(this.props.lang, 5)
+      this.props.fetchNews(this.props.lang, 3) 
     }
   }
 
