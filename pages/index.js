@@ -88,7 +88,7 @@ class Index extends React.Component {
     this.setState({
       DOMLoaded: true
     })
-    this.props.fetchEvents(this.props.lang, 5)
+    // this.props.fetchEvents(this.props.lang, 5)
     this.props.fetchNews(this.props.lang, 3) 
     this.props.fetchMainSciSlider(this.props.lang)
   }
@@ -102,7 +102,7 @@ class Index extends React.Component {
         this.props.fetchMainSlider('W3GVDyQAACYAZAgb', "ru")
       }
       this.props.fetchMainSciSlider(this.props.lang)
-      this.props.fetchEvents(this.props.lang, 5)
+      // this.props.fetchEvents(this.props.lang, 5)
       this.props.fetchNews(this.props.lang, 3) 
     }
   }
@@ -148,7 +148,8 @@ class Index extends React.Component {
 
         <OldSite />
 
-        <section className="event-teaser">
+        {/* блок мероприятий */}
+        {/* <section className="event-teaser">
           <div className="container">
             <Link href="/events">
               <a className="main-category">
@@ -164,16 +165,16 @@ class Index extends React.Component {
 
               {/* в зависимости от размера окна браузера мы рендерим разные верстки секции с тизерами мероприятий */}
               {/* вариант смартфона */}
-              {events.events 
+              {/* {events.events 
               && <Media query="(max-width: 415px)"
                         defaultMatches={tablet !== null}
                         render={() => events.events.slice(0,3).map((item, index) =>
                                         <CardSmall item={item} key={index} />)}
                   />
                 
-              }
+              } */}
               {/* вариант смартфона */}
-              {events.events 
+              {/* {events.events 
               && <Media query="(min-width: 416px) and (max-width: 768px)"
                         defaultMatches={tablet !== null}
                         render={() => events.events.slice(0,3).map((item, index) => {
@@ -183,9 +184,9 @@ class Index extends React.Component {
                         })}
                   />
                 
-              }
+              } */}
               {/* вариант десктопа */}
-              {events.events 
+              {/* {events.events 
               && <Media query="(min-width: 769px)"
                         defaultMatches={phone === null && tablet === null}
                         render={() => events.events.map((item, index) => {
@@ -194,10 +195,10 @@ class Index extends React.Component {
                           } else return <CardSmall item={item} key={index} desktop/>
                         })}
                   />
-              }
-            </div>
+              } */}
+            {/* </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="news-teaser">
           <div className="container">
