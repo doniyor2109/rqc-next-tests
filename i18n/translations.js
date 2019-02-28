@@ -2,7 +2,7 @@ export const translations = {
    "en-gb": {
         "Российский Квантовый Центр": "Russian Quantum Center",
         "Присоединяйтесь к команде RQC": "Join the RQC team",
-        "Чтобы откликнуться на вакансию, присылайте резюме на почту":"To make an application, please mail your CV to ",
+        "Чтобы откликнуться на вакансию, присылайте резюме на почту":"To make an application, please mail your CV to",
         "Все новости": "All news",
         "Новости РКЦ": "RQC news",
         "Квантовые технологии в мире": "Quantum technologies",
@@ -11,7 +11,7 @@ export const translations = {
         "О нас":"About",
         "Что мы делаем":"What we do",
         "Годовые отчеты":"Evaluation reports",
-        "Работа у нас":"Our jobs",
+        "Работа у нас":"Job opportunities",
         "Наши партнеры":"Our partners",
         "Как нас найти":"Contacts",
         "Люди":"People",
@@ -79,7 +79,7 @@ export const translations = {
         "все мероприятия": "all events",
         "Напишите ваш запрос": "Type your query",
         "Результатов": "Results",
-        "Успехи группы": "Group progress",
+        "Успехи группы": "Progress of the group",
         "Разделы": "Categories",
         "Вакансии": "Vacancies",
         "Лица": "Personalities",
@@ -90,12 +90,12 @@ export const translations = {
         "Приветствуется": "Will be an asset",
         "Опыт работы": "Work experience",
         "Занятость": "Working schedule",
-        "Чтобы откликнуться на вакансию, присылайте резюме, а также портфолио или презентацию по выполненным работам на почту": "To apply for a job, please mail your CV, as well as portfolio or presentation of works performed to ",
+        "Чтобы откликнуться на вакансию, присылайте резюме, а также портфолио или презентацию по выполненным работам на почту": "To apply for a job, please mail your CV, as well as portfolio or presentation of works performed to",
         "Выберите группу": "Choose scientific group",
         "Выберите автора": "Choose author",
-        "По вашему запросу ничего не найдено": "Nothing matched your request", 
-        "У этой научной группы еше не вышло ни одной публикации": "This scientific group has no publications",
-        "Этот автора еще ничего не написал": "This author has no publications",
+        "По вашему запросу ничего не найдено": "Your search returned no results",
+        "У этой научной группы еще не вышло ни одной публикации": "This scientific group has no publications",
+        "Этот автор еще ничего не написал": "This author has no publications",
         "Ваш запрос": "Your request",
         "Научная группа": "Scientific group",
         "Автор":"Author",
@@ -106,14 +106,13 @@ export const translations = {
         "Фильтры и поиск": "Filters and search",
         "Введите название": "Enter group name",
         "Введите имя": "Enter name",
-        "По вашему запросу не найдено ни одной публикации": "There is no publications that matches your request",
-        "Посмотрите список ": "Try to see",
+        "По вашему запросу не найдено ни одной публикации": "There are no publications at your request",
+        "Посмотрите список ": "See",
         "всех публикаций": "all publications",
-        " или используйте фильтры для выбора публикаций определенного автора или научной группы": "or use filters to choose publiction by certain scientific group or author"
+        " или используйте фильтры для выбора публикаций определенного автора или научной группы": " or use filters to choose publications of certain scientific group or author"
      }
    }
    
-   
-   
+ 
    
    

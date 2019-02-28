@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+// баннер с ссылкой на старый сайт
 const OldSite = (props, context) => (
     <div className="old-site-popup">
         <div className="container">
@@ -11,7 +12,7 @@ const OldSite = (props, context) => (
                     </p>
                 </div>
                 <div className="column is-3-desktop">
-                    <a href="http://old.rqc.ru" target="_blank" rel="noopener noreferrer">
+                    <a href="http://prev.rqc.ru" target="_blank" rel="noopener noreferrer">
                         {context.t("Перейти на старый сайт")}
                     </a>      
                 </div> 
