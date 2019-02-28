@@ -69,6 +69,7 @@ class Team extends Component {
   }
 
   componentDidMount() {
+    window.scrollTo(0, 0)
     if(this.props.contentLang !== this.props.lang) {
         this.props.switchLanguageProgrammatically(this.props.contentLang)
     }
@@ -95,7 +96,7 @@ class Team extends Component {
 
     const { team, phone, tablet } = this.props
 
-    console.log("team", this.props.team)
+    // console.log("team", this.props.team)
     if (this.props.lang === "ru") {
       moment.locale('ru')
     } else moment.locale('en')
