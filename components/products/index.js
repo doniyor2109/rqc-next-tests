@@ -80,7 +80,7 @@ const Products = (props, context) => (
                 </div>
 
                 <div className="column is-4-desktop is-6-tablet">
-                    <a href="https://dephandetectors.com/ru/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.dephan.com/" target="_blank" rel="noopener noreferrer">
                         <div className="product small dephan">
                             <p>
                                 {context.t("Твердотельный фотоумножитель")}

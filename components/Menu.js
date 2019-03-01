@@ -87,7 +87,7 @@ const Menu = [
       },
       {
         name: "Твердотельный фотоумножитель",
-        url: "https://dephandetectors.com/ru/"
+        url: "https://www.dephan.com/"
       },
       {
         name: "Фемтосекундный лазер",
