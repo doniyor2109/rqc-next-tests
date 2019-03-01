@@ -124,7 +124,7 @@ class Nav extends Component {
 
   okwithcookies = (e) => {
     e.preventDefault()
-    document.cookie = "useragreedwithcookies=true;max-age=2592000"
+    document.cookie = "useragreedwithcookies=true;Expires=Wed, 22 Oct 2025 07:28:00 GMT"
     this.setState({
       cookieConsent: true
     })

@@ -50,7 +50,7 @@ class MyApp extends App {
   componentDidMount() {
     // выставляем куки, если их не было
     if (!this.props.hasCookies && typeof this.props.language !== 'undefined') {
-      document.cookie = "language=" + this.props.language + ";max-age=2592000"
+      document.cookie = "language=" + this.props.language + ";Expires=Wed, 22 Oct 2025 07:28:00 GMT"
     }
 
     Router.events.on('routeChangeStart', (url) => {
