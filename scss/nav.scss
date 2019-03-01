@@ -112,6 +112,15 @@ a.navbar-item {
 
 .navbar-menu {
     margin-left: 8rem;
+
+    .navbar-end {
+        button {
+          img {
+            width: 2rem;
+            height: 2rem;
+          }
+        }
+    }
 }
 
 a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.is-active {
