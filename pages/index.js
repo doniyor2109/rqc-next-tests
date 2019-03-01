@@ -56,23 +56,6 @@ class Index extends React.Component {
              .then(response => reduxStore.dispatch(fetchMainSliderSuccess(id, response)))
              .catch(error => reduxStore.dispatch(fetchMainSliderFailure(id, error)))
 
-    // серверный запрос слайдера ученых 
-    // reduxStore.dispatch(fetchMainSciSliderRequest()) 
-    // await api.query(Prismic.Predicates.at('document.type', 'scientist'), { lang: l, 
-    //                                                                  fetchLinks: ['science_group.groupname', 'science_group.uid'] })
-    //          .then(response => reduxStore.dispatch(fetchMainSciSliderSuccess(response)))
-    //          .catch(error => reduxStore.dispatch(fetchMainSciSliderFailure(error)))
-
-
-    // // серверный запрос тизеров новостей 
-    // reduxStore.dispatch(fetchNewsForMainRequest()) 
-    // await api.query(Prismic.Predicates.at('document.type', 'news'), { lang: l,
-    //                                                               pageSize: 3,
-    //                                                              orderings: '[my.news.manual_date_of_publication desc]' })
-    //           .then(response => reduxStore.dispatch(fetchNewsForMainSuccess(response)))
-    //           .catch(error => reduxStore.dispatch(fetchNewsForMainFailure(error)))
-
-
     return {lan: l}
   }
 
