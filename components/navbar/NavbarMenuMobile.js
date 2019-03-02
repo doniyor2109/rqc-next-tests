@@ -3,9 +3,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import MenuWithDropdown from "./MenuWithDropdown.js"
 import Social from "./social.js"
 import Router from 'next/router'
+import PropTypes from 'prop-types'
 
 class NavbarMenuMobile extends React.Component {
 
+  static contextTypes = {
+    t: PropTypes.func
+  }
+
+  
   state = {
     searchtext: ''
   }
@@ -31,10 +37,10 @@ class NavbarMenuMobile extends React.Component {
         {/* Поиск */}
         <div className="mobile_search_container is-left">
           <form className="search_form" onSubmit={e => this.handleSubmit(e)}>
-            <input type="text" 
-                   placeholder="Поиск" 
-                   value={this.state.searchtext}
-                   onChange={e => this.handleChange(e)}
+            <input  type="text" 
+                    placeholder={this.context.t("Напишите ваш запрос")}
+                    value={this.state.searchtext}
+                    onChange={e => this.handleChange(e)}
             />
                 <button type="submit" id="mobile-search-submit-button"></button>
           </form>

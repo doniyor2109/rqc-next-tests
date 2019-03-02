@@ -27,10 +27,10 @@ class Nav extends Component {
     this.state = {
       DOMLoaded: false,
       cookieConsent: this.props.cookieConsent, 
-      searchisActive: false
+      searchisActive: false,
+      withSlider: false
     }
   }
-
 
   componentDidMount() {
     this.setState({
@@ -38,12 +38,16 @@ class Nav extends Component {
     })
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if(prevState.DOMLoaded !== this.state.DOMLoaded) {
+      this.setState({
+        withSlider: true
+      })
+    }
+  }
+
   render() {
     const {router, switchLanguage, lang} = this.props
-
-    // пока загружается дом переменная withSlider будет false
-    // чтобы показывать на белом фоне серый логотип, а иначе его не видно и это плохо
-    const withSlider = !this.state.DOMLoaded ? false : router.pathname === "/"
 
     return (
       <Fragment>
@@ -51,14 +55,14 @@ class Nav extends Component {
         <CookieConsent okwithcookies={this.okwithcookies}/>
       }
 
-        <nav className={withSlider ? "navbar on-slider is-transparent" : "navbar is-transparent"} aria-label="main navigation">
+        <nav className={this.state.withSlider ? "navbar on-slider is-transparent" : "navbar is-transparent"} aria-label="main navigation">
           <div className="container">
             <div className="navbar-brand">
               <Link href="/">
                 <a className="navbar-item">
                   {lang === "ru" 
-                  ? <img className={withSlider ? "mainlogo_ru" : "logo"} src={withSlider ? "/static/RQClogo_white_ru.svg" : "/static/RQClogo_black_ru.svg"} alt="Логотип Российского Квантового Центра"/>
-                  : <img className={withSlider ? "mainlogo_en" : "logo"} src={withSlider ? "/static/RQClogo_white_en.svg" : "/static/RQClogo_black_en.svg"} alt="Логотип Российского Квантового Центра"/>
+                  ? <img className={this.state.withSlider ? "mainlogo_ru" : "logo"} src={this.state.withSlider ? "/static/RQClogo_white_ru.svg" : "/static/RQClogo_black_ru.svg"} alt="Логотип Российского Квантового Центра"/>
+                  : <img className={this.state.withSlider ? "mainlogo_en" : "logo"} src={this.state.withSlider ? "/static/RQClogo_white_en.svg" : "/static/RQClogo_black_en.svg"} alt="Логотип Российского Квантового Центра"/>
                   }
                 </a>
               </Link>
@@ -66,12 +70,12 @@ class Nav extends Component {
               {/* переключатель языка для Ipad */}
               <div className="navbar-item is-hidden-mobile is-hidden-desktop is-hidden-widescreen is-hidden-fullhd">
                 <button onClick={e => {this.handleClick(switchLanguage, "ru", e)}}
-                  className={ (withSlider ? "is-white opacity080 " : "is-black opacity050 ") + (this.props.lang === 'ru' ? "bold" : "normal")}>
+                  className={ (this.state.withSlider ? "is-white opacity080 " : "is-black opacity050 ") + (this.props.lang === 'ru' ? "bold" : "normal")}>
                   RU
                 </button>
-                <p className={withSlider ? "is-white opacity080 " : "is-black opacity050 "}>&nbsp;&nbsp;/&nbsp;&nbsp;</p>
+                <p className={this.state.withSlider ? "is-white opacity080 " : "is-black opacity050 "}>&nbsp;&nbsp;/&nbsp;&nbsp;</p>
                 <button onClick={e => {this.handleClick(switchLanguage, "en-gb", e)}}
-                className={(withSlider ? "is-white opacity080 " : "is-black opacity050 ") + (this.props.lang === 'en-gb' ? "bold" : "normal")}>
+                className={(this.state.withSlider ? "is-white opacity080 " : "is-black opacity050 ") + (this.props.lang === 'en-gb' ? "bold" : "normal")}>
                   EN
                 </button>
               </div>
@@ -80,14 +84,14 @@ class Nav extends Component {
                 data-target="navMenu"
                 aria-label="menu"
                 aria-expanded="false">
-                <span className={withSlider ? "bg-white" : "bg-black"} aria-hidden="true"></span>
-                <span className={withSlider ? "bg-white" : "bg-black"} aria-hidden="true"></span>
-                <span className={withSlider ? "bg-white" : "bg-black"} aria-hidden="true"></span>
+                <span className={this.state.withSlider ? "bg-white" : "bg-black"} aria-hidden="true"></span>
+                <span className={this.state.withSlider ? "bg-white" : "bg-black"} aria-hidden="true"></span>
+                <span className={this.state.withSlider ? "bg-white" : "bg-black"} aria-hidden="true"></span>
               </button>
             </div>
 
             <NavbarMenuDesktop Menu={Menu} 
-                               withSlider={withSlider} 
+                               withSlider={this.state.withSlider} 
                                switchLanguage={switchLanguage} 
                                currentLanguage={this.props.lang}
                                searchClick={this.searchClick}
@@ -96,7 +100,7 @@ class Nav extends Component {
           </div>
 
           <NavbarMenuMobile Menu={Menu} 
-                            withSlider={withSlider} 
+                            withSlider={this.state.withSlider} 
                             switchLanguage={switchLanguage} 
                             currentLanguage={this.props.lang}
           />
@@ -118,6 +122,9 @@ class Nav extends Component {
   
   isActiveClick = (e) => {
     e.preventDefault();
+    this.setState({
+      withSlider: !this.state.withSlider
+    })
     document.querySelector('.navbar-burger').classList.toggle('is-active')
     document.getElementById('navMenu').classList.toggle('is-active')
   }
