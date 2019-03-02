@@ -19,7 +19,6 @@ import '../../scss/index.scss'
 
 library.add(faChevronDown, faSearch)
 
-
 class Nav extends Component {
 
   constructor(props) {

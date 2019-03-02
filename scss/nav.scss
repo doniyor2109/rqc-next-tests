@@ -215,7 +215,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
     display: inline;
     position: relative;
     width: 3.25rem;
-    margin: 1.2rem 0 0 1rem;
+    margin: 1.2rem -2rem 0 1rem;
   }
 
   .navbar-burger:hover {
@@ -229,8 +229,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
   .navbar-brand .navbar-item.is-hidden-mobile.is-hidden-desktop.is-hidden-widescreen.is-hidden-fullhd {
     margin-left: auto;
     margin-right: 1rem;
-}
-
+  }
 
   a.navbar-item {
     opacity: 1;
@@ -284,15 +283,15 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 
   .dropdown-header {
       flex-grow: 2;
-    }
-    .dropdown-divider {
-        background-color: #c7c7c7;
-        border: none;
-        display: block;
-        height: 2px;
-        margin: 0.5rem 1.5rem;
-    }
-  
+  }
+
+  .dropdown-divider {
+      background-color: #c7c7c7;
+      border: none;
+      display: block;
+      height: 2px;
+      margin: 0.5rem 1.5rem;
+  }
 
   #navMenu {
     padding:5rem 0 0 0;
@@ -353,29 +352,36 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
     width: 100%;
     padding: 0 1.5rem;
 
-    input {
-      font-size: 1.6rem;
-      color: #555555;
-      padding: 0 0 1rem 1rem;
-      border: 0;
-      width:92%;
-      &:focus {
-        outline: 0;
-      }
-    }
-    #mobile-search-submit-button {
-      background: url('/static/search_button.svg');
-      width: 2.5rem;
-      height: 2.5rem;
-      border: 0;
-      top: 4px;
-      position: relative;
-      cursor: pointer;
-      &:focus {
+    .search_form {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      input {
+        font-size: 1.6rem;
+        font-style: italic;
+        color: #555555;
+        padding: 0 0 1rem 1rem;
+        border: 0;
+        flex-grow: 1;
+        &:focus {
           outline: 0;
+        }
+      }
+      #mobile-search-submit-button {
+        background: url(/static/search_button.svg);
+        width: 2rem;
+        height: 2rem;
+        border: 0;
+        top: 4px;
+        position: relative;
+        cursor: pointer;
+        right: 4px;
+        background-size: cover;
+        &:focus {
+            outline: 0;
+        }
       }
     }
-
   }
 }
 
@@ -455,9 +461,8 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
   }
 
 .navbar-burger {
-    margin-right: -1.5rem;
-    margin-left: auto;
     z-index: 10;
+    margin: 0.5rem -1.5rem 0 auto;
 }
 
 }
