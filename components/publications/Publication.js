@@ -2,6 +2,7 @@ import React from 'react'
 import { RichText, Link, Date } from 'prismic-reactjs'
 import PrismicConfig from '../../prismic-configuration'
 import moment from 'moment'
+import '../../scss/publication.scss'
 
 const Publication = ({pub}) => {
 

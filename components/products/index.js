@@ -32,7 +32,7 @@ const Products = (props, context) => (
                 </div>
 
                 <div className="column is-6-desktop is-6-tablet">
-                    <a href="http://www.femtovision.ru" target="_blank" rel="noopener noreferrer">
+                    <a href="http://femtovision.ru/page5006824.html" target="_blank" rel="noopener noreferrer">
                         <div className="product large femto">
                             <div className="columns is-multiline">
                                 <div className="column is-6-desktop is-12-tablet">

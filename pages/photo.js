@@ -87,7 +87,7 @@ class Photo extends React.Component {
 
     render() {
         const { isFetching, item } = this.props.photo     
-        console.log("photogallery", this.props)   
+        // console.log("photogallery", this.props)   
         if (isFetching) return <Loading /> 
         else return (
             <Fragment>

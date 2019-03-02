@@ -91,7 +91,7 @@ class Article extends Component {
   render() {
 
     const { article, phone, tablet } = this.props
-    console.log("article", this.props)
+    // console.log("article", this.props)
     if (this.props.lang === "ru") {
       moment.locale('ru')
     } else moment.locale('en')

@@ -91,7 +91,7 @@ const Menu = [
       },
       {
         name: "Фемтосекундный лазер",
-        url: "http://www.femtovision.ru"
+        url: "http://femtovision.ru/page5006824.html"
       }
     ]
   },

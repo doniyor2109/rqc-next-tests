@@ -9,7 +9,7 @@ const fetchPublicationsSuccess = (response) => ({ type: action_types.FETCH_PUBLI
 
 const fetchPublicationsFailure = (error) => ({ type: action_types.FETCH_PUBLICATIONS_FAILURE, error })
 
-export const fetchPublications = (language, pageNumber, activeTag, results) => (dispatch) => {
+export const fetchPublications = (language, pageSize, pageNumber, activeTag, results) => (dispatch) => {
 
   const ordering = (activeTag === "SORT_DATE") 
                     ? '[my.publication.date desc]'
@@ -21,17 +21,27 @@ export const fetchPublications = (language, pageNumber, activeTag, results) => (
   return Prismic.getApi(PrismicConfig.apiEndpoint)
     .then(api => {api.query(Prismic.Predicates.at('document.type', 'publication'),
                                                   { lang: language,
-                                                    pageSize: 100, 
+                                                    pageSize: pageSize, 
                                                     page: pageNumber,
                                                     orderings : ordering,
                                                     fetchLinks : ['science_group.groupname']
                                                     })
                       .then(response => {
-                                results = results.concat(response.results)
-                                if (response.next_page !== null) {
-                                  dispatch(fetchPublications(language, pageNumber + 1, activeTag, results))
+
+                                // первый if разграничивает использование fetchPublictions для страницы publications,
+                                // где нужны все публикации, и поэтому мы используем рекурсию в actions
+                                // и для страницы research, где нам нужны только 3 последних публикации, поэтому вызов
+                                // fetchPublictions происходит без массива results для накопления результатов
+
+                                if (results) {
+                                  results = results.concat(response.results)
+                                  if (response.next_page !== null) {
+                                    dispatch(fetchPublications(language, pageSize, pageNumber + 1, activeTag, results))
+                                  } else {
+                                    dispatch(fetchPublicationsSuccess(results))
+                                  }
                                 } else {
-                                  dispatch(fetchPublicationsSuccess(results))
+                                  dispatch(fetchPublicationsSuccess(response.results))
                                 }
                             })
                       .catch(error => dispatch(fetchPublicationsFailure(error)))

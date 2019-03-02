@@ -46,7 +46,7 @@ class Publications extends Component {
 
     componentDidMount() {
         window.scrollTo(0, 0)
-        this.props.fetchPublications(this.props.lang, this.state.pageNumber,  this.state.activeTag, [] )
+        this.props.fetchPublications(this.props.lang, 100, this.state.pageNumber,  this.state.activeTag, [] )
         this.props.fetchSciGroups(this.props.lang, "groupname")
     }
 
@@ -95,7 +95,7 @@ class Publications extends Component {
         if (this.props.lang !== prevProps.lang) {
 
             // получаем снова публикации
-            this.props.fetchPublications(this.props.lang, this.state.pageNumber, this.state.activeTag, [])
+            this.props.fetchPublications(this.props.lang, 100, this.state.pageNumber, this.state.activeTag, [])
 
             // обновляем список групп
             this.setState({
@@ -253,7 +253,7 @@ class Publications extends Component {
         this.setState({
             activeTag: tag, 
         })
-        this.props.fetchPublications(this.props.lang, this.state.pageNumber, tag, [])
+        this.props.fetchPublications(this.props.lang, 100, this.state.pageNumber, tag, [])
 
     }
 

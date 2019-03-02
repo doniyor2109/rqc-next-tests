@@ -87,7 +87,7 @@ class Search extends React.Component {
     render() {
 
         const { text } = this.props.search
-        console.log("search", this.props)
+        // console.log("search", this.props)
 
         return (
             <div className="search-page">

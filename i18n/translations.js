@@ -109,7 +109,8 @@ export const translations = {
         "По вашему запросу не найдено ни одной публикации": "There are no publications at your request",
         "Посмотрите список ": "See",
         "всех публикаций": "all publications",
-        " или используйте фильтры для выбора публикаций определенного автора или научной группы": " or use filters to choose publications of certain scientific group or author"
+        " или используйте фильтры для выбора публикаций определенного автора или научной группы": " or use filters to choose publications of certain scientific group or author",
+        "Все группы": "All groups",
      }
    }
    

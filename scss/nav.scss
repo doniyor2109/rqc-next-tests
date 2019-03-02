@@ -185,7 +185,6 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 
 .bold {
   font-weight: bold;
-  margin-top: -2px;
 }
 .normal {
   font-weight: normal;
@@ -215,8 +214,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
     display: inline;
     position: relative;
     width: 3.25rem;
-    margin-right: 0;
-    margin-left: 0;
+    margin: 1.2rem 0 0 1rem;
   }
 
   .navbar-burger:hover {

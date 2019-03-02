@@ -114,7 +114,7 @@ class News extends Component {
   render() {
     const { phone, tablet } = this.props
 
-    console.log("news", this.props)
+    // console.log("news", this.props)
 
 
       return (

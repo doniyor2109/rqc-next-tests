@@ -7,9 +7,14 @@
     }
 }
 
+.research-publications {
+    padding: 6rem 0 6rem;
+
+}
+
 .groups {
     background: #F7F9FB;
-    padding: 6rem 0 9rem;
+    padding: 6rem 0 6rem;
 
     .sci-card {
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
@@ -34,7 +39,45 @@
             }
         }
     }
-    .columns {
-        clear: both;
+
+    hr.more {
+        margin:3rem 0 3.5rem;
+        width: 100%;
+        height: 1px;
+        background: rgba(4,3,3,0.5);
     }
+}
+
+.more-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    .more-text {
+        background: transparent;
+        border: 2px solid #3998D1;
+        padding: 0 2.7rem;
+        font-size: 1.2rem;
+        line-height: 3rem;
+        color: #3998D1;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: "DIN Pro";
+        cursor: pointer;
+        &:focus {
+            outline: 0;
+        }
+    }
+    img {
+        width:3.5rem;
+        height:3.5rem;
+        &:focus {
+            outline: 0;
+        }
+        cursor: pointer;
+
+    }
+}
+.columns {
+    clear: both;
 }
