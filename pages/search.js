@@ -17,7 +17,6 @@ import SearchForm from '../components/search/SearchForm'
 import Results from '../components/search/Results'
 
 //other libraries
-import '../scss/searchpage.scss'
 
 class Search extends React.Component {
 

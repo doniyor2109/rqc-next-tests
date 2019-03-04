@@ -9,9 +9,6 @@ import VacanciesPrismic from './VacanciesPrismic'
 import VacanciesHH from './VacanciesHH'
 
 
-import '../../scss/vacancies.scss'
-
-
 class Vacancies extends React.Component {
 
     state = {

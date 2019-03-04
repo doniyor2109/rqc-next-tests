@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../scss/button.scss'
 
 export const ArrowButton = ({text, color}) => (
 

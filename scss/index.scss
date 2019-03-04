@@ -6,10 +6,34 @@ $column-gap: 1.5rem;
 @import '~bulma/bulma';
 @import url(~slick-carousel/slick/slick.css);
 @import url(~slick-carousel/slick/slick-theme.css);
-@import './nav.scss';
 
 //import other files here
 @import "./fonts.scss";
+
+// pages and components
+@import './nav.scss';
+@import './about.scss';
+@import './article.scss';
+@import './button.scss';
+@import './event.scss';
+@import './events.scss';
+@import './footer.scss';
+@import './loading.scss';
+@import './mainpage.scss';
+@import './mediakit.scss';
+@import './newscard.scss';
+@import './people.scss';
+@import './persona.scss';
+@import './photogallery.scss';
+@import './publication.scss';
+@import './publications.scss';
+@import './reports.scss';
+@import './research.scss';
+@import './searchpage.scss';
+@import './searchPopup.scss';
+@import './team.scss';
+@import './vacancies.scss';
+@import './videopage.scss';
 
 body {
   font-family: "DIN Pro", sans-serif;

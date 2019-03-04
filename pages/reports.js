@@ -17,7 +17,6 @@ import ReportCard from '../components/reports/ReportCard';
 
 //other libraries
 import hostName from '../host'
-import '../scss/reports.scss'
 
 
 class Reports extends React.Component {

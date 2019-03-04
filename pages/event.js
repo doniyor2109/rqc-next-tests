@@ -23,7 +23,6 @@ import PrismicConfig from '../prismic-configuration';
 import hostName from '../host'
 import moment from 'moment'
 import 'moment/locale/ru'
-import '../scss/event.scss'
 
 
 class Event extends Component {

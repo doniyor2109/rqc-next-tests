@@ -23,7 +23,6 @@ import 'moment/locale/ru'
 import { RichText } from 'prismic-reactjs'
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../prismic-configuration'
-import '../scss/team.scss'
 
 
 class Team extends Component {

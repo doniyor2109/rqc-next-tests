@@ -15,7 +15,6 @@ import GridViewMobile from '../components/events/GridViewMobile'
 import { FilterTag } from '../components/shared/FilterTag'
 import MoreNews from '../components/events/MoreNews'
 import hostName from '../host'
-import '../scss/events.scss'
 
 
 // Основной компонент, связывающий весь интерфейс страницы /news воедино

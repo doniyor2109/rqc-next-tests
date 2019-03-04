@@ -15,7 +15,6 @@ import SearchPopup from './SearchPopup'
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faChevronDown, faSearch } from '@fortawesome/free-solid-svg-icons'
-import '../../scss/index.scss'
 
 library.add(faChevronDown, faSearch)
 

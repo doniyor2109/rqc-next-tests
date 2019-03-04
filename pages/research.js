@@ -22,7 +22,6 @@ import Publication from '../components/publications/Publication'
 // other libs
 import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../prismic-configuration';
-import '../scss/research.scss'
 
 class Research extends React.Component {
 

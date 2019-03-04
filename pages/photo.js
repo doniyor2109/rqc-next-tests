@@ -25,7 +25,6 @@ import { Link, RichText } from 'prismic-reactjs'
 import PrismicConfig from '../prismic-configuration'
 import Prismic from 'prismic-javascript'
 import hostName from '../host'
-import '../scss/photogallery.scss'
 
 
 class Photo extends React.Component {

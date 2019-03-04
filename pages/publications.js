@@ -15,7 +15,6 @@ import * as langActions from '../redux/actions/lang'
 import PubHead from '../components/publications/PubHead'
 import { FilterTag } from '../components/shared/FilterTag'
 import FiltersRequest from '../components/publications/FiltersRequest'
-import '../scss/publications.scss'
 
 //helpers
 import {findGroupIdByName, uniqArray, filterPubsbyGroup, findEnglishName, getUniqueDatesfromPubs} from '../components/publications/helpers'

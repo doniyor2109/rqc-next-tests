@@ -17,7 +17,6 @@ import Videos from '../components/mediakit/Videos'
 import Presentations from '../components/mediakit/Presentations'
 
 import hostName from '../host'
-import '../scss/mediakit.scss'
 
 
 class Mediakit extends React.Component {

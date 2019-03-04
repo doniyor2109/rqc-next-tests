@@ -4,7 +4,6 @@ import PrismicConfig from '../../prismic-configuration';
 import { ArrowButton } from '../shared/ArrowButton'
 import PersonaPopup from './PersonaPopup'
 import ScrollTop from '../shared/ScrollTop'
-import '../../scss/persona.scss'
 
 
 

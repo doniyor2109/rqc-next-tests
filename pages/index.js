@@ -30,8 +30,6 @@ import {CardSmall} from '../components/events/CardSmall'
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../prismic-configuration';
 import hostName from '../host'
-import '../scss/mainpage.scss'
-import '../scss/events.scss'
 
 
 class Index extends React.Component {

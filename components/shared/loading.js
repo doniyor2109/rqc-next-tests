@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../scss/loading.scss'
 
 export const Loading = (isOff) => (
 
