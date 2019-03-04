@@ -203,10 +203,10 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 @media (min-width: 320px) and (max-width: 1087px) {
 
   .navbar {
-    padding: 1.5rem 3rem 1.5rem;
+    padding: 1.5rem 0 1.5rem;
     background-color: transparent;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
     .navbar-brand {
       flex-shrink: 0;
@@ -214,6 +214,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
       flex-direction: row;
       flex-grow: 1;
       flex-shrink: 0;
+      padding: 0 3rem;
     }
   }
 
