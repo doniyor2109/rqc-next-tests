@@ -74,7 +74,7 @@ class Persona extends React.Component {
         this.setState({popup:false})
         document.body.classList.remove('noscroll')
         const personaCard = document.getElementById("persona").offsetTop + this.state.cardoffsetTop
-        console.log("persona, popup close", personaCard)
+        // console.log("persona, popup close", personaCard)
         window.scrollTo({
             top: personaCard, 
             behavior: "smooth"

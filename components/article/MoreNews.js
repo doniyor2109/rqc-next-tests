@@ -39,7 +39,7 @@ class MoreNews extends React.Component {
 
         const {articles, isFetching, nextPage} = this.props
 
-        console.log("article more news", this.props)
+        // console.log("article more news", this.props)
 
         return (
             <div className="container">

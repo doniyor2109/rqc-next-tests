@@ -13,7 +13,7 @@ class VacancyPopupHH extends React.Component {
 
     render(){
         const {item, active, close} = this.props
-        console.log("HH popup", this.props)
+        // console.log("HH popup", this.props)
         return (
             <Popup active={active} close={close}>
             <div className="columns">
