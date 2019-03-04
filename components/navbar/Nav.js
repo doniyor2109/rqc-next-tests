@@ -27,7 +27,7 @@ class Nav extends Component {
       DOMLoaded: false,
       cookieConsent: this.props.cookieConsent, 
       searchisActive: false,
-      withSlider: false
+      withSlider: false 
     }
   }
 
@@ -39,14 +39,17 @@ class Nav extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if(prevState.DOMLoaded !== this.state.DOMLoaded) {
-      this.setState({
-        withSlider: true
-      })
+      if (this.props.router.pathname === '/') {
+        this.setState({
+          withSlider: true
+        })
+      }
     }
   }
 
   render() {
     const {router, switchLanguage, lang} = this.props
+    console.log("nav" ,this.props)
 
     return (
       <Fragment>
