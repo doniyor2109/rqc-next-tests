@@ -89,7 +89,7 @@ const Footer = (props, context) => (
                       <a href="http://misis.ru/" target="_blank" rel="noopener noreferrer"> 
                         <img src="/static/misis-rus.svg" alt="" />  
                       </a>
-                      <a href="https://xn--80abucjiibhv9a.xn--p1ai/" target="_blank" rel="noopener noreferrer">       
+                      <a href="https://minobrnauki.gov.ru/" target="_blank" rel="noopener noreferrer">       
                         <img src="/static/MinObr-rus_new.svg" alt="" />
                       </a>
                       <a href="https://www.gazprombank.ru/" target="_blank" rel="noopener noreferrer">   
@@ -104,7 +104,7 @@ const Footer = (props, context) => (
                     <a href="http://misis.ru/" target="_blank" rel="noopener noreferrer"> 
                       <img src="/static/misis-eng.svg"  alt="" />  
                     </a>
-                    <a href="https://xn--80abucjiibhv9a.xn--p1ai/" target="_blank" rel="noopener noreferrer">       
+                    <a href="https://minobrnauki.gov.ru/" target="_blank" rel="noopener noreferrer">       
                       <img src="/static/MinObr-eng_new.svg" alt="" />
                     </a>
                     <a href="https://www.gazprombank.ru/" target="_blank" rel="noopener noreferrer">   
