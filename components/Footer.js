@@ -31,7 +31,7 @@ const FooterMenu = ({Menu}, context) => {
 
   const items = Menu.map((item, key) =>
     <div className="Menu_column" key={key}>
-      <Link href={item.url}>
+      <Link href={item.url} scroll={true}>
         <a>
           <h5>{context.t(item.name)}</h5>
         </a>
