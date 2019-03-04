@@ -180,14 +180,14 @@
   .large {
     height: 22rem;
     padding: 0 3rem;
-    p {
-      margin-top: 6.5rem;
+
+    @media (min-width:416px) and (max-width: 1088px) {
+      height: 32rem;
     }
+
     &.detector {
       .img_wrapper {
-        justify-content: left;
         margin-top: 2rem;
-
       }
     }
     &.femto {
@@ -247,6 +247,9 @@
     margin-top: 1rem;
   }
 }
+
+
+
 
 @media (min-width:416px) and (max-width: 768px) {
 
