@@ -62,6 +62,7 @@ class MyApp extends App {
       const els = document.querySelectorAll('link[href*="/_next/static/css/styles.chunk.css"]');
       const timestamp = new Date().valueOf();
       els[0].href = '/_next/static/css/styles.chunk.css?v=' + timestamp;
+      window.scrollTo(0, 0)
     })
   }
 
