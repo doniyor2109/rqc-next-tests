@@ -24,24 +24,30 @@ class Nav extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      DOMLoaded: false,
       cookieConsent: this.props.cookieConsent, 
       searchisActive: false,
-      withSlider: false 
+      withSlider: false
     }
   }
 
   componentDidMount() {
-    this.setState({
-      DOMLoaded: true
-    })
+    if(this.props.router.route === '/') {
+      this.setState({
+        withSlider: true
+      })
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if(prevState.DOMLoaded !== this.state.DOMLoaded) {
-      if (this.props.router.pathname === '/') {
+
+    if(this.props.router.route !== prevProps.router.route) {
+      if(this.props.router.route === '/') {
         this.setState({
           withSlider: true
+        })
+      } else {
+        this.setState({
+          withSlider: false
         })
       }
     }
