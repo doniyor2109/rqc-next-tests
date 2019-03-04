@@ -7,7 +7,7 @@ import PrismicConfig from '../../prismic-configuration';
 const SciCard = ({group}) => {
 
     if (group) {
-        const back = {background: "url(" + group.data.image_gallery[0].labimage.mobile.url + ")",backgroundSize:"cover"}
+        const back = group.data.image_gallery && {background: "url(" + group.data.image_gallery[0].labimage.mobile.url + ")",backgroundSize:"cover"}
         return (
             <div className="column is-4-desktop is-6-tablet is-12-mobile">
                 <Link href={'/team?uid=' + group.uid} as={'/team/' + group.uid}>
