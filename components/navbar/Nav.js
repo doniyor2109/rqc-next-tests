@@ -58,7 +58,6 @@ class Nav extends Component {
       }
 
         <nav className={this.state.withSlider ? "navbar on-slider is-transparent" : "navbar is-transparent"} aria-label="main navigation">
-          <div className="container">
             <div className="navbar-brand">
               <Link href="/">
                 <a className="navbar-item">
@@ -98,8 +97,6 @@ class Nav extends Component {
                                currentLanguage={this.props.lang}
                                searchClick={this.searchClick}
             />
-
-          </div>
 
           <NavbarMenuMobile Menu={Menu} 
                             withSlider={this.state.withSlider} 

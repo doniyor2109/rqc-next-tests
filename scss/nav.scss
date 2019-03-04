@@ -6,6 +6,9 @@
 .navbar {
   padding: 2.9rem 0 0 0;
   background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 
   button {
     background-color: transparent;
@@ -17,7 +20,6 @@
   }
 
   .navbar-brand {
-
     flex-shrink: 1;
 
     .navbar-item {
@@ -39,6 +41,13 @@
       }
     }
   }
+
+  .navbar-menu {
+
+    .navbar-start {
+      margin-right: 1rem;
+    }
+  }
 }
 
 .navbar.on-slider {
@@ -49,9 +58,6 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
     color: inherit;
 }
 
-.navbar-start {
-    margin-right: 3rem;
-}
 
 a.navbar-item {
     cursor: pointer;
@@ -112,8 +118,7 @@ a.navbar-item {
 }
 
 .navbar-menu {
-    margin-left: 8rem;
-
+  flex-grow: 0;
     .navbar-end {
         button {
           img {
@@ -134,8 +139,6 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 .navbar-start a.navbar-item:hover:nth-of-type(2) {
   padding: 0 1.49rem;
 }
-
-
 
 .navbar-dropdown a.navbar-item {
   padding: 0;
@@ -197,12 +200,21 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 
 
 
-
 @media (min-width: 320px) and (max-width: 1087px) {
 
   .navbar {
-    padding: 1.5rem 0 1.5rem 0;
+    padding: 1.5rem 3rem 1.5rem;
     background-color: transparent;
+    display: flex;
+    flex-direction: row;
+
+    .navbar-brand {
+      flex-shrink: 0;
+      justify-content: space-around;
+      flex-direction: row;
+      flex-grow: 1;
+      flex-shrink: 0;
+    }
   }
 
   .navbar > .container {
