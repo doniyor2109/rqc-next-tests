@@ -97,6 +97,9 @@ class Publications extends Component {
             // получаем снова публикации
             this.props.fetchPublications(this.props.lang, 100, this.state.pageNumber, this.state.activeTag, [])
 
+            // и группы
+            this.props.fetchSciGroups(this.props.lang, "groupname")
+
             // обновляем список групп
             this.setState({
                 groupsName: this.props.scigroups.groups.filter(el => el.lang === this.props.lang).map(group => group.data.groupname[0].text),
