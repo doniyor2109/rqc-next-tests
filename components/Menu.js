@@ -90,7 +90,7 @@ const Menu = [
         url: "https://www.dephan.com/"
       },
       {
-        name: "Фемтосекундный лазер",
+        name: "Фемтосекундный лазер с диодной накачкой",
         url: "http://femtovision.ru/page5006824.html"
       }
     ]
