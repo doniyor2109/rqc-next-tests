@@ -51,10 +51,10 @@ const Menu = [
     name: "Исследования",
     url: "/research",
     children: [
-      // {
-      //   name: "Научные группы",
-      //   url: "/teams"
-      // },
+      {
+        name: "Научные группы",
+        url: "/research#groups"
+      },
       // {
       //   name: "Лаборатории",
       //   url: "/labs"
