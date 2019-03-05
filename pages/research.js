@@ -56,7 +56,7 @@ class Research extends React.Component {
         const { page } = this.props.research
         const { isFetching, groups } = this.props.scigroups
 
-        console.log("research", this.props)
+        // console.log("research", this.props)
         if (isFetching) return <Loading />
         else return (
             <Fragment>
