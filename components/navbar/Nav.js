@@ -57,13 +57,12 @@ class Nav extends Component {
     if (elmnt) {
       elmnt.scrollIntoView()
     }
-    console.log('nav', hash, elmnt)
 
   }
 
   render() {
     const {router, switchLanguage, lang} = this.props
-    console.log("nav" ,this.props)
+    // console.log("nav" ,this.props)
 
     return (
       <Fragment>
