@@ -78,8 +78,8 @@ class Research extends React.Component {
                     </div>
                 </section>     
 
-                <section className="groups" id="groups">
-                    <div className="container">
+                <section className="groups" >
+                    <div id="groups" className="container" >
                         <p className="main-category">
                             {this.context.t("Научные группы")}
                         </p>

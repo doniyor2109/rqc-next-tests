@@ -35,6 +35,7 @@ class Nav extends Component {
         withSlider: true
       })
     }
+
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -50,11 +51,19 @@ class Nav extends Component {
         })
       }
     }
+
+    let hash = window.location.hash
+    var elmnt = document.getElementById(hash.slice(1))
+    if (elmnt) {
+      elmnt.scrollIntoView()
+    }
+    console.log('nav', hash, elmnt)
+
   }
 
   render() {
     const {router, switchLanguage, lang} = this.props
-    // console.log("nav" ,this.props)
+    console.log("nav" ,this.props)
 
     return (
       <Fragment>
