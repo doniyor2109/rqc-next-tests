@@ -166,6 +166,7 @@
       position: relative;
       font-weight: 500;
       background-color: #3998D1;
+      cursor: pointer;
     }
   }
 }
@@ -192,7 +193,6 @@
     }
     &.femto {
       .img_wrapper {
-
         margin-top: 2rem;
       }
     }
@@ -242,9 +242,8 @@
   }
 
   .img_wrapper {
-    display: flex;
-    justify-content: center;
     margin-top: 1rem;
+    text-align: center;
   }
 }
 
@@ -308,6 +307,16 @@
 
       p {
         margin:0;
+      }
+    }
+    .large {
+      &.femto {
+        .img_wrapper {
+          margin-top: 2rem;
+          img {
+            width: 70%;
+          }
+        }
       }
     }
   }
@@ -396,6 +405,14 @@
     .large {
       height: 35rem;
       padding:3rem;
+      &.femto {
+        .img_wrapper {
+          margin-top: 2rem;
+          img {
+            width: 80%;
+          }
+        }
+      }
       p {
         margin: 0;
       }

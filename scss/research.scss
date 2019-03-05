@@ -5,6 +5,13 @@
     .page-main-heading {
         margin-bottom: 6rem;
     }
+    p {
+        margin-bottom: 2.3rem;
+        &:last-of-type {
+            margin-bottom:0;
+        }
+    }
+
 }
 
 .research-publications {
@@ -55,7 +62,10 @@
     
     .more-text {
         background: transparent;
-        border: 2px solid #3998D1;
+        border-bottom: 2px solid #3998D1;
+        border-top: 2px solid #3998D1;
+        border-left: 2px solid #3998D1;
+        border-right: 0;
         padding: 0 2.7rem;
         font-size: 1.2rem;
         line-height: 3rem;

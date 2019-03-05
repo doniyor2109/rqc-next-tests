@@ -37,12 +37,12 @@ const Products = (props, context) => (
                             <div className="columns is-multiline is-vcentered">
                                 <div className="column is-6-desktop is-12-tablet">
                                     <p>
-                                        {context.t("Фемтосекундный лазер")}
+                                        {context.t("Фемтосекундный лазер с диодной накачкой")}
                                     </p>
                                 </div>
                                 <div className="column is-6-desktop is-12-tablet">
                                     <div className="img_wrapper">
-                                        <img src="/static/products_femtovision.png" />
+                                        <img src="/static/femt3.png" />
                                     </div>
                                 </div>
                             </div>

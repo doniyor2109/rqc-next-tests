@@ -111,6 +111,8 @@ export const translations = {
         "всех публикаций": "all publications",
         " или используйте фильтры для выбора публикаций определенного автора или научной группы": " or use filters to choose publications of certain scientific group or author",
         "Все группы": "All groups",
+        "Все публикации": "All publications",
+        "Фемтосекундный лазер с диодной накачкой": "Diode-pumped femtosecond laser"
      }
    }
    

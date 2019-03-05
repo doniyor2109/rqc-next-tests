@@ -176,9 +176,13 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 }
 
 .navbar-dropdown {
+
     left: 4%;
     top: 70%;
     background-color: transparent;
+    .navbar-item {
+      margin-top:0;
+    }
 }
 
 .navbar-dropdown a.navbar-item:hover {
