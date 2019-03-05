@@ -12,7 +12,7 @@ import Menu from './Menu'
 const FooterMenuItem = ({children, products}, context) => {
 
   const fitems = children.map((item, key) =>
-    <Link href={item.url} key={key}>
+    <Link href={item.url} key={key} scroll={true}>
       <a className="footer-menu-item" target={products ? "_blank" : "_self"} rel={products ? "noopener noreferrer" : "undefined"}>
         {context.t(item.name)}
       </a>
