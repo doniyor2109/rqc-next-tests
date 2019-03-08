@@ -16,7 +16,9 @@ export const fetchSciGroups = (language, fetchOnly) => (dispatch) => {
       .then(api => {api.query(Prismic.Predicates.at('document.type', 'science_group'),
                                                     { lang : language, 
                                                       pageSize: 100,
-                                                      fetch: 'science_group.' +  fetchOnly})
+                                                      orderings: '[my.science_group.groupname]',
+                                                      fetch: 'science_group.' +  fetchOnly, 
+                                                    })
                         .then(response => dispatch(fetchSciGroupsSuccess(response)))
                         .catch(error => dispatch(fetchSciGroupsFailure(error)))
             })
@@ -27,7 +29,8 @@ export const fetchSciGroups = (language, fetchOnly) => (dispatch) => {
         .then(api => {api.query(Prismic.Predicates.at('document.type', 'science_group'),
                                                       { lang : language, 
                                                         pageSize: 100,
-                                                      fetchLinks : ['scientist.name'] })
+                                                        orderings: '[my.science_group.groupname]',
+                                                        fetchLinks : ['scientist.name'] })
                           .then(response => dispatch(fetchSciGroupsSuccess(response)))
                           .catch(error => dispatch(fetchSciGroupsFailure(error)))
               })

@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import Media from 'react-media'
 
 //actions
 import * as groupsActions from '../redux/actions/scigroups'
@@ -28,16 +27,11 @@ class Research extends React.Component {
     static contextTypes = {
         t: PropTypes.func
     }
-
-    state = {
-        numberOfGroups: 6,
-        numberOfGroupsMob: 3
-    }
     
     componentDidMount() {
         this.props.fetchSciGroups(this.props.lang)
         this.props.fetchResearchPage(this.props.lang)
-        this.props.fetchPublications(this.props.lang, 3, this.state.pageNumber, "SORT_DATE")
+        this.props.fetchPublications(this.props.lang, 3, 1, "SORT_DATE")
 
     }
 
@@ -45,14 +39,11 @@ class Research extends React.Component {
         if (this.props.lang !== prevProps.lang) {
             this.props.fetchSciGroups(this.props.lang)
             this.props.fetchResearchPage(this.props.lang)
-            this.props.fetchPublications(this.props.lang, 3, this.state.pageNumber, "SORT_DATE")
+            this.props.fetchPublications(this.props.lang, 3, 1, "SORT_DATE")
         }
     }
 
-
-
     render() {
-        const { phone, tablet } = this.props
         const { page } = this.props.research
         const { isFetching, groups } = this.props.scigroups
 
@@ -85,39 +76,7 @@ class Research extends React.Component {
                         </p>
 
                         <div className="columns is-multiline">
-                            <Media  query="(max-width: 415px)"
-                                    defaultMatches={phone !== null}
-                                    render={() => <Fragment>
-                                                        {groups.slice(0, this.state.numberOfGroupsMob)
-                                                            .map((group, index) => <SciCard group={group} key={index} />)}             
-                                                </Fragment> 
-                                            }
-                            />
-
-                            <Media  query="(min-width: 416px)"
-                                    defaultMatches={phone === null}
-                                    render={() => <Fragment>
-                                                        {groups.slice(0, this.state.numberOfGroups)
-                                                            .map((group, index) => <SciCard group={group} key={index} />)}          
-                                                </Fragment>
-                                            }
-                            />
-                        </div>
-
-                        <div className="columns is-multiline">
-                            <div className="column is-12 is-centered">
-                                {this.state.numberOfGroups < this.props.scigroups.groups.length 
-                                && <Fragment>
-                                        <hr className="more" />
-                                        <div className="more-wrapper" onClick={e => this.moreGroups(e)}>
-                                            <button className='more-text'>
-                                                {this.context.t("Все группы")}
-                                            </button>
-                                            <img src="/static/more.svg" alt="more groups"/>
-                                        </div> 
-                                  </Fragment>
-                                }
-                            </div>
+                            {groups.map((group, index) => <SciCard group={group} key={index} />)}             
                         </div>
                     </div>
                 </section>
@@ -149,14 +108,6 @@ class Research extends React.Component {
 
             </Fragment>
         )
-    }
-
-    moreGroups = (e) => {
-        e.preventDefault()
-        this.setState({
-            numberOfGroups: this.props.scigroups.groups.length,
-            numberOfGroupsMob: this.props.scigroups.groups.length
-        })
     }
 }
 
