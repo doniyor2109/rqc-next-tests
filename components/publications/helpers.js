@@ -39,24 +39,6 @@ export const findEnglishName = (groups, russianName) => {
     return englishName
 }
 
-export const getUniqueDatesfromPubs = (pubs) => {
-    // получаем из публикаций значения дат
-    // сортируем их и удаляем дубликаты
-    return pubs.map(pub => pub.data.date.slice(0, 4)).sort().filter((item, pos, ary) => (!pos || item != ary[pos - 1]))
-}
-
-export const getUniqueFirstLettersfromPubsNames = (pubs) => {
-    // получаем из публикаций значения дат
-    // сортируем их и удаляем дубликаты
-    return pubs.map(pub => pub.data.date.title[0].text.slice(0, 1)).sort().filter((item, pos, ary) => (!pos || item != ary[pos - 1]))
-}
-
-export const getUniqueJournalNamesfromPubs = (pubs) => {
-    // получаем из публикаций значения дат
-    // сортируем их и удаляем дубликаты
-    return pubs.map(pub => pub.data.date.journal_name[0].text.slice(0, 1)).sort().filter((item, pos, ary) => (!pos || item != ary[pos - 1]))
-}
-
 export const uniqArray = (a) => {
     var seen = {}
     return a.filter(function(item) {
