@@ -1,23 +1,44 @@
+// Cтраница rqc.ru/publications,  на которую выводятся все публикации из админки по типу «publication». 
+// Есть несколько челленджей в этом компоненте:
+
+// 1. Данные хранятся в CMS Prismic, API которого позволяет получить только 100 документов за раз. 
+// (всего публикаций - 230)
+
+// 2. Так как, нам нужен список всех авторов публикаций,
+// то приходится загружать все публикации сразу, это делается через рекурсию в redux actions creators 
+// Не факт, что это лучший способ, но он как минимум позволяет избежать лишнего рендеринга при вызове API
+
+// 3. У компонента есть три разных функции сброса значений для обнуления селектов
+// Эти функции вызываются из двух разных мест — по клику на крестик тэга и при смене значения селекта.
+// В одном случае нужен e.preventDefault и я не придумал ничего лучше, как руками передавать в функцию
+// параметр "click", наверное его можно было получить из элемента. Короче, кажется, это можно переписать, 
+// если выглядит убого
+
+
+
+// core dependencies
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 import Select from 'react-select'
 
-import {Loading} from '../components/shared/loading'
+// components
+import PubHead from '../components/publications/PubHead'
 import PubsSortedByTitle from '../components/publications/PubsSortedByTitle'
 import PubsSortedByDate from '../components/publications/PubsSortedByDate'
 import PubsSortedByJournal from '../components/publications/PubsSortedByJournal'
+import FiltersRequest from '../components/publications/FiltersRequest'
+import { FilterTag } from '../components/shared/FilterTag'
+import {Loading} from '../components/shared/loading'
 
+// actions
 import * as groupsActions from '../redux/actions/scigroups'
 import * as publicationsActions from '../redux/actions/publications'
 import * as langActions from '../redux/actions/lang'
-import PubHead from '../components/publications/PubHead'
-import { FilterTag } from '../components/shared/FilterTag'
-import FiltersRequest from '../components/publications/FiltersRequest'
 
 //helpers
-import {findGroupIdByName, uniqArray, filterPubsbyGroup, findEnglishName, getUniqueDatesfromPubs} from '../components/publications/helpers'
+import {uniqArray, filterPubsbyGroup} from '../components/publications/helpers'
 
 
 // Основной компонент, связывающий весь интерфейс страницы /publications воедино
@@ -45,30 +66,14 @@ class Publications extends Component {
 
     componentDidMount() {
         window.scrollTo(0, 0)
+        // получаем публикации
         this.props.fetchPublications(this.props.lang, 100, this.state.pageNumber,  this.state.activeTag, [] )
+        // получаем список научных групп
         this.props.fetchSciGroups(this.props.lang, "groupname")
     }
 
     componentDidUpdate(prevProps, prevState) {
 
-        // console.log("updated!")
-
-        // -------------------- DIFF's -------------------------
-        // const now = Object.entries(this.props);
-        // const added = now.filter(([key, val]) => {
-        //     if (prevProps[key] === undefined) return true;
-        //     if (prevProps[key] !== val) {
-        //         console.log(`${key}
-        //         - ${JSON.stringify(val)}
-        //         + ${JSON.stringify(prevProps[key])}`);
-        //     }
-        //     return false;
-        // });
-        // added.forEach(([key, val]) => console.log(`${key}
-        //     + ${JSON.stringify(val)}`));
-        // -------------------- DIFF's -------------------------
-
-        // --------------------------------***********************------------------------------------
         // заносим все публикации в state, чтобы потом их фильтровать
         if(this.props.publications.pubs !== prevProps.publications.pubs) {
 
@@ -104,19 +109,12 @@ class Publications extends Component {
                 groupsName: this.props.scigroups.groups.filter(el => el.lang === this.props.lang).map(group => group.data.groupname[0].text),
             })
         }
-
-
-        // --------------------------------***********************------------------------------------
-
-    
     }
 
     render() {
 
-        console.log("publications", this.props)
-        // if (this.state.pubs.length > 0) {
-        //     getUniqueDatesfromPubs(this.state.pubs)
-        // }
+        // console.log("publications", this.props)
+
         return (
             <Fragment>
                 <PubHead fb_locale={this.props.fb_locale} />
@@ -160,6 +158,10 @@ class Publications extends Component {
                                             ref={c => (this.authorSelect = c)}
                                     />
                                 </div>
+
+
+                                {/* Поиск, который предстоит сделать */}
+
                                 {/* <div className="column is-4">
                                     <form className="search_form is-pulled-right" onSubmit={e => this.searchSubmit(e)}>
                                         <input type="search" 
@@ -172,6 +174,8 @@ class Publications extends Component {
                                         <button type="submit" id="input-submit-button"></button>
                                     </form>
                                 </div> */}
+
+
                             </div>
                             <h5 className="sort">{this.context.t("Сортировать по")}:</h5>
                             <div className="columns">
@@ -193,9 +197,8 @@ class Publications extends Component {
                         </div>
                     </section>
 
-
+                    {/* тэги выбранных авторов, групп, поискового запроса */}
                     <div className="container">
-
                         { ( this.state.selectedGroupName.length > 0 || 
                             this.state.selectedAuthor.length > 0 ||
                             this.state.pubsearch > 0 )
@@ -214,6 +217,8 @@ class Publications extends Component {
                             </div>
                         }
                         
+                        {/* Список публикаций 
+                            отсортированный по дате, названию или названию издания*/}
                         {this.props.publications.isFetchingPubs
                          && <Loading /> }
 
@@ -229,6 +234,8 @@ class Publications extends Component {
                                         )
                                         )
                                     }
+
+                                    {/* если нет публикаций */}
                                     {!this.props.publications.isFetchingPubs && this.state.pubs.length === 0 
                                     &&  <div className="no_pubs">
                                             <p>
@@ -250,28 +257,32 @@ class Publications extends Component {
         )
     }
 
+    // обработка сортировки
     selectTag = (e, tag) => {
         e.preventDefault()
         this.setState({
             activeTag: tag, 
         })
         this.props.fetchPublications(this.props.lang, 100, this.state.pageNumber, tag, [])
-
     }
 
-    searchChange = (e) => {
-        this.setState({
-            pubsearch: e.target.value
-        })
-    }
+    // поиск, которого пока нет
 
-    searchSubmit = (e) => {
-        e.preventDefault()
-        if (this.state.searchbyAuthor.length) {
-            this.props.PubSearch(this.state.searchbyAuthor)
-        }
-    }
+    // searchChange = (e) => {
+    //     this.setState({
+    //         pubsearch: e.target.value
+    //     })
+    // }
+
+    // searchSubmit = (e) => {
+    //     e.preventDefault()
+    //     if (this.state.searchbyAuthor.length) {
+    //         this.props.PubSearch(this.state.searchbyAuthor)
+    //     }
+    // }
     
+
+    // обработка селекта научных групп
     handleGroupSelect = (event) => {
         this.resetAuthor(event, "handle")
         this.setState({
@@ -280,7 +291,7 @@ class Publications extends Component {
         })
     }
     
-
+    // обработка селекта авторов
     handleAuthorsSelect = (event) => {
         this.resetGroup(event, "handle")
         this.setState({
@@ -289,12 +300,14 @@ class Publications extends Component {
         })
     }
 
+    // сброс всех селектов и поиска
     resetAll = (e, from) => {
         this.resetGroup(e, from)
         this.resetAuthor(e, from)
         this.resetSearch(e, from)
     }
 
+    // cброс селекта научной группы
     resetGroup = (e, from) => {
         if (from === "click") {
             e.preventDefault()
@@ -309,6 +322,8 @@ class Publications extends Component {
         }
     }
 
+    // сброс селека авторов
+
     resetAuthor = (e, from) => {
         if (from === "click") {
             e.preventDefault()
@@ -322,14 +337,16 @@ class Publications extends Component {
             this.authorSelect.state.value.label = this.context.t("Введите имя")
         }
     }    
-    resetSearch = (e, from) => {
-        if (from === "click") {
-            e.preventDefault()
-        }        
-        this.setState({
-            pubsearch: ""
-        })
-    }
+
+    // сброс поиска
+    // resetSearch = (e, from) => {
+    //     if (from === "click") {
+    //         e.preventDefault()
+    //     }        
+    //     this.setState({
+    //         pubsearch: ""
+    //     })
+    // }
 }
 
 // Redux функции state и dispatch

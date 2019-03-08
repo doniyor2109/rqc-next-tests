@@ -107,7 +107,7 @@ export const translations = {
         "Введите название": "Enter group name",
         "Введите имя": "Enter name",
         "По вашему запросу не найдено ни одной публикации": "There are no publications at your request",
-        "Посмотрите список ": "See",
+        "Посмотрите список ": "See ",
         "всех публикаций": "all publications",
         " или используйте фильтры для выбора публикаций определенного автора или научной группы": " or use filters to choose publications of certain scientific group or author",
         "Все группы": "All groups",
