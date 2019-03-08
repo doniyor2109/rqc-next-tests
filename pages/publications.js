@@ -323,8 +323,7 @@ class Publications extends Component {
             pubs: this.props.publications.pubs
         })
         if (this.groupSelect.state.value !== null) {
-            this.groupSelect.state.value.value = ""
-            this.groupSelect.state.value.label = this.context.t("Введите название")
+            this.groupSelect.state.value = null
         }
     }
 
@@ -339,8 +338,7 @@ class Publications extends Component {
             pubs: this.props.publications.pubs
         })
         if (this.authorSelect.state.value !== null) {
-            this.authorSelect.state.value.value = ""
-            this.authorSelect.state.value.label = this.context.t("Введите имя")
+            this.authorSelect.state.value = null
         }
     }    
 
