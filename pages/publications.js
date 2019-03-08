@@ -98,6 +98,9 @@ class Publications extends Component {
         // если меняется язык
         if (this.props.lang !== prevProps.lang) {
 
+            // сбрасываем значения групп и авторов
+            this.resetAll()
+
             // получаем снова публикации
             this.props.fetchPublications(this.props.lang, 100, this.state.pageNumber, this.state.activeTag, [])
 
@@ -113,7 +116,8 @@ class Publications extends Component {
 
     render() {
 
-        // console.log("publications", this.props)
+        console.log("publications", this.props)
+        console.log("group select", this.groupSelect)
 
         return (
             <Fragment>
@@ -283,33 +287,35 @@ class Publications extends Component {
     
 
     // обработка селекта научных групп
-    handleGroupSelect = (event) => {
-        this.resetAuthor(event, "handle")
+    handleGroupSelect = (group) => {
+        this.resetAuthor()
         this.setState({
-            selectedGroupName: event.value,
-            pubs: filterPubsbyGroup(event.value, this.props.publications.pubs)
+            selectedGroupName: group.value,
+            pubs: filterPubsbyGroup(group.value, this.props.publications.pubs)
         })
     }
     
     // обработка селекта авторов
-    handleAuthorsSelect = (event) => {
-        this.resetGroup(event, "handle")
+    handleAuthorsSelect = (author) => {
+        this.resetGroup()
         this.setState({
-            selectedAuthor: event.value,
-            pubs: this.props.publications.pubs.filter(el => el.data.authors.some(author => author.text === event.value))
+            selectedAuthor: author.value,
+            pubs: this.props.publications.pubs.filter(el => el.data.authors.some(a => a.text === author.value))
         })
     }
 
     // сброс всех селектов и поиска
-    resetAll = (e, from) => {
-        this.resetGroup(e, from)
-        this.resetAuthor(e, from)
-        this.resetSearch(e, from)
+    resetAll = (e) => {
+        if (e) {
+            this.resetGroup(e)
+        } else this.resetGroup()
+        
+        this.resetAuthor(e)
     }
 
     // cброс селекта научной группы
-    resetGroup = (e, from) => {
-        if (from === "click") {
+    resetGroup = (e) => {
+        if (e) {
             e.preventDefault()
         }
         this.setState({
@@ -324,8 +330,8 @@ class Publications extends Component {
 
     // сброс селека авторов
 
-    resetAuthor = (e, from) => {
-        if (from === "click") {
+    resetAuthor = (e) => {
+        if (e) {
             e.preventDefault()
         }        
         this.setState({
