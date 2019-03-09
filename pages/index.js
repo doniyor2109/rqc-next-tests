@@ -69,7 +69,6 @@ class Index extends React.Component {
 
   state = {
     DOMLoaded: false,
-    events: []
   }
 
   componentDidMount() {
@@ -79,18 +78,14 @@ class Index extends React.Component {
     this.props.fetchEvents(this.props.lang, 2)
     this.props.fetchNews(this.props.lang, 3) 
     this.props.fetchMainSciSlider(this.props.lang)
-
-    // добавляем важную новость в массив новостей
-    this.setState(prevState => ({
-      events: [...prevState.events, 
-              this.props.main.data.featured_event
-            ]
-    }))
-  }s
+  }
 
   componentDidUpdate(prevProps) {
 
     if (this.props.lang !== prevProps.lang) {
+      this.setState({
+        events: []
+      })
       if (this.props.lang === "en-gb"){
         this.props.fetchMain('W3GV8SQAACQAZAwG', "en-gb")
       } else if(this.props.lang === "ru") {
@@ -100,28 +95,11 @@ class Index extends React.Component {
       this.props.fetchEvents(this.props.lang, 2)
       this.props.fetchNews(this.props.lang, 3) 
     }
-
-    // как только получаем ответ от Prismic с мероприятими
-    // добавляем в массив мероприятий одну новость из events, которая отличается от важной
-    if (this.props.events.events !== prevProps.events.events){
-
-      this.setState(prevState => ({
-        events: [...prevState.events, this.props.events.events.reduce((acc, event) => {
-                                                                        if(event.id !== this.props.main.data.featured_event.id) {
-                                                                          acc = event
-                                                                        } else {
-                                                                          acc = null
-                                                                        }
-                                                                        return acc
-                                                                    }, {})
-                ]
-      }))
-    }
   }
 
   render() {
 
-    const { phone, tablet, news, events, main } = this.props
+    const { phone, tablet, news, main } = this.props
     const { sciSlider, isFetchingMain, isFetchingSci } = this.props.main
 
     console.log("main", this.props)
@@ -259,14 +237,14 @@ class Index extends React.Component {
               {/* вариант смартфона и планшета*/}
               <Media query="(max-width: 768px)"
                         defaultMatches={tablet !== null}
-                        render={() => this.state.events.map((item, index) =>
+                        render={() => this.props.events.events.map((item, index) =>
                                         <CardSmall item={item} key={index} />)}
               />
                             
               {/* вариант десктопа */}
               <Media query="(min-width: 769px)"
                         defaultMatches={phone === null && tablet === null}
-                        render={() => this.state.events.map((item, index) => {
+                        render={() => this.props.events.events.map((item, index) => {
                           if (index === 0) {
                             return <CardLarge item={item} key={index} desktop/>
                           } else return <CardSmall item={item} key={index} desktop/>
