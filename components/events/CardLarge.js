@@ -40,6 +40,9 @@ export const CardLarge = (props) => {
                          moment(Date(item.data.end_date)).format('DD') + ", " + 
                          moment(Date(item.data.start_date_time)).format('YYYY')
   const date = item.data.end_date ? date_start_end : moment(Date(item.data.start_date_time)).format('LL') 
+  const time = item.lang === 'ru' 
+                ? moment(Date(item.data.start_date_time)).format('HH:mm') 
+                : moment(Date(item.data.start_date_time)).format('HH:mm a')
 
   return (
     <div className="column is-8-desktop is-12-tablet">
@@ -58,7 +61,7 @@ export const CardLarge = (props) => {
             </div>
             <div className="event-date">
                 {date}<br />
-                {moment(Date(item.data.start_date_time)).format('HH:mm a')}
+                {time}
             </div>
             <ArrowButton color="ffffff"/> 
           </div>
