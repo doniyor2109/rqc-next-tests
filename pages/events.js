@@ -125,7 +125,7 @@ class Events extends Component {
   render() {
     const { phone, tablet } = this.props
 
-    // console.log("events", this.props)
+    console.log("events", this.props)
 
 
       return (

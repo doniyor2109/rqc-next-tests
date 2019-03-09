@@ -109,8 +109,8 @@ class Publications extends Component {
 
     render() {
 
-        console.log("publications", this.props)
-        console.log("group select", this.groupSelect)
+        // console.log("publications", this.props)
+        // console.log("group select", this.groupSelect)
 
         return (
             <Fragment>

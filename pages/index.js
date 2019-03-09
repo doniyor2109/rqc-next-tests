@@ -12,10 +12,9 @@ import * as langActions from '../redux/actions/lang'
 import * as eventsActions from '../redux/actions/events'
 import * as newsActions from '../redux/actions/news'
 
-
-import {fetchMainSliderRequest, 
-        fetchMainSliderSuccess, 
-        fetchMainSliderFailure} from '../redux/actions/main'
+import {fetchMainRequest, 
+        fetchMainSuccess, 
+        fetchMainFailure} from '../redux/actions/main'
 
 import { NewscardSmall } from '../components/news/NewscardSmall.js'
 import MainSlider from '../components/sliders/MainSlider'
@@ -25,7 +24,6 @@ import OldSite from '../components/oldSite.js'
 import Products from '../components/products/index'
 import {CardLarge} from '../components/events/CardLarge'
 import {CardSmall} from '../components/events/CardSmall'
-
 
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../prismic-configuration';
@@ -41,20 +39,28 @@ class Index extends React.Component {
     const api = await Prismic.getApi(PrismicConfig.apiEndpoint)
     
     // получаем настройки языка из кукис 
-    // и в зависимости от языка понимаем какой запрашивать id у призмика для основного слайдера
-    // если куки language не было у пользователя, то мы присваиваем языку значение ru 
+    // и в зависимости от языка понимаем какой запрашивать id у CMS Prismic для основного слайдера.
+    // Eсли куки language не было у пользователя, то мы присваиваем языку значение ru 
     // мы не можем в этом месте ждать, пока _app выставит кукис, потому что тогда 
     // слайдер не получит значение id вовремя, id будет undefined и слайдер не доставится
-    const l = typeof cookies(ctx).language === 'undefined' ? "ru" : cookies(ctx).language
+    const language = typeof cookies(ctx).language === 'undefined' ? "ru" : cookies(ctx).language
     
-    // серверный запрос основного слайдера
-    const id = (l && l === 'ru' ? 'W3GVDyQAACYAZAgb' : 'W3GV8SQAACQAZAwG')
-    reduxStore.dispatch(fetchMainSliderRequest()) 
-    await api.query(Prismic.Predicates.at('document.id', id), { lang: l})
-             .then(response => reduxStore.dispatch(fetchMainSliderSuccess(id, response)))
-             .catch(error => reduxStore.dispatch(fetchMainSliderFailure(id, error)))
-
-    return {lan: l}
+    // серверный запрос типа main (основной слайдер + важное мероприятие)
+    const id = (language && language === 'ru' ? 'W3GVDyQAACYAZAgb' : 'W3GV8SQAACQAZAwG')
+    reduxStore.dispatch(fetchMainRequest()) 
+    await api.query(Prismic.Predicates.at('document.id', id), 
+                                          { lang: language, 
+                                            fetchLinks: ['event.title',
+                                                         'event.wallpaper',
+                                                         'event.start_date_time',
+                                                         'event.end_date',
+                                                         'event.additional',
+                                                         'event.description'
+                                                        ]
+                                          })
+             .then(response => reduxStore.dispatch(fetchMainSuccess(id, response)))
+             .catch(error => reduxStore.dispatch(fetchMainFailure(id, error)))
+    return {lan: language}
   }
 
   static contextTypes = {
@@ -62,38 +68,63 @@ class Index extends React.Component {
   }
 
   state = {
-    DOMLoaded: false
+    DOMLoaded: false,
+    events: []
   }
 
   componentDidMount() {
     this.setState({
       DOMLoaded: true
     })
-    // this.props.fetchEvents(this.props.lang, 5)
+    this.props.fetchEvents(this.props.lang, 2)
     this.props.fetchNews(this.props.lang, 3) 
     this.props.fetchMainSciSlider(this.props.lang)
-  }
+
+    // добавляем важную новость в массив новостей
+    this.setState(prevState => ({
+      events: [...prevState.events, 
+              this.props.main.data.featured_event
+            ]
+    }))
+  }s
 
   componentDidUpdate(prevProps) {
 
     if (this.props.lang !== prevProps.lang) {
       if (this.props.lang === "en-gb"){
-        this.props.fetchMainSlider('W3GV8SQAACQAZAwG', "en-gb")
+        this.props.fetchMain('W3GV8SQAACQAZAwG', "en-gb")
       } else if(this.props.lang === "ru") {
-        this.props.fetchMainSlider('W3GVDyQAACYAZAgb', "ru")
+        this.props.fetchMain('W3GVDyQAACYAZAgb', "ru")
       }
       this.props.fetchMainSciSlider(this.props.lang)
-      // this.props.fetchEvents(this.props.lang, 5)
+      this.props.fetchEvents(this.props.lang, 2)
       this.props.fetchNews(this.props.lang, 3) 
+    }
+
+    // как только получаем ответ от Prismic с мероприятими
+    // добавляем в массив мероприятий одну новость из events, которая отличается от важной
+    if (this.props.events.events !== prevProps.events.events){
+
+      this.setState(prevState => ({
+        events: [...prevState.events, this.props.events.events.reduce((acc, event) => {
+                                                                        if(event.id !== this.props.main.data.featured_event.id) {
+                                                                          acc = event
+                                                                        } else {
+                                                                          acc = null
+                                                                        }
+                                                                        return acc
+                                                                    }, {})
+                ]
+      }))
     }
   }
 
   render() {
 
-    const { phone, tablet, news, events } = this.props
-    const { mainSlider, sciSlider, isFetchingMain, isFetchingSci } = this.props.main
+    const { phone, tablet, news, events, main } = this.props
+    const { sciSlider, isFetchingMain, isFetchingSci } = this.props.main
 
-    // console.log("main", this.props)
+    console.log("main", this.props)
     if (!this.state.DOMLoaded) return <Loading />
     else 
     return (
@@ -120,7 +151,7 @@ class Index extends React.Component {
         }
         </Head>
         <section className="main-slider">
-          {mainSlider && mainSlider.data && <MainSlider slides={mainSlider.data.body}
+          {main.data && <MainSlider slides={main.data.body}
                                           isLoading={isFetchingMain}
                                           phone={phone}
                                           tablet={tablet}
@@ -129,57 +160,6 @@ class Index extends React.Component {
 
         <OldSite />
 
-        {/* блок мероприятий */}
-        {/* <section className="event-teaser">
-          <div className="container">
-            <Link href="/events">
-              <a className="main-category">
-                {this.context.t("Мероприятия")}
-              </a>
-            </Link>
-            <Link href="/events">
-              <a className="main-category-link">
-                {this.context.t("смотреть все")}
-              </a>
-            </Link>
-            <div className="columns is-multiline">
-
-              {/* в зависимости от размера окна браузера мы рендерим разные верстки секции с тизерами мероприятий */}
-              {/* вариант смартфона */}
-              {/* {events.events 
-              && <Media query="(max-width: 415px)"
-                        defaultMatches={tablet !== null}
-                        render={() => events.events.slice(0,3).map((item, index) =>
-                                        <CardSmall item={item} key={index} />)}
-                  />
-                
-              } */}
-              {/* вариант смартфона */}
-              {/* {events.events 
-              && <Media query="(min-width: 416px) and (max-width: 768px)"
-                        defaultMatches={tablet !== null}
-                        render={() => events.events.slice(0,3).map((item, index) => {
-                          if (index === 0) {
-                            return <CardLarge item={item} key={index} tablet/>
-                          } else return <CardSmall item={item} key={index} tablet/>
-                        })}
-                  />
-                
-              } */}
-              {/* вариант десктопа */}
-              {/* {events.events 
-              && <Media query="(min-width: 769px)"
-                        defaultMatches={phone === null && tablet === null}
-                        render={() => events.events.map((item, index) => {
-                          if (index === 0) {
-                            return <CardLarge item={item} key={index} desktop/>
-                          } else return <CardSmall item={item} key={index} desktop/>
-                        })}
-                  />
-              } */}
-            {/* </div>
-          </div>
-        </section> */}
 
         <section className="news-teaser">
           <div className="container">
@@ -260,6 +240,42 @@ class Index extends React.Component {
             }
           </div>
         </section>
+        {/* блок мероприятий */}
+        <section className="event-teaser">
+          <div className="container">
+            <Link href="/events">
+              <a className="main-category">
+                {this.context.t("Мероприятия")}
+              </a>
+            </Link>
+            <Link href="/events">
+              <a className="main-category-link">
+                {this.context.t("смотреть все")}
+              </a>
+            </Link>
+            <div className="columns is-multiline">
+
+              {/* в зависимости от размера окна браузера рендерим разные верстки секции с тизерами мероприятий */}
+              {/* вариант смартфона и планшета*/}
+              <Media query="(max-width: 768px)"
+                        defaultMatches={tablet !== null}
+                        render={() => this.state.events.map((item, index) =>
+                                        <CardSmall item={item} key={index} />)}
+              />
+                            
+              {/* вариант десктопа */}
+              <Media query="(min-width: 769px)"
+                        defaultMatches={phone === null && tablet === null}
+                        render={() => this.state.events.map((item, index) => {
+                          if (index === 0) {
+                            return <CardLarge item={item} key={index} desktop/>
+                          } else return <CardSmall item={item} key={index} desktop/>
+                        })}
+              />
+            </div>
+          </div>
+        </section> 
+
       </Fragment>
     )
   }
