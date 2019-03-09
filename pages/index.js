@@ -49,15 +49,7 @@ class Index extends React.Component {
     const id = (language && language === 'ru' ? 'W3GVDyQAACYAZAgb' : 'W3GV8SQAACQAZAwG')
     reduxStore.dispatch(fetchMainRequest()) 
     await api.query(Prismic.Predicates.at('document.id', id), 
-                                          { lang: language, 
-                                            fetchLinks: ['event.title',
-                                                         'event.wallpaper',
-                                                         'event.start_date_time',
-                                                         'event.end_date',
-                                                         'event.additional',
-                                                         'event.description'
-                                                        ]
-                                          })
+                                          { lang: language})
              .then(response => reduxStore.dispatch(fetchMainSuccess(id, response)))
              .catch(error => reduxStore.dispatch(fetchMainFailure(id, error)))
     return {lan: language}
