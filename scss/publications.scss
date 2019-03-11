@@ -106,7 +106,12 @@
         .group-author {
             margin-bottom:3rem;
 
-            span {
+            .description {
+                font-size: 1.4rem;
+                line-height: 3rem;
+                margin-right: 1rem;
+            }
+            .filter-name {
                 font-size: 2.2rem;
                 line-height: 3rem;
                 font-weight: bold;

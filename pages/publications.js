@@ -53,7 +53,7 @@ class Publications extends Component {
         pageSize: 100, 
         pageNumber: 1,
         activeTag: "SORT_DATE",
-        allpubsFetched: false
+        searchIsActive: false
     }
   }
 
@@ -74,7 +74,6 @@ class Publications extends Component {
                                                                              .reduce((acc, val) => acc.concat(val))
             this.setState({
                 pubs: this.props.publications.pubs,
-                allpubsFetched: true,
                 authors: uniqArray(arrayofAuthorswithDuplicates)
             })
         }
@@ -103,6 +102,18 @@ class Publications extends Component {
             // обновляем список групп
             this.setState({
                 groupsName: this.props.scigroups.groups.filter(el => el.lang === this.props.lang).map(group => group.data.groupname[0].text),
+            })
+        }
+
+        if(this.props.publications.search !== prevProps.publications.search) {
+            this.setState({
+                pubs: this.props.publications.search
+            })
+        }
+
+        if(this.state.searchIsActive !== prevState.searchIsActive === true) {
+            this.setState({
+                pubs: this.props.publications.pubs
             })
         }
     }
@@ -204,7 +215,7 @@ class Publications extends Component {
                     <div className="container">
                         { ( this.state.selectedGroupName.length > 0 || 
                             this.state.selectedAuthor.length > 0 ||
-                            this.state.pubsearch > 0 )
+                            (this.state.searchIsActive && this.state.pubsearch.length) > 0 )
                             &&
                             <div className="columns">
                                 <div className="column is-12-tablet is-8-desktop is-offset-2-desktop">
@@ -213,7 +224,7 @@ class Publications extends Component {
                                                     pubsearch={this.state.pubsearch}
                                                     resetAuthor={this.resetAuthor}    
                                                     resetGroup={this.resetGroup}                                
-                                                    resetSearch={this.reset}                                
+                                                    resetSearch={this.resetSearch}                                
                                 
                                     />
                                 </div> 
@@ -278,8 +289,11 @@ class Publications extends Component {
 
     searchSubmit = (e) => {
         e.preventDefault()
-        if (this.state.searchbyAuthor.length) {
-            this.props.PubSearch(this.state.searchbyAuthor)
+        if (this.state.pubsearch.length) {
+            this.setState({
+                searchIsActive: true
+            })
+            this.props.searchPublication(this.state.pubsearch)
         }
     }
     
@@ -341,14 +355,15 @@ class Publications extends Component {
     }    
 
     // сброс поиска
-    // resetSearch = (e, from) => {
-    //     if (from === "click") {
-    //         e.preventDefault()
-    //     }        
-    //     this.setState({
-    //         pubsearch: ""
-    //     })
-    // }
+    resetSearch = (e) => {
+        if (e) {
+            e.preventDefault()
+        }        
+        this.setState({
+            pubsearch: "",
+            searchIsActive: false
+        })
+    }
 }
 
 // Redux функции state и dispatch

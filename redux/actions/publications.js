@@ -71,22 +71,20 @@ export const fetchPublications = (language, pageSize, pageNumber, activeTag, res
 //           })
 // }
 
-const SearchPublicationbyScienceGroupRequest = (groupId) => ({ type: action_types.SEARCH_PUBLICATION_BY_SCIENCE_GROUP_REQUEST, groupId });
+const searchPublicationsRequest = (text) => ({ type: action_types.SEARCH_PUBLICATIONS_REQUEST, text });
 
-const SearchPublicationbyScienceGroupSuccess = (groupId, response) => ({ type: action_types.SEARCH_PUBLICATION_BY_SCIENCE_GROUP_SUCCESS, groupId, response });
+const searchPublicationsSuccess = (text, response) => ({ type: action_types.SEARCH_PUBLICATIONS_SUCCESS, text, response });
 
-const SearchPublicationbyScienceGroupFailure = (groupId, error) => ({ type: action_types.SEARCH_PUBLICATION_BY_SCIENCE_GROUP_FAILURE, groupId, error });
+const searchPublicationsFailure = (error) => ({ type: action_types.SEARCH_PUBLICATIONS_FAILURE, error });
 
-export const SearchPublicationbyScienceGroup = (groupId, pageNumber) => (dispatch) => {
-  dispatch(SearchPublicationbyScienceGroupRequest(groupId));
+export const searchPublication = (text) => (dispatch) => {
+  dispatch(searchPublicationsRequest(text));
   return Prismic.getApi(PrismicConfig.apiEndpoint)
     .then(api => {api.query([Prismic.Predicates.at('document.type', 'publication'), 
-                            Prismic.Predicates.at('my.publication.belongs_to_group.sci_group', groupId)],{
+                            Prismic.Predicates.fulltext('document', text)],{
                                                           pageSize: 100, 
-                                                          page: pageNumber,
-                                                          fetchLinks : ['science_group.groupname']
                                                          })
-                      .then(response => dispatch(SearchPublicationbyScienceGroupSuccess(groupId, response)))
-                      .catch(error => dispatch(SearchPublicationbyScienceGroupFailure(groupId, error)))
+                      .then(response => dispatch(searchPublicationsSuccess(text, response)))
+                      .catch(error => dispatch(searchPublicationsFailure(error)))
           })
 }

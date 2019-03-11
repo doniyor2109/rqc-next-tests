@@ -7,23 +7,25 @@ const FiltersRequest = ({selectedGroupName,
                         resetAuthor,
                         resetGroup,
                         resetSearch
-                                            }) => (
+                                            }, context) => (
     <div className="filters">
 
         {pubsearch 
-        ?   <p>
-                {context.t("Запрос пользователя")}
+        ?   <div className="group-author">
                 <Fragment>
-                    <span>
+                    <span className="description"> 
+                        {context.t("Результаты по запросу")}:
+                    </span>
+                    <span className="filter-name">
                         {pubsearch}
                     </span>
                     <img src="/static/resetFilers.svg" alt="reset filtwers" onClick={e => {resetSearch(e)}}/>
                 </Fragment>
-            </p>
+            </div>
         :   <div className="group-author">
                 {selectedGroupName && 
                     <Fragment>
-                        <span>
+                        <span className="filter-name">
                             {selectedGroupName} 
                         </span>
                         <img src="/static/resetFilers.svg" alt="reset filtwers" onClick={e => {resetGroup(e)}}/>
@@ -31,7 +33,7 @@ const FiltersRequest = ({selectedGroupName,
                 }
                 {selectedAuthor && 
                     <Fragment>
-                        <span>
+                        <span className="filter-name">
                             {selectedAuthor} 
                         </span>
                         <img src="/static/resetFilers.svg" alt="reset filtwers" onClick={e => {resetAuthor(e)}}/>
