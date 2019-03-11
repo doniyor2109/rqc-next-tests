@@ -125,42 +125,50 @@ class Publications extends Component {
                         <div className="container">
                             <h5>{this.context.t("Фильтры и поиск")}:</h5>
                             <div className="columns is-multiline">
-                                <div className="column is-5-desktop is-12-tablet">
-                                    <p className="name">{this.context.t("Научная группа")}:</p>
-                                    <Select onChange={this.handleGroupSelect} 
-                                            options={this.state.groupsName.map(group => 
-                                                     ({ label: group, value: group })
-                                                    )}
-                                            instanceId="groupselect"
-                                            className='group-select-container'
-                                            classNamePrefix="select"
-                                            placeholder={this.context.t("Введите название")}
-                                            isLoading={this.props.scigroups.isFetching}
-                                            isDisabled={this.props.scigroups.isFetching}
-                                            ref={c => (this.groupSelect = c)}
-                                    />
+                                <div className="column is-7-desktop is-7-tablet is-12-mobile">
+                                    <div className="columns is-multiline">
+                                        <div className="column is-7-desktop is-12-tablet">
+                                            <div className="select_wrapper">
+                                                <p className="name">{this.context.t("Научная группа")}:</p>
+                                                <Select onChange={this.handleGroupSelect} 
+                                                        options={this.state.groupsName.map(group => 
+                                                                ({ label: group, value: group })
+                                                                )}
+                                                        instanceId="groupselect"
+                                                        className='group-select-container'
+                                                        classNamePrefix="select"
+                                                        placeholder={this.context.t("Введите название")}
+                                                        isLoading={this.props.scigroups.isFetching}
+                                                        isDisabled={this.props.scigroups.isFetching}
+                                                        ref={c => (this.groupSelect = c)}
+                                                />
+                                            </div>
+                                        </div>
+                                        <div className="column is-5-desktop is-12-tablet">
+                                            <div className="select_wrapper">
+                                                <p className="name">{this.context.t("Автор")}:</p>
+                                                <Select onChange={this.handleAuthorsSelect} 
+                                                        options={this.state.authors.map(author => 
+                                                                ({ label: author, value: author })
+                                                                )}
+                                                        instanceId="authorselect"
+                                                        className='author-select-container'
+                                                        classNamePrefix="select"
+                                                        placeholder={this.context.t("Введите имя")}
+                                                        isLoading={this.props.publications.isFetchingPubs}
+                                                        isDisabled={this.props.publications.isFetchingPubs}
+                                                        ref={c => (this.authorSelect = c)}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="column is-3-desktop is-12-tablet">
-                                    <p className="name">{this.context.t("Автор")}:</p>
-                                    <Select onChange={this.handleAuthorsSelect} 
-                                            options={this.state.authors.map(author => 
-                                                     ({ label: author, value: author })
-                                                    )}
-                                            instanceId="authorselect"
-                                            className='author-select-container'
-                                            classNamePrefix="select"
-                                            placeholder={this.context.t("Введите имя")}
-                                            isLoading={this.props.publications.isFetchingPubs}
-                                            isDisabled={this.props.publications.isFetchingPubs}
-                                            ref={c => (this.authorSelect = c)}
-                                    />
-                                </div>
 
 
-                                {/* Поиск, который предстоит сделать */}
+                                {/* Поиск */}
 
-                                <div className="column is-4">
-                                    <form className="search_form is-pulled-right" onSubmit={e => this.searchSubmit(e)}>
+                                <div className="column is-4-desktop is-offset-1-desktop">
+                                    <form className="search_form" onSubmit={e => this.searchSubmit(e)}>
                                         <input type="search" 
                                             id="input-search" 
                                             name="search" 

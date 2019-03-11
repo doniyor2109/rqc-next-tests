@@ -15,59 +15,66 @@
             margin: 3rem 0 2rem 0;
         }
 
-        .name {
-            font-size: 1.4rem;
-            line-height: 3rem;
-            font-weight: bold;
-            display: inline-block;
-            margin-right: 1rem;
+        .select_wrapper {
+            display: flex;
+            align-items: center;
+
+            .name {
+                font-size: 1.4rem;
+                line-height: 3rem;
+                font-weight: bold;
+                margin-right: 1rem;
+                @media (max-width:1088px) {
+                    width: 11rem;
+                }
+
+            }
+    
+            .group-select-container {
+                flex-grow: 1;
+            }
+            .author-select-container {
+                flex-grow: 1;
+            }
+            .select__control {
+                border-color: rgba(5, 4, 4, 0.5);
+                border-radius: 0;
+                height:3.5rem;
+            }
+            .select__placeholder {
+                font-weight: normal;
+                font-size: 1.4rem;
+                line-height: 2.4rem;
+                font-style: italic;
+                font-family: 'DIN Pro';
+                padding: 0px 2px 1px;
+            }
+    
+            .select__option, .select__single-value {
+                font-weight: normal;
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                font-style: normal;
+                font-family: 'DIN Pro';
+                padding: 0px 2px 1px;
+                color:#040303;
+            }
+            .select__indicator-separator {
+                display: none;
+            }
+            .group-select__dropdown-indicator {
+                color:rgba(5, 4, 4, 0.5)
+            }
         }
 
-        .group-select-container {
-            width: 30rem;
-            display: inline-block;
-        }
-        .author-select-container {
-            width: 20rem;
-            display: inline-block;
-        }
-        .select__control {
-            border-color: rgba(5, 4, 4, 0.5);
-            border-radius: 0;
-            height:3.5rem;
-        }
-        .select__placeholder {
-            font-weight: normal;
-            font-size: 1.4rem;
-            line-height: 2.4rem;
-            font-style: italic;
-            font-family: 'DIN Pro';
-            padding: 0px 2px 1px;
-        }
-
-        .select__option, .select__single-value {
-            font-weight: normal;
-            font-size: 1.6rem;
-            line-height: 2.4rem;
-            font-style: normal;
-            font-family: 'DIN Pro';
-            padding: 0px 2px 1px;
-            color:#040303;
-        }
-        .select__indicator-separator {
-            display: none;
-        }
-        .group-select__dropdown-indicator {
-            color:rgba(5, 4, 4, 0.5)
-        }
 
         .search_form {
             position: relative;
             margin: 0 auto;
-            width: 80%;
+            width: auto;
 
             #input-search {
-                width: 85%;
+                width: 70%;
                 background: transparent;
                 border: 0;
                 border-bottom: 1px solid rgba(4,3,3,0.5);
@@ -146,20 +153,27 @@
 
         .settings {
 
-            .name {
-                font-size: 1.4rem;
-                line-height: 3rem;
-                font-weight: bold;
-                display: inline-block;
-                margin-right: 1rem;
-                width: 11rem;
-                text-align:right;
+            .select_wrapper {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+
+                .name {
+                    font-size: 1.4rem;
+                    line-height: 3rem;
+                    font-weight: bold;
+                }
+
+            }
+            
+            .search_form {
+                display: flex;
+                justify-content: space-between;
+                #input-search {
+                    width: 84%;
+                }
             }
 
-            .group-select-container,  .author-select-container {
-                width: 36rem;
-                display: inline-block;
-            }
         }  
 
         .filters {
