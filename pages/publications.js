@@ -109,7 +109,7 @@ class Publications extends Component {
 
     render() {
 
-        // console.log("publications", this.props)
+        console.log("publications", this.props)
         // console.log("group select", this.groupSelect)
 
         return (
@@ -159,7 +159,7 @@ class Publications extends Component {
 
                                 {/* Поиск, который предстоит сделать */}
 
-                                {/* <div className="column is-4">
+                                <div className="column is-4">
                                     <form className="search_form is-pulled-right" onSubmit={e => this.searchSubmit(e)}>
                                         <input type="search" 
                                             id="input-search" 
@@ -170,9 +170,7 @@ class Publications extends Component {
                                         />
                                         <button type="submit" id="input-submit-button"></button>
                                     </form>
-                                </div> */}
-
-
+                                </div>
                             </div>
                             <h5 className="sort">{this.context.t("Сортировать по")}:</h5>
                             <div className="columns">
@@ -263,20 +261,19 @@ class Publications extends Component {
         this.props.fetchPublications(this.props.lang, 100, this.state.pageNumber, tag, [])
     }
 
-    // поиск, которого пока нет
+    // поиск
+    searchChange = (e) => {
+        this.setState({
+            pubsearch: e.target.value
+        })
+    }
 
-    // searchChange = (e) => {
-    //     this.setState({
-    //         pubsearch: e.target.value
-    //     })
-    // }
-
-    // searchSubmit = (e) => {
-    //     e.preventDefault()
-    //     if (this.state.searchbyAuthor.length) {
-    //         this.props.PubSearch(this.state.searchbyAuthor)
-    //     }
-    // }
+    searchSubmit = (e) => {
+        e.preventDefault()
+        if (this.state.searchbyAuthor.length) {
+            this.props.PubSearch(this.state.searchbyAuthor)
+        }
+    }
     
 
     // обработка селекта научных групп
