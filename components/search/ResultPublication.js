@@ -3,38 +3,19 @@ import PropTypes from 'prop-types'
 import { RichText, Link, Date } from 'prismic-reactjs'
 import PrismicConfig from '../../prismic-configuration'
 import moment from 'moment'
-
-const simpleSearch = (data, search_text) => {
-
-    // функция четкого поиска по заданной строке
-    // ищет точные совпадения c помощью indexOf()
-
-    // инициализируем переменные, в котороые будем складывать результаты
-    var text_before_search = ""
-    var text_after_search = ""
-    var pos = null
-    var str = ""
-
-    pos = data.text.toLowerCase().indexOf(search_text.toLowerCase())
-
-    if (pos !== -1) {
-        str = data.text.slice(pos, pos + search_text.length)
-        text_before_search = data.text.slice((pos - 100) < 0 ? 0 : (data.text.indexOf(" ", pos - 100)) + 1, pos)
-        text_after_search = data.text.slice(pos + search_text.length)
-
-        return [((pos - 100) < 0) ? text_before_search : ("..." + text_before_search) , str, (text_after_search)]
-    } 
-    else return false
-
-}
+import {simpleSearch} from './searchComplex'
 
 const ResultPublication = (props, context) => {
 
     const {item, search_text} = props
     const resultInTitle = simpleSearch(item.data.title[0], search_text)
     const resultInJournal = simpleSearch(item.data.journal_name[0], search_text)
-        return (
+
+    return (
                     <div className="result result-publication">
+                        <p className="authors">
+                            {item.data.authors.map((author, index) => <span key={index} className="author">{author.text}</span>)}
+                        </p>
                         <a href={item.data.eprint[0] 
                                 ? "https://arxiv.org/pdf/" + item.data.eprint[0].text
                                 : item.data.doi.url}
@@ -52,17 +33,9 @@ const ResultPublication = (props, context) => {
                             }
                             </h1>
                         </a>
-                        {/* <p className="highlighted">
-                            {(result.length > 0) && result[0].highlight.map((res, index) => 
-                                                        <span key={index} className={index === 1 ? "bold" : "normal"}>
-                                                            {res}
-                                                        </span>
-                                        )
-                            }
-                        </p> */}
                         <div className="journal_details">
                             <a className="journal" href={Link.url(item.data.journal_url, PrismicConfig.linkResolver)}>
-                                <p>
+                                <div>
                                 {resultInJournal 
                                     ? resultInJournal.map((res, index) => 
                                             <span key={index} className={index === 1 ? "bold" : "normal"}>
@@ -70,7 +43,7 @@ const ResultPublication = (props, context) => {
                                             </span>    )                            
                                     :  RichText.render(item.data.journal_name, PrismicConfig.linkResolver)
                                 }
-                                </p>
+                                </div>
                             </a>
                             {item.data.volume && 
                                 <div className="journal_volume">

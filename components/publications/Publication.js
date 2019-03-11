@@ -7,10 +7,7 @@ const Publication = ({pub}) => {
 
     // console.log("pub", pub)
 
-    if (pub) {
-
-        return (
-    
+    return (
             <div className="publication">
                 <p className="authors">
                     {pub.data.authors.map((author, index) => <span key={index} className="author">{author.text}</span>)}
@@ -63,8 +60,7 @@ const Publication = ({pub}) => {
                         </div>
                 }
             </div>
-        )
-    }
+    )
 }
 
 export default Publication

@@ -45,18 +45,12 @@ export const simpleSearch = (data, search_text) => {
     // функция четкого поиска по заданной строке
     // ищет точные совпадения c помощью indexOf()
 
-    // инициализируем переменные, в котороые будем складывать результаты
-    var text_before_search = ""
-    var text_after_search = ""
-    var pos = null
-    var str = ""
-
-    pos = data.text.toLowerCase().indexOf(search_text.toLowerCase())
+    const pos = data.text.toLowerCase().indexOf(search_text.toLowerCase())
 
     if (pos !== -1) {
-        str = data.text.slice(pos, pos + search_text.length)
-        text_before_search = data.text.slice((pos - 100) < 0 ? 0 : (data.text.indexOf(" ", pos - 100)) + 1, pos)
-        text_after_search = data.text.slice(pos + search_text.length, data.text.lastIndexOf(' ', pos + 100))
+        const str = data.text.slice(pos, pos + search_text.length)
+        const text_before_search = data.text.slice((pos - 100) < 0 ? 0 : (data.text.indexOf(" ", pos - 100)) + 1, pos)
+        const text_after_search = data.text.slice(pos + search_text.length, data.text.lastIndexOf(' ', pos + 100))
 
         return [((pos - 100) < 0) ? text_before_search : ("..." + text_before_search) , str, (text_after_search + "...")]
     } 

@@ -104,18 +104,6 @@ class Publications extends Component {
                 groupsName: this.props.scigroups.groups.filter(el => el.lang === this.props.lang).map(group => group.data.groupname[0].text),
             })
         }
-
-        if(this.props.publications.search !== prevProps.publications.search) {
-            this.setState({
-                pubs: this.props.publications.search
-            })
-        }
-
-        if(this.state.searchIsActive !== prevState.searchIsActive === true) {
-            this.setState({
-                pubs: this.props.publications.pubs
-            })
-        }
     }
 
     render() {
@@ -241,10 +229,11 @@ class Publications extends Component {
                                 <div className="publications">
                                     {!this.props.publications.isFetchingPubs && 
                                         (this.state.activeTag === "SORT_DATE"
-                                        ? <PubsSortedByDate pubs={this.state.pubs} />
+                                        ? <PubsSortedByDate pubs={this.state.searchIsActive ? this.props.publications.search : this.state.pubs} 
+                                                            search={this.state.searchIsActive && this.state.pubsearch}/>
                                         : (this.state.activeTag === "SORT_NAME" 
-                                            ? <PubsSortedByTitle pubs={this.state.pubs} />
-                                            : <PubsSortedByJournal pubs={this.state.pubs} />
+                                            ? <PubsSortedByTitle pubs={this.state.pubs} search={this.state.searchIsActive && this.state.pubsearch}/>
+                                            : <PubsSortedByJournal pubs={this.state.pubs} search={this.state.searchIsActive && this.state.pubsearch}/>
                                         )
                                         )
                                     }
@@ -256,7 +245,7 @@ class Publications extends Component {
                                                 {this.context.t("По вашему запросу не найдено ни одной публикации")}
                                             </p>
                                             {this.context.t("Посмотрите список ")}
-                                            <a onClick={e => this.resetAll(e, "click")}>
+                                            <a onClick={e => this.resetAll(e)}>
                                                 {this.context.t("всех публикаций")}
                                             </a>
                                             {this.context.t(" или используйте фильтры для выбора публикаций определенного автора или научной группы")}
@@ -297,7 +286,7 @@ class Publications extends Component {
             this.setState({
                 searchIsActive: true
             })
-            this.props.searchPublication(this.state.pubsearch)
+            this.props.searchPublication(this.state.pubsearch, this.state.activeTag)
         }
     }
     

@@ -50,39 +50,26 @@ export const fetchPublications = (language, pageSize, pageNumber, activeTag, res
 }
 
 
-// // actions for quering API for a team single document by UID
-
-// const SearchPublicationbyAuthorRequest = (text) => ({ type: action_types.SEARCH_PUBLICATION_BY_AUTHOR_REQUEST, text });
-
-// const SearchPublicationbyAuthorSuccess = (text, response) => ({ type: action_types.SEARCH_PUBLICATION_BY_AUTHOR_SUCCESS, text, response });
-
-// const SearchPublicationbyAuthorFailure = (text, error) => ({ type: action_types.SEARCH_PUBLICATION_BY_AUTHOR_FAILURE, text, error });
-
-// export const SearchPublicationbyAuthor = (author, pageSize, pageNumber) => (dispatch) => {
-//   dispatch(SearchPublicationbyAuthorRequest(author))
-//   return Prismic.getApi(PrismicConfig.apiEndpoint)
-//     .then(api => {api.query(Prismic.Predicates.fulltext('my.publication.authors', author), 
-//                                                          {
-//                                                           pageSize: pageSize, 
-//                                                           page: pageNumber,
-//                                                          })
-//                       .then(response => dispatch(SearchPublicationbyAuthorSuccess(author, response)))
-//                       .catch(error => dispatch(SearchPublicationbyAuthorFailure(author, error)))
-//           })
-// }
-
 const searchPublicationsRequest = (text) => ({ type: action_types.SEARCH_PUBLICATIONS_REQUEST, text });
 
 const searchPublicationsSuccess = (text, response) => ({ type: action_types.SEARCH_PUBLICATIONS_SUCCESS, text, response });
 
 const searchPublicationsFailure = (error) => ({ type: action_types.SEARCH_PUBLICATIONS_FAILURE, error });
 
-export const searchPublication = (text) => (dispatch) => {
+export const searchPublication = (text, activeTag) => (dispatch) => {
+  const ordering = (activeTag === "SORT_DATE") 
+  ? '[my.publication.date desc]'
+  : (activeTag === "SORT_NAME" 
+      ? '[my.publication.title]'
+      : '[my.publication.journal_name]'
+    )
+  
   dispatch(searchPublicationsRequest(text));
   return Prismic.getApi(PrismicConfig.apiEndpoint)
     .then(api => {api.query([Prismic.Predicates.at('document.type', 'publication'), 
                             Prismic.Predicates.fulltext('document', text)],{
                                                           pageSize: 100, 
+                                                          orderings : ordering,
                                                          })
                       .then(response => dispatch(searchPublicationsSuccess(text, response)))
                       .catch(error => dispatch(searchPublicationsFailure(error)))
