@@ -277,7 +277,11 @@ class Publications extends Component {
         this.setState({
             activeTag: tag, 
         })
-        this.props.fetchPublications(this.props.lang, 100, this.state.pageNumber, tag, [])
+        if (this.state.searchIsActive === false) {
+            this.props.fetchPublications(this.props.lang, 100, this.state.pageNumber, tag, [])
+        } else {
+            this.props.searchPublication(this.state.pubsearch)
+        }
     }
 
     // поиск
