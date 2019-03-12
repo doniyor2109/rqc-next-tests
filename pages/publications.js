@@ -232,8 +232,10 @@ class Publications extends Component {
                                         ? <PubsSortedByDate pubs={this.state.searchIsActive ? this.props.publications.search : this.state.pubs} 
                                                             search={this.state.searchIsActive && this.state.pubsearch}/>
                                         : (this.state.activeTag === "SORT_NAME" 
-                                            ? <PubsSortedByTitle pubs={this.state.pubs} search={this.state.searchIsActive && this.state.pubsearch}/>
-                                            : <PubsSortedByJournal pubs={this.state.pubs} search={this.state.searchIsActive && this.state.pubsearch}/>
+                                            ? <PubsSortedByTitle pubs={this.state.searchIsActive ? this.props.publications.search : this.state.pubs}  
+                                                                 search={this.state.searchIsActive && this.state.pubsearch}/>
+                                            : <PubsSortedByJournal pubs={this.state.searchIsActive ? this.props.publications.search : this.state.pubs}  
+                                                                   search={this.state.searchIsActive && this.state.pubsearch}/>
                                         )
                                         )
                                     }
@@ -269,7 +271,7 @@ class Publications extends Component {
         if (this.state.searchIsActive === false) {
             this.props.fetchPublications(this.props.lang, 100, this.state.pageNumber, tag, [])
         } else {
-            this.props.searchPublication(this.state.pubsearch)
+            this.props.searchPublication(this.state.pubsearch, tag)
         }
     }
 
@@ -294,6 +296,7 @@ class Publications extends Component {
     // обработка селекта научных групп
     handleGroupSelect = (group) => {
         this.resetAuthor()
+        this.resetSearch()
         this.setState({
             selectedGroupName: group.value,
             pubs: filterPubsbyGroup(group.value, this.props.publications.pubs)
@@ -303,6 +306,7 @@ class Publications extends Component {
     // обработка селекта авторов
     handleAuthorsSelect = (author) => {
         this.resetGroup()
+        this.resetSearch()
         this.setState({
             selectedAuthor: author.value,
             pubs: this.props.publications.pubs.filter(el => el.data.authors.some(a => a.text === author.value))
@@ -351,6 +355,7 @@ class Publications extends Component {
     resetSearch = (e) => {
         if (e) {
             e.preventDefault()
+            this.props.fetchPublications(this.props.lang, 100, this.state.pageNumber,  this.state.activeTag, [] )
         }        
         this.setState({
             pubsearch: "",

@@ -1,7 +1,7 @@
 import React, {Fragment} from 'react'
 import Publication from './Publication'
 
-const  PubsSortedByTitle = ({pubs}) => (
+const  PubsSortedByTitle = ({pubs, search}) => (
     <Fragment>
         {pubs.length > 0 && pubs.map((pub, index, pubsArr) => {
             if (index === 0) {
@@ -9,7 +9,7 @@ const  PubsSortedByTitle = ({pubs}) => (
                                 <h2 className="pub_category">
                                     {pubsArr[index].data.title[0].text.slice(0,1)} 
                                 </h2> 
-                                <Publication pub={pub} />
+                                <Publication item={pub} search_text={search}/>
                             </Fragment>
             } else {
                 if (pubsArr[index].data.title[0].text.slice(0,1) !== pubsArr[index - 1].data.title[0].text.slice(0,1) ){
@@ -17,9 +17,9 @@ const  PubsSortedByTitle = ({pubs}) => (
                                     <h2 className="pub_category">
                                         {pubsArr[index].data.title[0].text.slice(0,1)} 
                                     </h2> 
-                                    <Publication pub={pub} />
+                                    <Publication item={pub} search_text={search}/>
                                 </Fragment>
-                } else return <Publication pub={pub} key={index} />
+                } else return <Publication item={pub} key={index} search_text={search}/>
             }
     
     

@@ -55,7 +55,6 @@ export const simpleSearch = (data, search_text) => {
         return [((pos - 100) < 0) ? text_before_search : ("..." + text_before_search) , str, (text_after_search + "...")]
     } 
     else return false
-
 }
 
 const fuzzysearch = (data, search_text, requiredDistance, quality, options) => {

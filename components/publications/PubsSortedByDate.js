@@ -1,6 +1,5 @@
 import React, {Fragment} from 'react'
 import Publication from './Publication'
-import ResultPublication from '../search/ResultPublication'
 
 const  PubsSortedByDate = ({pubs, search}) => {
     return (
@@ -11,28 +10,17 @@ const  PubsSortedByDate = ({pubs, search}) => {
                                     <h2 className="pub_category">
                                         {pubsArr[index].data.date.slice(0,4)} 
                                     </h2> 
-                                    {search.length > 0
-                                    ? <ResultPublication item={pub} search_text={search} />
-                                    : <Publication pub={pub} />
-                                    }
-                                </Fragment>
+                                    <Publication item={pub} search_text={search} />
+                            </Fragment>
                 } else {
                     if (pubsArr[index].data.date.slice(0,4) !== pubsArr[index - 1].data.date.slice(0,4) ){
                             return  <Fragment key={index}>
                                         <h2 className="pub_category">
                                             {pubsArr[index].data.date.slice(0,4)} 
                                         </h2> 
-                                        {search.length > 0
-                                        ? <ResultPublication item={pub} search_text={search} />
-                                        : <Publication pub={pub} />
-                                        }
+                                        <Publication item={pub} search_text={search} />
                                     </Fragment>
-                    } else return   <Fragment key={index}>
-                                        {search.length > 0
-                                            ? <ResultPublication item={pub} search_text={search} />
-                                            : <Publication pub={pub} />
-                                            }
-                                    </Fragment>
+                    } else return <Publication item={pub} search_text={search} key={index}/>
                     
                 }      
             })}
