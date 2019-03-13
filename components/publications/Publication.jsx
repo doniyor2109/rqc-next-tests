@@ -31,6 +31,8 @@ const Title = styled.a`
 `;
 
 const Authors = styled.p`
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 const Author = styled.span`
@@ -128,7 +130,7 @@ const Publication = (props) => {
       <Authors>
         {item.data.authors.map(author => (
           <Author key={author.text + Math.random().toString(36)}>
-            {author.text}
+            {author.text.replace(/\s/g, '\xa0')}
           </Author>
         ))}
       </Authors>

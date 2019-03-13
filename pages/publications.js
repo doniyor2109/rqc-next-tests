@@ -36,10 +36,6 @@ import {uniqArray, filterPubsbyGroup} from '../components/publications/helpers'
 
 // Основной компонент, связывающий весь интерфейс страницы /publications воедино
 class Publications extends Component {
-
-  static contextTypes = {
-    t: PropTypes.func
-  }
   
   constructor(props) {
     super(props)
@@ -71,7 +67,7 @@ class Publications extends Component {
         if(this.props.publications.pubs !== prevProps.publications.pubs) {
 
             const arrayofAuthorswithDuplicates = this.props.publications.pubs.map(pub => pub.data.authors.map(author => author.text))
-                                                                             .reduce((acc, val) => acc.concat(val))
+                                                                                                         .reduce((acc, val) => acc.concat(val))
             this.setState({
                 pubs: this.props.publications.pubs,
                 authors: uniqArray(arrayofAuthorswithDuplicates)
@@ -108,7 +104,7 @@ class Publications extends Component {
 
     render() {
 
-        console.log("publications", this.props)
+        // console.log("publications", this.props)
         // console.log("group select", this.groupSelect)
 
         return (
@@ -377,6 +373,11 @@ const mapDispatchToProps = dispatch => {
         groupsActions,
         langActions,
     ), dispatch);
+}
+
+
+Publications.contextTypes = {
+    t: PropTypes.func
   }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Publications)
