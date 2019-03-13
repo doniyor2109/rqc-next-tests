@@ -15,7 +15,7 @@ const Category = styled.h2`
 const getYear = pub => pub.data.date.slice(0, 4);
 const getTitleFirstletter = pub => pub.data.title[0].text.slice(0, 1);
 const getJournalFirstLetter = pub => pub.data.journal_name[0].text.slice(0, 1);
-const getCompareFunction = (tag) => {
+const getSortingFunction = (tag) => {
   if (tag === 'SORT_DATE') return getYear;
   if (tag === 'SORT_NAME') return getTitleFirstletter;
   return getJournalFirstLetter;
@@ -32,7 +32,7 @@ const PubWithCategory = ({ pub, search, category }) => (
 
 
 const SortedPubs = ({ pubs, search, tag }) => {
-  const compare = getCompareFunction(tag);
+  const sortingFeature = getSortingFunction(tag);
   return (
     <Fragment>
       {pubs.length > 0 && pubs.map((pub, index, pubsArr) => {
@@ -42,17 +42,17 @@ const SortedPubs = ({ pubs, search, tag }) => {
               pub={pub}
               search={search}
               key={pub.id}
-              category={compare(pub)}
+              category={sortingFeature(pub)}
             />
           );
         }
-        if (compare(pub) !== compare(pubsArr[index - 1])) {
+        if (sortingFeature(pub) !== sortingFeature(pubsArr[index - 1])) {
           return (
             <PubWithCategory
               pub={pub}
               search={search}
               key={pub.id}
-              category={compare(pub)}
+              category={sortingFeature(pub)}
             />
           );
         }

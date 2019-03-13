@@ -18,7 +18,7 @@ import Select from 'react-select'
 
 // components
 import PubHead from '../components/publications/PubHead'
-import SortedPubs from '../components/publications/PubsSortedByDate'
+import SortedPubs from '../components/publications/SortedPubs'
 import FiltersRequest from '../components/publications/FiltersRequest'
 import { FilterTag } from '../components/shared/FilterTag'
 import {Loading} from '../components/shared/loading'
