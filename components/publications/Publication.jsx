@@ -67,8 +67,6 @@ const JournalName = styled.a`
     }
 `;
 
-const Volume = styled.div``;
-
 const Number = styled.div`
     margin-right: 0.5rem;
 `;
@@ -128,7 +126,11 @@ const Publication = (props) => {
   return (
     <Result search={!searchText}>
       <Authors>
-        {item.data.authors.map(author => <Author key={author.text}>{author.text}</Author>)}
+        {item.data.authors.map(author => (
+          <Author key={author.text + Math.random().toString(36)}>
+            {author.text}
+          </Author>
+        ))}
       </Authors>
       <Title
         href={item.data.eprint[0]
@@ -166,14 +168,15 @@ const Publication = (props) => {
         </JournalName>
         {item.data.volume
         && (
-        <Volume>
+        <div>
           №&nbsp;
           {item.data.volume}
-        </Volume>
+        </div>
         )
         }
         <Number>
-          {item.data.number ? `(${item.data.number}),` : ', '}
+          {item.data.number && `(${item.data.number})`}
+          {(item.data.article_number > 0 || item.data.pages.length > 0) && (',')}
         </Number>
         {item.data.article_number
         && (
@@ -181,6 +184,7 @@ const Publication = (props) => {
           article №
           {' '}
           {item.data.article_number}
+          {item.data.pages.length > 0 && (',')}
         </Article>
         )
         }
@@ -220,7 +224,7 @@ const Publication = (props) => {
 
 Publication.propTypes = {
   item: PropTypes.shape({
-    data: PropTypes.arrayOf(PropTypes.shape({
+    data: PropTypes.shape({
       article_number: PropTypes.number,
       authors: PropTypes.arrayOf(PropTypes.shape({
         text: PropTypes.string,
@@ -228,11 +232,11 @@ Publication.propTypes = {
       belongs_to_group: PropTypes.arrayOf(PropTypes.shape({
         sci_group: PropTypes.shape({
           id: PropTypes.string,
-          data: PropTypes.arrayOf(PropTypes.shape({
+          data: PropTypes.shape({
             groupname: PropTypes.arrayOf(PropTypes.shape({
               text: PropTypes.string,
             })),
-          })),
+          }),
         }),
       })),
       date: PropTypes.string,
@@ -256,7 +260,7 @@ Publication.propTypes = {
         text: PropTypes.string,
       })),
       volume: PropTypes.number,
-    })),
+    }),
     id: PropTypes.string,
     lang: PropTypes.string,
     type: PropTypes.string,
