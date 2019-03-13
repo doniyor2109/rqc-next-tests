@@ -185,6 +185,13 @@
   margin-top: 7rem;
   background: #F7F9FB;
 
+  .img_wrapper {
+    img {
+      height: auto;
+      max-width: 17rem;
+    }
+  }
+
   .large {
     height: 22rem;
     padding: 0 3rem;
@@ -198,11 +205,6 @@
         margin-top: 2rem;
       }
     }
-    &.femto {
-      .img_wrapper {
-        margin-top: 2rem;
-      }
-    }
   }
   .small {
     height: 35rem;
@@ -211,9 +213,7 @@
     &.granat {
       .img_wrapper {
         margin-top: 7rem;
- 
       }
-
     }
 
     &.qrate {
