@@ -18,9 +18,7 @@ import Select from 'react-select'
 
 // components
 import PubHead from '../components/publications/PubHead'
-import PubsSortedByTitle from '../components/publications/PubsSortedByTitle'
-import PubsSortedByDate from '../components/publications/PubsSortedByDate'
-import PubsSortedByJournal from '../components/publications/PubsSortedByJournal'
+import SortedPubs from '../components/publications/PubsSortedByDate'
 import FiltersRequest from '../components/publications/FiltersRequest'
 import { FilterTag } from '../components/shared/FilterTag'
 import {Loading} from '../components/shared/loading'
@@ -106,6 +104,8 @@ class Publications extends Component {
 
         // console.log("publications", this.props)
         // console.log("group select", this.groupSelect)
+        const { foundPubs } = this.props.publications.search
+        const { searchIsActive: active } = this.state.searchIsActive
 
         return (
             <Fragment>
@@ -224,18 +224,14 @@ class Publications extends Component {
                             <div className="column is-12-tablet is-8-desktop is-offset-2-desktop ">
                                 <div className="publications">
                                     {!this.props.publications.isFetchingPubs && 
-                                        (this.state.activeTag === "SORT_DATE"
-                                        ? <PubsSortedByDate pubs={this.state.searchIsActive ? this.props.publications.search : this.state.pubs} 
-                                                            search={this.state.searchIsActive && this.state.pubsearch}/>
-                                        : (this.state.activeTag === "SORT_NAME" 
-                                            ? <PubsSortedByTitle pubs={this.state.searchIsActive ? this.props.publications.search : this.state.pubs}  
-                                                                 search={this.state.searchIsActive && this.state.pubsearch}/>
-                                            : <PubsSortedByJournal pubs={this.state.searchIsActive ? this.props.publications.search : this.state.pubs}  
-                                                                   search={this.state.searchIsActive && this.state.pubsearch}/>
-                                        )
+                                        (
+                                        <SortedPubs 
+                                            pubs={active ? foundPubs : this.state.pubs}
+                                            search={active && this.state.pubsearch}
+                                            tag={this.state.activeTag}
+                                        />
                                         )
                                     }
-
                                     {/* если нет публикаций */}
                                     {!this.props.publications.isFetchingPubs && this.state.pubs.length === 0 
                                     &&  <div className="no_pubs">

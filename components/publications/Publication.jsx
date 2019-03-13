@@ -4,7 +4,7 @@ import { Link, Date } from 'prismic-reactjs';
 import styled from 'styled-components';
 import moment from 'moment';
 import PrismicConfig from '../../prismic-configuration';
-
+import { simpleSearch } from '../search/searchComplex';
 
 // STYLES
 
@@ -102,28 +102,10 @@ const HR = styled.hr`
     background: rgba(4,3,3,0.5);
 `;
 
-// HELPER
-
-const simpleSearch = (data, searchText) => {
-  // функция четкого поиска по заданной строке
-  // ищет точные совпадения c помощью indexOf()
-
-  const pos = data.text.toLowerCase().indexOf(searchText.toLowerCase());
-
-  if (pos !== -1) {
-    const str = data.text.slice(pos, pos + searchText.length);
-    const textBeforesearch = data.text.slice((pos - 100) < 0 ? 0 : (data.text.indexOf(' ', pos - 100)) + 1, pos);
-    const textAftersearch = data.text.slice(pos + searchText.length, data.text.lastIndexOf(' ', pos + 100));
-
-    return [textAftersearch, str, textBeforesearch];
-  }
-  return false;
-};
-
 const Publication = (props) => {
   const { item, searchText, searchPage } = props;
-  const resultInTitle = searchText && simpleSearch(item.data.title[0], searchText);
-  const resultInJournal = searchText && simpleSearch(item.data.journal_name[0], searchText);
+  const resultInTitle = searchText && simpleSearch(item.data.title[0], searchText, false);
+  const resultInJournal = searchText && simpleSearch(item.data.journal_name[0], searchText, false);
 
   return (
     <Result search={!searchText}>
