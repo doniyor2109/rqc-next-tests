@@ -8,7 +8,6 @@
 // то приходится загружать все публикации сразу, это делается через рекурсию в redux actions creators 
 // Не факт, что это лучший способ, но он как минимум позволяет избежать лишнего рендеринга при вызове API
 
-
 // core dependencies
 import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
@@ -104,25 +103,26 @@ class Publications extends Component {
 
         console.log("publications", this.props)
         const { searchIsActive: active, activeTag, pubsearch, selectedGroupName, selectedAuthor } = this.state
+        const { t } = this.context
 
         return (
             <Fragment>
-                <PubHead fb_locale={this.props.fb_locale} />
+                <PubHead fbLocale={this.props.fb_locale} />
                 <div className="pubspage">
                     <div className="container">
                         <h1 className="page-main-heading">
-                            {this.context.t("Публикации")}
+                            {t("Публикации")}
                         </h1>
                     </div>
                     <section className="settings">
                         <div className="container">
-                            <h5>{this.context.t("Фильтры и поиск")}:</h5>
+                            <h5>{t("Фильтры и поиск")}:</h5>
                             <div className="columns is-multiline">
                                 <div className="column is-7-desktop is-7-tablet is-12-mobile">
                                     <div className="columns is-multiline">
                                         <div className="column is-7-desktop is-12-tablet">
                                             <div className="select_wrapper">
-                                                <p className="name">{this.context.t("Научная группа")}:</p>
+                                                <p className="name">{t("Научная группа")}:</p>
                                                 <Select onChange={this.handleGroupSelect} 
                                                         options={this.state.groupsName.map(group => 
                                                                 ({ label: group, value: group })
@@ -130,7 +130,7 @@ class Publications extends Component {
                                                         instanceId="groupselect"
                                                         className='group-select-container'
                                                         classNamePrefix="select"
-                                                        placeholder={this.context.t("Введите название")}
+                                                        placeholder={t("Введите название")}
                                                         isLoading={this.props.scigroups.isFetching}
                                                         isDisabled={this.props.scigroups.isFetching}
                                                         ref={c => (this.groupSelect = c)}
@@ -139,7 +139,7 @@ class Publications extends Component {
                                         </div>
                                         <div className="column is-5-desktop is-12-tablet">
                                             <div className="select_wrapper">
-                                                <p className="name">{this.context.t("Автор")}:</p>
+                                                <p className="name">{t("Автор")}:</p>
                                                 <Select onChange={this.handleAuthorsSelect} 
                                                         options={this.state.authors.map(author => 
                                                                 ({ label: author, value: author })
@@ -147,7 +147,7 @@ class Publications extends Component {
                                                         instanceId="authorselect"
                                                         className='author-select-container'
                                                         classNamePrefix="select"
-                                                        placeholder={this.context.t("Введите имя")}
+                                                        placeholder={t("Введите имя")}
                                                         isLoading={this.props.publications.isFetchingPubs}
                                                         isDisabled={this.props.publications.isFetchingPubs}
                                                         ref={c => (this.authorSelect = c)}
@@ -167,26 +167,26 @@ class Publications extends Component {
                                             name="search" 
                                             value={pubsearch}
                                             onChange={e => this.searchChange(e)}
-                                            placeholder={this.context.t("Ваш запрос")}
+                                            placeholder={t("Ваш запрос")}
                                         />
                                         <button type="submit" id="input-submit-button"></button>
                                     </form>
                                 </div>
                             </div>
-                            <h5 className="sort">{this.context.t("Сортировать по")}:</h5>
+                            <h5 className="sort">{t("Сортировать по")}:</h5>
                             <div className="columns">
                                 <div className="column is-12">
                                         <FilterTag onClick={e => {this.selectTag(e, "SORT_DATE")}}
                                                     active={activeTag === "SORT_DATE" ? true : false}>
-                                        {this.context.t("Дате выхода")}
+                                        {t("Дате выхода")}
                                         </FilterTag>
                                         <FilterTag onClick={e => {this.selectTag(e, "SORT_NAME")}}
                                                     active={activeTag === "SORT_NAME" ? true : false}>
-                                        {this.context.t("Названию публикации")}
+                                        {t("Названию публикации")}
                                         </FilterTag>
                                         <FilterTag onClick={e => {this.selectTag(e, "SORT_JOURNAL")}}
                                                     active={activeTag === "SORT_JOURNAL" ? true : false}>
-                                        {this.context.t("Названию издания")}
+                                        {t("Названию издания")}
                                         </FilterTag>
                                 </div>
                             </div>
@@ -234,13 +234,13 @@ class Publications extends Component {
                                     {!this.props.publications.isFetchingPubs && this.state.pubs.length === 0 
                                     &&  <div className="no_pubs">
                                             <p>
-                                                {this.context.t("По вашему запросу не найдено ни одной публикации")}
+                                                {t("По вашему запросу не найдено ни одной публикации")}
                                             </p>
-                                            {this.context.t("Посмотрите список ")}
+                                            {t("Посмотрите список ")}
                                             <a onClick={e => this.resetAll(e)}>
-                                                {this.context.t("всех публикаций")}
+                                                {t("всех публикаций")}
                                             </a>
-                                            {this.context.t(" или используйте фильтры для выбора публикаций определенного автора или научной группы")}
+                                            {t(" или используйте фильтры для выбора публикаций определенного автора или научной группы")}
                                         </div> 
                                     }
                                 </div>

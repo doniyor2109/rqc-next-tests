@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Publication from './Publication';
 
@@ -29,6 +30,24 @@ const PubWithCategory = ({ pub, search, category }) => (
     <Publication item={pub} searchText={search} />
   </Fragment>
 );
+
+const pubType = (props, propName, componentName) => {
+  const value = props[propName];
+  if (typeof value === 'object' && value.type === 'publication') {
+    return null;
+  }
+  return new TypeError(`Invalid Publication Prop Value: ${value} for ${propName} in ${componentName}`);
+};
+
+PubWithCategory.propTypes = {
+  search: PropTypes.string,
+  category: PropTypes.string.isRequired,
+  pub: pubType.isRequired,
+};
+
+PubWithCategory.defaultProps = {
+  search: '',
+};
 
 
 const SortedPubs = ({ pubs, search, tag }) => {
@@ -66,6 +85,17 @@ const SortedPubs = ({ pubs, search, tag }) => {
       })}
     </Fragment>
   );
+};
+
+
+SortedPubs.propTypes = {
+  search: PropTypes.string,
+  tag: PropTypes.string.isRequired,
+  pubs: PropTypes.arrayOf(pubType).isRequired,
+};
+
+SortedPubs.defaultProps = {
+  search: '',
 };
 
 export default SortedPubs;

@@ -101,29 +101,6 @@
 
         }
     }
-    
-    .filters {
-        .group-author {
-            margin-bottom:3rem;
-
-            .description {
-                font-size: 1.4rem;
-                line-height: 3rem;
-                margin-right: 1rem;
-            }
-            .filter-name {
-                font-size: 2.2rem;
-                line-height: 3rem;
-                font-weight: bold;
-                color:#040303;
-            }
-            img {
-                margin-right: 2.6rem;
-                top: -1rem;
-                position: relative;
-            }
-        }
-    }
 
     .publications {
 
@@ -172,12 +149,6 @@
             }
 
         }  
-
-        .filters {
-            .group-author {
-                width: 113%;
-            }
-        }
     }
  
 }
