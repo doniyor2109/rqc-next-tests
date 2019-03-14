@@ -35,7 +35,7 @@ const SortedPubs = ({ pubs, search, tag }) => {
   const sortingFeature = getSortingFunction(tag);
   return (
     <Fragment>
-      {pubs.length > 0 && pubs.map((pub, index, pubsArr) => {
+      {pubs.map((pub, index, pubsArr) => {
         if (index === 0) {
           return (
             <PubWithCategory

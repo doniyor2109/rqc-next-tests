@@ -102,10 +102,8 @@ class Publications extends Component {
 
     render() {
 
-        // console.log("publications", this.props)
-        // console.log("group select", this.groupSelect)
-        const { foundPubs } = this.props.publications.search
-        const { searchIsActive: active } = this.state.searchIsActive
+        console.log("publications", this.props)
+        const { searchIsActive: active, activeTag, pubsearch, selectedGroupName, selectedAuthor } = this.state
 
         return (
             <Fragment>
@@ -167,7 +165,7 @@ class Publications extends Component {
                                         <input type="search" 
                                             id="input-search" 
                                             name="search" 
-                                            value={this.state.pubsearch}
+                                            value={pubsearch}
                                             onChange={e => this.searchChange(e)}
                                             placeholder={this.context.t("Ваш запрос")}
                                         />
@@ -179,15 +177,15 @@ class Publications extends Component {
                             <div className="columns">
                                 <div className="column is-12">
                                         <FilterTag onClick={e => {this.selectTag(e, "SORT_DATE")}}
-                                                    active={this.state.activeTag === "SORT_DATE" ? true : false}>
+                                                    active={activeTag === "SORT_DATE" ? true : false}>
                                         {this.context.t("Дате выхода")}
                                         </FilterTag>
                                         <FilterTag onClick={e => {this.selectTag(e, "SORT_NAME")}}
-                                                    active={this.state.activeTag === "SORT_NAME" ? true : false}>
+                                                    active={activeTag === "SORT_NAME" ? true : false}>
                                         {this.context.t("Названию публикации")}
                                         </FilterTag>
                                         <FilterTag onClick={e => {this.selectTag(e, "SORT_JOURNAL")}}
-                                                    active={this.state.activeTag === "SORT_JOURNAL" ? true : false}>
+                                                    active={activeTag === "SORT_JOURNAL" ? true : false}>
                                         {this.context.t("Названию издания")}
                                         </FilterTag>
                                 </div>
@@ -203,9 +201,9 @@ class Publications extends Component {
                             &&
                             <div className="columns">
                                 <div className="column is-12-tablet is-8-desktop is-offset-2-desktop">
-                                    <FiltersRequest selectedGroupName={this.state.selectedGroupName}
-                                                    selectedAuthor={this.state.selectedAuthor}
-                                                    pubsearch={this.state.pubsearch}
+                                    <FiltersRequest selectedGroupName={selectedGroupName}
+                                                    selectedAuthor={selectedAuthor}
+                                                    pubsearch={active && pubsearch}
                                                     resetAuthor={this.resetAuthor}    
                                                     resetGroup={this.resetGroup}                                
                                                     resetSearch={this.resetSearch}                                
@@ -226,9 +224,9 @@ class Publications extends Component {
                                     {!this.props.publications.isFetchingPubs && 
                                         (
                                         <SortedPubs 
-                                            pubs={active ? foundPubs : this.state.pubs}
-                                            search={active && this.state.pubsearch}
-                                            tag={this.state.activeTag}
+                                            pubs={active ? this.props.publications.search : this.state.pubs}
+                                            search={active && pubsearch}
+                                            tag={activeTag}
                                         />
                                         )
                                     }
@@ -307,11 +305,9 @@ class Publications extends Component {
 
     // сброс всех селектов и поиска
     resetAll = (e) => {
-        if (e) {
-            this.resetGroup(e)
-        } else this.resetGroup()
-        
+        this.resetGroup(e)
         this.resetAuthor(e)
+        this.resetSearch(e)
     }
 
     // cброс селекта научной группы
@@ -347,7 +343,6 @@ class Publications extends Component {
     resetSearch = (e) => {
         if (e) {
             e.preventDefault()
-            this.props.fetchPublications(this.props.lang, 100, this.state.pageNumber,  this.state.activeTag, [] )
         }        
         this.setState({
             pubsearch: "",
