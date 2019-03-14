@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, Date } from 'prismic-reactjs';
+import { Link } from 'prismic-reactjs';
 import styled from 'styled-components';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import PrismicConfig from '../../prismic-configuration';
 import { simpleSearch } from '../search/searchComplex';
 
@@ -143,7 +143,7 @@ const Publication = (props) => {
         <JournalName href={Link.url(item.data.journal_url, PrismicConfig.linkResolver)}>
           {resultInJournal
             ? resultInJournal.map((res, index) => (
-              <span key={res} className={index === 1 ? 'bold' : undefined}>
+              <span key={Math.random().toString(36)} className={index === 1 ? 'bold' : undefined}>
                 {res}
               </span>
             ))
@@ -195,9 +195,7 @@ const Publication = (props) => {
       {item.data.date
       && (
       <PubDate>
-        { `${moment(Date(item.data.date)).format('DD')} ${
-          moment(Date(item.data.date)).format('MMMM')} ${
-          moment(Date(item.data.date)).format('YYYY')}`}
+        {dayjs(item.data.date).format('DD MMMM YYYY')}
       </PubDate>
       )
       }
