@@ -26,6 +26,9 @@ const FilterTag = styled.div`
   }
   button {
     border:0;
+    :focus {
+      outline:0;
+    }
   }
 `;
 
@@ -33,29 +36,38 @@ const FiltersName = ({
   selectedGroupName,
   selectedAuthor,
   pubsearch,
+  searchIsActive,
   resetAuthor,
   resetGroup,
   resetSearch,
 }, { t }) => (
-  <div className="filters">
-    {pubsearch
-      ? (
-        <FilterTag>
-          <span className="description">
-            {t('Результаты по запросу')}
+  <Fragment>
+
+    {(selectedGroupName.length > 0
+    || selectedAuthor.length > 0
+    || (searchIsActive && pubsearch.length) > 0)
+    && (
+    <div className="columns">
+      <div className="column is-12-tablet is-8-desktop is-offset-2-desktop">
+        <div className="filters">
+          {pubsearch
+            ? (
+              <FilterTag>
+                <span className="description">
+                  {t('Результаты по запросу')}
               :
-          </span>
-          <span className="filter-name">
-            {pubsearch}
-          </span>
-          <button type="button" onClick={(e) => { resetSearch(e); }}>
-            <img src="/static/resetFilers.svg" alt="reset filters" />
-          </button>
-        </FilterTag>
-      )
-      : (
-        <FilterTag>
-          {selectedGroupName
+                </span>
+                <span className="filter-name">
+                  {pubsearch}
+                </span>
+                <button type="button" onClick={(e) => { resetSearch(e); }}>
+                  <img src="/static/resetFilers.svg" alt="reset filters" />
+                </button>
+              </FilterTag>
+            )
+            : (
+              <FilterTag>
+                {selectedGroupName
               && (
               <Fragment>
                 <span className="filter-name">
@@ -67,7 +79,7 @@ const FiltersName = ({
               </Fragment>
               )
           }
-          {selectedAuthor
+                {selectedAuthor
               && (
               <Fragment>
                 <span className="filter-name">
@@ -79,10 +91,15 @@ const FiltersName = ({
               </Fragment>
               )
           }
-        </FilterTag>
-      )
+              </FilterTag>
+            )
     }
-  </div>
+        </div>
+      </div>
+    </div>
+    )
+  }
+  </Fragment>
 );
 
 FiltersName.contextTypes = {
@@ -96,6 +113,7 @@ FiltersName.propTypes = {
   resetAuthor: PropTypes.func.isRequired,
   resetGroup: PropTypes.func.isRequired,
   resetSearch: PropTypes.func.isRequired,
+  searchIsActive: PropTypes.bool.isRequired,
 };
 
 FiltersName.defaultProps = {

@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 import Select from 'react-select';
 import memoize from 'memoize-one';
 
-import FilterTag from '../shared/FilterTag';
-import PubsList from './PubsList';
 import pubType from './PublicationPropTypes';
-
+import SortingFilters from './SortingFilters';
+import SortedPubs from './SortedPubs';
+import SearchForm from './SearchForm';
+import FiltersName from './FiltersName';
+import NoPubs from './NoPubs';
+import { Loading } from '../shared/loading'
 import { uniqArray } from './helpers';
 
 class PubsFilter extends React.Component {
@@ -22,11 +25,18 @@ class PubsFilter extends React.Component {
     this.resetGroup = this.resetGroup.bind(this);
     this.resetAuthor = this.resetAuthor.bind(this);
     this.filterPubsbyGroup = this.filterPubsbyGroup.bind(this);
+
+    this.authorSelect = React.createRef();
+    this.groupSelect = React.createRef();
+
+    // получаем список всех авторов из публикаций. Его нужно сформировать только один раз
+    // храним его в const конструктора, чтобы он не менялся при ререндеринге других компонентов
     const arrayofAuthorswithDuplicates = props.pubs.map(pub => pub.data.authors
       .map(author => author.text))
       .reduce((acc, val) => acc.concat(val));
     this.authors = uniqArray(arrayofAuthorswithDuplicates);
   }
+
 
   filterPubsbyGroup(group) {
     const { pubs } = this.props;
@@ -46,7 +56,6 @@ class PubsFilter extends React.Component {
 
   // обработка селекта авторов
   handleAuthorsSelect(author) {
-    console.log('author selected');
     const { resetSearch } = this.props;
     this.resetGroup();
     resetSearch();
@@ -71,8 +80,8 @@ class PubsFilter extends React.Component {
     this.setState({
       selectedGroupName: '',
     });
-    if (this.groupSelect.state.value !== null) {
-      this.groupSelect.state.value = null;
+    if (this.groupSelect.current.state.value !== null) {
+      this.groupSelect.current.state.value = null;
     }
   }
 
@@ -84,17 +93,18 @@ class PubsFilter extends React.Component {
     this.setState({
       selectedAuthor: '',
     });
-    if (this.authorSelect.state.value !== null) {
-      this.authorSelect.state.value = null;
+    if (this.authorSelect.current.state.value !== null) {
+      this.authorSelect.current.state.value = null;
     }
   }
 
-
   render() {
+    console.log('refs', this.authorSelect);
+
     const { t } = this.context;
     const {
       isFetchingGroups, isFetchingPubs, searchPubs, selectTag, activeTag,
-      pubsearch, searchIsActive, searchChange, resetSearch, groups, lang, pubs, searchSubmit
+      pubsearch, searchIsActive, searchChange, resetSearch, groups, lang, pubs, searchSubmit,
     } = this.props;
     const { selectedGroupName, selectedAuthor } = this.state;
 
@@ -134,7 +144,7 @@ class PubsFilter extends React.Component {
                         placeholder={t('Введите название')}
                         isLoading={isFetchingGroups}
                         isDisabled={isFetchingGroups}
-                        ref={c => (this.groupSelect = c)}
+                        ref={this.groupSelect}
                       />
                     </div>
                   </div>
@@ -151,7 +161,7 @@ class PubsFilter extends React.Component {
                         className="author-select-container"
                         classNamePrefix="select"
                         placeholder={t('Введите имя')}
-                        ref={c => (this.authorSelect = c)}
+                        ref={this.authorSelect}
                       />
                     </div>
                   </div>
@@ -160,63 +170,55 @@ class PubsFilter extends React.Component {
 
 
               {/* Поиск */}
-
               <div className="column is-4-desktop is-offset-1-desktop">
-                <form className="search_form" onSubmit={e => searchSubmit(e)}>
-                  <input
-                    type="search"
-                    id="input-search"
-                    name="search"
-                    value={pubsearch}
-                    onChange={e => searchChange(e)}
-                    placeholder={t('Ваш запрос')}
-                  />
-                  <button type="submit" id="input-submit-button" />
-                </form>
+                <SearchForm
+                  searchChange={searchChange}
+                  searchSubmit={searchSubmit}
+                  pubsearch={pubsearch}
+                />
               </div>
             </div>
-            <h5 className="sort">
-              {t('Сортировать по')}
-:
-            </h5>
-            <div className="columns">
-              <div className="column is-12">
-                <FilterTag
-                  onClick={(e) => { selectTag(e, 'SORT_DATE'); }}
-                  active={activeTag === 'SORT_DATE'}
-                >
-                  {t('Дате выхода')}
-                </FilterTag>
-                <FilterTag
-                  onClick={(e) => { selectTag(e, 'SORT_NAME'); }}
-                  active={activeTag === 'SORT_NAME'}
-                >
-                  {t('Названию публикации')}
-                </FilterTag>
-                <FilterTag
-                  onClick={(e) => { selectTag(e, 'SORT_JOURNAL'); }}
-                  active={activeTag === 'SORT_JOURNAL'}
-                >
-                  {t('Названию издания')}
-                </FilterTag>
-              </div>
-            </div>
+
+            {/* Фильтры сортировки по дате, имени, журналу */}
+            <SortingFilters selectTag={selectTag} activeTag={activeTag} />
+
           </div>
         </section>
-        <PubsList
-          pubs={searchIsActive ? searchPubs : filteredPubs}
-          selectedGroupName={selectedGroupName}
-          selectedAuthor={selectedAuthor}
-          resetAll={this.resetAll}
-          resetAuthor={this.resetAuthor}
-          resetGroup={this.resetGroup}
-          resetSearch={resetSearch}
-          isFetchingPubs={isFetchingPubs}
-          activeTag={activeTag}
-          searchPubs={searchPubs}
-          pubsearch={pubsearch}
-          searchIsActive={searchIsActive}
-        />
+
+        <div className="container">
+
+          <FiltersName
+            selectedGroupName={selectedGroupName}
+            selectedAuthor={selectedAuthor}
+            pubsearch={searchIsActive ? pubsearch : ''}
+            resetAuthor={this.resetAuthor}
+            resetGroup={this.resetGroup}
+            resetSearch={resetSearch}
+            searchIsActive={searchIsActive}
+          />
+
+          <div className="columns">
+            <div className="column is-12-tablet is-8-desktop is-offset-2-desktop">
+
+              {isFetchingPubs && <Loading /> }
+
+              {/* список публикаций с сортировкой */}
+              {!isFetchingPubs
+              && (
+              <SortedPubs
+                pubs={searchIsActive ? searchPubs : filteredPubs}
+                searchRequest={searchIsActive ? pubsearch : ''}
+                tag={activeTag}
+              />
+              )
+                                          }
+              {/* если нет публикаций */}
+              {!isFetchingPubs && pubs.length === 0
+                && <NoPubs resetAll={this.resetAll} />
+                }
+            </div>
+          </div>
+        </div>
       </Fragment>
     );
   }
@@ -242,6 +244,12 @@ PubsFilter.propTypes = {
   isFetchingGroups: PropTypes.bool.isRequired,
   pubs: PropTypes.arrayOf(pubType).isRequired,
   searchPubs: PropTypes.arrayOf(pubType).isRequired,
+  searchIsActive: PropTypes.bool.isRequired,
+  pubsearch: PropTypes.string.isRequired,
+  searchChange: PropTypes.func.isRequired,
+  searchSubmit: PropTypes.func.isRequired,
+  resetSearch: PropTypes.func.isRequired,
+
 };
 
 PubsFilter.defaultProps = {

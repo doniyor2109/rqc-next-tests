@@ -122,8 +122,6 @@ class Publications extends Component {
       fetchPublications, searchPublication, lang, fb_locale,
     } = this.props;
 
-    console.log('publications', this.props)
-
     return (
       <Fragment>
         <PubHead fbLocale={fb_locale} />
@@ -139,14 +137,17 @@ class Publications extends Component {
             <PubsFilter
               pubs={publications.pubs}
               searchPubs={publications.search}
+              groups={scigroups.groups}
+              isFetchingPubs={publications.isFetchingPubs}
+              isFetchingGroups={scigroups.isFetching}
+
+              // все это наверное  можно было  бы не передавать,
+              // если как то решить проблему со state, который нужен всем
               searchChange={this.searchChange}
               searchSubmit={this.searchSubmit}
               searchIsActive={searchIsActive}
               pubsearch={pubsearch}
               resetSearch={this.resetSearch}
-              groups={scigroups.groups}
-              isFetchingPubs={publications.isFetchingPubs}
-              isFetchingGroups={scigroups.isFetching}
               activeTag={activeTag}
               selectTag={this.selectTag}
               pageSize={pageSize}
