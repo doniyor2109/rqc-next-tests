@@ -17,6 +17,7 @@
     "bulma": "^0.7.1",
     "dayjs": "^1.8.10",
     "express": "latest",
+    "memoize-one": "^5.0.0",
     "mobile-detect": "^1.4.3",
     "moment": "^2.22.2",
     "natural": "^0.6.2",

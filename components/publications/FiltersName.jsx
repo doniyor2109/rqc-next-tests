@@ -24,9 +24,12 @@ const FilterTag = styled.div`
       top: -1rem;
       position: relative;
   }
+  button {
+    border:0;
+  }
 `;
 
-const FiltersRequest = ({
+const FiltersName = ({
   selectedGroupName,
   selectedAuthor,
   pubsearch,
@@ -82,11 +85,11 @@ const FiltersRequest = ({
   </div>
 );
 
-FiltersRequest.contextTypes = {
+FiltersName.contextTypes = {
   t: PropTypes.func,
 };
 
-FiltersRequest.propTypes = {
+FiltersName.propTypes = {
   selectedGroupName: PropTypes.string,
   selectedAuthor: PropTypes.string,
   pubsearch: PropTypes.string,
@@ -95,11 +98,11 @@ FiltersRequest.propTypes = {
   resetSearch: PropTypes.func.isRequired,
 };
 
-FiltersRequest.defaultProps = {
+FiltersName.defaultProps = {
   selectedGroupName: '',
   selectedAuthor: '',
   pubsearch: '',
 };
 
 
-export default FiltersRequest;
+export default FiltersName;

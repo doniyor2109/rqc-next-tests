@@ -103,12 +103,12 @@ const HR = styled.hr`
 `;
 
 const Publication = (props) => {
-  const { item, searchText, searchPage } = props;
-  const resultInTitle = searchText && simpleSearch(item.data.title[0], searchText, false);
-  const resultInJournal = searchText && simpleSearch(item.data.journal_name[0], searchText, false);
+  const { item, searchRequest, searchPage } = props;
+  const resultInTitle = searchRequest && simpleSearch(item.data.title[0], searchRequest, false);
+  const resultInJournal = searchRequest && simpleSearch(item.data.journal_name[0], searchRequest, false);
 
   return (
-    <Result search={!searchText}>
+    <Result search={!searchRequest}>
       <Authors>
         {item.data.authors.map(author => (
           <Author key={author.text + Math.random().toString(36)}>
@@ -124,7 +124,7 @@ const Publication = (props) => {
         rel="noopener noreferer"
         className="title-link"
         highlighted={!!resultInTitle}
-        search={!searchText}
+        search={!searchRequest}
         big={!searchPage}
       >
         <h1>
@@ -247,12 +247,12 @@ Publication.propTypes = {
     lang: PropTypes.string,
     type: PropTypes.string,
   }).isRequired,
-  searchText: PropTypes.string,
+  searchRequest: PropTypes.string,
   searchPage: PropTypes.bool,
 };
 
 Publication.defaultProps = {
-  searchText: '',
+  searchRequest: '',
   searchPage: false,
 };
 

@@ -2,9 +2,9 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Publication from './Publication';
+import pubType from './PublicationPropTypes';
 
 // STYLES
-
 const Category = styled.h2`
     font-size: 2.2rem;
     line-height: 3rem;
@@ -13,6 +13,8 @@ const Category = styled.h2`
     color: #040303;
 `;
 
+// вспомогательные функции. Нужны для определения категорий
+// и для сравнения публикаций из массива по этим категориям
 const getYear = pub => pub.data.date.slice(0, 4);
 const getTitleFirstletter = pub => pub.data.title[0].text.slice(0, 1);
 const getJournalFirstLetter = pub => pub.data.journal_name[0].text.slice(0, 1);
@@ -22,35 +24,29 @@ const getSortingFunction = (tag) => {
   return getJournalFirstLetter;
 };
 
-const PubWithCategory = ({ pub, search, category }) => (
+// Вспомогательный компонент, в котором перед публикацией идет категория
+const PubWithCategory = ({ pub, searchRequest, category }) => (
   <Fragment>
     <Category>
       {category}
     </Category>
-    <Publication item={pub} searchText={search} />
+    <Publication item={pub} searchRequest={searchRequest} />
   </Fragment>
 );
 
-const pubType = (props, propName, componentName) => {
-  const value = props[propName];
-  if (typeof value === 'object' && value.type === 'publication') {
-    return null;
-  }
-  return new TypeError(`Invalid Publication Prop Value: ${value} for ${propName} in ${componentName}`);
-};
-
 PubWithCategory.propTypes = {
-  search: PropTypes.string,
+  searchRequest: PropTypes.string,
   category: PropTypes.string.isRequired,
   pub: pubType.isRequired,
 };
 
 PubWithCategory.defaultProps = {
-  search: '',
+  searchRequest: '',
 };
 
-
-const SortedPubs = ({ pubs, search, tag }) => {
+// Основной компонент, в котором происходит сортировка pubs
+// в зависимости от тэга сортировки tag
+const SortedPubs = ({ pubs, searchRequest, tag }) => {
   const sortingFeature = getSortingFunction(tag);
   return (
     <Fragment>
@@ -59,7 +55,7 @@ const SortedPubs = ({ pubs, search, tag }) => {
           return (
             <PubWithCategory
               pub={pub}
-              search={search}
+              searchRequest={searchRequest}
               key={pub.id}
               category={sortingFeature(pub)}
             />
@@ -69,7 +65,7 @@ const SortedPubs = ({ pubs, search, tag }) => {
           return (
             <PubWithCategory
               pub={pub}
-              search={search}
+              searchRequest={searchRequest}
               key={pub.id}
               category={sortingFeature(pub)}
             />
@@ -78,7 +74,7 @@ const SortedPubs = ({ pubs, search, tag }) => {
         return (
           <Publication
             item={pub}
-            searchText={search}
+            searchRequest={searchRequest}
             key={pub.id}
           />
         );
@@ -87,15 +83,15 @@ const SortedPubs = ({ pubs, search, tag }) => {
   );
 };
 
-
+// propTypes для основного компонента
 SortedPubs.propTypes = {
-  search: PropTypes.string,
+  searchRequest: PropTypes.string,
   tag: PropTypes.string.isRequired,
   pubs: PropTypes.arrayOf(pubType).isRequired,
 };
 
 SortedPubs.defaultProps = {
-  search: '',
+  searchRequest: '',
 };
 
 export default SortedPubs;

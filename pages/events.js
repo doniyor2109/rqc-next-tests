@@ -12,7 +12,7 @@ import * as eventsbyTagActions from '../redux/actions/eventsbyTag'
 import GridViewDesktop from '../components/events/GridViewDesktop'
 import GridViewTablet from '../components/events/GridViewTablet'
 import GridViewMobile from '../components/events/GridViewMobile'
-import { FilterTag } from '../components/shared/FilterTag'
+import FilterTag from '../components/shared/FilterTag'
 import MoreNews from '../components/events/MoreNews'
 import hostName from '../host'
 
