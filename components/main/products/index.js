@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {ArrowButton} from '../shared/ArrowButton'
+import {ArrowButton} from '../../shared/ArrowButton'
 
 const Products = (props, context) => (
     <section className="products" id="products">

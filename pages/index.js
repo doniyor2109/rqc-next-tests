@@ -4,7 +4,6 @@ import { bindActionCreators } from 'redux'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 import Media from 'react-media'
-import Head from 'next/head'
 import cookies from 'next-cookies'
 
 import * as mainActions from '../redux/actions/main'
@@ -17,18 +16,17 @@ import {fetchMainRequest,
         fetchMainFailure} from '../redux/actions/main'
 
 import { NewscardSmall } from '../components/news/NewscardSmall.js'
-import MainSlider from '../components/sliders/MainSlider'
-import SciSlider from '../components/sliders/SciSlider'
+import MainSlider from '../components/main/MainSlider'
+import SciSlider from '../components/main/SciSlider'
 import {Loading} from '../components/shared/loading'
 import OldSite from '../components/oldSite.js'
-import Products from '../components/products/index'
+import Products from '../components/main/products/'
 import {CardLarge} from '../components/events/CardLarge'
 import {CardSmall} from '../components/events/CardSmall'
+import MainHead from '../components/main/MainHead'
 
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../prismic-configuration';
-import hostName from '../host'
-
 
 class Index extends React.Component {
 
@@ -91,35 +89,15 @@ class Index extends React.Component {
 
   render() {
 
-    const { phone, tablet, news, main } = this.props
+    const { phone, tablet, news, main, fb_locale } = this.props
     const { sciSlider, isFetchingMain, isFetchingSci } = this.props.main
 
-    console.log("main", this.props)
+    // console.log("main", this.props)
     if (!this.state.DOMLoaded) return <Loading />
     else 
     return (
       <Fragment>
-        <Head>
-          <title>{this.context.t("Российский Квантовый Центр – главная")}</title>
-          <meta property="og:url"                content={hostName} />
-          <meta property="og:type"               content="article" />
-          <meta property="og:image"              content={hostName +  "/static/RQClogo_black_ru.svg"} />
-          <meta property="og:locale:alternate" content="en_US" />
-        {(typeof fb_locale === 'undefined' || this.props.fb_locale === "ru_RU") && 
-          <Fragment>
-              <meta property="og:locale" content="ru_RU" />
-              <meta property="og:title"              content="Российский Квантовый Центр – главная" />
-              <meta property="og:description"        content="Добро пожаловать на официальный сайт Российского Квантового Центра!" />
-          </Fragment>
-        }
-        {this.props.fb_locale === "en_US" && 
-          <Fragment>
-              <meta property="og:locale" content="en_US" />
-              <meta property="og:title"              content="Russian Quantum Center – home page" />
-              <meta property="og:description"        content="Welcome to the official website of the Russian Quantum Center!" />
-          </Fragment>
-        }
-        </Head>
+        <MainHead fb_locale={fb_locale} />
         <section className="main-slider">
           {main.data && <MainSlider slides={main.data.body}
                                           isLoading={isFetchingMain}
@@ -129,7 +107,6 @@ class Index extends React.Component {
         </section>
 
         <OldSite />
-
 
         <section className="news-teaser">
           <div className="container">
