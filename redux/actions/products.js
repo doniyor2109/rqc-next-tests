@@ -3,19 +3,19 @@ import Prismic from 'prismic-javascript'
 import PrismicConfig from '../../prismic-configuration'
 // actions for quering API for multiple documents by type
 
-const fetchNewsRequest = () => ({ type: action_types.FETCH_NEWS_REQUEST })
+const fetchProductsRequest = () => ({ type: action_types.FETCH_PRODUCTS_REQUEST })
 
-const fetchNewsSuccess = (response) => ({ type: action_types.FETCH_NEWS_SUCCESS, response })
+const fetchProductsSuccess = (response) => ({ type: action_types.FETCH_PRODUCTS_SUCCESS, response })
 
-const fetchNewsFailure = (error) => ({ type: action_types.FETCH_NEWS_FAILURE, error })
+const fetchProductsFailure = (error) => ({ type: action_types.FETCH_PRODUCTS_FAILURE, error })
 
-export const fetchNews = (language, pageSize) => (dispatch) => {
-  dispatch(fetchNewsRequest());
+export const fetchProducts = (language) => (dispatch) => {
+  dispatch(fetchProductsRequest());
   return Prismic.getApi(PrismicConfig.apiEndpoint)
     .then(api => {api.query(Prismic.Predicates.at('document.type', 'product'),
                                                   { lang: language,
-                                                    orderings : '[my.product.manual_date_of_publication desc]' })
-                      .then(response => dispatch(fetchNewsSuccess(response)))
-                      .catch(error => dispatch(fetchNewsFailure(error)))
+                                                    orderings : '[my.product.orderings]' })
+                      .then(response => dispatch(fetchProductsSuccess(response)))
+                      .catch(error => dispatch(fetchProductsFailure(error)))
           })
 }

@@ -10,17 +10,22 @@ import * as mainActions from '../redux/actions/main'
 import * as langActions from '../redux/actions/lang'
 import * as eventsActions from '../redux/actions/events'
 import * as newsActions from '../redux/actions/news'
+import * as productsActions from '../redux/actions/products'
+
 
 import {fetchMainRequest, 
         fetchMainSuccess, 
         fetchMainFailure} from '../redux/actions/main'
 
-import { NewscardSmall } from '../components/news/NewscardSmall.js'
 import MainSlider from '../components/main/MainSlider'
 import SciSlider from '../components/main/SciSlider'
 import {Loading} from '../components/shared/loading'
 import OldSite from '../components/oldSite.js'
-import Products from '../components/main/products/'
+import Products from '../components/main/Products'
+import NewsTeaser from '../components/main/NewsTeaser'
+import Scientists from '../components/main/Scientists'
+
+
 import {CardLarge} from '../components/events/CardLarge'
 import {CardSmall} from '../components/events/CardSmall'
 import MainHead from '../components/main/MainHead'
@@ -62,38 +67,42 @@ class Index extends React.Component {
   }
 
   componentDidMount() {
+
+    const { fetchNews, fetchEvents, fetchMainSciSlider, fetchProducts, lang } = this.props
+    
     this.setState({
       DOMLoaded: true
     })
-    this.props.fetchEvents(this.props.lang, 2)
-    this.props.fetchNews(this.props.lang, 3) 
-    this.props.fetchMainSciSlider(this.props.lang)
+    fetchProducts(lang)
+    fetchMainSciSlider(lang)
+    fetchEvents(lang, 2)
+    fetchNews(lang, 3) 
   }
 
   componentDidUpdate(prevProps) {
 
-    if (this.props.lang !== prevProps.lang) {
-      this.setState({
-        events: []
-      })
-      if (this.props.lang === "en-gb"){
-        this.props.fetchMain('W3GV8SQAACQAZAwG', "en-gb")
+    const { fetchNews, fetchMain, fetchEvents, fetchMainSciSlider, fetchProducts, lang } = this.props
+
+    if (lang !== prevProps.lang) {
+      if (lang === "en-gb"){
+        fetchMain('W3GV8SQAACQAZAwG', "en-gb")
       } else if(this.props.lang === "ru") {
         this.props.fetchMain('W3GVDyQAACYAZAgb', "ru")
       }
-      this.props.fetchMainSciSlider(this.props.lang)
-      this.props.fetchEvents(this.props.lang, 2)
-      this.props.fetchNews(this.props.lang, 3) 
+      fetchProducts(lang)
+      fetchMainSciSlider(lang)
+      fetchEvents(lang, 2)
+      fetchNews(lang, 3) 
     }
   }
 
   render() {
-
-    const { phone, tablet, news, main, fb_locale } = this.props
+    const { DOMLoaded } = this.state
+    const { phone, tablet, news, main, fb_locale, products } = this.props
     const { sciSlider, isFetchingMain, isFetchingSci } = this.props.main
 
-    // console.log("main", this.props)
-    if (!this.state.DOMLoaded) return <Loading />
+    console.log("main", this.props)
+    if (!DOMLoaded) return <Loading />
     else 
     return (
       <Fragment>
@@ -108,44 +117,11 @@ class Index extends React.Component {
 
         <OldSite />
 
-        <section className="news-teaser">
-          <div className="container">
-            <Link href="/news">
-              <a className="main-category">
-                {this.context.t("Новости")}
-              </a>
-            </Link>
-            <Link href="/news">
-              <a className="main-category-link">
-                {this.context.t("смотреть все")}
-              </a>
-            </Link>
-            <div className="columns is-multiline">
+        <NewsTeaser articles={news.articles} phone={phone} tablet={tablet} />
 
-              {/* в зависимости от размера окна браузера мы рендерим разные верстки секции с тизерами новостей */}
-              {/* вариант смартфона и Ipad */}
-              {news.articles 
-              && <Media query="(max-width: 768px)"
-                        defaultMatches={tablet !== null}
-                        render={() => news.articles.slice(0,2).map((item, index) =>
-                                        <NewscardSmall columns="6" article={item} key={index} />)}
-                  />
-                
-              }
-              {/* вариант десктопа */}
-              {news.articles 
-              && <Media query="(min-width: 769px)"
-                        defaultMatches={phone === null && tablet === null}
-                        render={() => news.articles.map((item, index) =>
-                                        <NewscardSmall columns="4" article={item} key={index} />)}
-                  />
-                
-              }
-            </div>
-          </div>
-        </section>
+        <Products items={products.items}/>
 
-        <Products />
+        {/* <Scientists /> */}
 
         <section className="sci-slider">
           <div className="container">
@@ -229,9 +205,9 @@ class Index extends React.Component {
 }
 
 const mapStateToProps = state => {
-  const { main, events, news } = state
+  const { main, events, news, products } = state
   const { lang } = state.i18nState
-  return { main, lang, events, news }
+  return { main, lang, events, news, products }
 }
 
 const mapDispatchToProps = dispatch => {
@@ -239,7 +215,8 @@ const mapDispatchToProps = dispatch => {
       mainActions,
       langActions,
       eventsActions,
-      newsActions
+      newsActions,
+      productsActions
     ), dispatch);
   }
 
