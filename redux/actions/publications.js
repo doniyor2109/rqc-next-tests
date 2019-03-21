@@ -3,17 +3,21 @@ import * as action_types from './action_types.js';
 import PrismicConfig from '../../prismic-configuration';
 // actions for quering API for multiple documents by type
 
-const fetchPublicationsRequest = orderings => ({
+export const fetchPublicationsRequest = orderings => ({
   type: action_types.FETCH_PUBLICATIONS_REQUEST,
   orderings,
 });
 
-const fetchPublicationsSuccess = response => ({
-  type: action_types.FETCH_PUBLICATIONS_SUCCESS,
-  response,
-});
+export const fetchPublicationsSuccess = response => {
+  console.log("fetchPublicationsSuccess!", response.length)
+  return {
+    type: action_types.FETCH_PUBLICATIONS_SUCCESS,
+    response,
+  }
+}
+;
 
-const fetchPublicationsFailure = error => ({
+export const fetchPublicationsFailure = error => ({
   type: action_types.FETCH_PUBLICATIONS_FAILURE,
   error,
 });

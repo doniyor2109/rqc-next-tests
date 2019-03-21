@@ -17,20 +17,66 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import cookies from 'next-cookies';
 
 // components
+import Prismic from 'prismic-javascript';
 import PubHead from '../components/publications/PubHead';
 import PubsFilter from '../components/publications/PubsFilter';
 import pubType from '../components/publications/PublicationPropTypes';
 
+// prismic api
+import PrismicConfig from '../prismic-configuration';
+import {
+  fetchPublicationsRequest,
+  fetchPublicationsSuccess,
+  fetchPublicationsFailure,
+  fetchPublications,
+} from '../redux/actions/publications';
+
+
 // actions
 import * as groupsActions from '../redux/actions/scigroups';
-import * as publicationsActions from '../redux/actions/publications';
 import * as langActions from '../redux/actions/lang';
 
 
 // Основной компонент, связывающий весь интерфейс страницы /publications воедино
 class Publications extends Component {
+  static async getInitialProps(ctx) {
+    // получаем все необходимое для рендеринга компонента от сервера
+    const { reduxStore } = ctx;
+
+    // получаем настройки языка из кукис
+    const { language } = cookies(ctx);
+
+    // получаем  publications на сервере
+    async function fetchPubsServer(lang, pageSize, page, resultsAcc) {
+      reduxStore.dispatch(fetchPublicationsRequest('SORT_DATE'));
+      console.log("fetchPubsServer called")
+      const api = await Prismic.getApi(PrismicConfig.apiEndpoint);
+      const response = await api.query(Prismic.Predicates.at('document.type', 'publication'),
+        {
+          lang,
+          pageSize,
+          page,
+          orderings: '[my.publication.date desc]',
+          fetchLinks: ['science_group.groupname'],
+        })
+
+      const results = resultsAcc.concat(response.results);
+      
+      if (response.next_page !== null) {
+        fetchPubsServer(language, pageSize, page + 1, results);
+      } else {
+        return await reduxStore.dispatch(fetchPublicationsSuccess(results));
+      }
+    }
+
+    const pubsServer = fetchPubsServer(language, 100, 1, [])
+    console.log("pubsServer", pubsServer)
+    return {pubsServer};
+  }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -46,24 +92,24 @@ class Publications extends Component {
     this.searchSubmit = this.searchSubmit.bind(this);
   }
 
-  componentDidMount() {
-    const { pageSize, pageNumber, activeTag } = this.state;
-    const { lang, fetchPublications, fetchSciGroups } = this.props;
-    fetchPublications(lang, pageSize, pageNumber, activeTag, []);
-    fetchSciGroups(lang, 'groupname');
-  }
+  // componentDidMount() {
+  //   const { pageSize, pageNumber, activeTag } = this.state;
+  //   const { lang, fetchSciGroups } = this.props;
+  //   // fetchPublications(lang, pageSize, pageNumber, activeTag, []);
+  //   // fetchSciGrousps(lang, 'groupname');
+  // }
 
-  componentDidUpdate(prevProps) {
-    const { pageSize, pageNumber, activeTag } = this.state;
-    const { lang, fetchPublications, fetchSciGroups } = this.props;
-    // если меняется язык
-    if (lang !== prevProps.lang) {
-      // получаем снова публикации
-      fetchPublications(lang, pageSize, pageNumber, activeTag, []);
-      // и группы
-      fetchSciGroups(lang, 'groupname');
-    }
-  }
+  // componentDidUpdate(prevProps) {
+  //   const { pageSize, pageNumber, activeTag } = this.state;
+  //   const { lang, fetchSciGroups } = this.props;
+  //   // если меняется язык
+  //   if (lang !== prevProps.lang) {
+  //     // получаем снова публикации
+  //     fetchPublications(lang, pageSize, pageNumber, activeTag, []);
+  //     // и группы
+  //     fetchSciGroups(lang, 'groupname');
+  //   }
+  // }
 
   // поиск
   searchChange(e) {
@@ -113,6 +159,8 @@ class Publications extends Component {
   }
 
   render() {
+
+    console.log("RENDER COMPONENT publications", this.props)
     const { t } = this.context;
     const {
       activeTag, pageSize, pageNumber, searchIsActive, pubsearch,
@@ -124,7 +172,7 @@ class Publications extends Component {
 
     return (
       <Fragment>
-        <PubHead fbLocale={fb_locale} />
+        {/* <PubHead fbLocale={fb_locale} />
         <div className="pubspage">
           <div className="container">
             <h1 className="page-main-heading">
@@ -158,7 +206,7 @@ class Publications extends Component {
             />
             )}
           </div>
-        </div>
+        </div> */}
       </Fragment>
     );
   }
@@ -201,7 +249,6 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = dispatch => bindActionCreators(Object.assign({},
-  publicationsActions,
   groupsActions,
   langActions), dispatch);
 

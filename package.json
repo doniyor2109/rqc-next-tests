@@ -15,7 +15,7 @@
     "@zeit/next-typescript": "^1.1.1",
     "ajv": "^6.5.2",
     "bulma": "^0.7.1",
-    "dayjs": "^1.8.10",
+    "dayjs": "^1.8.11",
     "express": "latest",
     "memoize-one": "^5.0.0",
     "mobile-detect": "^1.4.3",
