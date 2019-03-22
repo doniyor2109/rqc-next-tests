@@ -130,7 +130,7 @@ const Publication = (props) => {
         <h1>
           {resultInTitle
             ? resultInTitle.map((res, index) => (
-              <span key={res} className={index === 1 ? 'bold' : undefined}>
+              <span key={res + Math.random().toString(36)} className={index === 1 ? 'bold' : undefined}>
                 {res}
               </span>
             ))

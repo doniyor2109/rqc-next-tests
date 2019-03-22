@@ -31,7 +31,7 @@ class Research extends React.Component {
     componentDidMount() {
         this.props.fetchSciGroups(this.props.lang)
         this.props.fetchResearchPage(this.props.lang)
-        this.props.fetchPublications(this.props.lang, 3, 1, "SORT_DATE")
+        this.props.fetchPublicationsforResearch(this.props.lang, 3)
 
     }
 
@@ -39,7 +39,7 @@ class Research extends React.Component {
         if (this.props.lang !== prevProps.lang) {
             this.props.fetchSciGroups(this.props.lang)
             this.props.fetchResearchPage(this.props.lang)
-            this.props.fetchPublications(this.props.lang, 3, 1, "SORT_DATE")
+            this.props.fetchPublicationsforResearch(this.props.lang, 3)
         }
     }
 

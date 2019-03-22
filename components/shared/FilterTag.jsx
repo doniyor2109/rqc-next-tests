@@ -31,7 +31,6 @@ const Tag = styled.button`
   @media screen and (max-width: 415px) {
     margin-right: 3rem;
   }
-  }
 `;
 
 const FilterTag = ({ active, children, onClick }) => (

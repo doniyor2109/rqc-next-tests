@@ -35,8 +35,7 @@ const FilterTag = styled.div`
 const FiltersName = ({
   selectedGroupName,
   selectedAuthor,
-  pubsearch,
-  searchIsActive,
+  searchRequest,
   resetAuthor,
   resetGroup,
   resetSearch,
@@ -45,12 +44,12 @@ const FiltersName = ({
 
     {(selectedGroupName.length > 0
     || selectedAuthor.length > 0
-    || (searchIsActive && pubsearch.length) > 0)
+    || (searchRequest.length) > 0)
     && (
     <div className="columns">
       <div className="column is-12-tablet is-8-desktop is-offset-2-desktop">
         <div className="filters">
-          {pubsearch
+          {searchRequest
             ? (
               <FilterTag>
                 <span className="description">
@@ -58,7 +57,7 @@ const FiltersName = ({
               :
                 </span>
                 <span className="filter-name">
-                  {pubsearch}
+                  {searchRequest}
                 </span>
                 <button type="button" onClick={(e) => { resetSearch(e); }}>
                   <img src="/static/resetFilers.svg" alt="reset filters" />
@@ -109,17 +108,16 @@ FiltersName.contextTypes = {
 FiltersName.propTypes = {
   selectedGroupName: PropTypes.string,
   selectedAuthor: PropTypes.string,
-  pubsearch: PropTypes.string,
+  searchRequest: PropTypes.string,
   resetAuthor: PropTypes.func.isRequired,
   resetGroup: PropTypes.func.isRequired,
   resetSearch: PropTypes.func.isRequired,
-  searchIsActive: PropTypes.bool.isRequired,
 };
 
 FiltersName.defaultProps = {
   selectedGroupName: '',
   selectedAuthor: '',
-  pubsearch: '',
+  searchRequest: '',
 };
 
 
