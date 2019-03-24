@@ -179,84 +179,6 @@
 }
 
 
-
-.products {
-  padding: 6rem 0 8rem;
-  margin-top: 7rem;
-  background: #F7F9FB;
-
-  .large {
-    height: 22rem;
-    padding: 0 3rem;
-
-    @media (min-width:416px) and (max-width: 1088px) {
-      height: 32rem;
-    }
-
-    &.detector {
-      .img_wrapper {
-        margin-top: 2rem;
-      }
-    }
-    &.femto {
-      .img_wrapper {
-        margin-top: 2rem;
-      }
-    }
-  }
-  .small {
-    height: 35rem;
-    padding: 3rem; 
-
-    &.granat {
-      .img_wrapper {
-        margin-top: 7rem;
- 
-      }
-
-    }
-
-    &.qrate {
-      .img_wrapper {
-        margin-top: 8rem;
- 
-      }
-    }
-
-    &.dephan {
-      .img_wrapper {
-        margin-top: 5rem;
-
-      }
-    }
-  }
-
-  .product {
-    background-color: white;
-    color: #040303;
-    position: relative;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-
-    p {
-      font-size: 2.2rem;
-      font-weight: bold;
-      line-height: 2.5rem;
-    }
-  }
-
-  .columns {
-    clear: both;
-  }
-
-  .img_wrapper {
-    margin-top: 1rem;
-    text-align: center;
-  }
-}
-
-
-
-
 @media (min-width:416px) and (max-width: 768px) {
 
   .sl {
@@ -297,30 +219,6 @@
     }
     p {
       margin-top: -0.5rem;
-    }
-  }
-
-  
-  .products {
-    margin-top: 12rem;
-  
-    .large {
-      height: 35rem;
-      padding: 3rem; 
-
-      p {
-        margin:0;
-      }
-    }
-    .large {
-      &.femto {
-        .img_wrapper {
-          margin-top: 2rem;
-          img {
-            width: 70%;
-          }
-        }
-      }
     }
   }
 }
@@ -394,41 +292,6 @@
     a {
       padding: 11px 20px;
       top: 0;
-    }
-  }
-  
-  .products {  
-    margin-top: 5rem;
-    .columns {
-      display: flex;
-      .column:nth-child(4) {
-        order: -1;
-      }
-    }
-    .large {
-      height: 35rem;
-      padding:3rem;
-      &.femto {
-        .img_wrapper {
-          margin-top: 2rem;
-          img {
-            width: 80%;
-          }
-        }
-      }
-      p {
-        margin: 0;
-      }
-      .columns {
-        display:block;
-      }
-    }
-    .small {
-      &.qrate {
-        .img_wrapper {
-          margin-top: 6rem;
-        }
-      }      
     }
   }
 }

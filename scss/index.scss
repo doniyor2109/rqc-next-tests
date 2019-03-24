@@ -145,34 +145,80 @@ html {
 .tags-for-search {
     display: block;
     margin: 3.5rem 0 9rem;
-  }
-  
-  .captions {
-    color: #040303;
-    margin-top: 6.5rem;
-    font-size: 1.6rem;
-  
-  }
-  
-  .more-news {
-    hr {
-      margin-top: 5rem;
-    }
-    .more{
-      margin: 1rem 0 0 0;
-    }
-  }
+}
 
-  .column.is-centered {
-    text-align: center;
+.tag-for-search {
+  font-size: 1.2rem;
+  padding: 0.4rem 1rem;
+  font-weight: 500;
+  display: inline;
+  margin-right: 3rem;
+  text-transform: uppercase;
+  color:#040303;
+  background-color: white;
+  font-family: "DIN Pro", serif;
+  border-color: rgba(4,3,3,0.5);
+  border-width: 1px;
+  cursor: pointer;
+  &:focus {
+    outline: 0;
   }
+  
+  &.is-active{
+    background: #3998D1;
+    color:white;
+    border-color: #3998D1;
+    border-width: 1px;
+    &:focus {
+      outline:0;
+    }
+  }
+}
+
+.captions {
+  color: #040303;
+  margin-top: 6.5rem;
+  font-size: 1.6rem;
+
+}
+
+.more-news {
+  hr {
+    margin-top: 5rem;
+  }
+  .more{
+    margin: 1rem 0 0 0;
+  }
+}
+
+.column.is-centered {
+  text-align: center;
+}
+
+.container {
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+    width: 1140px;
+  }
+  @media (max-width: 1088px) {
+    max-width: 90%;
+    width: 90%;
+  }
+  @media screen and (max-width: 768px) {
+    max-width: 690px;
+    width: 690px;
+  }
+  @media screen and (max-width: 415px) {
+    max-width: 100%;
+    width: auto;
+    padding: 0 3rem;
+  }
+}
+
 
 
 @media screen and (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-        width: 1140px;
-    }
+
     .columns.desktop {
         display: flex;
     }
@@ -181,30 +227,8 @@ html {
     }
 }
 
-@media (max-width: 960px) {
-
-  .container {
-    max-width: 690px;
-    width: 690px;
-  }
-
-}
-
-@media (min-width: 961px) and (max-width: 1088px) {
-
-  .container {
-    max-width: 90%;
-    width: 90%;
-  }
-
-}
-
+  
 @media screen and (max-width: 768px) {
-
-    .container {
-        max-width: 690px;
-        width: 690px;
-    }
     
     #__next {
         overflow-x: hidden;
@@ -218,11 +242,6 @@ html {
 
 @media screen and (max-width: 415px) {
 
-    .container, .navbar > .container  {
-        max-width: 100%;
-        width: auto;
-        padding: 0 3rem;
-    }
     .page-main-heading {
       font-size: 3.2rem;
       font-weight: bold;
@@ -243,6 +262,5 @@ html {
         button {
           margin-top: 2rem;
         }
-    }
-      
+    }     
 }
