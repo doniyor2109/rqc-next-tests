@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Select from 'react-select';
 
@@ -84,15 +84,13 @@ export default class FiltersStateManager extends Component {
   }
 
   // обработка поиска
-  searchSubmit(e) {
-    const searchRequest = e.target.elements.search.value;
+  searchSubmit(value) {
     const { activeTag } = this.state;
     const { fetchPublications, lang } = this.props;
-    e.preventDefault();
     this.setState({
-      searchRequest,
+      searchRequest: value,
     });
-    fetchPublications(lang, activeTag, searchRequest);
+    fetchPublications(lang, activeTag, value);
   }
 
 
