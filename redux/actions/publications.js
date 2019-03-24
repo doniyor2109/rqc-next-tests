@@ -86,12 +86,12 @@ export const fetchPublications = (language, activeTag, searchRequest) => async (
     // do simple fetch
     pubs = await getAllResultsfromPaginatedAPI(language, orderings);
   }
-  console.log('СДЕЛАТЬ ОБРАБОТКУ ОШИБОК')
+  console.log('СДЕЛАТЬ ОБРАБОТКУ ОШИБОК');
   return dispatch(fetchPublicationsSuccess(pubs));
 };
 
 export const fetchPublicationsforResearch = (language, pageSize) => async (dispatch) => {
   dispatch(fetchPublicationsRequest());
   const pubs = await getPublications(language, pageSize, 1, '[my.publication.date desc]');
-  return dispatch(fetchPublicationsSuccess(pubs));
+  return dispatch(fetchPublicationsSuccess(pubs.results));
 };

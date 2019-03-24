@@ -47,7 +47,7 @@ class Research extends React.Component {
         const { page } = this.props.research
         const { isFetching, groups } = this.props.scigroups
 
-        // console.log("research", this.props)
+        console.log("research", this.props)
         if (isFetching) return <Loading />
         else return (
             <Fragment>
@@ -88,7 +88,7 @@ class Research extends React.Component {
                         </p>
                         <div className="columns is-multiline">
                             <div className="column is-12-tablet is-8-desktop is-offset-2-desktop ">
-                                {this.props.publications.pubs.map((pub, index) => <Publication key={index} pub={pub} />)}
+                                {this.props.publications.pubs.map((pub, index) => <Publication key={index} item={pub} />)}
                             </div>
                         </div>
                         <div className="columns is-multiline">
