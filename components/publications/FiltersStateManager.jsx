@@ -87,6 +87,8 @@ export default class FiltersStateManager extends Component {
   searchSubmit(value) {
     const { activeTag } = this.state;
     const { fetchPublications, lang } = this.props;
+    this.resetAuthor();
+    this.resetGroup();
     this.setState({
       searchRequest: value,
     });
