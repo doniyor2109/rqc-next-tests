@@ -4,31 +4,34 @@ import { bindActionCreators } from 'redux'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 import Media from 'react-media'
-import Head from 'next/head'
 import cookies from 'next-cookies'
 
 import * as mainActions from '../redux/actions/main'
 import * as langActions from '../redux/actions/lang'
 import * as eventsActions from '../redux/actions/events'
 import * as newsActions from '../redux/actions/news'
+import * as productsActions from '../redux/actions/products'
+
 
 import {fetchMainRequest, 
         fetchMainSuccess, 
         fetchMainFailure} from '../redux/actions/main'
 
-import { NewscardSmall } from '../components/news/NewscardSmall.js'
-import MainSlider from '../components/sliders/MainSlider'
-import SciSlider from '../components/sliders/SciSlider'
+import MainSlider from '../components/main/MainSlider'
+import SciSlider from '../components/main/SciSlider'
 import {Loading} from '../components/shared/loading'
 import OldSite from '../components/oldSite.js'
-import Products from '../components/products/index'
+import Products from '../components/main/Products'
+import NewsTeaser from '../components/main/NewsTeaser'
+import Scientists from '../components/main/Scientists'
+
+
 import {CardLarge} from '../components/events/CardLarge'
 import {CardSmall} from '../components/events/CardSmall'
+import MainHead from '../components/main/MainHead'
 
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../prismic-configuration';
-import hostName from '../host'
-
 
 class Index extends React.Component {
 
@@ -64,62 +67,46 @@ class Index extends React.Component {
   }
 
   componentDidMount() {
+
+    const { fetchNews, fetchEvents, fetchMainSciSlider, fetchProducts, lang } = this.props
+    
     this.setState({
       DOMLoaded: true
     })
-    this.props.fetchEvents(this.props.lang, 2)
-    this.props.fetchNews(this.props.lang, 3) 
-    this.props.fetchMainSciSlider(this.props.lang)
+    fetchProducts(lang)
+    fetchMainSciSlider(lang)
+    fetchEvents(lang, 2)
+    fetchNews(lang, 3) 
   }
 
   componentDidUpdate(prevProps) {
 
-    if (this.props.lang !== prevProps.lang) {
-      this.setState({
-        events: []
-      })
-      if (this.props.lang === "en-gb"){
-        this.props.fetchMain('W3GV8SQAACQAZAwG', "en-gb")
+    const { fetchNews, fetchMain, fetchEvents, fetchMainSciSlider, fetchProducts, lang } = this.props
+
+    if (lang !== prevProps.lang) {
+      if (lang === "en-gb"){
+        fetchMain('W3GV8SQAACQAZAwG', "en-gb")
       } else if(this.props.lang === "ru") {
         this.props.fetchMain('W3GVDyQAACYAZAgb', "ru")
       }
-      this.props.fetchMainSciSlider(this.props.lang)
-      this.props.fetchEvents(this.props.lang, 2)
-      this.props.fetchNews(this.props.lang, 3) 
+      fetchProducts(lang)
+      fetchMainSciSlider(lang)
+      fetchEvents(lang, 2)
+      fetchNews(lang, 3) 
     }
   }
 
   render() {
-
-    const { phone, tablet, news, main } = this.props
+    const { DOMLoaded } = this.state
+    const { phone, tablet, news, main, fb_locale, products } = this.props
     const { sciSlider, isFetchingMain, isFetchingSci } = this.props.main
 
     console.log("main", this.props)
-    if (!this.state.DOMLoaded) return <Loading />
+    if (!DOMLoaded) return <Loading />
     else 
     return (
       <Fragment>
-        <Head>
-          <title>{this.context.t("Российский Квантовый Центр – главная")}</title>
-          <meta property="og:url"                content={hostName} />
-          <meta property="og:type"               content="article" />
-          <meta property="og:image"              content={hostName +  "/static/RQClogo_black_ru.svg"} />
-          <meta property="og:locale:alternate" content="en_US" />
-        {(typeof fb_locale === 'undefined' || this.props.fb_locale === "ru_RU") && 
-          <Fragment>
-              <meta property="og:locale" content="ru_RU" />
-              <meta property="og:title"              content="Российский Квантовый Центр – главная" />
-              <meta property="og:description"        content="Добро пожаловать на официальный сайт Российского Квантового Центра!" />
-          </Fragment>
-        }
-        {this.props.fb_locale === "en_US" && 
-          <Fragment>
-              <meta property="og:locale" content="en_US" />
-              <meta property="og:title"              content="Russian Quantum Center – home page" />
-              <meta property="og:description"        content="Welcome to the official website of the Russian Quantum Center!" />
-          </Fragment>
-        }
-        </Head>
+        <MainHead fb_locale={fb_locale} />
         <section className="main-slider">
           {main.data && <MainSlider slides={main.data.body}
                                           isLoading={isFetchingMain}
@@ -130,45 +117,11 @@ class Index extends React.Component {
 
         <OldSite />
 
+        <NewsTeaser articles={news.articles} phone={phone} tablet={tablet} />
 
-        <section className="news-teaser">
-          <div className="container">
-            <Link href="/news">
-              <a className="main-category">
-                {this.context.t("Новости")}
-              </a>
-            </Link>
-            <Link href="/news">
-              <a className="main-category-link">
-                {this.context.t("смотреть все")}
-              </a>
-            </Link>
-            <div className="columns is-multiline">
+        <Products items={products.items}/>
 
-              {/* в зависимости от размера окна браузера мы рендерим разные верстки секции с тизерами новостей */}
-              {/* вариант смартфона и Ipad */}
-              {news.articles 
-              && <Media query="(max-width: 768px)"
-                        defaultMatches={tablet !== null}
-                        render={() => news.articles.slice(0,2).map((item, index) =>
-                                        <NewscardSmall columns="6" article={item} key={index} />)}
-                  />
-                
-              }
-              {/* вариант десктопа */}
-              {news.articles 
-              && <Media query="(min-width: 769px)"
-                        defaultMatches={phone === null && tablet === null}
-                        render={() => news.articles.map((item, index) =>
-                                        <NewscardSmall columns="4" article={item} key={index} />)}
-                  />
-                
-              }
-            </div>
-          </div>
-        </section>
-
-        <Products />
+        {/* <Scientists /> */}
 
         <section className="sci-slider">
           <div className="container">
@@ -252,9 +205,9 @@ class Index extends React.Component {
 }
 
 const mapStateToProps = state => {
-  const { main, events, news } = state
+  const { main, events, news, products } = state
   const { lang } = state.i18nState
-  return { main, lang, events, news }
+  return { main, lang, events, news, products }
 }
 
 const mapDispatchToProps = dispatch => {
@@ -262,7 +215,8 @@ const mapDispatchToProps = dispatch => {
       mainActions,
       langActions,
       eventsActions,
-      newsActions
+      newsActions,
+      productsActions
     ), dispatch);
   }
 

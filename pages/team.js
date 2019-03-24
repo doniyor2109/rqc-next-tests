@@ -77,7 +77,6 @@ class Team extends Component {
 
   componentDidUpdate(prevProps, prevState) {
 
-    
     // если глобально меняется язык и мы знаем, что он поменялся в результате 
     // действий пользователя (userClicked), то редиректим пользователя на страницу с другим uid
     // если бы мы не было флага userClicked, то компонент бы уходил в бесконечный цикл
@@ -95,7 +94,7 @@ class Team extends Component {
 
     const { team, phone, tablet } = this.props
 
-    // console.log("team", this.props.team)
+    console.log("team", this.props.team)
     if (this.props.lang === "ru") {
       moment.locale('ru')
     } else moment.locale('en')
@@ -108,11 +107,10 @@ class Team extends Component {
             <div className="teampage">
                 {team.item.data && 
                 <Fragment>
-
                     <section className="team-header">
                       <div className="container">
                           <div className="columns is-multiline">
-                            <div className="column is-12-desktop">
+                            <div className="column is-12-desktop is-12-tablet">
                               <h3>
                                   {this.context.t("Группа")}                        
                               </h3>
@@ -121,7 +119,7 @@ class Team extends Component {
                             <div className="column is-3-desktop">
                               <div className="team-leader">
                                 <h3>
-                                    {this.context.t("Руководитель")}                        
+                                  {RichText.render(team.item.data.leader_position, PrismicConfig.linkResolver)}
                                 </h3>
                                 {team.item.data.group_leader.data && 
                                   <Fragment>
