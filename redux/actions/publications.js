@@ -1,92 +1,97 @@
-import * as action_types from './action_types.js'
-import Prismic from 'prismic-javascript'
-import PrismicConfig from '../../prismic-configuration'
+import Prismic from 'prismic-javascript';
+import * as action_types from './action_types.js';
+import PrismicConfig from '../../prismic-configuration';
 // actions for quering API for multiple documents by type
 
-const fetchPublicationsRequest = () => ({ type: action_types.FETCH_PUBLICATIONS_REQUEST })
+const fetchPublicationsRequest = orderings => ({
+  type: action_types.FETCH_PUBLICATIONS_REQUEST,
+  orderings,
+});
 
-const fetchPublicationsSuccess = (response) => ({ type: action_types.FETCH_PUBLICATIONS_SUCCESS, response })
+export const fetchPublicationsSuccess = response => ({
+  type: action_types.FETCH_PUBLICATIONS_SUCCESS,
+  response,
+});
 
-const fetchPublicationsFailure = (error) => ({ type: action_types.FETCH_PUBLICATIONS_FAILURE, error })
+const fetchPublicationsFailure = error => ({
+  type: action_types.FETCH_PUBLICATIONS_FAILURE,
+  error,
+});
 
-export const fetchPublications = (language, pageSize, pageNumber, activeTag, results) => (dispatch) => {
+async function getPublications(lang, pageSize, page, orderings) {
+  try {
+    const api = await Prismic.getApi(PrismicConfig.apiEndpoint);
+    const response = await api.query(Prismic.Predicates.at('document.type', 'publication'),
+      {
+        lang,
+        pageSize,
+        page,
+        orderings,
+        fetchLinks: ['science_group.groupname'],
+      });
+    return response;
+  } catch (error) {
+    return { results: null, error };
+  }
+}
 
-  const ordering = (activeTag === "SORT_DATE") 
-                    ? '[my.publication.date desc]'
-                    : (activeTag === "SORT_NAME" 
-                        ? '[my.publication.title]'
-                        : '[my.publication.journal_name]'
-                      )
+async function getPubsSearchedByAPI(lang, orderings, searchRequest) {
+  try {
+    const api = await Prismic.getApi(PrismicConfig.apiEndpoint);
+    const response = await api.query(
+      [Prismic.Predicates.at('document.type', 'publication'),
+        Prismic.Predicates.fulltext('document', searchRequest)],
+      {
+        lang,
+        pageSize: 100,
+        orderings,
+        fetchLinks: ['science_group.groupname'],
+      },
+    );
+    return response.results;
+  } catch (error) {
+    return { results: null, error };
+  }
+}
+
+export async function getAllResultsfromPaginatedAPI(language, orderings) {
+  let nextPage = '';
+  let page = 1;
+  const resultsAcc = [];
+  while (nextPage !== null) {
+    const res = await getPublications(language, 100, page, orderings);
+    const { results } = res;
+    if (results !== null) {
+      nextPage = res.next_page;
+      resultsAcc.push(...results);
+      page += 1;
+    } else return results.error;
+  }
+  return resultsAcc;
+}
+
+export const fetchPublications = (language, activeTag, searchRequest) => async (dispatch) => {
+  let orderings = '[my.publication.journal_name]';
+  if (activeTag === 'SORT_DATE') {
+    orderings = '[my.publication.date desc]';
+  } else if (activeTag === 'SORT_NAME') {
+    orderings = '[my.publication.title]';
+  }
   dispatch(fetchPublicationsRequest());
-  return Prismic.getApi(PrismicConfig.apiEndpoint)
-    .then(api => {api.query(Prismic.Predicates.at('document.type', 'publication'),
-                                                  { lang: language,
-                                                    pageSize: pageSize, 
-                                                    page: pageNumber,
-                                                    orderings : ordering,
-                                                    fetchLinks : ['science_group.groupname']
-                                                    })
-                      .then(response => {
+  let pubs;
+  if (searchRequest) {
+    // do search
+    pubs = await getPubsSearchedByAPI(language, orderings, searchRequest);
+  } else {
+    // do simple fetch
+    pubs = await getAllResultsfromPaginatedAPI(language, orderings);
+  }
+  console.log('СДЕЛАТЬ ОБРАБОТКУ ОШИБОК')
+  return dispatch(fetchPublicationsSuccess(pubs));
+};
 
-                                // первый if разграничивает использование fetchPublictions для страницы publications,
-                                // где нужны все публикации, и поэтому мы используем рекурсию в actions
-                                // и для страницы research, где нам нужны только 3 последних публикации, поэтому вызов
-                                // fetchPublictions происходит без массива results для накопления результатов
-
-                                if (results) {
-                                  results = results.concat(response.results)
-                                  if (response.next_page !== null) {
-                                    dispatch(fetchPublications(language, pageSize, pageNumber + 1, activeTag, results))
-                                  } else {
-                                    dispatch(fetchPublicationsSuccess(results))
-                                  }
-                                } else {
-                                  dispatch(fetchPublicationsSuccess(response.results))
-                                }
-                            })
-                      .catch(error => dispatch(fetchPublicationsFailure(error)))
-                  }
-          )
-}
-
-
-// // actions for quering API for a team single document by UID
-
-// const SearchPublicationbyAuthorRequest = (text) => ({ type: action_types.SEARCH_PUBLICATION_BY_AUTHOR_REQUEST, text });
-
-// const SearchPublicationbyAuthorSuccess = (text, response) => ({ type: action_types.SEARCH_PUBLICATION_BY_AUTHOR_SUCCESS, text, response });
-
-// const SearchPublicationbyAuthorFailure = (text, error) => ({ type: action_types.SEARCH_PUBLICATION_BY_AUTHOR_FAILURE, text, error });
-
-// export const SearchPublicationbyAuthor = (author, pageSize, pageNumber) => (dispatch) => {
-//   dispatch(SearchPublicationbyAuthorRequest(author))
-//   return Prismic.getApi(PrismicConfig.apiEndpoint)
-//     .then(api => {api.query(Prismic.Predicates.fulltext('my.publication.authors', author), 
-//                                                          {
-//                                                           pageSize: pageSize, 
-//                                                           page: pageNumber,
-//                                                          })
-//                       .then(response => dispatch(SearchPublicationbyAuthorSuccess(author, response)))
-//                       .catch(error => dispatch(SearchPublicationbyAuthorFailure(author, error)))
-//           })
-// }
-
-const SearchPublicationbyScienceGroupRequest = (groupId) => ({ type: action_types.SEARCH_PUBLICATION_BY_SCIENCE_GROUP_REQUEST, groupId });
-
-const SearchPublicationbyScienceGroupSuccess = (groupId, response) => ({ type: action_types.SEARCH_PUBLICATION_BY_SCIENCE_GROUP_SUCCESS, groupId, response });
-
-const SearchPublicationbyScienceGroupFailure = (groupId, error) => ({ type: action_types.SEARCH_PUBLICATION_BY_SCIENCE_GROUP_FAILURE, groupId, error });
-
-export const SearchPublicationbyScienceGroup = (groupId, pageNumber) => (dispatch) => {
-  dispatch(SearchPublicationbyScienceGroupRequest(groupId));
-  return Prismic.getApi(PrismicConfig.apiEndpoint)
-    .then(api => {api.query([Prismic.Predicates.at('document.type', 'publication'), 
-                            Prismic.Predicates.at('my.publication.belongs_to_group.sci_group', groupId)],{
-                                                          pageSize: 100, 
-                                                          page: pageNumber,
-                                                          fetchLinks : ['science_group.groupname']
-                                                         })
-                      .then(response => dispatch(SearchPublicationbyScienceGroupSuccess(groupId, response)))
-                      .catch(error => dispatch(SearchPublicationbyScienceGroupFailure(groupId, error)))
-          })
-}
+export const fetchPublicationsforResearch = (language, pageSize) => async (dispatch) => {
+  dispatch(fetchPublicationsRequest());
+  const pubs = await getPublications(language, pageSize, 1, '[my.publication.date desc]');
+  return dispatch(fetchPublicationsSuccess(pubs));
+};

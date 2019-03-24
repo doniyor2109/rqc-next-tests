@@ -1,3 +1,4 @@
+
 import { combineReducers } from 'redux'
 import { article } from './article'
 import { related } from './related'
@@ -28,23 +29,23 @@ const rootReducer = combineReducers({
   news,
   language,
   byTag,
-  main, 
-  people, 
-  about, 
-  vacancies, 
-  i18nState, 
-  team, 
+  main,
+  people,
+  about,
+  vacancies,
+  i18nState,
+  team,
   photo,
-  mediakit, 
-  video, 
-  scigroups, 
+  mediakit,
+  video,
+  scigroups,
   research,
-  event, 
-  events, 
+  event,
+  events,
   eventsbyTag,
   search,
   publications,
   products
 });
 
-export default rootReducer
+export default rootReducer;

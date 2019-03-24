@@ -112,7 +112,8 @@ export const translations = {
         " или используйте фильтры для выбора публикаций определенного автора или научной группы": " or use filters to choose publications of certain scientific group or author",
         "Все группы": "All groups",
         "Все публикации": "All publications",
-        "Фемтосекундный лазер с диодной накачкой": "Diode-pumped femtosecond laser"
+        "Фемтосекундный лазер с диодной накачкой": "Diode-pumped femtosecond laser",
+        "Результаты по запросу": "Search request"
      }
    }
    

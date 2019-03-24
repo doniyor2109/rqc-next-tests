@@ -25,7 +25,6 @@ $column-gap: 1.5rem;
 @import './people.scss';
 @import './persona.scss';
 @import './photogallery.scss';
-@import './publication.scss';
 @import './publications.scss';
 @import './reports.scss';
 @import './research.scss';
@@ -58,8 +57,7 @@ html {
 .teampage, 
 .video-page, 
 .research-page,
-.eventspage,
-.pubspage {
+.eventspage {
     padding: 6rem 0;
 }
 
@@ -165,6 +163,7 @@ html {
   &:focus {
     outline: 0;
   }
+  
   &.is-active{
     background: #3998D1;
     color:white;
@@ -228,8 +227,7 @@ html {
     }
 }
 
-
-
+  
 @media screen and (max-width: 768px) {
     
     #__next {
@@ -249,22 +247,6 @@ html {
       font-weight: bold;
       color:#040303;
       text-transform: uppercase;
-    }
-
-    .tag-for-search.is-active {
-        margin-right: 3rem;
-      }
-    
-    .tag-for-search {
-      margin-bottom: 2.3rem;
-      margin-right: 3rem;
-      min-width: 10rem;
-    }
-
-    .tag-for-search:nth-child(2){
-      margin-bottom: 2.3rem;
-      margin-right: 0;
-      min-width: 10rem;
     }
     
     .more-news {

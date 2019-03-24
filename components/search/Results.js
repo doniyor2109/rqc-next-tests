@@ -8,16 +8,17 @@ import ResultEvent from './ResultEvent'
 import ResultVacancy from './ResultVacancy'
 import ResultPhoto from './ResultPhoto'
 import ResultVideo from './ResultVideo'
-import ResultPublication from './ResultPublication'
+import Publication from '../publications/Publication'
 
 
 const Results = ({result, search_text, index}) => {
     if (result) {
         switch (result.type) {
             case "publication": 
-            return <ResultPublication  item={result} 
-                                       key={index} 
-                                       search_text={search_text}
+            return <Publication item={result} 
+                                key={index} 
+                                search_text={search_text}
+                                search_page={true}
                     />
             case "people": 
                 return <ResultPeople item={result} 

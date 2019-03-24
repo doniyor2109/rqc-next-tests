@@ -62,7 +62,7 @@ class Nav extends Component {
 
   render() {
     const {router, switchLanguage, lang} = this.props
-    // console.log("nav" ,this.props)
+    // console.log("nav render")
 
     return (
       <Fragment>
