@@ -24,8 +24,6 @@ $column-gap: 1.5rem;
 @import './newscard.scss';
 @import './people.scss';
 @import './persona.scss';
-@import './photogallery.scss';
-@import './publications.scss';
 @import './reports.scss';
 @import './research.scss';
 @import './searchpage.scss';
@@ -49,7 +47,6 @@ html {
 }
 
 .peoplepage, 
-.photo-gallery-page, 
 .aboutpage, 
 .media-kit-page, 
 .newspage, 
