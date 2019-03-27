@@ -2,7 +2,7 @@ import React from 'react'
 import Slider from "react-slick"
 import { Link, RichText } from 'prismic-reactjs'
 import PrismicConfig from '../../prismic-configuration'
-import { ArrowButton } from '../shared/ArrowButton'
+import ArrowButton from '../shared/ArrowButton'
 
 
 function NextArrow(props) {

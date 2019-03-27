@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowButton } from './ArrowButton.js'
+import ArrowButton from '../shared/ArrowButton'
 import { RichText, Date } from 'prismic-reactjs'
 import PrismicConfig from '../../prismic-configuration';
 import moment from 'moment'

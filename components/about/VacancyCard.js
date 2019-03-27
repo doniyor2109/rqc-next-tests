@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowButton } from '../shared/ArrowButton'
+import ArrowButton from '../shared/ArrowButton'
 import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
 import ScrollTop from '../shared/ScrollTop'

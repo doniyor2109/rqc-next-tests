@@ -19,7 +19,7 @@ import Vacancies from '../components/about/Vacancies'
 import AnnualReports from '../components/sliders/AnnualReports';
 import Contacts from '../components/about/Contacts'
 import Timeline from '../components/about/Timeline'
-import {ArrowButton} from '../components/shared/ArrowButton'
+import ArrowButton from '../components/shared/ArrowButton'
 
 //other libraries
 import { RichText } from 'prismic-reactjs';

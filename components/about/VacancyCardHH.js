@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowButton } from '../shared/ArrowButton'
+import ArrowButton from '../shared/ArrowButton'
 import ScrollTop from '../shared/ScrollTop'
 
 

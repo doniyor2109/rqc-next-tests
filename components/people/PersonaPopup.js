@@ -1,7 +1,7 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
-import { ArrowButton } from '../shared/ArrowButton'
+import ArrowButton from '../shared/ArrowButton'
 import Popup from '../shared/Popup'
 import PropTypes from 'prop-types'
 

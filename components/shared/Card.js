@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowButton } from './ArrowButton.js'
+import ArrowButton from './ArrowButton'
 
 export const Card = (props) => {
 

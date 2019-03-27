@@ -1,7 +1,7 @@
 import React from 'react'
 import { RichText, Link } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
-import { ArrowButton } from '../shared/ArrowButton'
+import ArrowButton from '../shared/ArrowButton'
 
 const ReportCard = ({item}) => {
     const back = {background: "url(" + item.wallpaper.url + ")", backgroundSize:"cover"}

@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowButton } from '../shared/ArrowButton.js'
+import ArrowButton from '../shared/ArrowButton'
 import Link from 'next/link'
 import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';

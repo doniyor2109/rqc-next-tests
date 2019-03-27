@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { RichText, Link } from 'prismic-reactjs';
-import { ArrowButton } from '../shared/ArrowButton';
+import ArrowButton from '../shared/ArrowButton';
 import PrismicConfig from '../../prismic-configuration';
 
 const Product = styled.div`
