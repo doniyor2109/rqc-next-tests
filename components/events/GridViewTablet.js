@@ -1,7 +1,7 @@
 import React from 'react'
 import { CardLarge } from './CardLarge.js'
 import { CardSmall } from './CardSmall.js'
-import { Loading } from '../shared/loading.js'
+import Loading from '../shared/loading';
 
 
 // Компонент, отображающий новости в плиточном виде для десктопа

@@ -2,7 +2,6 @@ import React, {Fragment} from 'react'
 import Media from 'react-media'
 import VacancyCard from './VacancyCard'
 import VacancyPopup from './VacancyPopup'
-import { Loading } from '../shared/loading';
 
 const VacanciesPrismic = (props, context) => {
 

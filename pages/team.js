@@ -12,7 +12,7 @@ import * as langActions from '../redux/actions/lang'
 import {fetchTeamRequest, fetchTeamSuccess, fetchTeamFailure} from '../redux/actions/team'
 
 //components
-import { Loading } from '../components/shared/loading.js'
+import Loading from '../components/shared/loading';
 import Milestones from '../components/sliders/Milestones'
 import Topics from '../components/sliders/Topics'
 import LabImage from '../components/sliders/LabImage'

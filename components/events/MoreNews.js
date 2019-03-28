@@ -1,5 +1,5 @@
 import React from 'react'
-import { Loading } from '../shared/loading.js'
+import Loading from '../shared/loading';
 
 
 const MoreNews = ({nextPage, isFetching, give_me_more_events, numberOfMoreNews}) => (

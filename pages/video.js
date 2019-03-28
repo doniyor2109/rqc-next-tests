@@ -14,7 +14,7 @@ import {fetchVideoByUidRequest, fetchVideoByUidSuccess, fetchVideoByUidFailure} 
 
 
 //components
-import { Loading } from '../components/shared/loading.js'
+import Loading from '../components/shared/loading';
 import PopupNoTranslation from '../components/mediakit/PopupNoTranslation'
 import Socials from '../components/shared/Socials'
 

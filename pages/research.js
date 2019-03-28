@@ -12,7 +12,7 @@ import * as researchActions from '../redux/actions/research'
 import * as langActions from '../redux/actions/lang'
 
 //components
-import { Loading } from '../components/shared/loading.js'
+import Loading from '../components/shared/loading';
 import htmlSerializer from '../components/shared/htmlSerializer'
 import SciCard from '../components/research/SciCard'
 import ResearchHead from '../components/research/ResearchHead'

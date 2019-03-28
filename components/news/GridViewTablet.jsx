@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import NewscardMedium from './NewscardMedium';
 import NewscardSmall from './NewscardSmall';
-import { Loading } from '../shared/loading';
+import Loading from '../shared/loading';
 
 import articleType from './articleType';
 

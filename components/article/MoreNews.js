@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NewscardSmall from '../news/NewscardSmall'
-import { Loading } from '../shared/loading.js'
+import Loading from '../shared/loading';
 
 
 class MoreNews extends React.Component {
