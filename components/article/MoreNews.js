@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { NewscardSmall } from '../news/NewscardSmall.js'
+import NewscardSmall from '../news/NewscardSmall'
 import { Loading } from '../shared/loading.js'
 
 
@@ -48,7 +48,7 @@ class MoreNews extends React.Component {
                     <div className="related-news">
                         <div className="columns is-multiline">
                         {articles.map((item, index) =>
-                            <NewscardSmall columns="3" article={item} key={index} />
+                            <NewscardSmall article={item} key={index} />
                         )}
                         </div>
                         <div className="columns">

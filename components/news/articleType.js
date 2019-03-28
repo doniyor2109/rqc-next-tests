@@ -18,41 +18,41 @@ const articleType = PropTypes.shape({
         })),
       }),
     })),
-    cover: PropTypes.arrayOf(PropTypes.shape({
+    cover: PropTypes.shape({
       dimensions: PropTypes.shape({
         width: PropTypes.number,
         height: PropTypes.number,
       }),
       url: PropTypes.string,
-      ipad: PropTypes.arrayOf(PropTypes.shape({
+      ipad: PropTypes.shape({
         dimensions: PropTypes.shape({
           width: PropTypes.number,
           height: PropTypes.number,
           url: PropTypes.string,
         }),
-      })),
-      iphone: PropTypes.arrayOf(PropTypes.shape({
+      }),
+      iphone: PropTypes.shape({
         dimensions: PropTypes.shape({
           width: PropTypes.number,
           height: PropTypes.number,
           url: PropTypes.string,
         }),
-      })),
-      thumbnail4: PropTypes.arrayOf(PropTypes.shape({
+      }),
+      thumbnail4: PropTypes.shape({
         dimensions: PropTypes.shape({
           width: PropTypes.number,
           height: PropTypes.number,
           url: PropTypes.string,
         }),
-      })),
-      thumbnail8: PropTypes.arrayOf(PropTypes.shape({
+      }),
+      thumbnail8: PropTypes.shape({
         dimensions: PropTypes.shape({
           width: PropTypes.number,
           height: PropTypes.number,
           url: PropTypes.string,
         }),
-      })),
-    })),
+      }),
+    }),
     manual_date_of_publication: PropTypes.string,
     title: PropTypes.arrayOf(PropTypes.shape({
       text: PropTypes.string,
