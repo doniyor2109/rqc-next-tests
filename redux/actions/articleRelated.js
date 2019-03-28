@@ -1,12 +1,12 @@
-import * as action_types from './action_types.js'
+import * as actionTypes from './actionTypes'
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../../prismic-configuration'
 
-const morenewsByTagRequest = (id, tag) => ({ type: action_types.MORE_NEWS_BY_TAG_REQUEST, id, tag })
+const morenewsByTagRequest = (id, tag) => ({ type: actionTypes.MORE_NEWS_BY_TAG_REQUEST, id, tag })
 
-const morenewsByTagSuccess = (id, tag, response) => ({ type: action_types.MORE_NEWS_BY_TAG_SUCCESS, id, tag, response })
+const morenewsByTagSuccess = (id, tag, response) => ({ type: actionTypes.MORE_NEWS_BY_TAG_SUCCESS, id, tag, response })
 
-const morenewsByTagFailure = (id, tag, error) => ({ type: action_types.MORE_NEWS_BY_TAG_FAILURE, id, tag, error })
+const morenewsByTagFailure = (id, tag, error) => ({ type: actionTypes.MORE_NEWS_BY_TAG_FAILURE, id, tag, error })
 
 
 // запрос для MORE NEWS

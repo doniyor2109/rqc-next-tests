@@ -1,4 +1,4 @@
-import * as action_types from "../actions/action_types.js"
+import * as actionTypes from "../actions/actionTypes"
 
 const initialState = {
   isFetching: false,
@@ -20,13 +20,13 @@ function fetchEventsSuccess(state, action) {
 export const events = (state = initialState, action) => {
   switch (action.type) {
 
-    case action_types.FETCH_EVENTS_REQUEST:
+    case actionTypes.FETCH_EVENTS_REQUEST:
       return {...state, isFetching: true };
 
-    case action_types.FETCH_EVENTS_SUCCESS:
+    case actionTypes.FETCH_EVENTS_SUCCESS:
       return fetchEventsSuccess(state, action);
 
-    case action_types.FETCH_EVENTS_FAILURE:
+    case actionTypes.FETCH_EVENTS_FAILURE:
       console.log("FETCH_EVENTS_FAILURE", action.error);
       return { ...state, isFetching: false };
 

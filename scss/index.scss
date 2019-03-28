@@ -141,39 +141,10 @@ html {
     margin: 3.5rem 0 9rem;
 }
 
-.tag-for-search {
-  font-size: 1.2rem;
-  padding: 0.4rem 1rem;
-  font-weight: 500;
-  display: inline;
-  margin-right: 3rem;
-  text-transform: uppercase;
-  color:#040303;
-  background-color: white;
-  font-family: "DIN Pro", serif;
-  border-color: rgba(4,3,3,0.5);
-  border-width: 1px;
-  cursor: pointer;
-  &:focus {
-    outline: 0;
-  }
-  
-  &.is-active{
-    background: #3998D1;
-    color:white;
-    border-color: #3998D1;
-    border-width: 1px;
-    &:focus {
-      outline:0;
-    }
-  }
-}
-
 .captions {
   color: #040303;
   margin-top: 6.5rem;
   font-size: 1.6rem;
-
 }
 
 .more-news {

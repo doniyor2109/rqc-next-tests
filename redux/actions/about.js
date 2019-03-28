@@ -1,12 +1,12 @@
-import * as action_types from './action_types.js'
+import * as actionTypes from './actionTypes'
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../../prismic-configuration'
 
-export const fetchAboutRequest = () => ({type: action_types.FETCH_ABOUT_REQUEST})
+export const fetchAboutRequest = () => ({type: actionTypes.FETCH_ABOUT_REQUEST})
 
-export const fetchAboutSuccess = response => ({type: action_types.FETCH_ABOUT_SUCCESS, response}) 
+export const fetchAboutSuccess = response => ({type: actionTypes.FETCH_ABOUT_SUCCESS, response}) 
 
-export const fetchAboutError = error => ({type: action_types.FETCH_ABOUT_FAILURE, error})
+export const fetchAboutError = error => ({type: actionTypes.FETCH_ABOUT_FAILURE, error})
 
 export const fetchAbout = language => (dispatch) => {
     dispatch(fetchAboutRequest());

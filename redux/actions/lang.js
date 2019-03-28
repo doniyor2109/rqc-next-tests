@@ -1,5 +1,5 @@
 import { setLanguage } from "redux-i18n"
-import  {LANGUAGE_CHANGED_BY_USER, COOKIE_LANGUAGE_CHANGE } from './action_types'
+import  {LANGUAGE_CHANGED_BY_USER, COOKIE_LANGUAGE_CHANGE } from './actionTypes'
 
 const setCookies = (language) => ({type: COOKIE_LANGUAGE_CHANGE, language})
 

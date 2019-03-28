@@ -1,13 +1,13 @@
-import * as action_types from './action_types.js'
+import * as actionTypes from './actionTypes'
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../../prismic-configuration'
 // actions for quering API for multiple documents by type
 
-const fetchProductsRequest = () => ({ type: action_types.FETCH_PRODUCTS_REQUEST })
+const fetchProductsRequest = () => ({ type: actionTypes.FETCH_PRODUCTS_REQUEST })
 
-const fetchProductsSuccess = (response) => ({ type: action_types.FETCH_PRODUCTS_SUCCESS, response })
+const fetchProductsSuccess = (response) => ({ type: actionTypes.FETCH_PRODUCTS_SUCCESS, response })
 
-const fetchProductsFailure = (error) => ({ type: action_types.FETCH_PRODUCTS_FAILURE, error })
+const fetchProductsFailure = (error) => ({ type: actionTypes.FETCH_PRODUCTS_FAILURE, error })
 
 export const fetchProducts = (language) => (dispatch) => {
   dispatch(fetchProductsRequest());

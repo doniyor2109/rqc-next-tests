@@ -1,4 +1,4 @@
-import * as action_types from "../actions/action_types.js"
+import * as actionTypes from "../actions/actionTypes"
 
 const initialState = {
     isFetching: false,
@@ -23,13 +23,13 @@ function fetchEventsByTagSuccess(state, action) {
 export const eventsbyTag = (state = initialState, action) => {
   switch (action.type) {
 
-    case action_types.FETCH_EVENTS_BY_TAG_REQUEST:
+    case actionTypes.FETCH_EVENTS_BY_TAG_REQUEST:
       return {...state, isFetching: true};
 
-    case action_types.FETCH_EVENTS_BY_TAG_SUCCESS:
+    case actionTypes.FETCH_EVENTS_BY_TAG_SUCCESS:
       return fetchEventsByTagSuccess(state, action);
 
-    case action_types.FETCH_EVENTS_BY_TAG_FAILURE:
+    case actionTypes.FETCH_EVENTS_BY_TAG_FAILURE:
       console.log("FETCH_EVENTS_BY_TAG_FAILURE",action.error);
       return { ...state, isFetching: false };
 

@@ -1,4 +1,4 @@
-import * as action_types from "../actions/action_types.js"
+import * as actionTypes from "../actions/actionTypes"
 
 const initialState = {
   isFetching: false,
@@ -15,13 +15,13 @@ function fetchPhotoSuccess(state, action) {
 export const photo = (state = initialState, action) => {
   switch (action.type) {
 
-    case action_types.FETCH_PHOTO_BY_UID_REQUEST:
+    case actionTypes.FETCH_PHOTO_BY_UID_REQUEST:
       return {...state, isFetching: true };
 
-    case action_types.FETCH_PHOTO_BY_UID_SUCCESS:
+    case actionTypes.FETCH_PHOTO_BY_UID_SUCCESS:
       return fetchPhotoSuccess(state, action);
 
-    case action_types.FETCH_PHOTO_BY_UID_FAILURE:
+    case actionTypes.FETCH_PHOTO_BY_UID_FAILURE:
       console.log("FETCH_PHOTO_FAILURE", action.error);
       return { ...state, isFetching: false };
 

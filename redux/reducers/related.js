@@ -1,4 +1,4 @@
-import * as action_types from "../actions/action_types.js"
+import * as actionTypes from "../actions/actionTypes"
 
 const initialState = {
     isFetching: false,
@@ -23,13 +23,13 @@ function morenewsbyTagSuccess(state, action) {
 export const related = (state = initialState, action) => {
   switch (action.type) {
 
-    case action_types.MORE_NEWS_BY_TAG_REQUEST:
+    case actionTypes.MORE_NEWS_BY_TAG_REQUEST:
       return {...state, isFetching: true};
 
-    case action_types.MORE_NEWS_BY_TAG_SUCCESS:
+    case actionTypes.MORE_NEWS_BY_TAG_SUCCESS:
       return morenewsbyTagSuccess(state, action);
 
-    case action_types.MORE_NEWS_BY_TAG_FAILURE:
+    case actionTypes.MORE_NEWS_BY_TAG_FAILURE:
       console.log(action.error);
       return { ...state, isFetching: false };
 
