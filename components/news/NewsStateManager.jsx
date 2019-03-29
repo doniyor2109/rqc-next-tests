@@ -17,7 +17,7 @@ class NewsStateManager extends Component {
     lang: PropTypes.string.isRequired,
     fetchNews: PropTypes.func.isRequired,
     changePageSize: PropTypes.func.isRequired,
-    pageSize: PropTypes.number,
+    pageSize: PropTypes.number.isRequired,
     isFetching: PropTypes.bool.isRequired,
     phone: PropTypes.bool,
     tablet: PropTypes.bool,
@@ -29,7 +29,6 @@ class NewsStateManager extends Component {
     phone: true,
     tablet: false,
     articles: [],
-    pageSize: 10,
   }
 
   static contextTypes = {
@@ -71,7 +70,7 @@ class NewsStateManager extends Component {
   }
 
   render() {
-    console.log('news state manager', this.props);
+    // console.log('news state manager', this.props);
 
     const { t } = this.context;
     const { activeTag } = this.state;
@@ -90,7 +89,7 @@ class NewsStateManager extends Component {
     if (activeTag !== t('Все новости')) {
       news = articles.filter(article => article.tags.includes(activeTag));
     }
-    console.log("filtered articles", news, "\n original articles", articles)
+    // console.log("filtered articles", news, "\n original articles", articles)
     return (
       <Fragment>
         <div className="newspage">
