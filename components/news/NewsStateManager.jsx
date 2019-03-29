@@ -90,6 +90,7 @@ class NewsStateManager extends Component {
     if (activeTag !== t('Все новости')) {
       news = articles.filter(article => article.tags.includes(activeTag));
     }
+    console.log("filtered articles", news, "\n original articles", articles)
     return (
       <Fragment>
         <div className="newspage">

@@ -21,6 +21,13 @@ class Filters extends React.Component {
     selectTag(tags[0]);
   }
 
+  componentDidUpdate(prevProps) {
+    const { selectTag, tags } = this.props;
+    if (tags[0] !== prevProps.tags[0]) {
+      selectTag(tags[0]);
+    }
+  }
+
   render() {
     const { selectTag, activeTag, tags } = this.props;
     const { t } = this.context;
