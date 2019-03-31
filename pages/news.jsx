@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import * as newsActions from '../redux/actions/news';
 import * as langActions from '../redux/actions/lang';
 
-
 import NewsHead from '../components/news/NewsHead';
 import NewsStateManager from '../components/news/NewsStateManager';
 import articleType from '../components/news/articleType';
@@ -71,7 +70,8 @@ class News extends Component {
           articles={news.articles}
           pageSize={pageSize}
           changePageSize={this.changePageSize}
-          isFetching={news.isFetching}
+          isFetching={news.isFetching && pageSize === 10}
+          isFetchingMore={news.isFetching && pageSize > 10}
           phone={phone}
           tablet={tablet}
           nextPage={news.nextPage}

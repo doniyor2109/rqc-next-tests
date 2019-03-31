@@ -29,6 +29,9 @@ const StyledLoading = styled(LoadingFull)`
           display: none;
         }
     }
+    .transparent-wall > div {
+      height: 100%;
+    }
   `;
 
 export default StyledLoading;

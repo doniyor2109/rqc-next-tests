@@ -19,9 +19,10 @@ class NewsStateManager extends Component {
     changePageSize: PropTypes.func.isRequired,
     pageSize: PropTypes.number.isRequired,
     isFetching: PropTypes.bool.isRequired,
+    isFetchingMore: PropTypes.bool.isRequired,
     phone: PropTypes.bool,
     tablet: PropTypes.bool,
-    nextPage: PropTypes.string.isRequired,
+    nextPage: PropTypes.string,
     articles: PropTypes.arrayOf(articleType),
   }
 
@@ -29,6 +30,7 @@ class NewsStateManager extends Component {
     phone: true,
     tablet: false,
     articles: [],
+    nextPage: '',
   }
 
   static contextTypes = {
@@ -45,8 +47,11 @@ class NewsStateManager extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    const { lang, fetchNews, pageSize } = this.props;
+    const {
+      lang, fetchNews, changePageSize, pageSize,
+    } = this.props;
     if (lang !== prevProps.lang) {
+      changePageSize(10);
       fetchNews(lang, pageSize);
     }
   }
@@ -65,8 +70,8 @@ class NewsStateManager extends Component {
     const {
       fetchNews, changePageSize, pageSize, lang,
     } = this.props;
-    fetchNews(lang, pageSize + numberOfMoreNews);
     changePageSize(pageSize + numberOfMoreNews);
+    fetchNews(lang, pageSize + numberOfMoreNews);
   }
 
   render() {
@@ -75,7 +80,7 @@ class NewsStateManager extends Component {
     const { t } = this.context;
     const { activeTag } = this.state;
     const {
-      articles, isFetching, phone, tablet, nextPage, lang,
+      articles, isFetching, phone, tablet, nextPage, lang, isFetchingMore,
     } = this.props;
 
     const tags = getuniqueTags(articles);
@@ -114,7 +119,7 @@ class NewsStateManager extends Component {
                     nextPage={nextPage}
                     getMoreNews={this.getMoreNews}
                     numberOfMoreNews={3}
-                    isFetching={isFetching}
+                    isFetching={isFetchingMore}
                   />
                 </Fragment>
               )
@@ -134,7 +139,7 @@ class NewsStateManager extends Component {
                     nextPage={nextPage}
                     getMoreNews={this.getMoreNews}
                     numberOfMoreNews={2}
-                    isFetching={isFetching}
+                    isFetching={isFetchingMore}
                   />
                 </Fragment>
               )
@@ -154,11 +159,11 @@ class NewsStateManager extends Component {
                     nextPage={nextPage}
                     getMoreNews={this.getMoreNews}
                     numberOfMoreNews={3}
-                    isFetching={isFetching}
+                    isFetching={isFetchingMore}
                   />
                 </Fragment>
               )
-                              }
+              }
             />
           </div>
         </div>

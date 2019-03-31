@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-
 const propTypes = {
   className: PropTypes.string.isRequired,
 };
@@ -24,7 +23,6 @@ const Loading = ({ className }) => (
 Loading.propTypes = propTypes;
 
 const StyledLoading = styled(Loading)`
-    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
