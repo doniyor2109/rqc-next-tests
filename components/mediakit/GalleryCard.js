@@ -2,7 +2,7 @@ import React  from 'react'
 import Link from 'next/link'
 import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
-import {ArrowButton} from '../news/ArrowButton'
+import ArrowButton from '../shared/ArrowButton'
 
 
 const GalleryCard = ({ item, lang }) => {
