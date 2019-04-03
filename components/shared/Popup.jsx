@@ -13,7 +13,7 @@ const Popup = ({
       <div className="modal-background" onClick={e => close(e)} role="button" tabIndex={0} />
       <div className="modal-content">
         {children}
-        <button className="modal-close is-large" aria-label="close" onClick={e => close(e)} type="button" />
+        <button className="modal-close is-large" aria-label="close" onClick={close} type="button" />
       </div>
     </div>
   </div>

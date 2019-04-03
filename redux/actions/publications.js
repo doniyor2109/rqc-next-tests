@@ -86,7 +86,6 @@ export const fetchPublications = (language, activeTag, searchRequest) => async (
     // do simple fetch
     pubs = await getAllResultsfromPaginatedAPI(language, orderings);
   }
-  console.log('СДЕЛАТЬ ОБРАБОТКУ ОШИБОК');
   return dispatch(fetchPublicationsSuccess(pubs));
 };
 
