@@ -85,9 +85,9 @@ class News extends Component {
 
 // Redux функции state и dispatch
 const mapStateToProps = (state) => {
-  const { news, byTag } = state;
+  const { news } = state;
   const { lang } = state.i18nState;
-  return { news, lang, byTag };
+  return { news, lang };
 };
 
 const mapDispatchToProps = dispatch => bindActionCreators(Object.assign({},
