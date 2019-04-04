@@ -2,7 +2,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Link from 'next/link';
 
 const Button = styled.button`
   height: 3.5rem;
@@ -57,40 +56,24 @@ const Button = styled.button`
 `;
 
 const ArrowButton = ({
-  text, color, onClick, url,
-}) => {
-  if (url) {
-    return (
-      <Link href={url}>
-        <a target="_blank" rel="noopener noreferrer">
-          <Button color={color} text={text} onClick={onClick}>
-            {text}
-            <img src={`/static/arrow_${color}.svg`} alt="Стрелка для кнопки" />
-          </Button>
-        </a>
-      </Link>
-    );
-  }
-  return (
-    <Button color={color} text={text} onClick={onClick}>
-      {text}
-      <img src={`/static/arrow_${color}.svg`} alt="Стрелка для кнопки" />
-    </Button>
-  );
-};
+  text, color, onClick,
+}) => (
+  <Button color={color} text={text} onClick={onClick}>
+    {text}
+    <img src={`/static/arrow_${color}.svg`} alt="Стрелка для кнопки" />
+  </Button>
+);
 
 ArrowButton.propTypes = {
   text: PropTypes.string,
   color: PropTypes.string,
   onClick: PropTypes.func,
-  url: PropTypes.string,
 };
 
 ArrowButton.defaultProps = {
   text: '',
   color: 'fff',
   onClick: () => {},
-  url: '',
 };
 
 export default ArrowButton;
