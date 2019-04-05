@@ -103,10 +103,12 @@ const HR = styled.hr`
 `;
 
 const Publication = (props) => {
-  console.log("publication", props)
+  console.log({ props });
   const { item, searchRequest, searchPage } = props;
-  const resultInTitle = searchRequest && simpleSearch(item.data.title[0], searchRequest, false);
-  const resultInJournal = searchRequest && simpleSearch(item.data.journal_name[0], searchRequest, false);
+  const resultInTitle = searchRequest
+  && simpleSearch(item.data.title[0], searchRequest, false);
+  const resultInJournal = searchRequest
+  && simpleSearch(item.data.journal_name[0], searchRequest, false);
 
   return (
     <Result search={!searchRequest}>
@@ -247,7 +249,7 @@ Publication.propTypes = {
     id: PropTypes.string,
     lang: PropTypes.string,
     type: PropTypes.string,
-  }).isRequired,
+  }),
   searchRequest: PropTypes.string,
   searchPage: PropTypes.bool,
 };
@@ -255,6 +257,20 @@ Publication.propTypes = {
 Publication.defaultProps = {
   searchRequest: '',
   searchPage: false,
+  item: {
+    data: {
+      authors: [],
+      date: '',
+      doi: {
+        url: '',
+      },
+      eprint: [],
+      journal_name: [],
+      journal_url: [],
+      pages: [],
+      title: [],
+    },
+  },
 };
 
 export default Publication;
