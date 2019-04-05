@@ -135,7 +135,7 @@ const Publication = (props) => {
                 {res}
               </span>
             ))
-            : item.data.title[0].text
+            : item.data.title[0] && item.data.title[0].text
             }
         </h1>
       </Title>
@@ -148,7 +148,7 @@ const Publication = (props) => {
                 {res}
               </span>
             ))
-            : item.data.journal_name[0].text
+            : item.data.journal_name[0] && item.data.journal_name[0].text
           }
         </JournalName>
         {item.data.volume
@@ -178,7 +178,7 @@ const Publication = (props) => {
         <Pages>
           pp.:
           {' '}
-          {item.data.pages[0].text}
+          {item.data.pages[0] && item.data.pages[0].text}
         </Pages>
         )
         }
@@ -188,7 +188,7 @@ const Publication = (props) => {
       <Arxiv href={`https://arxiv.org/pdf/${item.data.eprint[0].text}`} target="_blank" rel="noopener noreferer">
           Arxiv:
         {' '}
-        {item.data.eprint[0].text}
+        {item.data.eprint[0] && item.data.eprint[0].text}
       </Arxiv>
       )
 
