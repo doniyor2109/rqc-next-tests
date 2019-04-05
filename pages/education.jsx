@@ -3,9 +3,12 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import cookies from 'next-cookies';
+import { RichText } from 'prismic-reactjs';
+import PrismicConfig from '../prismic-configuration';
 
 import * as educationActions from '../redux/actions/education';
 import * as langActions from '../redux/actions/lang';
+
 
 import EducationHead from '../components/education/EducationHead';
 import EducationPage from '../components/education/EducationPage';
@@ -51,6 +54,8 @@ class Education extends Component {
       fetchEducation, fb_locale, phone, tablet, lang, education,
     } = this.props;
 
+    const { page } = education;
+
     console.log('education', this.props);
 
     return (
@@ -59,6 +64,7 @@ class Education extends Component {
         <div className="container">
           <EducationPage>
             <PageHeading title="Образование" />
+            {RichText.render(page.data.description, PrismicConfig.linkResolver)}
           </EducationPage>
         </div>
       </Fragment>

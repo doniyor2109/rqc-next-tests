@@ -2,13 +2,13 @@ import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
   isFetching: false,
-  items: [],
+  page: [],
 };
 
 function fetchEducationSuccess(state, action) {
-  const items = action.response.results[0];
+  const page = action.response.results[0];
   return {
-    ...state, isFetching: false, items,
+    ...state, isFetching: false, page,
   };
 }
 
