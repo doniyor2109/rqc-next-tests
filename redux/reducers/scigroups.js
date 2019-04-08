@@ -1,4 +1,4 @@
-import * as action_types from "../actions/action_types.js"
+import * as actionTypes from "../actions/actionTypes"
 
 const initialState = {
   isFetching: false,
@@ -14,13 +14,13 @@ function fetchGroupsSuccess(state, action) {
 export const scigroups = (state = initialState, action) => {
   switch (action.type) {
 
-    case action_types.FETCH_SCI_GROUPS_REQUEST:
+    case actionTypes.FETCH_SCI_GROUPS_REQUEST:
       return {...state, isFetching: true };
 
-    case action_types.FETCH_SCI_GROUPS_SUCCESS:
+    case actionTypes.FETCH_SCI_GROUPS_SUCCESS:
       return fetchGroupsSuccess(state, action);
 
-    case action_types.FETCH_SCI_GROUPS_FAILURE:
+    case actionTypes.FETCH_SCI_GROUPS_FAILURE:
       console.log("FETCH_SCI_GROUPS_FAILURE", action.error);
       return { ...state, isFetching: false };
 

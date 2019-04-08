@@ -1,4 +1,4 @@
-import * as action_types from '../actions/action_types.js';
+import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
   isFetchingPubs: false,
@@ -12,13 +12,13 @@ function fetchPublicationsSuccess(state, action) {
 
 export const publications = (state = initialState, action) => {
   switch (action.type) {
-    case action_types.FETCH_PUBLICATIONS_REQUEST:
+    case actionTypes.FETCH_PUBLICATIONS_REQUEST:
       return { ...state, isFetchingPubs: true };
 
-    case action_types.FETCH_PUBLICATIONS_SUCCESS:
+    case actionTypes.FETCH_PUBLICATIONS_SUCCESS:
       return fetchPublicationsSuccess(state, action);
 
-    case action_types.FETCH_PUBLICATIONS_FAILURE:
+    case actionTypes.FETCH_PUBLICATIONS_FAILURE:
       console.log('FETCH_PUBLICATIONS_FAILURE', action.error);
       return { ...state, isFetchingPubs: false };
 

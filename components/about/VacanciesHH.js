@@ -2,7 +2,6 @@ import React, {Fragment} from 'react'
 import Media from 'react-media'
 import VacancyCardHH from './VacancyCardHH'
 import VacancyPopupHH from './VacancyPopupHH'
-import { Loading } from '../shared/loading';
 
 const VacanciesHH = (props) => {
 

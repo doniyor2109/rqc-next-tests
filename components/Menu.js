@@ -59,19 +59,16 @@ const Menu = [
         name: 'Научные группы',
         url: '/research#groups',
       },
-      // {
-      //   name: "Лаборатории",
-      //   url: "/labs"
-      // },
-      // {
-      //   name: "Внешние исследователи",
-      //   url: "/scientists"
-      // },
       {
         name: 'Публикации',
         url: '/publications',
       },
     ],
+  },
+  {
+    name: 'Образование',
+    url: '/education',
+    children: [],
   },
   {
     name: 'Продукты',

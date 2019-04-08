@@ -12,7 +12,7 @@ import * as photoActions from '../redux/actions/photo';
 import * as langActions from '../redux/actions/lang';
 
 // components
-import { Loading } from '../components/shared/loading';
+import Loading from '../components/shared/loading';
 import PhotoPopup from '../components/mediakit/PhotoPopup';
 import PhotoHead from '../components/mediakit/PhotoHead';
 import PhotoType from '../components/mediakit/PhotoPropType';

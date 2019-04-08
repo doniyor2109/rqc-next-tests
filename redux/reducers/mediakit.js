@@ -1,4 +1,4 @@
-import * as action_types from "../actions/action_types.js"
+import * as actionTypes from "../actions/actionTypes"
 
 const initialState = {
   isFetchingPhoto: false,
@@ -38,35 +38,35 @@ export const mediakit = (state = initialState, action) => {
   switch (action.type) {
 
     //photo
-    case action_types.FETCH_PHOTO_GALLERIES_REQUEST:
+    case actionTypes.FETCH_PHOTO_GALLERIES_REQUEST:
       return {...state, isFetchingPhoto: true };
 
-    case action_types.FETCH_PHOTO_GALLERIES_SUCCESS:
+    case actionTypes.FETCH_PHOTO_GALLERIES_SUCCESS:
       return fetchPhotoGalleriesSuccess(state, action);
 
-    case action_types.FETCH_PHOTO_GALLERIES_FAILURE:
+    case actionTypes.FETCH_PHOTO_GALLERIES_FAILURE:
       console.log("FETCH_PHOTO_GALLERIES_FAILURE", action.error);
       return { ...state, isFetchingPhoto: false };
     
     //video
-    case action_types.FETCH_VIDEOS_REQUEST:
+    case actionTypes.FETCH_VIDEOS_REQUEST:
       return {...state, isFetchingVideo: true };
 
-    case action_types.FETCH_VIDEOS_SUCCESS:
+    case actionTypes.FETCH_VIDEOS_SUCCESS:
       return fetchVideoSuccess(state, action);
 
-    case action_types.FETCH_VIDEOS_FAILURE:
+    case actionTypes.FETCH_VIDEOS_FAILURE:
       console.log("FETCH_VIDEO_FAILURE", action.error);
       return { ...state, isFetchingVideo: false };
 
     //presentations
-    case action_types.FETCH_PRESENTATIONS_REQUEST:
+    case actionTypes.FETCH_PRESENTATIONS_REQUEST:
       return {...state, isFetchingPresentations: true };
 
-    case action_types.FETCH_PRESENTATIONS_SUCCESS:
+    case actionTypes.FETCH_PRESENTATIONS_SUCCESS:
       return fetchPresentationsSuccess(state, action);
 
-    case action_types.FETCH_PRESENTATIONS_FAILURE:
+    case actionTypes.FETCH_PRESENTATIONS_FAILURE:
       console.log("FETCH_PRESENTATIONS_FAILURE", action.error);
       return { ...state, isFetchingPresentations: false };
       

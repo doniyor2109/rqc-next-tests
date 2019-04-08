@@ -1,13 +1,13 @@
-import * as action_types from './action_types.js'
+import * as actionTypes from './actionTypes'
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../../prismic-configuration'
 
 // actions for getting data for Main Slider
-export const fetchMainRequest = () => ({ type: action_types.FETCH_MAIN_REQUEST });
+export const fetchMainRequest = () => ({ type: actionTypes.FETCH_MAIN_REQUEST });
 
-export const fetchMainSuccess = (id, response) => ({ type: action_types.FETCH_MAIN_SUCCESS, id, response });
+export const fetchMainSuccess = (id, response) => ({ type: actionTypes.FETCH_MAIN_SUCCESS, id, response });
 
-export const fetchMainFailure = (id, error) => ({ type: action_types.FETCH_MAIN_FAILURE, id, error });
+export const fetchMainFailure = (id, error) => ({ type: actionTypes.FETCH_MAIN_FAILURE, id, error });
 
 export const fetchMain = (id, language) => (dispatch) => {
   dispatch(fetchMainRequest());
@@ -19,11 +19,11 @@ export const fetchMain = (id, language) => (dispatch) => {
 }
 
 // actions for getting data for Sci Slider
-export const fetchMainSciSliderRequest = () => ({ type: action_types.FETCH_MAIN_SCI_SLIDER_REQUEST })
+export const fetchMainSciSliderRequest = () => ({ type: actionTypes.FETCH_MAIN_SCI_SLIDER_REQUEST })
 
-export const fetchMainSciSliderSuccess = (response) => ({ type: action_types.FETCH_MAIN_SCI_SLIDER_SUCCESS, response })
+export const fetchMainSciSliderSuccess = (response) => ({ type: actionTypes.FETCH_MAIN_SCI_SLIDER_SUCCESS, response })
 
-export const fetchMainSciSliderFailure = (error) => ({ type: action_types.FETCH_MAIN_SCI_SLIDER_FAILURE, error })
+export const fetchMainSciSliderFailure = (error) => ({ type: actionTypes.FETCH_MAIN_SCI_SLIDER_FAILURE, error })
 
 export const fetchMainSciSlider = (language) => (dispatch) => {
   dispatch(fetchMainSciSliderRequest());

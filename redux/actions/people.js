@@ -1,5 +1,5 @@
 import Prismic from 'prismic-javascript';
-import * as action_types from './action_types';
+import * as actionTypes from './actionTypes';
 import PrismicConfig from '../../prismic-configuration';
 
 export async function getPeopleContent(lang) {
@@ -12,14 +12,14 @@ export async function getPeopleContent(lang) {
   }
 }
 
-const fetchPeopleRequest = () => ({ type: action_types.FETCH_PEOPLE_REQUEST });
+const fetchPeopleRequest = () => ({ type: actionTypes.FETCH_PEOPLE_REQUEST });
 
 export const fetchPeopleSuccess = response => ({
-  type: action_types.FETCH_PEOPLE_SUCCESS,
+  type: actionTypes.FETCH_PEOPLE_SUCCESS,
   response,
 });
 
-const fetchPeopleError = error => ({ type: action_types.FETCH_PEOPLE_FAILURE, error });
+const fetchPeopleError = error => ({ type: actionTypes.FETCH_PEOPLE_FAILURE, error });
 
 export const fetchPeople = language => async (dispatch) => {
   try {

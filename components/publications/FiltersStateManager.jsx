@@ -10,7 +10,7 @@ import FilterPubs from './FilterPubs';
 import pubType from './PublicationPropTypes';
 import Page from './FiltersStateManagerStyles';
 
-import { uniqArray } from './helpers';
+import { uniqArray } from '../shared/helpers';
 
 
 const propTypes = {

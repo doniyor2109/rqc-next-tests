@@ -3,7 +3,6 @@ import Popup from '../shared/Popup'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as vacanciesActions from '../../redux/actions/vacancies'
-import { Loading } from '../shared/loading'
 
 class VacancyPopupHH extends React.Component {
     

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Media from 'react-media'
 import PropTypes from 'prop-types'
 
-import { NewscardSmall } from '../news/NewscardSmall.js'
+import NewscardSmall from '../news/NewscardSmall'
 import NewsType from '../news/NewsType'
 
 const NewsTeaser = ({articles, phone, tablet}, { t }) => {

@@ -1,4 +1,4 @@
-import * as action_types from "../actions/action_types.js"
+import * as actionTypes from "../actions/actionTypes"
 
 const initialState = {
   isFetchingMain: false,
@@ -29,24 +29,24 @@ export const main = (state = initialState, action) => {
   switch (action.type) {
 
     // reducer for main slider
-    case action_types.FETCH_MAIN_REQUEST:
+    case actionTypes.FETCH_MAIN_REQUEST:
       return {...state, isFetchingMain: true };
 
-    case action_types.FETCH_MAIN_SUCCESS:
+    case actionTypes.FETCH_MAIN_SUCCESS:
       return fetchMainSliderSuccess(state, action);
 
-    case action_types.FETCH_MAIN_FAILURE:
+    case actionTypes.FETCH_MAIN_FAILURE:
       console.log("FETCH_MAIN_sFAILURE", action.error);
       return { ...state, isFetchingMain: false };
 
     // reducer for scientists slider
-    case action_types.FETCH_MAIN_SCI_SLIDER_REQUEST:
+    case actionTypes.FETCH_MAIN_SCI_SLIDER_REQUEST:
       return {...state, isFetchingSci: true };
 
-    case action_types.FETCH_MAIN_SCI_SLIDER_SUCCESS:
+    case actionTypes.FETCH_MAIN_SCI_SLIDER_SUCCESS:
       return fetchMainSciSliderSuccess(state, action);
 
-    case action_types.FETCH_MAIN_SCI_SLIDER_FAILURE:
+    case actionTypes.FETCH_MAIN_SCI_SLIDER_FAILURE:
       console.log("FETCH_MAIN_SCI_SLIDER_FAILURE", action.error);
       return { ...state, isFetchingSci: false };
 

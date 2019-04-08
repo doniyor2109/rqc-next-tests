@@ -1,14 +1,14 @@
-import * as action_types from './action_types.js'
+import * as actionTypes from './actionTypes'
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../../prismic-configuration'
 
 // actions for quering API for a team single document by UID
 
-export const SearchRequest = (text) => ({ type: action_types.SEARCH_REQUEST, text });
+export const SearchRequest = (text) => ({ type: actionTypes.SEARCH_REQUEST, text });
 
-export const SearchSuccess = (text, response) => ({ type: action_types.SEARCH_SUCCESS, text, response });
+export const SearchSuccess = (text, response) => ({ type: actionTypes.SEARCH_SUCCESS, text, response });
 
-export const SearchFailure = (text, error) => ({ type: action_types.SEARCH_FAILURE, text, error });
+export const SearchFailure = (text, error) => ({ type: actionTypes.SEARCH_FAILURE, text, error });
 
 export const Search = (text) => (dispatch) => {
   dispatch(SearchRequest(text));

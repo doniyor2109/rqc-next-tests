@@ -9,7 +9,7 @@ import withReduxStore from '../lib/with-redux-store';
 import Nav from '../components/navbar/Nav';
 import Footer from '../components/Footer';
 import GeneralHead from '../components/GeneralHead';
-import { LoadingFull } from '../components/shared/loadingFull';
+import LoadingFull from '../components/shared/loadingFull';
 
 import { translations } from '../i18n/translations';
 

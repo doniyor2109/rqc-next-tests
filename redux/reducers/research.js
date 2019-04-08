@@ -1,4 +1,4 @@
-import * as action_types from "../actions/action_types.js"
+import * as actionTypes from "../actions/actionTypes"
 
 const initialState = {
   isFetching: false,
@@ -15,13 +15,13 @@ function fetchPageSuccess(state, action) {
 export const research = (state = initialState, action) => {
   switch (action.type) {
 
-    case action_types.FETCH_RESEARCH_PAGE_REQUEST:
+    case actionTypes.FETCH_RESEARCH_PAGE_REQUEST:
       return {...state, isFetching: true };
 
-    case action_types.FETCH_RESEARCH_PAGE_SUCCESS:
+    case actionTypes.FETCH_RESEARCH_PAGE_SUCCESS:
       return fetchPageSuccess(state, action);
 
-    case action_types.FETCH_RESEARCH_PAGE_FAILURE:
+    case actionTypes.FETCH_RESEARCH_PAGE_FAILURE:
       console.log("FETCH_RESEARCH_PAGE_FAILURE", action.error);
       return { ...state, isFetching: false };
 

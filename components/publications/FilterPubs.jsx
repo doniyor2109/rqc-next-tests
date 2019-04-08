@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import pubType from './PublicationPropTypes';
 import SortedPubs from './SortedPubs';
-import { Loading } from '../shared/loading';
+import Loading from '../shared/loading';
 
 function filterPubsbyGroup(pubs, group) {
   return pubs.filter(element => element.data.belongs_to_group

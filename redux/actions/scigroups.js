@@ -1,12 +1,12 @@
-import * as action_types from './action_types.js'
+import * as actionTypes from './actionTypes'
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../../prismic-configuration'
 
-const fetchSciGroupsRequest = () => ({ type: action_types.FETCH_SCI_GROUPS_REQUEST })
+const fetchSciGroupsRequest = () => ({ type: actionTypes.FETCH_SCI_GROUPS_REQUEST })
 
-const fetchSciGroupsSuccess = (response) => ({ type: action_types.FETCH_SCI_GROUPS_SUCCESS, response })
+const fetchSciGroupsSuccess = (response) => ({ type: actionTypes.FETCH_SCI_GROUPS_SUCCESS, response })
 
-const fetchSciGroupsFailure = (error) => ({ type: action_types.FETCH_SCI_GROUPS_FAILURE, error })
+const fetchSciGroupsFailure = (error) => ({ type: actionTypes.FETCH_SCI_GROUPS_FAILURE, error })
 
 export const fetchSciGroups = (language, fetchOnly) => (dispatch) => {
 
