@@ -71,7 +71,7 @@ class MyApp extends App {
         <Provider store={reduxStore}>
           <I18n translations={translations} initialLang={language}>
             <GeneralHead />
-            {/* <LoadingFull isOff /> */}
+            <LoadingFull isOff />
             <Nav cookieConsent={cookieConsent} />
             <Component {...pageProps} phone={phone} tablet={tablet} />
             <Footer />
