@@ -9,7 +9,6 @@ import PrismicConfig from '../prismic-configuration';
 import * as educationActions from '../redux/actions/education';
 import * as langActions from '../redux/actions/lang';
 
-
 import EducationHead from '../components/education/EducationHead';
 import EducationPage from '../components/education/EducationPage';
 import PageHeading from '../components/shared/PageHeading';
@@ -18,7 +17,6 @@ import Projects from '../components/education/Projects';
 
 // Основной компонент, связывающий весь интерфейс страницы /news воедино
 class Education extends Component {
-
   static contextTypes = {
     t: PropTypes.func,
   }
@@ -26,13 +24,43 @@ class Education extends Component {
   static propTypes = {
     lang: PropTypes.string.isRequired,
     phone: PropTypes.bool,
-    tablet: PropTypes.bool,
     fb_locale: PropTypes.string,
+    fetchEducation: PropTypes.func.isRequired,
+    education: PropTypes.shape({
+      isFetching: PropTypes.bool,
+      page: PropTypes.shape({
+        data: PropTypes.shape({
+          description: PropTypes.arrayOf(PropTypes.shape({
+            text: PropTypes.string,
+          })),
+          teamlead: PropTypes.arrayOf(PropTypes.shape({
+            name: PropTypes.arrayOf(PropTypes.shape({
+              text: PropTypes.string,
+            })),
+            projects: PropTypes.arrayOf(PropTypes.shape({
+              text: PropTypes.string,
+            })),
+            group: PropTypes.shape({
+              uid: PropTypes.string,
+            }),
+            email: PropTypes.string,
+            cv: PropTypes.shape({
+              url: PropTypes.string,
+            }),
+          })),
+        }),
+      }),
+    }),
+  }
+
+  static defaultProps = {
+    phone: false,
+    fb_locale: 'ru',
+    education: {},
   }
 
   static defaultProps = {
     phone: true,
-    tablet: false,
     fb_locale: 'ru',
   }
 
@@ -55,6 +83,13 @@ class Education extends Component {
     return { fb_locale };
   }
 
+  componentDidUpdate(prevProps) {
+    const { lang, fetchEducation } = this.props;
+    if (lang !== prevProps.lang) {
+      fetchEducation(lang);
+    }
+  }
+
   render() {
     const {
       fb_locale, education, phone,
@@ -62,9 +97,6 @@ class Education extends Component {
 
     const { t } = this.context;
     const { page } = education;
-
-    console.log('education', this.props);
-
     return (
       <EducationPage>
         <EducationHead fbLocale={fb_locale} />
@@ -77,7 +109,7 @@ class Education extends Component {
             {t('Список дипломных проектов')}
           </H3>
         </div>
-        <Projects items={page.data.teamlead} phone={phone}/>
+        <Projects items={page.data.teamlead} phone={phone} />
       </EducationPage>
     );
   }

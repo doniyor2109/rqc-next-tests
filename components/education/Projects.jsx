@@ -9,7 +9,7 @@ const Section = styled.section`
     margin-top: 3rem;
 `;
 
-const Projects = ({ items, phone }, { t }) => (
+const Projects = ({ items, phone }) => (
   <Section>
     <div className="container">
       <div className="columns is-multiline">
@@ -28,11 +28,13 @@ const Projects = ({ items, phone }, { t }) => (
 );
 
 Projects.propTypes = {
-  items: PropTypes.arrayOf(LeadSection.projectType),
+  items: PropTypes.arrayOf(PropTypes.shape(LeadSection.projectType)),
+  phone: PropTypes.bool,
 };
 
 Projects.defaultProps = {
   items: [],
+  phone: false,
 };
 
 Projects.contextTypes = {

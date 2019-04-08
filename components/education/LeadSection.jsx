@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -94,7 +95,7 @@ const HR = styled.hr`
 
 
 class LeadSection extends React.Component {
-    projectType = PropTypes.shape({
+    projectType = {
       name: PropTypes.arrayOf(PropTypes.shape({
         text: PropTypes.string,
       })),
@@ -108,7 +109,7 @@ class LeadSection extends React.Component {
       cv: PropTypes.shape({
         url: PropTypes.string,
       }),
-    });
+    };
 
     constructor(props) {
       super(props);
@@ -129,7 +130,9 @@ class LeadSection extends React.Component {
     }
 
     render() {
-      const { item, first, last, phone } = this.props;
+      const {
+        item, first, last, phone,
+      } = this.props;
       const { t } = this.context;
       const { themesNumber, buttonPresent } = this.state;
       return (
@@ -151,7 +154,8 @@ class LeadSection extends React.Component {
                 :
                 <Link href={`/team/${item.group.uid}`}>
                   <a>
-                    {item.group.data && RichText.render(item.group.data.groupname, PrismicConfig.linkResolver)}
+                    {item.group.data
+                        && RichText.render(item.group.data.groupname, PrismicConfig.linkResolver)}
                   </a>
                 </Link>
               </div>
@@ -202,13 +206,17 @@ class LeadSection extends React.Component {
 }
 
 LeadSection.propTypes = {
-  item: LeadSection.projectType,
+  item: PropTypes.shape(LeadSection.projectType),
   last: PropTypes.bool,
+  first: PropTypes.bool,
+  phone: PropTypes.bool,
 };
 
 LeadSection.defaultProps = {
   item: {},
   last: false,
+  first: false,
+  phone: false,
 };
 
 LeadSection.contextTypes = {
