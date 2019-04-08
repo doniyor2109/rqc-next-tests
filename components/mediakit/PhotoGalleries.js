@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react'
 import GalleryCard from './GalleryCard'
-import { Loading } from '../shared/loading.js'
+import Loading from '../shared/loading';
 
 class PhotoGalleries extends React.Component {
 

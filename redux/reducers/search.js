@@ -1,4 +1,4 @@
-import * as action_types from "../actions/action_types.js"
+import * as actionTypes from "../actions/actionTypes"
 
 const initialState = {
   isFetching: false,
@@ -20,13 +20,13 @@ function SearchSuccess(state, action) {
 export const search = (state = initialState, action) => {
   switch (action.type) {
 
-    case action_types.SEARCH_REQUEST:
+    case actionTypes.SEARCH_REQUEST:
       return {...state, isFetching: true };
 
-    case action_types.SEARCH_SUCCESS:
+    case actionTypes.SEARCH_SUCCESS:
       return SearchSuccess(state, action);
 
-    case action_types.SEARCH_FAILURE:
+    case actionTypes.SEARCH_FAILURE:
       console.log(action.error);
       return { ...state, isFetching: false };
 

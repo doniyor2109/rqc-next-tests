@@ -1,12 +1,12 @@
-import * as action_types from './action_types.js'
+import * as actionTypes from './actionTypes'
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../../prismic-configuration'
 
-const fetchEventsByTagRequest = (tag) => ({ type: action_types.FETCH_EVENTS_BY_TAG_REQUEST, tag })
+const fetchEventsByTagRequest = (tag) => ({ type: actionTypes.FETCH_EVENTS_BY_TAG_REQUEST, tag })
 
-const fetchEventsByTagSuccess = (tag, response) => ({ type: action_types.FETCH_EVENTS_BY_TAG_SUCCESS, tag, response })
+const fetchEventsByTagSuccess = (tag, response) => ({ type: actionTypes.FETCH_EVENTS_BY_TAG_SUCCESS, tag, response })
 
-const fetchEventsByTagFailure = (tag, error) => ({ type: action_types.FETCH_EVENTS_BY_TAG_FAILURE, tag, error })
+const fetchEventsByTagFailure = (tag, error) => ({ type: actionTypes.FETCH_EVENTS_BY_TAG_FAILURE, tag, error })
 
 
 // запрос для MORE NEWS

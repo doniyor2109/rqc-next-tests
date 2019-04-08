@@ -10,7 +10,7 @@ import * as langActions from '../redux/actions/lang'
 import * as searchActions from '../redux/actions/search'
 
 //components
-import { Loading } from '../components/shared/loading'
+import Loading from '../components/shared/loading';
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../prismic-configuration'
 import SearchForm from '../components/search/SearchForm'

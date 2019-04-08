@@ -1,12 +1,12 @@
-import * as action_types from './action_types.js'
+import * as actionTypes from './actionTypes'
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../../prismic-configuration'
 
-export const fetchResearchPageRequest = () => ({type: action_types.FETCH_RESEARCH_PAGE_REQUEST})
+export const fetchResearchPageRequest = () => ({type: actionTypes.FETCH_RESEARCH_PAGE_REQUEST})
 
-export const fetchResearchPageSuccess = response => ({type: action_types.FETCH_RESEARCH_PAGE_SUCCESS, response}) 
+export const fetchResearchPageSuccess = response => ({type: actionTypes.FETCH_RESEARCH_PAGE_SUCCESS, response}) 
 
-export const fetchResearchPageError = error => ({type: action_types.FETCH_RESEARCH_PAGE_FAILURE, error})
+export const fetchResearchPageError = error => ({type: actionTypes.FETCH_RESEARCH_PAGE_FAILURE, error})
 
 export const fetchResearchPage = language => (dispatch) => {
     dispatch(fetchResearchPageRequest());

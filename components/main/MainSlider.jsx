@@ -3,7 +3,7 @@ import Slider from "react-slick"
 import { Link, RichText } from 'prismic-reactjs'
 import PrismicConfig from '../../prismic-configuration'
 import { Button } from '../shared/Button'
-import { Loading } from '../shared/loading.js'
+import Loading from '../shared/loading';
 import Media from 'react-media'
 
 class MainSlider extends React.Component {

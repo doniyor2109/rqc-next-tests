@@ -19,7 +19,7 @@ import {fetchMainRequest,
 
 import MainSlider from '../components/main/MainSlider'
 import SciSlider from '../components/main/SciSlider'
-import {Loading} from '../components/shared/loading'
+import Loading from '../components/shared/loading';
 import OldSite from '../components/oldSite.js'
 import Products from '../components/main/Products'
 import NewsTeaser from '../components/main/NewsTeaser'

@@ -1,11 +1,11 @@
-import * as action_types from './action_types.js'
+import * as actionTypes from './actionTypes'
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../../prismic-configuration'
 
 // photo
-const fetchPhotoGalleriesRequest = () => ({type: action_types.FETCH_PHOTO_GALLERIES_REQUEST})
-const fetchPhotoGalleriesSuccess = (response) => ({type: action_types.FETCH_PHOTO_GALLERIES_SUCCESS, response}) 
-const fetchPhotoGalleriesError = (error) => ({type: action_types.FETCH_PHOTO_GALLERIES_FAILURE, error})
+const fetchPhotoGalleriesRequest = () => ({type: actionTypes.FETCH_PHOTO_GALLERIES_REQUEST})
+const fetchPhotoGalleriesSuccess = (response) => ({type: actionTypes.FETCH_PHOTO_GALLERIES_SUCCESS, response}) 
+const fetchPhotoGalleriesError = (error) => ({type: actionTypes.FETCH_PHOTO_GALLERIES_FAILURE, error})
 export const fetchPhotoGalleries= (language, pageSize) => (dispatch) => {
     dispatch(fetchPhotoGalleriesRequest());
     return Prismic.getApi(PrismicConfig.apiEndpoint)
@@ -19,9 +19,9 @@ export const fetchPhotoGalleries= (language, pageSize) => (dispatch) => {
   }
 
 // video
-const fetchVideoRequest = () => ({type: action_types.FETCH_VIDEOS_REQUEST})
-const fetchVideoSuccess = (response) => ({type: action_types.FETCH_VIDEOS_SUCCESS, response}) 
-const fetchVideoError = (error) => ({type: action_types.FETCH_VIDEOS_FAILURE, error})
+const fetchVideoRequest = () => ({type: actionTypes.FETCH_VIDEOS_REQUEST})
+const fetchVideoSuccess = (response) => ({type: actionTypes.FETCH_VIDEOS_SUCCESS, response}) 
+const fetchVideoError = (error) => ({type: actionTypes.FETCH_VIDEOS_FAILURE, error})
 export const fetchVideo = (language, pageSize) => (dispatch) => {
     dispatch(fetchVideoRequest());
     return Prismic.getApi(PrismicConfig.apiEndpoint)
@@ -35,9 +35,9 @@ export const fetchVideo = (language, pageSize) => (dispatch) => {
   }
 
 // presentations
-const fetchPresentationsRequest = () => ({type: action_types.FETCH_PRESENTATIONS_REQUEST})
-const fetchPresentationsSuccess = (response) => ({type: action_types.FETCH_PRESENTATIONS_SUCCESS, response}) 
-const fetchPresentationsError = (error) => ({type: action_types.FETCH_PRESENTATIONS_FAILURE, error})
+const fetchPresentationsRequest = () => ({type: actionTypes.FETCH_PRESENTATIONS_REQUEST})
+const fetchPresentationsSuccess = (response) => ({type: actionTypes.FETCH_PRESENTATIONS_SUCCESS, response}) 
+const fetchPresentationsError = (error) => ({type: actionTypes.FETCH_PRESENTATIONS_FAILURE, error})
 export const fetchPresentations = (language, pageSize) => (dispatch) => {
     dispatch(fetchPresentationsRequest());
     return Prismic.getApi(PrismicConfig.apiEndpoint)

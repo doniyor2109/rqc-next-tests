@@ -1,13 +1,13 @@
-import * as action_types from './action_types.js'
+import * as actionTypes from './actionTypes'
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../../prismic-configuration'
 // actions for quering API for multiple documents by type
 
-const fetchEventsRequest = () => ({ type: action_types.FETCH_EVENTS_REQUEST })
+const fetchEventsRequest = () => ({ type: actionTypes.FETCH_EVENTS_REQUEST })
 
-const fetchEventsSuccess = (response) => ({ type: action_types.FETCH_EVENTS_SUCCESS, response })
+const fetchEventsSuccess = (response) => ({ type: actionTypes.FETCH_EVENTS_SUCCESS, response })
 
-const fetchEventsFailure = (error) => ({ type: action_types.FETCH_EVENTS_FAILURE, error })
+const fetchEventsFailure = (error) => ({ type: actionTypes.FETCH_EVENTS_FAILURE, error })
 
 export const fetchEvents = (language, pageSize) => (dispatch) => {
   dispatch(fetchEventsRequest());

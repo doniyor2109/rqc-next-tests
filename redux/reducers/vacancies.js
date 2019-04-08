@@ -1,4 +1,4 @@
-import * as action_types from "../actions/action_types.js"
+import * as actionTypes from "../actions/actionTypes"
 
 const initialState = {
   isFetchingPrismic: false,
@@ -30,36 +30,36 @@ export const vacancies = (state = initialState, action) => {
   switch (action.type) {
 
     // вакансии с призмика
-    case action_types.FETCH_VACANCIES_REQUEST:
+    case actionTypes.FETCH_VACANCIES_REQUEST:
       return {...state, isFetchingPrismic: true };
 
-    case action_types.FETCH_VACANCIES_SUCCESS:
+    case actionTypes.FETCH_VACANCIES_SUCCESS:
       return fetchVacanciesSuccess(state, action);
 
-    case action_types.FETCH_VACANCIES_FAILURE:
+    case actionTypes.FETCH_VACANCIES_FAILURE:
       console.log("FETCH_VACANCIES_FAILURE", action.error);
       return { ...state, isFetchingPrismic: false };
 
 
     // список вакансии с HH
-    case action_types.FETCH_VACANCIESHH_REQUEST:
+    case actionTypes.FETCH_VACANCIESHH_REQUEST:
       return {...state, isFetchingManyHH: true };
 
-    case action_types.FETCH_VACANCIESHH_SUCCESS:
+    case actionTypes.FETCH_VACANCIESHH_SUCCESS:
       return fetchVacanciesHHSuccess(state, action);
 
-    case action_types.FETCH_VACANCIESHH_FAILURE:
+    case actionTypes.FETCH_VACANCIESHH_FAILURE:
       console.log("FETCH_VACANCIESHH_FAILURE", action.error);
       return { ...state, isFetchingManyHH: false };
 
     // одна вакансия с HH
-    case action_types.FETCH_VACANCYHH_REQUEST:
+    case actionTypes.FETCH_VACANCYHH_REQUEST:
       return {...state, isFetchingOneHH: true };
 
-    case action_types.FETCH_VACANCYHH_SUCCESS:
+    case actionTypes.FETCH_VACANCYHH_SUCCESS:
       return fetchVacancyHHSuccess(state, action);
 
-    case action_types.FETCH_VACANCYHH_FAILURE:
+    case actionTypes.FETCH_VACANCYHH_FAILURE:
       console.log("FETCH_VACANCYHH_FAILURE", action.error);
       return { ...state, isFetchingOneHH: false };
 

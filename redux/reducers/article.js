@@ -1,4 +1,4 @@
-import * as action_types from "../actions/action_types.js"
+import * as actionTypes from "../actions/actionTypes"
 
 const initialState = {
   isFetching: false,
@@ -14,13 +14,13 @@ function fetchArticleSuccess(state, action) {
 export const article = (state = initialState, action) => {
   switch (action.type) {
 
-    case action_types.FETCH_ARTICLE_BY_UID_REQUEST:
+    case actionTypes.FETCH_ARTICLE_BY_UID_REQUEST:
       return {...state, isFetching: true };
 
-    case action_types.FETCH_ARTICLE_BY_UID_SUCCESS:
+    case actionTypes.FETCH_ARTICLE_BY_UID_SUCCESS:
       return fetchArticleSuccess(state, action);
 
-    case action_types.FETCH_ARTICLE_BY_UID_FAILURE:
+    case actionTypes.FETCH_ARTICLE_BY_UID_FAILURE:
       console.log("FETCH_ARTICLE_FAILURE", action.error);
       return { ...state, isFetching: false };
 

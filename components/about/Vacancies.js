@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux'
 import PropTypes from 'prop-types'
 
 import * as vacanciesActions from '../../redux/actions/vacancies'
-import { Loading } from '../shared/loading'
+import Loading from '../shared/loading'
 import VacanciesPrismic from './VacanciesPrismic'
 import VacanciesHH from './VacanciesHH'
 

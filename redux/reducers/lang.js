@@ -1,4 +1,4 @@
-import { LANGUAGE_CHANGED_BY_USER, COOKIE_LANGUAGE_CHANGE } from "../actions/action_types.js"
+import { LANGUAGE_CHANGED_BY_USER, COOKIE_LANGUAGE_CHANGE } from "../actions/actionTypes"
 
 const initialState = {
   userClicked: 0

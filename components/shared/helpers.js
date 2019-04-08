@@ -55,3 +55,7 @@ export const filterPubsbyGroup = (pubs, group) => {
   }
   return filteredPubs;
 };
+
+export const getuniqueTags = (arraywithTags) => {
+  return uniqArray(arraywithTags.reduce((acc, val) => acc.concat(val.tags), []))
+}

@@ -1,5 +1,5 @@
 import React,  {Fragment}  from 'react'
-import { Loading } from '../shared/loading'
+import Loading from '../shared/loading';
 import PresentationCard from './PresentationCard'
 
 class Presentations extends React.Component {

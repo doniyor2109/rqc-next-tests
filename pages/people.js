@@ -13,7 +13,7 @@ import {fetchPeopleRequest, fetchPeopleSuccess, fetchPeopleError} from '../redux
 import * as langActions from '../redux/actions/lang'
 
 //components
-import { Loading } from '../components/shared/loading.js'
+import Loading from '../components/shared/loading'
 import { RichText } from 'prismic-reactjs'
 import Prismic from 'prismic-javascript'
 import PrismicConfig from '../prismic-configuration'
