@@ -7,27 +7,26 @@ import PrismicConfig from '../../prismic-configuration';
 import Persona from './Persona';
 
 const Section = styled.div`
-    .people-section {
-        margin-bottom: 8rem;
-        @media (max-width: 768px) {
-            margin-bottom: 12rem;
-        }
-        @media (max-width: 415px) {
-            margin-bottom: 9rem;
-        }
-        h2 {
-          font-family: "DIN Pro", sans-serif;
-          font-size: 1.8rem;
-          margin-bottom: 6rem;
-          text-transform: uppercase;
-          color: #040303;
-        }
-        @media (max-width: 415px) {
-          .button-wrapper {
-            text-align: center;
-          }
-        }
+  margin-bottom: 9rem;
+  @media (max-width: 768px) {
+      margin-bottom: 12rem;
+  }
+  @media (max-width: 415px) {
+      margin-bottom: 9rem;
+  }
+  h2 {
+    font-family: "DIN Pro", sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 6rem;
+    text-transform: uppercase;
+    color: #040303;
+  }
+  @media (max-width: 415px) {
+    .button-wrapper {
+      text-align: center;
+      width: 100%;
     }
+  }
 `;
 
 export default class PeopleSection extends React.Component {
@@ -52,7 +51,7 @@ export default class PeopleSection extends React.Component {
     super(props);
     this.state = {
       moreButtonIsActive: true,
-      personasInMobile: 3,
+      personasInMobile: 6,
     };
     this.moreClick = this.moreClick.bind(this);
   }
@@ -70,36 +69,35 @@ export default class PeopleSection extends React.Component {
     const { item, phone } = this.props;
     const { moreButtonIsActive, personasInMobile } = this.state;
     return (
-      <Section>
-        <div className="people-section" id={item.primary.hash}>
-          {RichText.render(item.primary.team_section, PrismicConfig.linkResolver)}
-          <div className="columns is-multiline">
-            <Media
-              query="(min-width: 416px)"
-              defaultMatches={phone === null}
-              render={() => (
-                <Fragment>
-                  {item.items.map(persona => (
-                    <Persona
-                      item={persona}
-                      key={persona.titles[0] && persona.people_name[0].text}
-                    />
-                  ))}
-                </Fragment>
-              )}
-            />
-            <Media
-              query="(max-width: 415px)"
-              defaultMatches={phone !== null}
-              render={() => (
-                <Fragment>
-                  {item.items.slice(0, personasInMobile).map(persona => (
-                    <Persona
-                      item={persona}
-                      key={persona.titles[0] && persona.titles[0].text}
-                    />
-                  ))}
-                  {(item.items.length > 3)
+      <Section id={item.primary.hash}>
+        {RichText.render(item.primary.team_section, PrismicConfig.linkResolver)}
+        <div className="columns is-multiline is-mobile">
+          <Media
+            query="(min-width: 416px)"
+            defaultMatches={phone === null}
+            render={() => (
+              <Fragment>
+                {item.items.map(persona => (
+                  <Persona
+                    item={persona}
+                    key={persona.titles[0] && persona.people_name[0].text}
+                  />
+                ))}
+              </Fragment>
+            )}
+          />
+          <Media
+            query="(max-width: 415px)"
+            defaultMatches={phone !== null}
+            render={() => (
+              <Fragment>
+                {item.items.slice(0, personasInMobile).map(persona => (
+                  <Persona
+                    item={persona}
+                    key={persona.titles[0] && persona.titles[0].text}
+                  />
+                ))}
+                {(item.items.length > 3)
                     && moreButtonIsActive
                     && (
                     <div
@@ -115,10 +113,9 @@ export default class PeopleSection extends React.Component {
                     </div>
                     )
                 }
-                </Fragment>
-              )}
-            />
-          </div>
+              </Fragment>
+            )}
+          />
         </div>
       </Section>
     );

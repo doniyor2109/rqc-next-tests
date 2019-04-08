@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { RichText } from 'prismic-reactjs';
@@ -14,11 +14,17 @@ const PersonaStyled = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     height:100%;
-
+    margin-bottom: 3rem;
+    
     .portrait {
-        width: 19.5rem;
-        margin-bottom: 4.7rem;
         cursor: pointer;
+        position: relative;
+        margin-bottom: 3rem;
+        button {
+          background: white;
+          right: 0;
+          bottom: 0;
+        }
     }
     .name {
         h3 {
@@ -33,8 +39,6 @@ const PersonaStyled = styled.div`
         p {
             font-size: 1.4rem;
             font-weight: bold;
-            padding-bottom: 1.5rem;
-            margin-bottom: 1.8rem;
         }
     }
     .titles {
@@ -45,18 +49,6 @@ const PersonaStyled = styled.div`
         margin-bottom: 1.8rem;
         overflow-wrap: break-word;
       }
-    }
-    .button_wrap {
-        position: relative;
-        button {
-            height: 3.5rem;
-            width: 3.5rem;
-            position: relative;
-            right: auto;
-            bottom: auto;
-            overflow: hidden;
-            margin-bottom: 6rem;
-        }
     }
 `;
 
@@ -116,27 +108,27 @@ class Persona extends React.Component {
     const { popupIsActive } = this.state;
 
     return (
-      <div className="column is-3-desktop is-4-tablet">
-        <PersonaStyled ref={this.personaRef}>
-          <img
-            className="portrait"
-            src={item.portrait.url}
-            alt={item.people_name}
-            onClick={e => this.handleClick(e, this.personaRef.current.offsetTop)}
-          />
-          <div className="name">
-            {RichText.render(item.people_name, PrismicConfig.linkResolver)}
-          </div>
-          <div className="position">
-            {RichText.render(item.position, PrismicConfig.linkResolver)}
-          </div>
-          <div className="button_wrap">
-            <ArrowButton
-              color="040303"
-              onClick={e => this.handleClick(e, this.personaRef.current.offsetTop)}
-            />
-          </div>
-          {popupIsActive
+      <Fragment>
+        <div className="column is-2-desktop is-3-tablet is-6-mobile">
+          <PersonaStyled ref={this.personaRef}>
+            <div className="portrait">
+              <img
+                src={item.portrait.url}
+                alt={item.people_name}
+                onClick={e => this.handleClick(e, this.personaRef.current.offsetTop)}
+              />
+              <ArrowButton
+                color="040303"
+                onClick={e => this.handleClick(e, this.personaRef.current.offsetTop)}
+              />
+            </div>
+            <div className="name">
+              {RichText.render(item.people_name, PrismicConfig.linkResolver)}
+            </div>
+            <div className="position">
+              {RichText.render(item.position, PrismicConfig.linkResolver)}
+            </div>
+            {popupIsActive
             && (
             <PersonaPopup
               active={popupIsActive}
@@ -145,8 +137,10 @@ class Persona extends React.Component {
             />
             )
           }
-        </PersonaStyled>
-      </div>
+          </PersonaStyled>
+        </div>
+        <div className="column is-1-desktop is-1-tablet is-hidden-mobile" />
+      </Fragment>
     );
   }
 }
