@@ -15,11 +15,11 @@ const GridViewDesktop = ({ news, isFetching }) => {
       {news.map((item, index) => {
         if (index === 0 || index === 9) {
           return <NewscardMedium article={item} key={item.uid} large />;
-        } if (index === 1 || index === 2 || index === 3 || index === 4 || index === 8) {
+        } if (index <= 4 || index === 8) {
           return <NewscardMedium article={item} key={item.uid} />;
-        } if (index === 5 || index === 6 || index === 7) {
-          return <NewscardSmall article={item} key={item.uid} />;
-        } return <NewscardSmall article={item} key={item.uid} />;
+        }
+
+        return <NewscardSmall article={item} key={item.uid} />;
       })}
     </div>
   );

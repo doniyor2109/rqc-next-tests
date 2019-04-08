@@ -18,10 +18,9 @@ const GridViewTablet = ({ news, isFetching }) => {
           return <NewscardMedium article={item} key={item.id} large />;
         } if (index === 1 || index === 2) {
           return <NewscardMedium article={item} key={item.id} />;
-        } if (index === 3 || index === 4 || index === 6
-          || index === 7 || index === 8 || index === 9) {
-          return <NewscardSmall article={item} key={item.id} />;
-        } return <NewscardSmall article={item} key={item.id} />;
+        }
+
+        return <NewscardSmall article={item} key={item.id} />;
       })}
     </div>
   );

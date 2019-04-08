@@ -16,10 +16,9 @@ const GridViewMobile = ({ news, isFetching }) => {
       {news.map((item, index) => {
         if (index === 0 || index === 1 || index === 2 || index === 5) {
           return <NewscardMedium article={item} key={item.id} />;
-        } if (index === 3 || index === 4 || index === 6
-          || index === 7 || index === 8 || index === 9) {
-          return <NewscardSmall article={item} key={item.id} />;
-        } return <NewscardSmall article={item} key={item.id} />;
+        }
+
+        return <NewscardSmall article={item} key={item.id} />;
       })}
     </div>
   );

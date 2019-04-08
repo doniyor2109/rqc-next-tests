@@ -4,15 +4,15 @@ import styled from 'styled-components';
 import FilterTag from '../shared/FilterTag';
 
 const FiltersBlock = styled.div`
-    .captions {
-    color: #040303;
-    margin-top: 6.5rem;
-    font-size: 1.6rem;
-    }
-    .tags {
-        display: block;
-        margin: 3.5rem 0 9rem;
-    }
+  .captions {
+  color: #040303;
+  margin-top: 6.5rem;
+  font-size: 1.6rem;
+  }
+  .tags {
+      display: block;
+      margin: 3.5rem 0 9rem;
+  }
 `;
 
 class Filters extends React.Component {
