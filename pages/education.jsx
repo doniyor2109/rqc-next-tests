@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
@@ -13,10 +13,16 @@ import * as langActions from '../redux/actions/lang';
 import EducationHead from '../components/education/EducationHead';
 import EducationPage from '../components/education/EducationPage';
 import PageHeading from '../components/shared/PageHeading';
-
+import H3 from '../components/shared/styled/H3';
+import Projects from '../components/education/Projects';
 
 // Основной компонент, связывающий весь интерфейс страницы /news воедино
 class Education extends Component {
+
+  static contextTypes = {
+    t: PropTypes.func,
+  }
+
   static propTypes = {
     lang: PropTypes.string.isRequired,
     phone: PropTypes.bool,
@@ -51,23 +57,28 @@ class Education extends Component {
 
   render() {
     const {
-      fetchEducation, fb_locale, phone, tablet, lang, education,
+      fb_locale, education, phone,
     } = this.props;
 
+    const { t } = this.context;
     const { page } = education;
 
     console.log('education', this.props);
 
     return (
-      <Fragment>
+      <EducationPage>
         <EducationHead fbLocale={fb_locale} />
         <div className="container">
-          <EducationPage>
-            <PageHeading title="Образование" />
+          <PageHeading title="Образование" />
+          <div className="description">
             {RichText.render(page.data.description, PrismicConfig.linkResolver)}
-          </EducationPage>
+          </div>
+          <H3>
+            {t('Список дипломных проектов')}
+          </H3>
         </div>
-      </Fragment>
+        <Projects items={page.data.teamlead} phone={phone}/>
+      </EducationPage>
     );
   }
 }

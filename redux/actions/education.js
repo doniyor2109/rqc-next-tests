@@ -20,6 +20,7 @@ export async function getEducationContent(language) {
     const educationContent = await api.query(Prismic.Predicates.at('document.type', 'education'),
       {
         lang: language,
+        fetchLinks: ['science_group.groupname'],
         orderings: '[my.education.teamlead.name]',
       });
     return educationContent;

@@ -15,8 +15,9 @@ export const translations = {
     'Наши партнеры': 'Our partners',
     'Как нас найти': 'Contacts',
     'Люди': 'People',
-    'Руководство': 'Management',
+    "Руководство":"Senior executives",
     'Научный директор': 'Chief scientific officer',
+    "Научный совет":"Scientific committee",
     'Международный консультативный совет': 'International advisory board',
     'Попечительский совет': 'Board of trustees',
     'Исследования': 'Research',
@@ -90,8 +91,7 @@ export const translations = {
     'Приветствуется': 'Will be an asset',
     'Опыт работы': 'Work experience',
     'Занятость': 'Working schedule',
-    'Чтобы откликнуться на вакансию, присылайте резюме, а также портфолио или презентацию по выполненным работам на почту': 'To apply for a job, please mail your CV, as well as portfolio or presentation of works performed to',
-    'Выберите группу': 'Choose scientific group',
+    "Чтобы откликнуться на вакансию, присылайте резюме, а также портфолио или презентацию по выполненным работам на почту": "To apply for a job, please mail your CV as well as portfolio or presentation of works performed to",    'Выберите группу': 'Choose scientific group',
     'Выберите автора': 'Choose author',
     'По вашему запросу ничего не найдено': 'Your search returned no results',
     'У этой научной группы еще не вышло ни одной публикации': 'This scientific group has no publications',
@@ -115,6 +115,12 @@ export const translations = {
     'Фемтосекундный лазер с диодной накачкой': 'Diode-pumped femtosecond laser',
     'Результаты по запросу': 'Search request',
     'Образование': 'Education',
+    "Проекты":"Projects",
+    "Подписаться на мероприятия":"Subscribe to events",
+    'Резюме': 'CV',
+    'Темы дипломного проекта': '',
+    'Научный руководитель': '',
+    
   },
 };
 
