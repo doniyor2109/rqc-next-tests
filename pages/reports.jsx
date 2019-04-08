@@ -9,7 +9,7 @@ import * as aboutActions from '../redux/actions/about';
 import * as langActions from '../redux/actions/lang';
 
 // components
-import { Loading } from '../components/shared/loading';
+import Loading from '../components/shared/loading';
 import ReportCard from '../components/reports/ReportCard';
 import ReportsHead from '../components/reports/ReportHead';
 
