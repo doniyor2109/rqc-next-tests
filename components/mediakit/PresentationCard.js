@@ -2,7 +2,7 @@ import React  from 'react'
 
 import { RichText, Link } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
-import {ArrowButton} from '../news/ArrowButton'
+import ArrowButton from '../shared/ArrowButton'
 
 
 const PresentationCard = ({ item }) => {

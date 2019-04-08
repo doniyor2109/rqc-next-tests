@@ -103,10 +103,12 @@ const HR = styled.hr`
 `;
 
 const Publication = (props) => {
-  console.log("publication", props)
+  console.log({ props });
   const { item, searchRequest, searchPage } = props;
-  const resultInTitle = searchRequest && simpleSearch(item.data.title[0], searchRequest, false);
-  const resultInJournal = searchRequest && simpleSearch(item.data.journal_name[0], searchRequest, false);
+  const resultInTitle = searchRequest
+  && simpleSearch(item.data.title[0], searchRequest, false);
+  const resultInJournal = searchRequest
+  && simpleSearch(item.data.journal_name[0], searchRequest, false);
 
   return (
     <Result search={!searchRequest}>
@@ -135,7 +137,7 @@ const Publication = (props) => {
                 {res}
               </span>
             ))
-            : item.data.title[0].text
+            : item.data.title[0] && item.data.title[0].text
             }
         </h1>
       </Title>
@@ -148,7 +150,7 @@ const Publication = (props) => {
                 {res}
               </span>
             ))
-            : item.data.journal_name[0].text
+            : item.data.journal_name[0] && item.data.journal_name[0].text
           }
         </JournalName>
         {item.data.volume
@@ -178,7 +180,7 @@ const Publication = (props) => {
         <Pages>
           pp.:
           {' '}
-          {item.data.pages[0].text}
+          {item.data.pages[0] && item.data.pages[0].text}
         </Pages>
         )
         }
@@ -188,7 +190,7 @@ const Publication = (props) => {
       <Arxiv href={`https://arxiv.org/pdf/${item.data.eprint[0].text}`} target="_blank" rel="noopener noreferer">
           Arxiv:
         {' '}
-        {item.data.eprint[0].text}
+        {item.data.eprint[0] && item.data.eprint[0].text}
       </Arxiv>
       )
 
@@ -247,7 +249,7 @@ Publication.propTypes = {
     id: PropTypes.string,
     lang: PropTypes.string,
     type: PropTypes.string,
-  }).isRequired,
+  }),
   searchRequest: PropTypes.string,
   searchPage: PropTypes.bool,
 };
@@ -255,6 +257,20 @@ Publication.propTypes = {
 Publication.defaultProps = {
   searchRequest: '',
   searchPage: false,
+  item: {
+    data: {
+      authors: [],
+      date: '',
+      doi: {
+        url: '',
+      },
+      eprint: [],
+      journal_name: [],
+      journal_url: [],
+      pages: [],
+      title: [],
+    },
+  },
 };
 
 export default Publication;

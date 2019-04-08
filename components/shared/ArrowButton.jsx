@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -54,7 +55,9 @@ const Button = styled.button`
 }
 `;
 
-const ArrowButton = ({ text, color, onClick }) => (
+const ArrowButton = ({
+  text, color, onClick,
+}) => (
   <Button color={color} text={text} onClick={onClick}>
     {text}
     <img src={`/static/arrow_${color}.svg`} alt="Стрелка для кнопки" />
