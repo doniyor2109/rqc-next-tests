@@ -174,7 +174,7 @@ class LeadSection extends React.Component {
             {(first || phone)
             && (
             <Title>
-              {t('Темы дипломного проекта')}
+              {t('Темы')}
             </Title>
             )
             }
