@@ -80,7 +80,7 @@ export default class PeopleSection extends React.Component {
                 {item.items.map(persona => (
                   <Persona
                     item={persona}
-                    key={persona.titles[0] && persona.people_name[0].text}
+                    key={persona.people_name[0] && persona.people_name[0].text}
                   />
                 ))}
               </Fragment>
@@ -94,7 +94,7 @@ export default class PeopleSection extends React.Component {
                 {item.items.slice(0, personasInMobile).map(persona => (
                   <Persona
                     item={persona}
-                    key={persona.titles[0] && persona.titles[0].text}
+                    key={persona.people_name[0] && persona.people_name[0].text}
                   />
                 ))}
                 {(item.items.length > 3)

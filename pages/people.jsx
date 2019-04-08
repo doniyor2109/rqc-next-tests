@@ -10,7 +10,7 @@ import * as peopleActions from '../redux/actions/people';
 import * as langActions from '../redux/actions/lang';
 
 // components
-import { Loading } from '../components/shared/loading';
+import Loading from '../components/shared/loading';
 import PeopleHead from '../components/people/PeopleHead';
 import PeopleSection from '../components/people/PeopleSection';
 
@@ -79,7 +79,6 @@ class People extends React.Component {
     render() {
       const { phone, fb_locale, people } = this.props;
       const { page, isFetching } = people;
-
       if (isFetching) return <Loading />;
       return (
         <section className="peoplepage">
@@ -99,13 +98,11 @@ class People extends React.Component {
     }
 }
 
-
 const mapStateToProps = (state) => {
   const { people } = state;
   const { lang } = state.i18nState;
   return { people, lang };
 };
-
 
 const mapDispatchToProps = dispatch => bindActionCreators(Object.assign({},
   peopleActions,

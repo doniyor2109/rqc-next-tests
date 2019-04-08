@@ -73,7 +73,7 @@ class MyApp extends App {
             <GeneralHead />
             <LoadingFull isOff />
             <Nav cookieConsent={cookieConsent} />
-            <Component {...pageProps} phone={phone} tablet={tablet} />
+            <Component {...pageProps} phone={!!phone} tablet={!!tablet} />
             <Footer />
           </I18n>
         </Provider>
