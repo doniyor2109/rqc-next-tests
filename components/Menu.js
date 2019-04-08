@@ -35,7 +35,11 @@ const Menu = [
     children: [
       {
         name: 'Руководство',
-        url: '/people#board',
+        url: '/people#management',
+      },
+      {
+        name: 'Научный совет',
+        url: '/people#scientific-committee',
       },
       {
         name: 'Международный консультативный совет',

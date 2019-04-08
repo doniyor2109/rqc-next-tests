@@ -6,7 +6,7 @@ const initialState = {
 };
 
 function fetchPeopleSuccess(state, action) {
-  const page = action.response.results[0]
+  const page = action.response;
   return { ...state, isFetching: false, page};
 }
 
