@@ -38,7 +38,7 @@ class Nav extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     if (this.props.router.route !== prevProps.router.route) {
-      console.log('nav', this.props.router.route);
+      // console.log('nav', this.props.router.route);
       if (this.props.router.route === '/') {
         this.setState({
           withSlider: true,
