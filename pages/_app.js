@@ -53,12 +53,12 @@ class MyApp extends App {
       document.cookie = `language=${this.props.language};Expires=Wed, 22 Oct 2025 07:28:00 GMT`;
     }
 
-    // Router.events.on('routeChangeStart', () => {
-    //   document.querySelector('.transparent-wall').classList.remove('inactive');
-    // });
-    // Router.events.on('routeChangeComplete', () => {
-    //   document.querySelector('.transparent-wall').classList.add('inactive');
-    // });
+    Router.events.on('routeChangeStart', () => {
+      document.querySelector('.transparent-wall').classList.remove('inactive');
+    });
+    Router.events.on('routeChangeComplete', () => {
+      document.querySelector('.transparent-wall').classList.add('inactive');
+    });
   }
 
   render() {
