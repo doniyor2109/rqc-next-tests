@@ -20,7 +20,7 @@ class People extends React.Component {
     }
 
     static propTypes = {
-      phone: PropTypes.bool,
+      phone: PropTypes.string,
       fb_locale: PropTypes.string,
       people: PropTypes.shape({
         isFetching: PropTypes.bool,
@@ -39,7 +39,7 @@ class People extends React.Component {
     }
 
     static defaultProps = {
-      phone: false,
+      phone: null,
       fb_locale: 'undefined',
       people: {
         isFetching: false,

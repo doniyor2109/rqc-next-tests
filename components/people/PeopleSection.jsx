@@ -39,7 +39,7 @@ export default class PeopleSection extends React.Component {
         hash: PropTypes.string,
       }),
     }),
-    phone: PropTypes.bool,
+    phone: PropTypes.string,
   }
 
   static defaultProps = {
