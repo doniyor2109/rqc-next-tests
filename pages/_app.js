@@ -7,7 +7,7 @@ import I18n from 'redux-i18n';
 import withReduxStore from '../lib/with-redux-store';
 
 import Nav from '../components/navbar/Nav';
-import Footer from '../components/Footer';
+import Footer from '../components/footer/Footer';
 import GeneralHead from '../components/GeneralHead';
 import LoadingFull from '../components/shared/loadingFull';
 

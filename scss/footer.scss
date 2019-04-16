@@ -1,7 +1,6 @@
 
 footer {
-  background-color: #444444;
-  padding: 3.5rem 0 14.5rem;
+
 
 
   .footer_box {
@@ -58,38 +57,12 @@ footer {
 
 
   .footer_menu {
-    display: flex;
-    justify-content: flex-start;
+
 
     
   
     .Menu_column {
-      display: inline-block;
-      width: 13%;
-      margin-right: 2rem;
-  
-      h5 {
-        color: white;
-        font-size: 1.4rem;
-      }
-
-      .footer_menu_hr {
-        background-color:rgba(255,255,255,0.5);
-        height:1px;
-        margin-top: 3.3rem;
-        margin-bottom: 2.4rem;
-      }
-  
-      a.footer-menu-item {
-        display: block;
-        color: white;
-        font-size: 1.2rem;
-        margin-bottom: 1.7rem;
-      }
-  
-      a.footer-menu-item:hover {
-        color: white;
-      }
+      
     }
   }
   .bottom_hr {
@@ -103,40 +76,7 @@ footer {
 }
 
 .partners {
-    display: flex;
-    align-items: center;
-    padding-top: 7rem;
-    justify-content: space-around;
-    flex-direction: row;
-    padding-top: 7rem;
-
-    a:nth-of-type(1) {
-      img {
-        width: 11.8rem;
-        height: 4.6rem;
-      }
-    }
-
-    a:nth-of-type(2) {
-      img {
-        width: 15rem;
-        height: 5.2rem;
-      }
-    }
-
-    a:nth-of-type(3) {
-      img {
-        width: 16.3rem;
-        height:3.6rem;
-      }
-    }
-
-    a:nth-of-type(4) {
-      img {
-      width: 7.1rem;
-      height: 5rem;
-      }
-    }
+    
   }
 
 .right_part {
@@ -172,9 +112,6 @@ footer {
 
 @media (min-width: 416px) and (max-width: 768px){
 
-  footer {
-    padding:5rem 0 11.5rem;
-  }
 
   .left_part {
     height: 39rem;
@@ -184,51 +121,10 @@ footer {
   .middle_part {
     margin-right: 0;
     padding-top: 1rem;
-  
-    .footer_menu {
-      flex-wrap: wrap;
-      .Menu_column {
-        width: 10rem;
-        margin-right: 3rem;
-        margin-bottom: 6rem;
-      }
-
-    }
     .bottom_hr {
       margin-bottom: 0;
     }
   
-    .partners { 
-      padding-top: 8.3rem;
-  
-      a:nth-of-type(1) {
-        img {
-          width: 8rem;
-          height: 3.1rem;
-        }
-      }
-  
-      a:nth-of-type(2) {
-        img {
-          width: 10.9rem;
-          height: 3.8rem;
-        }
-      }
-  
-      a:nth-of-type(3) {
-        img {
-          width: 11.8rem;
-          height: 2.6rem;
-        }
-      }
-  
-      a:nth-of-type(4) {
-        img {
-          width: 4.5rem;
-          height: 3.1rem;
-        }
-      }
-    }
   }
 
   .right_part {
@@ -267,20 +163,10 @@ footer {
         margin-right: 0;
 
         .footer_menu {
-          flex-wrap: wrap;
-          margin-top: 3.5rem;
+
 
           .Menu_column {
-            width: 45%;
-            margin-bottom: 5rem;
-          }
-
-          .Menu_column:nth-child(odd) {
-            margin-right: 3rem;
-          }
-          .Menu_column:nth-child(even) {
-            margin-right: 0;
-          }
+           
         }
 
         .middle_down_mobile {
@@ -356,4 +242,5 @@ footer {
         }
       }
     }
+}
 }
