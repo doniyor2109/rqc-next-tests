@@ -30,7 +30,11 @@ class Contacts extends React.Component {
                                 </a>
                                 <div className="contacts_phone_mail">
                                     <img className="contacts_icon" src="/static/phone_icon.svg" alt="address icon"/>
-                                    {RichText.render(page.data.phone, PrismicConfig.linkResolver)} 
+                                    <div style={{display:'inline-block'}}>
+                                        {RichText.render(page.data.phone_description, PrismicConfig.linkResolver)}
+                                        <br></br>
+                                        {RichText.render(page.data.phone, PrismicConfig.linkResolver)} 
+                                    </div>
                                 </div>
                                 <div className="contacts_phone_mail">
                                     <img className="contacts_icon" src="/static/email_icon.svg" alt="address icon"/>
