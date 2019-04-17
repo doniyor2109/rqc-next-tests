@@ -25,7 +25,7 @@ const Credentials = (props, { t }) => (
     <div className="column is-2-desktop is-2-tablet is-6-mobile">
       <Copyright>
         <p>
-            &copy;2013-
+            &copy;2010-
           {moment(Date.now()).format('YYYY')}
         </p>
         <p>{t('Российский Квантовый Центр')}</p>

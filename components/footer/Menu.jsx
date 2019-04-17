@@ -23,7 +23,10 @@ const FooterMenuItem = ({ children, products }, { t }) => (
 
 FooterMenuItem.propTypes = {
   products: PropTypes.bool,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.arrayOf(PropTypes.shape({
+    url: PropTypes.string,
+    name: PropTypes.string,
+  })).isRequired,
 };
 
 FooterMenuItem.defaultProps = {
