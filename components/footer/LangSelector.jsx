@@ -68,7 +68,7 @@ const Selector = styled.div`
 const LangSelector = ({ lang, switchLanguage }) => (
   <div className="column is-6-mobile is-1-desktop is-1-tablet">
     <Selector>
-      <div className="dropdown is-active">
+      <div className="dropdown is-hoverable">
         <div className="dropdown-trigger">
           <button className="navbar-link" aria-haspopup="true" aria-controls="dropdown-menu-footer" type="button">
             {lang === 'ru' ? 'RU' : 'EN'}

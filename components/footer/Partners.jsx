@@ -17,6 +17,14 @@ const List = styled.div`
         justify-content: space-evenly;
     }
 
+    a {
+      cursor: pointer;
+      img {
+        cursor: pointer;
+
+      }
+    }
+
     a:nth-of-type(1) {
       img {
         width: 8.4rem;
@@ -126,7 +134,7 @@ const Partners = ({ lang }) => (
       {lang === 'ru'
         ? (
           <Fragment>
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a href="http://misis.ru/university/struktura-universiteta/centre/90/" target="_blank" rel="noopener noreferrer">
               <img src="/static/nti.svg" alt="nti logo" />
             </a>
             <a href="http://misis.ru/" target="_blank" rel="noopener noreferrer">
@@ -145,7 +153,7 @@ const Partners = ({ lang }) => (
         ) : (
           <Fragment>
 
-            <a href="" target="_blank" rel="noopener noreferrer">
+            <a href="http://misis.ru/university/struktura-universiteta/centre/90/" target="_blank" rel="noopener noreferrer">
               <img src="/static/nti.svg" alt="nti logo" />
             </a>
             <a href="http://misis.ru/" target="_blank" rel="noopener noreferrer">
