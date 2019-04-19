@@ -57,7 +57,6 @@ const StyledLoading = styled(Loading)`
 
         img {
           animation: rotate 1s linear infinite;
-          width: 100%;
         }
     }
 }
