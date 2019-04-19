@@ -1,5 +1,8 @@
 {
-    "presets": ["next/babel"],
+    "presets": [
+        ["@babel/preset-env",{ modules: false, useBuiltIns: 'entry' }],
+        ["next/babel"]
+    ],
     "plugins": [
         ["styled-components", 
         { 
