@@ -3,12 +3,10 @@
 // import includes from 'core-js/library/fn/string/virtual/includes';
 // import repeat from 'core-js/library/fn/string/virtual/repeat';
 
-
 // Add your polyfills
 // import 'core-js/es6/map';
 // import 'core-js/es6/symbol';
 // import 'core-js/es6/set';
-
 
 import 'core-js/fn/object/assign';
 // import 'core-js/fn/string/ends-with';
