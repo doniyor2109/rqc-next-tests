@@ -65,7 +65,6 @@ class MyApp extends App {
     const {
       Component, pageProps, reduxStore, language, phone, tablet, cookieConsent,
     } = this.props;
-    // console.log("_app", this.props)
     return (
       <Container>
         <Provider store={reduxStore}>
