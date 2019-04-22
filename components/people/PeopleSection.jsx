@@ -4,27 +4,26 @@ import Media from 'react-media';
 import styled from 'styled-components';
 import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
-import Persona from './Persona';
+import Person from './Person';
 
 const Section = styled.div`
-  margin-bottom: 9rem;
-  @media (max-width: 768px) {
-      margin-bottom: 12rem;
-  }
-  @media (max-width: 415px) {
-      margin-bottom: 9rem;
-  }
+  margin-top: 9rem;
+  margin-bottom: 0;
   h2 {
     font-family: "DIN Pro", sans-serif;
     font-size: 1.8rem;
-    margin-bottom: 6rem;
     text-transform: uppercase;
     color: #040303;
   }
+  .section-subtitle {
+    margin-top: 3rem;
+  }
+
   @media (max-width: 415px) {
     .button-wrapper {
       text-align: center;
       width: 100%;
+      margin-top: 4rem;
     }
   }
 `;
@@ -67,20 +66,27 @@ export default class PeopleSection extends React.Component {
 
   render() {
     const { item, phone } = this.props;
+    // console.log({item})
     const { moreButtonIsActive, personasInMobile } = this.state;
     return (
-      <Section id={item.primary.hash}>
-        {RichText.render(item.primary.team_section, PrismicConfig.linkResolver)}
+      <Section>
+        {/* id={item.primary.title[0].text}> */}
+        <div className="section-title">
+          {RichText.render(item.primary.title, PrismicConfig.linkResolver)}
+        </div>
+        <div className="section-subtitle">
+          {RichText.render(item.primary.subtitle, PrismicConfig.linkResolver)}
+        </div>
         <div className="columns is-multiline is-mobile">
           <Media
             query="(min-width: 416px)"
             defaultMatches={phone === null}
             render={() => (
               <Fragment>
-                {item.items.map(persona => (
-                  <Persona
-                    item={persona}
-                    key={persona.people_name[0] && persona.people_name[0].text}
+                {item.items.map(person => (
+                  <Person
+                    item={person}
+                    key={person.person.data.name[0].text}
                   />
                 ))}
               </Fragment>
@@ -91,10 +97,10 @@ export default class PeopleSection extends React.Component {
             defaultMatches={phone !== null}
             render={() => (
               <Fragment>
-                {item.items.slice(0, personasInMobile).map(persona => (
-                  <Persona
-                    item={persona}
-                    key={persona.people_name[0] && persona.people_name[0].text}
+                {item.items.slice(0, personasInMobile).map(person => (
+                  <Person
+                    item={person}
+                    key={person.person.data.name[0].text}
                   />
                 ))}
                 {(item.items.length > 3)

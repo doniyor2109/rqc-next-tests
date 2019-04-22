@@ -13,6 +13,9 @@ import * as langActions from '../redux/actions/lang';
 import Loading from '../components/shared/loading';
 import PeopleHead from '../components/people/PeopleHead';
 import PeopleSection from '../components/people/PeopleSection';
+import PageHeading from '../components/shared/PageHeading';
+import PageDescription from '../components/shared/PageDescription';
+
 
 class People extends React.Component {
     static contextTypes = {
@@ -24,7 +27,7 @@ class People extends React.Component {
       fb_locale: PropTypes.string,
       people: PropTypes.shape({
         isFetching: PropTypes.bool,
-        page: PropTypes.arrayOf(PropTypes.shape({
+        page: PropTypes.shape({
           items: PropTypes.arrayOf(PropTypes.shape),
           primary: PropTypes.shape({
             team_section: PropTypes.arrayOf(PropTypes.shape({
@@ -32,7 +35,7 @@ class People extends React.Component {
             })),
             hash: PropTypes.string,
           }),
-        })),
+        }),
       }),
       lang: PropTypes.string,
       fetchPeople: PropTypes.func.isRequired,
@@ -57,14 +60,8 @@ class People extends React.Component {
 
       // запрос к Prismic через redux actons с добавлением контента в redux store
       const serverFetch = await peopleActions.getPeopleContent(language);
-      const peopleSections = [];
-      Object.keys(serverFetch.data).forEach((key) => {
-        if (key.startsWith('body')) {
-          peopleSections.push(serverFetch.data[key][0]);
-        }
-      });
 
-      reduxStore.dispatch(peopleActions.fetchPeopleSuccess(peopleSections));
+      reduxStore.dispatch(peopleActions.fetchPeopleSuccess(serverFetch));
 
       return {};
     }
@@ -79,15 +76,19 @@ class People extends React.Component {
     render() {
       const { phone, fb_locale, people } = this.props;
       const { page, isFetching } = people;
+      console.log('people', this.props);
       if (isFetching) return <Loading />;
       return (
         <section className="peoplepage">
           <PeopleHead fbLocale={fb_locale} />
           <div className="container">
-            {page.map(section => (
+            <PageHeading title={'Люди'} />
+            <PageDescription description={page.data.description} />
+            {page.data.body.map(section => (
               <PeopleSection
                 item={section}
-                key={section.primary.team_section[0] && section.primary.team_section[0].text}
+                key={(section.primary.title && section.primary.title[0].text)
+                  || (section.primary.subtitle && section.primary.subtitle[0].text)}
                 phone={phone}
               />
             ))}

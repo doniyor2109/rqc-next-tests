@@ -5,7 +5,11 @@ import PrismicConfig from '../../prismic-configuration';
 export async function getPeopleContent(lang) {
   try {
     const api = await Prismic.getApi(PrismicConfig.apiEndpoint);
-    const response = await api.query(Prismic.Predicates.at('document.type', 'people'), { lang });
+    const response = await api.query(Prismic.Predicates.at('document.type', 'people2'),
+      {
+        fetchLinks: ['person.name', 'person.portrait', 'person.position', 'person.titles', 'person.awards'],
+        lang,
+      });
     return response.results[0];
   } catch (error) {
     return { results: null, error };
@@ -25,13 +29,7 @@ export const fetchPeople = language => async (dispatch) => {
   try {
     dispatch(fetchPeopleRequest());
     const peopleContent = await getPeopleContent(language);
-    const peopleSections = [];
-    Object.keys(peopleContent.data).forEach((key) => {
-      if (key.startsWith('body')) {
-        peopleSections.push(peopleContent.data[key][0]);
-      }
-    });
-    return dispatch(fetchPeopleSuccess(peopleSections));
+    return dispatch(fetchPeopleSuccess(peopleContent));
   } catch (error) {
     return dispatch(fetchPeopleError(error));
   }
