@@ -82,14 +82,19 @@ class People extends React.Component {
         <section className="peoplepage">
           <PeopleHead fbLocale={fb_locale} />
           <div className="container">
-            <PageHeading title={'Люди'} />
-            <PageDescription description={page.data.description} />
-            {page.data.body.map(section => (
+            <div className="columns is-multiline">
+              <div className="column is-9-desktop is-12-tablet  is-12-mobile">
+                <PageHeading title={'Люди'} />
+                <PageDescription description={page.data.description} />
+              </div>
+            </div>
+            {page.data.body.map((section, index) => (
               <PeopleSection
                 item={section}
                 key={(section.primary.title && section.primary.title[0].text)
                   || (section.primary.subtitle && section.primary.subtitle[0].text)}
                 phone={phone}
+                structure={index===0}
               />
             ))}
           </div>

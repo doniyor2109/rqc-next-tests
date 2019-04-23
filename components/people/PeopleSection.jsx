@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
 import Person from './Person';
+import RQCStructure from './RQCStructure';
 
 const Section = styled.div`
   margin-top: 9rem;
@@ -39,11 +40,13 @@ export default class PeopleSection extends React.Component {
       }),
     }),
     phone: PropTypes.string,
+    structure: PropTypes.bool,
   }
 
   static defaultProps = {
     item: [],
     phone: null,
+    structure: false,
   }
 
   constructor(props) {
@@ -65,12 +68,11 @@ export default class PeopleSection extends React.Component {
   }
 
   render() {
-    const { item, phone } = this.props;
+    const { item, phone, structure } = this.props;
     // console.log({item})
     const { moreButtonIsActive, personasInMobile } = this.state;
     return (
-      <Section>
-        {/* id={item.primary.title[0].text}> */}
+      <Section id={item.primary.hash && item.primary.hash}>
         <div className="section-title">
           {RichText.render(item.primary.title, PrismicConfig.linkResolver)}
         </div>
@@ -122,6 +124,7 @@ export default class PeopleSection extends React.Component {
               </Fragment>
             )}
           />
+          {structure && <RQCStructure />}
         </div>
       </Section>
     );

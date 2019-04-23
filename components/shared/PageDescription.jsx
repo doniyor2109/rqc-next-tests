@@ -25,8 +25,14 @@ const PageDescription = ({ description }) => (
 );
 
 PageDescription.propTypes = {
-  description: PropTypes.string.isRequired,
+  description: PropTypes.arrayOf(PropTypes.shape({
+    text: PropTypes.string,
+  })),
 };
+
+PageDescription.defaultProps = {
+  description: [],
+}
 
 PageDescription.contextTypes = {
   t: PropTypes.func,
