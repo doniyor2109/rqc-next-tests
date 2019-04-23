@@ -24,6 +24,7 @@ class People extends React.Component {
 
     static propTypes = {
       phone: PropTypes.string,
+      tablet: PropTypes.string,
       fb_locale: PropTypes.string,
       people: PropTypes.shape({
         isFetching: PropTypes.bool,
@@ -43,6 +44,7 @@ class People extends React.Component {
 
     static defaultProps = {
       phone: null,
+      tablet: null,
       fb_locale: 'undefined',
       people: {
         isFetching: false,
@@ -74,9 +76,10 @@ class People extends React.Component {
     }
 
     render() {
-      const { phone, fb_locale, people } = this.props;
+      const {
+        phone, tablet, fb_locale, people,
+      } = this.props;
       const { page, isFetching } = people;
-      console.log('people', this.props);
       if (isFetching) return <Loading />;
       return (
         <section className="peoplepage">
@@ -84,7 +87,7 @@ class People extends React.Component {
           <div className="container">
             <div className="columns is-multiline">
               <div className="column is-9-desktop is-12-tablet  is-12-mobile">
-                <PageHeading title={'Люди'} />
+                <PageHeading title="Люди" />
                 <PageDescription description={page.data.description} />
               </div>
             </div>
@@ -94,7 +97,8 @@ class People extends React.Component {
                 key={(section.primary.title && section.primary.title[0].text)
                   || (section.primary.subtitle && section.primary.subtitle[0].text)}
                 phone={phone}
-                structure={index===0}
+                tablet={tablet}
+                structure={index === 0}
               />
             ))}
           </div>

@@ -78,52 +78,49 @@ const PersPopup = styled.div`
     }
 `;
 
-const PersonPopup = ({ active, close, item }, { t }) => {
-  console.log('popup', item);
-  return (
-
-    <PersPopup>
-      <Popup close={close} active={active}>
-        <div className="columns">
-          <div className="column is-4-desktop is-offset-1-desktop is-6-tablet">
-            <div className="portrait_wraper">
-              <img className="portrait" src={item.portrait.url} alt={item.name[0].text} />
-            </div>
+const PersonPopup = ({ active, close, item }, { t }) => (
+  <PersPopup>
+    <Popup close={close} active={active}>
+      <div className="columns">
+        <div className="column is-4-desktop is-offset-1-desktop is-6-tablet">
+          <div className="portrait_wraper">
+            <img className="portrait" src={item.portrait.url} alt={item.name[0].text} />
           </div>
-          <div className="column is-4-desktop is-6-tablet">
-            <div className="name">
-              {RichText.render(item.name, PrismicConfig.linkResolver)}
-            </div>
-            <div className="position">
-              {RichText.render(item.position, PrismicConfig.linkResolver)}
-            </div>
-            {item.website && item.website.url
+        </div>
+        <div className="column is-4-desktop is-6-tablet">
+          <div className="name">
+            {RichText.render(item.name, PrismicConfig.linkResolver)}
+          </div>
+          <div className="position">
+            {RichText.render(item.position, PrismicConfig.linkResolver)}
+          </div>
+          {item.website && item.website.url
               && (
               <a href={item.website.url}>
                 <ArrowButton text="Персональный сайт" color="3998D1" />
               </a>
               )
           }
-          </div>
         </div>
-        <div className="columns">
-          <div className="column is-11-desktop is-offset-1-desktop">
-            <hr />
-          </div>
+      </div>
+      <div className="columns">
+        <div className="column is-11-desktop is-offset-1-desktop">
+          <hr />
         </div>
-        <div className="columns">
-          <div className={(item.awards && (item.awards[0].text.length > 0))
-            ? 'column is-5-desktop is-offset-1-desktop'
-            : 'column is-10-desktop is-offset-1-desktop is-12-tablet'
+      </div>
+      <div className="columns">
+        <div className={(item.awards && (item.awards[0].text.length > 0))
+          ? 'column is-5-desktop is-offset-1-desktop'
+          : 'column is-10-desktop is-offset-1-desktop is-12-tablet'
                                       }
-          >
-            <img src="/static/bio.svg" className="awards_img" alt="" />
-            <h1>{t('Биография')}</h1>
-            <div className="titles">
-              {RichText.render(item.titles, PrismicConfig.linkResolver)}
-            </div>
+        >
+          <img src="/static/bio.svg" className="awards_img" alt="" />
+          <h1>{t('Биография')}</h1>
+          <div className="titles">
+            {RichText.render(item.titles, PrismicConfig.linkResolver)}
           </div>
-          {item.awards && (item.awards[0].text.length > 0)
+        </div>
+        {item.awards && (item.awards[0].text.length > 0)
           && (
           <div className="column is-4-desktop is-offset-1-desktop">
             <img src="/static/awards.svg" className="awards_img" alt="" />
@@ -134,11 +131,10 @@ const PersonPopup = ({ active, close, item }, { t }) => {
           </div>
           )
           }
-        </div>
-      </Popup>
-    </PersPopup>
-  );
-};
+      </div>
+    </Popup>
+  </PersPopup>
+);
 PersonPopup.contextTypes = {
   t: PropTypes.func,
 };

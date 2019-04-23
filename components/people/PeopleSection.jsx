@@ -40,12 +40,14 @@ export default class PeopleSection extends React.Component {
       }),
     }),
     phone: PropTypes.string,
+    tablet: PropTypes.string,
     structure: PropTypes.bool,
   }
 
   static defaultProps = {
     item: [],
     phone: null,
+    tablet: null,
     structure: false,
   }
 
@@ -68,7 +70,9 @@ export default class PeopleSection extends React.Component {
   }
 
   render() {
-    const { item, phone, structure } = this.props;
+    const {
+      item, phone, tablet, structure,
+    } = this.props;
     // console.log({item})
     const { moreButtonIsActive, personasInMobile } = this.state;
     return (
@@ -124,7 +128,7 @@ export default class PeopleSection extends React.Component {
               </Fragment>
             )}
           />
-          {structure && <RQCStructure />}
+          {structure && <RQCStructure phone={phone} tablet={tablet} />}
         </div>
       </Section>
     );

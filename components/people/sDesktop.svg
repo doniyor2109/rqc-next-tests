@@ -1,60 +1,62 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1050" height="453" viewBox="0 0 1050 453">
   <defs>
-    <polygon id="structure2-b" points="808 155 1048 155 1048 215 808 215"/>
-    <filter id="structure2-a" width="105.8%" height="123.3%" x="-2.9%" y="-8.3%" filterUnits="objectBoundingBox">
+    <polygon id="s-b" points="808 155 1048 155 1048 215 808 215"/>
+    <filter id="s-a" width="105.8%" height="123.3%" x="-2.9%" y="-8.3%" filterUnits="objectBoundingBox">
       <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
       <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
       <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0"/>
     </filter>
-    <path id="structure2-d" d="M510,212 L510,277 L270,277 L270,97 L510,97 L510,162 L521.170386,162 L530,187 L521.170386,212 L510,212 Z"/>
-    <filter id="structure2-c" width="105.4%" height="107.8%" x="-2.7%" y="-2.8%" filterUnits="objectBoundingBox">
+    <path id="s-d" d="M510,212 L510,277 L270,277 L270,97 L510,97 L510,162 L521.170386,162 L530,187 L521.170386,212 L510,212 Z"/>
+    <filter id="s-c" width="105.4%" height="107.8%" x="-2.7%" y="-2.8%" filterUnits="objectBoundingBox">
       <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
       <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
       <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0"/>
     </filter>
-    <path id="structure2-f" d="M240,212 L240,277 L5.68434189e-14,277 L5.68434189e-14,97 L240,97 L240,162 L251.170386,162 L260,187 L251.170386,212 L240,212 Z"/>
-    <filter id="structure2-e" width="105.4%" height="107.8%" x="-2.7%" y="-2.8%" filterUnits="objectBoundingBox">
+    <path id="s-f" d="M240,212 L240,277 L5.68434189e-14,277 L5.68434189e-14,97 L240,97 L240,162 L251.170386,162 L260,187 L251.170386,212 L240,212 Z"/>
+    <filter id="s-e" width="105.4%" height="107.8%" x="-2.7%" y="-2.8%" filterUnits="objectBoundingBox">
       <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
       <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
       <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0"/>
     </filter>
-    <path id="structure2-h" d="M241,51 L241,60 L1,60 L1,0 L241,0 L241,11 L247.170386,11 L256,31 L247.170386,51 L241,51 Z"/>
-    <filter id="structure2-g" width="105.5%" height="123.3%" x="-2.7%" y="-8.3%" filterUnits="objectBoundingBox">
+    <path id="s-h" d="M241,51 L241,60 L1,60 L1,0 L241,0 L241,11 L247.170386,11 L256,31 L247.170386,51 L241,51 Z"/>
+    <filter id="s-g" width="105.5%" height="123.3%" x="-2.7%" y="-8.3%" filterUnits="objectBoundingBox">
       <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
       <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
       <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0"/>
     </filter>
-    <path id="structure2-j" d="M635,320 L635,265.215343 L660,253 L685,265.215343 L685,320 L780,320 L780,385 L539,385 L539,320 L635,320 Z"/>
-    <filter id="structure2-i" width="105.8%" height="110.6%" x="-2.9%" y="-3.8%" filterUnits="objectBoundingBox">
+    <path id="s-j" d="M635,320 L635,265.215343 L660,253 L685,265.215343 L685,320 L780,320 L780,385 L539,385 L539,320 L635,320 Z"/>
+    <filter id="s-i" width="105.8%" height="110.6%" x="-2.9%" y="-3.8%" filterUnits="objectBoundingBox">
       <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
       <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
       <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0"/>
     </filter>
-    <path id="structure2-l" d="M280,320 L510,320 L510,385 L0,385 L0,320 L230,320 L230,311.105529 L255,299 L280,311.105529 L280,320 Z"/>
-    <filter id="structure2-k" width="102.7%" height="116.3%" x="-1.4%" y="-5.8%" filterUnits="objectBoundingBox">
+    <path id="s-l" d="M280,320 L510,320 L510,385 L0,385 L0,320 L230,320 L230,311.105529 L255,299 L280,311.105529 L280,320 Z"/>
+    <filter id="s-k" width="102.7%" height="116.3%" x="-1.4%" y="-5.8%" filterUnits="objectBoundingBox">
       <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
       <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
       <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0"/>
     </filter>
   </defs>
   <g fill="none" fill-rule="evenodd">
-    <use fill="#000" filter="url(#structure2-a)" xlink:href="#structure2-b"/>
-    <use fill="#FFF" xlink:href="#structure2-b"/>
-    <use fill="#000" filter="url(#structure2-c)" xlink:href="#structure2-d"/>
-    <use fill="#FFF" xlink:href="#structure2-d"/>
-    <use fill="#000" filter="url(#structure2-e)" xlink:href="#structure2-f"/>
-    <use fill="#FFF" xlink:href="#structure2-f"/>
+    <use fill="#000" filter="url(#s-a)" xlink:href="#s-b"/>
+    <use fill="#FFF" xlink:href="#s-b"/>
+    <use fill="#000" filter="url(#s-c)" xlink:href="#s-d"/>
+    <use fill="#FFF" xlink:href="#s-d"/>
+    <use fill="#000" filter="url(#s-e)" xlink:href="#s-f"/>
+    <use fill="#FFF" xlink:href="#s-f"/>
     <g transform="translate(539 155)">
-      <use fill="#000" filter="url(#structure2-g)" xlink:href="#structure2-h"/>
-      <use fill="#FFF" xlink:href="#structure2-h"/>
-      <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" text-decoration="underline">
-        <tspan x="55.48" y="16.632">Научные группы</tspan>
-      </text>
+      <use fill="#000" filter="url(#s-g)" xlink:href="#s-h"/>
+      <use fill="#FFF" xlink:href="#s-h"/>
+      <a xlink:href="https://rqc.ru/research#groups"> 
+        <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" text-decoration="underline">
+          <tspan x="55.48" y="36.632">Научные группы</tspan>
+        </text>
+      </a>
     </g>
-    <use fill="#000" filter="url(#structure2-i)" xlink:href="#structure2-j"/>
-    <use fill="#FFF" xlink:href="#structure2-j"/>
-    <use fill="#000" filter="url(#structure2-k)" xlink:href="#structure2-l"/>
-    <use fill="#FFF" xlink:href="#structure2-l"/>
+    <use fill="#000" filter="url(#s-i)" xlink:href="#s-j"/>
+    <use fill="#FFF" xlink:href="#s-j"/>
+    <use fill="#000" filter="url(#s-k)" xlink:href="#s-l"/>
+    <use fill="#FFF" xlink:href="#s-l"/>
     <text fill="#040303" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400">
       <tspan x="25.643" y="70">Внешние органы управления</tspan>
     </text>
@@ -64,37 +66,45 @@
     <text fill="#040303" font-family="DINPro-Regular, DINPro" font-size="18">
       <tspan x="456.883" y="19">СТРУКТУРА РКЦ</tspan>
     </text>
-    <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" text-decoration="underline">
-      <tspan x="53.9" y="221.632">Международный </tspan> <tspan x="28.836" y="239.632">консультативный совет</tspan>
-    </text>
-    <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" text-decoration="underline">
-      <tspan x="32.452" y="141.632">Попечительский совет</tspan>
-    </text>
+    <a xlink:href="https://rqc.ru/people#international-board"> 
+      <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" text-decoration="underline">
+        <tspan x="53.9" y="221.632">Международный </tspan> <tspan x="28.836" y="239.632">консультативный совет</tspan>
+      </text>
+    </a>
+    <a xlink:href="https://rqc.ru/people#board-of-trustees">
+      <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" text-decoration="underline">
+        <tspan x="32.452" y="141.632">Попечительский совет</tspan>
+      </text>
+    </a>
+    <g font-size="16" transform="translate(15 330)">
+      <text fill="#040303" font-family="DINPro-Medium, DINPro" font-weight="400">
+        <tspan x="18.232" y="26.872">Госпрограммы</tspan>
+      </text>
+      <text fill="#040303" font-family="DINPro-Medium, DINPro" font-weight="400">
+        <tspan x="164.304" y="26.872">Частный эндаумент</tspan>
+      </text>
+      <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-weight="bold" text-decoration="underline">
+        <tspan x="336.28" y="16.632">Финансирование </tspan> <tspan x="356.352" y="34.632">банком ГПБ</tspan>
+      </text>
+    </g>
     <text fill="#040303" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400">
-      <tspan x="33.232" y="336.872">Госпрограммы</tspan>
-    </text>
-    <text fill="#040303" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400">
-      <tspan x="179.304" y="336.872">Частный эндаумент</tspan>
-    </text>
-    <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" text-decoration="underline">
-      <tspan x="351.28" y="336.632">Финансирование </tspan> <tspan x="371.352" y="354.632">банком ГПБ</tspan>
-    </text>
-    <text fill="#040303" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400">
-      <tspan x="555.324" y="336.872">Исследовательские гранты</tspan>
+      <tspan x="555.324" y="356.872">Исследовательские гранты</tspan>
     </text>
     <g stroke="#040303" transform="translate(115 161)">
       <polyline points="4.1 30.6 7.9 36.1 4.1 41.6" transform="rotate(90 6 36.1)"/>
       <path d="M-13,19 L25,19" transform="rotate(90 6 19)"/>
     </g>
     <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" text-decoration="underline">
-      <tspan x="891.968" y="171.632">Проекты </tspan> <tspan x="850.936" y="189.632">коммерциализации</tspan>
+      <tspan x="891.968" y="181.632">Проекты </tspan> <tspan x="850.936" y="199.632">коммерциализации</tspan>
     </text>
     <text fill="#040303" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400">
       <tspan x="286.603" y="70">Внутренние органы управления</tspan>
     </text>
-    <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" text-decoration="underline">
-      <tspan x="330.212" y="250.632">Научный совет</tspan>
-    </text>
+    <a xlink:href="https://rqc.ru/people#scientific-committee"> 
+      <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" text-decoration="underline">
+        <tspan x="330.212" y="250.632">Научный совет</tspan>
+      </text>
+    </a>
     <text fill="#040303" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400">
       <tspan x="317.172" y="129.872">Научный директор</tspan>
     </text>

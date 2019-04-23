@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1056" height="440" viewBox="0 0 1056 440">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1050" height="453" viewBox="0 0 1050 453">
   <defs>
     <polygon id="structure-b" points="808 155 1048 155 1048 215 808 215"/>
     <filter id="structure-a" width="105.8%" height="123.3%" x="-2.9%" y="-8.3%" filterUnits="objectBoundingBox">
@@ -30,8 +30,14 @@
       <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
       <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0"/>
     </filter>
+    <path id="structure-l" d="M280,320 L510,320 L510,385 L0,385 L0,320 L230,320 L230,311.105529 L255,299 L280,311.105529 L280,320 Z"/>
+    <filter id="structure-k" width="102.7%" height="116.3%" x="-1.4%" y="-5.8%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+      <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0"/>
+    </filter>
   </defs>
-  <g fill="none" fill-rule="evenodd" transform="translate(4 -6)">
+  <g fill="none" fill-rule="evenodd">
     <use fill="#000" filter="url(#structure-a)" xlink:href="#structure-b"/>
     <use fill="#FFF" xlink:href="#structure-b"/>
     <use fill="#000" filter="url(#structure-c)" xlink:href="#structure-d"/>
@@ -42,11 +48,13 @@
       <use fill="#000" filter="url(#structure-g)" xlink:href="#structure-h"/>
       <use fill="#FFF" xlink:href="#structure-h"/>
       <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" text-decoration="underline">
-        <tspan x="55.48" y="16.632">Научные группы</tspan>
+        <tspan x="55.48" y="36.632">Научные группы</tspan>
       </text>
     </g>
     <use fill="#000" filter="url(#structure-i)" xlink:href="#structure-j"/>
     <use fill="#FFF" xlink:href="#structure-j"/>
+    <use fill="#000" filter="url(#structure-k)" xlink:href="#structure-l"/>
+    <use fill="#FFF" xlink:href="#structure-l"/>
     <text fill="#040303" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400">
       <tspan x="25.643" y="70">Внешние органы управления</tspan>
     </text>
@@ -62,24 +70,26 @@
     <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" text-decoration="underline">
       <tspan x="32.452" y="141.632">Попечительский совет</tspan>
     </text>
+    <g font-size="16" transform="translate(15 330)">
+      <text fill="#040303" font-family="DINPro-Medium, DINPro" font-weight="400">
+        <tspan x="18.232" y="26.872">Госпрограммы</tspan>
+      </text>
+      <text fill="#040303" font-family="DINPro-Medium, DINPro" font-weight="400">
+        <tspan x="164.304" y="26.872">Частный эндаумент</tspan>
+      </text>
+      <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-weight="bold" text-decoration="underline">
+        <tspan x="336.28" y="16.632">Финансирование </tspan> <tspan x="356.352" y="34.632">банком ГПБ</tspan>
+      </text>
+    </g>
     <text fill="#040303" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400">
-      <tspan x="33.232" y="336.872">Госпрограммы</tspan>
-    </text>
-    <text fill="#040303" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400">
-      <tspan x="179.304" y="336.872">Частный эндаумент</tspan>
-    </text>
-    <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" text-decoration="underline">
-      <tspan x="351.28" y="336.632">Финансирование </tspan> <tspan x="371.352" y="354.632">банком ГПБ</tspan>
-    </text>
-    <text fill="#040303" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400">
-      <tspan x="555.324" y="336.872">Исследовательские гранты</tspan>
+      <tspan x="555.324" y="356.872">Исследовательские гранты</tspan>
     </text>
     <g stroke="#040303" transform="translate(115 161)">
       <polyline points="4.1 30.6 7.9 36.1 4.1 41.6" transform="rotate(90 6 36.1)"/>
       <path d="M-13,19 L25,19" transform="rotate(90 6 19)"/>
     </g>
     <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" text-decoration="underline">
-      <tspan x="891.968" y="171.632">Проекты </tspan> <tspan x="850.936" y="189.632">коммерциализации</tspan>
+      <tspan x="891.968" y="181.632">Проекты </tspan> <tspan x="850.936" y="199.632">коммерциализации</tspan>
     </text>
     <text fill="#040303" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400">
       <tspan x="286.603" y="70">Внутренние органы управления</tspan>

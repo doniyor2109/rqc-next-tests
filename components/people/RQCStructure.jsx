@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -53,10 +54,11 @@ class RQCStructure extends React.Component {
   render() {
     const { t } = this.context;
     const { popupIsActive } = this.state;
+    const { phone, tablet } = this.props;
     return (
       <div className="column is-3-desktop is-6-tablet is-12-mobile">
-          <a onClick={e => this.showPopup(e)}>
-        <StructureCard>
+        <a onClick={e => this.showPopup(e)} role="button" tabIndex="-1">
+          <StructureCard>
             <h3>
               {t('Структура Российского Квантового Центра')}
             </h3>
@@ -64,16 +66,27 @@ class RQCStructure extends React.Component {
               {t('Система управления и источники финансирования')}
             </p>
             <ArrowButton color="ffffff" onClick={this.showPopup} />
-        </StructureCard>
-          </a>
-        <RQCStructurePopup close={this.closePopup} active={popupIsActive} />
+          </StructureCard>
+        </a>
+        <RQCStructurePopup
+          close={this.closePopup}
+          active={popupIsActive}
+          phone={phone}
+          tablet={tablet}
+        />
       </div>
     );
   }
 }
 
 RQCStructure.propTypes = {
+  phone: PropTypes.string,
+  tablet: PropTypes.string,
+};
 
+RQCStructure.defaultProps = {
+  phone: null,
+  tablet: null,
 };
 
 RQCStructure.contextTypes = {
