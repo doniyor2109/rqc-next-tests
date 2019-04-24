@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Media from 'react-media';
 import styled from 'styled-components';
 import Popup from '../shared/Popup';
-import StructureDesktop from './sDesktop.svg';
-import StructureTablet from './sTablet.svg';
-import StructureMobile from './sMobile22.svg';
+import StructureDesktop from './desktop.svg';
+import StructureTablet from './tablet.svg';
+import StructureMobile from './mobile.svg';
 
 const StyledPopup = styled.div`
     .modal-content {
@@ -19,7 +19,6 @@ const StyledPopup = styled.div`
         }
     }
 `;
-
 const RQCStructurePopup = ({
   active, close, phone, tablet,
 }) => (
