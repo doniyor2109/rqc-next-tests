@@ -50,14 +50,14 @@
                         <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
                         <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
                     </g>
-                    <a xlink:href="/people#international-board"> 
+                    <a xlink:href="/people#international-board" target="_blank" rel="noopener noreferrer"> 
                         <text id="Международный-консул-Copy" font-family="DINPro-Bold, DINPro" font-size="14" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
                             <tspan x="12.137" y="128">Международный </tspan>
                             <tspan x="9.869" y="146">консультативный </tspan>
                             <tspan x="49.461" y="164">совет</tspan>
                         </text>
                     </a>
-                    <a xlink:href="/people#board-of-trustees">
+                    <a xlink:href="/people#board-of-trustees" target="_blank" rel="noopener noreferrer">
                         <text id="Попечительский-совет-Copy" font-family="DINPro-Bold, DINPro" font-size="14" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
                             <tspan x="13.033" y="38">Попечительский </tspan>
                             <tspan x="49.461" y="56">совет</tspan>
@@ -73,7 +73,7 @@
                         <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
                         <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
                     </g>
-                    <a xlink:href="/people#scientific-committee"> 
+                    <a xlink:href="/people#scientific-committee" target="_blank" rel="noopener noreferrer"> 
                         <text id="Научный-совет-Copy" font-family="DINPro-Bold, DINPro" font-size="14" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
                             <tspan x="18.535" y="174">Научный совет</tspan>
                         </text>
@@ -119,7 +119,7 @@
                         <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
                         <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
                     </g>
-                    <a xlink:href="/research#groups"> 
+                    <a xlink:href="/research#groups" target="_blank" rel="noopener noreferrer"> 
                         <text id="Научные-группы" font-family="DINPro-Bold, DINPro" font-size="14" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
                             <tspan x="15.582" y="33">Научные группы</tspan>
                         </text>
@@ -130,7 +130,7 @@
                         <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
                         <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-7"></use>
                     </g>
-                    <a xlink:href="/#products">
+                    <a xlink:href="/#products" target="_blank" rel="noopener noreferrer">
                         <text id="Проекты-комерциализа" font-family="DINPro-Bold, DINPro" font-size="14" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
                             <tspan x="41.384" y="23">Проекты </tspan>
                             <tspan x="10.22" y="41">комерциализации</tspan>

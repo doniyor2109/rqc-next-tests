@@ -47,7 +47,7 @@
     <g transform="translate(539 155)">
       <use fill="#000" filter="url(#s-g)" xlink:href="#s-h"/>
       <use fill="#FFF" xlink:href="#s-h"/>
-      <a xlink:href="/research#groups"> 
+      <a xlink:href="/research#groups" target="_blank" rel="noopener noreferrer"> 
         <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" text-decoration="underline">
           <tspan x="55.48" y="36.632">Научные группы</tspan>
         </text>
@@ -66,12 +66,12 @@
     <text fill="#040303" font-family="DINPro-Regular, DINPro" font-size="18">
       <tspan x="456.883" y="19">СТРУКТУРА РКЦ</tspan>
     </text>
-    <a xlink:href="/people#international-board"> 
+    <a xlink:href="/people#international-board" target="_blank" rel="noopener noreferrer"> 
       <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" text-decoration="underline">
         <tspan x="53.9" y="221.632">Международный </tspan> <tspan x="28.836" y="239.632">консультативный совет</tspan>
       </text>
     </a>
-    <a xlink:href="/people#board-of-trustees">
+    <a xlink:href="/people#board-of-trustees" target="_blank" rel="noopener noreferrer">
       <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" text-decoration="underline">
         <tspan x="32.452" y="141.632">Попечительский совет</tspan>
       </text>
@@ -96,7 +96,7 @@
       <polyline points="4.1 30.6 7.9 36.1 4.1 41.6" transform="rotate(90 6 36.1)"/>
       <path d="M-13,19 L25,19" transform="rotate(90 6 19)"/>
     </g>
-    <a xlink:href="/#products">
+    <a xlink:href="/#products" target="_blank" rel="noopener noreferrer">
       <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" text-decoration="underline">
         <tspan x="891.968" y="181.632">Проекты </tspan> <tspan x="850.936" y="199.632">коммерциализации</tspan>
       </text>
@@ -104,7 +104,7 @@
     <text fill="#040303" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400">
       <tspan x="286.603" y="70">Внутренние органы управления</tspan>
     </text>
-    <a xlink:href="/people#scientific-committee"> 
+    <a xlink:href="/people#scientific-committee" target="_blank" rel="noopener noreferrer"> 
       <text fill="#3998D1" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" text-decoration="underline">
         <tspan x="330.212" y="250.632">Научный совет</tspan>
       </text>

@@ -109,7 +109,7 @@ export default class PeopleSection extends React.Component {
                     key={person.person.data.name[0].text}
                   />
                 ))}
-                {(item.items.length > 3)
+                {(item.items.length > personasInMobile)
                     && moreButtonIsActive
                     && (
                     <div
