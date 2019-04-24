@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import ring from './ring2.svg';
+import Ring from './ring2.svg';
 
 const propTypes = {
   className: PropTypes.string.isRequired,
@@ -12,10 +12,10 @@ const Loading = ({ className }) => (
   <div className={className}>
     <div className="loading">
       <div className="loading__ring">
-        <img src={ring} />
+        <Ring />
       </div>
       <div className="loading__ring">
-        <img src={ring} />
+        <Ring />
       </div>
     </div>
   </div>
@@ -50,12 +50,12 @@ const StyledLoading = styled(Loading)`
         &:last-child {
           transform: skew(-30deg,-20deg) scale(-1, 1);
 
-          img {
+          svg {
             animation-delay: -0.5s;
           }
         }
 
-        img {
+        svg {
           animation: rotate 1s linear infinite;
         }
     }
