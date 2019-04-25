@@ -128,7 +128,7 @@ export default class PeopleSection extends React.Component {
               </Fragment>
             )}
           />
-          {structure && <RQCStructure phone={phone} tablet={tablet} />}
+          {/* {structure && <RQCStructure phone={phone} tablet={tablet} />} */}
         </div>
       </Section>
     );
