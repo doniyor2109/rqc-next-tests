@@ -44,6 +44,9 @@ const PersonStyled = styled.div`
           line-height: 1.8rem;
           font-weight: bold;
       }
+      a {
+        color: #3998D1;
+      }
   }
   .titles {
     p {

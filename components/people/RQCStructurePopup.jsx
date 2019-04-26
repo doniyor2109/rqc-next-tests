@@ -19,12 +19,17 @@ const StyledPopup = styled.div`
             padding: 6rem 0;
             height: 90%;
             max-height: 90%;
+            .container {
+              padding: 0;
+            }
         }
         svg {
+          width: 100%;
           text {
             font-family: 'DIN Pro';
           }
         }
+      
     }
 `;
 const RQCStructurePopup = ({
