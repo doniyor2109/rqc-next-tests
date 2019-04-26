@@ -34,12 +34,6 @@ class Nav extends Component {
         withSlider: true,
       });
     }
-    const { hash } = window.location;
-    console.log({hash})
-    const elmnt = document.getElementById(hash.slice(1));
-    if (elmnt) {
-      elmnt.scrollIntoView();
-    }
   }
 
   componentDidUpdate(prevProps, prevState) {

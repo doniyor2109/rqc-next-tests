@@ -29,6 +29,7 @@ class Research extends React.Component {
     }
     
     componentDidMount() {
+
         this.props.fetchSciGroups(this.props.lang)
         this.props.fetchResearchPage(this.props.lang)
         this.props.fetchPublicationsforResearch(this.props.lang, 3)
@@ -36,6 +37,11 @@ class Research extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
+        const { hash } = window.location;
+        const elmnt = document.getElementById(hash.slice(1));
+        if (elmnt) {
+          elmnt.scrollIntoView();
+        }
         if (this.props.lang !== prevProps.lang) {
             this.props.fetchSciGroups(this.props.lang)
             this.props.fetchResearchPage(this.props.lang)

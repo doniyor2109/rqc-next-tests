@@ -72,6 +72,7 @@ class Index extends React.Component {
     this.setState({
       DOMLoaded: true,
     });
+
     fetchProducts(lang);
     fetchMainSciSlider(lang);
     fetchEvents(lang, 2);
@@ -82,7 +83,11 @@ class Index extends React.Component {
     const {
       fetchNews, fetchMain, fetchEvents, fetchMainSciSlider, fetchProducts, lang,
     } = this.props;
-
+    const { hash } = window.location;
+    const elmnt = document.getElementById(hash.slice(1));
+    if (elmnt) {
+      elmnt.scrollIntoView();
+    }
     if (lang !== prevProps.lang) {
       if (lang === 'en-gb') {
         fetchMain('W3GV8SQAACQAZAwG', 'en-gb');

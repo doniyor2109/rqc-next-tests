@@ -59,7 +59,11 @@ class About extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-
+        const { hash } = window.location;
+        const elmnt = document.getElementById(hash.slice(1));
+        if (elmnt) {
+          elmnt.scrollIntoView();
+        }
         // обработка смены языка
         if (this.props.lang !== prevProps.lang) {
           this.props.fetchAbout(this.props.lang)
