@@ -77,22 +77,28 @@
             <text id="STRUCTURE-OF-THE-RQC" font-family="DINPro-Regular, DINPro" font-size="18" font-weight="normal" line-spacing="25" fill="#040303">
                 <tspan x="420.242" y="19">STRUCTURE OF THE RQC</tspan>
             </text>
-            <text id="International-adviso" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
-                <tspan x="39" y="227">International advisory </tspan>
-                <tspan x="98.016" y="245">board</tspan>
-            </text>
-            <text id="Board-of-trustees" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
-                <tspan x="56" y="137">Board of trustees</tspan>
-            </text>
+            <a xlink:href="/people#international-board" target="_blank" rel="noopener noreferrer"> 
+                <text id="International-adviso" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="39" y="227">International advisory </tspan>
+                    <tspan x="98.016" y="245">board</tspan>
+                </text>
+            </a>
+            <a xlink:href="/people#board-of-trustees" target="_blank" rel="noopener noreferrer">
+                <text id="Board-of-trustees" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="56" y="137">Board of trustees</tspan>
+                </text>
+            </a>
             <text id="State-program" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400" line-spacing="18" fill="#040303">
                 <tspan x="29" y="356">State program</tspan>
             </text>
             <text id="Private-endowment" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400" line-spacing="18" fill="#040303">
                 <tspan x="176" y="356">Private endowment</tspan>
             </text>
-            <text id="Financing-by-GPB" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
-                <tspan x="357" y="356">Financing by GPB</tspan>
-            </text>
+            <a xlink:href=" https://www.gazprombank.ru/" target="_blank" rel="noopener noreferrer">
+                <text id="Financing-by-GPB" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="357" y="356">Financing by GPB</tspan>
+                </text>
+            </a>
             <text id="Research-grants" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400" line-spacing="18" fill="#040303">
                 <tspan x="600" y="354">Research grants</tspan>
             </text>
@@ -100,19 +106,25 @@
                 <polyline id="Path-3-Copy-7" transform="translate(6.000000, 36.100000) rotate(-270.000000) translate(-6.000000, -36.100000) " points="4.1 30.6 7.9 36.1 4.1 41.6"></polyline>
                 <path d="M-13,19 L25,19" id="Path-2-Copy-2" transform="translate(6.000000, 19.000000) rotate(-270.000000) translate(-6.000000, -19.000000) "></path>
             </g>
-            <text id="Scientific-groups" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
-                <tspan x="599" y="187">Scientific groups</tspan>
-            </text>
-            <text id="Commercialization-pr" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
-                <tspan x="860" y="178">Commercialization </tspan>
-                <tspan x="898.784" y="196">projects</tspan>
-            </text>
+            <a xlink:href="/research#groups" target="_blank" rel="noopener noreferrer"> 
+                <text id="Scientific-groups" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="599" y="187">Scientific groups</tspan>
+                </text>
+            </a>
+            <a xlink:href="/#products" target="_blank" rel="noopener noreferrer"
+                <text id="Commercialization-pr" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="860" y="178">Commercialization </tspan>
+                    <tspan x="898.784" y="196">projects</tspan>
+                </text>
+            </a>
             <text id="Internal-governing-b" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="25" fill="#040303">
                 <tspan x="309" y="70">Internal governing bodies</tspan>
             </text>
-            <text id="Scientific-committee" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
-                <tspan x="317" y="252">Scientific committee</tspan>
-            </text>
+            <a xlink:href="/people#scientific-committee" target="_blank" rel="noopener noreferrer"> 
+                <text id="Scientific-committee" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="317" y="252">Scientific committee</tspan>
+                </text>
+            </a>
             <text id="Scientific-director" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400" line-spacing="18" fill="#040303">
                 <tspan x="329" y="127">Scientific director</tspan>
             </text>

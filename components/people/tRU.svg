@@ -51,13 +51,17 @@
             <text id="Внешние-органы-управ" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="25" fill="#040303">
                 <tspan x="81.143" y="27">Внешние органы управления</tspan>
             </text>
-            <text id="Международный-консул" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
-                <tspan x="112.064" y="174">Международный </tspan>
-                <tspan x="87" y="192">консультативный совет</tspan>
-            </text>
-            <text id="Попечительский-совет-Copy" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
-                <tspan x="87" y="94">Попечительский совет</tspan>
-            </text>
+            <a xlink:href="/people#international-board" target="_blank" rel="noopener noreferrer"> 
+                <text id="Международный-консул" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="112.064" y="174">Международный </tspan>
+                    <tspan x="87" y="192">консультативный совет</tspan>
+                </text>
+            </a>
+            <a xlink:href="/people#board-of-trustees" target="_blank" rel="noopener noreferrer">
+                <text id="Попечительский-совет-Copy" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="87" y="94">Попечительский совет</tspan>
+                </text>
+            </a>
             <g id="Group-11-Copy" transform="translate(170.000000, 113.000000)" stroke="#040303">
                 <polyline id="Path-3-Copy-7" transform="translate(6.000000, 36.100000) rotate(-270.000000) translate(-6.000000, -36.100000) " points="4.1 30.6 7.9 36.1 4.1 41.6"></polyline>
                 <path d="M-13,19 L25,19" id="Path-2-Copy-2" transform="translate(6.000000, 19.000000) rotate(-270.000000) translate(-6.000000, -19.000000) "></path>
@@ -69,9 +73,11 @@
             <text id="Внутренние-органы-уп" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="25" fill="#040303">
                 <tspan x="72.103" y="297">Внутренние органы управления</tspan>
             </text>
-            <text id="Научный-совет-Copy" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
-                <tspan x="120" y="476">Научный совет</tspan>
-            </text>
+            <a xlink:href="/people#scientific-committee" target="_blank" rel="noopener noreferrer"> 
+                <text id="Научный-совет-Copy" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="120" y="476">Научный совет</tspan>
+                </text>
+            </a>
             <text id="Научный-директор-Copy" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400" line-spacing="18" fill="#040303">
                 <tspan x="108" y="354">Научный директор</tspan>
             </text>
@@ -106,17 +112,21 @@
                 <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
                 <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
             </g>
-            <text id="Научные-группы" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
-                <tspan x="110" y="584">Научные группы</tspan>
-            </text>
+            <a xlink:href="/research#groups" target="_blank" rel="noopener noreferrer"> 
+                <text id="Научные-группы" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="110" y="584">Научные группы</tspan>
+                </text>
+            </a>
             <g id="Combined-Shape-Copy-8">
                 <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
                 <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-7"></use>
             </g>
-            <text id="Проекты-коммерциализ" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
-                <tspan x="142.032" y="679">Проекты </tspan>
-                <tspan x="101" y="697">коммерциализации</tspan>
-            </text>
+            <a xlink:href="/#products" target="_blank" rel="noopener noreferrer">
+                <text id="Проекты-коммерциализ" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="142.032" y="679">Проекты </tspan>
+                    <tspan x="101" y="697">коммерциализации</tspan>
+                </text>
+            </a>
             <g id="Combined-Shape" transform="translate(429.500000, 282.000000) rotate(-90.000000) translate(-429.500000, -282.000000) ">
                 <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
                 <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-9"></use>
@@ -127,10 +137,12 @@
             <text id="Частный-эндаумент" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400" line-spacing="18" fill="#040303">
                 <tspan x="368" y="289">Частный эндаумент</tspan>
             </text>
-            <text id="Финансирование-банко" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
-                <tspan x="377" y="349">Финансирование </tspan>
-                <tspan x="397.072" y="367">банком ГПБ</tspan>
-            </text>
+            <a xlink:href=" https://www.gazprombank.ru/" target="_blank" rel="noopener noreferrer">
+                <text id="Финансирование-банко" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="377" y="349">Финансирование </tspan>
+                    <tspan x="397.072" y="367">банком ГПБ</tspan>
+                </text>
+            </a>
             <g id="Combined-Shape-Copy" transform="translate(429.500000, 581.000000) rotate(-90.000000) translate(-429.500000, -581.000000) ">
                 <use fill="black" fill-opacity="1" filter="url(#filter-12)" xlink:href="#path-11"></use>
                 <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-11"></use>
