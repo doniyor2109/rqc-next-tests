@@ -74,6 +74,7 @@ class People extends React.Component {
       if (elmnt) {
         elmnt.scrollIntoView();
       }
+      console.log({hash})
       const { lang, fetchPeople } = this.props;
       if (lang !== prevProps.lang) {
         fetchPeople(lang);
