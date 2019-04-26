@@ -55,17 +55,17 @@ class People extends React.Component {
 
     static async getInitialProps(ctx) {
       // получаем все необходимое для рендеринга компонента от сервера
-      const { reduxStore } = ctx;
+      const { reduxStore, query: { fb_locale } } = ctx;
 
       // получаем настройки языка из кукис
       const { language } = cookies(ctx);
 
       // запрос к Prismic через redux actons с добавлением контента в redux store
       const serverFetch = await peopleActions.getPeopleContent(language);
-
+      const serverFetchQ = await peopleActions.getPeopleContentGraph(language);
       reduxStore.dispatch(peopleActions.fetchPeopleSuccess(serverFetch));
 
-      return {};
+      return { serverFetchQ, fb_locale };
     }
 
     componentDidUpdate(prevProps) {
@@ -77,9 +77,10 @@ class People extends React.Component {
 
     render() {
       const {
-        phone, tablet, fb_locale, people,
+        phone, tablet, fb_locale, people, lang,
       } = this.props;
       const { page, isFetching } = people;
+      console.log('people', this.props);
       if (isFetching) return <Loading />;
       return (
         <section className="peoplepage">
@@ -99,6 +100,7 @@ class People extends React.Component {
                 phone={phone}
                 tablet={tablet}
                 structure={index === 0}
+                lang={lang}
               />
             ))}
           </div>

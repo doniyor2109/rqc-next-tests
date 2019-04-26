@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import Media from 'react-media';
 import styled from 'styled-components';
 import Popup from '../shared/Popup';
-import StructureDesktop from './desktopStructure.svg';
-import StructureTablet from './tabletStructure.svg';
-import StructureMobile from './mobileStructure.svg';
+import StructureDesktopRU from './dRU.svg';
+import StructureTabletRU from './tRU.svg';
+import StructureMobileRU from './mRU.svg';
+import StructureDesktopEN from './dEN.svg';
+import StructureTabletEN from './tEN.svg';
+import StructureMobileEN from './mEN.svg';
 
 const StyledPopup = styled.div`
     .modal-content {
@@ -20,7 +23,7 @@ const StyledPopup = styled.div`
     }
 `;
 const RQCStructurePopup = ({
-  active, close, phone, tablet,
+  active, close, phone, tablet, lang,
 }) => (
   <StyledPopup>
     <Popup active={active} close={close}>
@@ -31,21 +34,21 @@ const RQCStructurePopup = ({
               query="(min-width: 769px)"
               defaultMatches={phone === null && tablet === null}
               render={() => (
-                <StructureDesktop />
+                lang === 'ru' ? <StructureDesktopRU /> : <StructureDesktopEN />
               )}
             />
             <Media
               query="(min-width: 416px) and (max-width: 768px)"
               defaultMatches={tablet !== null}
               render={() => (
-                <StructureTablet />
+                lang === 'ru' ? <StructureTabletRU /> : <StructureTabletEN />
               )}
             />
             <Media
               query="(max-width: 415px)"
               defaultMatches={phone !== null}
               render={() => (
-                <StructureMobile />
+                lang === 'ru' ? <StructureMobileRU /> : <StructureMobileEN />
               )}
             />
           </div>
@@ -60,11 +63,13 @@ RQCStructurePopup.propTypes = {
   close: PropTypes.func.isRequired,
   phone: PropTypes.string,
   tablet: PropTypes.string,
+  lang: PropTypes.string,
 };
 RQCStructurePopup.defaultProps = {
   phone: null,
   tablet: null,
   active: false,
+  lang: 'ru',
 };
 
 

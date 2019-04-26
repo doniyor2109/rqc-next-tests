@@ -26,7 +26,7 @@
     "next-cookies": "^1.0.3",
     "node-sass": "^4.9.4",
     "path-match": "^1.2.4",
-    "prismic-javascript": "^1.5.0-beta.4",
+    "prismic-javascript": "latest",
     "prismic-reactjs": "^0.3.1",
     "prop-types": "^15.6.1",
     "react": "^16.5.2",

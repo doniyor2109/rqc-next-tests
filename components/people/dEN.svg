@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1056px" height="452px" viewBox="0 0 1056 442" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="808 150 1048 150 1048 210 808 210"></polygon>
+        <filter x="-2.9%" y="-8.3%" width="105.8%" height="123.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M510,207 L510,272 L270,272 L270,92 L510,92 L510,157 L521.170386,157 L530,182 L521.170386,207 L510,207 Z" id="path-3"></path>
+        <filter x="-2.7%" y="-2.8%" width="105.4%" height="107.8%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M240,207 L240,272 L5.68434189e-14,272 L5.68434189e-14,92 L240,92 L240,157 L251.170386,157 L260,182 L251.170386,207 L240,207 Z" id="path-5"></path>
+        <filter x="-2.7%" y="-2.8%" width="105.4%" height="107.8%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M780,201 L780,210 L540,210 L540,150 L780,150 L780,161 L786.170386,161 L795,181 L786.170386,201 L780,201 Z" id="path-7"></path>
+        <filter x="-2.7%" y="-8.3%" width="105.5%" height="123.3%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M635,315 L635,260.215343 L660,248 L685,260.215343 L685,315 L780,315 L780,380 L539,380 L539,315 L635,315 Z" id="path-9"></path>
+        <filter x="-2.9%" y="-3.8%" width="105.8%" height="110.6%" filterUnits="objectBoundingBox" id="filter-10">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M280,315 L510,315 L510,380 L0,380 L0,315 L230,315 L230,306.105529 L255,294 L280,306.105529 L280,315 Z" id="path-11"></path>
+        <filter x="-1.4%" y="-5.8%" width="102.7%" height="116.3%" filterUnits="objectBoundingBox" id="filter-12">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="People_Desktops-Structure-Copy" transform="translate(-191.000000, -185.000000)">
+            <g id="Group" transform="translate(195.000000, 185.000000)">
+                <g id="Combined-Shape-Copy-8">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="Combined-Shape-Copy-2">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                </g>
+                <g id="Combined-Shape-Copy-3">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+                </g>
+                <g id="Combined-Shape-Copy-4">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-7"></use>
+                </g>
+                <g id="Combined-Shape">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-9"></use>
+                </g>
+                <g id="Combined-Shape">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-12)" xlink:href="#path-11"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-11"></use>
+                </g>
+                <text id="External-governing-b" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="25" fill="#040303">
+                    <tspan x="37.292" y="70">External governing bodies</tspan>
+                </text>
+                <text id="FUNDING-SOURCES" font-family="DINPro-Regular, DINPro" font-size="18" font-weight="normal" line-spacing="25" fill="#040303">
+                    <tspan x="313.153" y="446">FUNDING SOURCES</tspan>
+                </text>
+                <text id="STRUCTURE-OF-THE-RQC" font-family="DINPro-Regular, DINPro" font-size="18" font-weight="normal" line-spacing="25" fill="#040303">
+                    <tspan x="420.242" y="19">STRUCTURE OF THE RQC</tspan>
+                </text>
+                <text id="International-adviso" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="39" y="227">International advisory </tspan>
+                    <tspan x="98.016" y="245">board</tspan>
+                </text>
+                <text id="Board-of-trustees" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="56" y="137">Board of trustees</tspan>
+                </text>
+                <text id="State-program" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400" line-spacing="18" fill="#040303">
+                    <tspan x="29" y="356">State program</tspan>
+                </text>
+                <text id="Private-endowment" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400" line-spacing="18" fill="#040303">
+                    <tspan x="176" y="356">Private endowment</tspan>
+                </text>
+                <text id="Financing-by-GPB" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="357" y="356">Financing by GPB</tspan>
+                </text>
+                <text id="Research-grants" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400" line-spacing="18" fill="#040303">
+                    <tspan x="600" y="356">Research grants</tspan>
+                </text>
+                <g id="Group-11-Copy" transform="translate(115.000000, 156.000000)" stroke="#040303">
+                    <polyline id="Path-3-Copy-7" transform="translate(6.000000, 36.100000) rotate(-270.000000) translate(-6.000000, -36.100000) " points="4.1 30.6 7.9 36.1 4.1 41.6"></polyline>
+                    <path d="M-13,19 L25,19" id="Path-2-Copy-2" transform="translate(6.000000, 19.000000) rotate(-270.000000) translate(-6.000000, -19.000000) "></path>
+                </g>
+                <text id="Scientific-groups" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="599" y="187">Scientific groups</tspan>
+                </text>
+                <text id="Commercialization-pr" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="860" y="181">Commercialization </tspan>
+                    <tspan x="898.784" y="199">projects</tspan>
+                </text>
+                <text id="Internal-governing-b" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="25" fill="#040303">
+                    <tspan x="309" y="70">Internal governing bodies</tspan>
+                </text>
+                <text id="Scientific-committee" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="314" y="252">Scientific committee</tspan>
+                </text>
+                <text id="Scientific-director" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400" line-spacing="18" fill="#040303">
+                    <tspan x="326" y="128">Scientific director</tspan>
+                </text>
+                <g id="Group-14-Copy-5" transform="translate(482.000000, 182.500000) scale(-1, 1) translate(-482.000000, -182.500000) translate(472.000000, 116.000000)" stroke="#040303">
+                    <polyline id="Path-3-Copy-3" transform="translate(18.125000, 127.812057) rotate(-360.000000) translate(-18.125000, -127.812057) " points="16.25 122.624113 20 127.812057 16.25 133"></polyline>
+                    <polyline id="Path-3-Copy-4" transform="translate(15.937500, 5.187943) rotate(-360.000000) translate(-15.937500, -5.187943) " points="14.0625 0 17.8125 5.18794326 14.0625 10.3758865"></polyline>
+                    <polyline id="Path-2" transform="translate(9.765625, 66.028369) rotate(-90.000000) translate(-9.765625, -66.028369) " points="-51.5464317 75.3252438 -51.5464317 56.7314938 71.0776817 56.7314938 71.0776817 73.1377438"></polyline>
+                </g>
+                <g id="Group-14-Copy-6" transform="translate(289.000000, 116.000000)" stroke="#040303">
+                    <polyline id="Path-3-Copy-3" transform="translate(18.125000, 127.812057) rotate(-360.000000) translate(-18.125000, -127.812057) " points="16.25 122.624113 20 127.812057 16.25 133"></polyline>
+                    <polyline id="Path-3-Copy-4" transform="translate(15.937500, 5.187943) rotate(-360.000000) translate(-15.937500, -5.187943) " points="14.0625 0 17.8125 5.18794326 14.0625 10.3758865"></polyline>
+                    <polyline id="Path-2" transform="translate(9.765625, 66.028369) rotate(-90.000000) translate(-9.765625, -66.028369) " points="-51.5464317 75.3252438 -51.5464317 56.7314938 71.0776817 56.7314938 71.0776817 73.1377438"></polyline>
+                </g>
+                <polyline id="Path-2" stroke="#040303" transform="translate(148.500000, 421.500000) rotate(-90.000000) translate(-148.500000, -421.500000) " points="135 570 135 509.269531 135 273 162 273"></polyline>
+                <polyline id="Path-2-Copy" stroke="#040303" transform="translate(636.500000, 421.500000) scale(-1, 1) rotate(-90.000000) translate(-636.500000, -421.500000) " points="623 565 623 278 650 278"></polyline>
+                <polyline id="Path-2-Copy-4" stroke="#040303" transform="translate(202.500000, 43.500000) scale(1, -1) rotate(-90.000000) translate(-202.500000, -43.500000) " points="168 246 168 -159 237 -159"></polyline>
+                <polyline id="Path-2-Copy-5" stroke="#040303" transform="translate(847.500000, 64.500000) scale(-1, -1) rotate(-90.000000) translate(-847.500000, -64.500000) " points="791 267 791 -138 904 -138"></polyline>
+                <text id="CEO" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400" line-spacing="18" fill="#040303">
+                    <tspan x="374" y="191">CEO</tspan>
+                </text>
+                <g id="Group-10-Copy-2" transform="translate(384.000000, 211.000000)" stroke="#040303">
+                    <polyline id="Path-3" transform="translate(5.500000, 16.200000) rotate(-270.000000) translate(-5.500000, -16.200000) " points="3.7 10.7 7.3 16.2 3.7 21.7"></polyline>
+                    <polyline id="Path-3-Copy-2" transform="translate(5.500000, 1.800000) rotate(-90.000000) translate(-5.500000, -1.800000) " points="3.7 -3.7 7.3 1.8 3.7 7.3"></polyline>
+                    <path d="M-3.5,9 L14.5,9" id="Path-2" transform="translate(5.500000, 9.000000) rotate(-270.000000) translate(-5.500000, -9.000000) "></path>
+                </g>
+                <g id="Group-10-Copy-3" transform="translate(384.000000, 139.000000)" stroke="#040303">
+                    <polyline id="Path-3" transform="translate(5.500000, 16.200000) rotate(-270.000000) translate(-5.500000, -16.200000) " points="3.7 10.7 7.3 16.2 3.7 21.7"></polyline>
+                    <polyline id="Path-3-Copy-2" transform="translate(5.500000, 1.800000) rotate(-90.000000) translate(-5.500000, -1.800000) " points="3.7 -3.7 7.3 1.8 3.7 7.3"></polyline>
+                    <path d="M-3.5,9 L14.5,9" id="Path-2" transform="translate(5.500000, 9.000000) rotate(-270.000000) translate(-5.500000, -9.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

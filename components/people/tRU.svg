@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="585px" height="726px" viewBox="0 0 585 726" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M150,229 L55,229 L55,49 L295,49 L295,229 L200,229 L200,238.170386 L175,247 L150,238.170386 L150,229 Z" id="path-1"></path>
+        <filter x="-2.9%" y="-2.5%" width="105.8%" height="107.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M150,499 L55,499 L55,319 L295,319 L295,499 L200,499 L200,508.170386 L175,517 L150,508.170386 L150,499 Z" id="path-3"></path>
+        <filter x="-2.9%" y="-2.5%" width="105.8%" height="107.1%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M155,607 L56,607 L56,547 L296,547 L296,607 L195,607 L195,612.170386 L175,621 L155,612.170386 L155,607 Z" id="path-5"></path>
+        <filter x="-2.9%" y="-6.8%" width="105.8%" height="118.9%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <polygon id="path-7" points="55 651 295 651 295 711 55 711"></polygon>
+        <filter x="-2.9%" y="-8.3%" width="105.8%" height="123.3%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M454.5,197.5 L544.5,197.5 L544.5,387.5 L314.5,387.5 L314.5,197.5 L404.5,197.5 L404.5,188.605529 L429.5,176.5 L454.5,188.605529 L454.5,197.5 Z" id="path-9"></path>
+        <filter x="-3.0%" y="-2.4%" width="106.1%" height="106.6%" filterUnits="objectBoundingBox" id="filter-10">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <path d="M454.5,496.5 L469.5,496.5 L469.5,686.5 L389.5,686.5 L389.5,496.5 L404.5,496.5 L404.5,487.605529 L429.5,475.5 L454.5,487.605529 L454.5,496.5 Z" id="path-11"></path>
+        <filter x="-8.8%" y="-2.4%" width="117.5%" height="106.6%" filterUnits="objectBoundingBox" id="filter-12">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="People_Tablets-Structure" transform="translate(-1.000000, 0.000000)">
+            <g id="Group">
+                <g id="Combined-Shape-Copy-3">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <text id="Внешние-органы-управ" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="25" fill="#040303">
+                    <tspan x="81.143" y="27">Внешние органы управления</tspan>
+                </text>
+                <text id="Международный-консул" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="112.064" y="174">Международный </tspan>
+                    <tspan x="87" y="192">консультативный совет</tspan>
+                </text>
+                <text id="Попечительский-совет-Copy" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="87" y="94">Попечительский совет</tspan>
+                </text>
+                <g id="Group-11-Copy" transform="translate(170.000000, 113.000000)" stroke="#040303">
+                    <polyline id="Path-3-Copy-7" transform="translate(6.000000, 36.100000) rotate(-270.000000) translate(-6.000000, -36.100000) " points="4.1 30.6 7.9 36.1 4.1 41.6"></polyline>
+                    <path d="M-13,19 L25,19" id="Path-2-Copy-2" transform="translate(6.000000, 19.000000) rotate(-270.000000) translate(-6.000000, -19.000000) "></path>
+                </g>
+                <g id="Combined-Shape-Copy-4">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                </g>
+                <text id="Внутренние-органы-уп" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="25" fill="#040303">
+                    <tspan x="72.103" y="297">Внутренние органы управления</tspan>
+                </text>
+                <text id="Научный-совет-Copy" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="120" y="478">Научный совет</tspan>
+                </text>
+                <text id="Научный-директор-Copy" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400" line-spacing="18" fill="#040303">
+                    <tspan x="106" y="355">Научный директор</tspan>
+                </text>
+                <g id="Group-14-Copy-5" transform="translate(262.500000, 409.500000) scale(-1, 1) translate(-262.500000, -409.500000) translate(247.000000, 343.000000)" stroke="#040303">
+                    <polyline id="Path-3-Copy-3" transform="translate(28.125000, 127.812057) rotate(-360.000000) translate(-28.125000, -127.812057) " points="26.25 122.624113 30 127.812057 26.25 133"></polyline>
+                    <polyline id="Path-3-Copy-4" transform="translate(15.937500, 5.187943) rotate(-360.000000) translate(-15.937500, -5.187943) " points="14.0625 0 17.8125 5.18794326 14.0625 10.3758865"></polyline>
+                    <polyline id="Path-2" transform="translate(14.765625, 66.028369) rotate(-90.000000) translate(-14.765625, -66.028369) " points="-46.5464317 80.3252438 -46.5464317 51.7314938 76.0776817 51.7314938 76.0776817 68.1377438"></polyline>
+                </g>
+                <g id="Group-14-Copy-6" transform="translate(75.000000, 343.000000)" stroke="#040303">
+                    <polyline id="Path-3-Copy-3" transform="translate(28.125000, 127.812057) rotate(-360.000000) translate(-28.125000, -127.812057) " points="26.25 122.624113 30 127.812057 26.25 133"></polyline>
+                    <polyline id="Path-3-Copy-4" transform="translate(15.937500, 5.187943) rotate(-360.000000) translate(-15.937500, -5.187943) " points="14.0625 0 17.8125 5.18794326 14.0625 10.3758865"></polyline>
+                    <polyline id="Path-2" transform="translate(14.765625, 66.028369) rotate(-90.000000) translate(-14.765625, -66.028369) " points="-46.5464317 80.3252438 -46.5464317 51.7314938 76.0776817 51.7314938 76.0776817 68.1377438"></polyline>
+                </g>
+                <text id="Генеральный-директор" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400" line-spacing="18" fill="#040303">
+                    <tspan x="124" y="410">Генеральный </tspan>
+                    <tspan x="139.768" y="428">директор</tspan>
+                </text>
+                <g id="Group-10-Copy-2" transform="translate(170.000000, 438.000000)" stroke="#040303">
+                    <polyline id="Path-3" transform="translate(5.500000, 16.200000) rotate(-270.000000) translate(-5.500000, -16.200000) " points="3.7 10.7 7.3 16.2 3.7 21.7"></polyline>
+                    <polyline id="Path-3-Copy-2" transform="translate(5.500000, 1.800000) rotate(-90.000000) translate(-5.500000, -1.800000) " points="3.7 -3.7 7.3 1.8 3.7 7.3"></polyline>
+                    <path d="M-3.5,9 L14.5,9" id="Path-2" transform="translate(5.500000, 9.000000) rotate(-270.000000) translate(-5.500000, -9.000000) "></path>
+                </g>
+                <g id="Group-10-Copy-3" transform="translate(170.000000, 366.000000)" stroke="#040303">
+                    <polyline id="Path-3" transform="translate(5.500000, 16.200000) rotate(-270.000000) translate(-5.500000, -16.200000) " points="3.7 10.7 7.3 16.2 3.7 21.7"></polyline>
+                    <polyline id="Path-3-Copy-2" transform="translate(5.500000, 1.800000) rotate(-90.000000) translate(-5.500000, -1.800000) " points="3.7 -3.7 7.3 1.8 3.7 7.3"></polyline>
+                    <path d="M-3.5,9 L14.5,9" id="Path-2" transform="translate(5.500000, 9.000000) rotate(-270.000000) translate(-5.500000, -9.000000) "></path>
+                </g>
+                <text id="Структура-ркц" transform="translate(8.000000, 357.500000) rotate(-90.000000) translate(-8.000000, -357.500000) " font-family="DINPro-Regular, DINPro" font-size="18" font-weight="normal" line-spacing="25" fill="#040303">
+                    <tspan x="-59.617" y="368.5">СТРУКТУРА РКЦ</tspan>
+                </text>
+                <g id="Combined-Shape-Copy-4">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+                </g>
+                <text id="Научные-группы" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="110" y="584">Научные группы</tspan>
+                </text>
+                <g id="Combined-Shape-Copy-8">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-7"></use>
+                </g>
+                <text id="Проекты-коммерциализ" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="142.032" y="679">Проекты </tspan>
+                    <tspan x="101" y="697">коммерциализации</tspan>
+                </text>
+                <g id="Combined-Shape" transform="translate(429.500000, 282.000000) rotate(-90.000000) translate(-429.500000, -282.000000) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-9"></use>
+                </g>
+                <text id="Госпрограммы" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400" line-spacing="18" fill="#040303">
+                    <tspan x="386" y="219">Госпрограммы</tspan>
+                </text>
+                <text id="Частный-эндаумент" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400" line-spacing="18" fill="#040303">
+                    <tspan x="368" y="289">Частный эндаумент</tspan>
+                </text>
+                <text id="Финансирование-банко" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                    <tspan x="377" y="349">Финансирование </tspan>
+                    <tspan x="397.072" y="367">банком ГПБ</tspan>
+                </text>
+                <g id="Combined-Shape-Copy" transform="translate(429.500000, 581.000000) rotate(-90.000000) translate(-429.500000, -581.000000) ">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-12)" xlink:href="#path-11"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-11"></use>
+                </g>
+                <text id="Исследовательские-гр" font-family="DINPro-Medium, DINPro" font-size="16" font-weight="400" line-spacing="18" fill="#040303">
+                    <tspan x="368" y="579">Исследовательские </tspan>
+                    <tspan x="414.992" y="597">гранты</tspan>
+                </text>
+                <text id="Источники-финансиров" transform="translate(578.000000, 394.000000) rotate(-270.000000) translate(-578.000000, -394.000000) " font-family="DINPro-Regular, DINPro" font-size="18" font-weight="normal" line-spacing="25" fill="#040303">
+                    <tspan x="437.06" y="405">ИСТОЧНИКИ ФИНАНСИРОВАНИЯ</tspan>
+                </text>
+                <polyline id="Path-2" stroke="#040303" transform="translate(564.500000, 591.500000) rotate(-180.000000) translate(-564.500000, -591.500000) " points="551 635 551 548 578 548"></polyline>
+                <polyline id="Path-2-Copy-3" stroke="#040303" transform="translate(21.500000, 586.500000) scale(-1, 1) rotate(-180.000000) translate(-21.500000, -586.500000) " points="8 725 8 448 35 448"></polyline>
+                <polyline id="Path-2-Copy" stroke="#040303" transform="translate(564.500000, 195.500000) scale(1, -1) rotate(-180.000000) translate(-564.500000, -195.500000) " points="551 239 551 152 578 152"></polyline>
+                <polyline id="Path-2-Copy-4" stroke="#040303" transform="translate(21.500000, 133.500000) scale(-1, -1) rotate(-180.000000) translate(-21.500000, -133.500000) " points="8 267 8 3.12638804e-13 35 3.12638804e-13"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

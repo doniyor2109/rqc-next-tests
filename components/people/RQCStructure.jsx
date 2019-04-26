@@ -54,7 +54,7 @@ class RQCStructure extends React.Component {
   render() {
     const { t } = this.context;
     const { popupIsActive } = this.state;
-    const { phone, tablet } = this.props;
+    const { phone, tablet, lang } = this.props;
     return (
       <div className="column is-3-desktop is-6-tablet is-12-mobile">
         <a onClick={e => this.showPopup(e)} role="button" tabIndex="-1">
@@ -73,6 +73,7 @@ class RQCStructure extends React.Component {
           active={popupIsActive}
           phone={phone}
           tablet={tablet}
+          lang={lang}
         />
       </div>
     );
@@ -82,11 +83,13 @@ class RQCStructure extends React.Component {
 RQCStructure.propTypes = {
   phone: PropTypes.string,
   tablet: PropTypes.string,
+  lang: PropTypes.string,
 };
 
 RQCStructure.defaultProps = {
   phone: null,
   tablet: null,
+  lang: 'ru',
 };
 
 RQCStructure.contextTypes = {
