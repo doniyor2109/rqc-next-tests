@@ -51,6 +51,7 @@ class Nav extends Component {
     }
 
     const { hash } = window.location;
+    console.log({hash})
     const elmnt = document.getElementById(hash.slice(1));
     if (elmnt) {
       elmnt.scrollIntoView();
