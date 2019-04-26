@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import Media from 'react-media';
 import styled from 'styled-components';
 import Popup from '../shared/Popup';
-import StructureDesktopRU from './dRU.svg';
-import StructureTabletRU from './tRU.svg';
-import StructureMobileRU from './mRU.svg';
-import StructureDesktopEN from './dEN.svg';
-import StructureTabletEN from './tEN.svg';
-import StructureMobileEN from './mEN.svg';
+import StructureDesktopRU from './dRU1.svg';
+import StructureTabletRU from './tRU1.svg';
+import StructureMobileRU from './mRU1.svg';
+import StructureDesktopEN from './dEN2.svg';
+import StructureTabletEN from './tEN1.svg';
+import StructureMobileEN from './mEN1.svg';
 
 const StyledPopup = styled.div`
     .modal-content {
@@ -29,7 +29,6 @@ const StyledPopup = styled.div`
             font-family: 'DIN Pro';
           }
         }
-      
     }
 `;
 const RQCStructurePopup = ({

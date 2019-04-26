@@ -16,7 +16,7 @@ const GeneralHead = () => (
         <meta name="msapplication-TileColor" content="#4d9ac8" />
         <meta name="theme-color" content="#ffffff" />
         <script src="/static/metrika.js" async/>
-        <meta http-equiv="x-ua-compatible" content="IE=edge"></meta>
+        <meta httpEquiv="x-ua-compatible" content="IE=edge"></meta>
     </Head>
 )
 export default GeneralHead

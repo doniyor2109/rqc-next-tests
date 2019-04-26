@@ -111,7 +111,7 @@
                     <tspan x="599" y="187">Scientific groups</tspan>
                 </text>
             </a>
-            <a xlink:href="/#products" target="_blank" rel="noopener noreferrer"
+            <a xlink:href="/#products" target="_blank" rel="noopener noreferrer">
                 <text id="Commercialization-pr" font-family="DINPro-Bold, DINPro" font-size="16" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
                     <tspan x="860" y="178">Commercialization </tspan>
                     <tspan x="898.784" y="196">projects</tspan>
