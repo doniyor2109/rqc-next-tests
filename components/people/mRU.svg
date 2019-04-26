@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="330px" height="777px" viewBox="0 0 330 777" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="375px" height="801px" viewBox="0 0 375 801" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
-    <title>Group</title>
+    <title>Poeple_Mobile 1904 Copy</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <path d="M71,252 L28,252 L28,52 L163,52 L163,252 L121,252 L121,264.170386 L96,273 L71,264.170386 L71,252 Z" id="path-1"></path>
@@ -41,117 +41,116 @@
             <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
         </filter>
     </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Poeple_Mobile-1904-Copy" transform="translate(-23.000000, -212.000000)">
-            <g id="Group" transform="translate(21.000000, 213.000000)">
-                <g id="Combined-Shape-Copy-3">
-                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
-                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
-                </g>
-                <text id="Международный-консул-Copy" font-family="DINPro-Bold, DINPro" font-size="14" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
-                    <tspan x="40.637" y="187">Международный </tspan>
-                    <tspan x="38.369" y="205">консультативный </tspan>
-                    <tspan x="77.961" y="223">совет</tspan>
-                </text>
-                <text id="Попечительский-совет-Copy" font-family="DINPro-Bold, DINPro" font-size="14" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
-                    <tspan x="42.033" y="87">Попечительский </tspan>
-                    <tspan x="78.461" y="105">совет</tspan>
-                </text>
-                <g id="Group-11-Copy" transform="translate(90.000000, 120.000000)" stroke="#040303">
-                    <polyline id="Path-3-Copy-7" transform="translate(6.000000, 36.100000) rotate(-270.000000) translate(-6.000000, -36.100000) " points="4.1 30.6 7.9 36.1 4.1 41.6"></polyline>
-                    <path d="M-13,19 L25,19" id="Path-2-Copy-2" transform="translate(6.000000, 19.000000) rotate(-270.000000) translate(-6.000000, -19.000000) "></path>
-                </g>
-                <g id="Combined-Shape-Copy-6">
-                    <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
-                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
-                </g>
-                <text id="Научный-совет-Copy" font-family="DINPro-Bold, DINPro" font-size="14" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
-                    <tspan x="46.035" y="542">Научный совет</tspan>
-                </text>
-                <text id="Научный-директор-Copy" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="18" fill="#040303">
-                    <tspan x="34.457" y="392">Научный директор</tspan>
-                </text>
-                <text id="Генеральный-директор" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="18" fill="#040303">
-                    <tspan x="51.18" y="458">Генеральный </tspan>
-                    <tspan x="64.977" y="476">директор</tspan>
-                </text>
-                <g id="Group-10-Copy-2" transform="translate(90.000000, 498.000000)" stroke="#040303">
-                    <polyline id="Path-3" transform="translate(5.500000, 16.200000) rotate(-270.000000) translate(-5.500000, -16.200000) " points="3.7 10.7 7.3 16.2 3.7 21.7"></polyline>
-                    <polyline id="Path-3-Copy-2" transform="translate(5.500000, 1.800000) rotate(-90.000000) translate(-5.500000, -1.800000) " points="3.7 -3.7 7.3 1.8 3.7 7.3"></polyline>
-                    <path d="M-3.5,9 L14.5,9" id="Path-2" transform="translate(5.500000, 9.000000) rotate(-270.000000) translate(-5.500000, -9.000000) "></path>
-                </g>
-                <g id="Group-10-Copy-3" transform="translate(90.000000, 407.000000)" stroke="#040303">
-                    <polyline id="Path-3" transform="translate(5.500000, 16.200000) rotate(-270.000000) translate(-5.500000, -16.200000) " points="3.7 10.7 7.3 16.2 3.7 21.7"></polyline>
-                    <polyline id="Path-3-Copy-2" transform="translate(5.500000, 1.800000) rotate(-90.000000) translate(-5.500000, -1.800000) " points="3.7 -3.7 7.3 1.8 3.7 7.3"></polyline>
-                    <path d="M-3.5,9 L14.5,9" id="Path-2" transform="translate(5.500000, 9.000000) rotate(-270.000000) translate(-5.500000, -9.000000) "></path>
-                </g>
-                <g id="Group-10-Copy-4" transform="translate(36.000000, 407.000000)" stroke="#040303">
-                    <polyline id="Path-3" transform="translate(5.500000, 116.200000) rotate(-270.000000) translate(-5.500000, -116.200000) " points="3.7 110.7 7.3 116.2 3.7 121.7"></polyline>
-                    <polyline id="Path-3-Copy-2" transform="translate(5.500000, 1.800000) rotate(-90.000000) translate(-5.500000, -1.800000) " points="3.7 -3.7 7.3 1.8 3.7 7.3"></polyline>
-                    <path d="M-53,59.5 L65,59.5" id="Path-2" transform="translate(6.000000, 59.000000) rotate(-270.000000) translate(-6.000000, -59.000000) "></path>
-                </g>
-                <g id="Group-10-Copy-5" transform="translate(144.000000, 407.000000)" stroke="#040303">
-                    <polyline id="Path-3" transform="translate(5.500000, 116.200000) rotate(-270.000000) translate(-5.500000, -116.200000) " points="3.7 110.7 7.3 116.2 3.7 121.7"></polyline>
-                    <polyline id="Path-3-Copy-2" transform="translate(5.500000, 1.800000) rotate(-90.000000) translate(-5.500000, -1.800000) " points="3.7 -3.7 7.3 1.8 3.7 7.3"></polyline>
-                    <path d="M-53,59.5 L65,59.5" id="Path-2" transform="translate(6.000000, 59.000000) rotate(-270.000000) translate(-6.000000, -59.000000) "></path>
-                </g>
-                <text id="Внешние-органы-управ" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="18" fill="#040303">
-                    <tspan x="40.431" y="22">Внешние органы </tspan>
-                    <tspan x="57.392" y="40">управления</tspan>
-                </text>
-                <text id="Внутренние-органы-уп" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="18" fill="#040303">
-                    <tspan x="32.391" y="333">Внутренние органы </tspan>
-                    <tspan x="57.892" y="351">управления</tspan>
-                </text>
-                <g id="Combined-Shape-Copy-4">
-                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
-                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
-                </g>
-                <text id="Научные-группы" font-family="DINPro-Bold, DINPro" font-size="14" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
-                    <tspan x="42.082" y="639">Научные группы</tspan>
-                </text>
-                <g id="Combined-Shape-Copy-4">
-                    <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
-                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-7"></use>
-                </g>
-                <text id="Проекты-комерциализа" font-family="DINPro-Bold, DINPro" font-size="14" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
-                    <tspan x="68.384" y="725">Проекты </tspan>
-                    <tspan x="37.22" y="743">комерциализации</tspan>
-                </text>
-                <g id="Combined-Shape-Copy-3">
-                    <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
-                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-9"></use>
-                </g>
-                <text id="Госпрограммы" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="18" fill="#040303">
-                    <tspan x="196.197" y="242">Госпрограммы</tspan>
-                </text>
-                <text id="Частный-эндаумент" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="18" fill="#040303">
-                    <tspan x="216.042" y="297">Частный </tspan>
-                    <tspan x="210.148" y="315">эндаумент</tspan>
-                </text>
-                <text id="Финансирование-банко" font-family="DINPro-Bold, DINPro" font-size="14" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
-                    <tspan x="187.157" y="362">Финансирование </tspan>
-                    <tspan x="204.72" y="380">банком ГПБ</tspan>
-                </text>
-                <g id="Combined-Shape-Copy-7">
-                    <use fill="black" fill-opacity="1" filter="url(#filter-12)" xlink:href="#path-11"></use>
-                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-11"></use>
-                </g>
-                <text id="Исследовательские-гр" transform="translate(234.500000, 637.000000) rotate(-90.000000) translate(-234.500000, -637.000000) " font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="18" fill="#040303">
-                    <tspan x="170.576" y="635.5">Исследовательские </tspan>
-                    <tspan x="211.694" y="653.5">гранты</tspan>
-                </text>
-                <text id="Источники-финансиров" transform="translate(325.500000, 460.000000) rotate(-270.000000) translate(-325.500000, -460.000000) " font-family="DINPro-Regular, DINPro" font-size="14" font-weight="normal" line-spacing="25" fill="#040303">
-                    <tspan x="215.88" y="467.5">ИСТОЧНИКИ ФИНАНСИРОВАНИЯ</tspan>
-                </text>
-                <polyline id="Path-2" stroke="#040303" transform="translate(313.500000, 662.500000) rotate(-180.000000) translate(-313.500000, -662.500000) " points="300 736 300 589 327 589"></polyline>
-                <polyline id="Path-2-Copy" stroke="#040303" transform="translate(313.500000, 256.500000) scale(1, -1) rotate(-180.000000) translate(-313.500000, -256.500000) " points="300 330 300 183 327 183"></polyline>
-                <text id="Структура-ркц" transform="translate(8.000000, 382.500000) rotate(-90.000000) translate(-8.000000, -382.500000) " font-family="DINPro-Regular, DINPro" font-size="14" font-weight="normal" line-spacing="25" fill="#040303">
-                    <tspan x="-44.591" y="390">СТРУКТУРА РКЦ</tspan>
-                </text>
-                <polyline id="Path-2-Copy-3" stroke="#040303" transform="translate(20.500000, 611.500000) scale(-1, 1) rotate(-180.000000) translate(-20.500000, -611.500000) " points="7 775 7 448 34 448"></polyline>
-                <polyline id="Path-2-Copy-4" stroke="#040303" transform="translate(20.500000, 158.500000) scale(-1, -1) rotate(-180.000000) translate(-20.500000, -158.500000) " points="7 317 7 6.82121026e-13 34 6.82121026e-13"></polyline>
+    <g id="Poeple_Mobile-1904-Copy" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#F7F9FB" x="0" y="0" width="375" height="801"></rect>
+        <g id="Group" transform="translate(21.000000, 13.000000)">
+            <g id="Combined-Shape-Copy-3">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
             </g>
+            <text id="Международный-консул-Copy" font-family="DINPro-Bold, DINPro" font-size="14" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                <tspan x="40.637" y="187">Международный </tspan>
+                <tspan x="38.369" y="205">консультативный </tspan>
+                <tspan x="77.961" y="223">совет</tspan>
+            </text>
+            <text id="Попечительский-совет-Copy" font-family="DINPro-Bold, DINPro" font-size="14" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                <tspan x="42.033" y="87">Попечительский </tspan>
+                <tspan x="78.461" y="105">совет</tspan>
+            </text>
+            <g id="Group-11-Copy" transform="translate(90.000000, 120.000000)" stroke="#040303">
+                <polyline id="Path-3-Copy-7" transform="translate(6.000000, 36.100000) rotate(-270.000000) translate(-6.000000, -36.100000) " points="4.1 30.6 7.9 36.1 4.1 41.6"></polyline>
+                <path d="M-13,19 L25,19" id="Path-2-Copy-2" transform="translate(6.000000, 19.000000) rotate(-270.000000) translate(-6.000000, -19.000000) "></path>
+            </g>
+            <g id="Combined-Shape-Copy-6">
+                <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+            </g>
+            <text id="Научный-совет-Copy" font-family="DINPro-Bold, DINPro" font-size="14" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                <tspan x="46.035" y="542">Научный совет</tspan>
+            </text>
+            <text id="Научный-директор-Copy" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="18" fill="#040303">
+                <tspan x="34.457" y="392">Научный директор</tspan>
+            </text>
+            <text id="Генеральный-директор" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="18" fill="#040303">
+                <tspan x="51.18" y="458">Генеральный </tspan>
+                <tspan x="64.977" y="476">директор</tspan>
+            </text>
+            <g id="Group-10-Copy-2" transform="translate(90.000000, 498.000000)" stroke="#040303">
+                <polyline id="Path-3" transform="translate(5.500000, 16.200000) rotate(-270.000000) translate(-5.500000, -16.200000) " points="3.7 10.7 7.3 16.2 3.7 21.7"></polyline>
+                <polyline id="Path-3-Copy-2" transform="translate(5.500000, 1.800000) rotate(-90.000000) translate(-5.500000, -1.800000) " points="3.7 -3.7 7.3 1.8 3.7 7.3"></polyline>
+                <path d="M-3.5,9 L14.5,9" id="Path-2" transform="translate(5.500000, 9.000000) rotate(-270.000000) translate(-5.500000, -9.000000) "></path>
+            </g>
+            <g id="Group-10-Copy-3" transform="translate(90.000000, 407.000000)" stroke="#040303">
+                <polyline id="Path-3" transform="translate(5.500000, 16.200000) rotate(-270.000000) translate(-5.500000, -16.200000) " points="3.7 10.7 7.3 16.2 3.7 21.7"></polyline>
+                <polyline id="Path-3-Copy-2" transform="translate(5.500000, 1.800000) rotate(-90.000000) translate(-5.500000, -1.800000) " points="3.7 -3.7 7.3 1.8 3.7 7.3"></polyline>
+                <path d="M-3.5,9 L14.5,9" id="Path-2" transform="translate(5.500000, 9.000000) rotate(-270.000000) translate(-5.500000, -9.000000) "></path>
+            </g>
+            <g id="Group-10-Copy-4" transform="translate(36.000000, 407.000000)" stroke="#040303">
+                <polyline id="Path-3" transform="translate(5.500000, 116.200000) rotate(-270.000000) translate(-5.500000, -116.200000) " points="3.7 110.7 7.3 116.2 3.7 121.7"></polyline>
+                <polyline id="Path-3-Copy-2" transform="translate(5.500000, 1.800000) rotate(-90.000000) translate(-5.500000, -1.800000) " points="3.7 -3.7 7.3 1.8 3.7 7.3"></polyline>
+                <path d="M-53,59.5 L65,59.5" id="Path-2" transform="translate(6.000000, 59.000000) rotate(-270.000000) translate(-6.000000, -59.000000) "></path>
+            </g>
+            <g id="Group-10-Copy-5" transform="translate(144.000000, 407.000000)" stroke="#040303">
+                <polyline id="Path-3" transform="translate(5.500000, 116.200000) rotate(-270.000000) translate(-5.500000, -116.200000) " points="3.7 110.7 7.3 116.2 3.7 121.7"></polyline>
+                <polyline id="Path-3-Copy-2" transform="translate(5.500000, 1.800000) rotate(-90.000000) translate(-5.500000, -1.800000) " points="3.7 -3.7 7.3 1.8 3.7 7.3"></polyline>
+                <path d="M-53,59.5 L65,59.5" id="Path-2" transform="translate(6.000000, 59.000000) rotate(-270.000000) translate(-6.000000, -59.000000) "></path>
+            </g>
+            <text id="Внешние-органы-управ" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="18" fill="#040303">
+                <tspan x="40.431" y="22">Внешние органы </tspan>
+                <tspan x="57.392" y="40">управления</tspan>
+            </text>
+            <text id="Внутренние-органы-уп" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="18" fill="#040303">
+                <tspan x="32.391" y="333">Внутренние органы </tspan>
+                <tspan x="57.892" y="351">управления</tspan>
+            </text>
+            <g id="Combined-Shape-Copy-4">
+                <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-5"></use>
+            </g>
+            <text id="Научные-группы" font-family="DINPro-Bold, DINPro" font-size="14" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                <tspan x="42.082" y="639">Научные группы</tspan>
+            </text>
+            <g id="Combined-Shape-Copy-4">
+                <use fill="black" fill-opacity="1" filter="url(#filter-8)" xlink:href="#path-7"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-7"></use>
+            </g>
+            <text id="Проекты-комерциализа" font-family="DINPro-Bold, DINPro" font-size="14" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                <tspan x="68.384" y="725">Проекты </tspan>
+                <tspan x="37.22" y="743">комерциализации</tspan>
+            </text>
+            <g id="Combined-Shape-Copy-3">
+                <use fill="black" fill-opacity="1" filter="url(#filter-10)" xlink:href="#path-9"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-9"></use>
+            </g>
+            <text id="Госпрограммы" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="18" fill="#040303">
+                <tspan x="196.197" y="242">Госпрограммы</tspan>
+            </text>
+            <text id="Частный-эндаумент" font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="18" fill="#040303">
+                <tspan x="216.042" y="297">Частный </tspan>
+                <tspan x="210.148" y="315">эндаумент</tspan>
+            </text>
+            <text id="Финансирование-банко" font-family="DINPro-Bold, DINPro" font-size="14" font-weight="bold" line-spacing="18" fill="#3998D1" text-decoration="underline">
+                <tspan x="187.157" y="362">Финансирование </tspan>
+                <tspan x="204.72" y="380">банком ГПБ</tspan>
+            </text>
+            <g id="Combined-Shape-Copy-7">
+                <use fill="black" fill-opacity="1" filter="url(#filter-12)" xlink:href="#path-11"></use>
+                <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-11"></use>
+            </g>
+            <text id="Исследовательские-гр" transform="translate(234.500000, 637.000000) rotate(-90.000000) translate(-234.500000, -637.000000) " font-family="DINPro-Medium, DINPro" font-size="14" font-weight="400" line-spacing="18" fill="#040303">
+                <tspan x="170.576" y="635.5">Исследовательские </tspan>
+                <tspan x="211.694" y="653.5">гранты</tspan>
+            </text>
+            <text id="Источники-финансиров" transform="translate(325.500000, 460.000000) rotate(-270.000000) translate(-325.500000, -460.000000) " font-family="DINPro-Regular, DINPro" font-size="14" font-weight="normal" line-spacing="25" fill="#040303">
+                <tspan x="215.88" y="467.5">ИСТОЧНИКИ ФИНАНСИРОВАНИЯ</tspan>
+            </text>
+            <polyline id="Path-2" stroke="#040303" transform="translate(313.500000, 662.500000) rotate(-180.000000) translate(-313.500000, -662.500000) " points="300 736 300 589 327 589"></polyline>
+            <polyline id="Path-2-Copy" stroke="#040303" transform="translate(313.500000, 256.500000) scale(1, -1) rotate(-180.000000) translate(-313.500000, -256.500000) " points="300 330 300 183 327 183"></polyline>
+            <text id="Структура-ркц" transform="translate(8.000000, 382.500000) rotate(-90.000000) translate(-8.000000, -382.500000) " font-family="DINPro-Regular, DINPro" font-size="14" font-weight="normal" line-spacing="25" fill="#040303">
+                <tspan x="-44.591" y="390">СТРУКТУРА РКЦ</tspan>
+            </text>
+            <polyline id="Path-2-Copy-3" stroke="#040303" transform="translate(20.500000, 611.500000) scale(-1, 1) rotate(-180.000000) translate(-20.500000, -611.500000) " points="7 775 7 448 34 448"></polyline>
+            <polyline id="Path-2-Copy-4" stroke="#040303" transform="translate(20.500000, 158.500000) scale(-1, -1) rotate(-180.000000) translate(-20.500000, -158.500000) " points="7 317 7 6.82121026e-13 34 6.82121026e-13"></polyline>
         </g>
     </g>
 </svg>
