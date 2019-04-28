@@ -73,6 +73,13 @@ class Index extends React.Component {
       DOMLoaded: true,
     });
 
+    const { hash } = window.location;
+    const elmnt = document.getElementById(hash.slice(1));
+    if (elmnt) {
+      elmnt.scrollIntoView();
+      console.log("element scrolled")
+    }
+
     fetchProducts(lang);
     fetchMainSciSlider(lang);
     fetchEvents(lang, 2);
@@ -83,12 +90,7 @@ class Index extends React.Component {
     const {
       fetchNews, fetchMain, fetchEvents, fetchMainSciSlider, fetchProducts, lang,
     } = this.props;
-    const { hash } = window.location;
-    const elmnt = document.getElementById(hash.slice(1));
-    if (elmnt) {
-      elmnt.scrollIntoView();
-      console.log("element scrolled")
-    }
+
     if (lang !== prevProps.lang) {
       if (lang === 'en-gb') {
         fetchMain('W3GV8SQAACQAZAwG', 'en-gb');
