@@ -87,6 +87,7 @@ class Index extends React.Component {
     const elmnt = document.getElementById(hash.slice(1));
     if (elmnt) {
       elmnt.scrollIntoView();
+      console.log("element scrolled")
     }
     if (lang !== prevProps.lang) {
       if (lang === 'en-gb') {

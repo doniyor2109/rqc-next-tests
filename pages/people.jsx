@@ -73,6 +73,7 @@ class People extends React.Component {
       const elmnt = document.getElementById(hash.slice(1));
       console.log("hash", hash, elmnt);
       if (elmnt) {
+        console.log("element on people scrolled")
         elmnt.scrollIntoView();
       }
       const { lang, fetchPeople } = this.props;
