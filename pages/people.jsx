@@ -74,7 +74,7 @@ class People extends React.Component {
       console.log("hash", hash, elmnt);
       if (elmnt) {
         console.log("element on people scrolled")
-        elmnt.scrollIntoView();
+        elmnt.scrollIntoView({block: "start", inline: "nearest"});
       }
       const { lang, fetchPeople } = this.props;
       if (lang !== prevProps.lang) {
