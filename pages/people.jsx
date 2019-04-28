@@ -71,6 +71,7 @@ class People extends React.Component {
     componentDidUpdate(prevProps) {
       const { hash } = window.location;
       const elmnt = document.getElementById(hash.slice(1));
+      console.log("hash", hash, elmnt);
       if (elmnt) {
         elmnt.scrollIntoView();
       }
