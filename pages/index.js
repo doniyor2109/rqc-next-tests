@@ -76,8 +76,8 @@ class Index extends React.Component {
     const { hash } = window.location;
     const elmnt = document.getElementById(hash.slice(1));
     if (elmnt) {
-      elmnt.scrollIntoView();
-      console.log("element scrolled")
+      elmnt.scrollIntoView({block: "start", inline: "nearest"});
+      // console.log("element scrolled")
     }
 
     fetchProducts(lang);
