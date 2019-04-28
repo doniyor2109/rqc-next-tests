@@ -76,12 +76,6 @@ class Index extends React.Component {
     fetchMainSciSlider(lang);
     fetchEvents(lang, 2);
     fetchNews(lang, 3);
-    const { hash } = window.location;
-    const elmnt = document.getElementById(hash.slice(1));
-    if (elmnt) {
-      elmnt.scrollIntoView({block: "start", inline: "nearest"});
-      // console.log("element scrolled")
-    }
   }
 
   componentDidUpdate(prevProps) {
@@ -99,6 +93,12 @@ class Index extends React.Component {
       fetchMainSciSlider(lang);
       fetchEvents(lang, 2);
       fetchNews(lang, 3);
+    }
+    const { hash } = window.location;
+    const elmnt = document.getElementById(hash.slice(1));
+    if (elmnt) {
+      elmnt.scrollIntoView({block: "start", inline: "nearest"});
+      // console.log("element scrolled")
     }
   }
 
