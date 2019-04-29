@@ -17,6 +17,9 @@ const Button = styled.button`
   color: #${props => props.color};
   background: transparent;
   cursor: pointer;
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    padding: 0.6rem 0.9rem;
+  }
 
   img {
     animation: appear_from_left 1s;

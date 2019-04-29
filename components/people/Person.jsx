@@ -21,6 +21,9 @@ const PersonStyled = styled.div`
       position: relative;
       margin-bottom: 3rem;
       width: 16rem;
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        height: 16rem;
+      }
       @media (max-width: 415px) {
         width: 14.5rem;
       }
@@ -124,7 +127,7 @@ class Person extends React.Component {
             <div className="portrait">
               <img
                 src={item.person.data.portrait.url}
-                alt={item.person.data.name}
+                alt={item.person.data.name[0].text}
                 onClick={e => this.handleClick(e, this.personaRef.current.offsetTop)}
               />
               <ArrowButton

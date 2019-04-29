@@ -28,6 +28,9 @@ const PersPopup = styled.div`
         margin: 3rem 0;
         max-height: calc(100vh - 3rem);
       }
+      .columns {
+        width: 100%;
+      }
     }
     .position p {
       border-bottom: 0;
