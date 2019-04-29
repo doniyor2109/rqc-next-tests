@@ -79,7 +79,7 @@ export default class PeopleSection extends React.Component {
     // console.log({item})
     const { moreButtonIsActive, personasInMobile } = this.state;
     return (
-      <Section id={item.primary.hash && item.primary.hash}>
+      <Section id={item.primary.hash}>
         <div className="section-title">
           {RichText.render(item.primary.title, PrismicConfig.linkResolver)}
         </div>

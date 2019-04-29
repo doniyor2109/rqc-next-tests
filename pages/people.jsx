@@ -105,8 +105,7 @@ class People extends React.Component {
             {(page.data.body.length > 0) && page.data.body.map((section, index) => (
               <PeopleSection
                 item={section}
-                key={(section.primary.title && section.primary.title[0].text)
-                  || (section.primary.subtitle && section.primary.subtitle[0].text)}
+                key={section.primary.title[0].text || section.primary.subtitle[0].text}
                 phone={phone}
                 tablet={tablet}
                 structure={index === 0}
