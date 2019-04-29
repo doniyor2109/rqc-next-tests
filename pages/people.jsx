@@ -68,19 +68,7 @@ class People extends React.Component {
       return { fb_locale };
     }
 
-    componentDidMount() {
-      const { hash } = window.location;
-      const elmnt = document.getElementById(hash.slice(1));
-      console.log("hash", hash);
-      if (elmnt) {
-        console.log('scrolling', elmnt.offsetTop)
-        elmnt.scrollIntoView({block: "start"});
-      }
-    }
-
     componentDidUpdate(prevProps) {
-      
-
       const { lang, fetchPeople } = this.props;
       if (lang !== prevProps.lang) {
         fetchPeople(lang);

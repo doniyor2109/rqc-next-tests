@@ -62,6 +62,16 @@ export default class PeopleSection extends React.Component {
     this.moreClick = this.moreClick.bind(this);
   }
 
+  componentDidMount() {
+    const { hash } = window.location;
+    const elmnt = document.getElementById(hash.slice(1));
+    console.log("hash", hash);
+    if (elmnt) {
+      console.log('scrolling', elmnt.offsetTop)
+      elmnt.scrollIntoView({block: "start"});
+    }
+  }
+
   moreClick(event) {
     const { item } = this.props;
     event.preventDefault();
