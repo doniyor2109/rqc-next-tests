@@ -6,6 +6,7 @@ import { news } from './news';
 import { language } from './lang';
 import { main } from './main';
 import { people } from './people';
+import { person } from './person';
 import { about } from './about';
 import { vacancies } from './vacancies';
 import { team } from './team';
@@ -30,6 +31,7 @@ const rootReducer = combineReducers({
   language,
   main,
   people,
+  person,
   about,
   vacancies,
   i18nState,

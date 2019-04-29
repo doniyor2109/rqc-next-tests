@@ -1,17 +1,22 @@
 import React from 'react';
-import { RichText } from 'prismic-reactjs';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import PrismicConfig from '../../prismic-configuration';
-import ArrowButton from '../shared/ArrowButton';
+import * as personActions from '../../redux/actions/person';
+import * as langActions from '../../redux/actions/lang';
+
 import Popup from '../shared/Popup';
+import Loading from '../shared/loading';
+import PersonPopupContent from './PersonPopupContent';
 
 const PersPopup = styled.div`
     .modal-content {
       width: 92rem;
       padding: 5rem 0;
       background: white;
+      min-height: 20rem;
       @media (max-width: 768px) {
         width: 100%;
         padding: 5rem 3rem;
@@ -60,6 +65,20 @@ const PersPopup = styled.div`
       display:inline-block;
       margin-bottom: 3rem;
     }
+    .wall{
+      opacity: 1;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      @media (max-width: 768px) {
+        width: 92%;
+        height: 92%;
+      }
+      background: white;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+    }
     @media (max-width: 768px) {
       hr {
         margin: 0 0 5rem 0;
@@ -78,94 +97,85 @@ const PersPopup = styled.div`
     }
 `;
 
-const PersonPopup = ({ active, close, item }, { t }) => (
-  <PersPopup>
-    <Popup close={close} active={active}>
-      <div className="columns">
-        <div className="column is-4-desktop is-offset-1-desktop is-6-tablet">
-          <div className="portrait_wraper">
-            <img className="portrait" src={item.portrait.url} alt={item.name[0].text} />
-          </div>
-        </div>
-        <div className="column is-4-desktop is-6-tablet">
-          <div className="name">
-            {RichText.render(item.name, PrismicConfig.linkResolver)}
-          </div>
-          <div className="position">
-            {RichText.render(item.position, PrismicConfig.linkResolver)}
-          </div>
-          {item.website && item.website.url
-              && (
-              <a href={item.website.url}>
-                <ArrowButton text="Персональный сайт" color="3998D1" />
-              </a>
-              )
-          }
-        </div>
-      </div>
-      <div className="columns">
-        <div className="column is-11-desktop is-offset-1-desktop">
-          <hr />
-        </div>
-      </div>
-      <div className="columns">
-        <div className={(item.awards && (item.awards[0].text.length > 0))
-          ? 'column is-5-desktop is-offset-1-desktop'
-          : 'column is-10-desktop is-offset-1-desktop is-12-tablet'
-                                      }
-        >
-          <img src="/static/bio.svg" className="awards_img" alt="" />
-          <h1>{t('Биография')}</h1>
-          <div className="titles">
-            {RichText.render(item.titles, PrismicConfig.linkResolver)}
-          </div>
-        </div>
-        {item.awards && (item.awards[0].text.length > 0)
+class PersonPopup extends React.Component {
+  componentDidMount() {
+    const { id, lang, fetchPerson } = this.props;
+    fetchPerson(id, lang);
+  }
+
+  render() {
+    const { active, close, person } = this.props;
+    const { item } = person;
+    return (
+      <PersPopup>
+        <Popup close={close} active={active}>
+          {person.isFetching
           && (
-          <div className="column is-4-desktop is-offset-1-desktop">
-            <img src="/static/awards.svg" className="awards_img" alt="" />
-            <h1>{t('Достижения')}</h1>
-            <div className="awards">
-              {RichText.render(item.awards, PrismicConfig.linkResolver)}
-            </div>
+          <div className="wall">
+            <Loading />
           </div>
           )
-          }
-      </div>
-    </Popup>
-  </PersPopup>
-);
-PersonPopup.contextTypes = {
-  t: PropTypes.func,
-};
+         }
+          {item.data && <PersonPopupContent item={item.data} />}
+        </Popup>
+      </PersPopup>
+    );
+  }
+}
 
 PersonPopup.propTypes = {
   active: PropTypes.bool,
   close: PropTypes.func.isRequired,
-  item: PropTypes.shape({
-    name: PropTypes.arrayOf(PropTypes.shape({
-      text: PropTypes.string,
-    })),
-    position: PropTypes.arrayOf(PropTypes.shape({
-      text: PropTypes.string,
-    })),
-    portrait: PropTypes.PropTypes.shape({
-      url: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  fetchPerson: PropTypes.func.isRequired,
+  lang: PropTypes.string.isRequired,
+  person: PropTypes.shape({
+    isFetching: PropTypes.bool.isRequired,
+    item: PropTypes.shape({
+      name: PropTypes.arrayOf(PropTypes.shape({
+        text: PropTypes.string,
+      })),
+      position: PropTypes.arrayOf(PropTypes.shape({
+        text: PropTypes.string,
+      })),
+      portrait: PropTypes.PropTypes.shape({
+        url: PropTypes.string,
+      }),
+      titles: PropTypes.arrayOf(PropTypes.shape({
+        text: PropTypes.string,
+      })),
+      awards: PropTypes.arrayOf(PropTypes.shape({
+        text: PropTypes.string,
+      })),
     }),
-    titles: PropTypes.arrayOf(PropTypes.shape({
-      text: PropTypes.string,
-    })),
-    awards: PropTypes.arrayOf(PropTypes.shape({
-      text: PropTypes.string,
-    })),
   }),
 };
 
 PersonPopup.defaultProps = {
   active: false,
-  item: {
-    awards: '',
+  person: {
+    item: {
+      awards: '',
+      name: {
+        text: '',
+      },
+      position: [],
+      portrait: {
+        url: '',
+      },
+      titles: [],
+    },
   },
 };
 
-export default PersonPopup;
+const mapStateToProps = (state) => {
+  const { person } = state;
+  const { lang } = state.i18nState;
+  return { person, lang };
+};
+
+const mapDispatchToProps = dispatch => bindActionCreators(Object.assign({},
+  personActions,
+  langActions), dispatch);
+
+export default connect(mapStateToProps, mapDispatchToProps)(PersonPopup);

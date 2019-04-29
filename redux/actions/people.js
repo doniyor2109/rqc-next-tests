@@ -16,33 +16,6 @@ export async function getPeopleContent(lang) {
   }
 }
 
-// export async function getPeopleContentGraph(lang) {
-//   try {
-//     const api = await Prismic.getApi(PrismicConfig.apiEndpoint);
-//     const myQuery = `{
-//         people2 {
-//           description
-//         }`;
-//     const responseGraph = await api.query(Prismic.Predicates.at('document.type', 'people2'),
-//       {
-//         graphQuery: myQuery,
-//         lang,
-//       });
-//     console.log('action', responseGraph);
-//     return responseGraph;
-//   } catch (error) {
-//     console.log(error)
-//     return { results: null, 
-//               error: {
-//               status: error.status,
-//               message: error.message
-//             } 
-//     };
-//   }
-// }
-
-
-
 
 const fetchPeopleRequest = () => ({ type: actionTypes.FETCH_PEOPLE_REQUEST });
 

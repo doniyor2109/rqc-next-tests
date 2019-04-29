@@ -62,7 +62,6 @@ class People extends React.Component {
 
       // запрос к Prismic через redux actons с добавлением контента в redux store
       const serverFetch = await peopleActions.getPeopleContent(language);
-      // const serverFetchQ = await peopleActions.getPeopleContentGraph(language);
       reduxStore.dispatch(peopleActions.fetchPeopleSuccess(serverFetch));
 
       return { fb_locale };
@@ -80,6 +79,7 @@ class People extends React.Component {
         phone, tablet, fb_locale, people, lang,
       } = this.props;
       const { page, isFetching } = people;
+      // console.log('people', this.props)
       if (isFetching) return <Loading />;
       return (
         <section className="peoplepage">

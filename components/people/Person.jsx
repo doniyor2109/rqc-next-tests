@@ -144,6 +144,7 @@ class Person extends React.Component {
                 active={popupIsActive}
                 close={this.close}
                 item={item.person.data}
+                id={item.person.id}
               />
             )
           }
