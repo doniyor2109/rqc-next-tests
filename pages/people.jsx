@@ -62,24 +62,24 @@ class People extends React.Component {
 
       // запрос к Prismic через redux actons с добавлением контента в redux store
       const serverFetch = await peopleActions.getPeopleContent(language);
-      const serverFetchQ = await peopleActions.getPeopleContentGraph(language);
+      // const serverFetchQ = await peopleActions.getPeopleContentGraph(language);
       reduxStore.dispatch(peopleActions.fetchPeopleSuccess(serverFetch));
 
-      return { serverFetchQ, fb_locale };
+      return { fb_locale };
     }
 
     componentDidMount() {
- 
-    }
-
-    componentDidUpdate(prevProps) {
       const { hash } = window.location;
       const elmnt = document.getElementById(hash.slice(1));
       console.log("hash", hash, elmnt.offsetTop);
       if (elmnt) {
         console.log('scrolling')
-        elmnt.scrollIntoView({block: "start", inline: "nearest"});
+        elmnt.scrollIntoView({block: "start"});
       }
+    }
+
+    componentDidUpdate(prevProps) {
+      
 
       const { lang, fetchPeople } = this.props;
       if (lang !== prevProps.lang) {
