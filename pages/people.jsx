@@ -102,7 +102,7 @@ class People extends React.Component {
                 <PageDescription description={page.data.description} />
               </div>
             </div>
-            {page.data.body.map((section, index) => (
+            {(page.data.body.length > 0) && page.data.body.map((section, index) => (
               <PeopleSection
                 item={section}
                 key={(section.primary.title && section.primary.title[0].text)
