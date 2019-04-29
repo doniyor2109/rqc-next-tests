@@ -64,10 +64,8 @@ export default class PeopleSection extends React.Component {
   }
 
   componentDidMount() {
-    // console.log("sction mount", this.props);
     const hashURL = window.location.hash.slice(1);
     const hashProps = this.props.item.primary.hash;
-    console.log(`${hashURL} === ${hashProps} ${hashURL === hashProps}`)
     const needScroll = hashURL === hashProps;
     if (needScroll) {
       window.scrollTo(this);

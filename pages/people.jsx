@@ -80,7 +80,6 @@ class People extends React.Component {
         phone, tablet, fb_locale, people, lang,
       } = this.props;
       const { page, isFetching } = people;
-      console.log('people', this.props);
       if (isFetching) return <Loading />;
       return (
         <section className="peoplepage">
@@ -95,7 +94,7 @@ class People extends React.Component {
             {(page.data.body.length > 0) && page.data.body.map((section, index) => (
               <PeopleSection
                 item={section}
-                key={section.primary.hash || section.primary.title[0].text || section.primary.subtitle[0].text}
+                key={section.primary.title[0].text || section.primary.subtitle[0].text}
                 phone={phone}
                 tablet={tablet}
                 structure={index === 0}
