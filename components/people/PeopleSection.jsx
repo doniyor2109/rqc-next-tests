@@ -10,6 +10,7 @@ import RQCStructure from './RQCStructure';
 const Section = styled.div`
   margin-top: 9rem;
   margin-bottom: 0;
+  position: relative;
   h2 {
     font-family: "DIN Pro", sans-serif;
     font-size: 1.8rem;
@@ -60,16 +61,6 @@ export default class PeopleSection extends React.Component {
       personasInMobile: 6,
     };
     this.moreClick = this.moreClick.bind(this);
-  }
-
-  componentDidMount() {
-    const { hash } = window.location;
-    const elmnt = document.getElementById(hash.slice(1));
-    console.log("hash", hash);
-    if (elmnt) {
-      console.log('scrolling', elmnt.offsetTop)
-      elmnt.scrollIntoView({block: "start"});
-    }
   }
 
   moreClick(event) {
