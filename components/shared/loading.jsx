@@ -10,14 +10,7 @@ const propTypes = {
 const Loading = ({ className }) => (
 
   <div className={className}>
-    <div className="loading">
-      <div className="loading__ring">
-        <Ring />
-      </div>
-      <div className="loading__ring">
-        <Ring />
-      </div>
-    </div>
+    <img src="/static/RQCloader.gif" alt="loading animaton" />
   </div>
 );
 
