@@ -18,7 +18,7 @@ const Loading = ({ className }) => (
         <Ring />
       </div>
     </div>
-  </div>
+`  </div>
 );
 
 Loading.propTypes = propTypes;
