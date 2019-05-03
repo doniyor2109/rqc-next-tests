@@ -83,16 +83,12 @@ const Menu = [
         url: 'http://goqrate.com/#photon-detector',
       },
       {
-        name: 'Магнитометр',
-        url: '/#products',
-      },
-      {
         name: 'Твердотельный фотоумножитель',
         url: 'https://www.dephan.com/',
       },
       {
         name: 'Фемтосекундный лазер с диодной накачкой',
-        url: 'http://femtovision.ru/page5006824.html',
+        url: 'http://femtovision.ru/',
       },
     ],
   },
