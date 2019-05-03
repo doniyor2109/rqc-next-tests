@@ -24,6 +24,10 @@ const StyledLoading = styled(Loading)`
     opacity: 0.5;
     z-index: 100;
 
+    img {
+      width: 10rem;
+    }
+
     @keyframes rotate {
       to {
         transform: rotate(360deg);
