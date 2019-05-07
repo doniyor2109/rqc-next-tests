@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Ring from './ring2.svg';
 
 const propTypes = {
   className: PropTypes.string.isRequired,
@@ -10,7 +9,7 @@ const propTypes = {
 const Loading = ({ className }) => (
 
   <div className={className}>
-    <img src="/static/RQCloader.gif" alt="loading animaton" />
+    <img src="/static/RQCloader2.gif" alt="loading animaton" />
   </div>
 );
 
@@ -21,40 +20,10 @@ const StyledLoading = styled(Loading)`
     align-items: center;
     justify-content: center;
     background: white;
-    opacity: 0.5;
     z-index: 100;
 
     img {
       width: 10rem;
-    }
-
-    @keyframes rotate {
-      to {
-        transform: rotate(360deg);
-      }
-    }
-    .loading {
-      width: 10rem;
-      height: 10rem;
-
-      &__ring {
-        position: absolute;
-
-        &:first-child {
-          transform: skew(30deg,20deg);
-        }
-
-        &:last-child {
-          transform: skew(-30deg,-20deg) scale(-1, 1);
-
-          svg {
-            animation-delay: -0.5s;
-          }
-        }
-
-        svg {
-          animation: rotate 1s linear infinite;
-        }
     }
 }
 `;

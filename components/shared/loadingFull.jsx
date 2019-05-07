@@ -20,14 +20,14 @@ LoadingFull.propTypes = {
 const StyledLoading = styled(LoadingFull)`
     .transparent-wall{
       height: 104vh;
-        position: fixed;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.9);
-        z-index: 300;
-        display: block;
-        &.inactive {
-          display: none;
-        }
+      position: fixed;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      z-index: 99;
+      display: block;
+      &.inactive {
+        display: none;
+      }
     }
     .transparent-wall > div {
       height: 100%;
