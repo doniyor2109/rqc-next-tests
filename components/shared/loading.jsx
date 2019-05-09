@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const Styled = styled.div`
@@ -20,10 +19,10 @@ class Loading extends React.Component {
       displayLoading: false,
     };
     this.enableLoading = this.enableLoading.bind(this);
-    this.timer = setTimeout(this.enableLoading, 250);
+    this.timer = setTimeout(this.enableLoading, 1000);
   }
 
-  enableLoading(){
+  enableLoading() {
     this.setState({
       displayLoading: true,
     });
