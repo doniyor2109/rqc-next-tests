@@ -2,7 +2,7 @@
   "name": "rqc",
   "version": "1.0.0",
   "scripts": {
-    "dev": "pm2 start server.js",
+    "dev": "node server.js",
     "build": "next build && pm2 restart prod",
     "build-dev": "next build && pm2 restart next",
     "start": "NODE_ENV=production node server.js"

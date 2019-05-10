@@ -103,7 +103,6 @@ const HR = styled.hr`
 `;
 
 const Publication = (props) => {
-  console.log({ props });
   const { item, searchRequest, searchPage } = props;
   const resultInTitle = searchRequest
   && simpleSearch(item.data.title[0], searchRequest, false);
