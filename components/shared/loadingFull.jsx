@@ -23,7 +23,7 @@ class LoadingFull extends React.Component {
       displayLoading: false,
     };
     this.enableLoading = this.enableLoading.bind(this);
-    this.timer = setTimeout(this.enableLoading, 300);
+    this.timer = setTimeout(this.enableLoading, 500);
   }
 
   componentWillUnmount() {

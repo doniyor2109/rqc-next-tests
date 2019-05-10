@@ -20,7 +20,7 @@ class Loading extends React.Component {
     };
     const { noDelay } = this.props;
     this.enableLoading = this.enableLoading.bind(this);
-    this.timer = setTimeout(this.enableLoading, noDelay ? 0 : 300);
+    this.timer = setTimeout(this.enableLoading, noDelay ? 0 : 500);
   }
 
   componentWillUnmount() {
