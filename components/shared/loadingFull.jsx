@@ -1,37 +1,55 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Loading from './loading';
 
-
-const LoadingFull = ({ isOff, className }) => (
-  <div className={className}>
-    <div className={isOff ? 'transparent-wall inactive' : 'transparent-wall'}>
-      <Loading />
-    </div>
-  </div>
-);
-
-LoadingFull.propTypes = {
-  className: PropTypes.string.isRequired,
-  isOff: PropTypes.bool.isRequired,
-};
-
-const StyledLoading = styled(LoadingFull)`
+const StyledLoading = styled.div`
     .transparent-wall{
       height: 104vh;
-        position: fixed;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.9);
-        z-index: 300;
-        display: block;
-        &.inactive {
-          display: none;
-        }
+      position: fixed;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      z-index: 99;
+      display: block;
     }
     .transparent-wall > div {
       height: 100%;
     }
-  `;
+`;
 
-export default StyledLoading;
+class LoadingFull extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      displayLoading: false,
+    };
+    this.enableLoading = this.enableLoading.bind(this);
+    this.timer = setTimeout(this.enableLoading, 250);
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this.timer);
+  }
+
+  enableLoading() {
+    this.setState({
+      displayLoading: true,
+    });
+  }
+
+
+  render() {
+    const { displayLoading } = this.state;
+    if (!displayLoading) {
+      return null;
+    }
+    return (
+      <StyledLoading>
+        <div className="transparent-wall">
+          <Loading noDelay />
+        </div>
+      </StyledLoading>
+    );
+  }
+}
+
+export default LoadingFull;

@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import cookies from 'next-cookies';
 import Router from 'next/router';
 import I18n from 'redux-i18n';
+import MobileDetect from 'mobile-detect';
 import withReduxStore from '../lib/with-redux-store';
-
 import Nav from '../components/navbar/Nav';
 import Footer from '../components/footer/Footer';
 import GeneralHead from '../components/GeneralHead';
@@ -16,7 +16,7 @@ import { translations } from '../i18n/translations';
 import '../scss/index.scss';
 
 class MyApp extends App {
-  static async getInitialProps({ Component, router, ctx }) {
+  static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 
     // добываем значение языка из пользовательских кукис
@@ -24,10 +24,10 @@ class MyApp extends App {
     const hasCookies = typeof language !== 'undefined';
     const cookieConsent = typeof useragreedwithcookies !== 'undefined';
 
-    // определяем тип устройства, чтобы потом react-media рендерила именно ту версию компонента, которая
+    // определяем тип устройства, чтобы потом react-media
+    // рендерила именно ту версию компонента, которая
     // совпадает с серверным html
     const { req } = ctx;
-    const MobileDetect = require('mobile-detect');
     const md = new MobileDetect(req ? req.headers['user-agent'] : '');
     const phone = md.phone();
     const tablet = md.tablet();
@@ -47,6 +47,13 @@ class MyApp extends App {
     };
   }
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      loadingIsActive: false,
+    };
+  }
+
   componentDidMount() {
     // выставляем куки, если их не было
     if (!this.props.hasCookies && typeof this.props.language !== 'undefined') {
@@ -54,10 +61,14 @@ class MyApp extends App {
     }
 
     Router.events.on('routeChangeStart', () => {
-      document.querySelector('.transparent-wall').classList.remove('inactive');
+      this.setState({
+        loadingIsActive: true,
+      });
     });
     Router.events.on('routeChangeComplete', () => {
-      document.querySelector('.transparent-wall').classList.add('inactive');
+      this.setState({
+        loadingIsActive: false,
+      });
     });
   }
 
@@ -65,12 +76,14 @@ class MyApp extends App {
     const {
       Component, pageProps, reduxStore, language, phone, tablet, cookieConsent,
     } = this.props;
+
+    const { loadingIsActive } = this.state;
     return (
       <Container>
         <Provider store={reduxStore}>
           <I18n translations={translations} initialLang={language}>
             <GeneralHead />
-            <LoadingFull isOff />
+            {loadingIsActive && <LoadingFull /> }
             <Nav cookieConsent={cookieConsent} />
             <Component {...pageProps} phone={phone} tablet={tablet} />
             <Footer />
