@@ -17,6 +17,7 @@ const GeneralHead = () => (
         <meta name="theme-color" content="#ffffff" />
         <script src="/static/metrika.js" async/>
         <meta httpEquiv="x-ua-compatible" content="IE=edge"></meta>
+        <meta name="yandex-verification" content="37d4c85cb7210ed3" />
     </Head>
 )
 export default GeneralHead
