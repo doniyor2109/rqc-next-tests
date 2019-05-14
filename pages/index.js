@@ -22,7 +22,7 @@ import {
 
 import MainSlider from '../components/main/MainSlider';
 import SciSlider from '../components/main/SciSlider';
-import Loading from '../components/shared/loading';
+import LoadingFull from '../components/shared/loadingFull';
 import OldSite from '../components/oldSite';
 import Products from '../components/main/Products';
 import NewsTeaser from '../components/main/NewsTeaser';
@@ -110,7 +110,7 @@ class Index extends React.Component {
     const { sciSlider, isFetchingMain, isFetchingSci } = this.props.main;
 
     // console.log("main", this.props)
-    if (!DOMLoaded) return <Loading />;
+    if (!DOMLoaded) return <LoadingFull />;
     return (
       <Fragment>
         <MainHead fb_locale={fb_locale} />
