@@ -97,7 +97,7 @@ class Index extends React.Component {
     const { hash } = window.location;
     const elmnt = document.getElementById(hash.slice(1));
     if (elmnt) {
-      elmnt.scrollIntoView({block: "start", inline: "nearest"});
+      elmnt.scrollIntoView({ block: 'start', inline: 'nearest' });
       // console.log("element scrolled")
     }
   }
@@ -110,9 +110,9 @@ class Index extends React.Component {
     const { sciSlider, isFetchingMain, isFetchingSci } = this.props.main;
 
     // console.log("main", this.props)
-    if (!DOMLoaded) return <LoadingFull />;
     return (
       <Fragment>
+        {!DOMLoaded && <LoadingFull />}
         <MainHead fb_locale={fb_locale} />
         <section className="main-slider">
           {main.data && (
