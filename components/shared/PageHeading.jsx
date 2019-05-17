@@ -1,16 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
-
-const H1 = styled.h1`
-    font-size: 4.2rem;
-    @media (max-width: 415px) {
-        font-size: 3.2rem
-    }
-    font-weight: bold;
-    color:#040303;
-    text-transform: uppercase;
-`;
+import H1 from './styled/H1';
 
 const PageHeading = ({ title }, { t }) => (
   <H1>

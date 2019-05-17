@@ -2,13 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import ProductType from './ProductType';
+import ProductType from './productType';
 import ProductCard from './ProductCard';
 
 
-const Products = ({
-  items, className,
-}, { t }) => (
+const Products = ({items, className }, { t }) => (
   <section className={className} id="products">
     <div className="container">
       <p className="main-category">
