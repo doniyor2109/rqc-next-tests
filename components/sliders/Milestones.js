@@ -5,25 +5,8 @@ import { RichText } from 'prismic-reactjs'
 import PrismicConfig from '../../prismic-configuration'
 import moment from 'moment'
 import 'moment/locale/ru'
-
-
-function NextArrow(props) {
-  const { className, onClick } = props;
-  return (
-    <div className={className} onClick={onClick}>
-      <img src="/static/sci_slider_arrow_right.svg" alt="Arrow Next Slide"/>
-    </div>
-  )
-}
-
-function PrevArrow(props) {
-  const { className, onClick } = props;
-  return (
-      <div className={className} onClick={onClick}>
-        <img src="/static/sci_slider_arrow_left.svg" alt="Arrow Previous Slide"/>
-      </div>
-    )
-}
+import NextArrow from '../shared/NextArrow';
+import PrevArrow from '../shared/PrevArrow';
 
 class Milestones extends React.Component {
 

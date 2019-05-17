@@ -3,24 +3,9 @@ import Slider from "react-slick"
 import Media from 'react-media'
 import { RichText } from 'prismic-reactjs'
 import PrismicConfig from '../../prismic-configuration'
+import NextArrow from '../shared/NextArrow';
+import PrevArrow from '../shared/PrevArrow';
 
-function NextSciArrow(props) {
-  const { className, onClick } = props;
-  return (
-    <div className={className} onClick={onClick}>
-      <img src="/static/sci_slider_arrow_right.svg" alt="Arrow Next Slide"/>
-    </div>
-  )
-}
-
-function PrevSciArrow(props) {
-  const { className, onClick } = props;
-  return (
-      <div className={className} onClick={onClick}>
-        <img src="/static/sci_slider_arrow_left.svg" alt="Arrow Previous Slide"/>
-      </div>
-    )
-}
 
 class Topics extends React.Component {
 
@@ -35,8 +20,8 @@ class Topics extends React.Component {
           autoplay: false,
           slidesToScroll: 1,
           useTransform: true,
-          nextArrow: <NextSciArrow />,
-          prevArrow: <PrevSciArrow />, 
+          nextArrow: <NextArrow />,
+          prevArrow: <PrevArrow />, 
         }
     }
 

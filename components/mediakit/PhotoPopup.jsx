@@ -10,38 +10,8 @@ import PhotoType from './PhotoPropType';
 
 import PrismicConfig from '../../prismic-configuration';
 import hostName from '../../host';
-
-// Arrows for slider
-const ArrowsProps = {
-  className: PropTypes.string,
-  onClick: PropTypes.func,
-};
-
-const ArrowsdefaultProps = {
-  className: '',
-};
-
-function NextSciArrow(props) {
-  const { className, onClick } = props;
-  return (
-    <div className={className} onClick={onClick} role="button" tabIndex={0}>
-      <img src="/static/photo_slider_arrow_right.svg" alt="Arrow Next Slide" />
-    </div>
-  );
-}
-
-function PrevSciArrow(props) {
-  const { className, onClick } = props;
-  return (
-    <div className={className} onClick={onClick} role="button" tabIndex={0}>
-      <img src="/static/photo_slider_arrow_left.svg" alt="Arrow Previous Slide" />
-    </div>
-  );
-}
-PrevSciArrow.propTypes = ArrowsProps;
-NextSciArrow.propTypes = ArrowsProps;
-PrevSciArrow.defaultProps = ArrowsdefaultProps;
-NextSciArrow.defaultProps = ArrowsdefaultProps;
+import NextArrow from '../shared/NextArrow';
+import PrevArrow from '../shared/PrevArrow';
 
 const propTypes = {
   item: PropTypes.shape(PhotoType),
@@ -130,8 +100,8 @@ class PhotoPopup extends React.Component {
               swipeToSlide: true,
               swipe: true,
               touchThreshold: 5,
-              nextArrow: <NextSciArrow />,
-              prevArrow: <PrevSciArrow />,
+              nextArrow: <NextArrow />,
+              prevArrow: <PrevArrow />,
             }}
           >
             {photo_set.map(image => (
