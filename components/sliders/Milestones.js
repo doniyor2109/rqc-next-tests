@@ -62,7 +62,7 @@ class Milestones extends React.Component {
       <Fragment>
         <Media query="(min-width: 769px)"
                        defaultMatches={phone === null}
-                       render={() =>  <div id="carousel">
+                       render={() =>  <div id="carousel" style={{clear: 'both'}}>
                                         <Slider {...  {slidesToShow: 6, ...this.state.carouselSettings}}>
                                             {items}
                                         </Slider>
@@ -71,7 +71,7 @@ class Milestones extends React.Component {
         />
          <Media query="(min-width: 416px) and (max-width:768px)"
                        defaultMatches={tablet !== null}
-                       render={() =>  <div id="carousel">
+                       render={() =>  <div id="carousel" style={{clear: 'both'}}>
                                         <Slider {...  {slidesToShow: 3, ...this.state.carouselSettings}}>
                                             {items}
                                         </Slider>
@@ -80,7 +80,7 @@ class Milestones extends React.Component {
         />
         <Media query="(max-width: 415px)"
                        defaultMatches={phone !== null}
-                       render={() =>  <div id="carousel">
+                       render={() =>  <div id="carousel" style={{clear: 'both'}}>
                                         <Slider {...  {slidesToShow: 1, ...this.state.carouselSettings}}>
                                             {items}
                                         </Slider>

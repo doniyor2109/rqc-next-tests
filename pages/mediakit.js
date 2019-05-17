@@ -15,6 +15,7 @@ import * as langActions from '../redux/actions/lang'
 import PhotoGalleries from '../components/mediakit/PhotoGalleries'
 import Videos from '../components/mediakit/Videos'
 import Presentations from '../components/mediakit/Presentations'
+import MainCategory from '../components/shared/styled/MainCategory';
 
 import hostName from '../host'
 
@@ -57,7 +58,9 @@ class Mediakit extends React.Component {
                 </section>
                 <section className="photo-galleries">
                     <div className="container">
-                        <p className="main-category">{this.context.t("Фотогалереи")}</p>
+                        <MainCategory>
+                            {this.context.t("Фотогалереи")}
+                        </MainCategory>
                         <Media query="(min-width: 769px)"
                                defaultMatches={phone === null && tablet === null}
                                render={() => <Fragment>
@@ -104,7 +107,9 @@ class Mediakit extends React.Component {
                 </section>
                 <section className="videoclips">
                     <div className="container">
-                        <p className="main-category">{this.context.t("Видео")}</p>
+                        <MainCategory>
+                            {this.context.t("Видео")}
+                        </MainCategory>
                         <Media query="(min-width: 416px)"
                                defaultMatches={phone === null}
                                render={() => <Fragment>
@@ -137,7 +142,9 @@ class Mediakit extends React.Component {
                 </section>
                 <section className="presentations">
                     <div className="container">
-                        <p className="main-category">{this.context.t("Презентации")}</p>
+                        <MainCategory>
+                            {this.context.t("Презентации")}
+                        </MainCategory>
                         <Media query="(min-width: 769px)"
                                defaultMatches={phone === null && tablet === null}
                                render={() => <Fragment>
@@ -184,11 +191,6 @@ class Mediakit extends React.Component {
 
                     </div>
                 </section>
-                {/* <section className="branding">
-                    <div className="container">
-                        <p className="main-category">Айдентика</p>
-                    </div>
-                </section> */}
             </div>
         )
     }

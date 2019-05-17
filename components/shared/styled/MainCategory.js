@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const MainCategory = styled.a`
+const MainCategory = styled.p`
     float:left;
     font-size: 1.8rem;
     text-transform: uppercase;

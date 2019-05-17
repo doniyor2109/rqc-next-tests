@@ -18,6 +18,7 @@ import htmlSerializer from '../components/shared/htmlSerializer';
 import SciCard from '../components/research/SciCard';
 import ResearchHead from '../components/research/ResearchHead';
 import Publication from '../components/publications/Publication';
+import MainCategory from '../components/shared/styled/MainCategory';
 
 // other libs
 import PrismicConfig from '../prismic-configuration';
@@ -73,9 +74,9 @@ class Research extends React.Component {
 
           <section className="groups">
             <div id="groups" className="container">
-              <p className="main-category">
+              <MainCategory>
                 {this.context.t('Научные группы')}
-              </p>
+              </MainCategory>
 
               <div className="columns is-multiline">
                 {groups.map((group, index) => <SciCard group={group} key={index} />)}
@@ -85,9 +86,9 @@ class Research extends React.Component {
 
           <section className="research-publications">
             <div className="container">
-              <p className="main-category">
+              <MainCategory>
                 {this.context.t('Публикации')}
-              </p>
+              </MainCategory>
               <div className="columns is-multiline">
                 <div className="column is-12-tablet is-8-desktop is-offset-2-desktop ">
                   {this.props.publications.pubs.map((pub, index) => <Publication key={index} item={pub} />)}

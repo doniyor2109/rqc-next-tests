@@ -20,6 +20,7 @@ import AnnualReports from '../components/sliders/AnnualReports';
 import Contacts from '../components/about/Contacts'
 import Timeline from '../components/about/Timeline'
 import ArrowButton from '../components/shared/ArrowButton'
+import MainCategoryLink from '../components/shared/styled/MainCategoryLink';
 
 //other libraries
 import { RichText } from 'prismic-reactjs';
@@ -155,9 +156,9 @@ class About extends React.Component {
                                 {this.context.t("Годовые отчеты")} 
                             </h3>
                             <Link href="/reports">
-                                <a className="main-category-link">
+                                <MainCategoryLink>
                                     {this.context.t("смотреть все")}
-                                </a>
+                                </MainCategoryLink>
                             </Link>
                                 {page.data && <AnnualReports slides={page.data.body1[0].items}/> }
                             </div>

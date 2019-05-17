@@ -16,6 +16,7 @@ import Loading from '../components/shared/loading';
 import Milestones from '../components/sliders/Milestones'
 import Topics from '../components/sliders/Topics'
 import LabImage from '../components/sliders/LabImage'
+import MainCategory from '../components/shared/styled/MainCategory';
 
 // other libraries
 import moment from 'moment'
@@ -159,18 +160,18 @@ class Team extends Component {
                     </section>
                     <section className="topics"> 
                       <div className="container">
-                        <div className="main-category">
+                        <MainCategory>
                           {this.context.t("Направления исследований")}  
-                        </div>
-                          <Topics slides={team.item.data.topics} phone={phone} tablet={tablet} />
+                        </MainCategory>
+                        <Topics slides={team.item.data.topics} phone={phone} tablet={tablet} />
                       </div>
                     </section>
 
                     <section className="milestones-slider">
                         <div className="container">
-                            <div className="main-category">
+                            <MainCategory>
                                 {this.context.t("Наши успехи")}                        
-                            </div>
+                            </MainCategory>
                             <Milestones  slides={team.item.data.milestones} phone={phone} tablet={tablet}/>
                         </div>
                     </section>    

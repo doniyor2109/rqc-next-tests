@@ -12,11 +12,9 @@ import MainCategoryLink from '../shared/styled/MainCategoryLink';
 const NewsTeaser = ({ articles, phone, tablet }, { t }) => (
   <section className="news-teaser" style={{ padding: '9rem 0 0 0' }}>
     <div className="container">
-      <Link href="/news">
-        <MainCategory>
-          {t('Новости')}
-        </MainCategory>
-      </Link>
+      <MainCategory>
+        {t('Новости')}
+      </MainCategory>
       <Link href="/news">
         <MainCategoryLink>
           {t('смотреть все')}

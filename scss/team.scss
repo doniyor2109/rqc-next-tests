@@ -2,12 +2,6 @@
     overflow: visible;
     color:#040303;
 
-    .main-category {
-        float: none;
-        margin-bottom: 6rem;
-        display: block;
-    }
-
     .team-header {
         h1 {
             font-size: 4.2rem;
@@ -402,10 +396,6 @@
 @media (max-width:415px) {
 
     .teampage {
-
-        .main-category {
-            margin-bottom: 7.5rem;
-        }
 
         .team-header {
     
