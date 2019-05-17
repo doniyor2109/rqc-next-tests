@@ -83,8 +83,8 @@ class MyApp extends App {
         <Provider store={reduxStore}>
           <I18n translations={translations} initialLang={language}>
             <GeneralHead />
-            {loadingIsActive && <LoadingFull /> }
             <Nav cookieConsent={cookieConsent} />
+            {loadingIsActive && <LoadingFull /> }
             <Component {...pageProps} phone={phone} tablet={tablet} />
             <Footer />
           </I18n>

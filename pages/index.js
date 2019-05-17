@@ -6,19 +6,11 @@ import PropTypes from 'prop-types';
 import Media from 'react-media';
 import cookies from 'next-cookies';
 
-import Prismic from 'prismic-javascript';
 import * as mainActions from '../redux/actions/main';
 import * as langActions from '../redux/actions/lang';
 import * as eventsActions from '../redux/actions/events';
 import * as newsActions from '../redux/actions/news';
 import * as productsActions from '../redux/actions/products';
-
-
-import {
-  fetchMainRequest,
-  fetchMainSuccess,
-  fetchMainFailure,
-} from '../redux/actions/main';
 
 import MainSlider from '../components/main/MainSlider';
 import SciSlider from '../components/main/SciSlider';
@@ -31,28 +23,27 @@ import { CardLarge } from '../components/events/CardLarge';
 import { CardSmall } from '../components/events/CardSmall';
 import MainHead from '../components/main/MainHead';
 
-import PrismicConfig from '../prismic-configuration';
-
 class Index extends React.Component {
   static async getInitialProps(ctx) {
     // получаем все необходимое для рендеринга компонента от сервера
     const { reduxStore } = ctx;
-    const api = await Prismic.getApi(PrismicConfig.apiEndpoint);
 
     // получаем настройки языка из кукис
+    const language = typeof cookies(ctx).language === 'undefined' ? 'ru' : cookies(ctx).language;
     // и в зависимости от языка понимаем какой запрашивать id у CMS Prismic для основного слайдера.
     // Eсли куки language не было у пользователя, то мы присваиваем языку значение ru
     // мы не можем в этом месте ждать, пока _app выставит кукис, потому что тогда
     // слайдер не получит значение id вовремя, id будет undefined и слайдер не доставится
-    const language = typeof cookies(ctx).language === 'undefined' ? 'ru' : cookies(ctx).language;
-
-    // серверный запрос типа main (основной слайдер + важное мероприятие)
     const id = (language && language === 'ru' ? 'W3GVDyQAACYAZAgb' : 'W3GV8SQAACQAZAwG');
-    reduxStore.dispatch(fetchMainRequest());
-    await api.query(Prismic.Predicates.at('document.id', id),
-      { lang: language })
-      .then(response => reduxStore.dispatch(fetchMainSuccess(id, response)))
-      .catch(error => reduxStore.dispatch(fetchMainFailure(id, error)));
+    try {
+      const mainSliderData = await mainActions.getContentbyID(id, language);
+      reduxStore.dispatch(mainActions.fetchMainSuccess(id, mainSliderData));
+    } catch (err) {
+      reduxStore.dispatch(mainActions.fetchMainFailure(id, err));
+    }
+
+
+    // серверный запрос типа main (основной слайдер)
     return { lan: language };
   }
 
@@ -72,10 +63,10 @@ class Index extends React.Component {
     this.setState({
       DOMLoaded: true,
     });
-    fetchProducts(lang);
-    fetchMainSciSlider(lang);
-    fetchEvents(lang, 2);
-    fetchNews(lang, 3);
+    // fetchProducts(lang);
+    // fetchMainSciSlider(lang);
+    // fetchEvents(lang, 2);
+    // fetchNews(lang, 3);
   }
 
   componentDidUpdate(prevProps) {
@@ -109,16 +100,14 @@ class Index extends React.Component {
     } = this.props;
     const { sciSlider, isFetchingMain, isFetchingSci } = this.props.main;
 
-    // console.log("main", this.props)
+    console.log("main", this.props)
     return (
       <Fragment>
-        {!DOMLoaded && <LoadingFull />}
         <MainHead fb_locale={fb_locale} />
         <section className="main-slider">
           {main.data && (
           <MainSlider
             slides={main.data.body}
-            isLoading={isFetchingMain}
             phone={phone}
             tablet={tablet}
           />
