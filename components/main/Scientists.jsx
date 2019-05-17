@@ -3,17 +3,20 @@ import PropTypes from 'prop-types';
 import Link from 'next/link';
 import Media from 'react-media';
 import SciSlider from './SciSlider';
+import MainCategory from '../shared/styled/MainCategory';
+import MainCategoryLink from '../shared/styled/MainCategoryLink';
+import ScientistsSlider from './styled/ScientistsSlider';
 
 const Scientists = ({ sciSlider, phone, tablet }, { t }) => (
-  <section className="sci-slider">
+  <ScientistsSlider>
     <div className="container">
-      <a className="main-category">
+      <MainCategory>
         {t('Лица')}
-      </a>
+      </MainCategory>
       <Link href="/research">
-        <a className="main-category-link">
+        <MainCategoryLink>
           {t('все научные группы')}
-        </a>
+        </MainCategoryLink>
       </Link>
       {/* слайдер ученых для десктопа */}
       {sciSlider.length > 0 && (
@@ -59,7 +62,7 @@ const Scientists = ({ sciSlider, phone, tablet }, { t }) => (
       )
       }
     </div>
-  </section>
+  </ScientistsSlider>
 );
 
 Scientists.propTypes = {

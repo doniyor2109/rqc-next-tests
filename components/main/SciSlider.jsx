@@ -6,13 +6,14 @@ import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
 import NextArrow from '../shared/NextArrow';
 import PrevArrow from '../shared/PrevArrow';
+import Scientist from './styled/Scientist';
 
 class SciSlider extends React.Component {
   static propTypes = {
     iphone: PropTypes.bool,
     ipad: PropTypes.bool,
     desktop: PropTypes.bool,
-    slides: PropTypes.shape({
+    slides: PropTypes.arrayOf(PropTypes.shape({
       data: PropTypes.shape({
         position: PropTypes.arrayOf(PropTypes.shape({
           text: PropTypes.string,
@@ -32,7 +33,7 @@ class SciSlider extends React.Component {
           uid: PropTypes.string,
         }),
       }),
-    }),
+    })),
   }
 
   static defaultProps = {
@@ -105,24 +106,26 @@ class SciSlider extends React.Component {
     // готовим items для слайдера
     const items = slides.map(slide => (
       <div key={slide.data.photo.url} className="column">
-        <img src={slide.data.photo.url} alt={slide.data.name} />
-        <div className="sci-title">
-          {RichText.render(slide.data.name, PrismicConfig.linkResolver)}
-        </div>
-        <div className="sci-group">
-          {t('Группа')}
-          :
-          {' '}
-          <br />
-          <Link href={`/team?uid=${slide.data.science_group.uid}`} as={`/team/${slide.data.science_group.uid}`}>
-            <a className="group-name">
-              {slide.data.science_group.data
-                && RichText.render(slide.data.science_group.data.groupname,
-                  PrismicConfig.linkResolver)}
-            </a>
-          </Link>
-        </div>
-        {RichText.render(slide.data.position, PrismicConfig.linkResolver)}
+        <Scientist>
+          <img src={slide.data.photo.url} alt={slide.data.name} />
+          <div className="sci-title">
+            {RichText.render(slide.data.name, PrismicConfig.linkResolver)}
+          </div>
+          <div className="sci-group">
+            {t('Группа')}
+            :
+            {' '}
+            <br />
+            <Link href={`/team?uid=${slide.data.science_group.uid}`} as={`/team/${slide.data.science_group.uid}`}>
+              <a className="group-name">
+                {slide.data.science_group.data
+                  && RichText.render(slide.data.science_group.data.groupname,
+                    PrismicConfig.linkResolver)}
+              </a>
+            </Link>
+          </div>
+          {RichText.render(slide.data.position, PrismicConfig.linkResolver)}
+        </Scientist>
       </div>
     ));
 

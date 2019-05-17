@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const productType = {
+const productType = PropTypes.shape({
   big: PropTypes.bool,
   item: PropTypes.shape({
     data: PropTypes.shape({
@@ -15,6 +15,6 @@ const productType = {
       }),
     }),
   }),
-};
+});
 
 export default productType;

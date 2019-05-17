@@ -5,6 +5,8 @@ import { Link, RichText } from 'prismic-reactjs';
 import Media from 'react-media';
 import PrismicConfig from '../../prismic-configuration';
 import { Button } from '../shared/Button';
+import SliderSection from './styled/SliderSection';
+import MainSlide from './styled/MainSlide';
 
 class MainSlider extends React.Component {
   static propTypes = {
@@ -110,7 +112,7 @@ class MainSlider extends React.Component {
       }
 
       return (
-        <div key={slide.primary.title_slideh1[0].text}>
+        <MainSlide key={slide.primary.title_slideh1[0].text}>
           <div className="sl" style={back}>
             <div className="container">
               <div className="columns">
@@ -127,12 +129,12 @@ class MainSlider extends React.Component {
               </div>
             </div>
           </div>
-        </div>
+        </MainSlide>
       );
     });
 
     return (
-      <section className="main-slider">
+      <SliderSection>
         <Media
           query="(min-width: 769px)"
           defaultMatches={phone === null && tablet === null}
@@ -169,8 +171,7 @@ class MainSlider extends React.Component {
           )
                           }
         />
-
-      </section>
+      </SliderSection>
     );
   }
 }

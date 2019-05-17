@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const sciSlideType = {
+const sciSlideType = PropTypes.shape({
   iphone: PropTypes.bool,
   ipad: PropTypes.bool,
   desktop: PropTypes.bool,
@@ -25,6 +25,6 @@ const sciSlideType = {
       }),
     }),
   }),
-};
+});
 
 export default sciSlideType;

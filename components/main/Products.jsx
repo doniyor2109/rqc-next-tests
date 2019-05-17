@@ -4,14 +4,15 @@ import styled from 'styled-components';
 
 import ProductType from './productType';
 import ProductCard from './ProductCard';
+import MainCategory from '../shared/styled/MainCategory';
 
 
 const Products = ({items, className }, { t }) => (
   <section className={className} id="products">
     <div className="container">
-      <p className="main-category">
+      <MainCategory>
         {t('Продукты')}
-      </p>
+      </MainCategory>
       <div className="columns is-multiline">
         {items.map((item, index) => <ProductCard item={item} key={item.id} big={index < 2} />)}
       </div>

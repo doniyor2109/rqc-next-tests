@@ -6,18 +6,21 @@ import Media from 'react-media';
 import { CardLarge } from '../events/CardLarge';
 import { CardSmall } from '../events/CardSmall';
 
+import MainCategory from '../shared/styled/MainCategory';
+import MainCategoryLink from '../shared/styled/MainCategoryLink';
+
 const EventTeaser = ({ events, phone, tablet }, { t }) => (
-  <section className="event-teaser">
+  <section className="event-teaser" style={{ marginBottom: '9rem' }}>
     <div className="container">
       <Link href="/events">
-        <a className="main-category">
+        <MainCategory>
           {t('Мероприятия')}
-        </a>
+        </MainCategory>
       </Link>
       <Link href="/events">
-        <a className="main-category-link">
+        <MainCategoryLink>
           {t('смотреть все')}
-        </a>
+        </MainCategoryLink>
       </Link>
       <div className="columns is-multiline">
         {/* в зависимости от размера окна браузера рендерим

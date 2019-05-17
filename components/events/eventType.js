@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const productType = {
+const productType = PropTypes.shape({
   item: PropTypes.shape({
     data: PropTypes.shape({
       title: PropTypes.arrayOf(PropTypes.shape({
@@ -28,6 +28,6 @@ const productType = {
       end_date: PropTypes.string,
     }),
   }),
-};
+});
 
 export default productType;

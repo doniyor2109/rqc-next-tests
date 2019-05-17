@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const mainSlideType = {
+const mainSlideType = PropTypes.shape({
   phone: PropTypes.string,
   tablet: PropTypes.string,
   slides: PropTypes.arrayOf(PropTypes.shape({
@@ -29,6 +29,6 @@ const mainSlideType = {
       }),
     }),
   })),
-};
+});
 
 export default mainSlideType;

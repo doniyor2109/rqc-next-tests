@@ -6,20 +6,23 @@ import PropTypes from 'prop-types';
 import NewscardSmall from '../news/NewscardSmall';
 import NewsType from '../news/NewsType';
 
+import MainCategory from '../shared/styled/MainCategory';
+import MainCategoryLink from '../shared/styled/MainCategoryLink';
+
 const NewsTeaser = ({ articles, phone, tablet }, { t }) => (
-  <section className="news-teaser">
+  <section className="news-teaser" style={{ padding: '9rem 0 0 0' }}>
     <div className="container">
       <Link href="/news">
-        <a className="main-category">
+        <MainCategory>
           {t('Новости')}
-        </a>
+        </MainCategory>
       </Link>
       <Link href="/news">
-        <a className="main-category-link">
+        <MainCategoryLink>
           {t('смотреть все')}
-        </a>
+        </MainCategoryLink>
       </Link>
-      <div className="columns is-multiline">
+      <div className="columns is-multiline" style={{ clear: 'both' }}>
 
         {/* в зависимости от размера окна браузера мы рендерим разные верстки секции с тизерами новостей */}
         {/* вариант смартфона и Ipad */}
