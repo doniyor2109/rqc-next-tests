@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+// renamed
 
 const productType = PropTypes.shape({
   big: PropTypes.bool,
