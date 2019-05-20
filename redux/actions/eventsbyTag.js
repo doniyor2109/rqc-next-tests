@@ -17,7 +17,7 @@ export const fetchEventsByTag = (tag, quantity) => (dispatch) => {
                              Prismic.Predicates.at('document.tags', [tag])],
                                                   { lang: "*",
                                                     pageSize : quantity,
-                                                    // orderings : '[my.event.manual_date_of_publication desc]' 
+                                                    orderings : '[my.event.important desc, my.event.start_date_time desc, ]'
                                                   })
 
                       .then(response => dispatch(fetchEventsByTagSuccess(tag, response)))
