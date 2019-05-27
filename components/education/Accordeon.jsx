@@ -8,6 +8,7 @@ const AccordeonStyled = styled.div`
 
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
     margin-bottom: 1rem;
+    background: white;
 
     .head {
         display: flex;
@@ -18,24 +19,24 @@ const AccordeonStyled = styled.div`
         font-weight: 500;
         color: #3998D1;
         text-transform: uppercase;
-        background: white;
         padding: 2.3rem 3rem;
         cursor: pointer;
         &:focus {
             outline: 0;
         }
+        overflow: hidden;
     }
 
     .collapse {
-        height: ${props => (props.isOpened ? '100%' : '0%')};
-        animation: open 1s;
-    }
-
-    @keyframes open {
-        0% {height: 0px};
-        10% {height: 10%};
-        50% {height: 50%};
-        100% {height: 100%};
+        max-height: ${props => (props.isOpened ? '100%' : '0')};
+        overflow: hidden;
+        transition: max-height 2s;
+        .content {
+            padding: 2rem 3rem 5rem;
+            font-size: 1.6rem;
+            line-height: 2.3rem;
+            color: #040303;
+        }
     }
 `;
 
@@ -80,7 +81,9 @@ export default class Accordeon extends Component {
             }
           </div>
           <div className="collapse">
-            {RichText.render(content, PrismicConfig.linkResolver)}
+            <div className="content">
+                {RichText.render(content, PrismicConfig.linkResolver)}
+            </div>
           </div>
         </AccordeonStyled>
       );

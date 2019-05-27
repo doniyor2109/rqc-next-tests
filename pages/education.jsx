@@ -137,6 +137,7 @@ class Education extends Component {
           <Institute
             heading={page.data.rvk_heading}
             text={page.data.rvk}
+            last
           />
 
           {/* Дипломные проекты */}

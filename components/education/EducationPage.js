@@ -10,6 +10,10 @@ const EducationPage = styled.div`
             margin-bottom: 2.3rem;
         }
     }
+    a {
+      color: #3998D1;
+      font-weight: bold;
+    }
 `;
 
 export default EducationPage;

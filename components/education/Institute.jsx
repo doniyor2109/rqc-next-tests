@@ -6,18 +6,34 @@ import PrismicConfig from '../../prismic-configuration';
 
 const Style = styled.div`
   margin-top: 9rem;
-
+  margin-bottom: ${props => (props.last ? '9rem' : 0)};
+  h2 {
+    font-size: 2.2rem;
+    color: #040303;
+    line-height: 3rem;
+    font-weight: bold;
+  }
+  .welcome {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+    p:not(:last-child) {
+      margin-bottom: 2.3rem;
+    }
+  }
   
 `;
 
-const Institute = ({ heading, text }) => (
-  <Style>
+const Institute = ({ heading, text, last }) => (
+  <Style last={last}>
     <div className="columns is-multiline">
       <div className="column is-12">
         {RichText.render(heading, PrismicConfig.linkResolver)}
       </div>
       <div className="column is-9-desktop is-offset-1-desktop is-12-tablet is-12-mobile">
-        {RichText.render(text, PrismicConfig.linkResolver)}
+        <div className="welcome">
+          {RichText.render(text, PrismicConfig.linkResolver)}
+        </div>
       </div>
     </div>
   </Style>
