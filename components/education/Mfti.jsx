@@ -25,11 +25,48 @@ const Section = styled.section`
 
 class Mfti extends React.Component {
     static propTypes = {
-
+      text: PropTypes.arrayOf(PropTypes.shape({
+        text: PropTypes.string,
+      })),
+      heading: PropTypes.arrayOf(PropTypes.shape({
+        text: PropTypes.string,
+      })),
+      mfti_aspirantura: PropTypes.arrayOf(PropTypes.shape({
+        text: PropTypes.string,
+      })),
+      mfti_bachelor: PropTypes.arrayOf(PropTypes.shape({
+        text: PropTypes.string,
+      })),
+      mfti_magistratura: PropTypes.arrayOf(PropTypes.shape({
+        text: PropTypes.string,
+      })),
+      form_call_to_action: PropTypes.arrayOf(PropTypes.shape({
+        text: PropTypes.string,
+      })),
+      magistratura: PropTypes.arrayOf(PropTypes.shape({
+        course: PropTypes.arrayOf(PropTypes.shape({
+          text: PropTypes.string,
+        })),
+        teamleads: PropTypes.arrayOf(PropTypes.shape({
+          text: PropTypes.string,
+        })),
+        schedule: PropTypes.arrayOf(PropTypes.shape({
+          url: PropTypes.string,
+        })),
+        file_download_heading: PropTypes.arrayOf(PropTypes.shape({
+          url: PropTypes.string,
+        })),
+      })),
     }
 
     static defaultProps = {
-
+      text: [],
+      heading: [],
+      magistratura: [],
+      form_call_to_action: [],
+      mfti_aspirantura: [],
+      mfti_bachelor: [],
+      mfti_magistratura: [],
     }
 
     constructor(props) {
@@ -47,13 +84,14 @@ class Mfti extends React.Component {
       });
     }
 
-    sendForm() {
+    // sendForm() {
 
-    }
+    // }
 
     render() {
       const {
-        text, heading, mfti_aspirantura, mfti_bachelor, mfti_magistratura, form_call_to_action,
+        text, heading, mfti_aspirantura, mfti_bachelor,
+        mfti_magistratura, form_call_to_action, magistratura,
       } = this.props;
       const { isFormOpened } = this.state;
       const { t } = this.context;
@@ -69,21 +107,20 @@ class Mfti extends React.Component {
             <div className="columns">
               <div className="column is-9-desktop is-offset-1-desktop is-12-tablet is-12-mobile">
                 <div className="accordeons">
-
                   <Accordeon
                     title={t('Бакалавриат')}
-                    content={mfti_bachelor}
+                    description={mfti_bachelor}
                   />
 
                   <Accordeon
                     title={t('Магистратура')}
-                    content={mfti_magistratura}
-                    complexContent
+                    description={mfti_magistratura}
+                    list={magistratura}
                   />
 
                   <Accordeon
                     title={t('Аспирантура')}
-                    content={mfti_aspirantura}
+                    description={mfti_aspirantura}
                   />
                 </div>
 
@@ -91,7 +128,7 @@ class Mfti extends React.Component {
                   {t('Заявка на поступление')}
                 </H3>
                 <div className="description_form">
-                    {RichText.render(form_call_to_action, PrismicConfig.linkResolver)}
+                  {RichText.render(form_call_to_action, PrismicConfig.linkResolver)}
                 </div>
               </div>
             </div>
@@ -107,7 +144,6 @@ class Mfti extends React.Component {
       );
     }
 }
-
 
 Mfti.contextTypes = {
   t: PropTypes.func,

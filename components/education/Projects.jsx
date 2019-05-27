@@ -29,12 +29,12 @@ const Projects = ({ items, phone }) => (
 
 Projects.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape(LeadSection.projectType)),
-  phone: PropTypes.bool,
+  phone: PropTypes.string,
 };
 
 Projects.defaultProps = {
   items: [],
-  phone: false,
+  phone: null,
 };
 
 Projects.contextTypes = {

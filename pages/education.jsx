@@ -124,6 +124,7 @@ class Education extends Component {
           mfti_aspirantura={page.data.mfti_aspirantura}
           mfti_bachelor={page.data.mfti_bachelor}
           mfti_magistratura={page.data.mfti_magistratura}
+          magistratura={page.data.magistratura}
         />
 
         <div className="container">

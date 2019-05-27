@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { RichText } from 'prismic-reactjs';
@@ -46,11 +46,13 @@ Institute.propTypes = {
   text: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string,
   })),
+  last: PropTypes.bool,
 };
 
 Institute.defaultProps = {
   heading: [],
   text: [],
+  last: false,
 };
 
 
