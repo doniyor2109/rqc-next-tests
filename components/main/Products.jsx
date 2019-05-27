@@ -7,7 +7,7 @@ import ProductCard from './ProductCard';
 import MainCategory from '../shared/styled/MainCategory';
 
 
-const Products = ({items, className }, { t }) => (
+const Products = ({ items, className }, { t }) => (
   <section className={className} id="products">
     <div className="container">
       <MainCategory>

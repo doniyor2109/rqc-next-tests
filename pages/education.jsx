@@ -14,8 +14,9 @@ import EducationPage from '../components/education/EducationPage';
 import PageHeading from '../components/shared/PageHeading';
 import H3 from '../components/shared/styled/H3';
 import Projects from '../components/education/Projects';
+import Institute from '../components/education/Institute';
+import Mfti from '../components/education/Mfti';
 
-// Основной компонент, связывающий весь интерфейс страницы /news воедино
 class Education extends Component {
   static contextTypes = {
     t: PropTypes.func,
@@ -97,14 +98,48 @@ class Education extends Component {
 
     const { t } = this.context;
     const { page } = education;
+
+    console.log('education', this.props);
     return (
       <EducationPage>
         <EducationHead fbLocale={fb_locale} />
         <div className="container">
+
+          {/* Заголовок и описание страницы */}
           <PageHeading title="Образование" />
-          <div className="description">
-            {RichText.render(page.data.description, PrismicConfig.linkResolver)}
+          <div className="columns">
+            <div className="column is-9-desktop is-12-tablet is-12-mobile">
+              <div className="description">
+                {RichText.render(page.data.description, PrismicConfig.linkResolver)}
+              </div>
+            </div>
           </div>
+        </div>
+
+        {/* РКЦ & МФТИ */}
+        <Mfti
+          form_call_to_action={page.data.form_call_to_action}
+          text={page.data.mfti_description}
+          heading={page.data.mfti_heading}
+          mfti_aspirantura={page.data.mfti_aspirantura}
+          mfti_bachelor={page.data.mfti_bachelor}
+          mfti_magistratura={page.data.mfti_magistratura}
+        />
+
+        <div className="container">
+          {/* РКЦ и МИСиС */}
+          <Institute
+            heading={page.data.misis_heading}
+            text={page.data.misis}
+          />
+
+          {/* РКЦ и РВК */}
+          <Institute
+            heading={page.data.rvk_heading}
+            text={page.data.rvk}
+          />
+
+          {/* Дипломные проекты */}
           <H3>
             {t('Список дипломных проектов')}
           </H3>

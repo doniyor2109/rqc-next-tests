@@ -140,6 +140,11 @@ export const translations = {
     'Исследовательские гранты': 'Research grants',
     'ИСТОЧНИКИ ФИНАНСИРОВАНИЯ': 'FUNDING SOURCES',
     'Добро пожаловать на официальный сайт Российского Квантового Центра!': 'Welcome to the official website of the Russian Quantum Center!',
+    'Бакалавриат':'',
+    'Магистратура': '',
+    'Аспирантура': '',
+    'Заявка на поступление': '',
+
     },
  };
  
