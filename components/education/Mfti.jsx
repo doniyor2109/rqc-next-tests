@@ -12,6 +12,15 @@ import Form from './Form';
 
 const Section = styled.section`
     background: #F7F9FB;
+    padding-bottom: 6rem;
+    .accordeons {
+        margin:6rem 0;
+    }
+    .description_form {
+        margin: 3rem 0;
+        font-size: 1.6rem;
+        line-height: 2.3rem;
+    }
 `;
 
 class Mfti extends React.Component {
@@ -51,7 +60,7 @@ class Mfti extends React.Component {
       return (
         <Section>
           <div className="container">
-
+            <div className="empty" />
             <Institute
               text={text}
               heading={heading}
@@ -59,26 +68,31 @@ class Mfti extends React.Component {
 
             <div className="columns">
               <div className="column is-9-desktop is-offset-1-desktop is-12-tablet is-12-mobile">
-                <Accordeon
-                  title={t('Бакалавриат')}
-                  content={mfti_bachelor}
-                />
+                <div className="accordeons">
 
-                <Accordeon
-                  title={t('Магистратура')}
-                  content={mfti_magistratura}
-                  complexContent
-                />
+                  <Accordeon
+                    title={t('Бакалавриат')}
+                    content={mfti_bachelor}
+                  />
 
-                <Accordeon
-                  title={t('Аспирантура')}
-                  content={mfti_aspirantura}
-                />
+                  <Accordeon
+                    title={t('Магистратура')}
+                    content={mfti_magistratura}
+                    complexContent
+                  />
+
+                  <Accordeon
+                    title={t('Аспирантура')}
+                    content={mfti_aspirantura}
+                  />
+                </div>
 
                 <H3>
                   {t('Заявка на поступление')}
                 </H3>
-                {RichText.render(form_call_to_action, PrismicConfig.linkResolver)}
+                <div className="description_form">
+                    {RichText.render(form_call_to_action, PrismicConfig.linkResolver)}
+                </div>
               </div>
             </div>
 

@@ -5,7 +5,7 @@ import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
 
 const Style = styled.div`
-  margin-top: 9rem;
+  padding-top: 9rem;
   margin-bottom: ${props => (props.last ? '9rem' : 0)};
   h2 {
     font-size: 2.2rem;

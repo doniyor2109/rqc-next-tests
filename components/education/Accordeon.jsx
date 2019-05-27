@@ -28,10 +28,10 @@ const AccordeonStyled = styled.div`
     }
 
     .collapse {
-        max-height: ${props => (props.isOpened ? '30rem' : '0')};
+        max-height: ${props => (props.isOpened ? '50rem' : '0')};
         overflow: hidden;
         height: auto;
-        transition: max-height 1s ease-in;
+        transition: max-height 0.3s ease-in;
         .content {
             padding: 2rem 3rem 5rem;
             font-size: 1.6rem;
@@ -83,7 +83,7 @@ export default class Accordeon extends Component {
           </div>
           <div className="collapse">
             <div className="content">
-                {RichText.render(content, PrismicConfig.linkResolver)}
+              {RichText.render(content, PrismicConfig.linkResolver)}
             </div>
           </div>
         </AccordeonStyled>
