@@ -65,9 +65,9 @@ export default class Accordeon extends Component {
         teamleads: PropTypes.arrayOf(PropTypes.shape({
           text: PropTypes.string,
         })),
-        schedule: PropTypes.arrayOf(PropTypes.shape({
+        schedule: PropTypes.shape({
           url: PropTypes.string,
-        })),
+        }),
         file_download_heading: PropTypes.arrayOf(PropTypes.shape({
           url: PropTypes.string,
         })),

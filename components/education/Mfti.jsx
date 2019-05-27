@@ -50,9 +50,9 @@ class Mfti extends React.Component {
         teamleads: PropTypes.arrayOf(PropTypes.shape({
           text: PropTypes.string,
         })),
-        schedule: PropTypes.arrayOf(PropTypes.shape({
+        schedule: PropTypes.shape({
           url: PropTypes.string,
-        })),
+        }),
         file_download_heading: PropTypes.arrayOf(PropTypes.shape({
           url: PropTypes.string,
         })),
@@ -75,7 +75,7 @@ class Mfti extends React.Component {
         isFormOpened: false,
       };
       this.showForm = this.showForm.bind(this);
-      this.sendForm = this.sendForm.bind(this);
+    //   this.sendForm = this.sendForm.bind(this);
     }
 
     showForm() {

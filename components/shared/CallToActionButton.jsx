@@ -12,6 +12,9 @@ const Button = styled.button`
     text-transform: uppercase;
     font-size: 1.4rem;
     cursor: pointer;
+    &:focus {
+      outline: 0;
+    }
 `;
 const CallToActionButton = ({ text, onClick }) => (
   <Button onClick={onClick}>
