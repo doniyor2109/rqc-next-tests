@@ -28,9 +28,10 @@ const AccordeonStyled = styled.div`
     }
 
     .collapse {
-        max-height: ${props => (props.isOpened ? '100%' : '0')};
+        max-height: ${props => (props.isOpened ? '30rem' : '0')};
         overflow: hidden;
-        transition: max-height 2s;
+        height: auto;
+        transition: max-height 1s ease-in;
         .content {
             padding: 2rem 3rem 5rem;
             font-size: 1.6rem;
