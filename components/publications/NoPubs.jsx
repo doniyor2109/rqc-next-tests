@@ -17,6 +17,10 @@ const Message = styled.div`
       border: 0;
       font-size: inherit;
       line-height: inherit;
+      cursor: pointer;
+      &:focus {
+        outline: 0;
+      }
   }
 `;
 
