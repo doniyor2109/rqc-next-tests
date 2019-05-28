@@ -8,7 +8,7 @@ import Institute from './Institute';
 import Accordeon from './Accordeon';
 import H3 from '../shared/styled/H3';
 import CallToActionButton from '../shared/CallToActionButton';
-import Form from './Form';
+import FormPopup from './FormPopup';
 
 const Section = styled.section`
     background: #F7F9FB;
@@ -75,7 +75,8 @@ class Mfti extends React.Component {
         isFormOpened: false,
       };
       this.showForm = this.showForm.bind(this);
-    //   this.sendForm = this.sendForm.bind(this);
+      this.close = this.close.bind(this);
+      this.sendForm = this.sendForm.bind(this);
     }
 
     showForm() {
@@ -84,9 +85,15 @@ class Mfti extends React.Component {
       });
     }
 
-    // sendForm() {
+    close() {
+      this.setState({
+        isFormOpened: false,
+      });
+    }
 
-    // }
+    sendForm() {
+
+    }
 
     render() {
       const {
@@ -136,7 +143,13 @@ class Mfti extends React.Component {
             <div className="columns">
               <div className="column is-3-desktop is-offset-1-desktop is-4-tablet is-12-mobile">
                 <CallToActionButton text={t('Подать заявку')} onClick={this.showForm} />
-                {isFormOpened && <Form send={this.sendForm} />}
+                {isFormOpened && (
+                <FormPopup
+                  send={this.sendForm}
+                  active={isFormOpened}
+                  close={this.close}
+                />
+                )}
               </div>
             </div>
           </div>
