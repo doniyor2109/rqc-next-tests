@@ -17,7 +17,17 @@ const Category = styled.h2`
 // и для сравнения публикаций из массива по этим категориям
 const getYear = pub => pub.data.date.slice(0, 4);
 const getTitleFirstletter = pub => pub.data.title[0].text.slice(0, 1);
-const getJournalFirstLetter = pub => pub.data.journal_name[0].text.slice(0, 1);
+
+// у публикации может не быть журнала, поэтому 
+// journal_name иногда бывает пустым
+// если такое случается, помещаем публикацию в начало под символом -
+const getJournalFirstLetter = (pub) => {
+  if (typeof pub.data.journal_name[0] === 'undefined') {
+    console.log('журнала нет тут', pub.data);
+  }
+  return (pub.data.journal_name[0] && pub.data.journal_name[0].text.slice(0, 1)) || 'Arxiv';
+};
+
 const getSortingFunction = (tag) => {
   if (tag === 'SORT_DATE') return getYear;
   if (tag === 'SORT_NAME') return getTitleFirstletter;
