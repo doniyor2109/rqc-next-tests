@@ -24,8 +24,8 @@ const Style = styled.div`
   
 `;
 
-const Institute = ({ heading, text, last }) => (
-  <Style last={last}>
+const Institute = ({ heading, text, last, id }) => (
+  <Style last={last} id={id}>
     <div className="columns is-multiline">
       <div className="column is-12">
         {RichText.render(heading, PrismicConfig.linkResolver)}

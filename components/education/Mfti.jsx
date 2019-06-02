@@ -102,7 +102,7 @@ class Mfti extends React.Component {
       const { isFormOpened } = this.state;
       const { t } = this.context;
       return (
-        <Section>
+        <Section id="mfti">
           <div className="container">
             <div className="empty" />
             <Institute

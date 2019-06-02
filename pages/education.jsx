@@ -84,8 +84,16 @@ class Education extends Component {
     return { fb_locale };
   }
 
+
   componentDidUpdate(prevProps) {
     const { lang, fetchEducation } = this.props;
+
+    const { hash } = window.location;
+    const elmnt = document.getElementById(hash.slice(1));
+    if (elmnt) {
+      elmnt.scrollIntoView();
+    }
+
     if (lang !== prevProps.lang) {
       fetchEducation(lang);
     }
@@ -133,17 +141,19 @@ class Education extends Component {
           <Institute
             heading={page.data.misis_heading}
             text={page.data.misis}
+            id="misis"
           />
 
           {/* РКЦ и РВК */}
           <Institute
             heading={page.data.rvk_heading}
             text={page.data.rvk}
+            id="rvk"
             last
           />
 
           {/* Дипломные проекты */}
-          <H3>
+          <H3 id="projects">
             {t('Список дипломных проектов')}
           </H3>
         </div>

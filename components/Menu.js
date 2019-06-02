@@ -68,7 +68,24 @@ const Menu = [
   {
     name: 'Образование',
     url: '/education',
-    children: [],
+    children: [
+      {
+        name: 'РКЦ и МФТИ',
+        url: '/education#mfti',
+      },
+      {
+        name: 'РКЦ и МИСиС',
+        url: '/education#misis',
+      },
+      {
+        name: 'РКЦ и РВК',
+        url: '/education#rvk',
+      },
+      {
+        name: 'Дипломные проекты',
+        url: '/education#projects',
+      },
+    ],
   },
   {
     name: 'Продукты',
