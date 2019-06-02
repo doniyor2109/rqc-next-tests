@@ -68,7 +68,7 @@ class FormPopup extends React.Component {
         nameError: true,
       });
     }
-    console.log('email', event.target.elements.email.checkValidity())
+    console.log('email', event.target.elements.email.checkValidity());
     if (!event.target.elements.email.checkValidity()) {
       this.inputemail.current.placeholder = 'Неверный E-mail!';
       this.setState({

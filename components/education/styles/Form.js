@@ -6,6 +6,10 @@ const Form = styled.div`
     @media (max-width: 415px) {
         width: 100%;
         display: block;
+        padding: 6rem 3rem;
+        h3 {
+          text-align: center;
+        }
     }
     background: white;
     padding: 6rem 9.5rem;
@@ -13,24 +17,16 @@ const Form = styled.div`
     .select_wrapper {
       display: flex;
       align-items: center;
-      margin-top: 6rem;
-      @media (max-width: 768px) {
-        align-items: flex-start;
+      margin-top: 6rem; 
+      @media (max-width: 415px) {
         flex-direction: column;
-      }           
+        align-items: flex-start;
+      }     
       .name {
         font-size: 1.4rem;
         line-height: 3rem;
         font-weight: bold;
         margin-right: 1rem;
-        @media (max-width:1088px) {
-            width: 11rem;
-        }
-        @media (max-width: 768px) {
-            font-size: 1.4rem;
-            line-height: 3rem;
-            font-weight: bold;
-        }
         @media (max-width: 415px) {
             display: block;
             text-align: left;
@@ -42,6 +38,9 @@ const Form = styled.div`
       }
       .select-container {
         width: 50%;
+        @media (max-width: 415px) {
+          width: 100%;
+        }  
       }
       .select__control {
         border-color: rgba(5, 4, 4, 0.5);
@@ -82,6 +81,10 @@ const Form = styled.div`
     .halfwidth {
         display: inline-block;
         width: 47%;
+        @media (max-width: 415px) {
+          width: 100%;
+          display: block;
+        } 
     }
     input[name], textarea {
         border: 0;
@@ -91,6 +94,9 @@ const Form = styled.div`
         line-height:3rem;
         color: rgba(4,3,3,0.7);
         margin-top: 4rem;
+        @media (max-width: 415px) {
+          margin-top: 3rem;
+        }
         &.error {
             &::placeholder {
                 color: #585AA8;
@@ -108,6 +114,9 @@ const Form = styled.div`
         display:flex;
         flex-direction: row;
         justify-content: space-between;
+        @media (max-width: 415px) {
+          display: block;
+        }
     }
     input[name="name"], input[name="teamlead"] {
         margin-top: 3rem;
@@ -136,6 +145,10 @@ const Form = styled.div`
         }
         &:focus{
             outline:0;
+        }
+        @media (max-width: 415px) {
+          width: 100%;
+          margin-top: 4rem;
         }
     }
     .mark {

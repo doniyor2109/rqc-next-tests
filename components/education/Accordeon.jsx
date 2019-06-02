@@ -1,11 +1,9 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
-import {
-  Title, TeamLead, HR,
-} from './styles/ProjectStyles';
+import CourseDescription from './CourseDescription';
 
 const AccordeonStyled = styled.div`
 
@@ -31,10 +29,9 @@ const AccordeonStyled = styled.div`
     }
 
     .collapse {
-        max-height: ${props => (props.isOpened ? '300rem' : '0')};
+        max-height: ${props => (props.isOpened ? '100%' : '0')};
         overflow: hidden;
         height: auto;
-        transition: max-height 1s ease-in;
         .content {
             padding: 2rem 3rem 5rem;
             font-size: 1.6rem;
@@ -72,12 +69,14 @@ export default class Accordeon extends Component {
           url: PropTypes.string,
         })),
       })),
+      phone: PropTypes.string,
     }
 
     static defaultProps = {
       title: [],
       description: [],
       list: [],
+      phone: null,
     }
 
     static contextTypes = {
@@ -100,9 +99,10 @@ export default class Accordeon extends Component {
     }
 
     render() {
-      const { title, description, list } = this.props;
+      const {
+        title, description, list, phone,
+      } = this.props;
       const { isOpened } = this.state;
-      const { t } = this.context;
       return (
         <AccordeonStyled isOpened={isOpened}>
           <div className="head" onClick={this.open} role="button" tabIndex="0">
@@ -115,45 +115,15 @@ export default class Accordeon extends Component {
           <div className="collapse">
             <div className="content">
               {RichText.render(description, PrismicConfig.linkResolver)}
-              {(list.length > 0)
-              && (
-              <div className="columns" style={{ marginTop: '2rem' }}>
-                <div className="column is-5">
-                  <Title>
-                    {t('Курсы')}
-                  </Title>
-                </div>
-                <div className="column is-7">
-                  <Title>
-                    {t('Научные руководители')}
-                  </Title>
-                </div>
-              </div>
-              )
-              }
-              <div className="columns is-multiline">
-                {list.map((element, index) => (
-                  <Fragment key={element.course[0].text}>
-                    <div className="column is-5">
-                      <TeamLead>
-                        <h1>
-                          {element.course[0].text}
-                        </h1>
-                      </TeamLead>
-                      <a href={element.schedule.url && element.schedule.url} target="_blank" rel="noopener noreferrer" className="cv">
-                        {element.file_download_heading[0] && element.file_download_heading[0].text}
-                      </a>
-                    </div>
-
-                    <div className="column is-7">
-                      <div className="teamleads">
-                        {RichText.render(element.teamleads, PrismicConfig.linkResolver)}
-                      </div>
-                    </div>
-                    <div className="column is-12">
-                      {(index < (list.length - 1)) && <HR />}
-                    </div>
-                  </Fragment>
+              <div className="columns is-multiline" style={{ marginTop: '2rem' }}>
+                {list.map((item, index) => (
+                  <CourseDescription
+                    item={item}
+                    first={index === 0}
+                    last={index === (list.length - 1)}
+                    phone={phone}
+                    key={item.course[0].text}
+                  />
                 ))}
               </div>
             </div>

@@ -52,7 +52,7 @@ class LeadSection extends React.Component {
       return (
         <Fragment>
           <div className="column is-4-desktop is-6-tablet is-12-mobile">
-            {(first || phone)
+            {(first || phone !== null)
             && (
             <Title>
               {t('Научный руководитель')}
@@ -85,7 +85,7 @@ class LeadSection extends React.Component {
             </TeamLead>
           </div>
           <div className="column is-7-desktop is-6-tablet is-12-mobile">
-            {(first || phone)
+            {(first || phone !== null)
             && (
             <Title>
               {t('Темы')}

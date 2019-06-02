@@ -57,6 +57,7 @@ class Mfti extends React.Component {
           url: PropTypes.string,
         })),
       })),
+      phone: PropTypes.string,
     }
 
     static defaultProps = {
@@ -67,6 +68,7 @@ class Mfti extends React.Component {
       mfti_aspirantura: [],
       mfti_bachelor: [],
       mfti_magistratura: [],
+      phone: null,
     }
 
     constructor(props) {
@@ -91,14 +93,10 @@ class Mfti extends React.Component {
       });
     }
 
-    sendForm() {
-
-    }
-
     render() {
       const {
         text, heading, mfti_aspirantura, mfti_bachelor,
-        mfti_magistratura, form_call_to_action, magistratura,
+        mfti_magistratura, form_call_to_action, magistratura, phone,
       } = this.props;
       const { isFormOpened } = this.state;
       const { t } = this.context;
@@ -117,17 +115,20 @@ class Mfti extends React.Component {
                   <Accordeon
                     title={t('Бакалавриат')}
                     description={mfti_bachelor}
+                    phone={phone}
                   />
 
                   <Accordeon
                     title={t('Магистратура')}
                     description={mfti_magistratura}
                     list={magistratura}
+                    phone={phone}
                   />
 
                   <Accordeon
                     title={t('Аспирантура')}
                     description={mfti_aspirantura}
+                    phone={phone}
                   />
                 </div>
 
@@ -145,7 +146,6 @@ class Mfti extends React.Component {
                 <CallToActionButton text={t('Подать заявку')} onClick={this.showForm} />
                 {isFormOpened && (
                 <FormPopup
-                  send={this.sendForm}
                   active={isFormOpened}
                   close={this.close}
                 />
