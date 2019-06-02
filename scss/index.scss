@@ -25,6 +25,10 @@ $column-gap: 1.5rem;
 @import './vacancies.scss';
 @import './videopage.scss';
 
+html {
+    font-size: 62.5%;
+}
+
 body {
   font-family: "DIN Pro", sans-serif;
   color: #040403;
@@ -36,9 +40,10 @@ body.noscroll {
     width: 100%;
 }
 
-html {
-    font-size: 62.5%;
+select, input, textarea {
+  font-size: 16px!important;
 }
+
 
 .peoplepage, 
 .aboutpage, 
