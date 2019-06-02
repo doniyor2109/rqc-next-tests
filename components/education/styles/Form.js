@@ -41,6 +41,9 @@ const Form = styled.div`
         @media (max-width: 415px) {
           width: 100%;
         }  
+        input {
+          font-size: 16px;
+        }
       }
       .select__control {
         border-color: rgba(5, 4, 4, 0.5);
