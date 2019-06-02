@@ -84,12 +84,14 @@ class Mfti extends React.Component {
       this.setState({
         isFormOpened: true,
       });
+      document.body.classList.add('noscroll');
     }
 
     close() {
       this.setState({
         isFormOpened: false,
       });
+      document.body.classList.remove('noscroll');
     }
 
     render() {
