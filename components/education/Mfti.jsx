@@ -78,7 +78,6 @@ class Mfti extends React.Component {
       };
       this.showForm = this.showForm.bind(this);
       this.close = this.close.bind(this);
-      this.sendForm = this.sendForm.bind(this);
     }
 
     showForm() {
