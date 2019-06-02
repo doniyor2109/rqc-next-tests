@@ -5,7 +5,7 @@ import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
 import {
   Title, TeamLead, HR,
-} from './ProjectStyles';
+} from './styles/ProjectStyles';
 
 const AccordeonStyled = styled.div`
 

@@ -6,7 +6,7 @@ import Link from 'next/link';
 import PrismicConfig from '../../prismic-configuration';
 import {
   HR, Title, Button, Themes, TeamLead,
-} from './ProjectStyles';
+} from './styles/ProjectStyles';
 
 class LeadSection extends React.Component {
     projectType = {
