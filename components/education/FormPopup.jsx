@@ -127,7 +127,7 @@ class FormPopup extends React.Component {
     } = this.state;
     const { t } = this.context;
     const stupenOptions = [
-      { value: t('Бакалавриат'), label: t('Бакалавриат') },
+      { value: t('Бакалавриат (открытие в 2020 г)'), label: t('Бакалавриат (открытие в 2020 г)'), isDisabled: true },
       { value: t('Магистратура'), label: t('Магистратура') },
       { value: t('Аспирантура'), label: t('Аспирантура') },
     ];
@@ -156,6 +156,7 @@ class FormPopup extends React.Component {
                       className="select-container"
                       classNamePrefix="select"
                       placeholder={t('Выберите из списка...')}
+                      isOptionDisabled={option => option.isDisabled === true}
                     />
                   </div>
                   <input

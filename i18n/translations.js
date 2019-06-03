@@ -162,7 +162,7 @@ export const translations = {
     'Введите название факультета': 'Type the faculty name',
     'Если вам интересно определенное направление работы РКЦ, укажите это направление и научного руководителя, к которому вы хотели бы попасть': 'If you are interested in a specific direction of work of the RQC, indicate this direction and desired adviser',
     'Направление работы': 'Field of work',
-    'Научный руководитель': 'Scientific adviser',
+    'Научный руководитель': 'Supervisor',    
     'Дополнительные сведения, которые вы хотите сообщить о себе': 'Additional details about yourself',
     '* — Вопросы, обязательные для заполнения': '* — Required fields',
     'Отправить': 'Send',
