@@ -20,10 +20,20 @@ const CourseDescription = ({
         <h1>
           {item.course[0].text}
         </h1>
+        {/* <a href={item.schedule.url && item.schedule.url} target="_blank" rel="noopener noreferrer" className="cv">
+          {item.file_download_heading[0] && item.file_download_heading[0].text}
+        </a> */}
+        {item.schedule.url
+          && (
+          <a href={item.schedule.url} download>
+            <button className="schedule-download" type="button">
+              <img src="/static/download_archive_white.svg" alt="" />
+              {item.file_download_heading[0] && item.file_download_heading[0].text}
+            </button>
+          </a>
+          )
+        }
       </TeamLead>
-      <a href={item.schedule.url && item.schedule.url} target="_blank" rel="noopener noreferrer" className="cv">
-        {item.file_download_heading[0] && item.file_download_heading[0].text}
-      </a>
     </div>
 
     <div className="column is-7">

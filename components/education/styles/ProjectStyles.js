@@ -12,6 +12,10 @@ export const Title = styled.p`
 export const TeamLead = styled.div`
     font-size: 1.6rem;
     line-height: 2.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 75%;
 
     h1 {
         font-size: 2.2rem;

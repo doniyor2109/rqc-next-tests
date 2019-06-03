@@ -148,7 +148,7 @@ class FormPopup extends React.Component {
                 <form onSubmit={this.handleSubmit} noValidate>
                   <div className="select_wrapper">
                     <p className="name">
-                      {t('Степень обучения')}
+                      {t('Ступень обучения')}
                     :
                     </p>
                     <Select
@@ -206,11 +206,11 @@ class FormPopup extends React.Component {
                     value={vuz}
                     onChange={this.handleInputChange}
                     className="fullwidth"
-                    placeholder={t('ВУЗ*')}
+                    placeholder={t('Вуз*')}
                     onKeyDown={this.onKeydown}
                     required
                   />
-                  {vuzError && <FormError text={t('Введите название ВУЗа')} />}
+                  {vuzError && <FormError text={t('Введите название вуза')} />}
 
                   <input
                     name="faculty"

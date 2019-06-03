@@ -45,6 +45,22 @@ const AccordeonStyled = styled.div`
                 font-weight: normal;
               }
             }
+            .schedule-download {
+              border: 0;
+              background: transparent;
+              cursor: pointer;
+              font-size: 1.4rem;
+              font-weight: 500;
+              color: #3998D1;
+              &:focus {
+                outline: 0;
+              }
+              img {
+                position: relative;
+                top: 7px;
+                margin-right: 1rem;
+              }
+            }
         }
     }
 `;
