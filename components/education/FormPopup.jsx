@@ -2,12 +2,12 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Select from 'react-select';
 import fetch from 'unfetch';
-import MaskedInput from 'react-text-mask';
 import Popup from '../shared/Popup';
 import H3 from '../shared/styled/H3';
 import Form from './styles/Form';
 import Loading from '../shared/loading';
 import SendingStatus from './SendingStatus';
+import FormError from './FormError';
 
 class FormPopup extends React.Component {
   constructor(props) {
@@ -35,12 +35,6 @@ class FormPopup extends React.Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.onKeydown = this.onKeydown.bind(this);
-    this.stepenSelect = React.createRef();
-    this.inputname = React.createRef();
-    this.inputphone = React.createRef();
-    this.inputemail = React.createRef();
-    this.inputvuz = React.createRef();
-    this.inputfaculty = React.createRef();
   }
 
   onKeydown(event) {
@@ -51,9 +45,7 @@ class FormPopup extends React.Component {
   }
 
   handleSubmit(event) {
-    const {
-      nameError, emailError, phoneError, vuzError, facultyError, selectedStepen,
-    } = this.state;
+    const { selectedStepen, phoneError, emailError } = this.state;
 
     const data = new FormData(event.target);
     data.set('stepen', selectedStepen);
@@ -63,38 +55,33 @@ class FormPopup extends React.Component {
     const vuz = data.get('vuz');
     const faculty = data.get('faculty');
     if (name === '') {
-      this.inputname.current.placeholder = 'Введите имя!';
       this.setState({
         nameError: true,
       });
     }
-    console.log('email', event.target.elements.email.checkValidity());
     if (!event.target.elements.email.checkValidity()) {
-      this.inputemail.current.placeholder = 'Неверный E-mail!';
       this.setState({
         emailError: true,
       });
     }
-    if (phone === '') {
-      this.inputphone.current.inputElement.placeholder = 'Неверный номер телефона!';
+    console.log('phone is valid? ', event.target.elements.phone.checkValidity());
+    if (phone === '' || phone.length < 10) {
       this.setState({
         phoneError: true,
       });
     }
     if (vuz === '') {
-      this.inputvuz.current.placeholder = 'Введите название ВУЗа!';
       this.setState({
         vuzError: true,
       });
     }
     if (faculty === '') {
-      this.inputfaculty.current.placeholder = 'Введите название факультета!';
       this.setState({
         facultyError: true,
       });
     }
 
-    if (event.target.checkValidity()) {
+    if (event.target.checkValidity() && !phoneError && !emailError) {
       this.setState({
         isSending: true,
       });
@@ -180,59 +167,63 @@ class FormPopup extends React.Component {
                     type="text"
                     value={name}
                     onChange={this.handleInputChange}
-                    className={nameError ? 'fullwidth error' : 'fullwidth'}
+                    className="fullwidth"
                     placeholder={t('Имя Фамилия Отчество')}
-                    ref={this.inputname}
                     onKeyDown={this.onKeydown}
                     required
                   />
+                  {nameError && <FormError text={t('Введите имя')} />}
                   <div className="halfwidth_wrapper">
-                    <input
-                      name="email"
-                      type="email"
-                      value={email}
-                      onChange={this.handleInputChange}
-                      className={emailError ? 'halfwidth error' : 'halfwidth'}
-                      placeholder="E-mail*"
-                      ref={this.inputemail}
-                      onKeyDown={this.onKeydown}
-                      required
-                    />
-                    <MaskedInput
-                      mask={['+', /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/]}
-                      name="phone"
-                      type="text"
-                      value={phone}
-                      onChange={this.handleInputChange}
-                      className={phoneError ? 'halfwidth error' : 'halfwidth'}
-                      placeholder={t('Телефон*')}
-                      ref={this.inputphone}
-                      onKeyDown={this.onKeydown}
-                      required
-                    />
+                    <div className="halfwidth input-with-error">
+                      <input
+                        name="email"
+                        type="email"
+                        value={email}
+                        onChange={this.handleInputChange}
+                        placeholder="E-mail*"
+                        onKeyDown={this.onKeydown}
+                        required
+                      />
+                      {emailError && <FormError text={t('Неверный email')} />}
+                    </div>
+                    <div className="halfwidth input-with-error">
+                      <input
+                        name="phone"
+                        type="text"
+                        value={phone}
+                        onChange={this.handleInputChange}
+                        placeholder={t('Телефон* (+7...)')}
+                        onKeyDown={this.onKeydown}
+                        required
+                        minLength={10}
+                      />
+                      {phoneError && <FormError text={t('Неверный номер телефона')} />}
+                    </div>
                   </div>
                   <input
                     name="vuz"
                     type="text"
                     value={vuz}
                     onChange={this.handleInputChange}
-                    className={vuzError ? 'fullwidth error' : 'fullwidth'}
+                    className="fullwidth"
                     placeholder={t('ВУЗ*')}
-                    ref={this.inputvuz}
                     onKeyDown={this.onKeydown}
                     required
                   />
+                  {vuzError && <FormError text={t('Введите название ВУЗа')} />}
+
                   <input
                     name="faculty"
                     type="text"
                     value={faculty}
                     onChange={this.handleInputChange}
-                    className={facultyError ? 'fullwidth error' : 'fullwidth'}
+                    className="fullwidth"
                     placeholder={t('Факультет*')}
-                    ref={this.inputfaculty}
                     onKeyDown={this.onKeydown}
                     required
                   />
+                  {facultyError && <FormError text={t('Введите название факультета')} />}
+
                   <p className="details">
                     {t('Если вам интересно определенное направление работы РКЦ, укажите это направление и научного руководителя, к которому вы хотели бы попасть')}
                   :
@@ -273,9 +264,9 @@ class FormPopup extends React.Component {
                   </div>
                   {(nameError || emailError || phoneError || vuzError || facultyError)
                 && (
-                <div className="error">
-                  {t('Проверьте корректность заполнения формы!')}
-                </div>
+                <FormError
+                  text={t('Проверьте корректность заполнения формы!')}
+                />
                 )
                 }
                 </form>

@@ -10,7 +10,7 @@ import * as educationActions from '../redux/actions/education';
 import * as langActions from '../redux/actions/lang';
 
 import EducationHead from '../components/education/EducationHead';
-import EducationPage from '../components/education/EducationPage';
+import EducationPage from '../components/education/styles/EducationPage';
 import PageHeading from '../components/shared/PageHeading';
 import H3 from '../components/shared/styled/H3';
 import Projects from '../components/education/Projects';

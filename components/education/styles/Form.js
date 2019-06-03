@@ -4,12 +4,12 @@ const Form = styled.div`
   .modal-content {
     width: 73rem;
     @media (max-width: 415px) {
-        width: 100%;
-        display: block;
-        padding: 6rem 3rem;
-        h3 {
-          text-align: center;
-        }
+      width: 100%;
+      display: block;
+      padding: 6rem 3rem;
+      h3 {
+        text-align: center;
+      }
     }
     background: white;
     padding: 6rem 9.5rem;
@@ -78,92 +78,83 @@ const Form = styled.div`
       }
     }
     .fullwidth {
-        display: block;
-        width: 100%;
+      display: block;
+      width: 100%;
     }
     .halfwidth {
-        display: inline-block;
-        width: 47%;
-        @media (max-width: 415px) {
-          width: 100%;
-          display: block;
-        } 
+      display: inline-block;
+      width: 47%;
+      @media (max-width: 415px) {
+        width: 100%;
+        display: block;
+      } 
     }
     input[name], textarea {
-        border: 0;
-        border-bottom: 1px solid rgba(4,3,3,0.5);
-        font-family: 'DIN Pro';
-        font-size: 1.6rem;
-        line-height:3rem;
-        color: rgba(4,3,3,0.7);
-        margin-top: 4rem;
-        @media (max-width: 415px) {
-          margin-top: 3rem;
-        }
-        &.error {
-            &::placeholder {
-                color: #585AA8;
-            }
-        }
-        &:focus {
-            outline: 0;
-        }
+      width: 100%;
+      border: 0;
+      border-bottom: 1px solid rgba(4,3,3,0.5);
+      font-family: 'DIN Pro';
+      font-size: 1.6rem;
+      line-height:3rem;
+      color: rgba(4,3,3,0.7);
+      margin-top: 4rem;
+      @media (max-width: 415px) {
+        margin-top: 3rem;
+      }
+      &:focus {
+          outline: 0;
+      }
     }
     textarea {
-        margin: 2rem 0 4rem;
-        border: 1px solid rgba(4,3,3,0.5);
+      margin: 2rem 0 4rem;
+      border: 1px solid rgba(4,3,3,0.5);
     }
     .halfwidth_wrapper {
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-        @media (max-width: 415px) {
-          display: block;
-        }
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @media (max-width: 415px) {
+        display: block;
+      }
     }
     input[name="name"], input[name="teamlead"] {
-        margin-top: 3rem;
+      margin-top: 3rem;
     }
     input[name="subject"] {
-        margin-top: 2rem;
+      margin-top: 2rem;
     }
     .details {
-        font-size: 1.4rem;
-        line-height: 2.3rem;
-        font-weight: bold;
-        margin-top: 4rem;
+      font-size: 1.4rem;
+      line-height: 2.3rem;
+      font-weight: bold;
+      margin-top: 4rem;
     }
     .form-submit {
-        background: white;
-        color: #3998D1;
-        border: 2px solid #3998D1;
-        width: 16rem;
-        text-transform: uppercase;
-        font-size: 1.4rem;
-        font-weight: 500;
-        padding: 1.1rem 0;
-        &:hover {
-            background: #3998D1;
-            color: white;
-        }
-        &:focus{
-            outline:0;
-        }
-        @media (max-width: 415px) {
-          width: 100%;
-          margin-top: 4rem;
-        }
+      background: white;
+      color: #3998D1;
+      border: 2px solid #3998D1;
+      width: 16rem;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      font-weight: 500;
+      padding: 1.1rem 0;
+      &:hover {
+          background: #3998D1;
+          color: white;
+      }
+      &:focus{
+          outline:0;
+      }
+      @media (max-width: 415px) {
+        width: 100%;
+        margin-top: 4rem;
+      }
     }
     .mark {
       font-style: italic;
       color: rgba(4,3,3,0.7);
       font-size: 1.4rem;
 
-    }
-    .error {
-        color: #585AA8;
-        font-size: 1.4rem;
-        font-style: italic;
     }
   }
 `;

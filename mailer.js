@@ -35,7 +35,7 @@ const send = ({ email, name, letter }) => {
   `;
   const message = {
     from: 'Сайт РКЦ <no-reply@rqc.ru>',
-    to: ['sorokinvj@gmail.com', 'students@rqc.ru'],
+    to: ['sorokinvj@gmail.com'],
     subject: `Новая заявка на поступление от ${from}`,
     text: body,
     replyTo: from,
@@ -47,3 +47,5 @@ const send = ({ email, name, letter }) => {
 };
 
 module.exports = send;
+
+// 'students@rqc.ru'
