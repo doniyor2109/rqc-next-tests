@@ -1,12 +1,13 @@
 const nodemailer = require('nodemailer');
 
 const transporter = nodemailer.createTransport({
-  host: 'smtp.mailtrap.io',
-  port: 2525,
+  host: 'secure.emailsrvr.com',
+  port: 465,
   auth: {
-    user: '39d60beb4b9f51',
-    pass: 'f448521f6ecd25',
+    user: 'no-reply@rqc.ru',
+    pass: 'oNie5Gi8un8oogog',
   },
+  secure: true,
   logger: true,
 });
 
@@ -33,7 +34,7 @@ const send = ({ email, name, letter }) => {
     ${letter.additional}
   `;
   const message = {
-    from: 'sorokinvj@yandex.ru',
+    from: 'Сайт РКЦ <no-reply@rqc.ru>',
     to: ['sorokinvj@gmail.com', 'students@rqc.ru'],
     subject: `Новая заявка на поступление от ${from}`,
     text: body,
