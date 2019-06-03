@@ -13,7 +13,7 @@ class FormPopup extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedStepen: '',
+      selectedStupen: '',
       name: '',
       email: '',
       phone: '',
@@ -31,7 +31,7 @@ class FormPopup extends React.Component {
       isSentOK: false,
       isSentError: false,
     };
-    this.handleStepen = this.handleStepen.bind(this);
+    this.handleStupen = this.handleStupen.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.onKeydown = this.onKeydown.bind(this);
@@ -45,12 +45,11 @@ class FormPopup extends React.Component {
   }
 
   handleSubmit(event) {
-    const { selectedStepen, phoneError, emailError } = this.state;
+    const { selectedStupen, phoneError, emailError } = this.state;
 
     const data = new FormData(event.target);
-    data.set('stepen', selectedStepen);
+    data.set('stepen', selectedStupen);
     const name = data.get('name');
-    const email = data.get('email');
     const phone = data.get('phone');
     const vuz = data.get('vuz');
     const faculty = data.get('faculty');
@@ -64,7 +63,6 @@ class FormPopup extends React.Component {
         emailError: true,
       });
     }
-    console.log('phone is valid? ', event.target.elements.phone.checkValidity());
     if (phone === '' || phone.length < 10) {
       this.setState({
         phoneError: true,
@@ -80,7 +78,7 @@ class FormPopup extends React.Component {
         facultyError: true,
       });
     }
-
+    // отсылаем форму на api
     if (event.target.checkValidity() && !phoneError && !emailError) {
       this.setState({
         isSending: true,
@@ -106,9 +104,9 @@ class FormPopup extends React.Component {
     event.preventDefault();
   }
 
-  handleStepen(stepen) {
+  handleStupen(stupen) {
     this.setState({
-      selectedStepen: stepen.value,
+      selectedStupen: stupen.value,
     });
   }
 
@@ -128,10 +126,10 @@ class FormPopup extends React.Component {
       isSending, isSentOK, isSentError,
     } = this.state;
     const { t } = this.context;
-    const stepenOptions = [
-      { value: t('Бакалавриат (открытие в 2020 г)'), label: t('Бакалавриат (открытие в 2020 г)'), isDisabled: true },
+    const stupenOptions = [
+      { value: t('Бакалавриат'), label: t('Бакалавриат') },
       { value: t('Магистратура'), label: t('Магистратура') },
-      { value: t('Аспирантура (открытие в 2020 г)'), label: t('Аспирантура (открытие в 2020 г)'), isDisabled: true },
+      { value: t('Аспирантура'), label: t('Аспирантура') },
     ];
     return (
       <Form>
@@ -152,14 +150,12 @@ class FormPopup extends React.Component {
                     :
                     </p>
                     <Select
-                      onChange={this.handleStepen}
-                      options={stepenOptions}
-                      instanceId="select-stepen"
+                      onChange={this.handleStupen}
+                      options={stupenOptions}
+                      instanceId="select-stupen"
                       className="select-container"
                       classNamePrefix="select"
                       placeholder={t('Выберите из списка...')}
-                      ref={this.stepenSelect}
-                      isOptionDisabled={option => option.isDisabled === true}
                     />
                   </div>
                   <input
@@ -168,7 +164,7 @@ class FormPopup extends React.Component {
                     value={name}
                     onChange={this.handleInputChange}
                     className="fullwidth"
-                    placeholder={t('Имя Фамилия Отчество')}
+                    placeholder={t('Имя Фамилия Отчество*')}
                     onKeyDown={this.onKeydown}
                     required
                   />
@@ -281,6 +277,16 @@ class FormPopup extends React.Component {
 
 FormPopup.contextTypes = {
   t: PropTypes.func,
+};
+
+FormPopup.propTypes = {
+  close: PropTypes.func,
+  active: PropTypes.bool,
+};
+
+FormPopup.defaultProps = {
+  close: () => {},
+  active: false,
 };
 
 export default FormPopup;

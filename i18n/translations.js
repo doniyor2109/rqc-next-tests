@@ -120,7 +120,7 @@ export const translations = {
     'Подписаться на мероприятия':'Subscribe to events',
     'Резюме': 'CV',
     'Темы': 'Subjects',
-    'Научный руководитель': 'Advisor',
+    'Научный руководитель': 'Supervisor',
     'Список дипломных проектов': 'List of theses',
     'Структура Российского Квантового Центра': 'Structure of The Russian Quantum Center',
     'Система управления и источники финансирования': 'System of management and funding sources',
@@ -151,7 +151,7 @@ export const translations = {
     'Ступень обучения': 'Stage of education',
     'Курсы': 'Courses',
     'Научные руководители': 'Scientific advisers',
-    'Имя Фамилия Отчество': 'First name, surname, patronymic',
+    'Имя Фамилия Отчество*': 'First name, surname, patronymic*',
     'Введите имя': 'Type your name',
     'Неверный email': 'Incorrect email',
     'Телефон* (+7...)': 'Phone number* (+7...)',
@@ -167,8 +167,12 @@ export const translations = {
     '* — Вопросы, обязательные для заполнения': '* — Required fields',
     'Отправить': 'Send',
     'Проверьте корректность заполнения формы!': 'Check the correctness of form’s completing!',
-    'Заявка принята, спасибо!': '',
-    'Что-то пошло не так, попробуйте еще раз': ''
+    'Заявка принята, спасибо!': 'Your application was admitted, thanks!',
+    'Что-то пошло не так, попробуйте еще раз': 'Something went wrong, try again', 
+    'РКЦ и МФТИ': 'RQC & MIPT',
+    'РКЦ и МИСиС': 'RQC & MISiS',
+    'РКЦ и РВК': 'RQC & RVC',
+    'Дипломные проекты': 'Theses', 
     },
  };
  

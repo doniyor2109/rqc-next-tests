@@ -24,7 +24,9 @@ const Style = styled.div`
   
 `;
 
-const Institute = ({ heading, text, last, id }) => (
+const Institute = ({
+  heading, text, last, id,
+}) => (
   <Style last={last} id={id}>
     <div className="columns is-multiline">
       <div className="column is-12">
@@ -47,12 +49,14 @@ Institute.propTypes = {
     text: PropTypes.string,
   })),
   last: PropTypes.bool,
+  id: PropTypes.string,
 };
 
 Institute.defaultProps = {
   heading: [],
   text: [],
   last: false,
+  id: '',
 };
 
 

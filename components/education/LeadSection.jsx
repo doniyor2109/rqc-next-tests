@@ -123,14 +123,14 @@ LeadSection.propTypes = {
   item: PropTypes.shape(LeadSection.projectType),
   last: PropTypes.bool,
   first: PropTypes.bool,
-  phone: PropTypes.bool,
+  phone: PropTypes.string,
 };
 
 LeadSection.defaultProps = {
   item: {},
   last: false,
   first: false,
-  phone: false,
+  phone: null,
 };
 
 LeadSection.contextTypes = {

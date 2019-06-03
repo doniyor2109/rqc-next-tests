@@ -52,6 +52,9 @@ const AccordeonStyled = styled.div`
               font-size: 1.4rem;
               font-weight: 500;
               color: #3998D1;
+              @media (max-width: 415px) {
+                margin-bottom: 5rem;
+              }
               &:focus {
                 outline: 0;
               }
