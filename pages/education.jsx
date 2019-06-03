@@ -107,7 +107,7 @@ class Education extends Component {
     const { t } = this.context;
     const { page } = education;
 
-    console.log('education', this.props);
+    // console.log('education', this.props);
     return (
       <EducationPage>
         <EducationHead fbLocale={fb_locale} />
