@@ -173,6 +173,7 @@ export const translations = {
     'РКЦ и МИСиС': 'RQC & MISiS',
     'РКЦ и РВК': 'RQC & RVC',
     'Дипломные проекты': 'Theses', 
+    'Уникальный для России формат научного центра, занимающегося как фундаментальными исследованиями, так и разработкой устройств, основанных на квантовых эффектах. Занимает лидирующие позиции в научной области, а также в разработке высокотехнологичных коммерческих продуктов.':'Unique scientific center for Russia dealing with both fundamental research and the development of devices based on quantum effects. The RQC takes leading position in the scientific field, as well as in the development of high-tech commercial product.',
     },
  };
  
