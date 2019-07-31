@@ -152,9 +152,9 @@ class Education extends Component {
             last
           />
 
-          {/* Дипломные проекты */}
+          {/* Возможные темы */}
           <H3 id="projects">
-            {t('Список дипломных проектов')}
+            {t('Возможные темы научной работы')}
           </H3>
         </div>
         <Projects items={page.data.teamlead} phone={phone} />

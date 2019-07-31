@@ -82,7 +82,7 @@ const Menu = [
         url: '/education#rvk',
       },
       {
-        name: 'Дипломные проекты',
+        name: 'Возможные темы',
         url: '/education#projects',
       },
     ],

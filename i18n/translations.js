@@ -121,7 +121,7 @@ export const translations = {
     'Резюме': 'CV',
     'Темы': 'Subjects',
     'Научный руководитель': 'Supervisor',
-    'Список дипломных проектов': 'List of theses',
+    'Возможные темы научной работы': 'Possible thesis topics',
     'Структура Российского Квантового Центра': 'Structure of The Russian Quantum Center',
     'Система управления и источники финансирования': 'System of management and funding sources',
     'СТРУКТУРА РКЦ': 'STRUCTURE OF THE RQC',
@@ -172,7 +172,7 @@ export const translations = {
     'РКЦ и МФТИ': 'RQC & MIPT',
     'РКЦ и МИСиС': 'RQC & MISiS',
     'РКЦ и РВК': 'RQC & RVC',
-    'Дипломные проекты': 'Theses', 
+    'Возможные темы': 'Possible topics', 
     'Уникальный для России формат научного центра, занимающегося как фундаментальными исследованиями, так и разработкой устройств, основанных на квантовых эффектах. Занимает лидирующие позиции в научной области, а также в разработке высокотехнологичных коммерческих продуктов.':'Unique scientific center for Russia dealing with both fundamental research and the development of devices based on quantum effects. The RQC takes leading position in the scientific field, as well as in the development of high-tech commercial product.',
     },
  };
