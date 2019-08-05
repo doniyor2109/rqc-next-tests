@@ -11,16 +11,18 @@ const AnnualReports = ({ slides }) => {
   const items = slides.map((slide) => {
     const back = { background: `url(${slide.wallpaper.url})`, backgroundSize: 'cover' };
     return (
-      <div key={slide.heading[0].text}>
-        <div className="report-slide" style={back}>
-          {RichText.render(slide.heading, PrismicConfig.linkResolver)}
-          <ArrowButton
-            url={Link.url(slide.report_url, PrismicConfig.linkResolver)}
-            color="ffffff"
-            target_blank
-          />
-        </div>
-      </div>
+      <Link href="/reports" key={slide.heading[0].text}>
+        <a>
+          <div className="report-slide" style={back}>
+            {RichText.render(slide.heading, PrismicConfig.linkResolver)}
+            <ArrowButton
+              url={Link.url(slide.report_url, PrismicConfig.linkResolver)}
+              color="ffffff"
+              target_blank
+            />
+          </div>
+        </a>
+      </Link>
     );
   });
 

@@ -18,11 +18,9 @@ const ReportsAndMedia = ({ page }, { t }) => (
             {t('Годовые отчеты')}
           </H3>
           <Link href="/reports">
-            <a>
-              <MainCategoryLink style={{ marginRight: '1.5rem' }}>
-                {t('смотреть все')}
-              </MainCategoryLink>
-            </a>
+            <MainCategoryLink style={{ marginRight: '1.5rem' }}>
+              {t('смотреть все')}
+            </MainCategoryLink>
           </Link>
           {page.data && <AnnualReports slides={page.data.body1[0].items} /> }
         </div>
