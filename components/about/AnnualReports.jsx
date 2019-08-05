@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import { Link, RichText } from 'prismic-reactjs';
+import NextLink from 'next/link';
 import PrismicConfig from '../../prismic-configuration';
 import ArrowButton from '../shared/ArrowButton';
 import NextArrow from './NextArrow';
@@ -11,18 +12,19 @@ const AnnualReports = ({ slides }) => {
   const items = slides.map((slide) => {
     const back = { background: `url(${slide.wallpaper.url})`, backgroundSize: 'cover' };
     return (
-      <Link href="/reports" key={slide.heading[0].text}>
-        <a>
-          <div className="report-slide" style={back}>
-            {RichText.render(slide.heading, PrismicConfig.linkResolver)}
-            <ArrowButton
-              url={Link.url(slide.report_url, PrismicConfig.linkResolver)}
-              color="ffffff"
-              target_blank
-            />
-          </div>
-        </a>
-      </Link>
+      <div key={slide.heading[0].text}>
+        <NextLink href={Link.url(slide.report_url, PrismicConfig.linkResolver)}>
+          <a target="_blank" rel="noopener noreferrer">
+            <div className="report-slide" style={back}>
+              {RichText.render(slide.heading, PrismicConfig.linkResolver)}
+              <ArrowButton
+                color="ffffff"
+                target_blank
+              />
+            </div>
+          </a>
+        </NextLink>
+      </div>
     );
   });
 
