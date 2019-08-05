@@ -6,9 +6,10 @@ import hostName from '../../host';
 const EducationHead = ({ fbLocale }, { t }) => (
   <Head>
     <title>{t('Образование')}</title>
+    <meta name="description" content={t('Магистратура и аспирантура на базе РКЦ в сотрудничестве с ведущими вузами России')} />
     <meta property="og:url" content={`${hostName}/education`} />
     <meta property="og:type" content="article" />
-    <meta property="og:image" content="https://prismic-io.s3.amazonaws.com/rqc1%2F4f248627-8cde-4387-9071-bf3ebd23ae6e_1444993871.jpg" />
+    <meta property="og:image" content={`${hostName}/static/education_wall.jpg`} />
     <meta property="og:locale:alternate" content="en_US" />
     {(typeof fbLocale === 'undefined' || fbLocale === 'ru_RU')
       && (

@@ -132,9 +132,10 @@ class Events extends Component {
         <Fragment>
           <Head>
               <title>{this.context.t("Мероприятия")}</title>
+              <meta name="description" content={this.context.t('Открытые лекции, международные конференции, чемпионаты и выставки')} />
               <meta property="og:url"                content={hostName + "/events"} />
               <meta property="og:type"               content="article" />
-              <meta property="og:image"              content={hostName + "/static/qaqam.jpg"} />
+              <meta property="og:image"              content={hostName + "/static/events_wall.jpg"} />
               <meta property="og:locale:alternate"   content="en_US" />
           {(typeof fb_locale === 'undefined' || this.props.fb_locale === "ru_RU") && 
               <Fragment>

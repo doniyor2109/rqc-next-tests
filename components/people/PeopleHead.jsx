@@ -6,9 +6,10 @@ import hostName from '../../host';
 const PeopleHead = ({ fbLocale }, { t }) => (
   <Head>
     <title>{t('Коллектив Центра')}</title>
+    <meta name="description" content={t('Администрация, Попечительский и Научный совет Российского Квантового Центра')} />
     <meta property="og:url" content={`${hostName}/people`} />
     <meta property="og:type" content="article" />
-    <meta property="og:image" content={`${hostName}/static/unusov.png`} />
+    <meta property="og:image" content={`${hostName}/static/people_meta.jpg`} />
     <meta property="og:locale:alternate" content="en_US" />
     {(typeof fbLocale === 'undefined' || fbLocale === 'ru_RU')
         && (

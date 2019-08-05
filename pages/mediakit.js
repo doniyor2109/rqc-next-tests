@@ -32,6 +32,7 @@ class Mediakit extends React.Component {
             <div className="media-kit-page">
                 <Head>
                     <title>{this.context.t("Медиа-кит")}</title>
+                    <meta name="description" content={this.context.t('Фото-, видеоматериалы, презентации РКЦ')} />
                     <meta property="og:url"                content={hostName + "/mediakit"} />
                     <meta property="og:type"               content="article" />
                     <meta property="og:image"              content={hostName + "/static/mediakit.jpg"} />

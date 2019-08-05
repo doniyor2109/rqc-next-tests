@@ -6,6 +6,7 @@ import hostName from '../../host';
 const NewsHead = ({ fbLocale }, { t }) => (
   <Head>
     <title>{t('Новости')}</title>
+    <meta name="description" content={t('Новости РКЦ, а также квантовые технологии со всего мира')} />
     <meta property="og:url" content={`${hostName}/news`} />
     <meta property="og:type" content="article" />
     <meta property="og:image" content={`${hostName}/static/qaqam.jpg`} />
