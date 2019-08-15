@@ -129,12 +129,12 @@ class PhotoPopup extends React.Component {
                 <button className="download" title={t('Скачать фото')} type="button" />
               </a>
             </div>
-            <Socials
-              url={`${hostName}/photo/${uid}`}
-              quote={gallery_title}
-              image={photo_set[0].photo.url}
-            />
           </div>
+          <Socials
+            url={`${hostName}/photo/${uid}`}
+            quote={gallery_title}
+            image={photo_set[0].photo.url}
+          />
         </Popup>
       );
     }
@@ -151,6 +151,7 @@ const StyledPhotoPopup = styled(PhotoPopup)`
         }
         @media (max-width:415px) {
             height: 90%;
+            width: 90%;
             max-height: 100%;
         }
         padding: 6rem 0 5.5rem;
@@ -200,106 +201,96 @@ const StyledPhotoPopup = styled(PhotoPopup)`
         }
 
         .photo-meta {
-            position: relative;
-            left: 10%;     
-            width: 80%;     
-            @media (min-width: 416px) and (max-width:768px){
-                left: 9rem;
-                width: 74%;
-            }
-            @media (max-width:415px) {
-                left: 1.8rem;
-                width: 89%;
-            }
-            hr {
-                background-color: rgba(4, 3, 3, 0.5);
-                height: 1px;
-                margin: 0;
+          position: relative;
+          display: flex; 
+          flex-direction: column;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          padding: 0 3rem;  
+          hr {
+              background-color: rgba(4, 3, 3, 0.5);
+              height: 1px;
+              margin: 0;
+              @media (max-width:415px) {
+                  margin: 1.8rem 0;
+              }
+              width: 100%;
+          }
+
+          .count {
+              color: rgba(61,62,66,0.7);
+              font-size: 1.6rem;
+              line-height: 2.3rem;
+              margin-top: 1.5rem;
+          }
+          .title_download {
+
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+
+              div {
+                  flex:1;
+                  p {
+                      font-size: 1.6rem;
+                      line-height: 2.3rem;
+                      font-weight: bold;
+                      margin-top: 1.4rem;
+                      color: #040303;
+                      margin-right: 22rem;
+                      /* @media (min-width: 416px) and (max-width:768px){
+                          margin-right: 11.5rem;
+                      }
+                      @media (max-width:415px) {
+                          margin-right: 0;
+                      } */
+                  }
+              }
+
+              .download {
+                background: url('/static/download_photo.svg');
+                background-size: cover;
+                height: 3.5rem;
+                width: 3.5rem;
+                border: 0;
+                align-self: flex-end;
                 @media (max-width:415px) {
-                    margin: 1.8rem 0;
-                }
-                width: 100%;
-            }
-
-            .count {
-                color: rgba(61,62,66,0.7);
-                font-size: 1.6rem;
-                line-height: 2.3rem;
-                margin-top: 1.5rem;
-            }
-
-            .article-socials {
-                text-align: left;
-                display:table;
-                margin: 4.5rem -2.5rem 0 auto;
-                @media (max-width:768px){
-                    margin: 6rem -2.5rem 0 auto;
-                }
-
-                p {
-                    text-transform: uppercase;
-                    font-size: 1.4rem;
-                    color: #040303;
                     display: block;
-                    margin-right: 2rem;
-                    font-weight: normal;
-                    margin-bottom: 2rem;
+                    margin: 0.5rem 0 0 auto;                    
                 }
-            }
-            .title_download {
-                display: flex;
-                @media (max-width:415px) {
-                    display: block;
-                }
-                align-items: baseline;
-                justify-content: space-between;
-                flex-direction: row;
+                cursor: pointer;
+                position: relative;
+                top: 7px;
+              }
 
-                div {
-                    display: inline-block;
-                    @media (max-width:415px) {
-                        display: block;
-                    }
-                    flex:1;
-                    p {
-                        font-size: 1.6rem;
-                        line-height: 2.3rem;
-                        font-weight: bold;
-                        margin-top: 1.4rem;
-                        color: #040303;
-                        margin-right: 22rem;
-                        @media (min-width: 416px) and (max-width:768px){
-                            margin-right: 11.5rem;
-                        }
-                        @media (max-width:415px) {
-                            margin-right: 0;
-                        }
-                    }
-                }
-                .download {
-                    background: url('/static/download_photo.svg');
-                    background-size: cover;
-                    height: 3.5rem;
-                    width: 3.5rem;
-                    border: 0;
-                    display: inline-block;
-                    @media (max-width:415px) {
-                        display: block;
-                        margin: 0.5rem 0 0 auto;                    }
-                    }
-                    cursor: pointer;
-                    position: relative;
-                    top: 7px;
-
-                    &:hover {
-                        background: url('/static/download_photo_hover.svg');
-                        background-size: cover;
-                        height: 3.5rem;
-                        width: 3.5rem;
-                        border: 0;
-                    }
-                }
+              .download:hover {
+                background: url('/static/download_photo_hover.svg');
+                background-size: cover;
+              }
             }
+            }
+
+        .article-socials {
+            text-align: left;
+            display:table;
+            margin: 4.5rem 0 0 auto;
+            @media (max-width:768px){
+                margin: 6rem 9rem 0 auto;
+            }
+            @media (max-width: 415px){
+              margin: 3rem 0rem 0 3rem;
+            }
+
+            p {
+                text-transform: uppercase;
+                font-size: 1.4rem;
+                color: #040303;
+                display: block;
+                margin-right: 2rem;
+                font-weight: normal;
+                margin-bottom: 2rem;
+            }
+        }
 
         .photo_wrapper {
             width: 80%;
@@ -309,7 +300,6 @@ const StyledPhotoPopup = styled(PhotoPopup)`
             @media (max-width:415px) {
                 width: 90%;
             }
-
             margin: 0 auto 2rem;
         }
     }
