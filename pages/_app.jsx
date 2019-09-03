@@ -10,6 +10,8 @@ import Nav from '../components/navbar/Nav';
 import Footer from '../components/footer/Footer';
 import GeneralHead from '../components/GeneralHead';
 import LoadingFull from '../components/shared/loadingFull';
+import Menuloader from '../components/shared/Menuloader';
+
 
 import { translations } from '../i18n/translations';
 
@@ -19,9 +21,11 @@ class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 
+    const { useragreedwithcookies } = cookies(ctx);
+    const hasLanguageSettingInCookies = cookies(ctx).language;
+    const language = hasLanguageSettingInCookies || 'ru';
+
     // добываем значение языка из пользовательских кукис
-    const { language, useragreedwithcookies } = cookies(ctx);
-    const hasCookies = typeof language !== 'undefined';
     const cookieConsent = typeof useragreedwithcookies !== 'undefined';
 
     // определяем тип устройства, чтобы потом react-media
@@ -39,10 +43,10 @@ class MyApp extends App {
     // возвращаем pageProps с сервера и значение языка
     return {
       pageProps,
-      hasCookies,
-      language: hasCookies ? language : 'ru',
+      language,
       phone,
       tablet,
+      hasLanguageSettingInCookies,
       cookieConsent,
     };
   }
@@ -56,7 +60,7 @@ class MyApp extends App {
 
   componentDidMount() {
     // выставляем куки, если их не было
-    if (!this.props.hasCookies && typeof this.props.language !== 'undefined') {
+    if (!this.props.hasLanguageSettingInCookies) {
       document.cookie = `language=${this.props.language};Expires=Wed, 22 Oct 2025 07:28:00 GMT`;
     }
 
@@ -82,9 +86,10 @@ class MyApp extends App {
       <Container>
         <Provider store={reduxStore}>
           <I18n translations={translations} initialLang={language}>
+            <Menuloader />
             <GeneralHead />
             {loadingIsActive && <LoadingFull /> }
-            <Nav cookieConsent={cookieConsent} />
+            <Nav cookieConsent={cookieConsent} tablet={tablet} />
             <Component {...pageProps} phone={phone} tablet={tablet} />
             <Footer />
           </I18n>

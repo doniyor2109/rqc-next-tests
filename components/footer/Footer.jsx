@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import * as langActions from '../../redux/actions/lang';
 
 import Logo from './Logo';
-import FooterMenu from './Menu';
+import FooterMenu from './FooterMenu';
 import Partners from './Partners';
 import Credentials from './Credentials';
 import LangSelector from './LangSelector';
@@ -32,28 +32,32 @@ const FooterStyled = styled.footer`
   
 `;
 
-const Footer = ({ lang, switchLanguage }) => (
-  <FooterStyled>
-    <div className="container">
-      <div className="columns firstrow is-mobile is-multiline">
-        <Logo lang={lang} />
-        <FooterMenu />
-        <LangSelector lang={lang} switchLanguage={switchLanguage} />
+const Footer = (props) => {
+  const { lang, switchLanguage, menu } = props;
+  return (
+    <FooterStyled>
+      <div className="container">
+        <div className="columns firstrow is-mobile is-multiline">
+          <Logo lang={lang} />
+          {menu.item.data && <FooterMenu menu={menu.item.data.body} />}
+          <LangSelector lang={lang} switchLanguage={switchLanguage} />
+        </div>
+        <div className="columns is-mobile">
+          <Credentials />
+        </div>
+        <div className="columns">
+          <Partners lang={lang} />
+        </div>
       </div>
-      <div className="columns is-mobile">
-        <Credentials />
-      </div>
-      <div className="columns">
-        <Partners lang={lang} />
-      </div>
-    </div>
-  </FooterStyled>
-);
+    </FooterStyled>
+  );
+};
 
 
 const mapStateToProps = (state) => {
   const { lang } = state.i18nState;
-  return { lang };
+  const { menu } = state;
+  return { lang, menu };
 };
 
 const mapDispatchToProps = dispatch => bindActionCreators(Object.assign({},
@@ -66,10 +70,28 @@ Footer.contextTypes = {
 Footer.propTypes = {
   lang: PropTypes.string,
   switchLanguage: PropTypes.func.isRequired,
+  menu: PropTypes.shape({
+    isFetching: PropTypes.bool,
+    item: PropTypes.shape({
+      data: PropTypes.shape({
+        body: PropTypes.arrayOf(PropTypes.shape({
+          items: PropTypes.arrayOf(PropTypes.shape({
+            children_name: PropTypes.string,
+            children_url: PropTypes.string,
+          })),
+          primary: PropTypes.shape({
+            name: PropTypes.string,
+            url: PropTypes.string,
+          }),
+        })),
+      }),
+    }),
+  }),
 };
 
 Footer.defaultProps = {
   lang: 'ru',
+  menu: {},
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Footer);
