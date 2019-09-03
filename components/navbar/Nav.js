@@ -138,8 +138,7 @@ class Nav extends Component {
     document.getElementById('navMenu').classList.toggle('is-active');
   }
 
-  okwithcookies = (e) => {
-    e.preventDefault();
+  okwithcookies = () => {
     document.cookie = 'useragreedwithcookies=true;Expires=Wed, 22 Oct 2025 07:28:00 GMT';
     this.setState({
       cookieConsent: true,
