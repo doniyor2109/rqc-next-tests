@@ -22,6 +22,7 @@ import { search } from './search';
 import { publications } from './publications';
 import { products } from './products';
 import { education } from './education';
+import { menu } from './menu';
 
 
 const rootReducer = combineReducers({
@@ -47,7 +48,8 @@ const rootReducer = combineReducers({
   search,
   publications,
   products,
-  education
+  education,
+  menu
 });
 
 export default rootReducer;
