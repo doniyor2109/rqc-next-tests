@@ -133,16 +133,18 @@ class Mfti extends React.Component {
                   />
                 </div>
 
-                <H3>
+                {/* УБЕРИТЕ КОММЕНТАРИИ ЧТОБЫ ВЕРНУТЬ ЗАЯВКУ НА ПОСТУПЛЕНИЕ */}
+                {/* <H3>
                   {t('Заявка на поступление')}
                 </H3>
                 <div className="description_form">
                   {RichText.render(form_call_to_action, PrismicConfig.linkResolver)}
-                </div>
+                </div> */}
               </div>
             </div>
 
-            <div className="columns">
+            {/* УБЕРИТЕ КОММЕНТАРИИ ЧТОБЫ ВЕРНУТЬ ЗАЯВКУ НА ПОСТУПЛЕНИЕ */}
+            {/* <div className="columns">
               <div className="column is-3-desktop is-offset-1-desktop is-4-tablet is-12-mobile">
                 <CallToActionButton text={t('Подать заявку')} onClick={this.showForm} />
                 {isFormOpened && (
@@ -152,7 +154,7 @@ class Mfti extends React.Component {
                 />
                 )}
               </div>
-            </div>
+            </div> */}
           </div>
         </Section>
       );
