@@ -119,6 +119,11 @@ a.navbar-item {
 
 .navbar-menu {
   flex-grow: 0;
+
+  a.navbar-item:focus {
+    color: inherit;
+    outline: 0;
+  }
     .navbar-end {
         button {
           img {
