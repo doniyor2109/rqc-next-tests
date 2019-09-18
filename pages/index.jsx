@@ -15,7 +15,7 @@ import * as productsActions from '../redux/actions/products';
 // components
 import MainSlider from '../components/main/MainSlider';
 import LoadingFull from '../components/shared/loadingFull';
-import OldSite from '../components/oldSite';
+// import OldSite from '../components/oldSite';
 import Products from '../components/main/Products';
 import NewsTeaser from '../components/main/NewsTeaser';
 import EventTeaser from '../components/main/EventTeaser';
@@ -155,7 +155,7 @@ class Index extends React.Component {
           tablet={tablet}
         />
 
-        <OldSite />
+        {/* <OldSite /> */}
 
         <NewsTeaser
           articles={news.articles}

@@ -63,10 +63,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => bindActionCreators(Object.assign({},
   langActions), dispatch);
 
-Footer.contextTypes = {
-  t: PropTypes.func,
-};
-
 Footer.propTypes = {
   lang: PropTypes.string,
   switchLanguage: PropTypes.func.isRequired,

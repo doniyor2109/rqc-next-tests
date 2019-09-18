@@ -10,12 +10,12 @@ const Columns = styled.div`
   justify-content: flex-start;
   padding-bottom: 7rem;
   @media (min-width: 416px) and (max-width: 768px){
-      flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   @media (max-width: 415px) {
-      flex-wrap: wrap;
-      margin-top: 3.5rem;
-      padding-bottom: 0;
+    flex-wrap: wrap;
+    margin-top: 3.5rem;
+    padding-bottom: 0;
   }
 `;
 
@@ -24,43 +24,38 @@ const Column = styled.div`
   width: 13%;
   margin-right: 2rem;
   @media (min-width: 416px) and (max-width: 768px){
-      width: 10rem;
-      margin-bottom: 6rem;
-      padding-top: 1rem;
+    width: 10rem;
+    margin-bottom: 6rem;
   }
   @media (max-width: 415px) {
-      width: 45%;
-      margin-bottom: 5rem;
+    width: 45%;
+    margin-bottom: 5rem;
 
-      &:nth-child(odd) {
-          margin-right: 3rem;
-      }
-      &:nth-child(even) {
-          margin-right: 0;
-      }
+    &:nth-child(odd) {
+        margin-right: 3rem;
+    }
+    &:nth-child(even) {
+        margin-right: 0;
+    }
   }
 
   h5 {
-      color: white;
-      font-size: 1.4rem;
+    color: white;
+    font-size: 1.4rem;
   }
 
   .footer_menu_hr {
-      background-color:rgba(255,255,255,0.5);
-      height:1px;
-      margin-top: 2.5rem;
-      margin-bottom: 2.6rem;
+    background-color:rgba(255,255,255,0.5);
+    height:1px;
+    margin-top: 2.5rem;
+    margin-bottom: 2.6rem;
   }
 
-  a.footer-menu-item {
-      display: block;
-      color: white;
-      font-size: 1.2rem;
-      margin-bottom: 1.7rem;
-  }
-
-  a.footer-menu-item:hover {
-      color: white;
+  .footer-menu-item {
+    display: block;
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 1.7rem;
   }
 `;
 
