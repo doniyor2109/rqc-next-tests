@@ -82,9 +82,12 @@ const PersPopup = styled.div`
       display: flex;
       justify-content: center;
     }
+    hr {
+      background-color: #D8D8D8;
+    }
     @media (max-width: 768px) {
       hr {
-        margin: 0 0 5rem 0;
+        margin: 2.9rem 0 6rem 0;
       }
       .name {
         margin-top: 3rem;
@@ -95,7 +98,16 @@ const PersPopup = styled.div`
           margin-top: 4rem;
       }
       hr {
-          margin: 5rem 0 4rem 0;
+        margin: 2rem 0 4rem 0;
+      }
+    }
+
+    .personal_logo {
+      margin-top: 2.5rem;
+    }
+    @media (max-width: 415px) {
+      .personal_logo {
+        margin-top: 2rem;
       }
     }
 `;

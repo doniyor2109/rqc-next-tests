@@ -5,48 +5,56 @@ import PrismicConfig from '../../prismic-configuration';
 import ArrowButton from '../shared/ArrowButton';
 
 
-const PersonPopupContent = ({ item }, { t }) => (
-  <Fragment>
-    <div className="columns">
-      <div className="column is-4-desktop is-offset-1-desktop is-6-tablet">
-        <div className="portrait_wraper">
-          <img className="portrait" src={item.portrait.url} alt={item.name[0].text} />
+const PersonPopupContent = ({ item }, { t }) => {
+  console.log('person popup', item);
+
+  return (
+    <>
+      <div className="columns">
+        <div className="column is-4-desktop is-offset-1-desktop is-6-tablet">
+          <div className="portrait_wraper">
+            <img className="portrait" src={item.portrait.url} alt={item.name[0].text} />
+          </div>
         </div>
-      </div>
-      <div className="column is-4-desktop is-6-tablet">
-        <div className="name">
-          {RichText.render(item.name, PrismicConfig.linkResolver)}
-        </div>
-        <div className="position">
-          {RichText.render(item.position, PrismicConfig.linkResolver)}
-        </div>
-        {item.website && item.website.url
+        <div className="column is-4-desktop is-6-tablet">
+          <div className="name">
+            {RichText.render(item.name, PrismicConfig.linkResolver)}
+          </div>
+          <div className="position">
+            {RichText.render(item.position, PrismicConfig.linkResolver)}
+          </div>
+          {item.website && item.website.url
               && (
               <a href={item.website.url}>
                 <ArrowButton text="Персональный сайт" color="3998D1" />
               </a>
               )
           }
-      </div>
-    </div>
-    <div className="columns">
-      <div className="column is-11-desktop is-offset-1-desktop">
-        <hr />
-      </div>
-    </div>
-    <div className="columns">
-      <div className={item.awards[0]
-        ? 'column is-5-desktop is-offset-1-desktop'
-        : 'column is-10-desktop is-offset-1-desktop is-12-tablet'
-        }
-      >
-        <img src="/static/bio.svg" className="awards_img" alt="" />
-        <h1>{t('Биография')}</h1>
-        <div className="titles">
-          {RichText.render(item.titles, PrismicConfig.linkResolver)}
+          {item.logo.url
+              && (
+              <img src={item.logo.url} className="personal_logo" alt="misis logo" />
+              )
+          }
         </div>
       </div>
-      {item.awards[0]
+      <div className="columns">
+        <div className="column is-11-desktop is-offset-1-desktop">
+          <hr />
+        </div>
+      </div>
+      <div className="columns">
+        <div className={item.awards[0]
+          ? 'column is-5-desktop is-offset-1-desktop'
+          : 'column is-10-desktop is-offset-1-desktop is-12-tablet'
+        }
+        >
+          <img src="/static/bio.svg" className="awards_img" alt="" />
+          <h1>{t('Биография')}</h1>
+          <div className="titles">
+            {RichText.render(item.titles, PrismicConfig.linkResolver)}
+          </div>
+        </div>
+        {item.awards[0]
               && (
               <div className="column is-4-desktop is-offset-1-desktop">
                 <img src="/static/awards.svg" className="awards_img" alt="" />
@@ -56,9 +64,10 @@ const PersonPopupContent = ({ item }, { t }) => (
                 </div>
               </div>
               )}
-    </div>
-  </Fragment>
-);
+      </div>
+    </>
+  );
+};
 
 PersonPopupContent.propTypes = {
   item: PropTypes.shape({
