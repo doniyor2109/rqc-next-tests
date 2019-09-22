@@ -219,7 +219,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
 
     .navbar-brand {
       flex-shrink: 0;
-      justify-content: space-around;
+      justify-content: space-between;
       flex-direction: row;
       flex-grow: 1;
       flex-shrink: 0;
@@ -281,6 +281,7 @@ a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:hover, .navbar-link.i
     float: right;
     display: inline;
     margin-right: 2rem;
+    width: 2rem;
   }
 
   .dropdown-item {
