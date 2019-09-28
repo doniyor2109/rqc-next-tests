@@ -56,6 +56,14 @@ const StyledContacts = styled.div`
     }
     .map {
       margin: 0;
+      height: 35rem;
+      @media (max-width: 415px) {
+        display:none;
+      }
+    }
+
+    .map-phone {
+      height: 35rem;
     }
 
     .contacts_icon {
