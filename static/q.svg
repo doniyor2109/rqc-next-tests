@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="99px" height="99px" viewBox="0 0 99 99" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-3.000000, -3.000000)">
+            <g id="Group-2" transform="translate(5.000000, 5.000000)">
+                <circle id="Oval" stroke="#7FD2FF" stroke-width="3" fill="#FFFFFF" cx="47.5" cy="47.5" r="47.5"></circle>
+                <g id="Group" transform="translate(26.000000, 15.000000)" fill="#7FD2FF">
+                    <path d="M0,39.7116105 L0,33 L33,52.0561798 L33,65 L5.14130435,48.8202247 C1.91304348,46.9026217 0,43.4269663 0,39.7116105 Z" id="Shape"></path>
+                    <polygon id="Shape" points="13 18 33 6.39473684 22.2397661 0 13 5.44736842"></polygon>
+                    <polygon id="Shape" points="32 41 24 45.5 32 50"></polygon>
+                    <polygon id="Shape" points="11 38 11 6 0 12.3283582 0 31.6716418"></polygon>
+                    <path d="M33,20 L33,52 L38.7956989,48.6441948 C41.9892473,46.7265918 44,43.3707865 44,39.5355805 L44,26.3520599 L33,20 Z" id="Shape"></path>
+                    <polygon id="Shape" points="24 13.2763158 44 25 44 12.4473684 34.7058824 7"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

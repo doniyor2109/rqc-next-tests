@@ -30,7 +30,7 @@ const VacanciesHH = (props) => {
           render={() => (
             <>
               {vacancies.itemsHH.slice(0, vacanciesNumberDesktop).map((item, index) => (
-                <Fragment key={item.name}>
+                <Fragment key={item.name + Math.random()}>
                   <VacancyCardHH item={item} onClick={handleClick} cardNumber={index} />
                   <VacancyPopupHH
                     key={item.name}

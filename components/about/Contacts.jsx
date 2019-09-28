@@ -1,6 +1,7 @@
 import React from 'react';
 import { RichText, Link } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
+import RqcMap from './RqcMap'
 import StyledContacts from './styled/StyledContacts';
 import H3 from '../shared/styled/H3';
 
@@ -23,9 +24,9 @@ const Contacts = ({ page }) => (
                 {RichText.render(page.data.directions, PrismicConfig.linkResolver)}
               </div>
             </div>
-            <a className="is-hidden-desktop is-hidden-tablet" href={Link.url(page.data.map_url, PrismicConfig.linkResolver)} target="_blank" rel="noopener noreferrer">
-              <img src={page.data.map.mobile.url} alt="how to get to RQC" style={{ width: '100%' }} />
-            </a>
+            <div className="is-hidden-desktop is-hidden-tablet map-phone">
+              <RqcMap />
+            </div>
             <div className="contacts_phone_mail">
               <img className="contacts_icon" src="/static/phone_icon.svg" alt="address icon" />
               <div style={{ display: 'inline-block' }}>
@@ -51,12 +52,7 @@ const Contacts = ({ page }) => (
           </div>
           <div className="column is-6-desktop is-6-tablet is-12-mobile">
             <div className="map">
-              <a className="is-hidden-touch" href={Link.url(page.data.map_url, PrismicConfig.linkResolver)} target="_blank" rel="noopener noreferrer">
-                <img src={page.data.map.url} alt="how to get to RQC" style={{ width: '100%' }} />
-              </a>
-              <a className="is-hidden-desktop is-hidden-mobile" href={Link.url(page.data.map_url, PrismicConfig.linkResolver)} target="_blank" rel="noopener noreferrer">
-                <img src={page.data.map.tablet.url} alt="how to get to RQC" style={{ width: '100%' }} />
-              </a>
+              <RqcMap />
             </div>
           </div>
         </div>
