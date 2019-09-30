@@ -10,7 +10,6 @@ const Pin = styled.div`
 
 const Popup = styled.div`
   width: 16rem;
-  height: 16rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -37,6 +36,7 @@ const Popup = styled.div`
     text-align: left;
     color: #3998D1;
     text-decoration: underline;
+    padding: 0;
   }
 `;
 
