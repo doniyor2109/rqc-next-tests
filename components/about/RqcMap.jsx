@@ -31,11 +31,41 @@ const Popup = styled.div`
     line-height: 1.6rem
   }
 
-  a {
+  button {
     font-size: 1.2rem;
-    line-height: 1.4rem
+    line-height: 1.4rem;
+    text-align: left;
+    color: #3998D1;
+    text-decoration: underline;
   }
 `;
+
+function navigate(lat, lng) {
+  // If it's an iPhone..
+  if ((navigator.platform.indexOf('iPhone') !== -1) || (navigator.platform.indexOf('iPod') !== -1)) {
+    function iOSversion() {
+      if (/iP(hone|od|ad)/.test(navigator.platform)) {
+        // supports iOS 2.0 and later
+        const v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+        return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)];
+      }
+    }
+    const ver = iOSversion() || [0];
+
+    let protocol = 'http://';
+    if (ver[0] >= 6) {
+      protocol = 'maps://';
+    }
+    window.location = `${protocol}maps.apple.com/maps?daddr=${lat},${lng}&amp;ll=`;
+  } else {
+    window.open(`http://maps.google.com?daddr=${lat},${lng}&amp;ll=`);
+  }
+}
+
+const openmap = (e) => {
+  e.stopPropagation();
+  navigate(55.699581, 37.3593172);
+};
 
 const Q = (props, { t }) => {
   const [popupActive, setPopupVisibility] = useState(false);
@@ -49,13 +79,13 @@ const Q = (props, { t }) => {
       {popupActive && (
       <Popup>
         <p>{t('Российский квантовый центр')}</p>
-        <a
+        <button
           target="_blank"
           rel="noopener noreferrer"
-          href="https://www.google.com/maps/dir//Russian+Quantum+Center,+121205,+Россия,+Москва,+территория+Инновационного+центра+«Сколково»,+Bol'shoy+Bul'var,+д.+30,+стр.+1,+Skolkovo+Innovation+Center,+Moscow+Oblast,+Russia,+143026/@55.699581,37.3573277,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x46b54e6bd69b82e9:0x32cf7cd0041cef2!2m2!1d37.3595164!2d55.699581!3e0"
+          onClick={openmap}
         >
           {t('Проложить маршрут на Гугл картах')}
-        </a>
+        </button>
       </Popup>
       )
       }
