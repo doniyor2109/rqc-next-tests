@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import GoogleMapReact from 'google-map-react';
 import styled from 'styled-components';
@@ -10,12 +10,7 @@ const Pin = styled.div`
 
 const Popup = styled.div`
   width: 16rem;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
   background: white;
   border: 1px solid #bbbbbb;
@@ -37,6 +32,8 @@ const Popup = styled.div`
     color: #3998D1;
     text-decoration: underline;
     padding: 0;
+    background: none;
+    border: none;
   }
 `;
 
@@ -78,7 +75,7 @@ const Q = (props, { t }) => {
       </Pin>
       {popupActive && (
       <Popup>
-        <p>{t('Российский квантовый центр')}</p>
+        <p>{t('Российский Квантовый Центр')}</p>
         <button
           target="_blank"
           rel="noopener noreferrer"
@@ -97,32 +94,32 @@ Q.contextTypes = {
   t: PropTypes.func,
 };
 
-class SimpleMap extends Component {
-  static defaultProps = {
-    center: {
-      lat: 55.698581,
-      lng: 37.359,
-    },
-    zoom: 15,
-  };
+const SimpleMap = ({ lang, center, zoom }) => (
+  // Important! Always set the container height explicitly
+  <div style={{ height: '100%', width: '100%' }}>
+    <GoogleMapReact
+      bootstrapURLKeys={{
+        key: 'AIzaSyDlEYYUyohoQls09d77mxgp8Q-jBnWAZgk',
+        language: lang,
+      }}
+      defaultCenter={center}
+      defaultZoom={zoom}
+    >
+      <Q
+        lat={55.699581}
+        lng={37.3593172}
+      />
+    </GoogleMapReact>
+  </div>
+);
 
-  render() {
-    return (
-      // Important! Always set the container height explicitly
-      <div style={{ height: '100%', width: '100%' }}>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: 'AIzaSyDlEYYUyohoQls09d77mxgp8Q-jBnWAZgk' }}
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
-        >
-          <Q
-            lat={55.699581}
-            lng={37.3593172}
-          />
-        </GoogleMapReact>
-      </div>
-    );
-  }
-}
+SimpleMap.defaultProps = {
+  center: {
+    lat: 55.698581,
+    lng: 37.359,
+  },
+  zoom: 15,
+  lang: 'ru',
+};
 
 export default SimpleMap;

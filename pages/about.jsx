@@ -75,7 +75,7 @@ class About extends React.Component {
 
   render() {
     const {
-      phone, tablet, fb_locale, about,
+      phone, tablet, fb_locale, about, lang
     } = this.props;
     const { page } = about;
     // console.log('about', this.props);
@@ -89,7 +89,7 @@ class About extends React.Component {
         />
         <Vacancies phone={phone} tablet={tablet} lang />
         <ReportsAndMedia page={page} />
-        <Contacts page={page} />
+        <Contacts page={page} lang={lang} />
         <Partners page={page} />
       </>
     );

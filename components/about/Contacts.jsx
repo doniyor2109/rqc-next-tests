@@ -5,7 +5,7 @@ import RqcMap from './RqcMap'
 import StyledContacts from './styled/StyledContacts';
 import H3 from '../shared/styled/H3';
 
-const Contacts = ({ page }) => (
+const Contacts = ({ page, lang }) => (
   <StyledContacts id="contact">
     <div className="container">
       <H3>
@@ -25,7 +25,7 @@ const Contacts = ({ page }) => (
               </div>
             </div>
             <div className="is-hidden-desktop is-hidden-tablet map-phone">
-              <RqcMap />
+              <RqcMap lang={lang} />
             </div>
             <div className="contacts_phone_mail">
               <img className="contacts_icon" src="/static/phone_icon.svg" alt="address icon" />
