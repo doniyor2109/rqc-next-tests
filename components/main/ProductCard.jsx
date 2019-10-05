@@ -54,6 +54,11 @@ const Product = styled.div`
               width: 70%;
           }
         }
+        @media (min-width: 416px) and (max-width:768px)  {
+          img {
+            width: auto;
+          }
+        }
     }
 `;
 
