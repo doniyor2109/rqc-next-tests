@@ -37,33 +37,6 @@ const Popup = styled.div`
   }
 `;
 
-function navigate(lat, lng) {
-  // If it's an iPhone..
-  if ((navigator.platform.indexOf('iPhone') !== -1) || (navigator.platform.indexOf('iPod') !== -1)) {
-    function iOSversion() {
-      if (/iP(hone|od|ad)/.test(navigator.platform)) {
-        // supports iOS 2.0 and later
-        const v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
-        return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)];
-      }
-    }
-    const ver = iOSversion() || [0];
-
-    let protocol = 'http://';
-    if (ver[0] >= 6) {
-      protocol = 'maps://';
-    }
-    window.location = `${protocol}maps.apple.com/maps?daddr=${lat},${lng}&amp;ll=`;
-  } else {
-    window.open(`http://maps.google.com?daddr=${lat},${lng}&amp;ll=`);
-  }
-}
-
-const openmap = (e) => {
-  e.stopPropagation();
-  navigate(55.699581, 37.3593172);
-};
-
 const Q = (props, { t }) => {
   const [popupActive, setPopupVisibility] = useState(false);
   return (
@@ -76,13 +49,14 @@ const Q = (props, { t }) => {
       {popupActive && (
       <Popup>
         <p>{t('Российский Квантовый Центр')}</p>
-        <button
+        <a
           target="_blank"
           rel="noopener noreferrer"
-          onClick={openmap}
+          type="button"
+          href="https://maps.google.com?daddr=55.699581,37.3593172&amp;ll="
         >
           {t('Проложить маршрут на Гугл картах')}
-        </button>
+        </a>
       </Popup>
       )
       }
@@ -112,6 +86,15 @@ const SimpleMap = ({ lang, center, zoom }) => (
     </GoogleMapReact>
   </div>
 );
+
+SimpleMap.propTypes = {
+  center: PropTypes.shape({
+    lat: PropTypes.number,
+    lng: PropTypes.number,
+  }),
+  zoom: PropTypes.number,
+  lang: PropTypes.string,
+};
 
 SimpleMap.defaultProps = {
   center: {
