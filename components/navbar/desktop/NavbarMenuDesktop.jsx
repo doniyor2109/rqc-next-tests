@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Social from '../Social';
+import Social from '../social';
 import SearchIcon from './SearchIcon';
 import LanguageSwitch from '../../shared/LanguageSwitch';
 import Menu from '../Menu';
