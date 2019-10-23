@@ -1,8 +1,41 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const Styled = styled.div`
+  height: 7rem;
+  background-color: #3998D1;
+  position: relative;
+  top: 1rem;
+  width: 100%;
+  z-index: 31;
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color:white;
+    margin-top: 0.5rem;
+  }
+
+  button {
+    border: 2px solid white;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    height: 3.5rem;
+    cursor: pointer;   
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }
+`
 
 const CookieConsent = ({ okwithcookies }, { t }) => (
-  <div className="cookie-consent">
+  <Styled>
     <div className="container">
       <div className="columns is-mobile">
         <div className="column is-8-desktop is-offset-1-desktop is-8-tablet is-9-mobile">
@@ -20,7 +53,7 @@ const CookieConsent = ({ okwithcookies }, { t }) => (
         </div>
       </div>
     </div>
-  </div>
+  </Styled>
 );
 
 CookieConsent.contextTypes = {

@@ -54,7 +54,7 @@ class Reports extends React.Component {
             <h1>
               {t('Годовые отчеты')}
             </h1>
-            <div className="columns">
+            <div className="columns is-multiline">
               {page.data
                 && page.data.body1[0].items.map(item => <ReportCard item={item} key={item.report_url.url} />)}
             </div>

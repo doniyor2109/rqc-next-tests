@@ -13,7 +13,7 @@ import ButtonMore from '../shared/ButtonMore';
 import PrismicConfig from '../../prismic-configuration';
 
 const Section = styled.section`
-  padding: 6rem 0 0 0;
+  padding: 10rem 0 0 0;
 `;
 
 class Whatwedo extends React.Component {

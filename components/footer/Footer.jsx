@@ -10,7 +10,7 @@ import Logo from './Logo';
 import FooterMenu from './FooterMenu';
 import Partners from './Partners';
 import Credentials from './Credentials';
-import LangSelector from './LangSelector';
+import LanguageSwitch from '../shared/LanguageSwitch';
 
 const FooterStyled = styled.footer`
   background-color: #444444;
@@ -29,6 +29,9 @@ const FooterStyled = styled.footer`
       }
     }
   }
+  .lang-choice {
+    margin-top: 2rem!important;
+  }
   
 `;
 
@@ -40,7 +43,7 @@ const Footer = (props) => {
         <div className="columns firstrow is-mobile is-multiline">
           <Logo lang={lang} />
           {menu.item.data && <FooterMenu menu={menu.item.data.body} />}
-          <LangSelector lang={lang} switchLanguage={switchLanguage} />
+          <LanguageSwitch currentLanguage={lang} switchLanguage={switchLanguage} withSlider />
         </div>
         <div className="columns is-mobile">
           <Credentials />

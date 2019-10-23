@@ -11,7 +11,6 @@ $column-gap: 1.5rem;
 @import "./fonts.scss";
 
 // pages and components
-@import './nav.scss';
 @import './article.scss';
 @import './event.scss';
 @import './events.scss';
@@ -52,7 +51,7 @@ select, input, textarea {
 .video-page, 
 .research-page,
 .eventspage {
-    padding: 6rem 0;
+    padding: 10rem 0;
 }
 
 .modal-close {
@@ -74,38 +73,6 @@ select, input, textarea {
     text-transform: uppercase;
 }
 
-
-.cookie-consent {
-    height: 7rem;
-    background-color: #3998D1;
-    position: relative;
-    top: 1rem;
-    width: 100%;
-    z-index: 31;
-  
-    p {
-      font-size: 1.2rem;
-      line-height: 1.6rem;
-      color:white;
-      margin-top: 0.5rem;
-    }
-  
-    button {
-      border: 2px solid white;
-      font-size: 1.4rem;
-      line-height: 2rem;
-      text-transform: uppercase;
-      color: white;
-      text-align: center;
-      position: relative;
-      width: 100%;
-      background-color: transparent;
-      height: 3.5rem;
-      cursor: pointer;   
-      font-weight: 500;
-      margin-top: 0.5rem;
-    }
-}
 
 .paragraph-class {
     font-size: 1.6rem;

@@ -64,6 +64,8 @@ class MyApp extends App {
       document.cookie = `language=${this.props.language};Expires=Wed, 22 Oct 2025 07:28:00 GMT`;
     }
 
+    // при переходе со страницы на страницу сообщаем компоненту,
+    // что идет загрузка, чтобы показывать спиннер
     Router.events.on('routeChangeStart', () => {
       this.setState({
         loadingIsActive: true,
@@ -89,7 +91,11 @@ class MyApp extends App {
             <Menuloader />
             <GeneralHead />
             {loadingIsActive && <LoadingFull /> }
-            <Nav cookieConsent={cookieConsent} tablet={tablet} />
+            <Nav
+              cookieConsent={cookieConsent}
+              tablet={tablet}
+              phone={phone}
+            />
             <Component {...pageProps} phone={phone} tablet={tablet} />
             <Footer />
           </I18n>

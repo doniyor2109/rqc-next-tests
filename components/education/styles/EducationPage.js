@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const EducationPage = styled.div`
-    padding: 6rem 0 0 0;
+    padding: 10rem 0 0 0;
     .description {
         font-size: 1.6rem;
         line-height: 2.3rem;

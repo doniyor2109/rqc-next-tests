@@ -44,6 +44,9 @@ const Page = styled.div`
             }
             .group-select-container {
                 flex-grow: 1;
+                @media (max-width: 768px) {
+                    width: 80%;
+                }
                 @media (max-width: 415px) {
                     width: 100%;
                     display: block;
@@ -51,6 +54,9 @@ const Page = styled.div`
             }
             .author-select-container {
                 flex-grow: 1;
+                @media (max-width: 768px) {
+                    width: 80%;
+                }
                 @media (max-width: 415px) {
                     width: 100%;
                     display: block;

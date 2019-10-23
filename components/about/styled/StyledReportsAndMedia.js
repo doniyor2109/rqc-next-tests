@@ -95,10 +95,11 @@ const StyledReportsAndMedia = styled.section`
             bottom: 3rem;
         }
     }
+}
 
     @media screen and (max-width: 415px) {
 
-        padding: 6rem 0 0 0;
+        padding: 10rem 0 0 0;
 
         .container {
             padding: 0;
