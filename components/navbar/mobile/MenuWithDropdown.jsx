@@ -59,6 +59,9 @@ const Styled = styled.div`
         margin-right: 2rem;
         width: 1.4rem;
         margin-top: 0.7rem;
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          height: 24px;
+        }
       }
     }
     .dropdown-menu {
