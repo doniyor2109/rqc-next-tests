@@ -45,7 +45,7 @@ const Styled = styled.div`
   }
 `;
 
-const LanguageSwitch = ({ withSlider, currentLanguage, switchLanguage }) => {
+const LanguageSwitch = ({ withSlider, currentLanguage, switchLanguage, className }) => {
   const [langChoiceActive, showLangChoice] = useState(false);
   function show() {
     showLangChoice(!langChoiceActive);
@@ -63,7 +63,7 @@ const LanguageSwitch = ({ withSlider, currentLanguage, switchLanguage }) => {
 
 
   return (
-    <Styled withSlider={withSlider}>
+    <Styled withSlider={withSlider} className={className}>
       <button type="button" className="lang-choice" onClick={show}>
         {currentLanguage === 'ru' ? 'RU' : 'EN'}
         <FontAwesomeIcon icon="chevron-down" />
@@ -95,11 +95,13 @@ LanguageSwitch.propTypes = {
   currentLanguage: PropTypes.string,
   withSlider: PropTypes.bool,
   switchLanguage: PropTypes.func.isRequired,
+  className: PropTypes.string,
 };
 
 LanguageSwitch.defaultProps = {
   currentLanguage: 'ru',
   withSlider: false,
+  className: '',
 };
 
 export default LanguageSwitch;

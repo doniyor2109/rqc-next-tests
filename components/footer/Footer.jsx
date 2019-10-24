@@ -29,8 +29,10 @@ const FooterStyled = styled.footer`
       }
     }
   }
-  .lang-choice {
-    margin-top: 2rem!important;
+  .footer {
+    padding: 0 0 0 0.5rem;
+    background: transparent;
+    order: 2;
   }
   
 `;
@@ -43,7 +45,7 @@ const Footer = (props) => {
         <div className="columns firstrow is-mobile is-multiline">
           <Logo lang={lang} />
           {menu.item.data && <FooterMenu menu={menu.item.data.body} />}
-          <LanguageSwitch currentLanguage={lang} switchLanguage={switchLanguage} withSlider />
+          <LanguageSwitch currentLanguage={lang} switchLanguage={switchLanguage} withSlider className="footer" />
         </div>
         <div className="columns is-mobile">
           <Credentials />
