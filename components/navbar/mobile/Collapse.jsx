@@ -20,7 +20,7 @@ const Styled = styled.div`
 
     .social {
       text-align: center;
-      margin-top: 0;
+      margin: 3rem auto;
     }
 
 `;

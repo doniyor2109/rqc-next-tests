@@ -8,8 +8,18 @@ const Styled = styled.div`
     margin: 0 0 2rem 2rem;
 
     button {
-        font-family: 'DIN Pro';
-        font-size: 1.4rem;
+      font-family: 'DIN Pro';
+      font-size: 1.4rem;
+      font-family: 'DIN Pro';
+      font-size: 1.4rem;
+      background: transparent;
+      border: none;
+      &:focus {
+        outline: 0;
+      }
+      &.bold {
+        font-weight: bold;
+      }
     }
     p {
         padding-top: 4px;
