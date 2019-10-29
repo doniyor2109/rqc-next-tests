@@ -147,21 +147,23 @@ PersonPopup.propTypes = {
   person: PropTypes.shape({
     isFetching: PropTypes.bool.isRequired,
     item: PropTypes.shape({
-      name: PropTypes.arrayOf(PropTypes.shape({
-        text: PropTypes.string,
-      })),
-      position: PropTypes.arrayOf(PropTypes.shape({
-        text: PropTypes.string,
-      })),
-      portrait: PropTypes.PropTypes.shape({
-        url: PropTypes.string,
+      data: PropTypes.shape({
+        name: PropTypes.arrayOf(PropTypes.shape({
+          text: PropTypes.string,
+        })),
+        position: PropTypes.arrayOf(PropTypes.shape({
+          text: PropTypes.string,
+        })),
+        portrait: PropTypes.PropTypes.shape({
+          url: PropTypes.string,
+        }),
+        titles: PropTypes.arrayOf(PropTypes.shape({
+          text: PropTypes.string,
+        })),
+        awards: PropTypes.arrayOf(PropTypes.shape({
+          text: PropTypes.string,
+        })),
       }),
-      titles: PropTypes.arrayOf(PropTypes.shape({
-        text: PropTypes.string,
-      })),
-      awards: PropTypes.arrayOf(PropTypes.shape({
-        text: PropTypes.string,
-      })),
     }),
   }),
 };

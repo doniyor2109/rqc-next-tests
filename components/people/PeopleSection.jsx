@@ -38,7 +38,34 @@ export default class PeopleSection extends React.Component {
           text: PropTypes.string,
         })),
         hash: PropTypes.string,
+        title: PropTypes.arrayOf(PropTypes.shape({
+          text: PropTypes.string,
+        })),
+        subtitle: PropTypes.arrayOf(PropTypes.shape({
+          text: PropTypes.string,
+        })),
       }),
+      items: PropTypes.arrayOf(PropTypes.shape({
+        person: PropTypes.shape({
+          data: PropTypes.shape({
+            logo: PropTypes.shape({
+              url: PropTypes.string,
+            }),
+            name: PropTypes.arrayOf(PropTypes.shape({
+              text: PropTypes.string,
+            })),
+            portrait: PropTypes.shape({
+              url: PropTypes.string,
+            }),
+            position: PropTypes.arrayOf(PropTypes.shape({
+              text: PropTypes.string,
+            })),
+            titles: PropTypes.arrayOf(PropTypes.shape({
+              text: PropTypes.string,
+            })),
+          }),
+        }),
+      })),
     }),
     phone: PropTypes.string,
     tablet: PropTypes.string,
@@ -64,9 +91,9 @@ export default class PeopleSection extends React.Component {
   }
 
   componentDidMount() {
+    const { item: { primary: hash } } = this.props;
     const hashURL = window.location.hash.slice(1);
-    const hashProps = this.props.item.primary.hash;
-    const needScroll = hashURL === hashProps;
+    const needScroll = hashURL === hash;
     if (needScroll) {
       window.scrollTo(this);
     }

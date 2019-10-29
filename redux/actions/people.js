@@ -2,15 +2,37 @@ import Prismic from 'prismic-javascript';
 import * as actionTypes from './actionTypes';
 import PrismicConfig from '../../prismic-configuration';
 
-export async function getPeopleContent(lang) {
+
+export async function getPeopleContentGraph(lang) {
   try {
     const api = await Prismic.getApi(PrismicConfig.apiEndpoint);
-    const response = await api.query(Prismic.Predicates.at('document.type', 'people2'),
+    const peopleQuery = `{
+      people2 {
+        ...people2Fields
+        body {
+          ...on _______ {
+            non-repeat {
+              title
+              hash
+              subtitle
+            }
+            repeat {
+              person {
+                ...on person {
+                  ...personFields
+                }
+              }
+            }
+          }
+        }
+      }
+    }`;
+    const responseGraph = await api.query(Prismic.Predicates.at('document.type', 'people2'),
       {
-        fetchLinks: ['person.name', 'person.portrait', 'person.position', 'person.titles', 'person.awards'],
+        graphQuery: peopleQuery,
         lang,
       });
-    return response.results[0];
+    return responseGraph.results[0];
   } catch (error) {
     return { results: null, error };
   }
@@ -29,7 +51,7 @@ const fetchPeopleError = error => ({ type: actionTypes.FETCH_PEOPLE_FAILURE, err
 export const fetchPeople = language => async (dispatch) => {
   try {
     dispatch(fetchPeopleRequest());
-    const peopleContent = await getPeopleContent(language);
+    const peopleContent = await getPeopleContentGraph(language);
     return dispatch(fetchPeopleSuccess(peopleContent));
   } catch (error) {
     return dispatch(fetchPeopleError(error));

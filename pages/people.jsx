@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 // core
 import React from 'react';
 import { bindActionCreators } from 'redux';
@@ -29,12 +30,39 @@ class People extends React.Component {
       people: PropTypes.shape({
         isFetching: PropTypes.bool,
         page: PropTypes.shape({
-          items: PropTypes.arrayOf(PropTypes.shape),
-          primary: PropTypes.shape({
-            team_section: PropTypes.arrayOf(PropTypes.shape({
+          data: PropTypes.shape({
+            description: PropTypes.arrayOf(PropTypes.shape({
               text: PropTypes.string,
             })),
-            hash: PropTypes.string,
+            body: PropTypes.arrayOf(PropTypes.shape({
+              items: PropTypes.arrayOf(PropTypes.shape({
+                person: PropTypes.shape({
+                  data: PropTypes.shape({
+                    logo: PropTypes.shape({
+                      url: PropTypes.string,
+                    }),
+                    name: PropTypes.arrayOf(PropTypes.shape({
+                      text: PropTypes.string,
+                    })),
+                    portrait: PropTypes.shape({
+                      url: PropTypes.string,
+                    }),
+                    position: PropTypes.arrayOf(PropTypes.shape({
+                      text: PropTypes.string,
+                    })),
+                    titles: PropTypes.arrayOf(PropTypes.shape({
+                      text: PropTypes.string,
+                    })),
+                  }),
+                }),
+              })),
+              primary: PropTypes.shape({
+                team_section: PropTypes.arrayOf(PropTypes.shape({
+                  text: PropTypes.string,
+                })),
+                hash: PropTypes.string,
+              }),
+            })),
           }),
         }),
       }),
@@ -61,7 +89,7 @@ class People extends React.Component {
       const { language } = cookies(ctx);
 
       // запрос к Prismic через redux actons с добавлением контента в redux store
-      const serverFetch = await peopleActions.getPeopleContent(language);
+      const serverFetch = await peopleActions.getPeopleContentGraph(language);
       reduxStore.dispatch(peopleActions.fetchPeopleSuccess(serverFetch));
 
       return { fb_locale };

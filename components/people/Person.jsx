@@ -65,14 +65,25 @@ const PersonStyled = styled.div`
 class Person extends React.Component {
   static propTypes = {
     item: PropTypes.shape({
-      name: PropTypes.arrayOf(PropTypes.shape({
-        text: PropTypes.string,
-      })),
-      position: PropTypes.arrayOf(PropTypes.shape({
-        text: PropTypes.string,
-      })),
-      portrait: PropTypes.PropTypes.shape({
-        url: PropTypes.string,
+      person: PropTypes.shape({
+        data: PropTypes.shape({
+          logo: PropTypes.shape({
+            url: PropTypes.string,
+          }),
+          name: PropTypes.arrayOf(PropTypes.shape({
+            text: PropTypes.string,
+          })),
+          portrait: PropTypes.shape({
+            url: PropTypes.string,
+          }),
+          position: PropTypes.arrayOf(PropTypes.shape({
+            text: PropTypes.string,
+          })),
+          titles: PropTypes.arrayOf(PropTypes.shape({
+            text: PropTypes.string,
+          })),
+        }),
+        id: PropTypes.string,
       }),
     }),
   }
