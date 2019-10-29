@@ -27,6 +27,7 @@ const Styled = styled.li`
     }
     .upper-menu {
       font-weight: bold;
+      color: ${props => (props.withSlider ? 'white' : 'rgba(4, 3, 3, 1)')};
     }
     margin-top: -1px;
   }
