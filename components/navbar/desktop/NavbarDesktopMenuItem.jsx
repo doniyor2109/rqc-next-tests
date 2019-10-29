@@ -58,7 +58,7 @@ const Styled = styled.li`
   }
   .child-menu > a:hover {
     font-weight: bold;
-    opacity: 1;
+    color: white;
   }
 
 `;
