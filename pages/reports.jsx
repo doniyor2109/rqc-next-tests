@@ -45,7 +45,7 @@ class Reports extends React.Component {
       const { fb_locale } = this.props;
       const { page, isFetching } = this.props.about;
       const { t } = this.context;
-      console.log('annual reports', this.props);
+      // console.log('annual reports', this.props);
       if (isFetching) return <Loading />;
       return (
         <div className="evaluation-reports-page">

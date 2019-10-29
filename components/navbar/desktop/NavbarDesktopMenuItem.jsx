@@ -54,7 +54,6 @@ const Styled = styled.li`
       color: ${props => (props.withSlider ? 'rgba(255,255,255,0.7)' : 'rgba(4, 3, 3, 0.7)')};
       font-weight: 500;
       padding: 4rem 4rem 0 0;
-      opacity: 0.7;
     }
   }
   .child-menu > a:hover {

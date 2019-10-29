@@ -79,7 +79,7 @@ class People extends React.Component {
         phone, tablet, fb_locale, people, lang,
       } = this.props;
       const { page, isFetching } = people;
-      // console.log('people', this.props)
+      console.log('people', this.props)
       if (isFetching) return <Loading />;
       return (
         <section className="peoplepage">
