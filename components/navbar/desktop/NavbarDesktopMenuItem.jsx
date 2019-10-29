@@ -58,7 +58,8 @@ const Styled = styled.li`
   }
   .child-menu > a:hover {
     font-weight: bold;
-    color: white;
+    color: ${props => (props.withSlider ? 'white' : 'rgba(4, 3, 3, 1)')};
+
   }
 
 `;
