@@ -30,6 +30,9 @@ const FilterTag = styled.div`
       outline:0;
     }
   }
+  .reset {
+    cursor: pointer;
+  }
 `;
 
 const FiltersName = ({
@@ -59,7 +62,7 @@ const FiltersName = ({
                 <span className="filter-name">
                   {searchRequest}
                 </span>
-                <button type="button" onClick={(e) => { resetSearch(e); }}>
+                <button type="button" className="reset" onClick={(e) => { resetSearch(e); }}>
                   <img src="/static/resetFilers.svg" alt="reset filters" />
                 </button>
               </FilterTag>
@@ -72,7 +75,7 @@ const FiltersName = ({
                 <span className="filter-name">
                   {selectedGroupName}
                 </span>
-                <button type="button" onClick={(e) => { resetGroup(e); }}>
+                <button type="button" className="reset" onClick={(e) => { resetGroup(e); }}>
                   <img src="/static/resetFilers.svg" alt="reset filters" />
                 </button>
               </Fragment>
@@ -84,7 +87,7 @@ const FiltersName = ({
                 <span className="filter-name">
                   {selectedAuthor}
                 </span>
-                <button type="button" onClick={(e) => { resetAuthor(e); }}>
+                <button type="button" className="reset" onClick={(e) => { resetAuthor(e); }}>
                   <img src="/static/resetFilers.svg" alt="reset filters" />
                 </button>
               </Fragment>

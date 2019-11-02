@@ -28,10 +28,12 @@ const propTypes = {
   })),
   isFetchingPubs: PropTypes.bool.isRequired,
   isFetchingGroups: PropTypes.bool.isRequired,
+  groupFromURL: PropTypes.string,
 };
 
 const defaultProps = {
   groups: [],
+  groupFromURL: '',
 };
 
 export default class FiltersStateManager extends Component {
@@ -65,6 +67,17 @@ export default class FiltersStateManager extends Component {
     // refs
     this.authorSelect = React.createRef();
     this.groupSelect = React.createRef();
+  }
+
+  componentDidMount() {
+    // Если пользователь перешел по ссылке вида:
+    // publications?group=GROUP_NAME, то устанавливаем выбранную группу в селекте
+    // c помощью метода selectOption()
+    const { groupFromURL } = this.props;
+    const hasGroup = groupFromURL.length > 0;
+    if (hasGroup) {
+      this.groupSelect.current.select.selectOption({ value: groupFromURL, label: groupFromURL });
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {

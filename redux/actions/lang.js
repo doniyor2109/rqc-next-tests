@@ -16,5 +16,4 @@ export const switchLanguage = language => (dispatch) => {
 
 export const switchLanguageProgrammatically = language => (dispatch) => {
   dispatch(setLanguage(language));
-  dispatch(setCookies(language));
 };

@@ -142,6 +142,7 @@ class Index extends React.Component {
       phone, tablet, news, main, fb_locale, products, events,
     } = this.props;
     const { sciSlider } = main;
+    // console.log('main', this.props)
     return (
       <Fragment>
 
