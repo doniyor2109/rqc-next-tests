@@ -24,7 +24,7 @@ app.prepare()
 
     server.get('/search/:text', (req, res) => app.render(req, res, '/search', { text: req.params.text }));
 
-    server.get('/publications/:group', (req, res) => app.render(req, res, '/publications', { text: req.params.group }));
+    server.get('/publications?group=:group&&?author=:author', (req, res) => app.render(req, res, '/publications'));
 
 
     server.get('*', (req, res) => handle(req, res));

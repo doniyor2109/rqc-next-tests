@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { RichText } from 'prismic-reactjs';
 import PrismicConfig from '../../prismic-configuration';
+import LeaderPopup from './LeaderPopup';
 
 const Styled = styled.div`
     h1, h5 {
@@ -24,10 +25,27 @@ const Styled = styled.div`
         max-width: 80%;
 
     }
-    img {
-        height: auto;
-        max-width: 80%;
-        margin-top: 1rem;
+    .leader-photo {
+        margin-top: 2rem;
+        position: relative;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+        }
+        @media (max-width: 415px) {
+            width: 55%;
+        }
+        .leader-img {
+            height: auto;
+            width: 100%;
+        }
+        .popup-opener {
+            position: absolute;
+            width: 3.5rem;
+            height: 3.5rem;
+            right: 3rem;
+            bottom: 3rem;
+        }
     }
 
     @media (max-width:415px) {
@@ -45,22 +63,32 @@ const Styled = styled.div`
 
 `;
 
-const Leader = ({ leaderdata, position }) => (
-  <Styled>
-    <h3>
-      {RichText.render(position, PrismicConfig.linkResolver)}
-    </h3>
-    {leaderdata
+const Leader = ({ leaderdata, position }) => {
+  const [popupIsActive, openPopup] = useState(false);
+
+  return (
+    <Styled>
+      <h3>
+        {position[0].text}
+      </h3>
+      <div className="leader-photo" onClick={() => openPopup(true)} role="button" tabIndex={0}>
+        <img src={leaderdata.photo.url} alt={leaderdata.name} className="leader-img" />
+        <img src="/static/leader_more_button.svg" className="popup-opener" alt="open popup with info about leader of the science group" />
+      </div>
+      {RichText.render(leaderdata.name, PrismicConfig.linkResolver)}
+      {RichText.render(leaderdata.position, PrismicConfig.linkResolver)}
+      {popupIsActive
         && (
-        <>
-          <img src={leaderdata.photo.url} alt={leaderdata.name} />
-            {RichText.render(leaderdata.name, PrismicConfig.linkResolver)}
-            {RichText.render(leaderdata.position, PrismicConfig.linkResolver)}
-        </>
+        <LeaderPopup
+          close={() => openPopup(false)}
+          active={popupIsActive}
+          item={leaderdata}
+        />
         )
-    }
-  </Styled>
-);
+        }
+    </Styled>
+  );
+};
 
 Leader.propTypes = {
   leaderdata: PropTypes.shape({

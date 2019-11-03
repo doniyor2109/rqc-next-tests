@@ -29,11 +29,13 @@ const propTypes = {
   isFetchingPubs: PropTypes.bool.isRequired,
   isFetchingGroups: PropTypes.bool.isRequired,
   groupFromURL: PropTypes.string,
+  authorFromURL: PropTypes.string,
 };
 
 const defaultProps = {
   groups: [],
   groupFromURL: '',
+  authorFromURL: '',
 };
 
 export default class FiltersStateManager extends Component {
@@ -71,12 +73,18 @@ export default class FiltersStateManager extends Component {
 
   componentDidMount() {
     // Если пользователь перешел по ссылке вида:
-    // publications?group=GROUP_NAME, то устанавливаем выбранную группу в селекте
+    // publications?group=GROUP_NAME или publications?author=AUTHOR_NAME
+    // то устанавливаем выбранную группу или автора в соответствующем селекте
     // c помощью метода selectOption()
-    const { groupFromURL } = this.props;
+    const { groupFromURL, authorFromURL } = this.props;
     const hasGroup = groupFromURL.length > 0;
+    const hasAuthor = authorFromURL.length > 0;
     if (hasGroup) {
       this.groupSelect.current.select.selectOption({ value: groupFromURL, label: groupFromURL });
+    }
+
+    if (hasAuthor) {
+      this.authorSelect.current.select.selectOption({ value: authorFromURL, label: authorFromURL });
     }
   }
 

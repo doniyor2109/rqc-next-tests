@@ -35,6 +35,7 @@ const Styled = styled.div`
       font-weight: bold;
       font-family: "DIN Pro";
       cursor: pointer;
+      white-space: nowrap;
       &:focus {
         outline: 0;
       }

@@ -32,6 +32,7 @@ const FilterTag = styled.div`
   }
   .reset {
     cursor: pointer;
+    background: transparent;
   }
 `;
 

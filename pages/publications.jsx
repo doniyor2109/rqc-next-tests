@@ -25,7 +25,7 @@ const PublicationPage = styled.div`
 class Publications extends Component {
   static async getInitialProps(ctx) {
     // получаем все необходимое для рендеринга компонента от сервера
-    const { reduxStore, query: { group } } = ctx;
+    const { reduxStore, query: { group, author } } = ctx;
 
     // получаем настройки языка из кукис
     const { language } = cookies(ctx);
@@ -34,7 +34,7 @@ class Publications extends Component {
     const serverPubs = await pubsActions.getAllResultsfromPaginatedAPI(language, '[my.publication.date desc]');
     reduxStore.dispatch(pubsActions.fetchPublicationsSuccess(serverPubs));
 
-    return { group };
+    return { group, author };
   }
 
   componentDidMount() {
@@ -46,7 +46,7 @@ class Publications extends Component {
     const { t } = this.context;
     const {
       publications, scigroups,
-      fetchPublications, lang, fb_locale, fetchSciGroups, group,
+      fetchPublications, lang, fb_locale, fetchSciGroups, group, author,
     } = this.props;
     // console.log('pubs', this.props)
     return (
@@ -67,6 +67,7 @@ class Publications extends Component {
             isFetchingGroups={scigroups.isFetching}
             lang={lang}
             groupFromURL={group}
+            authorFromURL={author}
           />
         </PublicationPage>
       </Fragment>
@@ -99,11 +100,13 @@ Publications.propTypes = {
     isFetching: PropTypes.bool,
   }).isRequired,
   group: PropTypes.string,
+  author: PropTypes.string,
 };
 
 Publications.defaultProps = {
   fb_locale: 'undefined',
   group: '',
+  author: '',
 };
 
 // Redux функции state и dispatch

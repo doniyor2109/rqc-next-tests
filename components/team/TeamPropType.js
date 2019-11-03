@@ -16,6 +16,13 @@ const TeamType = {
         photo: PropTypes.shape({
           url: PropTypes.string,
         }),
+        titles: PropTypes.arrayOf(PropTypes.shape({
+          text: PropTypes.string,
+        })),
+        awards: PropTypes.arrayOf(PropTypes.shape({
+          text: PropTypes.string,
+        })),
+        publications_name: PropTypes.string,
       }),
       groupname: PropTypes.arrayOf(PropTypes.shape({
         text: PropTypes.string,

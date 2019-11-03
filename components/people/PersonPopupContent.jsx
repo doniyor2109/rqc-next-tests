@@ -91,7 +91,7 @@ PersonPopupContent.propTypes = {
 };
 
 PersonPopupContent.defaultProps = {
-  item: [],
+  item: {},
 };
 
 PersonPopupContent.contextTypes = {

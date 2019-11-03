@@ -10,9 +10,7 @@ export async function getTeamGraph(uid, lang) {
         ...science_groupFields
         group_leader {
           ...on scientist {
-            name
-            position
-            photo
+            ...scientistFields
           }
         }
       }
