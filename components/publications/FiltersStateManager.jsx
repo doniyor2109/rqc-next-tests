@@ -78,7 +78,7 @@ export default class FiltersStateManager extends Component {
     // c помощью метода selectOption()
     const { groupFromURL, authorFromURL } = this.props;
     const hasGroup = groupFromURL.length > 0;
-    const hasAuthor = authorFromURL.length > 0;
+    const hasAuthor = authorFromURL.length > 0 && (authorFromURL !== 'undefined');
     if (hasGroup) {
       this.groupSelect.current.select.selectOption({ value: groupFromURL, label: groupFromURL });
     }
