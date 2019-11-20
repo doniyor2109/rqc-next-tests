@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import Router from 'next/router';
 
 // actions
-import moment from 'moment';
 import * as teamActions from '../redux/actions/team';
 import * as langActions from '../redux/actions/lang';
 
@@ -92,10 +91,6 @@ class Team extends Component {
     } = this.props;
 
     // console.log('team', this.props);
-
-    if (lang === 'ru') {
-      moment.locale('ru');
-    } else moment.locale('en');
 
     return (
       <>

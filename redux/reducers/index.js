@@ -20,8 +20,9 @@ import { events } from './events';
 import { eventsbyTag } from './eventsbyTag';
 import { search } from './search';
 import { publications } from './publications';
-import { products } from './products';
 import { education } from './education';
+import { products } from './products';
+import { study } from './study';
 import { menu } from './menu';
 
 
@@ -49,7 +50,8 @@ const rootReducer = combineReducers({
   publications,
   products,
   education,
-  menu
+  menu,
+  study,
 });
 
 export default rootReducer;
