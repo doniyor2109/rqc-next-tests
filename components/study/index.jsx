@@ -32,17 +32,18 @@ const TeamMainComponent = ({ items }) => (
     </div>
     <section className="courses">
       <div className="container">
-        {items.map(item => (
-          <div className="columns" key={item.data.name}>
-            <div className="column is-12-tablet is-8-desktop is-offset-2-desktop">
+        <div className="columns">
+          <div className="column is-12-tablet is-8-desktop is-offset-2-desktop">
+            {items.map(item => (
               <Accordeon
+                key={item.data.name}
                 title={item.data.name}
                 author={item.data.author}
                 description={item.data.description}
               />
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
         <div className="columns">
           <div className="column is-12-desktop">
             <hr />
