@@ -20,6 +20,12 @@ const AccordeonStyled = styled.div`
     &:focus {
         outline: 0;
     }
+    .names_wrap {
+      width: 90%;
+      @media (max-width: 415px) {
+        width: 83%;
+      }
+    }
 
     .name, .name * {
       font-size: 1.8rem;
