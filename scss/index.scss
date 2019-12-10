@@ -14,7 +14,6 @@ $column-gap: 1.5rem;
 @import './article.scss';
 @import './event.scss';
 @import './events.scss';
-@import './mediakit.scss';
 @import './reports.scss';
 @import './research.scss';
 @import './searchpage.scss';
@@ -43,14 +42,13 @@ select, input, textarea {
 
 .peoplepage, 
 .aboutpage, 
-.media-kit-page, 
 .newspage, 
 .evaluation-reports-page, 
 .teampage, 
 .video-page, 
 .research-page,
 .eventspage {
-    padding: 10rem 0;
+  padding: 10rem 0;
 }
 
 .modal-close {
