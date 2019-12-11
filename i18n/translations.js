@@ -179,7 +179,7 @@ export const translations = {
     'Публикации группы': 'Group publications',
     'Учебные материалы': 'Study materials',
     'Логотипы РКЦ': 'RQC Logos',
-    'Здесь можно скачать логотипы РКЦ в разных форматах': 'Here you can download RQC logos in different graphical formats',
+    'Здесь можно скачать логотипы РКЦ в разных форматах': 'Here you can download the RQC logos in different graphical formats',
     'Айдентика': 'Visual Identity',
     'Брендбук РКЦ': 'RQC Brandbook',
     },
