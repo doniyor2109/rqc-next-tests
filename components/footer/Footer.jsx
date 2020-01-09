@@ -1,22 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import styled from 'styled-components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import styled from 'styled-components'
 
-import * as langActions from '../../redux/actions/lang';
+import * as langActions from '../../redux/actions/lang'
 
-import Logo from './Logo';
-import FooterMenu from './FooterMenu';
-import Partners from './Partners';
-import Credentials from './Credentials';
-import LanguageSwitch from '../shared/LanguageSwitch';
+import Logo from './Logo'
+import FooterMenu from './FooterMenu'
+import Partners from './Partners'
+import Credentials from './Credentials'
+import LanguageSwitch from '../shared/LanguageSwitch'
 
 const FooterStyled = styled.footer`
   background-color: #444444;
   padding: 3.5rem 0 14.5rem;
-  @media (min-width: 416px) and (max-width: 768px){
-    padding:5rem 0 11.5rem;
+  @media (min-width: 416px) and (max-width: 768px) {
+    padding: 5rem 0 11.5rem;
   }
   @media (max-width: 415px) {
     padding: 3.5rem 0 5rem;
@@ -34,18 +34,22 @@ const FooterStyled = styled.footer`
     background: transparent;
     order: 2;
   }
-  
-`;
+`
 
-const Footer = (props) => {
-  const { lang, switchLanguage, menu } = props;
+const Footer = props => {
+  const { lang, switchLanguage, menu } = props
   return (
     <FooterStyled>
       <div className="container">
         <div className="columns firstrow is-mobile is-multiline">
           <Logo lang={lang} />
           {menu.item.data && <FooterMenu menu={menu.item.data.body} />}
-          <LanguageSwitch currentLanguage={lang} switchLanguage={switchLanguage} withSlider className="footer" />
+          <LanguageSwitch
+            currentLanguage={lang}
+            switchLanguage={switchLanguage}
+            withSlider
+            className="footer"
+          />
         </div>
         <div className="columns is-mobile">
           <Credentials />
@@ -55,18 +59,17 @@ const Footer = (props) => {
         </div>
       </div>
     </FooterStyled>
-  );
-};
+  )
+}
 
+const mapStateToProps = state => {
+  const { lang } = state.i18nState
+  const { menu } = state
+  return { lang, menu }
+}
 
-const mapStateToProps = (state) => {
-  const { lang } = state.i18nState;
-  const { menu } = state;
-  return { lang, menu };
-};
-
-const mapDispatchToProps = dispatch => bindActionCreators(Object.assign({},
-  langActions), dispatch);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(Object.assign({}, langActions), dispatch)
 
 Footer.propTypes = {
   lang: PropTypes.string,
@@ -75,24 +78,31 @@ Footer.propTypes = {
     isFetching: PropTypes.bool,
     item: PropTypes.shape({
       data: PropTypes.shape({
-        body: PropTypes.arrayOf(PropTypes.shape({
-          items: PropTypes.arrayOf(PropTypes.shape({
-            children_name: PropTypes.string,
-            children_url: PropTypes.string,
-          })),
-          primary: PropTypes.shape({
-            name: PropTypes.string,
-            url: PropTypes.string,
-          }),
-        })),
+        body: PropTypes.arrayOf(
+          PropTypes.shape({
+            items: PropTypes.arrayOf(
+              PropTypes.shape({
+                children_name: PropTypes.string,
+                children_url: PropTypes.string,
+              })
+            ),
+            primary: PropTypes.shape({
+              name: PropTypes.string,
+              url: PropTypes.string,
+            }),
+          })
+        ),
       }),
     }),
   }),
-};
+}
 
 Footer.defaultProps = {
   lang: 'ru',
   menu: {},
-};
+}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Footer);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Footer)

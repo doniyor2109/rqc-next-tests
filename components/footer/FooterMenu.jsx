@@ -1,15 +1,15 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import Link from 'next/link';
-import FooterMenuItem from './FooterMenuItem';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import Link from 'next/link'
+import FooterMenuItem from './FooterMenuItem'
 
 const Columns = styled.div`
   display: flex;
   justify-content: flex-start;
   padding-bottom: 7rem;
-  @media (min-width: 416px) and (max-width: 768px){
+  @media (min-width: 416px) and (max-width: 768px) {
     flex-wrap: wrap;
   }
   @media (max-width: 415px) {
@@ -17,13 +17,13 @@ const Columns = styled.div`
     margin-top: 3.5rem;
     padding-bottom: 0;
   }
-`;
+`
 
 const Column = styled.div`
   display: inline-block;
   width: 13%;
   margin-right: 2rem;
-  @media (min-width: 416px) and (max-width: 768px){
+  @media (min-width: 416px) and (max-width: 768px) {
     width: 10rem;
     margin-bottom: 6rem;
   }
@@ -32,10 +32,10 @@ const Column = styled.div`
     margin-bottom: 5rem;
 
     &:nth-child(odd) {
-        margin-right: 3rem;
+      margin-right: 3rem;
     }
     &:nth-child(even) {
-        margin-right: 0;
+      margin-right: 0;
     }
   }
 
@@ -45,8 +45,8 @@ const Column = styled.div`
   }
 
   .footer_menu_hr {
-    background-color:rgba(255,255,255,0.5);
-    height:1px;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 1px;
     margin-top: 2.5rem;
     margin-bottom: 2.6rem;
   }
@@ -57,7 +57,7 @@ const Column = styled.div`
     font-size: 1.2rem;
     margin-bottom: 1.7rem;
   }
-`;
+`
 
 const FooterMenu = ({ menu }) => (
   <div className="column is-9-desktop is-9-tablet is-12-mobile">
@@ -77,23 +77,27 @@ const FooterMenu = ({ menu }) => (
       ))}
     </Columns>
   </div>
-);
+)
 
 FooterMenu.propTypes = {
-  menu: PropTypes.arrayOf(PropTypes.shape({
-    items: PropTypes.arrayOf(PropTypes.shape({
-      children_name: PropTypes.string,
-      children_url: PropTypes.string,
-    })),
-    primary: PropTypes.shape({
-      name: PropTypes.string,
-      url: PropTypes.string,
-    }),
-  })),
-};
+  menu: PropTypes.arrayOf(
+    PropTypes.shape({
+      items: PropTypes.arrayOf(
+        PropTypes.shape({
+          children_name: PropTypes.string,
+          children_url: PropTypes.string,
+        })
+      ),
+      primary: PropTypes.shape({
+        name: PropTypes.string,
+        url: PropTypes.string,
+      }),
+    })
+  ),
+}
 
 FooterMenu.defaultProps = {
   menu: {},
-};
+}
 
-export default FooterMenu;
+export default FooterMenu

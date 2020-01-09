@@ -13,7 +13,7 @@ const Identity = ({}, { t }) => (
       </MainCategory>
       <div className="columns">
         <div className="column is-12-mobile is-6-tablet is-4-desktop">
-          <Link href="">
+          <Link href="/static/RQC_brandbook_Short.pdf">
             <Card>
               <div className="img-wrap">
                 <img

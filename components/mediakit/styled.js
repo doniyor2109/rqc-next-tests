@@ -32,6 +32,7 @@ const MediaKitPage = styled.div`
 export const Card = styled.div`
 margin-bottom: 3rem;
 color: #040303;
+cursor: pointer;
 h1 {
   font-size: 2.2rem;
   line-height: 2.5rem;
