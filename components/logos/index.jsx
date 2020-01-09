@@ -1,41 +1,92 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import PageHeading from '../shared/PageHeading';
-import PageDescription from '../shared/PageDescription';
-import LogoHolder from './LogoHolder';
+import React from 'react'
+import PropTypes from 'prop-types'
+import PageHeading from '../shared/PageHeading'
+import EPS from './EPS'
+import SVG from './SVG'
+import PNG from './PNG'
+import JPG from './JPG'
+import Page from './styled'
 
-const Page = styled.section`
-  padding: 10rem 0;
-  .logos {
-    margin-top: 8rem;
-  }
-`;
-
-
-const index = ({ page }) => (
+const index = ({ page: { data } }) => (
   <Page>
     <div className="container">
       <div className="columns">
         <div className="column is-8-desktop is-12-tablet is-12-mobile">
-          <PageHeading title={page.data.title[0].text} />
-          <PageDescription description={page.data.description} />
+          <PageHeading title={data.title[0].text} />
         </div>
       </div>
-      <div className="columns logos">
-        <div className="column is-4-desktop is-6-tablet is-12-mobile">
-            {page.data.logos_ru.map((logo, index) => <LogoHolder logo={logo} key={logo.url.url} />)}
-        </div>
-        <div className="column is-4-desktop is-6-tablet is-12-mobile">
-            {page.data.logos_en.map(logo => <LogoHolder logo={logo} key={logo.url.url} />)}
-        </div>
-      </div>
+      <EPS
+        description={data.eps_description[0].text}
+        epsRU={data.eps_ru}
+        epsEN={data.eps_en}
+      />
+      <SVG description={data.svg_description[0].text} logos={data.svg} />
+      <PNG description={data.png_description[0].text} logos={data.png} />
+      <JPG description={data.jpg_description[0].text} logos={data.jpg} />
+      <hr className="logo-page-bottom" />
     </div>
   </Page>
-);
+)
 
 index.propTypes = {
+  page: PropTypes.shape({
+    data: PropTypes.shape({
+      title: PropTypes.arrayOf(
+        PropTypes.shape({
+          text: PropTypes.string,
+        })
+      ),
+      eps_description: PropTypes.arrayOf(
+        PropTypes.shape({
+          text: PropTypes.string,
+        })
+      ),
+      eps_ru: PropTypes.shape({
+        url: PropTypes.string,
+      }),
+      eps_en: PropTypes.shape({
+        url: PropTypes.string,
+      }),
+      svg_description: PropTypes.arrayOf(
+        PropTypes.shape({
+          text: PropTypes.string,
+        })
+      ),
+      svg: PropTypes.arrayOf(
+        PropTypes.shape({
+          logo_svg: PropTypes.shape({
+            name: PropTypes.string,
+            url: PropTypes.string,
+          }),
+        })
+      ),
+      png_description: PropTypes.arrayOf(
+        PropTypes.shape({
+          text: PropTypes.string,
+        })
+      ),
+      png: PropTypes.arrayOf(
+        PropTypes.shape({
+          logo_png: PropTypes.shape({
+            name: PropTypes.string,
+            url: PropTypes.string,
+          }),
+        })
+      ),
+      jpg_description: PropTypes.arrayOf(
+        PropTypes.shape({
+          text: PropTypes.string,
+        })
+      ),
+      jpg: PropTypes.arrayOf(
+        PropTypes.shape({
+          logo_jpg: PropTypes.shape({
+            url: PropTypes.string,
+          }),
+        })
+      ),
+    }),
+  }),
+}
 
-};
-
-export default index;
+export default index

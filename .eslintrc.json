@@ -1,0 +1,36 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "serviceworker": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/react"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "semi": ["error", "never"],
+    "no-console": "warn",
+    "no-underscore-dangle": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "react/jsx-indent": ["error", 2],
+    "react/jsx-indent-props": ["error", 2],
+    "prettier/prettier": ["error"]
+  }
+}
