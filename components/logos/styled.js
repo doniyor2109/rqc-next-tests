@@ -51,7 +51,7 @@ const Page = styled.section`
       @media (max-width: 415px) {
         width: 50%;
       }
-      padding: 1rem 0.8rem;
+      padding: 2rem 0.8rem;
       &.png,
       &.jpg {
         padding: 0;
