@@ -6,20 +6,26 @@ import PropTypes from 'prop-types'
 const FooterMenuItem = ({ children, products }) => (
   <div>
     {children.map(item => {
-      if (item.children_url) {
+      // если ссылка внешняя, как в случае products, то используем <a>,
+      // если внутренняя — Link
+      if (item.children_url && !products) {
         return (
           <Link href={item.children_url} key={item.children_name}>
-            <a
-              className="footer-menu-item"
-              target={products ? '_blank' : '_self'}
-              rel={products ? 'noopener noreferrer' : 'undefined'}
-            >
-              {item.children_name}
-            </a>
+            <a className="footer-menu-item">{item.children_name}</a>
           </Link>
         )
       }
-      return null
+      return (
+        <a
+          href={item.children_url}
+          key={item.children_name}
+          className="footer-menu-item"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {item.children_name}
+        </a>
+      )
     })}
   </div>
 )

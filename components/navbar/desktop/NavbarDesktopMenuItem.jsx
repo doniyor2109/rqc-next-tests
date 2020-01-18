@@ -1,18 +1,18 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from 'react';
-import PropTypes from 'prop-types';
-import Link from 'next/link';
-import styled from 'styled-components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Link from 'next/link'
+import styled from 'styled-components'
 
 const Styled = styled.li`
-
   &:not(:last-child) {
     .upper-menu {
       margin-right: 2.8rem;
     }
   }
   .upper-menu {
-    color: ${props => (props.withSlider ? 'rgba(255,255,255,0.7)' : 'rgba(4, 3, 3, 0.7)')};
+    color: ${props =>
+      props.withSlider ? 'rgba(255,255,255,0.7)' : 'rgba(4, 3, 3, 0.7)'};
     font-size: 1.2rem;
     font-weight: 500;
     text-transform: uppercase;
@@ -20,10 +20,10 @@ const Styled = styled.li`
 
   &:hover {
     .child-menu {
-      transition:transform 0.3s ease-out;
-      height:auto;
-      transform:scaleY(1);
-      transform-origin:top;
+      transition: transform 0.3s ease-out;
+      height: auto;
+      transform: scaleY(1);
+      transform-origin: top;
     }
     .upper-menu {
       font-weight: bold;
@@ -33,7 +33,7 @@ const Styled = styled.li`
   }
 
   .child-menu {
-    transform:scaleY(0);
+    transform: scaleY(0);
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -52,7 +52,8 @@ const Styled = styled.li`
       padding-left: 20%;
     }
     a {
-      color: ${props => (props.withSlider ? 'rgba(255,255,255,0.7)' : 'rgba(4, 3, 3, 0.7)')};
+      color: ${props =>
+        props.withSlider ? 'rgba(255,255,255,0.7)' : 'rgba(4, 3, 3, 0.7)'};
       font-weight: 500;
       padding: 4rem 4rem 0 0;
     }
@@ -60,48 +61,57 @@ const Styled = styled.li`
   .child-menu > a:hover {
     font-weight: bold;
     color: ${props => (props.withSlider ? 'white' : 'rgba(4, 3, 3, 1)')};
-
   }
+`
 
-`;
-
-
-const NavbarDesktopMenuItem = ({ item, withSlider }) => (
+const NavbarDesktopMenuItem = ({ item, withSlider, products }) => (
   <Styled withSlider={withSlider}>
     <Link href={item.primary.url}>
-      <a className="upper-menu">
-        {item.primary.name}
-      </a>
+      <a className="upper-menu">{item.primary.name}</a>
     </Link>
     <ul className="child-menu">
-      {item.items.map(child => (
-        <Link href={child.children_url} key={child.children_url}>
-          <a>
-            {child.children_name}
-          </a>
-        </Link>
-      ))}
+      {item.items.map(child => {
+        if (products) {
+          return (
+            <a
+              href={child.children_url}
+              key={child.children_url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {child.children_name}
+            </a>
+          )
+        }
+        return (
+          <Link href={child.children_url} key={child.children_url}>
+            <a>{child.children_name}</a>
+          </Link>
+        )
+      })}
     </ul>
   </Styled>
-);
+)
 
 NavbarDesktopMenuItem.propTypes = {
   item: PropTypes.shape({
-    items: PropTypes.arrayOf(PropTypes.shape({
-      children_name: PropTypes.string,
-      children_url: PropTypes.string,
-    })),
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        children_name: PropTypes.string,
+        children_url: PropTypes.string,
+      })
+    ),
     primary: PropTypes.shape({
       name: PropTypes.string,
       url: PropTypes.string,
     }),
   }),
   withSlider: PropTypes.bool,
-};
+}
 
 NavbarDesktopMenuItem.defaultProps = {
   item: {},
   withSlider: false,
-};
+}
 
-export default NavbarDesktopMenuItem;
+export default NavbarDesktopMenuItem

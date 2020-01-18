@@ -70,7 +70,12 @@ const FooterMenu = ({ menu }) => (
             </a>
           </Link>
           <hr className="footer_menu_hr" />
-          <FooterMenuItem products={item.primary.name === 'Продукты'}>
+          <FooterMenuItem
+            products={
+              item.primary.name === 'Продукты' ||
+              item.primary.name === 'Products'
+            }
+          >
             {item.items}
           </FooterMenuItem>
         </Column>
