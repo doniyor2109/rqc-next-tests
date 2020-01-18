@@ -1,6 +1,6 @@
-@import "~bulma/sass/utilities/initial-variables";
+@import '~bulma/sass/utilities/initial-variables';
 
-$tablet:768px;
+$tablet: 768px;
 $column-gap: 1.5rem;
 
 @import '~bulma/bulma';
@@ -8,7 +8,7 @@ $column-gap: 1.5rem;
 @import url(~slick-carousel/slick/slick-theme.css);
 
 //import other files here
-@import "./fonts.scss";
+@import './fonts.scss';
 
 // pages and components
 @import './article.scss';
@@ -19,72 +19,75 @@ $column-gap: 1.5rem;
 @import './searchpage.scss';
 @import './searchPopup.scss';
 @import './videopage.scss';
+@import './vacancies.scss';
 
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: "DIN Pro", sans-serif;
+  font-family: 'DIN Pro', sans-serif;
   color: #040403;
 }
 
 body.noscroll {
-  position:fixed;
-  overflow:hidden;
+  position: fixed;
+  overflow: hidden;
   width: 100%;
 }
 
-select, input, textarea {
-  font-size: 16px!important;
+select,
+input,
+textarea {
+  font-size: 16px !important;
 }
 
-
-.peoplepage, 
-.aboutpage, 
-.newspage, 
-.evaluation-reports-page, 
-.teampage, 
-.video-page, 
+.peoplepage,
+.aboutpage,
+.newspage,
+.evaluation-reports-page,
+.teampage,
+.video-page,
 .research-page,
 .eventspage {
   padding: 10rem 0;
 }
 
 .modal-close {
-    position: absolute;
+  position: absolute;
 }
 
-.modal-close::before, .modal-close::after {
-    background-color: black;
+.modal-close::before,
+.modal-close::after {
+  background-color: black;
 }
 
-.modal-close:active, .modal-close:hover, .modal-close:focus {
-    background-color: white;
+.modal-close:active,
+.modal-close:hover,
+.modal-close:focus {
+  background-color: white;
 }
 
 .page-main-heading {
-    font-size: 4.2rem;
-    font-weight: bold;
-    color:#040303;
-    text-transform: uppercase;
+  font-size: 4.2rem;
+  font-weight: bold;
+  color: #040303;
+  text-transform: uppercase;
 }
 
-
 .paragraph-class {
-    font-size: 1.6rem;
-    line-height: 2.3rem;
-    margin-bottom: 2.3rem;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+  margin-bottom: 2.3rem;
 }
 
 .slick-slide > div {
-    height: 100%;
+  height: 100%;
 }
 
-
 .tags-for-search {
-    display: block;
-    margin: 3.5rem 0 9rem;
+  display: block;
+  margin: 3.5rem 0 9rem;
 }
 
 .captions {
@@ -97,7 +100,7 @@ select, input, textarea {
   hr {
     margin-top: 5rem;
   }
-  .more{
+  .more {
     margin: 1rem 0 0 0;
   }
 }
@@ -126,52 +129,46 @@ select, input, textarea {
   }
 }
 
-
-
 @media screen and (min-width: 1200px) {
-
-    .columns.desktop {
-        display: flex;
-    }
-    .columns.mobile {
-        display: none;
-    }
+  .columns.desktop {
+    display: flex;
+  }
+  .columns.mobile {
+    display: none;
+  }
 }
 
-  
 @media screen and (max-width: 768px) {
-    
-    #__next {
-        overflow-x: hidden;
+  #__next {
+    overflow-x: hidden;
+  }
+  .cookie-consent {
+    p {
+      margin-top: 0;
     }
-    .cookie-consent {
-        p {
-          margin-top: 0;
-        }
-      }
+  }
 }
 
 @media screen and (max-width: 415px) {
+  .page-main-heading {
+    font-size: 3.2rem;
+    font-weight: bold;
+    color: #040303;
+    text-transform: uppercase;
+  }
 
-    .page-main-heading {
-      font-size: 3.2rem;
-      font-weight: bold;
-      color:#040303;
-      text-transform: uppercase;
+  .more-news {
+    hr {
+      margin-top: 1rem;
     }
-    
-    .more-news {
-        hr {
-          margin-top: 1rem;
-        }
+  }
+  .cookie-consent {
+    height: 11rem;
+    p {
+      margin-top: 0;
     }
-    .cookie-consent {
-        height:11rem;
-        p {
-          margin-top: 0;
-        }
-        button {
-          margin-top: 2rem;
-        }
-    }     
+    button {
+      margin-top: 2rem;
+    }
+  }
 }
