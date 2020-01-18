@@ -1,21 +1,21 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import React from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
-import * as vacanciesActions from '../../redux/actions/vacancies';
-import Loading from '../shared/loading';
-import VacanciesPrismic from './VacanciesPrismic';
-import VacanciesHH from './VacanciesHH';
-import PageHeading from '../shared/PageHeading';
-import Paragraph from '../shared/styled/Paragraph';
+import * as vacanciesActions from '../../redux/actions/vacancies'
+import Loading from '../shared/loading'
+import VacanciesPrismic from './VacanciesPrismic'
+import VacanciesHH from './VacanciesHH'
+import PageHeading from '../shared/PageHeading'
+import Paragraph from '../shared/styled/Paragraph'
 
 const Styled = styled.section`
   margin-top: 9rem;
   padding: 6rem 0;
-  background-color: #F7F9FB;
-`;
+  background-color: #f7f9fb;
+`
 
 class Vacancies extends React.Component {
   static propTypes = {
@@ -44,76 +44,80 @@ class Vacancies extends React.Component {
   }
 
   componentDidMount() {
-    const { lang, fetchVacanciesHH, fetchVacancies } = this.props;
+    const { lang, fetchVacanciesHH, fetchVacancies } = this.props
     if (lang === 'en-gb') {
-      fetchVacancies(lang);
+      fetchVacancies(lang)
     } else {
-      fetchVacanciesHH();
+      fetchVacanciesHH()
     }
   }
 
   componentDidUpdate(prevProps) {
     // обработка смены языка
-    const { lang, fetchVacanciesHH, fetchVacancies } = this.props;
+    const { lang, fetchVacanciesHH, fetchVacancies } = this.props
     if (lang !== prevProps.lang) {
       if (lang === 'en-gb') {
-        fetchVacancies(lang);
+        fetchVacancies(lang)
       } else {
-        fetchVacanciesHH();
+        fetchVacanciesHH()
       }
     }
   }
 
   moreVacanciesHH = () => {
-    const { vacancies } = this.props;
+    const { vacancies } = this.props
     this.setState({
       vacanciesNumberDesktop: vacancies.itemsHH.length,
       vacanciesNumberTablet: vacancies.itemsHH.length,
       vacanciesNumberMobile: vacancies.itemsHH.length,
       moreVacanciesButtonPresent: false,
-    });
+    })
   }
 
   moreVacancies = () => {
-    const { vacancies } = this.props;
+    const { vacancies } = this.props
     this.setState({
       vacanciesNumberDesktop: vacancies.items.length,
       vacanciesNumberTablet: vacancies.items.length,
       vacanciesNumberMobile: vacancies.items.length,
       moreVacanciesButtonPresent: false,
-    });
+    })
   }
 
   handleClick = (cardNumber, offset) => {
     this.setState({
       popupKey: cardNumber,
       cardoffsetTop: offset,
-    });
-    document.body.classList.add('noscroll');
+    })
+    document.body.classList.add('noscroll')
   }
 
-  popupClose = (e) => {
-    const { cardoffsetTop } = this.state;
-    e.preventDefault();
-    this.setState({ popupKey: -1 });
-    document.body.classList.remove('noscroll');
-    const vac = document.getElementById('vacancies').offsetTop + cardoffsetTop;
+  popupClose = e => {
+    const { cardoffsetTop } = this.state
+    e.preventDefault()
+    this.setState({ popupKey: -1 })
+    document.body.classList.remove('noscroll')
+    const vac = document.getElementById('vacancies').offsetTop + cardoffsetTop
     window.scrollTo({
       top: vac,
       behavior: 'auto',
-    });
+    })
   }
 
   render() {
+    const { vacancies, phone, tablet, lang } = this.props
     const {
-      vacancies, phone, tablet, lang,
-    } = this.props;
-    const {
-      popupKey, vacanciesNumberDesktop, vacanciesNumberTablet,
-      vacanciesNumberMobile, moreVacanciesButtonPresent, cardoffsetTop,
-    } = this.state;
-    const { t } = this.context;
-    if (vacancies.isFetchingPrismic || vacancies.isFetchingManyHH) return <Loading />;
+      popupKey,
+      vacanciesNumberDesktop,
+      vacanciesNumberTablet,
+      vacanciesNumberMobile,
+      moreVacanciesButtonPresent,
+      cardoffsetTop,
+    } = this.state
+    const { t } = this.context
+    // console.log('vacancies', this.props)
+    if (vacancies.isFetchingPrismic || vacancies.isFetchingManyHH)
+      return <Loading />
     return (
       <div id="vacancies">
         <Styled>
@@ -125,60 +129,59 @@ class Vacancies extends React.Component {
               <br />
               {t('Чтобы откликнуться на вакансию, присылайте резюме на почту')}
               :&nbsp;
-              <a href="mailto:job@rqc.ru" className="job-link">job@rqc.ru</a>
+              <a href="mailto:job@rqc.ru" className="job-link">
+                job@rqc.ru
+              </a>
             </Paragraph>
-            {lang === 'en-gb'
-              ? (
-                <VacanciesPrismic
-                  vacancies={vacancies}
-                  popupKey={popupKey}
-                  vacanciesNumberDesktop={vacanciesNumberDesktop}
-                  vacanciesNumberTablet={vacanciesNumberTablet}
-                  vacanciesNumberMobile={vacanciesNumberMobile}
-                  moreVacanciesButtonPresent={moreVacanciesButtonPresent}
-                  cardoffsetTop={cardoffsetTop}
-                  moreVacancies={this.moreVacancies}
-                  handleClick={this.handleClick}
-                  popupClose={this.popupClose}
-                  phone={phone}
-                  tablet={tablet}
-                />
-              )
-              : (
-                <VacanciesHH
-                  vacancies={vacancies}
-                  popupKey={popupKey}
-                  vacanciesNumberDesktop={vacanciesNumberDesktop}
-                  vacanciesNumberTablet={vacanciesNumberTablet}
-                  vacanciesNumberMobile={vacanciesNumberMobile}
-                  moreVacanciesButtonPresent={moreVacanciesButtonPresent}
-                  cardoffsetTop={cardoffsetTop}
-                  moreVacancies={this.moreVacanciesHH}
-                  handleClick={this.handleClick}
-                  popupClose={this.popupClose}
-                  phone={phone}
-                  tablet={tablet}
-                />
-              )}
+            {lang === 'en-gb' ? (
+              <VacanciesPrismic
+                vacancies={vacancies}
+                popupKey={popupKey}
+                vacanciesNumberDesktop={vacanciesNumberDesktop}
+                vacanciesNumberTablet={vacanciesNumberTablet}
+                vacanciesNumberMobile={vacanciesNumberMobile}
+                moreVacanciesButtonPresent={moreVacanciesButtonPresent}
+                cardoffsetTop={cardoffsetTop}
+                moreVacancies={this.moreVacancies}
+                handleClick={this.handleClick}
+                popupClose={this.popupClose}
+                phone={phone}
+                tablet={tablet}
+              />
+            ) : (
+              <VacanciesHH
+                vacancies={vacancies}
+                popupKey={popupKey}
+                vacanciesNumberDesktop={vacanciesNumberDesktop}
+                vacanciesNumberTablet={vacanciesNumberTablet}
+                vacanciesNumberMobile={vacanciesNumberMobile}
+                moreVacanciesButtonPresent={moreVacanciesButtonPresent}
+                cardoffsetTop={cardoffsetTop}
+                moreVacancies={this.moreVacanciesHH}
+                handleClick={this.handleClick}
+                popupClose={this.popupClose}
+                phone={phone}
+                tablet={tablet}
+              />
+            )}
           </div>
         </Styled>
       </div>
-    );
+    )
   }
 }
 
+const mapStateToProps = state => {
+  const { vacancies, language } = state
+  const { lang } = state.i18nState
+  return { vacancies, lang, language }
+}
 
-const mapStateToProps = (state) => {
-  const { vacancies, language } = state;
-  const { lang } = state.i18nState;
-  return { vacancies, lang, language };
-};
-
-const mapDispatchToProps = dispatch => bindActionCreators(Object.assign({},
-  vacanciesActions), dispatch);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(Object.assign({}, vacanciesActions), dispatch)
 
 Vacancies.contextTypes = {
   t: PropTypes.func,
-};
+}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Vacancies);
+export default connect(mapStateToProps, mapDispatchToProps)(Vacancies)
