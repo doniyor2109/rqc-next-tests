@@ -1,35 +1,35 @@
 // core libs
-import React, { Fragment } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import PropTypes from 'prop-types';
-import cookies from 'next-cookies';
+import React, { Fragment } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import PropTypes from 'prop-types'
+import cookies from 'next-cookies'
 
 // redux actions
-import * as mainActions from '../redux/actions/main';
-import * as langActions from '../redux/actions/lang';
-import * as eventsActions from '../redux/actions/events';
-import * as newsActions from '../redux/actions/news';
-import * as productsActions from '../redux/actions/products';
+import * as mainActions from '../redux/actions/main'
+import * as langActions from '../redux/actions/lang'
+import * as eventsActions from '../redux/actions/events'
+import * as newsActions from '../redux/actions/news'
+import * as productsActions from '../redux/actions/products'
 
 // components
-import MainSlider from '../components/main/MainSlider';
-import LoadingFull from '../components/shared/loadingFull';
+import MainSlider from '../components/main/MainSlider'
+import LoadingFull from '../components/shared/loadingFull'
 // import OldSite from '../components/oldSite';
-import Products from '../components/main/Products';
-import NewsTeaser from '../components/main/NewsTeaser';
-import EventTeaser from '../components/main/EventTeaser';
-import Scientists from '../components/main/Scientists';
+import Products from '../components/main/Products'
+import NewsTeaser from '../components/main/NewsTeaser'
+import EventTeaser from '../components/main/EventTeaser'
+import Scientists from '../components/main/Scientists'
 
 // meta tags
-import MainHead from '../components/main/MainHead';
+import MainHead from '../components/main/MainHead'
 
 // propTypes
-import articleType from '../components/news/articleType';
-import mainSlideType from '../components/main/mainSlideType';
-import sciSlideType from '../components/main/sciSlideType';
-import productType from '../components/main/productType';
-import eventType from '../components/events/eventType';
+import articleType from '../components/news/articleType'
+import mainSlideType from '../components/main/mainSlideType'
+import sciSlideType from '../components/main/sciSlideType'
+import productType from '../components/main/productType'
+import eventType from '../components/events/eventType'
 
 class Index extends React.Component {
   static propTypes = {
@@ -70,26 +70,32 @@ class Index extends React.Component {
     events: {},
   }
 
-
   static async getInitialProps(ctx) {
     // получаем все необходимое для рендеринга компонента от сервера
-    const { reduxStore, query: { fb_locale } } = ctx;
+    const {
+      reduxStore,
+      query: { fb_locale },
+    } = ctx
     // получаем настройки языка из кукис
-    const language = typeof cookies(ctx).language === 'undefined' ? 'ru' : cookies(ctx).language;
+    const language =
+      typeof cookies(ctx).language === 'undefined'
+        ? 'ru'
+        : cookies(ctx).language
     // и в зависимости от языка понимаем какой запрашивать id у CMS Prismic для основного слайдера.
     // Eсли куки language не было у пользователя, то мы присваиваем языку значение ru
     // мы не можем в этом месте ждать, пока _app выставит кукис, потому что тогда
     // слайдер не получит значение id вовремя, id будет undefined и слайдер не доставится
-    const id = (language && language === 'ru' ? 'W3GVDyQAACYAZAgb' : 'W3GV8SQAACQAZAwG');
+    const id =
+      language && language === 'ru' ? 'W3GVDyQAACYAZAgb' : 'W3GV8SQAACQAZAwG'
     try {
-      const mainSliderData = await mainActions.getContentbyID(id, language);
-      reduxStore.dispatch(mainActions.fetchMainSuccess(id, mainSliderData));
+      const mainSliderData = await mainActions.getContentbyID(id, language)
+      reduxStore.dispatch(mainActions.fetchMainSuccess(id, mainSliderData))
     } catch (err) {
-      reduxStore.dispatch(mainActions.fetchMainFailure(id, err));
+      reduxStore.dispatch(mainActions.fetchMainFailure(id, err))
     }
 
     // серверный запрос типа main (основной слайдер)
-    return { fb_locale };
+    return { fb_locale }
   }
 
   static contextTypes = {
@@ -102,104 +108,107 @@ class Index extends React.Component {
 
   componentDidMount() {
     const {
-      fetchNews, fetchEvents, fetchMainSciSlider, fetchProducts, lang,
-    } = this.props;
+      fetchNews,
+      fetchEvents,
+      fetchMainSciSlider,
+      fetchProducts,
+      lang,
+    } = this.props
     this.setState({
       DOMLoaded: true,
-    });
-    fetchNews(lang, 3);
-    fetchProducts(lang);
-    fetchMainSciSlider(lang);
-    fetchEvents(lang, 2);
+    })
+    fetchNews(lang, 3)
+    fetchProducts(lang)
+    fetchMainSciSlider(lang)
+    fetchEvents(lang, 2)
   }
 
   componentDidUpdate(prevProps) {
     const {
-      fetchNews, fetchMain, fetchEvents, fetchMainSciSlider, fetchProducts, lang,
-    } = this.props;
+      fetchNews,
+      fetchMain,
+      fetchEvents,
+      fetchMainSciSlider,
+      fetchProducts,
+      lang,
+    } = this.props
 
     if (lang !== prevProps.lang) {
       if (lang === 'en-gb') {
-        fetchMain('W3GV8SQAACQAZAwG', 'en-gb');
+        fetchMain('W3GV8SQAACQAZAwG', 'en-gb')
       } else if (lang === 'ru') {
-        fetchMain('W3GVDyQAACYAZAgb', 'ru');
+        fetchMain('W3GVDyQAACYAZAgb', 'ru')
       }
-      fetchNews(lang, 3);
-      fetchProducts(lang);
-      fetchMainSciSlider(lang);
-      fetchEvents(lang, 2);
+      fetchNews(lang, 3)
+      fetchProducts(lang)
+      fetchMainSciSlider(lang)
+      fetchEvents(lang, 2)
     }
-    const { hash } = window.location;
-    const elmnt = document.getElementById(hash.slice(1));
+    const { hash } = window.location
+    const elmnt = document.getElementById(hash.slice(1))
     if (elmnt) {
-      elmnt.scrollIntoView({ block: 'start', inline: 'nearest' });
+      elmnt.scrollIntoView({ block: 'start', inline: 'nearest' })
     }
   }
 
   render() {
-    const { DOMLoaded } = this.state;
+    const { DOMLoaded } = this.state
     const {
-      phone, tablet, news, main, fb_locale, products, events,
-    } = this.props;
-    const { sciSlider } = main;
+      phone,
+      tablet,
+      news,
+      main,
+      fb_locale,
+      products,
+      events,
+    } = this.props
+    const { sciSlider } = main
     // console.log('main', this.props)
     return (
       <Fragment>
-
         {!DOMLoaded && <LoadingFull />}
 
         <MainHead fb_locale={fb_locale} />
 
-        <MainSlider
-          slides={main.data.body}
-          phone={phone}
-          tablet={tablet}
-        />
+        <MainSlider slides={main.data.body} phone={phone} tablet={tablet} />
 
         {/* <OldSite /> */}
 
-        <NewsTeaser
-          articles={news.articles}
-          phone={phone}
-          tablet={tablet}
-        />
+        <NewsTeaser articles={news.articles} phone={phone} tablet={tablet} />
 
-        <Products
-          items={products.items}
-        />
+        <Products items={products.items} />
 
-        <Scientists
-          sciSlider={sciSlider}
-          phone={phone}
-          tablet={tablet}
-        />
+        <Scientists sciSlider={sciSlider} phone={phone} tablet={tablet} />
 
-        <EventTeaser
-          events={events.events}
-          phone={phone}
-          tablet={tablet}
-        />
-
+        <EventTeaser events={events.events} phone={phone} tablet={tablet} />
       </Fragment>
-    );
+    )
   }
 }
 
-const mapStateToProps = (state) => {
-  const {
-    main, events, news, products,
-  } = state;
-  const { lang } = state.i18nState;
+const mapStateToProps = state => {
+  const { main, events, news, products } = state
+  const { lang } = state.i18nState
   return {
-    main, lang, events, news, products,
-  };
-};
+    main,
+    lang,
+    events,
+    news,
+    products,
+  }
+}
 
-const mapDispatchToProps = dispatch => bindActionCreators(Object.assign({},
-  mainActions,
-  langActions,
-  eventsActions,
-  newsActions,
-  productsActions), dispatch);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    Object.assign(
+      {},
+      mainActions,
+      langActions,
+      eventsActions,
+      newsActions,
+      productsActions
+    ),
+    dispatch
+  )
 
-export default connect(mapStateToProps, mapDispatchToProps)(Index);
+export default connect(mapStateToProps, mapDispatchToProps)(Index)

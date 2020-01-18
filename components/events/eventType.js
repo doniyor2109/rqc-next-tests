@@ -1,17 +1,23 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 
-const productType = PropTypes.shape({
+const eventType = PropTypes.shape({
   item: PropTypes.shape({
     data: PropTypes.shape({
-      title: PropTypes.arrayOf(PropTypes.shape({
-        text: PropTypes.string,
-      })),
-      description: PropTypes.arrayOf(PropTypes.shape({
-        text: PropTypes.string,
-      })),
-      additional: PropTypes.arrayOf(PropTypes.shape({
-        text: PropTypes.string,
-      })),
+      title: PropTypes.arrayOf(
+        PropTypes.shape({
+          text: PropTypes.string,
+        })
+      ),
+      description: PropTypes.arrayOf(
+        PropTypes.shape({
+          text: PropTypes.string,
+        })
+      ),
+      additional: PropTypes.arrayOf(
+        PropTypes.shape({
+          text: PropTypes.string,
+        })
+      ),
       wallpaper: PropTypes.shape({
         url: PropTypes.string,
         largecard: PropTypes.shape({
@@ -28,6 +34,6 @@ const productType = PropTypes.shape({
       end_date: PropTypes.string,
     }),
   }),
-});
+})
 
-export default productType;
+export default eventType

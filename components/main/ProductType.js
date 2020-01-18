@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 // renamed
 
 const productType = PropTypes.shape({
@@ -8,14 +8,16 @@ const productType = PropTypes.shape({
       url: PropTypes.shape({
         url: PropTypes.string,
       }),
-      name: PropTypes.arrayOf(PropTypes.shape({
-        text: PropTypes.string,
-      })),
+      name: PropTypes.arrayOf(
+        PropTypes.shape({
+          text: PropTypes.string,
+        })
+      ),
       image: PropTypes.shape({
         url: PropTypes.string,
       }),
     }),
   }),
-});
+})
 
-export default productType;
+export default productType
