@@ -143,7 +143,7 @@ class Nav extends Component {
           />
           <Media
             query="(max-width: 1024px)"
-            defaultMatches={phone === null && tablet === null}
+            defaultMatches={phone !== null || tablet !== null}
             render={() => (
               <>
                 <Logo withSlider={withSlider} lang={lang} mobile />
@@ -171,9 +171,4 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch =>
   bindActionCreators(Object.assign({}, langActions), dispatch)
 
-export default withRouter(
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(Nav)
-)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Nav))
