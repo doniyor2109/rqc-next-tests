@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { RichText } from 'prismic-reactjs';
-import PrismicConfig from '../../prismic-configuration';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import { RichText } from 'prismic-reactjs'
+import PrismicConfig from '../../prismic-configuration'
 
 const Style = styled.div`
   padding-top: 9rem;
@@ -21,12 +21,9 @@ const Style = styled.div`
       margin-bottom: 2.3rem;
     }
   }
-  
-`;
+`
 
-const Institute = ({
-  heading, text, last, id,
-}) => (
+const Institute = ({ heading, text, last, id }) => (
   <Style last={last} id={id}>
     <div className="columns is-multiline">
       <div className="column is-12">
@@ -39,25 +36,28 @@ const Institute = ({
       </div>
     </div>
   </Style>
-);
+)
 
 Institute.propTypes = {
-  heading: PropTypes.arrayOf(PropTypes.shape({
-    text: PropTypes.string,
-  })),
-  text: PropTypes.arrayOf(PropTypes.shape({
-    text: PropTypes.string,
-  })),
+  heading: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string,
+    })
+  ),
+  text: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string,
+    })
+  ),
   last: PropTypes.bool,
   id: PropTypes.string,
-};
+}
 
 Institute.defaultProps = {
   heading: [],
   text: [],
   last: false,
   id: '',
-};
+}
 
-
-export default Institute;
+export default Institute
