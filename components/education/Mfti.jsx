@@ -151,7 +151,7 @@ class Mfti extends React.Component {
     // const { isFormOpened } = this.state
     const { t } = this.context
     return (
-      <Section id="mfti">
+      <Section id="mipt">
         <div className="container">
           <div className="empty" />
           <Institute text={text} heading={heading} />

@@ -116,10 +116,11 @@ class Vacancies extends React.Component {
     } = this.state
     const { t } = this.context
     // console.log('vacancies', this.props)
-    if (vacancies.isFetchingPrismic || vacancies.isFetchingManyHH)
-      return <Loading />
     return (
       <div id="vacancies">
+        {(vacancies.isFetchingPrismic || vacancies.isFetchingManyHH) && (
+          <Loading />
+        )}
         <Styled>
           <div className="container">
             <PageHeading title="Работа у нас" />

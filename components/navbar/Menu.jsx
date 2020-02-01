@@ -21,7 +21,7 @@ const Menu = ({ withSlider, menu }) => (
         item={item}
         withSlider={withSlider}
         key={item.primary.name}
-        products={item.primary.name === 'Продукты' || 'Products'}
+        products={item.primary.name === ('Продукты' || 'Products')}
       />
     ))}
   </Styled>

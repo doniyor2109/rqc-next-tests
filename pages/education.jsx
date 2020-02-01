@@ -24,7 +24,7 @@ class Education extends Component {
 
   static propTypes = {
     lang: PropTypes.string.isRequired,
-    phone: PropTypes.bool,
+    phone: PropTypes.string,
     fb_locale: PropTypes.string,
     fetchEducation: PropTypes.func.isRequired,
     education: PropTypes.shape({
@@ -250,7 +250,7 @@ class Education extends Component {
           />
 
           {/* РКЦ и РВК */}
-          <Institute heading={data.rvk_heading} text={data.rvk} id="rvk" last />
+          <Institute heading={data.rvk_heading} text={data.rvk} id="rvc" last />
 
           {/* Возможные темы */}
           <H3 id="projects">{t('Возможные темы научной работы')}</H3>
