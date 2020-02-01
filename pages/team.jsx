@@ -13,9 +13,6 @@ import * as langActions from '../redux/actions/lang';
 import TeamMainComponent from '../components/team';
 import Loading from '../components/shared/loading';
 
-// other libraries
-import 'moment/locale/ru';
-
 import TeamType from '../components/team/TeamPropType';
 
 class Team extends Component {
