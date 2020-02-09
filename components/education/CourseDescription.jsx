@@ -23,7 +23,9 @@ const CourseDescription = ({ item, first, phone, last }, { t }) => (
     </div>
 
     <div className="column is-7">
-      {(first || phone !== null) && <Title>{t('Научные руководители')}</Title>}
+      {(first || phone !== null) && (
+        <Title>{item.lector_title && item.lector_title[0].text}</Title>
+      )}
       <div className="teamleads">
         {RichText.render(item.teamleads, PrismicConfig.linkResolver)}
       </div>
@@ -63,6 +65,11 @@ CourseDescription.propTypes = {
       url: PropTypes.string,
     }),
     file_download_heading: PropTypes.arrayOf(
+      PropTypes.shape({
+        text: PropTypes.string,
+      })
+    ),
+    lector_title: PropTypes.arrayOf(
       PropTypes.shape({
         text: PropTypes.string,
       })

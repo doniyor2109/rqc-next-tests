@@ -162,8 +162,8 @@ class Mfti extends React.Component {
                 <Accordeon
                   title={t('Бакалавриат')}
                   description={mfti_bachelor}
-                  phone={phone}
                   list={bakalavriat}
+                  phone={phone}
                 />
 
                 <Accordeon
@@ -180,7 +180,7 @@ class Mfti extends React.Component {
                 />
               </div>
 
-              {/* УБЕРИТЕ КОММЕНТАРИИ ЧТОБЫ ВЕРНУТЬ ЗАЯВКУ НА ПОСТУПЛЕНИЕ */}
+              {/* УБЕРИТЕ КОММЕНТАРИИ, ЧТОБЫ ВЕРНУТЬ ЗАЯВКУ НА ПОСТУПЛЕНИЕ */}
               {/* <H3>
                   {t('Заявка на поступление')}
                 </H3>
