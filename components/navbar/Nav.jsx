@@ -98,7 +98,6 @@ class Nav extends Component {
       }
     }
   }
-
   okwithcookies = () => {
     document.cookie =
       'useragreedwithcookies=true;Expires=Wed, 22 Oct 2025 07:28:00 GMT'
@@ -118,7 +117,7 @@ class Nav extends Component {
     const { switchLanguage, lang, phone, tablet, menu } = this.props
     const { withSlider, cookieConsent, searchisActive } = this.state
 
-    // console.log('nav', this.props);
+    // console.log('nav', this.props)
 
     return (
       <Fragment>
