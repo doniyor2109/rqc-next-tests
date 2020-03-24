@@ -13,11 +13,11 @@ import * as langActions from '../redux/actions/lang'
 
 // components
 
-import SciCard from '../components/research/SciCard'
 import ResearchHead from '../components/research/ResearchHead'
 import Publication from '../components/publications/Publication'
 import MainCategory from '../components/shared/styled/MainCategory'
 import PageDescription from '../components/research/PageDescription'
+import Groups from '../components/research/Groups'
 
 class Research extends React.Component {
   static contextTypes = {
@@ -67,18 +67,7 @@ class Research extends React.Component {
           isFetchingResearch={isFetchingResearch}
           isFetchingGroups={isFetchingGroups}
         />
-
-        <section className="groups">
-          <div id="groups" className="container">
-            <MainCategory>{this.context.t('Научные группы')}</MainCategory>
-
-            <div className="columns is-multiline">
-              {groups.map((group, index) => (
-                <SciCard group={group} key={index} />
-              ))}
-            </div>
-          </div>
-        </section>
+        <Groups groups={groups} />
 
         <section className="research-publications">
           <div className="container">
