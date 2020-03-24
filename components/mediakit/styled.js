@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 const MediaKitPage = styled.div`
   padding: 10rem 0;
@@ -10,6 +10,9 @@ const MediaKitPage = styled.div`
   }
   section {
     margin-top: 9rem;
+  }
+  .columns {
+    clear: both;
   }
 
   .img-wrap {
@@ -27,29 +30,29 @@ const MediaKitPage = styled.div`
       }
     }
   }
-`;
+`
 
 export const Card = styled.div`
-margin-bottom: 3rem;
-color: #040303;
-cursor: pointer;
-h1 {
-  font-size: 2.2rem;
-  line-height: 2.5rem;
-  font-weight: bold;
-  margin-top:3rem;
-}
-.date {
-  font-size: 1.4rem;
-  margin-top: 1.3rem;
-  color: rgba(4,3,3,0.7)
-}
-p {
+  margin-bottom: 3rem;
+  color: #040303;
+  cursor: pointer;
+  h1 {
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+    font-weight: bold;
+    margin-top: 3rem;
+  }
+  .date {
+    font-size: 1.4rem;
+    margin-top: 1.3rem;
+    color: rgba(4, 3, 3, 0.7);
+  }
+  p {
     font-size: 1.4rem;
     margin-top: 1.3rem;
     font-weight: bold;
-    margin-top:3rem;
+    margin-top: 3rem;
   }
-`;
+`
 
-export default MediaKitPage;
+export default MediaKitPage
