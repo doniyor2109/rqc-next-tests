@@ -1,133 +1,129 @@
 // core
-import React, { Fragment } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
-import Link from 'next/link';
+import React, { Fragment } from 'react'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
+import Link from 'next/link'
 
 // actions
-import { RichText } from 'prismic-reactjs';
-import * as groupsActions from '../redux/actions/scigroups';
-import * as pubActions from '../redux/actions/publications';
-import * as researchActions from '../redux/actions/research';
-import * as langActions from '../redux/actions/lang';
+import * as groupsActions from '../redux/actions/scigroups'
+import * as pubActions from '../redux/actions/publications'
+import * as researchActions from '../redux/actions/research'
+import * as langActions from '../redux/actions/lang'
 
 // components
-import Loading from '../components/shared/loading';
-import htmlSerializer from '../components/shared/htmlSerializer';
-import SciCard from '../components/research/SciCard';
-import ResearchHead from '../components/research/ResearchHead';
-import Publication from '../components/publications/Publication';
-import MainCategory from '../components/shared/styled/MainCategory';
 
-// other libs
-import PrismicConfig from '../prismic-configuration';
+import SciCard from '../components/research/SciCard'
+import ResearchHead from '../components/research/ResearchHead'
+import Publication from '../components/publications/Publication'
+import MainCategory from '../components/shared/styled/MainCategory'
+import PageDescription from '../components/research/PageDescription'
 
 class Research extends React.Component {
-    static contextTypes = {
-      t: PropTypes.func,
+  static contextTypes = {
+    t: PropTypes.func,
+  }
+
+  componentDidMount() {
+    const {
+      fetchSciGroups,
+      fetchResearchPage,
+      fetchPublicationsforResearch,
+      lang,
+    } = this.props
+    fetchSciGroups(lang)
+    fetchResearchPage(lang)
+    fetchPublicationsforResearch(lang, 3)
+  }
+
+  componentDidUpdate(prevProps) {
+    const { hash } = window.location
+    const elmnt = document.getElementById(hash.slice(1))
+    if (elmnt) {
+      elmnt.scrollIntoView()
     }
-
-    componentDidMount() {
-      this.props.fetchSciGroups(this.props.lang);
-      this.props.fetchResearchPage(this.props.lang);
-      this.props.fetchPublicationsforResearch(this.props.lang, 3);
+    const {
+      fetchSciGroups,
+      fetchResearchPage,
+      fetchPublicationsforResearch,
+      lang,
+    } = this.props
+    if (this.props.lang !== prevProps.lang) {
+      fetchSciGroups(lang)
+      fetchResearchPage(lang)
+      fetchPublicationsforResearch(lang, 3)
     }
+  }
 
-    componentDidUpdate(prevProps) {
-      const { hash } = window.location;
-      const elmnt = document.getElementById(hash.slice(1));
-      if (elmnt) {
-        elmnt.scrollIntoView();
-      }
-      if (this.props.lang !== prevProps.lang) {
-        this.props.fetchSciGroups(this.props.lang);
-        this.props.fetchResearchPage(this.props.lang);
-        this.props.fetchPublicationsforResearch(this.props.lang, 3);
-      }
-    }
+  render() {
+    const { page, isFetching: isFetchingResearch } = this.props.research
+    const { isFetching: isFetchingGroups, groups } = this.props.scigroups
 
-    render() {
-      const { page, isFetching: isFetchingResearch } = this.props.research;
-      const { isFetching: isFetchingGroups, groups } = this.props.scigroups;
+    return (
+      <Fragment>
+        <ResearchHead fb_locale={this.props.fb_locale} />
+        <PageDescription
+          page={page}
+          isFetchingResearch={isFetchingResearch}
+          isFetchingGroups={isFetchingGroups}
+        />
 
-      console.log('research', this.props);
-      return (
-        <Fragment>
-          <ResearchHead fb_locale={this.props.fb_locale} />
-          <section className="research-page">
-            <div className="container">
-              <h1 className="page-main-heading">
-                {this.context.t('Исследования')}
-              </h1>
+        <section className="groups">
+          <div id="groups" className="container">
+            <MainCategory>{this.context.t('Научные группы')}</MainCategory>
 
-          {(isFetchingResearch || isFetchingGroups) && <Loading />}
-              <div className="columns">
-                <div className="column is-8-desktop">
-                  {page && page.data
-                        && RichText.render(page.data.description, PrismicConfig.linkResolver, htmlSerializer)
-                    }
-                </div>
+            <div className="columns is-multiline">
+              {groups.map((group, index) => (
+                <SciCard group={group} key={index} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="research-publications">
+          <div className="container">
+            <MainCategory>{this.context.t('Публикации')}</MainCategory>
+            <div className="columns is-multiline">
+              <div className="column is-12-tablet is-8-desktop is-offset-2-desktop ">
+                {this.props.publications.pubs.map((pub, index) => (
+                  <Publication key={index} item={pub} />
+                ))}
               </div>
             </div>
-          </section>
-
-          <section className="groups">
-            <div id="groups" className="container">
-              <MainCategory>
-                {this.context.t('Научные группы')}
-              </MainCategory>
-
-              <div className="columns is-multiline">
-                {groups.map((group, index) => <SciCard group={group} key={index} />)}
+            <div className="columns is-multiline">
+              <div className="column is-12 is-centered">
+                <Link href="/publications">
+                  <div className="more-wrapper">
+                    <button className="more-text">
+                      {this.context.t('Все публикации')}
+                    </button>
+                    <img src="/static/more.svg" alt="more groups" />
+                  </div>
+                </Link>
               </div>
             </div>
-          </section>
-
-          <section className="research-publications">
-            <div className="container">
-              <MainCategory>
-                {this.context.t('Публикации')}
-              </MainCategory>
-              <div className="columns is-multiline">
-                <div className="column is-12-tablet is-8-desktop is-offset-2-desktop ">
-                  {this.props.publications.pubs.map((pub, index) => <Publication key={index} item={pub} />)}
-                </div>
-              </div>
-              <div className="columns is-multiline">
-                <div className="column is-12 is-centered">
-                  <Link href="/publications">
-                    <div className="more-wrapper">
-                      <button className="more-text">
-                        {this.context.t('Все публикации')}
-                      </button>
-                      <img src="/static/more.svg" alt="more groups" />
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </section>
-
-        </Fragment>
-      );
-    }
+          </div>
+        </section>
+      </Fragment>
+    )
+  }
 }
 
-
-const mapStateToProps = (state) => {
-  const { scigroups, research, publications } = state;
-  const { lang } = state.i18nState;
+const mapStateToProps = state => {
+  const { scigroups, research, publications } = state
+  const { lang } = state.i18nState
   return {
-    scigroups, research, lang, publications,
-  };
-};
+    scigroups,
+    research,
+    lang,
+    publications,
+  }
+}
 
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(
+    Object.assign({}, groupsActions, langActions, researchActions, pubActions),
+    dispatch
+  )
 
-const mapDispatchToProps = dispatch => bindActionCreators(Object.assign({},
-  groupsActions,
-  langActions,
-  researchActions,
-  pubActions), dispatch);
-
-export default connect(mapStateToProps, mapDispatchToProps)(Research);
+export default connect(mapStateToProps, mapDispatchToProps)(Research)
