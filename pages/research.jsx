@@ -1,9 +1,8 @@
 // core
-import React, { Fragment } from 'react'
+import React from 'react'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import PropTypes from 'prop-types'
-import Link from 'next/link'
+import PropTypes, { string } from 'prop-types'
 
 // actions
 import * as groupsActions from '../redux/actions/scigroups'
@@ -12,16 +11,52 @@ import * as researchActions from '../redux/actions/research'
 import * as langActions from '../redux/actions/lang'
 
 // components
-
 import ResearchHead from '../components/research/ResearchHead'
-import Publication from '../components/publications/Publication'
-import MainCategory from '../components/shared/styled/MainCategory'
 import PageDescription from '../components/research/PageDescription'
 import Groups from '../components/research/Groups'
+import PubsPreview from '../components/research/PubsPreview'
+import ResearchPage from '../components/research/ResearchPage'
 
 class Research extends React.Component {
   static contextTypes = {
     t: PropTypes.func,
+  }
+
+  static propTypes = {
+    fetchSciGroups: PropTypes.func,
+    fetchResearchPage: PropTypes.func,
+    fetchPublicationsforResearch: PropTypes.func,
+    lang: string,
+    research: PropTypes.shape({
+      isFetching: PropTypes.bool,
+      page: PropTypes.shape({
+        data: PropTypes.shape({
+          description: PropTypes.arrayOf(
+            PropTypes.shape({
+              text: PropTypes.string,
+            })
+          ),
+        }),
+      }),
+    }),
+    scigroups: PropTypes.shape({
+      isFetching: PropTypes.bool,
+      groups: PropTypes.arrayOf(
+        PropTypes.shape({
+          id: PropTypes.string,
+        })
+      ),
+    }),
+    publications: PropTypes.shape({
+      pubs: PropTypes.arrayOf(
+        PropTypes.shape({
+          data: PropTypes.shape({
+            date: PropTypes.date,
+          }),
+        })
+      ),
+    }),
+    fb_locale: PropTypes.string,
   }
 
   componentDidMount() {
@@ -58,42 +93,18 @@ class Research extends React.Component {
   render() {
     const { page, isFetching: isFetchingResearch } = this.props.research
     const { isFetching: isFetchingGroups, groups } = this.props.scigroups
-
+    const { publications, fb_locale } = this.props
     return (
-      <Fragment>
-        <ResearchHead fb_locale={this.props.fb_locale} />
+      <ResearchPage>
+        <ResearchHead fb_locale={fb_locale} />
         <PageDescription
           page={page}
           isFetchingResearch={isFetchingResearch}
           isFetchingGroups={isFetchingGroups}
         />
         <Groups groups={groups} />
-
-        <section className="research-publications">
-          <div className="container">
-            <MainCategory>{this.context.t('Публикации')}</MainCategory>
-            <div className="columns is-multiline">
-              <div className="column is-12-tablet is-8-desktop is-offset-2-desktop ">
-                {this.props.publications.pubs.map((pub, index) => (
-                  <Publication key={index} item={pub} />
-                ))}
-              </div>
-            </div>
-            <div className="columns is-multiline">
-              <div className="column is-12 is-centered">
-                <Link href="/publications">
-                  <div className="more-wrapper">
-                    <button className="more-text">
-                      {this.context.t('Все публикации')}
-                    </button>
-                    <img src="/static/more.svg" alt="more groups" />
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-      </Fragment>
+        <PubsPreview publications={publications} />
+      </ResearchPage>
     )
   }
 }
