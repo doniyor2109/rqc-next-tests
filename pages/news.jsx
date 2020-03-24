@@ -1,15 +1,14 @@
-import React, { Component, Fragment } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import PropTypes from 'prop-types';
+import React, { Component, Fragment } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import PropTypes from 'prop-types'
 
-import * as newsActions from '../redux/actions/news';
-import * as langActions from '../redux/actions/lang';
+import * as newsActions from '../redux/actions/news'
+import * as langActions from '../redux/actions/lang'
 
-import NewsHead from '../components/news/NewsHead';
-import NewsStateManager from '../components/news/NewsStateManager';
-import articleType from '../components/news/articleType';
-
+import NewsHead from '../components/news/NewsHead'
+import NewsStateManager from '../components/news/NewsStateManager'
+import articleType from '../components/news/articleType'
 
 // Основной компонент, связывающий весь интерфейс страницы /news воедино
 class News extends Component {
@@ -34,64 +33,60 @@ class News extends Component {
   }
 
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       pageSize: 10,
-    };
-    this.changePageSize = this.changePageSize.bind(this);
+    }
+    this.changePageSize = this.changePageSize.bind(this)
   }
 
   componentDidMount() {
-    const { fetchNews, lang } = this.props;
-    const { pageSize } = this.state;
-    fetchNews(lang, pageSize);
+    const { fetchNews, lang } = this.props
+    const { pageSize } = this.state
+    fetchNews(lang, pageSize)
   }
 
   changePageSize(number) {
     this.setState({
       pageSize: number,
-    });
+    })
   }
 
   render() {
-    const {
-      fetchNews, news, fb_locale, phone, tablet, lang,
-    } = this.props;
+    const { fetchNews, news, fb_locale, phone, tablet, lang } = this.props
 
-    const { pageSize } = this.state;
+    const { pageSize } = this.state
 
     return (
       <Fragment>
         <NewsHead fbLocale={fb_locale} />
-        {news.articles.length > 0
-        && (
-        <NewsStateManager
-          fetchNews={fetchNews}
-          articles={news.articles}
-          pageSize={pageSize}
-          changePageSize={this.changePageSize}
-          isFetching={news.isFetching && pageSize === 10}
-          isFetchingMore={news.isFetching && pageSize > 10}
-          phone={phone}
-          tablet={tablet}
-          nextPage={news.nextPage}
-          lang={lang}
-        />
+        {news.articles.length > 0 && (
+          <NewsStateManager
+            fetchNews={fetchNews}
+            articles={news.articles}
+            pageSize={pageSize}
+            changePageSize={this.changePageSize}
+            isFetching={news.isFetching && pageSize === 10}
+            isFetchingMore={news.isFetching && pageSize > 10}
+            phone={phone}
+            tablet={tablet}
+            nextPage={news.nextPage}
+            lang={lang}
+          />
         )}
       </Fragment>
-    );
+    )
   }
 }
 
 // Redux функции state и dispatch
-const mapStateToProps = (state) => {
-  const { news } = state;
-  const { lang } = state.i18nState;
-  return { news, lang };
-};
+const mapStateToProps = state => {
+  const { news } = state
+  const { lang } = state.i18nState
+  return { news, lang }
+}
 
-const mapDispatchToProps = dispatch => bindActionCreators(Object.assign({},
-  newsActions,
-  langActions), dispatch);
+const mapDispatchToProps = dispatch =>
+  bindActionCreators(Object.assign({}, newsActions, langActions), dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(News);
+export default connect(mapStateToProps, mapDispatchToProps)(News)

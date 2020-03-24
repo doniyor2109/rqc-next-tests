@@ -50,7 +50,6 @@ class Logo extends React.Component {
   render() {
     const { fb_locale, logos } = this.props
     const { isFetching, page } = logos
-    console.log('logos', this.props)
     return (
       <>
         {isFetching && <Loading />}
@@ -70,7 +69,4 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch =>
   bindActionCreators(Object.assign({}, logoActions, langActions), dispatch)
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Logo)
+export default connect(mapStateToProps, mapDispatchToProps)(Logo)

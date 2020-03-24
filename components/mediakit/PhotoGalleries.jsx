@@ -67,6 +67,7 @@ class PhotoGalleries extends React.Component {
                   alt="show more news"
                   onClick={this.getMoreNews}
                   src="/static/more.svg"
+                  style={{ cursor: 'pointer' }}
                 />
               )}
             </div>

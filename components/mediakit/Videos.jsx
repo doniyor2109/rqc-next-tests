@@ -61,6 +61,7 @@ class Videos extends React.Component {
                   alt="show more news"
                   onClick={this.getMoreVideos}
                   src="/static/more.svg"
+                  style={{ cursor: 'pointer' }}
                 />
               )}
             </div>
