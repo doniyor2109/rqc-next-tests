@@ -2,13 +2,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-// import { RichText } from 'prismic-reactjs'
-// import PrismicConfig from '../../prismic-configuration'
+import { RichText } from 'prismic-reactjs'
+import PrismicConfig from '../../prismic-configuration'
 import Institute from './Institute'
 import Accordeon from './Accordeon'
-// import H3 from '../shared/styled/H3'
-// import CallToActionButton from '../shared/CallToActionButton'
-// import FormPopup from './FormPopup'
+import H3 from '../shared/styled/H3'
+import CallToActionButton from '../shared/CallToActionButton'
+import FormPopup from './FormPopup'
 
 const Section = styled.section`
   background: #f7f9fb;
@@ -143,12 +143,12 @@ class Mfti extends React.Component {
       mfti_aspirantura,
       mfti_bachelor,
       mfti_magistratura,
-      // form_call_to_action,
+      form_call_to_action,
       magistratura,
       bakalavriat,
       phone,
     } = this.props
-    // const { isFormOpened } = this.state
+    const { isFormOpened } = this.state
     const { t } = this.context
     return (
       <Section id="mipt">
@@ -180,28 +180,27 @@ class Mfti extends React.Component {
                 />
               </div>
 
-              {/* УБЕРИТЕ КОММЕНТАРИИ, ЧТОБЫ ВЕРНУТЬ ЗАЯВКУ НА ПОСТУПЛЕНИЕ */}
-              {/* <H3>
-                  {t('Заявка на поступление')}
-                </H3>
-                <div className="description_form">
-                  {RichText.render(form_call_to_action, PrismicConfig.linkResolver)}
-                </div> */}
+              <H3>{t('Заявка на поступление')}</H3>
+              <div className="description_form">
+                {RichText.render(
+                  form_call_to_action,
+                  PrismicConfig.linkResolver
+                )}
+              </div>
             </div>
           </div>
 
-          {/* УБЕРИТЕ КОММЕНТАРИИ ЧТОБЫ ВЕРНУТЬ ЗАЯВКУ НА ПОСТУПЛЕНИЕ */}
-          {/* <div className="columns">
-              <div className="column is-3-desktop is-offset-1-desktop is-4-tablet is-12-mobile">
-                <CallToActionButton text={t('Подать заявку')} onClick={this.showForm} />
-                {isFormOpened && (
-                <FormPopup
-                  active={isFormOpened}
-                  close={this.close}
-                />
-                )}
-              </div>
-            </div> */}
+          <div className="columns">
+            <div className="column is-3-desktop is-offset-1-desktop is-4-tablet is-12-mobile">
+              <CallToActionButton
+                text={t('Подать заявку')}
+                onClick={this.showForm}
+              />
+              {isFormOpened && (
+                <FormPopup active={isFormOpened} close={this.close} />
+              )}
+            </div>
+          </div>
         </div>
       </Section>
     )
