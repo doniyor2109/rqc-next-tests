@@ -152,7 +152,8 @@ export const translations = {
     'Добро пожаловать на официальный сайт Российского Квантового Центра!':
       'Welcome to the official website of the Russian Quantum Center!',
     Бакалавриат: 'Bachelor’s studies',
-    'Бакалавриат (открытие в 2020 г)': 'Bachelor’s studies (open in 2020)',
+    'Бакалавриат (набор с декабря 2020 г.)':
+      'Bachelor’s studies (open in December 2020)',
     Магистратура: 'Master’s studies',
     Аспирантура: 'PhD studies',
     'Аспирантура (открытие в 2020 г)': 'PhD studies (open in 2020)',
