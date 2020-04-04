@@ -12,18 +12,29 @@ const List = styled.div`
   }
   .partners_block {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding-top: 2.4rem;
 
     @media (max-width: 415px) {
-      flex-wrap: wrap;
-      margin: 0 auto;
-      justify-content: left;
+      justify-content: space-between;
+      align-items: flex-start;
     }
   }
-
+  .skolkovo_support {
+    font-size: 8px;
+    line-height: 10px;
+    text-align: right;
+    color: #ffffff;
+    margin: 10px 0 0 auto;
+    width: 100%;
+    @media (max-width: 415px) {
+      margin: 0;
+      width: 100px;
+    }
+  }
   a {
     cursor: pointer;
     img {
@@ -32,6 +43,8 @@ const List = styled.div`
   }
 
   a:nth-of-type(1) {
+    top: 1rem;
+    position: relative;
     img {
       width: 8.4rem;
       height: 3.12rem;
@@ -46,6 +59,7 @@ const List = styled.div`
   }
 
   a:nth-of-type(3) {
+    margin-right: 0;
     img {
       width: 15rem;
       height: 5.2rem;
@@ -101,6 +115,10 @@ const List = styled.div`
         margin-right: 0;
         margin-bottom: 3.8rem;
       }
+    }
+    a:nth-of-type(1) img {
+      width: 5.6rem;
+      height: 2.1rem;
     }
 
     a:nth-of-type(2) {
@@ -171,6 +189,13 @@ const Partners = ({ lang }, { t }) => (
             <a href="https://sk.ru/" target="_blank" rel="noopener noreferrer">
               <img src="/static/Sk-rus.svg" alt="" />
             </a>
+            <p className="skolkovo_support">
+              Исследования осуществляются
+              <br />
+              при грантовой поддержке
+              <br />
+              Фонда «Сколково»
+            </p>
           </>
         ) : (
           <>
@@ -205,6 +230,13 @@ const Partners = ({ lang }, { t }) => (
             <a href="https://sk.ru/" target="_blank" rel="noopener noreferrer">
               <img src="/static/Sk-eng.svg" alt="" />
             </a>
+            <p className="skolkovo_support">
+              Research is carried
+              <br />
+              out with the grant support
+              <br />
+              of the Skolkovo Foundation
+            </p>
           </>
         )}
       </div>

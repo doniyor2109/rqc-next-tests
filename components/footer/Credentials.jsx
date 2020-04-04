@@ -30,7 +30,7 @@ const Credentials = (props, { t }) => (
         <p>{t('Российский Квантовый Центр')}</p>
       </Copyright>
     </div>
-    <div className="column is-10-desktop is-10-tablet is-6-mobile">
+    <div className="column is-10-desktop is-9-tablet is-6-mobile">
       <HR />
     </div>
   </Fragment>
