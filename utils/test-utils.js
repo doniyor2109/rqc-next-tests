@@ -4,6 +4,9 @@ import { render as rtlRender } from '@testing-library/react'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import reducer from '../redux/reducers/index'
+import I18n from 'redux-i18n'
+
+import { translations } from '../i18n/translations'
 
 function render(
   ui,
@@ -14,7 +17,13 @@ function render(
   } = {}
 ) {
   function Wrapper({ children }) {
-    return <Provider store={store}>{children}</Provider>
+    return (
+      <Provider store={store}>
+        <I18n translations={translations} initialLang="ru">
+          {children}
+        </I18n>
+      </Provider>
+    )
   }
   return rtlRender(ui, { wrapper: Wrapper, ...renderOptions })
 }
