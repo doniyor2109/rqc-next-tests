@@ -27,49 +27,6 @@
   padding: 3rem 0;
 }
 
-.slice-type-quote {
-  color: #040303;
-  margin-top: 3rem;
-
-  h3 {
-    font-size: 2.2rem;
-    line-height: 2.7rem;
-  }
-
-  .quote-body {
-    display: flex;
-    flex-direction: row;
-
-    img {
-      width: 6.3rem;
-    }
-    .open-quote {
-      align-self: flex-start;
-      margin: -2.5rem 3rem 0 0;
-    }
-    .close-quote {
-      align-self: flex-end;
-      margin: 0 0 -2.5rem 3rem;
-    }
-  }
-
-  .quote-footer {
-    text-align: right;
-    width: 50%;
-    margin: 2.5rem 10rem 2.5rem auto;
-
-    h3,
-    h4 {
-      font-size: 1.4rem;
-      line-height: 1.8rem;
-    }
-
-    h3 {
-      font-weight: bold;
-    }
-  }
-}
-
 .article-more-news {
   font-size: 1.8rem;
   color: #040303;
@@ -133,23 +90,6 @@
 // ------------------ SMARTPHONE --------------------
 
 @media screen and (max-width: 415px) {
-  .slice-type-quote {
-    .quote-body {
-      flex-direction: column;
-      .open-quote {
-        margin: 0 0 2rem 0;
-      }
-      .close-quote {
-        margin: 2rem 0 0 0;
-      }
-    }
-    .quote-footer {
-      text-align: right;
-      width: 100%;
-      margin: 2rem 0 2rem auto;
-    }
-  }
-
   .article-body strong {
     margin-left: 0;
   }
