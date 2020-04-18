@@ -25,11 +25,11 @@ const ArticleHead = ({ item }) => (
     />
     <meta
       property="og:image:width"
-      content={item.data.cover && item.data.cover.dimensions.width}
+      content={item.data.cover.dimensions && item.data.cover.dimensions.width}
     />
     <meta
       property="og:image:height"
-      content={item.data.cover && item.data.cover.dimensions.height}
+      content={item.data.cover.dimensions && item.data.cover.dimensions.height}
     />
   </Head>
 )

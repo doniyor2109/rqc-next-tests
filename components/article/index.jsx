@@ -26,15 +26,17 @@ const Article = ({
   morenewsByTag,
   related,
 }) => {
-  const { item } = article
+  const {
+    item: { data, tags, id },
+  } = article
   if (lang === 'ru') {
     moment.locale('ru')
   } else moment.locale('en')
   // готовим разные элементы DOM в зависимости от разных slices полученных от Prismic
   var articleContent = []
-  if (item.data) {
+  if (data) {
     // Определяем верстку для каждого типа slice
-    articleContent = item.data.body.map((slice, index) => {
+    articleContent = data.body.map((slice, index) => {
       // верстка для текста
       if (slice.slice_type === 'text') {
         return <TextSlice slice={slice} key={slice.slice_type + index} />
@@ -57,26 +59,23 @@ const Article = ({
   return (
     <>
       <ArticleHero
-        cover={item.data.cover}
-        tags={item.tags}
-        date={moment(item.data.manual_date_of_publication).format('LL')}
-        title={item.data.title}
+        cover={data.cover}
+        tags={tags}
+        date={moment(data.manual_date_of_publication).format('LL')}
+        title={data.title}
         phone={phone}
         tablet={tablet}
       />
 
-      <ArticleBody
-        lead={item.data.title_description}
-        content={articleContent}
-      />
+      <ArticleBody lead={data.title_description} content={articleContent} />
 
       <div className="container">
         <div className="columns">
           <div className="column is-8-desktop is-offset-2-desktop is-12-tablet">
             <Socials
               url={hostName + '/article/' + uid}
-              quote={item.data.title[0].text}
-              image={item.data.cover.url}
+              quote={data.title[0] && data.title[0].text}
+              image={data.cover.url}
             />
           </div>
         </div>
@@ -88,8 +87,8 @@ const Article = ({
         render={() => (
           <MoreNews
             fetchNewsByTag={morenewsByTag}
-            relatedTo={item.id}
-            tags={item.tags}
+            relatedTo={id}
+            tags={tags}
             numberOfArticles={3}
             articles={related.articles}
             isFetching={related.isFetching}
@@ -105,8 +104,8 @@ const Article = ({
         render={() => (
           <MoreNews
             fetchNewsByTag={morenewsByTag}
-            relatedTo={item.id}
-            tags={item.tags}
+            relatedTo={id}
+            tags={tags}
             numberOfArticles={2}
             articles={related.articles}
             isFetching={related.isFetching}
@@ -122,8 +121,8 @@ const Article = ({
         render={() => (
           <MoreNews
             fetchNewsByTag={morenewsByTag}
-            relatedTo={item.id}
-            tags={item.tags}
+            relatedTo={id}
+            tags={tags}
             numberOfArticles={3}
             articles={related.articles}
             isFetching={related.isFetching}
