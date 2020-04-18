@@ -1,75 +1,118 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import NewscardSmall from '../news/NewscardSmall'
-import Loading from '../shared/loading';
+import Loading from '../shared/loading'
+import styled from 'styled-components'
 
+const StyledMoreNews = styled.div`
+  .article-more-news {
+    font-size: 1.8rem;
+    color: #040303;
+    margin-top: 8.5rem;
+  }
 
+  .article-related {
+    margin: 3.5rem 0 8.5rem 0;
+
+    hr {
+      height: 1px;
+      background-color: rgba(4, 3, 3, 0.5);
+      margin-top: 2rem;
+      margin-bottom: 1.4rem;
+    }
+  }
+
+  .more {
+    margin: 2rem 0 0 0;
+    cursor: pointer;
+  }
+
+  .news-card-small {
+    margin-bottom: 6rem;
+  }
+`
 class MoreNews extends React.Component {
+  static contextTypes = {
+    t: PropTypes.func,
+  }
 
-    static contextTypes = {
-        t: PropTypes.func
+  constructor(props) {
+    super(props)
+    this.numberOfArticles = this.props.tablet !== null ? 2 : 3
+    this.state = {
+      moreNews: this.numberOfArticles,
+    }
+  }
+
+  componentDidMount() {
+    const { tags, relatedTo, fetchNewsByTag } = this.props
+    const { moreNews } = this.state
+    if (tags[0]) {
+      fetchNewsByTag(relatedTo, tags[0], moreNews)
+    } else {
+      fetchNewsByTag(relatedTo, this.context.t('Новости РКЦ'), moreNews)
+    }
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const { tags, relatedTo, fetchNewsByTag } = this.props
+    const { moreNews } = this.state
+
+    if (tags !== prevProps.tags) {
+      fetchNewsByTag(relatedTo, tags[0], moreNews)
     }
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            moreNews: this.props.numberOfArticles
-        }
+    if (this.state.moreNews !== prevState.moreNews) {
+      fetchNewsByTag(this.props.relatedTo, this.props.tags[0], moreNews)
     }
-    
-    componentDidMount(){
-        if (this.props.tags[0]) {
-            this.props.fetchNewsByTag(this.props.relatedTo, this.props.tags[0], this.props.numberOfArticles)
-        } else {
-            this.props.fetchNewsByTag(this.props.relatedTo, this.context.t("Новости РКЦ"), this.props.numberOfArticles)
-        }
-    }
+  }
 
-    componentDidUpdate(prevProps, prevState) {
-        if (this.props.tags !== prevProps.tags) {
-              this.props.fetchNewsByTag(this.props.relatedTo, this.props.tags[0], this.state.moreNews)
-            }
+  render() {
+    const { articles, isFetching, nextPage } = this.props
 
-        if (this.state.moreNews !== prevState.moreNews) {
-            this.props.fetchNewsByTag(this.props.relatedTo, this.props.tags[0], this.state.moreNews)
-        }
-    }
+    // console.log("article more news", this.props)
 
-    render(){
-
-        const {articles, isFetching, nextPage} = this.props
-
-        // console.log("article more news", this.props)
-
-        return (
-            <div className="container">
-                <p className="article-more-news">{this.context.t("TAKЖЕ ПО ТЕМЕ")}</p>
-                <div className="article-related">
-                    <div className="related-news">
-                        <div className="columns is-multiline">
-                        {articles.map((item, index) =>
-                            <NewscardSmall article={item} key={index} />
-                        )}
-                        </div>
-                        <div className="columns">
-                        <div className="column is-centered">
-                            {isFetching && <Loading />}
-                        <hr />
-                            {nextPage &&
-                            <img className="more" alt="show more news" onClick={e => {this.give_me_more_news(e)}} src="/static/more.svg" /> }
-                        </div>
-                        </div>
-                    </div>
+    return (
+      <StyledMoreNews>
+        <div className="container">
+          <p className="article-more-news">{this.context.t('TAKЖЕ ПО ТЕМЕ')}</p>
+          <div className="article-related">
+            <div className="related-news">
+              <div className="columns is-multiline">
+                {articles.map(item => (
+                  <NewscardSmall article={item} key={item.id} />
+                ))}
+              </div>
+              <div className="columns">
+                <div className="column is-centered">
+                  {isFetching && <Loading />}
+                  <hr />
+                  {nextPage && (
+                    <img
+                      className="more"
+                      alt="show more news"
+                      onClick={e => {
+                        this.give_me_more_news(e)
+                      }}
+                      src="/static/more.svg"
+                    />
+                  )}
                 </div>
+              </div>
             </div>
-        )
-    }
-    give_me_more_news = (e) => {
-        e.preventDefault()
-        this.setState({
-            moreNews: this.state.moreNews + this.props.numberOfArticles
-        })
-    }
+          </div>
+        </div>
+      </StyledMoreNews>
+    )
+  }
+  give_me_more_news = e => {
+    e.preventDefault()
+    const { moreNews } = this.state
+
+    this.setState({
+      moreNews: moreNews + this.numberOfArticles,
+    })
+  }
 }
 
 export default MoreNews

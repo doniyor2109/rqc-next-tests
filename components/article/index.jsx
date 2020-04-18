@@ -80,56 +80,16 @@ const Article = ({
           </div>
         </div>
       </div>
-
-      <Media
-        query="(min-width: 769px)"
-        defaultMatches={phone === null && tablet === null}
-        render={() => (
-          <MoreNews
-            fetchNewsByTag={morenewsByTag}
-            relatedTo={id}
-            tags={tags}
-            numberOfArticles={3}
-            articles={related.articles}
-            isFetching={related.isFetching}
-            nextPage={related.nextPage}
-            lang={lang}
-          />
-        )}
-      />
-
-      <Media
-        query="(min-width: 416px) and (max-width:768px)"
-        defaultMatches={tablet !== null}
-        render={() => (
-          <MoreNews
-            fetchNewsByTag={morenewsByTag}
-            relatedTo={id}
-            tags={tags}
-            numberOfArticles={2}
-            articles={related.articles}
-            isFetching={related.isFetching}
-            nextPage={related.nextPage}
-            lang={lang}
-          />
-        )}
-      />
-
-      <Media
-        query="(max-width:415px)"
-        defaultMatches={phone !== null}
-        render={() => (
-          <MoreNews
-            fetchNewsByTag={morenewsByTag}
-            relatedTo={id}
-            tags={tags}
-            numberOfArticles={3}
-            articles={related.articles}
-            isFetching={related.isFetching}
-            nextPage={related.nextPage}
-            lang={lang}
-          />
-        )}
+      <MoreNews
+        fetchNewsByTag={morenewsByTag}
+        relatedTo={id}
+        tags={tags}
+        articles={related.articles}
+        isFetching={related.isFetching}
+        nextPage={related.nextPage}
+        lang={lang}
+        phone={phone}
+        tablet={tablet}
       />
     </>
   )
