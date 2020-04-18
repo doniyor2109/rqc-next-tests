@@ -108,7 +108,7 @@ class ArticlePage extends Component {
       morenewsByTag,
       related,
     } = this.props
-    console.log('article', this.props)
+    // console.log('article', this.props)
 
     return (
       <>
