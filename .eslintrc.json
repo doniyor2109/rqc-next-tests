@@ -10,7 +10,10 @@
   "env": {
     "browser": true,
     "es6": true,
-    "serviceworker": true
+    "serviceworker": true,
+    "jest": true,
+    "amd": true,
+    "node": true
   },
   "extends": [
     "eslint:recommended",
