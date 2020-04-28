@@ -1,19 +1,19 @@
-import * as actionTypes from "../actions/actionTypes"
+import * as actionTypes from '../actions/actionTypes'
 
 const initialState = {
   isFetchingMain: false,
   isFetchingSci: false,
   sciSlider: [],
   // newsTeaser: {}
-};
+}
 
 function fetchMainSliderSuccess(state, action) {
-  return {...state, isFetchingMain: false, ...action.response.results[0]}
+  return { ...state, isFetchingMain: false, ...action.response.results[0] }
 }
 
 function fetchMainSciSliderSuccess(state, action) {
   const sciSlider = action.response.results
-  return {...state, isFetchingSci: false, sciSlider}
+  return { ...state, isFetchingSci: false, sciSlider }
 }
 
 // function fetchNewsForMainSuccess(state, action) {
@@ -27,28 +27,27 @@ function fetchMainSciSliderSuccess(state, action) {
 
 export const main = (state = initialState, action) => {
   switch (action.type) {
-
     // reducer for main slider
     case actionTypes.FETCH_MAIN_REQUEST:
-      return {...state, isFetchingMain: true };
+      return { ...state, isFetchingMain: true }
 
     case actionTypes.FETCH_MAIN_SUCCESS:
-      return fetchMainSliderSuccess(state, action);
+      return fetchMainSliderSuccess(state, action)
 
     case actionTypes.FETCH_MAIN_FAILURE:
-      console.log("FETCH_MAIN_sFAILURE", action.error);
-      return { ...state, isFetchingMain: false };
+      console.log('FETCH_MAIN_sFAILURE', action.error)
+      return { ...state, isFetchingMain: false }
 
     // reducer for scientists slider
     case actionTypes.FETCH_MAIN_SCI_SLIDER_REQUEST:
-      return {...state, isFetchingSci: true };
+      return { ...state, isFetchingSci: true }
 
     case actionTypes.FETCH_MAIN_SCI_SLIDER_SUCCESS:
-      return fetchMainSciSliderSuccess(state, action);
+      return fetchMainSciSliderSuccess(state, action)
 
     case actionTypes.FETCH_MAIN_SCI_SLIDER_FAILURE:
-      console.log("FETCH_MAIN_SCI_SLIDER_FAILURE", action.error);
-      return { ...state, isFetchingSci: false };
+      console.log('FETCH_MAIN_SCI_SLIDER_FAILURE', action.error)
+      return { ...state, isFetchingSci: false }
 
     default:
       return state
