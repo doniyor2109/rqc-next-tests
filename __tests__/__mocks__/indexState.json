@@ -1,0 +1,2935 @@
+{
+  "article": {
+    "isFetching": false,
+    "item": [],
+    "selectedPost": null
+  },
+  "related": {
+    "isFetching": false,
+    "tag": "",
+    "articles": [],
+    "nextPage": null
+  },
+  "news": {
+    "isFetching": false,
+    "articles": [
+      {
+        "id": "XkQOPREAACMAJMVM",
+        "uid": "россиискии-квантовыи-центр-и-nissan-запустили-проект",
+        "type": "news",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XkQOPREAACMAJMVM%22%29+%5D%5D",
+        "tags": ["Новости РКЦ"],
+        "first_publication_date": "2020-02-12T14:40:03+0000",
+        "last_publication_date": "2020-04-03T15:28:52+0000",
+        "slugs": [
+          "%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B8%D1%81%D0%BA%D0%B8%D0%B8-%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D1%8B%D0%B8-%D1%86%D0%B5%D0%BD%D1%82%D1%80-%D0%B8-nissan-%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D1%82%D0%B8%D0%BB%D0%B8-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-%D0%B2-%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%B8-%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%BE%D0%B8-%D1%85%D0%B8%D0%BC%D0%B8%D0%B8"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "XodCeRAAACQA_PJV",
+            "uid": "russian-quantum-center-and-nissan-have-launched-project",
+            "type": "news",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "cover": {
+            "dimensions": {
+              "width": 730,
+              "height": 400
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/37092efa-f701-4595-b6b1-95acd837259c_raphael-biscaldi-5PEy9UraJ5c-unsplash.jpg?auto=compress,format&rect=0,44,3024,1657&w=730&h=400",
+            "thumbnail8": {
+              "dimensions": {
+                "width": 844,
+                "height": 408
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/rqc1/37092efa-f701-4595-b6b1-95acd837259c_raphael-biscaldi-5PEy9UraJ5c-unsplash.jpg?auto=compress,format&rect=0,53,3024,1462&w=844&h=408"
+            },
+            "thumbnail4": {
+              "dimensions": {
+                "width": 408,
+                "height": 408
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/rqc1/37092efa-f701-4595-b6b1-95acd837259c_raphael-biscaldi-5PEy9UraJ5c-unsplash.jpg?auto=compress,format&rect=1323,0,1701,1701&w=408&h=408"
+            },
+            "ipad": {
+              "dimensions": {
+                "width": 690,
+                "height": 400
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/rqc1/37092efa-f701-4595-b6b1-95acd837259c_raphael-biscaldi-5PEy9UraJ5c-unsplash.jpg?auto=compress,format&rect=90,0,2934,1701&w=690&h=400"
+            },
+            "iphone": {
+              "dimensions": {
+                "width": 415,
+                "height": 519
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/rqc1/37092efa-f701-4595-b6b1-95acd837259c_raphael-biscaldi-5PEy9UraJ5c-unsplash.jpg?auto=compress,format&rect=637,0,1360,1701&w=415&h=519"
+            }
+          },
+          "manual_date_of_publication": "2020-02-10T21:00:00+0000",
+          "title": [
+            {
+              "type": "heading1",
+              "text": "Российский квантовый центр и Nissan запустили проект в области квантовой химии",
+              "spans": []
+            }
+          ],
+          "title_description": [
+            {
+              "type": "heading2",
+              "text": "Автомобильная компания Nissan и Российский квантовый центр (РКЦ) запустили совместный проект по применению квантовых вычислений для моделирования свойств молекул – в перспективе этот метод позволит создавать новые материалы, аккумуляторы и предсказывать наиболее эффективные соединения для потенциальных лекарств или создавать новые сверхпроводники. Это первый проект в области квантовых вычислений в России, инициированный частными компаниями.",
+              "spans": []
+            }
+          ],
+          "body": [
+            {
+              "slice_type": "text",
+              "slice_label": null,
+              "items": [{}],
+              "primary": {
+                "news_body": [
+                  {
+                    "type": "paragraph",
+                    "text": "Атомы и молекулы – квантовые объекты, и создание математических моделей, способных точно предсказать их поведение, представляет собой чрезвычайно сложную вычислительную задачу, которую с трудом решают даже самые мощные классические компьютеры. Например, расчет молекулы, содержащей 20 электронов, на компьютере с 4 тысячами процессоров занимает примерно неделю. При этом с ростом числа атомов в молекуле время вычисления растет по экспоненте.",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Решение проблемы было предложено еще в 1981 году нобелевским лауреатом Ричардом Фейнманом, который предложил моделировать поведение квантовых систем с помощью других квантовых систем, то есть, высказал идею квантового симулятора. Почти 40 лет спустя эта идея постепенно реализуется на практике. Для построения квантового компьютера могут быть использованы различные физические системы, такие как сверхпроводниковые кубиты, нейтральные атомы в оптических потенциалах, ионы в ловушках и фотонные чипы.",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Руководитель проекта РКЦ и Nissan Алексей Федоров, глава группы квантовых информационных технологий РКЦ, объясняет, что в этом случае будут использоваться сразу две новейшие технологии – квантовое «железо» и «софт» на базе алгоритмов машинного обучения. Подобные проекты сейчас реализуют многие крупные технологические компании, в частности, такими экспериментами занимается Google. Уже сейчас исследовательские команды проводят работы по моделированию молекул. Например, компания IonQ с помощью квантового устройства успешно смоделировала молекулу воды, IBM смоделировала поведение гидрида бериллия, а в январе запустила совместный с Daimler проект, в рамках которого с помощью квантовых методов будут разрабатываться аккумуляторы следующего поколения – на основе лития и серы.",
+                    "spans": []
+                  }
+                ]
+              }
+            },
+            {
+              "slice_type": "author-quote",
+              "slice_label": null,
+              "items": [{}],
+              "primary": {
+                "quote_text": [
+                  {
+                    "type": "heading3",
+                    "text": "Мы начали с простых молекул – молекул водорода, соединений лития и бериллия. Самая первая задача – оптимизация литий-ионных аккумуляторов, которые используются, в частности, в электромобилях. Разработанные в рамках проекта методы расчетов, как мы ожидаем, могут быть интегрированы в систему дизайна материалов, которая используется в Nissan. Как ожидается, первые практические результаты мы получим уже через два года.",
+                    "spans": []
+                  }
+                ],
+                "quote_author": [
+                  {
+                    "type": "heading3",
+                    "text": "Алексей Федоров",
+                    "spans": []
+                  }
+                ],
+                "quote_author_position": [
+                  {
+                    "type": "heading4",
+                    "text": "Руководитель группы квантовых информационных технологий",
+                    "spans": []
+                  }
+                ]
+              }
+            },
+            {
+              "slice_type": "author-quote",
+              "slice_label": null,
+              "items": [{}],
+              "primary": {
+                "quote_text": [
+                  {
+                    "type": "heading3",
+                    "text": "Материалы, которые можно будет создать с помощью квантовых компьютеров, существенно увеличат энергоемкость и мощность батарей. В итоге мы получим возможность создавать высокоэффективный и экологичный транспорт, а также новые решения. Именно за этими технологиями – будущее.",
+                    "spans": []
+                  }
+                ],
+                "quote_author": [
+                  {
+                    "type": "heading3",
+                    "text": "Сигео Ибука",
+                    "spans": []
+                  }
+                ],
+                "quote_author_position": [
+                  {
+                    "type": "heading4",
+                    "text": "Глава исследовательского центра Nissan в России",
+                    "spans": []
+                  }
+                ]
+              }
+            },
+            {
+              "slice_type": "text",
+              "slice_label": null,
+              "items": [{}],
+              "primary": {
+                "news_body": [
+                  {
+                    "type": "paragraph",
+                    "text": "Напомним, что в России запущена целая серия проектов по поддержке квантовых технологий, в том числе в сфере квантовых вычислений. Новый проект позволит загрузить будущие российские квантовые устройства практическими задачами.",
+                    "spans": []
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "Xo7uJxMAACMA6oDY",
+        "uid": "ученые-россииского-квантового-центра-рассказали-в-давосе-о-будущеи-квантовои-революции",
+        "type": "news",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22Xo7uJxMAACMA6oDY%22%29+%5D%5D",
+        "tags": ["Новости РКЦ", "Квантовые технологии в мире"],
+        "first_publication_date": "2020-04-09T10:10:55+0000",
+        "last_publication_date": "2020-04-09T17:19:25+0000",
+        "slugs": [
+          "%D1%83%D1%87%D0%B5%D0%BD%D1%8B%D0%B5-%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B8%D1%81%D0%BA%D0%BE%D0%B3%D0%BE-%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%BE%D0%B3%D0%BE-%D1%86%D0%B5%D0%BD%D1%82%D1%80%D0%B0-%D1%80%D0%B0%D1%81%D1%81%D0%BA%D0%B0%D0%B7%D0%B0%D0%BB%D0%B8-%D0%B2-%D0%B4%D0%B0%D0%B2%D0%BE%D1%81%D0%B5-%D0%BE-%D0%B1%D1%83%D0%B4%D1%83%D1%89%D0%B5%D0%B8-%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%BE%D0%B8-%D1%80%D0%B5%D0%B2%D0%BE%D0%BB%D1%8E%D1%86%D0%B8%D0%B8"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "Xo8z0BMAACMA67IB",
+            "uid": "scientists-of-the-russian-quantum-center-discussed-the-future-quantum-revolution-in-davos",
+            "type": "news",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "cover": {
+            "dimensions": {
+              "width": 730,
+              "height": 400
+            },
+            "alt": "Давос",
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/3a7322f2-79fc-4e6a-944b-e2f672d68b8d_DPM_0342.JPG?auto=compress,format&rect=0,146,2500,1370&w=730&h=400",
+            "thumbnail8": {
+              "dimensions": {
+                "width": 844,
+                "height": 408
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/rqc1/3a7322f2-79fc-4e6a-944b-e2f672d68b8d_DPM_0342.JPG?auto=compress,format&rect=0,123,2500,1209&w=844&h=408"
+            },
+            "thumbnail4": {
+              "dimensions": {
+                "width": 408,
+                "height": 408
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/rqc1/3a7322f2-79fc-4e6a-944b-e2f672d68b8d_DPM_0342.JPG?auto=compress,format&rect=58,0,1667,1667&w=408&h=408"
+            },
+            "ipad": {
+              "dimensions": {
+                "width": 690,
+                "height": 400
+              },
+              "alt": "Ученые Российского квантового центра рассказали в Давосе о будущей «квантовой революции»",
+              "copyright": null,
+              "url": "https://images.prismic.io/rqc1/3a7322f2-79fc-4e6a-944b-e2f672d68b8d_DPM_0342.JPG?auto=compress,format&rect=0,89,2500,1449&w=690&h=400"
+            },
+            "iphone": {
+              "dimensions": {
+                "width": 415,
+                "height": 519
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/rqc1/3a7322f2-79fc-4e6a-944b-e2f672d68b8d_DPM_0342.JPG?auto=compress,format&rect=174,0,1333,1667&w=415&h=519"
+            }
+          },
+          "manual_date_of_publication": "2020-01-25T21:00:00+0000",
+          "title": [
+            {
+              "type": "heading1",
+              "text": "Ученые Российского квантового центра рассказали в Давосе о будущей «квантовой революции»",
+              "spans": []
+            }
+          ],
+          "title_description": [
+            {
+              "type": "heading2",
+              "text": "Российский квантовый центр выступил организатором панельной дискуссии, посвященной квантовым технологиям, которая состоялась в январе в рамках Всемирного экономического форума в Давосе. В нем приняли участие физики, математики, экономисты, и другие представители науки из Германии, Британии, Китая и других стран.",
+              "spans": []
+            }
+          ],
+          "body": [
+            {
+              "slice_type": "text",
+              "slice_label": null,
+              "items": [{}],
+              "primary": {
+                "news_body": [
+                  {
+                    "type": "paragraph",
+                    "text": "Модератором встречи был Алексей Кавокин, который является руководителем научной группы в РКЦ, а также руководителем центра поляритоники и профессором университета Вестлейк в Китае и профессором университета Саутгемптона.",
+                    "spans": []
+                  }
+                ]
+              }
+            },
+            {
+              "slice_type": "image-description",
+              "slice_label": null,
+              "items": [{}],
+              "primary": {
+                "body_image": {
+                  "dimensions": {
+                    "width": 2500,
+                    "height": 1667
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.prismic.io/rqc1/05e3ab49-8394-486b-a28d-5af4db5d2e3f_7B4A3048.JPG?auto=compress,format"
+                },
+                "body_image_description": [
+                  {
+                    "type": "heading5",
+                    "text": "Алексей Кавокин, модератор встречи",
+                    "spans": []
+                  }
+                ]
+              }
+            },
+            {
+              "slice_type": "text",
+              "slice_label": null,
+              "items": [{}],
+              "primary": {
+                "news_body": [
+                  {
+                    "type": "paragraph",
+                    "text": "Открывая встречу, он напомнил, что осенью 2019 года Google опубликовала статью, в которой утверждалось, что корпорация достигла квантового превосходства – то есть, показала, что квантовое устройство превосходит вычислительную машину, основанную на традиционной электронике. Если верить компании, их квантовый компьютер решил задачу, которую самый быстрый в мире классический суперкомпьютер решал бы 10 тысяч лет.",
+                    "spans": []
+                  }
+                ]
+              }
+            },
+            {
+              "slice_type": "author-quote",
+              "slice_label": null,
+              "items": [{}],
+              "primary": {
+                "quote_text": [
+                  {
+                    "type": "heading3",
+                    "text": "Это наводит на размышления о том, что вторая квантовая революция, о которой много говорили ученые, но о которой мало знает широкая публика, фактически произошла. И мы входим в эру квантового превосходства, которая несет за собой совершенно новые вызовы.",
+                    "spans": []
+                  }
+                ],
+                "quote_author": [
+                  {
+                    "type": "heading3",
+                    "text": "Алексей Кавокин",
+                    "spans": []
+                  }
+                ],
+                "quote_author_position": [
+                  {
+                    "type": "heading4",
+                    "text": "Руководитель группы «Квантовая поляритоника», руководитель центра поляритоники и профессор университета Вестлейк в Китае и профессор университета Саутгемптона.",
+                    "spans": []
+                  }
+                ]
+              }
+            },
+            {
+              "slice_type": "text",
+              "slice_label": null,
+              "items": [{}],
+              "primary": {
+                "news_body": [
+                  {
+                    "type": "paragraph",
+                    "text": "По словам Алексея, паникеры называют квантовый компьютер атомной бомбой 21 века, поскольку они смогут легко взламывать шифры. ",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Профессор Александр Львовский в ответ заметил, что о достижении квантового превосходства рано говорить по итогам решения одной конкретной задачи, специально подобранной, чтобы показать это самое превосходство, поэтому о реальной угрозе криптографическим системам говорить пока рано.",
+                    "spans": []
+                  }
+                ]
+              }
+            },
+            {
+              "slice_type": "image-description",
+              "slice_label": null,
+              "items": [{}],
+              "primary": {
+                "body_image": {
+                  "dimensions": {
+                    "width": 2500,
+                    "height": 1667
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.prismic.io/rqc1/0ac600a7-5300-4e25-9e9d-fcc6a754a33a_7B4A3216.JPG?auto=compress,format"
+                },
+                "body_image_description": [
+                  {
+                    "type": "heading5",
+                    "text": "Отмар Вистлер и Александр Львовский",
+                    "spans": []
+                  }
+                ]
+              }
+            },
+            {
+              "slice_type": "author-quote",
+              "slice_label": null,
+              "items": [{}],
+              "primary": {
+                "quote_text": [
+                  {
+                    "type": "heading3",
+                    "text": "Вторая хорошая новость состоит в том, что квантовая технология предлагает нам не только меч, но и щит, а именно квантовую криптографию – инструмент, который позволяет шифровать сообщения, используя при этом фотоны для передачи данных. И как уже говорилось, фундаментальный закон квантовой физики заключается в том, что нельзя измерить состояние квантовой системы, не изменив ее. Это означает, что если кто-то пытается прослушать линию передачи и взломать ее, то неизбежно фотоны изменят содержание сообщения, и в этом случае попытка взлома будет зафиксирована, и будет обеспечена защита.",
+                    "spans": []
+                  }
+                ],
+                "quote_author": [
+                  {
+                    "type": "heading3",
+                    "text": "Александр Львовский",
+                    "spans": []
+                  }
+                ],
+                "quote_author_position": [
+                  {
+                    "type": "heading4",
+                    "text": "Руководитель группы «Квантовая оптика», профессор Оксфордского университета.",
+                    "spans": []
+                  }
+                ]
+              }
+            },
+            {
+              "slice_type": "text",
+              "slice_label": null,
+              "items": [{}],
+              "primary": {
+                "news_body": [
+                  {
+                    "type": "paragraph",
+                    "text": "Алексей Кавокин признал, что компьютеры Google – своего рода элемент пиара, но «нет гарантий, что не проводятся секретные исследования по созданию квантового компьютера, в том числе для военных целей», поэтому развитие квантовой криптографии – насущная задача, которую надо решать.",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Профессор и руководитель лаборатории Сколтеха и профессор Сатугемптонского университета Павлос Лагудакис отметил, что нельзя ждать, пока ученые решат все проблемы, связанные с созданием универсального квантового компьютера. По его мнению, необходимо начать работать с существующими технологиями.",
+                    "spans": []
+                  }
+                ]
+              }
+            },
+            {
+              "slice_type": "author-quote",
+              "slice_label": null,
+              "items": [{}],
+              "primary": {
+                "quote_text": [
+                  {
+                    "type": "heading3",
+                    "text": "Сейчас развитие суперкомпьютеров находится не в спящем режиме, и оно происходит гораздо быстрее, чем развитие квантовых компьютеров. Можем ли мы соединить передовые технологии полупроводников, которые есть сейчас, и которые совершенствуют ваши смартфоны, с технологиями кубитов? Возможно необходимо создать систему, соединяющую электронику и фотонику, то есть свет и материю. В своей лаборатории мы уже создали подобную вещь, мы используем традиционные полупроводники, технологию, которая очень развита в России, первые лазеры на полупроводниках были изобретены в России, но также мы используем новую технологию из области фотоники, при помощи которой можно манипулировать светом внутри материи. И если машины на основе уже жидкого света, так называемые «жидкие машины», смогут ускорить квантовые машины, мы получим новый тип квантового компьютера.",
+                    "spans": []
+                  }
+                ],
+                "quote_author": [
+                  {
+                    "type": "heading3",
+                    "text": "Павлос Лагудакис",
+                    "spans": []
+                  }
+                ],
+                "quote_author_position": [
+                  {
+                    "type": "heading4",
+                    "text": "Профессор Сколтеха, руководитель лаборатории гибридной фотоники Сколтеха, профессор Сатугемптонского университета.",
+                    "spans": []
+                  }
+                ]
+              }
+            },
+            {
+              "slice_type": "text",
+              "slice_label": null,
+              "items": [{}],
+              "primary": {
+                "news_body": [
+                  {
+                    "type": "paragraph",
+                    "text": "В свою очередь Отмар Вистлер, президент Объединения Гельмгольца, отметил, что квантовые технологии будут влиять не только на информационную инфраструктуру и исследования в области физики, они в корне изменят медицину.",
+                    "spans": []
+                  }
+                ]
+              }
+            },
+            {
+              "slice_type": "author-quote",
+              "slice_label": null,
+              "items": [{}],
+              "primary": {
+                "quote_text": [
+                  {
+                    "type": "heading3",
+                    "text": "Управление огромными массивами информации и использование с этой целью квантовых технологий поможет эффективнее использовать медицинские технологии, которые мы, в общем-то, уже используем, например, исследования патологий, лабораторные исследования, эти методики дают гигантские объемы информации, которые в полной мере не изучены. Доступность таких систем позволит применять квантовые технологии в медицинской сфере и создавать индивидуализированное лекарство, создавать искусственные модели патологий и проводить их исследования.",
+                    "spans": []
+                  }
+                ],
+                "quote_author": [
+                  {
+                    "type": "heading3",
+                    "text": "Отмар Вистлер",
+                    "spans": []
+                  }
+                ],
+                "quote_author_position": [
+                  {
+                    "type": "heading4",
+                    "text": "Президент Объединения имени Гельмгольца.",
+                    "spans": []
+                  }
+                ]
+              }
+            },
+            {
+              "slice_type": "image-description",
+              "slice_label": null,
+              "items": [{}],
+              "primary": {
+                "body_image": {
+                  "dimensions": {
+                    "width": 2500,
+                    "height": 1667
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.prismic.io/rqc1/378797ea-185a-4f4e-b401-eae821742316_7B4A3717.JPG?auto=compress,format"
+                },
+                "body_image_description": [
+                  {
+                    "type": "heading5",
+                    "text": "Панельная дискуссия в Давосе",
+                    "spans": []
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "XgoKsREAAB4AYIpg",
+        "uid": "россия-всерьез-включилась-в-квантовую-гонку",
+        "type": "news",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XgoKsREAAB4AYIpg%22%29+%5D%5D",
+        "tags": ["Квантовые технологии в мире"],
+        "first_publication_date": "2019-12-30T14:33:24+0000",
+        "last_publication_date": "2020-01-10T12:09:13+0000",
+        "slugs": [
+          "%D1%80%D0%BE%D1%81%D1%81%D0%B8%D1%8F-%D0%B2%D1%81%D0%B5%D1%80%D1%8C%D0%B5%D0%B7-%D0%B2%D0%BA%D0%BB%D1%8E%D1%87%D0%B8%D0%BB%D0%B0%D1%81%D1%8C-%D0%B2-%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D1%83%D1%8E-%D0%B3%D0%BE%D0%BD%D0%BA%D1%83"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "XhhpUBEAACUAlYnv",
+            "uid": "russia-joined-the-quantum-race",
+            "type": "news",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "cover": {
+            "dimensions": {
+              "width": 730,
+              "height": 400
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/10f290e6-686b-46e3-a4a4-58a1ce338d42_robyn-oh-HOrhCnQsxnQ-unsplash.jpg?auto=compress,format&rect=0,513,4308,2361&w=730&h=400",
+            "thumbnail8": {
+              "dimensions": {
+                "width": 844,
+                "height": 408
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/rqc1/10f290e6-686b-46e3-a4a4-58a1ce338d42_robyn-oh-HOrhCnQsxnQ-unsplash.jpg?auto=compress,format&rect=0,792,4308,2083&w=844&h=408"
+            },
+            "thumbnail4": {
+              "dimensions": {
+                "width": 408,
+                "height": 408
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/rqc1/10f290e6-686b-46e3-a4a4-58a1ce338d42_robyn-oh-HOrhCnQsxnQ-unsplash.jpg?auto=compress,format&rect=1433,0,2875,2875&w=408&h=408"
+            },
+            "ipad": {
+              "dimensions": {
+                "width": 690,
+                "height": 400
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/rqc1/10f290e6-686b-46e3-a4a4-58a1ce338d42_robyn-oh-HOrhCnQsxnQ-unsplash.jpg?auto=compress,format&rect=0,377,4308,2497&w=690&h=400"
+            },
+            "iphone": {
+              "dimensions": {
+                "width": 415,
+                "height": 519
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/rqc1/10f290e6-686b-46e3-a4a4-58a1ce338d42_robyn-oh-HOrhCnQsxnQ-unsplash.jpg?auto=compress,format&rect=1420,0,2299,2875&w=415&h=519"
+            }
+          },
+          "manual_date_of_publication": "2019-12-29T21:00:00+0000",
+          "title": [
+            {
+              "type": "heading1",
+              "text": "Россия всерьез включилась в квантовую гонку",
+              "spans": []
+            }
+          ],
+          "title_description": [
+            {
+              "type": "heading2",
+              "text": "Запуск проекта по созданию квантового компьютера, который ведет госкорпорация «Росатом», а также параллельные программы в области квантовой сенсорики и квантовых коммуникаций заметили не только российские СМИ, но и главное научное издание мира – журнал Nature.",
+              "spans": []
+            }
+          ],
+          "body": [
+            {
+              "slice_type": "text",
+              "slice_label": null,
+              "items": [{}],
+              "primary": {
+                "news_body": [
+                  {
+                    "type": "paragraph",
+                    "text": "В редакционной статье на сайте издания говорится, что квантовые технологии в России в отличие от многих других стран и ведущих компаний долгое время были на «голодном пайке», и только сейчас в эту область начинают вкладывать существенные средства, сопоставимые, например, с европейской программой Quantum Flagship.",
+                    "spans": []
+                  },
+                  {
+                    "type": "image",
+                    "url": "https://images.prismic.io/rqc1/90e94a2f-4754-4858-8cc5-ac806be8431c_nature.tiff?auto=compress,format",
+                    "alt": null,
+                    "copyright": null,
+                    "dimensions": {
+                      "width": 1218,
+                      "height": 586
+                    }
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Научный руководитель группы квантовых коммуникаций РКЦ Алексей Федоров отметил в интервью Nature, что России предстоит преодолеть отставание в 5-10 лет. Однако, подчеркнул он, российская наука обладает очень большим потенциалом в этой сфере, и Россия очень близка к лидерам квантовой гонки.",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Полная версия статьи: nature.com/articles/d41586-019-03855-z",
+                    "spans": [
+                      {
+                        "start": 22,
+                        "end": 60,
+                        "type": "hyperlink",
+                        "data": {
+                          "link_type": "Web",
+                          "url": "https://www.nature.com/articles/d41586-019-03855-z"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Газета «Коммерсант», в свою очередь, подробно описала экономическую сторону нового квантового проекта, рассказав о заинтересованности крупных финансовых и технологических компаний в развитии квантовых технологий.",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Гендиректор РКЦ Руслан Юнусов рассказал газете, что в рамках проекта будет создаваться специализированный софт для квантовых компьютеров под запросы бизнеса. В этом, как ожидается, будут участвовать Сбербанк и Сбербанк-Технологии, Газпромбанк, СИБУР, «Газпром нефть».",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "По мере развития квантовых технологий будет требоваться все больше и больше специалистов в этой сфере – поэтому квантовые физики волей-неволей должны отчасти превращаться и в преподавателей и популяризаторов науки.",
+                    "spans": []
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "В рамках рабочего интенсива «Зимний остров», в котором приняли участие технологические предприниматели, стартаперы, студенты-физики и руководители государственных органов разных уровней, сотрудники РКЦ прочитали целую серию лекций, посвященных законам квантовой физики, сути квантовых технологий и их применениям в бизнесе.",
+                    "spans": [
+                      {
+                        "start": 28,
+                        "end": 43,
+                        "type": "hyperlink",
+                        "data": {
+                          "link_type": "Web",
+                          "url": "https://leader-id.ru/event/31641/"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "paragraph",
+                    "text": "Алексей Федоров рассказал слушателям интенсива о квантовых вычислениях, руководитель группы квантовых коммуникаций Юрий Курочкин – о квантовой связи, Руслан Юнусов – о перспективах развития квантовых технологий в целом.",
+                    "spans": []
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "total_pages": 0,
+    "total_results_size": 0,
+    "nextPage": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5Bat%28document.type%2C+%22news%22%29%5D%5D&orderings=%5Bmy.news.manual_date_of_publication+desc%5D&page=2&pageSize=3"
+  },
+  "language": {
+    "userClicked": 0
+  },
+  "main": {
+    "isFetchingMain": false,
+    "isFetchingSci": false,
+    "sciSlider": [
+      {
+        "id": "XmCsZhAAACEA2Ohn",
+        "uid": "александр-чернов",
+        "type": "scientist",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XmCsZhAAACEA2Ohn%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2020-03-05T07:39:02+0000",
+        "last_publication_date": "2020-04-03T15:41:32+0000",
+        "slugs": [
+          "%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80-%D1%87%D0%B5%D1%80%D0%BD%D0%BE%D0%B2"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "XmCyDxAAACAA2QGY",
+            "uid": "alexander-chernov",
+            "type": "scientist",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "name": [
+            {
+              "type": "heading5",
+              "text": "Александр Чернов",
+              "spans": []
+            }
+          ],
+          "publications_name": "A. Chernov",
+          "science_group": {
+            "id": "XmCqqxAAACAA2OC8",
+            "type": "science_group",
+            "tags": [],
+            "slug": "%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D1%81%D0%BF%D0%B8%D0%BD%D1%82%D1%80%D0%BE%D0%BD%D0%B8%D0%BA%D0%B0-%D0%B8-%D0%BC%D0%B0%D0%B3%D0%BD%D0%B8%D1%82%D0%BE%D1%84%D0%BE%D1%82%D0%BE%D0%BD%D0%B8%D0%BA%D0%B0",
+            "lang": "ru",
+            "uid": "квантовая-спинтроника-и-магнитофотоника",
+            "data": {
+              "uid": "квантовая-спинтроника-и-магнитофотоника",
+              "groupname": [
+                {
+                  "type": "heading1",
+                  "text": "Квантовая спинтроника и магнитофотоника",
+                  "spans": []
+                }
+              ]
+            },
+            "link_type": "Document",
+            "isBroken": false
+          },
+          "position": [
+            {
+              "type": "paragraph",
+              "text": "Заведующий лаборатории физики магнитных гетероструктур и спинтроники МФТИ",
+              "spans": []
+            }
+          ],
+          "titles": [],
+          "awards": [],
+          "photo": {
+            "dimensions": {
+              "width": 260,
+              "height": 260
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/38487c8c-6664-4ebe-a1ee-8852bdb8cd83_IMG_8962.jpg?auto=compress,format&rect=0,264,3000,3000&w=260&h=260"
+          }
+        }
+      },
+      {
+        "id": "W3k4eh0AAB0AP4bJ",
+        "uid": "алексеи-кавокин",
+        "type": "scientist",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22W3k4eh0AAB0AP4bJ%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2018-08-19T09:29:40+0000",
+        "last_publication_date": "2020-01-23T09:04:37+0000",
+        "slugs": [
+          "%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B8-%D0%BA%D0%B0%D0%B2%D0%BE%D0%BA%D0%B8%D0%BD"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "W5JiKSgAACYAysfs",
+            "uid": "alexey-kavokin",
+            "type": "scientist",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "name": [
+            {
+              "type": "heading5",
+              "text": "Алексей Кавокин",
+              "spans": []
+            }
+          ],
+          "publications_name": null,
+          "science_group": {
+            "id": "W3k5gB0AACAAP4tO",
+            "type": "science_group",
+            "tags": [],
+            "slug": "%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D0%BF%D0%BE%D0%BB%D1%8F%D1%80%D0%B8%D1%82%D0%BE%D0%BD%D0%B8%D0%BA%D0%B0",
+            "lang": "ru",
+            "uid": "квантовая-поляритоника",
+            "data": {
+              "uid": "квантовая-поляритоника",
+              "groupname": [
+                {
+                  "type": "heading1",
+                  "text": "Квантовая поляритоника",
+                  "spans": []
+                }
+              ]
+            },
+            "link_type": "Document",
+            "isBroken": false
+          },
+          "position": [
+            {
+              "type": "paragraph",
+              "text": "Руководитель Международного центра поляритоники и профессор Westlake University (Китай)",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "Профессор Саутгемптонского университета",
+              "spans": []
+            }
+          ],
+          "titles": [],
+          "awards": [],
+          "photo": {
+            "dimensions": {
+              "width": 260,
+              "height": 260
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/c58a34fbee9dfcc84cc82b84118735a9f16b7886_kavokin.jpg?auto=compress,format"
+          }
+        }
+      },
+      {
+        "id": "XEReiREAAB8AOIYU",
+        "uid": "алексеи-федоров",
+        "type": "scientist",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XEReiREAAB8AOIYU%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2019-01-20T11:42:12+0000",
+        "last_publication_date": "2020-01-17T13:29:29+0000",
+        "slugs": [
+          "%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B8-%D1%84%D0%B5%D0%B4%D0%BE%D1%80%D0%BE%D0%B2"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "XERfyREAACIAOIuZ",
+            "uid": "aleksey-fedorov",
+            "type": "scientist",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "name": [
+            {
+              "type": "heading5",
+              "text": "Алексей Федоров",
+              "spans": []
+            }
+          ],
+          "publications_name": null,
+          "science_group": {
+            "id": "XERjCxEAAB8AOJnq",
+            "type": "science_group",
+            "tags": [],
+            "slug": "%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D1%8B%D0%B5-%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8",
+            "lang": "ru",
+            "uid": "квантовые-информационные-технологии",
+            "data": {
+              "uid": "квантовые-информационные-технологии",
+              "groupname": [
+                {
+                  "type": "heading1",
+                  "text": "Квантовые информационные технологии",
+                  "spans": []
+                }
+              ]
+            },
+            "link_type": "Document",
+            "isBroken": false
+          },
+          "position": [
+            {
+              "type": "paragraph",
+              "text": "Приглашенный исследователь LPTMS CNRS, Orsay (Франция)",
+              "spans": []
+            }
+          ],
+          "titles": [],
+          "awards": [],
+          "photo": {
+            "dimensions": {
+              "width": 260,
+              "height": 260
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/eee2ea85b199e925fdc6ee922a2bc1e900d2a857_photo_2019-01-28_12-03-38.jpg?auto=compress,format"
+          }
+        }
+      },
+      {
+        "id": "XAO_1BIAACwA-I_3",
+        "uid": "вадим-макаров",
+        "type": "scientist",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XAO_1BIAACwA-I_3%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2018-12-02T11:19:58+0000",
+        "last_publication_date": "2019-11-14T09:03:22+0000",
+        "slugs": [
+          "%D0%B2%D0%B0%D0%B4%D0%B8%D0%BC-%D0%BC%D0%B0%D0%BA%D0%B0%D1%80%D0%BE%D0%B2"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "XAPAQxIAACwA-JHk",
+            "uid": "vadim-makarov",
+            "type": "scientist",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "name": [
+            {
+              "type": "heading5",
+              "text": "Вадим Макаров",
+              "spans": []
+            }
+          ],
+          "publications_name": null,
+          "science_group": {
+            "id": "XAPEohIAAC0A-KUx",
+            "type": "science_group",
+            "tags": [],
+            "slug": "%D1%83%D1%8F%D0%B7%D0%B2%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8-%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D1%8B%D1%85-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC",
+            "lang": "ru",
+            "uid": "уязвимости-квантовых-систем",
+            "data": {
+              "uid": "уязвимости-квантовых-систем",
+              "groupname": [
+                {
+                  "type": "heading1",
+                  "text": "Уязвимости квантовых систем",
+                  "spans": []
+                }
+              ]
+            },
+            "link_type": "Document",
+            "isBroken": false
+          },
+          "position": [
+            {
+              "type": "paragraph",
+              "text": "Приглашенный профессор Научно-технического университета Китая (USTC)",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "Научно-технический руководитель группы «Уязвимости квантовых систем»",
+              "spans": []
+            }
+          ],
+          "titles": [],
+          "awards": [],
+          "photo": {
+            "dimensions": {
+              "width": 260,
+              "height": 260
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/35b77fa53a638d3cff2a5fcc449532fb5fc1b1bf_201203-makarov-2-4.jpg?auto=compress,format"
+          }
+        }
+      },
+      {
+        "id": "W3ktvR0AAB4AP1eA",
+        "uid": "александр-львовскии",
+        "type": "scientist",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22W3ktvR0AAB4AP1eA%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2018-08-19T08:43:47+0000",
+        "last_publication_date": "2019-11-03T22:28:02+0000",
+        "slugs": [
+          "%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80-%D0%BB%D1%8C%D0%B2%D0%BE%D0%B2%D1%81%D0%BA%D0%B8%D0%B8"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "W5JoKigAACcAyuLE",
+            "uid": "alexander-lvovsky",
+            "type": "scientist",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "name": [
+            {
+              "type": "heading5",
+              "text": "Александр Львовский",
+              "spans": []
+            }
+          ],
+          "publications_name": "A. Lvovsky",
+          "science_group": {
+            "id": "W3kr_h0AAB4AP0_L",
+            "type": "science_group",
+            "tags": [],
+            "slug": "%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D0%BE%D0%BF%D1%82%D0%B8%D0%BA%D0%B0",
+            "lang": "ru",
+            "uid": "квантовая-оптика",
+            "data": {
+              "uid": "квантовая-оптика",
+              "groupname": [
+                {
+                  "type": "heading1",
+                  "text": "Квантовая оптика",
+                  "spans": []
+                }
+              ]
+            },
+            "link_type": "Document",
+            "isBroken": false
+          },
+          "position": [
+            {
+              "type": "paragraph",
+              "text": "Профессор Оксфордского университета",
+              "spans": []
+            }
+          ],
+          "titles": [
+            {
+              "type": "paragraph",
+              "text": "Звание 1",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "Звание 2",
+              "spans": []
+            }
+          ],
+          "awards": [
+            {
+              "type": "paragraph",
+              "text": "Награда 1",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "Награда 2",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "Награда 3 и 4",
+              "spans": []
+            }
+          ],
+          "photo": {
+            "dimensions": {
+              "width": 260,
+              "height": 260
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/26770e079fa6ba9826a17157a7c8afe12f7bf5fe_lvovskiy.jpg?auto=compress,format"
+          }
+        }
+      },
+      {
+        "id": "W3ky5B0AAB8AP24g",
+        "uid": "алексеи-желтиков",
+        "type": "scientist",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22W3ky5B0AAB8AP24g%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2018-08-19T09:05:49+0000",
+        "last_publication_date": "2019-11-03T22:28:51+0000",
+        "slugs": [
+          "%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B8-%D0%B6%D0%B5%D0%BB%D1%82%D0%B8%D0%BA%D0%BE%D0%B2"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "W5JfYigAACAAyruN",
+            "uid": "alexey-zheltikov",
+            "type": "scientist",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "name": [
+            {
+              "type": "heading5",
+              "text": "Алексей Желтиков",
+              "spans": []
+            }
+          ],
+          "publications_name": null,
+          "science_group": {
+            "id": "W3kzPB0AAB8AP2-o",
+            "type": "science_group",
+            "tags": [],
+            "slug": "%D0%BF%D0%B5%D1%80%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D1%8F-%D1%84%D0%BE%D1%82%D0%BE%D0%BD%D0%B8%D0%BA%D0%B0",
+            "lang": "ru",
+            "uid": "передовая-фотоника",
+            "data": {
+              "uid": "передовая-фотоника",
+              "groupname": [
+                {
+                  "type": "heading1",
+                  "text": "Передовая фотоника",
+                  "spans": []
+                }
+              ]
+            },
+            "link_type": "Document",
+            "isBroken": false
+          },
+          "position": [
+            {
+              "type": "paragraph",
+              "text": "Профессор МГУ имени М.В. Ломоносова",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "Профессор Техасского университета A&M",
+              "spans": []
+            }
+          ],
+          "titles": [
+            {
+              "type": "paragraph",
+              "text": "",
+              "spans": []
+            }
+          ],
+          "awards": [
+            {
+              "type": "paragraph",
+              "text": "",
+              "spans": []
+            }
+          ],
+          "photo": {
+            "dimensions": {
+              "width": 260,
+              "height": 260
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/6ed635bfaa9eb1414c99c1710ffd3973e008050a_jeltikov.jpg?auto=compress,format"
+          }
+        }
+      },
+      {
+        "id": "W3kxMR0AAB4AP2a6",
+        "uid": "алексеи-рубцов",
+        "type": "scientist",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22W3kxMR0AAB4AP2a6%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2018-08-19T08:58:37+0000",
+        "last_publication_date": "2019-11-06T12:20:55+0000",
+        "slugs": [
+          "%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B8-%D1%80%D1%83%D0%B1%D1%86%D0%BE%D0%B2"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "W5JnrSgAACAAyuCT",
+            "uid": "alexey-rubtsov",
+            "type": "scientist",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "name": [
+            {
+              "type": "heading5",
+              "text": "Алексей Рубцов",
+              "spans": []
+            }
+          ],
+          "publications_name": null,
+          "science_group": {
+            "id": "W3kxch0AAB0AP2fg",
+            "type": "science_group",
+            "tags": [],
+            "slug": "%D0%BA%D0%BE%D1%80%D1%80%D0%B5%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D1%8B%D0%B5-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B",
+            "lang": "ru",
+            "uid": "коррелированные-квантовые-системы",
+            "data": {
+              "uid": "коррелированные-квантовые-системы",
+              "groupname": [
+                {
+                  "type": "heading1",
+                  "text": "Коррелированные квантовые системы",
+                  "spans": []
+                }
+              ]
+            },
+            "link_type": "Document",
+            "isBroken": false
+          },
+          "position": [
+            {
+              "type": "paragraph",
+              "text": "Профессор МГУ имени М.В. Ломоносова",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "Профессор РАН",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "Главный научный сотрудник ВНИИА имени Н.Л. Духова",
+              "spans": []
+            }
+          ],
+          "titles": [],
+          "awards": [],
+          "photo": {
+            "dimensions": {
+              "width": 260,
+              "height": 260
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1%2Fcb041527-1d39-4bb2-84ce-dcd94433973c_rubcov.jpg?auto=compress,format&rect=0,450,3494,3494&w=260&h=260"
+          }
+        }
+      },
+      {
+        "id": "W3M8oCQAACQAa1vC",
+        "uid": "владимир-белотелов",
+        "type": "scientist",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22W3M8oCQAACQAa1vC%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2018-08-14T20:36:15+0000",
+        "last_publication_date": "2019-11-22T06:56:23+0000",
+        "slugs": [
+          "%D0%B2%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80-%D0%B1%D0%B5%D0%BB%D0%BE%D1%82%D0%B5%D0%BB%D0%BE%D0%B2"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "W5jh8ykAACkAE52H",
+            "uid": "vladimir-belotelov",
+            "type": "scientist",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "name": [
+            {
+              "type": "heading1",
+              "text": "Владимир Белотелов",
+              "spans": []
+            }
+          ],
+          "publications_name": null,
+          "science_group": {
+            "id": "W3M9NCQAACQAa15d",
+            "type": "science_group",
+            "tags": [],
+            "slug": "%D0%BC%D0%B0%D0%B3%D0%BD%D0%B8%D1%82%D0%BE%D0%BF%D0%BB%D0%B0%D0%B7%D0%BC%D0%BE%D0%BD%D0%B8%D0%BA%D0%B0-%D0%B8-%D1%81%D0%B2%D0%B5%D1%80%D1%85%D0%B1%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B8-%D0%BC%D0%B0%D0%B3%D0%BD%D0%B5%D1%82%D0%B8%D0%B7%D0%BC",
+            "lang": "ru",
+            "uid": "магнитоплазмоника-и-сверхбыстрыи-магнетизм",
+            "data": {
+              "uid": "магнитоплазмоника-и-сверхбыстрыи-магнетизм",
+              "groupname": [
+                {
+                  "type": "heading1",
+                  "text": "Магнитоплазмоника и сверхбыстрый магнетизм",
+                  "spans": []
+                }
+              ]
+            },
+            "link_type": "Document",
+            "isBroken": false
+          },
+          "position": [
+            {
+              "type": "paragraph",
+              "text": "Д.ф.-м.н., профессор РАН",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "Доцент МГУ имени М.В. Ломоносова",
+              "spans": []
+            }
+          ],
+          "titles": [],
+          "awards": [],
+          "photo": {
+            "dimensions": {
+              "width": 260,
+              "height": 260
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/404777ae73f14163d16cc8e4de0fca64e0c69711_belotelov.png?auto=compress,format"
+          }
+        }
+      },
+      {
+        "id": "XF0cjBAAACQAJIED",
+        "uid": "игорь-биленко",
+        "type": "scientist",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XF0cjBAAACQAJIED%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2019-02-08T06:07:12+0000",
+        "last_publication_date": "2019-06-04T06:54:11+0000",
+        "slugs": [
+          "%D0%B8%D0%B3%D0%BE%D1%80%D1%8C-%D0%B1%D0%B8%D0%BB%D0%B5%D0%BD%D0%BA%D0%BE"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "XF0dZBAAACIAJITG",
+            "uid": "igor-bilenko",
+            "type": "scientist",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "name": [
+            {
+              "type": "heading5",
+              "text": "Игорь Биленко",
+              "spans": []
+            }
+          ],
+          "publications_name": null,
+          "science_group": {
+            "id": "W3M57CQAACYAa0-a",
+            "type": "science_group",
+            "tags": [],
+            "slug": "%D0%BA%D0%BE%D0%B3%D0%B5%D1%80%D0%B5%D0%BD%D1%82%D0%BD%D0%B0%D1%8F-%D0%BC%D0%B8%D0%BA%D1%80%D0%BE%D0%BE%D0%BF%D1%82%D0%B8%D0%BA%D0%B0-%D0%B8-%D1%80%D0%B0%D0%B4%D0%B8%D0%BE%D1%84%D0%BE%D1%82%D0%BE%D0%BD%D0%B8%D0%BA%D0%B0",
+            "lang": "ru",
+            "uid": "когерентная-микрооптика-и-радиофотоника",
+            "data": {
+              "uid": "когерентная-микрооптика-и-радиофотоника",
+              "groupname": [
+                {
+                  "type": "heading1",
+                  "text": "Когерентная микрооптика и радиофотоника",
+                  "spans": []
+                }
+              ]
+            },
+            "link_type": "Document",
+            "isBroken": false
+          },
+          "position": [
+            {
+              "type": "paragraph",
+              "text": "Профессор МГУ имени М.В. Ломоносова",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "Ведущий исследователь группы «Когерентная микрооптика и радиофотоника»",
+              "spans": []
+            }
+          ],
+          "titles": [],
+          "awards": [],
+          "photo": {
+            "dimensions": {
+              "width": 260,
+              "height": 260
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/e278d4a667f72633e773717c8edc5ad118116c53_bilenko-ia.jpg?auto=compress,format"
+          }
+        }
+      },
+      {
+        "id": "XIoEPBAAACQAyco_",
+        "uid": "фарит-халили",
+        "type": "scientist",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XIoEPBAAACQAyco_%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2019-03-29T10:40:22+0000",
+        "last_publication_date": "2019-04-08T08:02:33+0000",
+        "slugs": [
+          "%D1%84%D0%B0%D1%80%D0%B8%D1%82-%D1%85%D0%B0%D0%BB%D0%B8%D0%BB%D0%B8"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "XIoEVBAAACQAycqr",
+            "uid": "farit-khalili",
+            "type": "scientist",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "name": [
+            {
+              "type": "heading5",
+              "text": "Фарит Халили",
+              "spans": []
+            }
+          ],
+          "publications_name": null,
+          "science_group": {
+            "id": "XIn-JRAAACcAya9b",
+            "type": "science_group",
+            "tags": [],
+            "slug": "%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D0%B0%D1%8F-%D0%BE%D0%BF%D1%82%D0%BE%D0%BC%D0%B5%D1%85%D0%B0%D0%BD%D0%B8%D0%BA%D0%B0",
+            "lang": "ru",
+            "uid": "квантовая-оптомеханика",
+            "data": {
+              "uid": "квантовая-оптомеханика",
+              "groupname": [
+                {
+                  "type": "heading1",
+                  "text": "Квантовая оптомеханика",
+                  "spans": []
+                }
+              ]
+            },
+            "link_type": "Document",
+            "isBroken": false
+          },
+          "position": [
+            {
+              "type": "paragraph",
+              "text": "Профессор МГУ имени М.В. Ломоносова",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "Доктор физико-математических наук",
+              "spans": []
+            }
+          ],
+          "titles": [],
+          "awards": [],
+          "photo": {
+            "dimensions": {
+              "width": 260,
+              "height": 260
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/124a5a125717a1bca061fdf76899c0b00849688d_khalili_farit.jpg?auto=compress,format"
+          }
+        }
+      },
+      {
+        "id": "W3k22R0AAB4AP3-W",
+        "uid": "алексеи-акимов",
+        "type": "scientist",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22W3k22R0AAB4AP3-W%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2018-08-19T09:22:38+0000",
+        "last_publication_date": "2019-04-04T14:14:40+0000",
+        "slugs": [
+          "%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B8-%D0%B0%D0%BA%D0%B8%D0%BC%D0%BE%D0%B2"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "W5JikigAACYAysnD",
+            "uid": "alexey-akimov",
+            "type": "scientist",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "name": [
+            {
+              "type": "heading5",
+              "text": "Алексей Акимов",
+              "spans": []
+            }
+          ],
+          "publications_name": null,
+          "science_group": {
+            "id": "W3k3Hx0AACAAP4DO",
+            "type": "science_group",
+            "tags": [],
+            "slug": "%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D1%8B%D0%B5-%D1%81%D0%B8%D0%BC%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80%D1%8B-%D0%B8-%D0%B8%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%B0%D1%8F-%D1%84%D0%BE%D1%82%D0%BE%D0%BD%D0%B8%D0%BA%D0%B0",
+            "lang": "ru",
+            "uid": "квантовые-симуляторы-и-интегрированная-фотоника",
+            "data": {
+              "uid": "квантовые-симуляторы-и-интегрированная-фотоника",
+              "groupname": [
+                {
+                  "type": "heading1",
+                  "text": "Квантовые симуляторы и интегрированная фотоника",
+                  "spans": []
+                }
+              ]
+            },
+            "link_type": "Document",
+            "isBroken": false
+          },
+          "position": [
+            {
+              "type": "paragraph",
+              "text": "Профессор Техасского университета A&M",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "Старший научный сотрудник в Физическом институте им. П.Н. Лебедева (Москва)",
+              "spans": []
+            }
+          ],
+          "titles": [],
+          "awards": [],
+          "photo": {
+            "dimensions": {
+              "width": 260,
+              "height": 260
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/4d22c51cb17ac59dd17029a02d029660f6bd8898_akimov.jpg?auto=compress,format"
+          }
+        }
+      },
+      {
+        "id": "W3krYR0AAB0AP00Q",
+        "uid": "алексеи-устинов",
+        "type": "scientist",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22W3krYR0AAB0AP00Q%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2018-08-19T08:33:49+0000",
+        "last_publication_date": "2019-04-04T14:17:06+0000",
+        "slugs": [
+          "%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B8-%D1%83%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%B2"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "W5JotygAACYAyuU6",
+            "uid": "alexey-ustinov",
+            "type": "scientist",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "name": [
+            {
+              "type": "heading5",
+              "text": "Алексей Устинов",
+              "spans": []
+            }
+          ],
+          "publications_name": null,
+          "science_group": {
+            "id": "W3kp7h0AACAAP0aw",
+            "type": "science_group",
+            "tags": [],
+            "slug": "%D1%81%D0%B2%D0%B5%D1%80%D1%85%D0%BF%D1%80%D0%BE%D0%B2%D0%BE%D0%B4%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BA%D1%83%D0%B1%D0%B8%D1%82%D1%8B-%D0%B8-%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D1%8B%D0%B5-%D1%81%D1%85%D0%B5%D0%BC%D1%8B",
+            "lang": "ru",
+            "uid": "сверхпроводниковые-кубиты-и-квантовые-схемы",
+            "data": {
+              "uid": "сверхпроводниковые-кубиты-и-квантовые-схемы",
+              "groupname": [
+                {
+                  "type": "heading1",
+                  "text": "Сверхпроводниковые кубиты и квантовые схемы",
+                  "spans": []
+                }
+              ]
+            },
+            "link_type": "Document",
+            "isBroken": false
+          },
+          "position": [
+            {
+              "type": "paragraph",
+              "text": "Профессор Технологического института Карлсруэ (Германия)",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "Глава лаборатории Сверхпроводящих метаматериалов НИТУ «МИСиС» (Москва)",
+              "spans": []
+            }
+          ],
+          "titles": [],
+          "awards": [],
+          "photo": {
+            "dimensions": {
+              "width": 260,
+              "height": 260
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/468a8852552c73bbd17dc9dfd4f3fe32413db8f5_ustinov.jpg?auto=compress,format"
+          }
+        }
+      },
+      {
+        "id": "W3k7GR0AAB8AP5Jc",
+        "uid": "юрии-курочкин",
+        "type": "scientist",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22W3k7GR0AAB8AP5Jc%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2018-08-19T09:40:47+0000",
+        "last_publication_date": "2019-03-19T06:31:31+0000",
+        "slugs": [
+          "%D1%8E%D1%80%D0%B8%D0%B8-%D0%BA%D1%83%D1%80%D0%BE%D1%87%D0%BA%D0%B8%D0%BD"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "W5I3oSgAACgAZQUj",
+            "uid": "yury-kurochkin",
+            "type": "scientist",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "name": [
+            {
+              "type": "heading5",
+              "text": "Юрий Курочкин",
+              "spans": []
+            }
+          ],
+          "publications_name": null,
+          "science_group": {
+            "id": "W3LQCSQAACcAaXZu",
+            "type": "science_group",
+            "tags": [],
+            "slug": "%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%BC%D1%83%D0%BD%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B8",
+            "lang": "ru",
+            "uid": "группа-квантовых-коммуникации",
+            "data": {
+              "uid": "группа-квантовых-коммуникации",
+              "groupname": [
+                {
+                  "type": "heading1",
+                  "text": "Квантовые коммуникации",
+                  "spans": []
+                }
+              ]
+            },
+            "link_type": "Document",
+            "isBroken": false
+          },
+          "position": [
+            {
+              "type": "paragraph",
+              "text": "Технический директор QRate",
+              "spans": []
+            },
+            {
+              "type": "paragraph",
+              "text": "Научно-технический руководитель проекта «Квантовые коммуникации»",
+              "spans": []
+            }
+          ],
+          "titles": [],
+          "awards": [],
+          "photo": {
+            "dimensions": {
+              "width": 260,
+              "height": 260
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/0452bfcdb7a5eb6baef58bbc67cd18af000c6916_1136_oooo.plus.png?auto=compress,format"
+          }
+        }
+      },
+      {
+        "id": "W3kvxB0AACAAP2Br",
+        "uid": "николаи-колачевскии",
+        "type": "scientist",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22W3kvxB0AACAAP2Br%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2018-08-19T08:52:26+0000",
+        "last_publication_date": "2019-03-19T07:40:50+0000",
+        "slugs": [
+          "%D0%BD%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B8-%D0%BA%D0%BE%D0%BB%D0%B0%D1%87%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B8"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "W5JodSgAACcAyuQV",
+            "uid": "nikolay-kolachevsky",
+            "type": "scientist",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "name": [
+            {
+              "type": "heading1",
+              "text": "Николай Колачевский",
+              "spans": []
+            }
+          ],
+          "publications_name": null,
+          "science_group": {
+            "id": "W3kwEx0AAB4AP2HP",
+            "type": "science_group",
+            "tags": [],
+            "slug": "%D0%BF%D1%80%D0%B5%D1%86%D0%B8%D0%B7%D0%B8%D0%BE%D0%BD%D0%BD%D1%8B%D0%B5-%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D1%8B%D0%B5-%D0%B8%D0%B7%D0%BC%D0%B5%D1%80%D0%B5%D0%BD%D0%B8%D1%8F",
+            "lang": "ru",
+            "uid": "прецизионные-квантовые-измерения",
+            "data": {
+              "uid": "прецизионные-квантовые-измерения",
+              "groupname": [
+                {
+                  "type": "heading1",
+                  "text": "Прецизионные квантовые измерения",
+                  "spans": []
+                }
+              ]
+            },
+            "link_type": "Document",
+            "isBroken": false
+          },
+          "position": [
+            {
+              "type": "paragraph",
+              "text": "Директор Физического института им. П.Н. Лебедева (Москва)",
+              "spans": []
+            }
+          ],
+          "titles": [],
+          "awards": [],
+          "photo": {
+            "dimensions": {
+              "width": 260,
+              "height": 260
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/eb8f471f922591dd4d25c0aa33cb2f59c4ab5589_kolachevskiy.jpg?auto=compress,format"
+          }
+        }
+      },
+      {
+        "id": "W3b8yB0AAB4ANbD7",
+        "uid": "георгии-шляпников",
+        "type": "scientist",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22W3b8yB0AAB4ANbD7%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2018-08-17T16:50:27+0000",
+        "last_publication_date": "2019-02-13T12:48:18+0000",
+        "slugs": [
+          "%D0%B3%D0%B5%D0%BE%D1%80%D0%B3%D0%B8%D0%B8-%D1%88%D0%BB%D1%8F%D0%BF%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "W5JpQygAACYAyuem",
+            "uid": "georgy-shlyapnikov",
+            "type": "scientist",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "name": [
+            {
+              "type": "heading1",
+              "text": "Георгий Шляпников",
+              "spans": []
+            }
+          ],
+          "publications_name": null,
+          "science_group": {
+            "id": "W3b3AR0AAB4ANZdy",
+            "type": "science_group",
+            "tags": [],
+            "slug": "%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D1%8F-%D0%BC%D0%BD%D0%BE%D0%B3%D0%B8%D1%85-%D1%82%D0%B5%D0%BB",
+            "lang": "ru",
+            "uid": "теория-многих-тел",
+            "data": {
+              "uid": "теория-многих-тел",
+              "groupname": [
+                {
+                  "type": "heading1",
+                  "text": "Теория многих тел",
+                  "spans": []
+                }
+              ]
+            },
+            "link_type": "Document",
+            "isBroken": false
+          },
+          "position": [
+            {
+              "type": "paragraph",
+              "text": "Директор по исследованиям LPTMS CNRS, Orsay (Франция)",
+              "spans": []
+            }
+          ],
+          "titles": [],
+          "awards": [],
+          "photo": {
+            "dimensions": {
+              "width": 260,
+              "height": 260
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/0c5033197b762c49dcdb2c6f48fc47c6edf6cf7f_img-0123.jpg?auto=compress,format"
+          }
+        }
+      }
+    ],
+    "id": "W3GVDyQAACYAZAgb",
+    "uid": null,
+    "type": "main",
+    "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22W3GVDyQAACYAZAgb%22%29+%5D%5D",
+    "tags": [],
+    "first_publication_date": "2018-08-13T14:26:29+0000",
+    "last_publication_date": "2019-11-26T07:15:35+0000",
+    "slugs": [
+      "%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D1%8B%D0%B5-%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D0%B8",
+      "hello",
+      "%D0%BE%D1%82%D1%87%D0%B5%D1%82",
+      "%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D1%8B",
+      "icqt",
+      "quantum-computers",
+      "evaluation",
+      "evaluation-report",
+      "report"
+    ],
+    "linked_documents": [],
+    "lang": "ru",
+    "alternate_languages": [
+      {
+        "id": "W3GV8SQAACQAZAwG",
+        "type": "main",
+        "lang": "en-gb"
+      }
+    ],
+    "data": {
+      "body": [
+        {
+          "slice_type": "banner_with_caption",
+          "slice_label": null,
+          "items": [{}],
+          "primary": {
+            "image_slide": {
+              "dimensions": {
+                "width": 1440,
+                "height": 600
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/rqc1/b5be5e53-7219-4a7c-a6b2-cda2088fd098_Quantum-Technologies-in-Russia-resized.jpg?auto=compress,format&rect=42,111,1417,590&w=1440&h=600",
+              "ipad": {
+                "dimensions": {
+                  "width": 767,
+                  "height": 900
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/rqc1/b5be5e53-7219-4a7c-a6b2-cda2088fd098_Quantum-Technologies-in-Russia-resized.jpg?auto=compress,format&rect=637,0,852,1000&w=767&h=900"
+              },
+              "iphone": {
+                "dimensions": {
+                  "width": 414,
+                  "height": 736
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/rqc1/b5be5e53-7219-4a7c-a6b2-cda2088fd098_Quantum-Technologies-in-Russia-resized.jpg?auto=compress,format&rect=781,0,563,1000&w=414&h=736"
+              }
+            },
+            "title_slideh2": [
+              {
+                "type": "heading2",
+                "text": "Квантовые технологии",
+                "spans": []
+              }
+            ],
+            "title_slideh1": [
+              {
+                "type": "heading1",
+                "text": "В России",
+                "spans": []
+              }
+            ],
+            "description_slide": [
+              {
+                "type": "heading3",
+                "text": "Обзор ученых Российского квантового центра",
+                "spans": []
+              }
+            ],
+            "button_text_slide": "Подробнее",
+            "button_url_slide": {
+              "link_type": "Web",
+              "url": "https://iopscience.iop.org/article/10.1088/2058-9565/ab4472"
+            }
+          }
+        },
+        {
+          "slice_type": "banner_with_caption",
+          "slice_label": null,
+          "items": [{}],
+          "primary": {
+            "image_slide": {
+              "dimensions": {
+                "width": 1440,
+                "height": 600
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/rqc1/89587596-0563-41a9-9035-cffe4a775ef0_Hello-quantum-world-sycamore-dark-compressed.png?auto=compress,format&rect=0,225,1800,750&w=1440&h=600",
+              "ipad": {
+                "dimensions": {
+                  "width": 767,
+                  "height": 900
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/rqc1/89587596-0563-41a9-9035-cffe4a775ef0_Hello-quantum-world-sycamore-dark-compressed.png?auto=compress,format&rect=388,0,1023,1200&w=767&h=900"
+              },
+              "iphone": {
+                "dimensions": {
+                  "width": 414,
+                  "height": 736
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/rqc1/89587596-0563-41a9-9035-cffe4a775ef0_Hello-quantum-world-sycamore-dark-compressed.png?auto=compress,format&rect=563,0,675,1200&w=414&h=736"
+              }
+            },
+            "title_slideh2": [
+              {
+                "type": "heading2",
+                "text": "Hello",
+                "spans": []
+              }
+            ],
+            "title_slideh1": [
+              {
+                "type": "heading1",
+                "text": "quantum world",
+                "spans": []
+              }
+            ],
+            "description_slide": [
+              {
+                "type": "heading3",
+                "text": "Google публикует историческое заявление о квантовом превосходстве",
+                "spans": []
+              }
+            ],
+            "button_text_slide": "Подробнее",
+            "button_url_slide": {
+              "link_type": "Web",
+              "url": "https://www.nature.com/articles/d41586-019-03213-z"
+            }
+          }
+        },
+        {
+          "slice_type": "banner_with_caption",
+          "slice_label": null,
+          "items": [{}],
+          "primary": {
+            "image_slide": {
+              "dimensions": {
+                "width": 1440,
+                "height": 600
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/rqc1/9ef1f409c0255cd37518e41f6e28f9601d6e09ed_annual_report_2.jpg?auto=compress,format",
+              "ipad": {
+                "dimensions": {
+                  "width": 767,
+                  "height": 900
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/rqc1/975611ccebe0086b3764b90ea6b3f8b9544e03dd_annual_report_2.jpg?auto=compress,format"
+              },
+              "iphone": {
+                "dimensions": {
+                  "width": 414,
+                  "height": 736
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/rqc1/fbd590df806db9adde289e2791e2f7c403a3dcff_annual_report_2.jpg?auto=compress,format"
+              }
+            },
+            "title_slideh2": [
+              {
+                "type": "heading2",
+                "text": "ОТЧЕТ",
+                "spans": []
+              }
+            ],
+            "title_slideh1": [
+              {
+                "type": "heading1",
+                "text": "2017–2019",
+                "spans": []
+              }
+            ],
+            "description_slide": [
+              {
+                "type": "heading3",
+                "text": "Российского Квантового Центра",
+                "spans": []
+              }
+            ],
+            "button_text_slide": "Подробнее",
+            "button_url_slide": {
+              "link_type": "Media",
+              "name": "RQC_17-19_RUS_interactive.pdf",
+              "kind": "document",
+              "url": "https://rqc1.cdn.prismic.io/rqc1%2F59e523c9-91f6-4b2f-988a-60a4201b5cc6_rqc_17-19_rus_interactive.pdf",
+              "size": "6708723"
+            }
+          }
+        },
+        {
+          "slice_type": "banner_with_caption",
+          "slice_label": null,
+          "items": [{}],
+          "primary": {
+            "image_slide": {
+              "dimensions": {
+                "width": 1440,
+                "height": 600
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/rqc1/a8db564689936ee9bab5cab7d6e6c260a2169b1f_quantum_computers_slider.jpg?auto=compress,format",
+              "iphone": {
+                "dimensions": {
+                  "width": 414,
+                  "height": 736
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/rqc1/5a0bfbdcee7918050171389757d7d90d03e772a0_quantum_computers_slider.jpg?auto=compress,format"
+              },
+              "ipad": {
+                "dimensions": {
+                  "width": 767,
+                  "height": 900
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/rqc1/0a91117687b520ddcda22a6d12ad50b46be38aca_quantum_computers_slider.jpg?auto=compress,format"
+              }
+            },
+            "title_slideh2": [
+              {
+                "type": "heading2",
+                "text": "Квантовые компьютеры",
+                "spans": []
+              }
+            ],
+            "title_slideh1": [
+              {
+                "type": "heading1",
+                "text": "угрожают сетевой безопасности",
+                "spans": []
+              }
+            ],
+            "description_slide": [
+              {
+                "type": "heading3",
+                "text": "Новая статья в Nature Photonics",
+                "spans": []
+              }
+            ],
+            "button_text_slide": "Подробнее",
+            "button_url_slide": {
+              "link_type": "Web",
+              "url": "https://www.nature.com/articles/d41586-018-07449-z"
+            }
+          }
+        },
+        {
+          "slice_type": "banner_with_caption",
+          "slice_label": null,
+          "items": [{}],
+          "primary": {
+            "image_slide": {
+              "dimensions": {
+                "width": 1440,
+                "height": 600
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/rqc1/67763fefe492f3ea1b6031360e7262498610b9fb_icqt_slider2.jpg?auto=compress,format",
+              "iphone": {
+                "dimensions": {
+                  "width": 414,
+                  "height": 736
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/rqc1/46b0c989c8318698040fd1fed168597c43ec7db2_icqt_slider2.jpg?auto=compress,format"
+              },
+              "ipad": {
+                "dimensions": {
+                  "width": 767,
+                  "height": 900
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/rqc1/1fc38a38be021fa1d6bd2bef1af53f415dc48eb9_icqt_slider2.jpg?auto=compress,format"
+              }
+            },
+            "title_slideh2": [
+              {
+                "type": "heading2",
+                "text": "ICQT",
+                "spans": []
+              }
+            ],
+            "title_slideh1": [
+              {
+                "type": "heading1",
+                "text": "2019",
+                "spans": []
+              }
+            ],
+            "description_slide": [
+              {
+                "type": "heading3",
+                "text": "V Международная конференция по квантовым технологиям",
+                "spans": []
+              }
+            ],
+            "button_text_slide": "Подробнее",
+            "button_url_slide": {
+              "link_type": "Web",
+              "url": "http://conference.rqc.ru/"
+            }
+          }
+        },
+        {
+          "slice_type": "banner_with_caption",
+          "slice_label": null,
+          "items": [{}],
+          "primary": {
+            "image_slide": {
+              "dimensions": {
+                "width": 1440,
+                "height": 600
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://images.prismic.io/rqc1/d60115f4cf0518cd0236df13b370fd9a3aa716b8_future_without_quantum_computers2.jpg?auto=compress,format",
+              "iphone": {
+                "dimensions": {
+                  "width": 414,
+                  "height": 736
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/rqc1/be1fb8dde2f8f9b02fc378c43028c542e911d758_future_without_quantum_computers2.jpg?auto=compress,format"
+              },
+              "ipad": {
+                "dimensions": {
+                  "width": 767,
+                  "height": 900
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.prismic.io/rqc1/7548262fb7e68a49b0a9de5e2f598836f9e8e78c_future_without_quantum_computers2.jpg?auto=compress,format"
+              }
+            },
+            "title_slideh2": [
+              {
+                "type": "heading2",
+                "text": "Будущее",
+                "spans": []
+              }
+            ],
+            "title_slideh1": [
+              {
+                "type": "heading1",
+                "text": "наступило",
+                "spans": []
+              }
+            ],
+            "description_slide": [
+              {
+                "type": "heading3",
+                "text": "когда без квантовых компьютеров не получится обойтись",
+                "spans": []
+              }
+            ],
+            "button_text_slide": "Подробнее",
+            "button_url_slide": {
+              "link_type": "Web",
+              "url": "https://www.rbc.ru/magazine/2018/01/5a393ff49a794761b9379d07"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "people": {
+    "isFetching": false,
+    "page": []
+  },
+  "person": {
+    "isFetching": false,
+    "item": []
+  },
+  "about": {
+    "isFetching": false,
+    "page": {}
+  },
+  "vacancies": {
+    "isFetchingPrismic": false,
+    "isFetchingManyHH": false,
+    "isFetchingOneHH": false,
+    "items": [],
+    "itemsHH": [],
+    "vacanciesbyID": []
+  },
+  "i18nState": {
+    "lang": "ru",
+    "newFallbackLang": null,
+    "translations": {},
+    "forceRefresh": false
+  },
+  "team": {
+    "isFetching": false,
+    "item": []
+  },
+  "photo": {
+    "isFetching": false,
+    "item": []
+  },
+  "mediakit": {
+    "isFetchingPhoto": false,
+    "isFetchingVideo": false,
+    "isFetchingPresentations": false,
+    "isFetchingBranding": false,
+    "photoGalleries": [],
+    "videos": [],
+    "presentations": [],
+    "branding": [],
+    "photosNextpage": null,
+    "videosNextpage": null,
+    "presentationsNextpage": null
+  },
+  "video": {
+    "isFetching": false,
+    "item": []
+  },
+  "scigroups": {
+    "isFetching": false,
+    "groups": []
+  },
+  "research": {
+    "isFetching": false,
+    "page": {}
+  },
+  "event": {
+    "isFetching": false,
+    "item": [],
+    "selectedPost": null
+  },
+  "events": {
+    "isFetching": false,
+    "events": [
+      {
+        "id": "XpnR9hEAACMAUU99",
+        "uid": "онлаин-лекция-ркц-лекция-8",
+        "type": "event",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XpnR9hEAACMAUU99%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2020-04-17T15:57:46+0000",
+        "last_publication_date": "2020-04-17T16:00:11+0000",
+        "slugs": [
+          "%D0%BA%D0%B0%D0%BA-%D1%81%D0%BF%D0%B0%D1%8F%D1%82%D1%8C-%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D1%8B%D0%B8-%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [],
+        "data": {
+          "important": "да",
+          "wallpaper": {
+            "largecard": {},
+            "smallcard": {},
+            "largecardIpad": {},
+            "smallcardIpad": {},
+            "allcardsMobile": {},
+            "coverIpad": {},
+            "coverMobile": {}
+          },
+          "color_cover": "#4d9ac8",
+          "title": [
+            {
+              "type": "heading1",
+              "text": "Как спаять квантовый компьютер",
+              "spans": []
+            }
+          ],
+          "additional": [
+            {
+              "type": "paragraph",
+              "text": "Онлайн-лекция РКЦ. Лекция 8",
+              "spans": []
+            }
+          ],
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "Алексей Устинов, руководитель научной группы",
+              "spans": []
+            }
+          ],
+          "more_info": [
+            {
+              "type": "paragraph",
+              "text": "17 апреля, в пятницу, в 18:00 состоится онлайн-лекция на тему: «Как спаять квантовый компьютер». Лекцию будет читать Научный руководитель группы «Сверхпроводниковые кубиты и квантовые схемы» РКЦ, профессор Технологического института Карлсруэ (Германия), глава лаборатории Сверхпроводящих метаматериалов НИТУ «МИСиС» Алексей Устинов.  Лекция организована при поддержке Центра НТИ по квантовым коммуникациям НИТУ \"МИСиС\", ГК «Росатом», РКЦ.\n\nВ лекции речь пойдет о сверхпроводниковых квантовых цепях и устройствах. Из школьного курса про электричество мы знаем, что соединив в электрическую цепь катушку и конденсатор мы получим колебательный контур, а проще говоря электрический резонатор. Такие резонаторы используются во многих устройствах вокруг нас – радиоприемниках, компьютерах, мобильных телефонах. На первый взгляд, никакой квантовой физики в обычных резонаторах нет и быть не может. Однако это не так. Как и всякая колебательная система, электрический резонатор обладает квантовыми уровнями энергии, разность между которыми определяется частотой колебаний. Для того, чтобы обращаться с такой системой как искуственным «атомом», необходимо уменьшить, насколько это возможно, потери энергии и использовать сверхнизкие температуры. Этого можно достичь с использованием сверхпроводников. Охладив сверхпроводящий колебательный контур до температуры в несколько десятков милликельвин, можно манипулировать квантовым состоянием системы при помощи микроволн – так же, как мы возбуждаем обычные атомы с помощью света. Эта новая область науки – квантовая электродинамика цепей - использует хорошо известные законы атомной физики и квантовой оптики, обычно используемые для описания взаимодействия фотонов с атомами. Сверхпроводниковые квантовые биты (кубиты) – это своего рода искусственные «атомы», представляющие собой резонаторы из сверхпроводников и джозефсоновских переходов. Энергетический спектр похож на атомный, но расстояние между уровнями энергии соответствует не световым фотонам, а микроволновым фотонам, то есть мы имеем энергию на несколько порядков меньше. \n\nТакие искусственные «атомы» – сверхпроводниковые кубиты – являются одними из наиболее перспективных базовых элементов будущих квантовых компьютеров, которые смогут решать задачи, недоступные даже для самых мощных современных вычислительных машин. Именно на сверхпроводниковых кубитах работают все реализованные к настоящему времени квантовые вычислительные устройства (Google, IBM, Intel, и др.). Сверхпроводящие кубиты отличает от других типов кубитов хорошая  масштабируемость, стабильность во времени и контроль параметров, легкость управления и программирования. В конце 2019 года компания Google продемонстрировала так называемое  квантовое превосходство, достигнув в пространстве квантовых состояний процессора из 53 сверхпроводниковых кубитов глубины вычисления, недоступной самым мощным современным классическим компьютерам.  Детальное изучение и оптимизация конструкции и свойств сверхпроводниковых кубитов является сейчас одним из приоритетных направлений в современных квантовых технологиях. Целью здесь является прецизионное управление квантовыми состояниями, обеспечение условий для контролируемого взаимодействия множества кубитов и, в конечном счете, создание вычислительных устройств, позволяющих реализовывать квантовые модели и вычислительные алгоритмы.\n\nПосле окончания лекции у вас будет возможность задать свои вопросы.\n\nСсылка на трансляцию: https://youtu.be/_49YbiY1NQU",
+              "spans": [
+                {
+                  "start": 3437,
+                  "end": 3465,
+                  "type": "hyperlink",
+                  "data": {
+                    "link_type": "Web",
+                    "url": "https://youtu.be/_49YbiY1NQU"
+                  }
+                }
+              ]
+            }
+          ],
+          "place": [
+            {
+              "type": "paragraph",
+              "text": "https://youtu.be/_49YbiY1NQU",
+              "spans": []
+            }
+          ],
+          "start_date_time": "2020-04-17T15:00:00+0000",
+          "end_date": null,
+          "place_link": {
+            "link_type": "Web",
+            "url": "https://youtu.be/_49YbiY1NQU"
+          },
+          "place_details": [],
+          "fee": [],
+          "ps": [],
+          "partner_logo": {},
+          "lecturer": [
+            {
+              "type": "heading3",
+              "text": "Алексей Устинов",
+              "spans": []
+            }
+          ],
+          "lecturer_position": [
+            {
+              "type": "paragraph",
+              "text": "Научный руководитель группы «Сверхпроводниковые кубиты и квантовые схемы» РКЦ, профессор Технологического института Карлсруэ (Германия), глава лаборатории Сверхпроводящих метаматериалов НИТУ «МИСиС»",
+              "spans": []
+            }
+          ],
+          "lecturer_photo": {
+            "dimensions": {
+              "width": 160,
+              "height": 160
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/731b0a9d-a772-4a41-899f-4d1bd6c73e24_%D1%83%D1%81%D1%82%D0%B8%D0%BD%D0%BE%D0%B21.png?auto=compress,format&rect=0,44,408,408&w=160&h=160"
+          },
+          "lecturer_bio": []
+        }
+      },
+      {
+        "id": "XpWz5hAAACMAllXH",
+        "uid": "онлаин-лекция-ркц-лекция-7",
+        "type": "event",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XpWz5hAAACMAllXH%22%29+%5D%5D",
+        "tags": ["онлайн", "лекция"],
+        "first_publication_date": "2020-04-14T13:00:25+0000",
+        "last_publication_date": "2020-04-14T13:00:25+0000",
+        "slugs": [
+          "%D1%84%D0%BE%D1%82%D0%BE%D0%B4%D0%B5%D1%82%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B-%D0%BE%D1%82-%D0%B1%D0%B5%D1%81%D0%BF%D0%B8%D0%BB%D0%BE%D1%82%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2-%D0%B4%D0%BE-%D1%8F%D0%B4%D0%B5%D1%80%D0%BD%D0%BE%D0%B8-%D1%84%D0%B8%D0%B7%D0%B8%D0%BA%D0%B8"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [],
+        "data": {
+          "important": "да",
+          "wallpaper": {
+            "largecard": {},
+            "smallcard": {},
+            "largecardIpad": {},
+            "smallcardIpad": {},
+            "allcardsMobile": {},
+            "coverIpad": {},
+            "coverMobile": {}
+          },
+          "color_cover": "#1b1635",
+          "title": [
+            {
+              "type": "heading1",
+              "text": "Фотодетекторы: от беспилотников до ядерной физики",
+              "spans": []
+            }
+          ],
+          "additional": [
+            {
+              "type": "paragraph",
+              "text": "Онлайн-лекция РКЦ. Лекция 7",
+              "spans": []
+            }
+          ],
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "Юрий Поздняков, генеральный директор Dephan",
+              "spans": []
+            }
+          ],
+          "more_info": [
+            {
+              "type": "paragraph",
+              "text": "14 апреля, во вторник, в 17:00 состоится онлайн-лекция на тему: «Фотодетекторы: от беспилотников до ядерной физики». Лекцию будет читать Генеральный директор спиноффа Российского квантового центра — компании Dephan — Юрий Поздняков.\n\nВ ходе лекции будет рассмотрена история появления и развития фотодетекторов. Вы узнаете принципы их работы, ключевые параметры и несколько областей их применения.\n\nФотодетектор — это прибор, который является основой многих современных технологий и областей, таких как беспилотные автомобили, диагностическая  медицина, ядерная физика и многих других. \n\nПосле лекции у вас будет возможность задать все интересующие вас вопросы.\n\nСсылка на трансляцию: https://youtu.be/evZwlxRYiUg",
+              "spans": [
+                {
+                  "start": 684,
+                  "end": 712,
+                  "type": "hyperlink",
+                  "data": {
+                    "link_type": "Web",
+                    "url": "https://youtu.be/evZwlxRYiUg"
+                  }
+                }
+              ]
+            }
+          ],
+          "place": [
+            {
+              "type": "paragraph",
+              "text": "https://youtu.be/evZwlxRYiUg",
+              "spans": []
+            }
+          ],
+          "start_date_time": "2020-04-14T14:00:00+0000",
+          "end_date": null,
+          "place_link": {
+            "link_type": "Web",
+            "url": "https://youtu.be/evZwlxRYiUg"
+          },
+          "place_details": [],
+          "fee": [],
+          "ps": [],
+          "partner_logo": {},
+          "lecturer": [
+            {
+              "type": "heading3",
+              "text": "Юрий Поздняков",
+              "spans": []
+            }
+          ],
+          "lecturer_position": [
+            {
+              "type": "paragraph",
+              "text": "Генеральный директор спиноффа РКЦ, компании Dephan",
+              "spans": []
+            }
+          ],
+          "lecturer_photo": {
+            "dimensions": {
+              "width": 160,
+              "height": 160
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/fee4a28a-449a-41cf-b92a-17650e9e335f_%D1%8E%D1%80%D0%B8%D0%B9-%D0%B2%D0%BE%D0%B7%D0%B4%D0%BD%D1%8F%D0%BA%D0%BE%D0%B2-%D0%B1%D0%B5%D0%BB%D1%8B%D0%B9-%D1%84%D0%BE%D0%BD.png?auto=compress,format&rect=0,0,408,408&w=160&h=160"
+          },
+          "lecturer_bio": []
+        }
+      }
+    ],
+    "total_pages": 17,
+    "total_results_size": 33,
+    "nextPage": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5Bat%28document.type%2C+%22event%22%29%5D%5D&orderings=%5Bmy.event.important+desc%2C+my.event.start_date_time+desc%2C+%5D&page=2&pageSize=2"
+  },
+  "eventsbyTag": {
+    "isFetching": false,
+    "tag": "",
+    "events": [],
+    "nextPage": null
+  },
+  "search": {
+    "isFetching": false,
+    "text": "",
+    "results": [],
+    "total_results_size": 0,
+    "nextPage": null
+  },
+  "publications": {
+    "isFetchingPubs": false,
+    "pubs": []
+  },
+  "products": {
+    "isFetching": false,
+    "items": [
+      {
+        "id": "XI-ngRAAACQA4pcp",
+        "uid": "квантовые-коммуникации",
+        "type": "product",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XI-ngRAAACQA4pcp%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2019-03-18T14:13:24+0000",
+        "last_publication_date": "2019-03-20T19:35:40+0000",
+        "slugs": [
+          "%D0%BA%D0%B2%D0%B0%D0%BD%D1%82%D0%BE%D0%B2%D1%8B%D0%B5-%D0%BA%D0%BE%D0%BC%D0%BC%D1%83%D0%BD%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B8"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "XI-noBAAACUA4pe3",
+            "uid": "quantum-communications",
+            "type": "product",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "orderings": 0,
+          "name": [
+            {
+              "type": "heading1",
+              "text": "Квантовые коммуникации",
+              "spans": []
+            }
+          ],
+          "url": {
+            "link_type": "Web",
+            "url": "http://goqrate.com/"
+          },
+          "image": {
+            "dimensions": {
+              "width": 250,
+              "height": 250
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/8af2c85cbb64531a6f6540d9ec77ea7ff1724e88_products-qrate-resized.png?auto=compress,format"
+          }
+        }
+      },
+      {
+        "id": "XI-c5BAAACQA4meS",
+        "uid": "детектор-одиночных-фотонов",
+        "type": "product",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XI-c5BAAACQA4meS%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2019-03-18T13:28:20+0000",
+        "last_publication_date": "2019-03-20T19:34:07+0000",
+        "slugs": [
+          "%D0%B4%D0%B5%D1%82%D0%B5%D0%BA%D1%82%D0%BE%D1%80-%D0%BE%D0%B4%D0%B8%D0%BD%D0%BE%D1%87%D0%BD%D1%8B%D1%85-%D1%84%D0%BE%D1%82%D0%BE%D0%BD%D0%BE%D0%B2"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "XI-dEBAAACQA4mho",
+            "uid": "single-photon-detector",
+            "type": "product",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "orderings": 1,
+          "name": [
+            {
+              "type": "heading1",
+              "text": "Детектор одиночных фотонов",
+              "spans": []
+            }
+          ],
+          "url": {
+            "link_type": "Web",
+            "url": "http://goqrate.com/#photon-detector"
+          },
+          "image": {
+            "dimensions": {
+              "width": 250,
+              "height": 250
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/d3b20270fe6ec8d0c701dcac9f68ad2d5da5a8b8_products-qrate-detector-resized.png?auto=compress,format"
+          }
+        }
+      },
+      {
+        "id": "XI-odhAAACUA4puM",
+        "uid": "твердотельныи-фотоумножитель",
+        "type": "product",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XI-odhAAACUA4puM%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2019-03-18T14:17:29+0000",
+        "last_publication_date": "2019-03-20T19:33:44+0000",
+        "slugs": [
+          "%D1%82%D0%B2%D0%B5%D1%80%D0%B4%D0%BE%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B8-%D1%84%D0%BE%D1%82%D0%BE%D1%83%D0%BC%D0%BD%D0%BE%D0%B6%D0%B8%D1%82%D0%B5%D0%BB%D1%8C"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "XI-otRAAACQA4pyp",
+            "uid": "solid-state-photomultiplier",
+            "type": "product",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "orderings": 2,
+          "name": [
+            {
+              "type": "heading1",
+              "text": "Твердотельный фотоумножитель",
+              "spans": []
+            }
+          ],
+          "url": {
+            "link_type": "Web",
+            "url": "https://www.dephan.com/"
+          },
+          "image": {
+            "dimensions": {
+              "width": 250,
+              "height": 250
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/0fed8623f6bdbeaa917e5d87e83f19da8ad119f2_products-dephan-resized.png?auto=compress,format"
+          }
+        }
+      },
+      {
+        "id": "XI-n9xAAACYA4plG",
+        "uid": "фемтосекундныи-лазер-с-диоднои-накачкои",
+        "type": "product",
+        "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XI-n9xAAACYA4plG%22%29+%5D%5D",
+        "tags": [],
+        "first_publication_date": "2019-03-18T14:15:21+0000",
+        "last_publication_date": "2019-07-25T09:42:55+0000",
+        "slugs": [
+          "%D1%84%D0%B5%D0%BC%D1%82%D0%BE%D1%81%D0%B5%D0%BA%D1%83%D0%BD%D0%B4%D0%BD%D1%8B%D0%B8-%D0%BB%D0%B0%D0%B7%D0%B5%D1%80-%D1%81-%D0%B4%D0%B8%D0%BE%D0%B4%D0%BD%D0%BE%D0%B8-%D0%BD%D0%B0%D0%BA%D0%B0%D1%87%D0%BA%D0%BE%D0%B8"
+        ],
+        "linked_documents": [],
+        "lang": "ru",
+        "alternate_languages": [
+          {
+            "id": "XI-oLxAAACUA4ppB",
+            "uid": "diode-pumped-femtosecond-laser",
+            "type": "product",
+            "lang": "en-gb"
+          }
+        ],
+        "data": {
+          "orderings": 3,
+          "name": [
+            {
+              "type": "heading1",
+              "text": "Фемтосекундный лазер с диодной накачкой",
+              "spans": []
+            }
+          ],
+          "url": {
+            "link_type": "Web",
+            "url": "http://femtovision.ru/"
+          },
+          "image": {
+            "dimensions": {
+              "width": 250,
+              "height": 250
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.prismic.io/rqc1/9b52f8e074f7693950f7ad926f4f6d973b0b560d_femtovision-render.png?auto=compress,format"
+          }
+        }
+      }
+    ],
+    "nextPage": null
+  },
+  "education": {
+    "isFetching": false,
+    "page": []
+  },
+  "menu": {
+    "isFetching": false,
+    "item": {
+      "id": "XUvr_BEAACIAbLVd",
+      "uid": null,
+      "type": "menu",
+      "href": "https://rqc1.cdn.prismic.io/api/v2/documents/search?ref=XpnSixEAACYAUVId&q=%5B%5B%3Ad+%3D+at%28document.id%2C+%22XUvr_BEAACIAbLVd%22%29+%5D%5D",
+      "tags": [],
+      "first_publication_date": "2019-08-08T09:37:18+0000",
+      "last_publication_date": "2019-10-23T13:16:34+0000",
+      "slugs": ["%D0%BE-%D0%BD%D0%B0%D1%81"],
+      "linked_documents": [],
+      "lang": "ru",
+      "alternate_languages": [
+        {
+          "id": "XUvtRBEAACAAbLs7",
+          "type": "menu",
+          "lang": "en-gb"
+        }
+      ],
+      "data": {
+        "body": [
+          {
+            "slice_type": "menu_item",
+            "slice_label": null,
+            "items": [
+              {
+                "children_name": "Что мы делаем",
+                "children_url": "/about#what-we-do"
+              },
+              {
+                "children_name": "Годовые отчеты",
+                "children_url": "/reports"
+              },
+              {
+                "children_name": "Работа у нас",
+                "children_url": "/about#vacancies"
+              },
+              {
+                "children_name": "Наши партнеры",
+                "children_url": "/about#partners"
+              },
+              {
+                "children_name": "Как нас найти",
+                "children_url": "/about#contact"
+              },
+              {
+                "children_name": "Медиа-кит",
+                "children_url": "/mediakit"
+              }
+            ],
+            "primary": {
+              "name": "О нас",
+              "url": "/about"
+            }
+          },
+          {
+            "slice_type": "menu_item",
+            "slice_label": null,
+            "items": [
+              {
+                "children_name": "Руководство",
+                "children_url": "/people#management"
+              },
+              {
+                "children_name": "Научный совет",
+                "children_url": "/people#scientific-committee"
+              },
+              {
+                "children_name": "Международный консультативный совет",
+                "children_url": "/people#international-board"
+              },
+              {
+                "children_name": "Попечительский совет",
+                "children_url": "/people#board-of-trustees"
+              }
+            ],
+            "primary": {
+              "name": "Люди",
+              "url": "/people"
+            }
+          },
+          {
+            "slice_type": "menu_item",
+            "slice_label": null,
+            "items": [
+              {
+                "children_name": "Научные группы",
+                "children_url": "/research#groups"
+              },
+              {
+                "children_name": "Публикации",
+                "children_url": "/publications"
+              }
+            ],
+            "primary": {
+              "name": "Исследования",
+              "url": "/research"
+            }
+          },
+          {
+            "slice_type": "menu_item",
+            "slice_label": null,
+            "items": [
+              {
+                "children_name": "РКЦ и МФТИ",
+                "children_url": "/education#mipt"
+              },
+              {
+                "children_name": "РКЦ и МИСиС",
+                "children_url": "/education#misis"
+              },
+              {
+                "children_name": "РКЦ и РВК",
+                "children_url": "/education#rvc"
+              },
+              {
+                "children_name": "Возможные темы",
+                "children_url": "/education#projects"
+              }
+            ],
+            "primary": {
+              "name": "Образование",
+              "url": "/education"
+            }
+          },
+          {
+            "slice_type": "menu_item",
+            "slice_label": null,
+            "items": [
+              {
+                "children_name": "Квантовые коммуникации",
+                "children_url": "http://goqrate.com"
+              },
+              {
+                "children_name": "Детектор одиночных фотонов",
+                "children_url": "http://goqrate.com/#photon-detector"
+              },
+              {
+                "children_name": "Твердотельный умножитель",
+                "children_url": "https://www.dephan.com/"
+              },
+              {
+                "children_name": "Фемтосекундный лазер с диодной накачкой",
+                "children_url": "https://femtovision.ru/"
+              }
+            ],
+            "primary": {
+              "name": "Продукты",
+              "url": "/#products"
+            }
+          },
+          {
+            "slice_type": "menu_item",
+            "slice_label": null,
+            "items": [],
+            "primary": {
+              "name": "Новости",
+              "url": "/news"
+            }
+          },
+          {
+            "slice_type": "menu_item",
+            "slice_label": null,
+            "items": [],
+            "primary": {
+              "name": "Мероприятия",
+              "url": "/events"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "study": {
+    "isFetching": false,
+    "items": []
+  },
+  "logos": {
+    "isFetching": false,
+    "page": []
+  }
+}

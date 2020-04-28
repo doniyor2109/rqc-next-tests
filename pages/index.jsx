@@ -92,8 +92,6 @@ class Index extends React.Component {
     } catch (err) {
       reduxStore.dispatch(mainActions.fetchMainFailure(id, err))
     }
-
-    // серверный запрос типа main (основной слайдер)
     return { fb_locale }
   }
 
