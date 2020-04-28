@@ -9,7 +9,7 @@ import * as newsActions from '../redux/actions/news'
 
 // components
 import NewsTeaser from '../components/main/NewsTeaser'
-import './index.scss'
+
 class Index extends React.Component {
   static defaultProps = {
     lang: 'ru',
