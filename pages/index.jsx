@@ -28,14 +28,14 @@ class Index extends React.Component {
 
   componentDidMount() {
     const { fetchNews, lang } = this.props
-    fetchNews(lang, 3)
+    // fetchNews(lang, 3)
   }
 
   componentDidUpdate(prevProps) {
     const { fetchNews, lang } = this.props
 
     if (lang !== prevProps.lang) {
-      fetchNews(lang, 3)
+      // fetchNews(lang, 3)
     }
     const { hash } = window.location
     const elmnt = document.getElementById(hash.slice(1))

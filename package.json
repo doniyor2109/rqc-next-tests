@@ -20,7 +20,7 @@
     "express": "latest",
     "mobile-detect": "^1.4.3",
     "moment": "^2.22.2",
-    "next": "latest",
+    "next": "^9.3.6",
     "next-cookies": "^1.0.3",
     "node-sass": "^4.9.4",
     "path-match": "^1.2.4",

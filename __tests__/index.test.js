@@ -7,6 +7,6 @@ jest.mock('prismic-javascript')
 
 test('renders index with news teasets', () => {
   const { getByText } = render(<Index />, { initialState: state })
-  const linkElement = getByText('News')
+  const linkElement = getByText('Новости')
   expect(linkElement).toBeInTheDocument()
 })
